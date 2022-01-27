@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 535f0de643ad51c4c80d9bf0a4be3c38
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - money_txt: {instanceID: 0}
+  - ally_produce_time: {instanceID: 0}
+  - enemy_produce_time: {instanceID: 0}
+  - round_txt: {instanceID: 0}
+  - ally_ports: {instanceID: 0}
+  - enemy_ports: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
+  - goodsCollection: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

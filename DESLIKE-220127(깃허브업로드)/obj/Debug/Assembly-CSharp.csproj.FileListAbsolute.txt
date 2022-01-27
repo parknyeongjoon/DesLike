@@ -1,0 +1,4 @@
+D:\다운로드\DESLIKE-210814(스크립터블화)\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\다운로드\DESLIKE-210814(스크립터블화)\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+E:\DESLIKE-211011\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+E:\DESLIKE-211011\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

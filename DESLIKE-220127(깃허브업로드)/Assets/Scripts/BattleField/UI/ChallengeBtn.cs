@@ -22,9 +22,9 @@ public class ChallengeBtn : MonoBehaviour
 
         soldierPrefabs.Clear();
         prefabPath = "SoldierPrefabs/Enemy/";
-        for (int i = 0; i < challengeOption.SoldierOption.Count; i++)
+        for (int i = 0; i < challengeOption.soldierOption.Count; i++)
         {
-            soldierPrefabs.Add(challengeOption.SoldierOption[i].soldierData.code, Resources.Load<GameObject>(prefabPath + challengeOption.SoldierOption[i].soldierData.soldier_name));
+            soldierPrefabs.Add(challengeOption.soldierOption[i].soldierData.code, Resources.Load<GameObject>(prefabPath + challengeOption.soldierOption[i].soldierData.soldier_name));
         }
     }
 
@@ -40,10 +40,10 @@ public class ChallengeBtn : MonoBehaviour
         GameObject createSoldier;
         SoldierData soldierData;
 
-        for (int i = 0; i < challengeOption.SoldierOption.Count; i++)
+        for (int i = 0; i < challengeOption.soldierOption.Count; i++)
         {
-            soldierData = challengeOption.SoldierOption[i].soldierData;
-            for (int j = 0; j < challengeOption.SoldierOption[i].portNum[0]; j++)
+            soldierData = challengeOption.soldierOption[i].soldierData;
+            for (int j = 0; j < challengeOption.soldierOption[i].portNum[0]; j++)
             {
                 createSoldier = Instantiate(soldierPrefabs[soldierData.code], challengeObject.transform);
                 if (soldierData.mutant)

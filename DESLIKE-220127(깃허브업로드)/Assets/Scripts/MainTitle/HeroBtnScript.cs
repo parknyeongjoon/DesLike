@@ -53,7 +53,7 @@ public class HeroBtnScript : MonoBehaviour
 
     void Set_PortsOption()
     {
-        List<Option> option = heroSelectSoldierOption.SoldierOption;
+        List<Option> option = heroSelectSoldierOption.soldierOption;
         //빌드 전 초기화 해주고 지우기
         for(int i = 0; i < 50; i++)
         {
@@ -95,9 +95,9 @@ public class HeroBtnScript : MonoBehaviour
         heroDetailScript.heroDetailPanel.SetActive(true);
         heroDetailScript.Hero_Img.sprite = heroData.sprite;
         GameManager.DeleteChilds(heroDetailScript.optionPreviewPanel);
-        for(int i = 0; i < heroSelectSoldierOption.SoldierOption.Count; i++)
+        for(int i = 0; i < heroSelectSoldierOption.soldierOption.Count; i++)
         {
-            heroDetailScript.CreateOptionPreview(heroSelectSoldierOption.SoldierOption[i]);
+            heroDetailScript.CreateOptionPreview(heroSelectSoldierOption.soldierOption[i]);
         }
     }
 }

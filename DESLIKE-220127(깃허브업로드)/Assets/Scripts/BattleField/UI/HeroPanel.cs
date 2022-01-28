@@ -29,7 +29,7 @@ public class HeroPanel : MonoBehaviour
         SetHeroPanel();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         RenewalHeroPanel();
         RenewalSkillPanel();

@@ -16,7 +16,7 @@ public class a : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            StartCoroutine(testHandler());
+            StartCoroutine(testAA());
             testA();
         }
     }
@@ -27,8 +27,10 @@ public class a : MonoBehaviour
 
     IEnumerator testAA()
     {
-        yield return new WaitForSeconds(1.0f);
-        Debug.Log("AA");
-        yield return new WaitForSeconds(2.0f);
+        while (true)
+        {
+            Debug.Log("AA");
+            yield return null;
+        }
     }
 }

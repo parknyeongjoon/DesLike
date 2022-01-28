@@ -17,9 +17,22 @@ public class SoldierPanel : MonoBehaviour
     public SkillBehaviour skillBehaviour;
     SkillData skillData;
 
-    public void SetSoldierPanel()
+    public void OnEnable()
     {
+        SetSoldierPanel();
+    }
+
+    public void FixedUpdate()
+    {
+        RenewalSoldierPanel();
+        RenewalSkillPanel();
+    }
+
+    void SetSoldierPanel()
+    {
+        soldierInfo = BattleUIManager.Instance.cur_Soldier;
         soldierData = (SoldierData)soldierInfo.castleData;
+        skillBehaviour = soldierInfo.transform.GetComponent<SkillBehaviour>();
         Soldier_Portrait.sprite = soldierData.sprite;
         if (skillData != null)
         {
@@ -29,7 +42,7 @@ public class SoldierPanel : MonoBehaviour
         }
     }
 
-    public void RenewalSoldierPanel()
+    void RenewalSoldierPanel()//피나 마나의 변경이 생길때만 바꾸기?
     {
         HPBar.fillAmount = soldierInfo.cur_Hp / soldierData.hp;
         HPText.text = soldierInfo.cur_Hp + "/" + soldierData.hp;
@@ -37,10 +50,9 @@ public class SoldierPanel : MonoBehaviour
         MPText.text = soldierInfo.cur_Mp + "/" + soldierData.mp;
     }
 
-    public void RenewalSkillPanel()
+    void RenewalSkillPanel()
     {
-        //if(스킬이 액티브인 경우)
-        if (skillBehaviour is ActiveSkillBehaviour)
+        if (skillBehaviour as ActiveSkillBehaviour)
         {
             SkillIcon.fillAmount = 1 - ((ActiveSkillBehaviour)skillBehaviour).cur_cooltime / ((ActiveSkillData)skillData).cooltime;
             SkillCooltime.text = (((ActiveSkillBehaviour)skillBehaviour).cur_cooltime > 0 ? ((int)((ActiveSkillBehaviour)skillBehaviour).cur_cooltime).ToString() : "");

@@ -13,12 +13,15 @@ public class InfoPanel : MonoBehaviour
     PortDatas ally_ports, enemy_ports;
     GoodsCollection goodsCollection;
 
-    void Start()
+    void Awake()
     {
         saveManager = SaveManager.Instance;
         ally_ports = saveManager.gameData.allyPortDatas;
         goodsCollection = saveManager.gameData.goodsCollection;
+    }
 
+    void Start()
+    {
         money_txt.text = goodsCollection.food.ToString();
         SetRoundText();
         StartCoroutine(SetTimeText());

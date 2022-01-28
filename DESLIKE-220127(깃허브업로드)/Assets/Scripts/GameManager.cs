@@ -26,7 +26,6 @@ using UnityEngine.Events;
 * GameData 추가 해야함
 * 영웅 마나 text 안 뜸
 * scene 움직일 때 null 뜨는 거 고치기
-* battleField UI에 중간에 오는 panel들 하나로 합치기
 * reward에 챌린지 보상 추가
 * soldier reward 주거나 적으로 나올 때 mutant 달고 나오게 할 방법 생각하기
 * 객체 풀링 공부하기(필수)
@@ -43,10 +42,7 @@ using UnityEngine.Events;
 * relic이나 mutant 등 없어질 때 disable로 효과 제거해주기
 * 진행 중인 게임에 대한 데이터는 GameData에 저장하고 전체적인 데이터는 DataSheet에 저장하기
 * DataSheet 온라인 서버에 연동하기
-* SoldierInfo에 soldierCode넣어놓고 찾게하기
 * GameData 저장할때 activeSoldierList에 있는 애들 soldierSaveData에 넣기, 불러오는 기능 만들기
-* unitData랑 unitInfo 지워도 될 듯
-* SoldierInfo에서 public string으로 code 추가해서 saveManger에서 soldierData 받아오기
 * ///////////////////////////////////////////////////////////////////////////////////////////////컨텐츠 기획
 * 방어력 수식 만들기
 * 배틀 중간중간에도 이벤트 나오게 하기

@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class BattleUIManager : MonoBehaviour
 {
     static BattleUIManager instance;
-    MouseManager mouseManager;
 
     [SerializeField]
     Canvas PortCanvas, HeroCanvas, SoldierCanvas, ProduceCanvas, SetPortCanvas, InfoCanvas, RewardCanvas, ChallengeCanvas;
@@ -26,8 +25,7 @@ public class BattleUIManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        mouseManager = MouseManager.Instance;
-        mouseManager.battleUIManager = this;
+        MouseManager.Instance.battleUIManager = this;
 
         soldierPanel = SoldierCanvas.GetComponent<SoldierPanel>();
         setPortPanel = SetPortCanvas.GetComponent<SetPortPanel>();
@@ -59,8 +57,6 @@ public class BattleUIManager : MonoBehaviour
             {
                 SetMidPanel(3);
             }
-            soldierPanel.RenewalSoldierPanel();
-            soldierPanel.RenewalSkillPanel();
         }
         
     }
@@ -88,12 +84,6 @@ public class BattleUIManager : MonoBehaviour
         {
             case 0:
                 SoldierCanvas.gameObject.SetActive(true);
-                soldierPanel.soldierInfo = cur_Soldier;
-                //스킬 여러개도 받게 변경
-                soldierPanel.skillBehaviour = cur_Soldier.transform.GetComponent<SkillBehaviour>();
-                soldierPanel.SetSoldierPanel();
-                soldierPanel.RenewalSoldierPanel();
-                soldierPanel.RenewalSkillPanel();
                 break;
             case 1:
                 ProduceCanvas.gameObject.SetActive(true);

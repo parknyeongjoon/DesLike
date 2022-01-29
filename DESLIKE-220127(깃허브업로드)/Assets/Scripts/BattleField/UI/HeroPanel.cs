@@ -21,11 +21,16 @@ public class HeroPanel : MonoBehaviour
     List<SkillBehaviour> skillBehaviours;
     SkillData[] skillDatas = new SkillData[4];
 
-    void Start()
+    void Awake()
     {
         hero = GameObject.Find("Hero");
         heroInfo = hero.GetComponent<HeroInfo>();
         skillBehaviours = hero.GetComponent<HeroSkillUse>().skillBehaviours;
+
+    }
+
+    void Start()
+    {
         SetHeroPanel();
     }
 

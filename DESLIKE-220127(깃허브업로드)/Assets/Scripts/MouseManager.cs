@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public enum MouseState { Idle, Skill, Grenade}
-
 public class MouseManager : MonoBehaviour
 {
     static MouseManager instance;
@@ -12,14 +10,11 @@ public class MouseManager : MonoBehaviour
     public BattleUIManager battleUIManager;
     [SerializeField]
     Texture2D aimCursorTexture;
-    [SerializeField]
-    Texture2D IdleCursorTexture;
 
     public GameObject grenadeExtent;
     GameObject mouseFocus;
 
-    public MouseState mouseState;
-    public GameObject SkillTarget;
+    public Mouse_State mouseState;
 
     //전역변수로써 manager에 접근할 수 있게 만들기
     public static MouseManager Instance
@@ -39,7 +34,7 @@ public class MouseManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this.gameObject);
         SetIdleCursorTexture();
-        mouseState = MouseState.Idle;
+        mouseState = Mouse_State.Idle;
     }
 
     void Update()
@@ -47,7 +42,7 @@ public class MouseManager : MonoBehaviour
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
-            if(mouseState == MouseState.Idle)
+            if(mouseState == Mouse_State.Idle)
             {
                 Collider2D hit;
                 hit = CastRay();
@@ -71,23 +66,22 @@ public class MouseManager : MonoBehaviour
                 }
 
             }
-            else if(mouseState == MouseState.Skill)
-            {
-                Collider2D hit;
-                hit = CastRay();
-                if(hit != null)
-                {
-                    if (hit.gameObject.layer == 9)//고치기(castle에는 사용하지 못하게?)
-                    {
-                        SkillTarget = CastRay().gameObject;
-                    }
-                }
-            }
-            else if(mouseState == MouseState.Grenade)
+            else if(mouseState == Mouse_State.Grenade)
             {
 
             }
         }
+    }
+
+    public Collider2D CastRay()
+    {
+        Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero);
+        if (hit.collider != null)
+        {
+            return hit.collider;
+        }
+        return null;
     }
 
     public void SetAimCursorTexture()
@@ -100,17 +94,6 @@ public class MouseManager : MonoBehaviour
 
     public void SetIdleCursorTexture()
     {
-        Cursor.SetCursor(IdleCursorTexture, new Vector2(0, 0), CursorMode.Auto);
-    }
-
-    public Collider2D CastRay()
-    {
-        Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero);
-        if (hit.collider != null)
-        {
-            return hit.collider;
-        }
-        return null;
+        Cursor.SetCursor(null, new Vector2(0, 0), CursorMode.Auto);
     }
 }

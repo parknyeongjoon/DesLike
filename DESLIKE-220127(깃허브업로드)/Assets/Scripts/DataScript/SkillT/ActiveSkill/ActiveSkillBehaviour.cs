@@ -6,18 +6,27 @@ public class ActiveSkillBehaviour : SkillBehaviour
 {
     public float cur_cooltime;
 
-    protected new void Start()
+    protected override void Start()
     {
         base.Start();
         cur_cooltime = 0;
     }
 
-    protected bool CheckDistance(float range)
+    public bool CanSkillCheck()
     {
-        if(heroInfo.target != null && Vector3.Distance(this.transform.position, heroInfo.target.transform.position) <= range)
+        if (cur_cooltime <= 0 && heroInfo.cur_Mp >= ((ActiveSkillData)skillData).mp && heroInfo.TargetCheck(((ActiveSkillData)skillData).range))
         {
             return true;
         }
         return false;
+    }
+
+    protected IEnumerator SkillCooltime()
+    {
+        while (cur_cooltime >= 0)
+        {
+            cur_cooltime -= Time.deltaTime;
+            yield return null;
+        }
     }
 }

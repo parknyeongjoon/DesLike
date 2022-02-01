@@ -1,11 +1,14 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillBehaviour : SoldierBasic
+public class SkillBehaviour : MonoBehaviour
 {
-    protected new void Start()
+    public HeroInfo heroInfo;
+    public SkillData skillData;
+
+    protected virtual void Start()
     {
-        base.Start();
+        heroInfo = GetComponent<HeroInfo>();
     }
 }

@@ -20,19 +20,16 @@ public class SoldierBasic : MonoBehaviour
     {
         switch (heroInfo.state)
         {
-            case State.Idle:
+            case Soldier_State.Idle:
                 Idle_Behaviour();
                 break;
-            case State.Detect:
+            case Soldier_State.Detect:
                 Detect_Behaviour();
                 break;
-            case State.Battle:
+            case Soldier_State.Battle:
                 Battle_Behaviour();
                 break;
-            case State.Heal:
-                Heal_Behaviour();
-                break;
-            case State.Siege:
+            case Soldier_State.Siege:
                 Siege_Behaviour();
                 break;
         }
@@ -49,11 +46,6 @@ public class SoldierBasic : MonoBehaviour
     }
 
     protected virtual void Battle_Behaviour()
-    {
-
-    }
-
-    protected virtual void Heal_Behaviour()
     {
 
     }

@@ -18,14 +18,14 @@ public class HeroPanel : MonoBehaviour
     HeroInfo heroInfo;
     HeroData heroData;
 
-    List<SkillBehaviour> skillBehaviours;
+    SkillBehaviour[] skillBehaviours;
     SkillData[] skillDatas = new SkillData[4];
 
     void Awake()
     {
         hero = GameObject.Find("Hero");
         heroInfo = hero.GetComponent<HeroInfo>();
-        skillBehaviours = hero.GetComponent<HeroSkillUse>().skillBehaviours;
+        skillBehaviours = hero.GetComponent<HeroSkillUse>().heroSkillList;
 
     }
 
@@ -44,7 +44,7 @@ public class HeroPanel : MonoBehaviour
     {
         heroData = SaveManager.Instance.gameData.heroSaveData.heroData;
         Hero_Portrait.sprite = heroData.sprite;
-        for (int i = 0; i < skillBehaviours.Count; i++)
+        for (int i = 0; i < skillBehaviours.Length; i++)
         {
             skillDatas[i] = heroData.skillList[i];
             SkillIcons[i].sprite = skillDatas[i].skill_Icon;
@@ -63,7 +63,7 @@ public class HeroPanel : MonoBehaviour
     public void RenewalSkillPanel()
     {
         //if(스킬이 액티브인 경우)
-        for (int i = 0; i < skillBehaviours.Count; i++)
+        for (int i = 0; i < skillBehaviours.Length; i++)
         {
             if (skillBehaviours[i] is ActiveSkillBehaviour)
             {

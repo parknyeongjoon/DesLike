@@ -6,12 +6,13 @@ public class HeroSkillUse: MonoBehaviour
 {
     MouseManager mouseManager;
 
+    [SerializeField]
     HeroInfo heroInfo;
-    public List<SkillBehaviour> skillBehaviours = new List<SkillBehaviour>();
+    public SkillBehaviour[] heroSkillList = new SkillBehaviour[4];
 
     Coroutine skillCoroutine;
 
-    GameObject skillFocus;
+    GameObject skillFocus, targetObject;
     [SerializeField]
     GameObject skillRange;
 
@@ -20,13 +21,6 @@ public class HeroSkillUse: MonoBehaviour
     void Start()
     {
         mouseManager = MouseManager.Instance;
-
-        heroInfo = transform.GetComponent<HeroInfo>();
-
-        for (int i = 0;i < heroInfo.heroData.skillList.Count; i++)
-        {
-            AddSkillBehaviour(heroInfo.heroData.skillList[i]);
-        }
     }
 
     void Update()
@@ -35,17 +29,13 @@ public class HeroSkillUse: MonoBehaviour
         WSkill();
         ESkill();
         RSkill();
-        StopSkillCoroutine();
     }
 
     void QSkill()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            if (heroInfo.heroData.skillList.Count > 0)
-            {
-                UseSkillBehaviour(heroInfo.heroData.skillList[0], skillBehaviours[0]);
-            }
+
         }
     }
 
@@ -53,10 +43,7 @@ public class HeroSkillUse: MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            if (heroInfo.heroData.skillList.Count > 1)
-            {
-                UseSkillBehaviour(heroInfo.heroData.skillList[1], skillBehaviours[1]);
-            }
+
         }
     }
 
@@ -64,10 +51,7 @@ public class HeroSkillUse: MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (heroInfo.heroData.skillList.Count > 2)
-            {
-                UseSkillBehaviour(heroInfo.heroData.skillList[2], skillBehaviours[2]);
-            }
+
         }
     }
 
@@ -75,27 +59,25 @@ public class HeroSkillUse: MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            if (heroInfo.heroData.skillList.Count > 3)
-            {
-                UseSkillBehaviour(heroInfo.heroData.skillList[3], skillBehaviours[3]);
-            }
+
         }
     }
 
+    /*
     void AddSkillBehaviour(SkillData skillData)
     {
         if (skillData.sort == "SingleAttack")
         {
             SingleAttackBehaviour createBehaviour;
             createBehaviour = gameObject.AddComponent<SingleAttackBehaviour>();
-            createBehaviour.singleAttackSkillData = (SingleAttackData)skillData;
+            createBehaviour.skillData = skillData;
             skillBehaviours.Add(createBehaviour);
         }
         else if (skillData.sort == "GrenadeAttack")
         {
             GrenadeAttackBehaviour createBehaviour;
             createBehaviour = gameObject.AddComponent<GrenadeAttackBehaviour>();
-            createBehaviour.grenadeAttackSkillData = (GrenadeAttackData)skillData;
+            createBehaviour.skillData = skillData;
             skillBehaviours.Add(createBehaviour);
         }
     }
@@ -115,7 +97,9 @@ public class HeroSkillUse: MonoBehaviour
             skillCoroutine = StartCoroutine(UseGrenadeAttack(skillBehaviour));
         }
     }
-
+    */
+    
+    /*
     IEnumerator UseSingleAttack(SkillBehaviour skillBehaviour)
     {
         SingleAttackBehaviour singleAttackBehaviour = ((SingleAttackBehaviour)skillBehaviour);
@@ -225,6 +209,7 @@ public class HeroSkillUse: MonoBehaviour
             }
         }
     }
+    */
 
     void StopSkillCoroutine()
     {
@@ -233,18 +218,42 @@ public class HeroSkillUse: MonoBehaviour
             if (skillCoroutine != null)
             {
                 StopCoroutine(skillCoroutine);
-                mouseManager.SkillTarget = null;
+                targetObject = null;
                 heroInfo.target = null;
                 if (skillFocus != null)
                 {
                     skillFocus.SetActive(false);
                 }
-                mouseManager.mouseState = MouseState.Idle;
+                mouseManager.mouseState = Mouse_State.Idle;
                 Cursor.visible = true;
                 mouseManager.grenadeExtent.SetActive(false);
                 skillRange.SetActive(false);
                 mouseManager.SetIdleCursorTexture();
             }
+        }
+    }
+
+    IEnumerator Set_SkillTarget()
+    {
+        
+        MouseManager.Instance.mouseState = Mouse_State.Target;
+        MouseManager.Instance.SetAimCursorTexture();
+        Collider2D hit;
+        while (true)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                hit = MouseManager.Instance.CastRay();
+                if (hit != null)
+                {
+                    if (hit.gameObject.layer == 9 && hit.gameObject.tag != "Castle")
+                    {
+                        targetObject = hit.gameObject;
+                        break;
+                    }
+                }
+            }
+            yield return null;
         }
     }
 }

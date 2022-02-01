@@ -1274,6 +1274,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 574283936, guid: 0f95ca2c810e0eb4da249c707d046b8b, type: 3}
+      propertyPath: heroInfo
+      value: 
+      objectReference: {fileID: 1145505312}
     - target: {fileID: 1004540405330416364, guid: 0f95ca2c810e0eb4da249c707d046b8b,
         type: 3}
       propertyPath: heroInfo
@@ -1284,6 +1288,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hero
       objectReference: {fileID: 0}
+    - target: {fileID: 6527479380180569580, guid: 0f95ca2c810e0eb4da249c707d046b8b,
+        type: 3}
+      propertyPath: heroInfo
+      value: 
+      objectReference: {fileID: 1145505312}
     - target: {fileID: 6527479380180569581, guid: 0f95ca2c810e0eb4da249c707d046b8b,
         type: 3}
       propertyPath: portDatas
@@ -4337,6 +4346,7 @@ MonoBehaviour:
     type: 3}
   optionPreviewPanel: {fileID: 1152225646}
   heroDetailPanel: {fileID: 186210380}
+  campRelicPreviewPanel: {fileID: 0}
 --- !u!114 &4760406436434542130
 MonoBehaviour:
   m_ObjectHideFlags: 0

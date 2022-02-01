@@ -15,12 +15,14 @@ MonoBehaviour:
   code: 2
   sort: GrenadeAttack
   skill_name: "\uD3ED\uD0C4"
-  skill_type: "\uD3ED\uBC1C"
+  atk_Type: 2
   skill_Icon: {fileID: 21300000, guid: f9c05d47b57c0ac4a98f6e360924701b, type: 3}
   cooltime: 10
   mp: 30
   range: 5
-  atk_Dmg: 15
+  start_Delay: 0
+  end_Delay: 0
   atkArea: 256
   max_Target: 3
   extent: 2.5
+  atk_Dmg: 15

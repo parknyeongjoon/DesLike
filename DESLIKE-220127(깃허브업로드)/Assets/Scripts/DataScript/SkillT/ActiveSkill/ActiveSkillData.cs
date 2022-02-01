@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class ActiveSkillData : SkillData
 {
-    public float cooltime, mp, range, atk_Dmg;
+    public float cooltime, mp, range, start_Delay, end_Delay;
     public AttackArea atkArea;
 }

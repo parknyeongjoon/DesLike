@@ -12,7 +12,6 @@ public class HeroBehaviour : SoldierBasic
     {
         base.Start();
         DontDestroyOnLoad(this.gameObject);
-        base.Start();
         heroData = heroInfo.heroData;
     }
 

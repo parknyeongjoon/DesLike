@@ -27,7 +27,7 @@ public class BasicGrenadeAttack : MonoBehaviour
 
     protected IEnumerator Effect()
     {
-        while (soldierBehaviour.TargetCheck(grenadeAtkData.range) && heroInfo.state != State.Detect)
+        while (heroInfo.TargetCheck(grenadeAtkData.range) && heroInfo.state != Soldier_State.Detect)
         {
             yield return new WaitForSeconds(grenadeAtkData.startDelay);
             if (heroInfo.targetInfo != null)
@@ -46,6 +46,6 @@ public class BasicGrenadeAttack : MonoBehaviour
             yield return new WaitForSeconds(grenadeAtkData.endDelay);
         }
         heroInfo.target = null;
-        heroInfo.state = State.Idle;
+        heroInfo.state = Soldier_State.Idle;
     }
 }

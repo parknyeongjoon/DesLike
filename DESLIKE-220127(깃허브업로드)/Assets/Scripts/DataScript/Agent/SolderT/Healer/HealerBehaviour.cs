@@ -33,22 +33,22 @@ public class HealerBehaviour : SoldierBehaviour
         {
             targetPos = heroInfo.target.transform.position;
         }
-        if (TargetCheck(atkRange))
+        if (heroInfo.TargetCheck(atkRange))
         {
             //StartCoroutine(Heal());
         }
     }
 
-    protected override IEnumerator Detect()//최적화 필요
+    /*protected override IEnumerator Detect()//최적화 필요
     {
-        while (heroInfo.state != State.Heal)
+        while (heroInfo.state != Soldier_State.Heal)
         {
             heroInfo.targetInfo = allyPortDatas.spawnSoldierList[0];
             heroInfo.target = heroInfo.targetInfo.transform.gameObject;
-            heroInfo.state = State.Detect;
+            heroInfo.state = Soldier_State.Detect;
             yield return new WaitForSeconds(0.1f);
         }
-    }
+    }*/
     /*
     IEnumerator Heal()//탈출 타이밍 만들기 마나 0이면 날뜀
     {

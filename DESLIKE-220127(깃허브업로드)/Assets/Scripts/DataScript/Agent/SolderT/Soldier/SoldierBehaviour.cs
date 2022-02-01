@@ -50,15 +50,15 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
         {
             targetPos = heroInfo.target.transform.position;
         }
-        if (TargetCheck(atkRange))
+        if (heroInfo.TargetCheck(atkRange))
         {
             if (heroInfo.target.CompareTag("Castle"))
             {
-                heroInfo.state = State.Siege;
+                heroInfo.state = Soldier_State.Siege;
             }
             else
             {
-                heroInfo.state = State.Battle;
+                heroInfo.state = Soldier_State.Battle;
             }
             StartCoroutine(atkHandler());
         }
@@ -77,8 +77,8 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
     protected virtual IEnumerator Detect()//override 클래스 : healer
     {
         //animator.SetBool("isWalk", true);
-        heroInfo.state = State.Detect;
-        while (heroInfo.state != State.Battle)
+        heroInfo.state = Soldier_State.Detect;
+        while (heroInfo.state != Soldier_State.Battle)
         {
             Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, 100, atkArea ^ atkLayer);
             if (targets != null)
@@ -87,29 +87,17 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
                 heroInfo.targetInfo = heroInfo.target.GetComponent<CastleInfo>();//너무 낭비같음 한 번만 받기, 씬전환시에 터짐, 공격하기 전에 받기
                 if(!heroInfo.target.CompareTag("Castle"))
                 {
-                    heroInfo.state = State.Detect;
+                    heroInfo.state = Soldier_State.Detect;
                 }
             }
             yield return new WaitForSeconds(0.1f);
         }
     }
 
-    public bool TargetCheck(float range)
-    {
-        if(heroInfo.target != null)
-        {
-            if (Vector3.Distance(this.transform.position, heroInfo.target.transform.position) <= range + heroInfo.targetInfo.castleData.size)//몸의 중심 말고 테투리부터 거리
-            {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public virtual void Set_Idle()//override 클래스 : ranger
     {
         heroInfo.target = null;
-        heroInfo.state = State.Idle;
+        heroInfo.state = Soldier_State.Idle;
     }
 
     protected void Move()

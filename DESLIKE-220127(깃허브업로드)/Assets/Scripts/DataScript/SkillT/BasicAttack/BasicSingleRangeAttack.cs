@@ -22,7 +22,7 @@ public class BasicSingleRangeAttack : BasicSingleAttack
 
     protected override IEnumerator Effect()
     {
-        while (soldierBehaviour.TargetCheck(rangeAtkData.range) && heroInfo.state != State.Detect)
+        while (heroInfo.TargetCheck(rangeAtkData.range) && heroInfo.state != Soldier_State.Detect)
         {
             if(curAmmo <= 0)
             {
@@ -56,7 +56,7 @@ public class BasicSingleRangeAttack : BasicSingleAttack
             yield return new WaitForSeconds(rangeAtkData.endDelay);
         }
         heroInfo.target = null;
-        heroInfo.state = State.Idle;
+        heroInfo.state = Soldier_State.Idle;
     }
 
     void SetOtherBasicAttack()//두 개로 분리하는 게 맞긴 할 듯

@@ -27,7 +27,7 @@ public class BasicSingleAttack : MonoBehaviour
 
     protected virtual IEnumerator Effect()
     {
-        while (soldierBehaviour.TargetCheck(atkData.range) && heroInfo.state != State.Detect)
+        while (heroInfo.TargetCheck(atkData.range) && heroInfo.state != Soldier_State.Detect)
         {
             yield return new WaitForSeconds(atkData.startDelay);
             if (heroInfo.targetInfo != null)
@@ -42,6 +42,6 @@ public class BasicSingleAttack : MonoBehaviour
             yield return new WaitForSeconds(atkData.endDelay);
         }
         heroInfo.target = null;
-        heroInfo.state = State.Idle;
+        heroInfo.state = Soldier_State.Idle;
     }
 }

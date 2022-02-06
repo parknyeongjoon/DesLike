@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class SingleAttackBehaviour : ActiveSkillBehaviour
 {
-    public int atkArea, atkLayer;
-
     protected override void Start()
     {
         base.Start();
-        atkArea = (int)heroInfo.team * (int)((ActiveSkillData)skillData).atkArea;
-        atkLayer = (int)((ActiveSkillData)skillData).atkArea * 7;
     }
 
     public void UseSkill(CastleInfo targetInfo)

@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f49359ba14b600469989030b4bf6837, type: 3}
   m_Name: CastleData 1
   m_EditorClassIdentifier: 
-  sprites: []
+  sprite: {fileID: 0}
   code: 1
-  defType: 4
-  hp: 100
-  def: 2
+  hp: 1000
+  def: 4
   size: 1.4
   blood: {fileID: 0}

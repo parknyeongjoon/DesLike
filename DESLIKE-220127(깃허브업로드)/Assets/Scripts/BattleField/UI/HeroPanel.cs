@@ -18,6 +18,7 @@ public class HeroPanel : MonoBehaviour
     HeroInfo heroInfo;
     HeroData heroData;
 
+    GameObject[] heroSkillList;
     SkillBehaviour[] skillBehaviours;
     SkillData[] skillDatas = new SkillData[4];
 
@@ -25,7 +26,7 @@ public class HeroPanel : MonoBehaviour
     {
         hero = GameObject.Find("Hero");
         heroInfo = hero.GetComponent<HeroInfo>();
-        skillBehaviours = hero.GetComponent<HeroSkillUse>().heroSkillList;
+        heroSkillList = hero.GetComponent<HeroSkillUse>().heroSkillList;
 
     }
 
@@ -44,8 +45,9 @@ public class HeroPanel : MonoBehaviour
     {
         heroData = SaveManager.Instance.gameData.heroSaveData.heroData;
         Hero_Portrait.sprite = heroData.sprite;
-        for (int i = 0; i < skillBehaviours.Length; i++)
+        for (int i = 0; i < heroSkillList.Length; i++)
         {
+            skillBehaviours[i] = heroSkillList[i].GetComponent<SkillBehaviour>();
             skillDatas[i] = heroData.skillList[i];
             SkillIcons[i].sprite = skillDatas[i].skill_Icon;
             BlackSkillIcons[i].sprite = skillDatas[i].skill_Icon;

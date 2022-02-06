@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class HeroBehaviour : SoldierBasic
 {
-    HeroData heroData;
-
     Coroutine moveCoroutine;
 
     new void Start()
     {
         base.Start();
         DontDestroyOnLoad(this.gameObject);
-        heroData = heroInfo.heroData;
     }
 
     private void Update()
@@ -35,7 +32,7 @@ public class HeroBehaviour : SoldierBasic
     {
         while (transform.position != destination)
         {
-            transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * heroData.speed);
+            transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * ((HeroData)heroInfo.castleData).speed);
             yield return null;
         }
     }

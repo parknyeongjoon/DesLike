@@ -63,6 +63,23 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 541c4be5ec4f2e8438c4c26f1fd146df, type: 2}
   - {fileID: 11400000, guid: a9855a2d6caa4cb4ebcbe97e0203abd4, type: 2}
   - {fileID: 11400000, guid: b1038c5b3cf46f146af05f6cd9b79eba, type: 2}
-  canUseSoldierDatas: {fileID: 11400000, guid: 2369949dfcaa97d4785599c14ddf395f, type: 2}
+  spawnSoldierList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  cur_producetime: -0.0037803832
+  produceTime: 5
   round: 1
-  max_round: 10
+  max_round: 1

@@ -8,15 +8,17 @@ public class HeroSkillUse: MonoBehaviour
 
     [SerializeField]
     HeroInfo heroInfo;
-    public SkillBehaviour[] heroSkillList = new SkillBehaviour[4];
+    CastleInfo targetInfo;
+
+    public delegate void SkillHandler(CastleInfo castleInfo);
+    SkillHandler[] skillHandler = new SkillHandler[4];
+    public GameObject[] heroSkillList = new GameObject[4];
 
     Coroutine skillCoroutine;
 
-    GameObject skillFocus, targetObject;
+    GameObject skillFocus;
     [SerializeField]
     GameObject skillRange;
-
-    int atkArea, atkLayer;
 
     void Start()
     {
@@ -31,11 +33,16 @@ public class HeroSkillUse: MonoBehaviour
         RSkill();
     }
 
+    void SetSkillHandler()
+    {
+
+    }
+
     void QSkill()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-
+            skillHandler[0]?.Invoke(targetInfo);
         }
     }
 
@@ -43,7 +50,7 @@ public class HeroSkillUse: MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-
+            skillHandler[1]?.Invoke(targetInfo);
         }
     }
 
@@ -51,7 +58,7 @@ public class HeroSkillUse: MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-
+            skillHandler[2]?.Invoke(targetInfo);
         }
     }
 
@@ -59,7 +66,7 @@ public class HeroSkillUse: MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-
+            skillHandler[3]?.Invoke(targetInfo);
         }
     }
 
@@ -218,7 +225,7 @@ public class HeroSkillUse: MonoBehaviour
             if (skillCoroutine != null)
             {
                 StopCoroutine(skillCoroutine);
-                targetObject = null;
+                targetInfo = null;
                 heroInfo.target = null;
                 if (skillFocus != null)
                 {
@@ -248,7 +255,7 @@ public class HeroSkillUse: MonoBehaviour
                 {
                     if (hit.gameObject.layer == 9 && hit.gameObject.tag != "Castle")
                     {
-                        targetObject = hit.gameObject;
+                        targetInfo = hit.gameObject.GetComponent<CastleInfo>();
                         break;
                     }
                 }

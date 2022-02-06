@@ -8,7 +8,6 @@ public class CastleData : ScriptableObject
 {
     public Sprite sprite;
     public string code;
-    public Def_Type defType;
     public float hp, def;
     public float size;
     public GameObject blood;

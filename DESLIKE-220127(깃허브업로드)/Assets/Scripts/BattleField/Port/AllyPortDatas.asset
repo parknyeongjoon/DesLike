@@ -83,7 +83,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  cur_producetime: 11.44325
-  produceTime: 15
-  round: 5
-  max_round: 10
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  cur_producetime: -0.0037803832
+  produceTime: 5
+  round: 1
+  max_round: 1

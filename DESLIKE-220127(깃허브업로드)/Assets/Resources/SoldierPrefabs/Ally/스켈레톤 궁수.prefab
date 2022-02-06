@@ -1223,10 +1223,12 @@ GameObject:
   - component: {fileID: 5346442293094215225}
   - component: {fileID: 5526397366469184701}
   - component: {fileID: -1573145474374502888}
-  - component: {fileID: -5375571338300488675}
   - component: {fileID: -6878065226668501377}
   - component: {fileID: 6438918860846744813}
   - component: {fileID: 5390773520087032999}
+  - component: {fileID: -5375571338300488675}
+  - component: {fileID: 1697326675779649149}
+  - component: {fileID: 6438809890235110298}
   m_Layer: 8
   m_Name: "\uC2A4\uCF08\uB808\uD1A4 \uAD81\uC218"
   m_TagString: Soldier
@@ -1342,25 +1344,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!95 &-5375571338300488675
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5346442293094215222}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 2e45a8e701b64ea4f8ead4f47e6597b6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &-6878065226668501377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1382,6 +1365,7 @@ MonoBehaviour:
   cur_Mp: 0
   moveDir: {x: 0, y: 0, z: 0}
   state: 0
+  action: 0
   team: 1
   healWeight: 0
   resurrection: 0
@@ -1400,9 +1384,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroInfo: {fileID: 0}
-  atkArea: 0
-  atkLayer: 0
-  atkRange: 0
 --- !u!70 &5390773520087032999
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1419,6 +1400,57 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.3, y: 1}
   m_Direction: 0
+--- !u!95 &-5375571338300488675
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346442293094215222}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 2e45a8e701b64ea4f8ead4f47e6597b6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1697326675779649149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346442293094215222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f26b66f7d1b2384c8d4ec388b7e71f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroInfo: {fileID: 0}
+  basicAttackData: {fileID: 11400000, guid: 7b3e4819f2068d74f9852ad7fe73f5d1, type: 2}
+  atkArea: 0
+  atkLayer: 0
+--- !u!114 &6438809890235110298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346442293094215222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196eeb1ee06889c4d83389564e732b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroInfo: {fileID: 0}
+  basicAttackData: {fileID: 11400000, guid: 500f4691f712bee4abe3949fecdf7f7d, type: 2}
+  atkArea: 0
+  atkLayer: 0
 --- !u!1 &5488699387805153504
 GameObject:
   m_ObjectHideFlags: 0

@@ -43,6 +43,8 @@ using UnityEngine.Events;
 * 진행 중인 게임에 대한 데이터는 GameData에 저장하고 전체적인 데이터는 DataSheet에 저장하기
 * DataSheet 온라인 서버에 연동하기
 * GameData 저장할때 activeSoldierList에 있는 애들 soldierSaveData에 넣기, 불러오는 기능 만들기
+* 스킬 시스템 다시 만지기, heroSKillUse랑 soldier들이 자동으로 사용하게끔
+* 라운드 UI 시간 부분 다시 만지기
 * ///////////////////////////////////////////////////////////////////////////////////////////////컨텐츠 기획
 * 방어력 수식 만들기
 * 배틀 중간중간에도 이벤트 나오게 하기

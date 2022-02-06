@@ -9,49 +9,37 @@ public class SoldierBasic : MonoBehaviour
     protected void Start()
     {
         heroInfo = GetComponent<HeroInfo>();
+        heroInfo.moveDir = new Vector3(0, 0, 0);
+        StartCoroutine(Idle_Behaviour());
     }
 
-    protected virtual void FixedUpdate()
+    protected virtual IEnumerator Idle_Behaviour()
     {
-        BehaviourControll();
+        yield return new WaitForFixedUpdate();
     }
 
-    protected void BehaviourControll()
+    protected virtual IEnumerator Detect_Behaviour()
     {
-        switch (heroInfo.state)
-        {
-            case Soldier_State.Idle:
-                Idle_Behaviour();
-                break;
-            case Soldier_State.Detect:
-                Detect_Behaviour();
-                break;
-            case Soldier_State.Battle:
-                Battle_Behaviour();
-                break;
-            case Soldier_State.Siege:
-                Siege_Behaviour();
-                break;
-        }
+        yield return new WaitForFixedUpdate();
     }
 
-    protected virtual void Idle_Behaviour()
+    protected virtual IEnumerator Battle_Behaviour()
     {
-
+        yield return new WaitForFixedUpdate();
     }
 
-    protected virtual void Detect_Behaviour()
+    protected virtual IEnumerator Siege_Behaviour()
     {
-
+        yield return new WaitForFixedUpdate();
     }
 
-    protected virtual void Battle_Behaviour()
+    protected virtual IEnumerator Stun_Behaviour()
     {
-
+        yield return new WaitForFixedUpdate();
     }
 
-    protected virtual void Siege_Behaviour()
+    protected void Move()
     {
-
+        transform.Translate(Time.deltaTime * ((HeroData)heroInfo.castleData).speed * heroInfo.moveDir);
     }
 }

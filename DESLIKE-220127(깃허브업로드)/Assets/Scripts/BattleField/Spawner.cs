@@ -92,7 +92,6 @@ public class Spawner : MonoBehaviour
                 {
                     soldierData = portDatas.activeSoldierList[portDatas.portDatas[5 * i + j].soldierCode];
                     createSoldier = Instantiate(soldierPrefabs[soldierData.code], spawner[j].transform);
-                    Instantiate(soldierData.basicAttack, createSoldier.transform);
                     if(soldierData.mutant)
                     {
                         Instantiate(soldierData.mutant, createSoldier.transform);

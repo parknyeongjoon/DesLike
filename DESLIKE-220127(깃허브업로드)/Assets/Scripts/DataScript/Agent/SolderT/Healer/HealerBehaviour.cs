@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HealerBehaviour : SoldierBehaviour
 {
+    /*
     GameObject healEffect;
     [SerializeField]
     PortDatas allyPortDatas;
@@ -63,7 +64,7 @@ public class HealerBehaviour : SoldierBehaviour
         Set_Idle();
     }
     */
-
+    /*
     IEnumerator Healing()
     {
         GameObject createBlood;
@@ -71,4 +72,5 @@ public class HealerBehaviour : SoldierBehaviour
         yield return new WaitForSeconds(0.8f);
         Destroy(createBlood);
     }
+    */
 }

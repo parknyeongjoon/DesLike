@@ -1216,14 +1216,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc126886d8fcb1e458996fb21d0490f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PortCanvas: {fileID: 1105417738}
-  HeroCanvas: {fileID: 1142375903}
-  SoldierCanvas: {fileID: 1111462454}
-  ProduceCanvas: {fileID: 0}
-  SetPortCanvas: {fileID: 0}
-  InfoCanvas: {fileID: 205184479}
-  RewardCanvas: {fileID: 1859943160}
-  ChallengeCanvas: {fileID: 0}
+  PortPanel: {fileID: 1105417735}
+  HeroPanel: {fileID: 1142375899}
+  SoldierPanel: {fileID: 715787156}
+  ProducePanel: {fileID: 1769750032}
+  SetPortPanel: {fileID: 1904692506}
+  EmptyPanel: {fileID: 1105220309}
+  ChallengePanel: {fileID: 1888405634}
+  InfoPanel: {fileID: 205184476}
+  RewardPanel: {fileID: 1859943156}
   start_Btn: {fileID: 1084522025}
   cur_Port: {fileID: 0}
   cur_Soldier: {fileID: 0}
@@ -25534,7 +25535,7 @@ RectTransform:
   - {fileID: 494720851}
   - {fileID: 2115064923}
   m_Father: {fileID: 1111462451}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -27049,7 +27050,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1111462451}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -27224,10 +27225,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1105220310}
   - {fileID: 715787157}
   - {fileID: 1769750033}
   - {fileID: 1904692507}
+  - {fileID: 1105220310}
   - {fileID: 1888405635}
   m_Father: {fileID: 1326951113}
   m_RootOrder: 1
@@ -27396,7 +27397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1142375900
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28877,7 +28878,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 2.4}
   m_Children: []
   m_Father: {fileID: 1111462451}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -29850,7 +29851,7 @@ RectTransform:
   - {fileID: 1453613898}
   - {fileID: 1228846132}
   m_Father: {fileID: 1111462451}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}

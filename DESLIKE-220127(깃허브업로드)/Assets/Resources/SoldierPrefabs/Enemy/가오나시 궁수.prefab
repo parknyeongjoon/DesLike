@@ -1226,8 +1226,9 @@ GameObject:
   - component: {fileID: 6782014734319213554}
   - component: {fileID: -6878065226668501377}
   - component: {fileID: 1805136670179630442}
-  - component: {fileID: 371531418688075301}
   - component: {fileID: -5390160151540720094}
+  - component: {fileID: -9124377849741007540}
+  - component: {fileID: -1381124195786109179}
   m_Layer: 9
   m_Name: "\uAC00\uC624\uB098\uC2DC \uAD81\uC218"
   m_TagString: Soldier
@@ -1381,6 +1382,7 @@ MonoBehaviour:
   cur_Mp: 0
   moveDir: {x: 0, y: 0, z: 0}
   state: 0
+  action: 0
   team: 2
   healWeight: 0
   resurrection: 0
@@ -1399,25 +1401,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroInfo: {fileID: 0}
-  atkArea: 0
-  atkLayer: 0
-  atkRange: 0
---- !u!114 &371531418688075301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5346442293094215222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74c89014b4975f448b068fcb4174dcb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heroInfo: {fileID: 0}
-  cur_cooltime: 0
-  singleAttackSkillData: {fileID: 11400000, guid: c9ee331d85776ca47ad5de63d042086b,
-    type: 2}
 --- !u!95 &-5390160151540720094
 Animator:
   serializedVersion: 3
@@ -1437,6 +1420,38 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-9124377849741007540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346442293094215222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f26b66f7d1b2384c8d4ec388b7e71f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroInfo: {fileID: 0}
+  basicAttackData: {fileID: 11400000, guid: 44ab94840f15ac549a0f61ec7dae9f98, type: 2}
+  atkArea: 0
+  atkLayer: 0
+--- !u!114 &-1381124195786109179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346442293094215222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196eeb1ee06889c4d83389564e732b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroInfo: {fileID: 0}
+  basicAttackData: {fileID: 11400000, guid: 17edd08738f01964db3de6a2e70ea2f0, type: 2}
+  atkArea: 0
+  atkLayer: 0
 --- !u!1 &5488699387805153504
 GameObject:
   m_ObjectHideFlags: 0

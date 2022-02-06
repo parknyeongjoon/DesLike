@@ -16,8 +16,7 @@ public class a : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            StartCoroutine(testAA());
-            testA();
+
         }
     }
     protected virtual void testA()
@@ -25,9 +24,9 @@ public class a : MonoBehaviour
         Debug.Log("A");
     }
 
-    IEnumerator testAA()
+    public virtual IEnumerator testAA()
     {
-        while (true)
+        while (!Input.GetKey(KeyCode.A))
         {
             Debug.Log("AA");
             yield return null;

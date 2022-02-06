@@ -13,7 +13,8 @@ public class b : a
     {
         if (Input.GetKeyDown(KeyCode.B))
         {
-
+            testA();
+            StartCoroutine(testAA());
         }
     }
 
@@ -27,5 +28,12 @@ public class b : a
         yield return new WaitForSeconds(1.0f);
         Debug.Log("BB");
         yield return new WaitForSeconds(2.0f);
+    }
+
+    public override IEnumerator testAA()
+    {
+        Debug.Log("B에서 AA");
+        yield return StartCoroutine(base.testAA());
+        Debug.Log("B에서 AA끝남");
     }
 }

@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class SkillBehaviour : MonoBehaviour
 {
-    public HeroInfo heroInfo;
+    protected HeroInfo heroInfo;
+    protected SoldierBehaviour soldierBehaviour;
     public SkillData skillData;
 
     protected virtual void Start()
     {
         heroInfo = GetComponent<HeroInfo>();
+        soldierBehaviour = GetComponent<SoldierBehaviour>();
     }
 }

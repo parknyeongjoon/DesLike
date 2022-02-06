@@ -8,12 +8,14 @@ public class SingleAttackData : ActiveSkillData
 
     public IEnumerator Effect(CastleInfo targetInfo, HeroInfo heroInfo)
     {
-        heroInfo.action = Soldier_Action.Start_Delay;
         yield return new WaitForSeconds(start_Delay);
-        heroInfo.action = Soldier_Action.Skill;
-        heroInfo.cur_Mp -= mp;
-        targetInfo.OnDamaged(atk_Dmg);
-        heroInfo.action = Soldier_Action.End_Delay;
-        yield return new WaitForSeconds(end_Delay);
+        if (targetInfo)
+        {
+            heroInfo.cur_Mp -= mp;
+            targetInfo.OnDamaged(atk_Dmg);
+            heroInfo.action = Soldier_Action.End_Delay;
+            yield return new WaitForSeconds(end_Delay);
+        }
+        heroInfo.action = Soldier_Action.Idle;
     }
 }

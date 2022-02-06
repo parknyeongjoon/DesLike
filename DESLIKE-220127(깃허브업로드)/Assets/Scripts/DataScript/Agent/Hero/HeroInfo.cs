@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class HeroInfo : CastleInfo
 {
-    public HeroData heroData;
     public CastleInfo targetInfo;
     public GameObject target;
     public float cur_Mp;
@@ -22,22 +21,43 @@ public class HeroInfo : CastleInfo
     {
         SaveManager saveManager = SaveManager.Instance;
         healWeight = 0;
-        heroData = (HeroData)castleData;
         cur_Hp = saveManager.gameData.heroSaveData.cur_Hp;
         cur_Mp = saveManager.gameData.heroSaveData.cur_Mp;
         resurrection = saveManager.gameData.heroSaveData.resurrection;
         //allyPortDatas.spawnSoldierList.Add(this);
     }
 
+    public void Stun(float stunTime)
+    {
+        state = Soldier_State.Stun;
+        //StartCoroutine(soldierBehaviour.Stun_Behaviour());
+    }
+
     public bool TargetCheck(float range)
     {
         if (target != null)
         {
-            if (Vector3.Distance(transform.position, target.transform.position) <= range + targetInfo.castleData.size)//몸의 중심 말고 테투리부터 거리
+            if (Vector3.Distance(transform.position, target.transform.position) <= range + 1)//몸의 중심 말고 테투리부터 거리 targetInfo.castleData.size
             {
                 return true;
             }
         }
         return false;
+    }
+
+    public GameObject FindNearestSoldier(Collider2D[] targets)
+    {
+        float minDistance = 10e9F;
+        GameObject target = null;
+        foreach (Collider2D collider in targets)
+        {
+            float distance = Vector3.Distance(this.transform.position, collider.transform.position);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                target = collider.gameObject;
+            }
+        }
+        return target;
     }
 }

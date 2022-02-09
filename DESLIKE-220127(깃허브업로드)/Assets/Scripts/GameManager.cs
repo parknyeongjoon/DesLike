@@ -40,6 +40,7 @@ using UnityEngine.Events;
 * 라운드 UI 시간 부분 다시 만지기
 * 전투 중 디버프 병사 개개인에게 적용하는 방법이랑 중첩되지 않고 시간만 초기화되게 만들기
 * basicAttack이랑 skillBehaviour에서 heroInfo랑 soldierBehaviour GetComponent<>빼고 인스펙터에서 추가해주기
+* afterDeadHandler에 Destroy(Collider2D)삭제하기
 * ///////////////////////////////////////////////////////////////////////////////////////////////컨텐츠 기획
 * 방어력 수식 만들기
 * 배틀 중간중간에도 이벤트 나오게 하기(배틀의 템포를 끊을 것 같으므로 보류)

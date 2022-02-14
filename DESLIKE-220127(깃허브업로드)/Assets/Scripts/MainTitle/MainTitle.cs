@@ -52,6 +52,7 @@ public class MainTitle : MonoBehaviour
     public void Continue()
     {
         heroInfo.castleData = saveManager.gameData.heroSaveData.heroData;
+        SaveManager.Instance.LoadSoldierData();
         hero.SetActive(true);
         SceneManager.LoadScene("Map");
     }

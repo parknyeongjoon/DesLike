@@ -13,26 +13,24 @@ public class SoldierRewardBtn : MonoBehaviour
     [SerializeField]
     ChangeMutantPanelScript changeMutantPanelScript;
 
-    
 
-    public SoldierData soldierReward;
+
+    public string soldierCode;
     public int soldierRemain;
     SoldierData tempSoldier;
 
     public void GetReward()
     {
-       if(soldierReward != null)
+       if(soldierCode != null)
         {
-            if (SaveManager.Instance.activeSoldierList.ContainsKey(soldierReward.code))
+            if (SaveManager.Instance.activeSoldierList.ContainsKey(soldierCode))
             {
-                tempSoldier = SaveManager.Instance.activeSoldierList[soldierReward.code];
+                tempSoldier = SaveManager.Instance.activeSoldierList[soldierCode];
                 mutantPanel.SetActive(true);
             }
             else
             {
-                tempSoldier = Instantiate(soldierReward);
-                tempSoldier.remain += soldierRemain;
-                SaveManager.Instance.activeSoldierList.Add(tempSoldier.code, tempSoldier);
+                SoldierManager.GetSoldier(soldierCode, null, soldierRemain);
             }
             button.interactable = false;
         }

@@ -24,7 +24,6 @@ using UnityEngine.Events;
 * soldier reward 주거나 적으로 나올 때 mutant 달고 나오게 할 방법 생각하기
 * 객체 풀링 공부하기(필수)
 * OnSceneLoaded를 GameManager에서 관리하기?
-* SoldirPanel에 renewalPanel 45번쨰 줄 터짐
 * 타일 굳이 isometric으로 할 이유가 없음
 * Soldier 흭득할 때 relicManager에 soldierConditionCheck 하기
 * SoldierManager클래스 만들어서 soldier 얻을 때와 port에 넣을 때 함수를 만들기

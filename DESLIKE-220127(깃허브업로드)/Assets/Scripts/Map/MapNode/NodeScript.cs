@@ -79,7 +79,7 @@ public class NodeScript : MonoBehaviour
     public void SetReward()
     {
         int soldierRewardIndex = Random.Range(0, mapNode.rewardSoldierList.Count);
-        mapNode.reward.soldierData = mapNode.rewardSoldierList[soldierRewardIndex];
+        mapNode.reward.soldierReward.soldier = mapNode.rewardSoldierList[soldierRewardIndex];
         int relicRewardIndex = Random.Range(0, mapNode.rewardRelicList.Count);
         mapNode.reward.relic = mapNode.rewardRelicList[relicRewardIndex];
     }

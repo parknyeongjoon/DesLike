@@ -97,6 +97,8 @@ public class SaveManager : MonoBehaviour
         {
             gameData = new GameData();
         }
+        //LoadSoldierData();
+        Debug.Log("데이터불러오기완료");
     }
 
     public void SaveGameData()
@@ -104,7 +106,7 @@ public class SaveManager : MonoBehaviour
         string toJsonData = JsonUtility.ToJson(gameData);
         string filePath = Application.persistentDataPath + "GameData.json";
         File.WriteAllText(filePath, toJsonData);
-        SaveSoldierData();
+        //SaveSoldierData();
         Debug.Log("데이터저장완료");
     }
 
@@ -114,9 +116,9 @@ public class SaveManager : MonoBehaviour
         Application.Quit();
     }
 
-    public Dictionary<string, SoldierData> activeSoldierList;
+    public Dictionary<string, SoldierData> activeSoldierList = new Dictionary<string, SoldierData>();
 
-    void SaveSoldierData()
+    public void SaveSoldierData()
     {
         gameData.soldierSaveList.Clear();//키 중복 체크하기
         if (activeSoldierList != null)
@@ -132,7 +134,7 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    void LoadSoldierData()
+    public void LoadSoldierData()
     {
         activeSoldierList.Clear();//키중복 체크하기
         for(int i = 0; i < gameData.soldierSaveList.Count; i++)

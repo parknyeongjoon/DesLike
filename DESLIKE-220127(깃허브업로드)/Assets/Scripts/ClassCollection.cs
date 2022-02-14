@@ -11,21 +11,24 @@ public enum Soldier_Type { Tanker, Soldier, Healer, Ranger, Catapult, Flight, Mo
 public enum Tribe { Undead, Mech, Ghost }
 public enum Rarity { normal, rare, epic, unique, legend }
 
-public enum SkillType { targetSkill, grenadeSkill, passiveSkill}
+public enum SkillType { targetSkill, grenadeSkill, passiveSkill, Buff, Debuff, Etc}
 
 [System.Serializable]
 public class Reward
 {
-    public Reward()
-    {
-
-    }
-    public SoldierData soldierData;
+    public SoldierReward soldierReward;
     public GameObject relic;
     public int gold;
     public int scrap;
     public int magicalStone;
-    public int soldierRemain;
+}
+
+[System.Serializable]
+public struct SoldierReward
+{
+    public SoldierData soldier;
+    public int remain;
+    public GameObject mutant;
 }
 
 [System.Serializable]

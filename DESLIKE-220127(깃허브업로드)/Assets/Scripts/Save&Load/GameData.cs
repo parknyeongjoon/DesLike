@@ -16,7 +16,6 @@ public class SoldierSaveData
 {
     public string soldierCode;
     public GameObject mutant;
-    public List<GameObject> extraSkills;
     public int remain;
 }
 

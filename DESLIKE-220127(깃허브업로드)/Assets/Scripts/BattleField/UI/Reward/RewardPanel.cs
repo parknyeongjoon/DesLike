@@ -19,10 +19,10 @@ public class RewardPanel : MonoBehaviour
         Reward reward = map.curMapNode.reward;
         //soldierBtn
         createBtn = Instantiate(rewardSoldierBtnPrefab, rewardPanel.transform);
-        createBtn.GetComponent<SoldierRewardBtn>().soldierReward = reward.soldierData;
-        createBtn.GetComponent<SoldierRewardBtn>().soldierRemain = reward.soldierRemain;
-        createBtn.transform.GetChild(0).GetComponent<Text>().text = reward.soldierData.soldier_name.ToString();
-        createBtn.transform.GetChild(1).GetComponent<Image>().sprite = reward.soldierData.sprite;
+        createBtn.GetComponent<SoldierRewardBtn>().soldierCode = reward.soldierReward.soldier.code;
+        createBtn.GetComponent<SoldierRewardBtn>().soldierRemain = reward.soldierReward.remain;
+        createBtn.transform.GetChild(0).GetComponent<Text>().text = reward.soldierReward.soldier.soldier_name.ToString();
+        createBtn.transform.GetChild(1).GetComponent<Image>().sprite = reward.soldierReward.soldier.sprite;
         //relicBtn
         RelicData relicData = reward.relic.GetComponent<Relic>().relicData;
         createBtn = Instantiate(rewardRelicBtnPrefab, rewardPanel.transform);

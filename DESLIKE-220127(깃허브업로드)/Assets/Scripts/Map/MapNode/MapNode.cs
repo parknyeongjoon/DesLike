@@ -9,6 +9,7 @@ public class MapNode : ScriptableObject
     public bool isNode = false;
     public bool isPlayable = false;
     public bool[] isPath = new bool[3];
+    public int[] eventableDot = new int[3];
     public bool isVisited = false;
     public List<SoldierData> rewardSoldierList;
     public List<GameObject> rewardRelicList;

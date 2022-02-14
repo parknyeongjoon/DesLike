@@ -6,5 +6,6 @@ using UnityEngine;
 public class SkillData : ScriptableObject
 {
     public string code, sort, skill_name;
+    public SkillType skillType;
     public Sprite skill_Icon;
 }

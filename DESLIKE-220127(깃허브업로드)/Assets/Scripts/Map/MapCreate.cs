@@ -60,6 +60,7 @@ public class MapCreate : MonoBehaviour
                 line = 4;
             }
             map.mapNodesX[i - 1].mapNodesY[line].isPath[-lineMove + 1] = true;
+            map.mapNodesX[i - 1].mapNodesY[line].eventableDot[-lineMove + 1] = Random.Range(4, 10);
             map.mapNodesX[i - 1].mapNodesY[line].isNode = true;
         }
     }

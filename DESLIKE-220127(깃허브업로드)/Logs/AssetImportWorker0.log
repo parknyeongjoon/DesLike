@@ -15,11 +15,19 @@ C:/Users/Administrator/Documents/GitHub/DesLike/DESLIKE-220127(깃허브업로�
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
+<<<<<<< Updated upstream
 49523
 Successfully changed project path to: C:/Users/Administrator/Documents/GitHub/DesLike/DESLIKE-220127(깃허브업로드)
 C:/Users/Administrator/Documents/GitHub/DesLike/DESLIKE-220127(깃허브업로드)
 Using Asset Import Pipeline V2.
 Refreshing native plugins compatible for Editor in 117.25 ms, found 3 plugins.
+=======
+51332
+Successfully changed project path to: C:/Users/Administrator/Documents/GitHub/DesLike/DESLIKE-220127(깃허브업로드)
+C:/Users/Administrator/Documents/GitHub/DesLike/DESLIKE-220127(깃허브업로드)
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 60.63 ms, found 3 plugins.
+>>>>>>> Stashed changes
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.21f1 (a38c86f6690f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/Resources/UnitySubsystems
@@ -35,6 +43,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/MonoBleedingEdge/etc'
+<<<<<<< Updated upstream
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56344
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
@@ -48,11 +57,27 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1540ms)
 		BeginReloadAssembly (90ms)
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56752
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004803 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 56.11 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.508 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1508ms)
+		BeginReloadAssembly (89ms)
+>>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
+<<<<<<< Updated upstream
 		EndReloadAssembly (472ms)
 			LoadAssemblies (84ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
@@ -62,6 +87,17 @@ Domain Reload Profiling:
 			SetupLoadedEditorAssemblies (181ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
+=======
+		EndReloadAssembly (473ms)
+			LoadAssemblies (83ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (152ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (179ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+>>>>>>> Stashed changes
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (56ms)
 				BeforeProcessingInitializeOnLoad (16ms)
@@ -73,6 +109,7 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+<<<<<<< Updated upstream
 Registered in 0.012641 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
@@ -83,10 +120,23 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (1514ms)
 		BeginReloadAssembly (177ms)
+=======
+Registered in 0.012240 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 53.41 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.271 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1272ms)
+		BeginReloadAssembly (176ms)
+>>>>>>> Stashed changes
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 			CreateAndSetChildDomain (19ms)
 		EndReloadAssembly (1249ms)
 			LoadAssemblies (143ms)
@@ -103,12 +153,31 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadAttributes (295ms)
 				ProcessInitializeOnLoadMethodAttributes (19ms)
 				AfterProcessingInitializeOnLoad (19ms)
+=======
+			CreateAndSetChildDomain (22ms)
+		EndReloadAssembly (1013ms)
+			LoadAssemblies (136ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (315ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (394ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (54ms)
+				BeforeProcessingInitializeOnLoad (105ms)
+				ProcessInitializeOnLoadAttributes (197ms)
+				ProcessInitializeOnLoadMethodAttributes (17ms)
+				AfterProcessingInitializeOnLoad (17ms)
+>>>>>>> Stashed changes
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
+<<<<<<< Updated upstream
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
 Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -118,6 +187,17 @@ System memory in use after: 110.4 MB.
 
 Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2852.
 Total: 3.738400 ms (FindLiveObjects: 0.259700 ms CreateObjectMapping: 0.063600 ms MarkObjects: 3.332000 ms  DeleteObjects: 0.081900 ms)
+=======
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2415 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.2 MB.
+System memory in use after: 110.4 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2851.
+Total: 3.379400 ms (FindLiveObjects: 0.259500 ms CreateObjectMapping: 0.064200 ms MarkObjects: 2.984500 ms  DeleteObjects: 0.070100 ms)
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,6 +211,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
   path: Assets/Data/AgentData/SoldierSO/6스켈레톤 궁수
   artifactKey: Guid(4f1e392dbc4fa714696699f30f950ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Data/AgentData/SoldierSO/6스켈레톤 궁수 using Guid(4f1e392dbc4fa714696699f30f950ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d4bf717cb25a480606ed11d511ea893') in 0.015300 seconds 
@@ -360,4 +441,11 @@ Received Import Request.
 Start importing Assets/Data/AgentData/SoldierSO/6스켈레톤 궁수/Skeleton_Bow.overrideController using Guid(2e45a8e701b64ea4f8ead4f47e6597b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e161ed6a35ea0c52517e1408e4c0c6d') in 0.017539 seconds 
   Import took 0.021970 seconds .
 
+=======
+  path: Assets/Data/AgentData/SoldierSO/7스켈레톤 탱커/Skeleton_Tanker_Dead.anim
+  artifactKey: Guid(567f938332391204ba418f205caec08e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData/SoldierSO/7스켈레톤 탱커/Skeleton_Tanker_Dead.anim using Guid(567f938332391204ba418f205caec08e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9fe0cb743e8b75f9206d5e23edbd7fc') in 0.050272 seconds 
+  Import took 0.053983 seconds .
+
+>>>>>>> Stashed changes
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

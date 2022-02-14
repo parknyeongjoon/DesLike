@@ -18,8 +18,11 @@ public class SoldierInfo : HeroInfo
 
     void Dead()
     {
-        StopAllCoroutines();
+        gameObject.GetComponent<SoldierBehaviour>().StopAllCoroutines();
+        gameObject.layer = 7;
+        animator.SetTrigger("isDead");
         portDatas.spawnSoldierList.Remove(this);
-        Destroy(gameObject);
+        Debug.Log("사망");
+        Destroy(gameObject, 10.0f);
     }
 }

@@ -6,19 +6,18 @@ public class BasicAttack : MonoBehaviour
 {
     public HeroInfo heroInfo;
     public BasicAttackData basicAttackData;
-    protected SoldierBehaviour soldierBehaviour;
+    public SoldierBehaviour soldierBehaviour;
 
     public int atkArea, atkLayer;
 
     protected virtual void Start()
     {
-        heroInfo = GetComponent<HeroInfo>();
-        soldierBehaviour = GetComponent<SoldierBehaviour>();
         atkArea = (int)heroInfo.team * (int)basicAttackData.atkArea;
         atkLayer = (int)basicAttackData.atkArea * 7;
 
         soldierBehaviour.atkDetect += Detect;
         soldierBehaviour.canAtk += CanAttackCheck;
+        soldierBehaviour.atkHandler += Attack;
     }
 
     protected void Detect()
@@ -28,7 +27,7 @@ public class BasicAttack : MonoBehaviour
         if (targets != null)
         {
             heroInfo.target = heroInfo.FindNearestSoldier(targets);
-            if (CanAttackCheck())
+            if (heroInfo.TargetCheck(basicAttackData.range + 2))
             {
                 Debug.Log("½Î¿ò½ÃÀÛ");
                 if(heroInfo.target.tag == "Castle") { heroInfo.state = Soldier_State.Siege; }
@@ -38,12 +37,22 @@ public class BasicAttack : MonoBehaviour
         }
     }
 
-    public bool CanAttackCheck()
+    protected bool CanAttackCheck()
     {
-        if (heroInfo.TargetCheck(basicAttackData.range))
+        if (!heroInfo.targetInfo || heroInfo.target.layer == 7)
+        {
+            heroInfo.state = Soldier_State.Idle;
+            return false;
+        }
+        if (heroInfo.TargetCheck(basicAttackData.range + heroInfo.targetInfo.castleData.size))
         {
             return true;
         }
         return false;
+    }
+
+    protected virtual IEnumerator Attack(CastleInfo targetInfo)
+    {
+        yield return null;
     }
 }

@@ -14,21 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: ae44d6ca9dc728943a492226b377d3f4, type: 3}
   code: 5
-  defType: 4
-  hp: 150
-  def: -2
+  hp: 100
+  def: 1
   size: 0.2
   blood: {fileID: 5086979035932333915, guid: 83b2eb89fe46c6a4db5d18712a94a153, type: 3}
   soldier_name: "\uC2A4\uCF08\uB808\uD1A4 \uC804\uC0AC"
   mp: 1
   speed: 3
   tribe: 0
-  basicAttack: {fileID: 4727699810932049618, guid: 7b2ba109eb4c04c478fa2fa3d3d6c263,
-    type: 3}
   extraSkill: []
-  rarity: 0
   skillList: []
   mutant: {fileID: 0}
+  rarity: 0
   cost: 100
   remain: 0
+  unitAmount: 3
   soldier_Type: 1

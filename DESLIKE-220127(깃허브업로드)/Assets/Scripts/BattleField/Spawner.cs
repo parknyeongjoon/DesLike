@@ -35,7 +35,6 @@ public class Spawner : MonoBehaviour
         }
         foreach(SoldierData soldierData in portDatas.activeSoldierList.Values)
         {
-            //Debug.Log(soldierData.code);
             soldierPrefabs.Add(soldierData.code, Resources.Load<GameObject>(prefabPath + soldierData.soldier_name));
         }
     }
@@ -91,8 +90,8 @@ public class Spawner : MonoBehaviour
                 if (portDatas.portDatas[5 * i + j].soldierCode != null)
                 {
                     soldierData = portDatas.activeSoldierList[portDatas.portDatas[5 * i + j].soldierCode];
-                    createSoldier = Instantiate(soldierPrefabs[soldierData.code], spawner[j].transform);
-                    if(soldierData.mutant)
+                    createSoldier = Instantiate(soldierPrefabs[soldierData.code], spawner[j].transform.position, Quaternion.identity);
+                    if (soldierData.mutant)
                     {
                         Instantiate(soldierData.mutant, createSoldier.transform);
                     }
@@ -102,6 +101,12 @@ public class Spawner : MonoBehaviour
                         {
                             Instantiate(soldierData.extraSkill[extraSkillIndex], createSoldier.transform);
                         }
+                    }
+                    for (int unitAmount = 0; unitAmount < soldierData.unitAmount - 1; unitAmount++)
+                    {
+                        float temp = Random.Range(-1 - soldierData.size, 1 + soldierData.size);
+                        Vector3 spawnPos = spawner[j].transform.position + new Vector3(temp, temp);
+                        Instantiate(createSoldier, spawnPos, Quaternion.identity);
                     }
                 }
             }

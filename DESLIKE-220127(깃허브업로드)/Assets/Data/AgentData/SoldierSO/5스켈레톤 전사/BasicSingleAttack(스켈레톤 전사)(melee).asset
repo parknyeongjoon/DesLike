@@ -12,11 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ff0c33c4c7a074d909e49103c0bf8c, type: 3}
   m_Name: "BasicSingleAttack(\uC2A4\uCF08\uB808\uD1A4 \uC804\uC0AC)(melee)"
   m_EditorClassIdentifier: 
-  startDelay: 0.4
-  endDelay: 0.6
-  atkSpeed: 0
-  mp: 0
+  start_Delay: 0.6
+  end_Delay: 0.4
   range: 1.2
-  atkDmg: 12
-  atk_Type: 2
+  atk_Dmg: 6
   atkArea: 256

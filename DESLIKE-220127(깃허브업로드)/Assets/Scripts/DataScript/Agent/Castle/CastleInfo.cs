@@ -21,13 +21,13 @@ public class CastleInfo : MonoBehaviour
 
     public void Die()
     {
-        if (beforeDeadHandler == null)
+        if (beforeDeadHandler != null)
         {
-            afterDeadHandler.Invoke();
+            beforeDeadHandler.Invoke();
         }
         else
         {
-            beforeDeadHandler.Invoke();
+            afterDeadHandler?.Invoke();
         }
     }
 

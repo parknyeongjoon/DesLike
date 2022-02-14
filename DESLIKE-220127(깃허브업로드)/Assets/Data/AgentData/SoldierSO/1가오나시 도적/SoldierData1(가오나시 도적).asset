@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: -8408763834710030297, guid: 2dc34c65fbf97074283fb556a126c069, type: 3}
   code: 1
-  defType: 1
   hp: 75
   def: 1
   size: 0.2
@@ -23,12 +22,11 @@ MonoBehaviour:
   mp: 50
   speed: 6
   tribe: 2
-  basicAttack: {fileID: 4727699810932049618, guid: 359ae5f283f3e3c408314573b5c03e5e,
-    type: 3}
   extraSkill: []
   skillList: []
   mutant: {fileID: 0}
   rarity: 1
   cost: 30
   remain: 106
+  unitAmount: 4
   soldier_Type: 1

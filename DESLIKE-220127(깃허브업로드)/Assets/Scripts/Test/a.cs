@@ -7,16 +7,22 @@ public class a : MonoBehaviour
     public delegate IEnumerator TestHandler();
     public TestHandler testHandler;
 
+    IEnumerator testCoroutineA;
+
     void Start()
     {
-
+        testCoroutineA = testAA();
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-
+            StartCoroutine(testCoroutineA);
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            StopCoroutine(testCoroutineA);
         }
     }
     protected virtual void testA()
@@ -26,10 +32,11 @@ public class a : MonoBehaviour
 
     public virtual IEnumerator testAA()
     {
-        while (!Input.GetKey(KeyCode.A))
+        Debug.Log("AA코루틴 시작");
+        for(int i = 0; i < 10; i++)
         {
             Debug.Log("AA");
-            yield return null;
+            yield return new WaitForSeconds(1.0f);
         }
     }
 }

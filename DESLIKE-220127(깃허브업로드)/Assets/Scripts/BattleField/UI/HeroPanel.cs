@@ -19,7 +19,7 @@ public class HeroPanel : MonoBehaviour
     HeroData heroData;
 
     GameObject[] heroSkillList;
-    SkillBehaviour[] skillBehaviours;
+    Skill[] skillBehaviours;
     SkillData[] skillDatas = new SkillData[4];
 
     void Awake()
@@ -47,7 +47,7 @@ public class HeroPanel : MonoBehaviour
         Hero_Portrait.sprite = heroData.sprite;
         for (int i = 0; i < heroSkillList.Length; i++)
         {
-            skillBehaviours[i] = heroSkillList[i].GetComponent<SkillBehaviour>();
+            skillBehaviours[i] = heroSkillList[i].GetComponent<Skill>();
             skillDatas[i] = heroData.skillList[i];
             SkillIcons[i].sprite = skillDatas[i].skill_Icon;
             BlackSkillIcons[i].sprite = skillDatas[i].skill_Icon;
@@ -67,10 +67,10 @@ public class HeroPanel : MonoBehaviour
         //if(스킬이 액티브인 경우)
         for (int i = 0; i < skillBehaviours.Length; i++)
         {
-            if (skillBehaviours[i] is ActiveSkillBehaviour)
+            if (skillBehaviours[i] is ActiveSkill)
             {
-                SkillIcons[i].fillAmount = 1 - ((ActiveSkillBehaviour)skillBehaviours[i]).cur_cooltime / ((ActiveSkillData)skillDatas[i]).cooltime;
-                SkillCooltimes[i].text = (((ActiveSkillBehaviour)skillBehaviours[i]).cur_cooltime > 0 ? ((int)((ActiveSkillBehaviour)skillBehaviours[i]).cur_cooltime).ToString() : "");
+                SkillIcons[i].fillAmount = 1 - ((ActiveSkill)skillBehaviours[i]).cur_cooltime / ((ActiveSkillData)skillDatas[i]).cooltime;
+                SkillCooltimes[i].text = (((ActiveSkill)skillBehaviours[i]).cur_cooltime > 0 ? ((int)((ActiveSkill)skillBehaviours[i]).cur_cooltime).ToString() : "");
             }
         }
     }

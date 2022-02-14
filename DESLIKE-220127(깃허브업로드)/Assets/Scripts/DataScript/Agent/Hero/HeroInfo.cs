@@ -14,8 +14,12 @@ public class HeroInfo : CastleInfo
     public Team team;
     public float healWeight;
     public bool resurrection;
-    [SerializeField]
-    PortDatas allyPortDatas;
+    public Buff_Stat buff_Stat;
+
+    public Animator animator;
+
+    public Dictionary<string, Coroutine> buffCoroutine;
+    public Dictionary<string, Coroutine> debuffCoroutine;
 
     void Start()
     {
@@ -37,7 +41,7 @@ public class HeroInfo : CastleInfo
     {
         if (target != null)
         {
-            if (Vector3.Distance(transform.position, target.transform.position) <= range + 1)//몸의 중심 말고 테투리부터 거리 targetInfo.castleData.size
+            if (Vector3.Distance(transform.position, target.transform.position) <= range)//몸의 중심 말고 테투리부터 거리 targetInfo.castleData.size
             {
                 return true;
             }

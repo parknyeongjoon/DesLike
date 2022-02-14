@@ -1221,10 +1221,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5346442293094215224}
   - component: {fileID: 5346442293094215225}
-  - component: {fileID: 5526397366469184701}
   - component: {fileID: -1573145474374502888}
   - component: {fileID: 6782014734319213554}
   - component: {fileID: -8904327211606176233}
+  - component: {fileID: 5526397366469184701}
   - component: {fileID: -6878065226668501377}
   - component: {fileID: 1805136670179630442}
   - component: {fileID: -6545665614086749544}
@@ -1307,23 +1307,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5526397366469184701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5346442293094215222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 224f414d87e5361419d2850964ae44bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Hpbar: {fileID: 3421288505172815408}
-  Mpbar: {fileID: 7341851713505146119}
-  hpbar: {fileID: 656011340784530830}
-  mpbar: {fileID: 7561757787368840642}
-  hp_mp_bar: {fileID: 6678462704121574981}
 --- !u!50 &-1573145474374502888
 Rigidbody2D:
   serializedVersion: 4
@@ -1380,6 +1363,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5526397366469184701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346442293094215222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 224f414d87e5361419d2850964ae44bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 5346442293094215225}
+  heroInfo: {fileID: -6878065226668501377}
+  Hpbar: {fileID: 3421288505172815408}
+  Mpbar: {fileID: 7341851713505146119}
+  hpbar: {fileID: 656011340784530830}
+  mpbar: {fileID: 7561757787368840642}
+  hp_mp_bar: {fileID: 6678462704121574981}
 --- !u!114 &-6878065226668501377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1395,7 +1397,6 @@ MonoBehaviour:
   castleData: {fileID: 11400000, guid: d71aa34aaed1ae748b8acaabf4eea2eb, type: 2}
   cur_Hp: 0
   portDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
-  heroData: {fileID: 0}
   targetInfo: {fileID: 0}
   target: {fileID: 0}
   cur_Mp: 0
@@ -1405,7 +1406,7 @@ MonoBehaviour:
   team: 1
   healWeight: 0
   resurrection: 0
-  allyPortDatas: {fileID: 0}
+  animator: {fileID: -8904327211606176233}
   soldierCode: 2
 --- !u!114 &1805136670179630442
 MonoBehaviour:
@@ -1419,7 +1420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 196c5a0352e65e94bb2cf6e339b947b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroInfo: {fileID: 0}
+  heroInfo: {fileID: -6878065226668501377}
 --- !u!114 &-6545665614086749544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1432,8 +1433,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f26b66f7d1b2384c8d4ec388b7e71f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroInfo: {fileID: 0}
+  heroInfo: {fileID: -6878065226668501377}
   basicAttackData: {fileID: 11400000, guid: 44ab94840f15ac549a0f61ec7dae9f98, type: 2}
+  soldierBehaviour: {fileID: 1805136670179630442}
   atkArea: 0
   atkLayer: 0
 --- !u!114 &3218131933784094050
@@ -1448,8 +1450,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 196eeb1ee06889c4d83389564e732b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroInfo: {fileID: 0}
+  heroInfo: {fileID: -6878065226668501377}
   basicAttackData: {fileID: 11400000, guid: 17edd08738f01964db3de6a2e70ea2f0, type: 2}
+  soldierBehaviour: {fileID: 1805136670179630442}
   atkArea: 0
   atkLayer: 0
 --- !u!1 &5488699387805153504

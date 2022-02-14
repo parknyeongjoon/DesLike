@@ -8,7 +8,6 @@ public class SoldierBasic : MonoBehaviour
 
     protected void Start()
     {
-        heroInfo = GetComponent<HeroInfo>();
         heroInfo.moveDir = new Vector3(0, 0, 0);
         StartCoroutine(Idle_Behaviour());
     }
@@ -36,6 +35,11 @@ public class SoldierBasic : MonoBehaviour
     protected virtual IEnumerator Stun_Behaviour()
     {
         yield return new WaitForFixedUpdate();
+    }
+
+    protected virtual void Dead_Behaviour()
+    {
+
     }
 
     protected void Move()

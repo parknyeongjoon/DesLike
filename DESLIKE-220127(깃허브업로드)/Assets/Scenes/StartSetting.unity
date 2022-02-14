@@ -166,7 +166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71111f89adc85e438163907c1be2931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allyPortDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
 --- !u!1001 &2294347696250406094
 PrefabInstance:
   m_ObjectHideFlags: 0

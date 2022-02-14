@@ -7,7 +7,7 @@ using UnityEngine;
 public class HeroData : CastleData
 {
     public string soldier_name;
-    public float mp, speed;
+    public float mp, speed, mp_Re, hp_Re;
     public Tribe tribe;
     public List<GameObject> extraSkill;
     public List<SkillData> skillList;

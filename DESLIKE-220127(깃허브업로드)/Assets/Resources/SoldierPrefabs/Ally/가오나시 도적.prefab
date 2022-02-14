@@ -1221,13 +1221,13 @@ GameObject:
   m_Component:
   - component: {fileID: 5346442293094215224}
   - component: {fileID: 5346442293094215225}
+  - component: {fileID: 6782014734319213554}
+  - component: {fileID: -1573145474374502888}
+  - component: {fileID: 7301024721818143529}
   - component: {fileID: 5526397366469184701}
   - component: {fileID: -6878065226668501377}
   - component: {fileID: -1750495564276381013}
   - component: {fileID: 1567448925973340083}
-  - component: {fileID: 6782014734319213554}
-  - component: {fileID: 7301024721818143529}
-  - component: {fileID: -1573145474374502888}
   m_Layer: 8
   m_Name: "\uAC00\uC624\uB098\uC2DC \uB3C4\uC801"
   m_TagString: Soldier
@@ -1306,79 +1306,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5526397366469184701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5346442293094215222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 224f414d87e5361419d2850964ae44bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Hpbar: {fileID: 3421288505172815408}
-  Mpbar: {fileID: 7341851713505146119}
-  hpbar: {fileID: 656011340784530830}
-  mpbar: {fileID: 7561757787368840642}
-  hp_mp_bar: {fileID: 6678462704121574981}
---- !u!114 &-6878065226668501377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5346442293094215222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a937bf1ca3267e04388ea345e4ac773a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  castleData: {fileID: 11400000, guid: 505df875aa52d6c429dc1729c124a209, type: 2}
-  cur_Hp: 0
-  portDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
-  heroData: {fileID: 0}
-  targetInfo: {fileID: 0}
-  target: {fileID: 0}
-  cur_Mp: 0
-  moveDir: {x: 0, y: 0, z: 0}
-  state: 0
-  action: 0
-  team: 1
-  healWeight: 0
-  resurrection: 0
-  allyPortDatas: {fileID: 0}
-  soldierCode: 1
---- !u!114 &-1750495564276381013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5346442293094215222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03937479573bb0b4f87d9d09c8aa4da3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heroInfo: {fileID: 0}
---- !u!114 &1567448925973340083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5346442293094215222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f26b66f7d1b2384c8d4ec388b7e71f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heroInfo: {fileID: 0}
-  basicAttackData: {fileID: 11400000, guid: 9db99b73a260a634db7cb67ea9235b6f, type: 2}
-  atkArea: 0
-  atkLayer: 0
 --- !u!70 &6782014734319213554
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1395,25 +1322,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.3515625, y: 0.828125}
   m_Direction: 0
---- !u!95 &7301024721818143529
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5346442293094215222}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &-1573145474374502888
 Rigidbody2D:
   serializedVersion: 4
@@ -1435,6 +1343,100 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &7301024721818143529
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346442293094215222}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5526397366469184701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346442293094215222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 224f414d87e5361419d2850964ae44bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 5346442293094215225}
+  heroInfo: {fileID: -6878065226668501377}
+  Hpbar: {fileID: 3421288505172815408}
+  Mpbar: {fileID: 7341851713505146119}
+  hpbar: {fileID: 656011340784530830}
+  mpbar: {fileID: 7561757787368840642}
+  hp_mp_bar: {fileID: 6678462704121574981}
+--- !u!114 &-6878065226668501377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346442293094215222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a937bf1ca3267e04388ea345e4ac773a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castleData: {fileID: 11400000, guid: 505df875aa52d6c429dc1729c124a209, type: 2}
+  cur_Hp: 0
+  portDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
+  targetInfo: {fileID: 0}
+  target: {fileID: 0}
+  cur_Mp: 0
+  moveDir: {x: 0, y: 0, z: 0}
+  state: 0
+  action: 0
+  team: 1
+  healWeight: 0
+  resurrection: 0
+  animator: {fileID: 7301024721818143529}
+  soldierCode: 1
+--- !u!114 &-1750495564276381013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346442293094215222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03937479573bb0b4f87d9d09c8aa4da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroInfo: {fileID: -6878065226668501377}
+--- !u!114 &1567448925973340083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346442293094215222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f26b66f7d1b2384c8d4ec388b7e71f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroInfo: {fileID: -6878065226668501377}
+  basicAttackData: {fileID: 11400000, guid: 9db99b73a260a634db7cb67ea9235b6f, type: 2}
+  soldierBehaviour: {fileID: -1750495564276381013}
+  atkArea: 0
+  atkLayer: 0
 --- !u!1 &5488699387805153504
 GameObject:
   m_ObjectHideFlags: 0

@@ -2252,10 +2252,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7116624685446316912}
   - component: {fileID: 7116624685446316876}
-  - component: {fileID: 8576553565259397100}
   - component: {fileID: 4448198707694892068}
   - component: {fileID: 3178092740169865627}
   - component: {fileID: -1315901735184964035}
+  - component: {fileID: 8576553565259397100}
   - component: {fileID: -3554134871425548847}
   m_Layer: 9
   m_Name: Enemy Ground
@@ -2334,24 +2334,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8576553565259397100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7116624685446316913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 224f414d87e5361419d2850964ae44bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unitInfo: {fileID: 0}
-  Hpbar: {fileID: 4717870179718478524}
-  Mpbar: {fileID: 459770065638563844}
-  hpbar: {fileID: 362799599459954385}
-  mpbar: {fileID: 5536739770637770173}
-  hp_mp_bar: {fileID: 6847175199391459011}
 --- !u!50 &4448198707694892068
 Rigidbody2D:
   serializedVersion: 4
@@ -2408,6 +2390,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8576553565259397100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7116624685446316913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 224f414d87e5361419d2850964ae44bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 7116624685446316876}
+  heroInfo: {fileID: -3554134871425548847}
+  Hpbar: {fileID: 4717870179718478524}
+  Mpbar: {fileID: 459770065638563844}
+  hpbar: {fileID: 362799599459954385}
+  mpbar: {fileID: 5536739770637770173}
+  hp_mp_bar: {fileID: 6847175199391459011}
 --- !u!114 &-3554134871425548847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2421,12 +2422,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castleData: {fileID: 0}
-  cur_hp: 0
-  cur_mp: 0
+  cur_Hp: 0
+  portDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
+  targetInfo: {fileID: 0}
+  target: {fileID: 0}
+  cur_Mp: 0
+  moveDir: {x: 0, y: 0, z: 0}
+  state: 0
+  action: 0
   team: 2
-  spawnSoldier: {fileID: 11400000, guid: ca0fce547b2842644877f5f3c8392a78, type: 2}
+  healWeight: 0
   resurrection: 0
-  heroData: {fileID: 0}
+  animator: {fileID: -1315901735184964035}
+  soldierCode: 
 --- !u!1 &7184772303122657817
 GameObject:
   m_ObjectHideFlags: 0

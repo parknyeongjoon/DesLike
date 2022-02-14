@@ -6,16 +6,8 @@ public class SingleAttackData : ActiveSkillData
 {
     public float atk_Dmg;
 
-    public IEnumerator Effect(CastleInfo targetInfo, HeroInfo heroInfo)
+    public void Effect(HeroInfo targetInfo)//이런 식으로 효과는 밖으로 빼기
     {
-        yield return new WaitForSeconds(start_Delay);
-        if (targetInfo)
-        {
-            heroInfo.cur_Mp -= mp;
-            targetInfo.OnDamaged(atk_Dmg);
-            heroInfo.action = Soldier_Action.End_Delay;
-            yield return new WaitForSeconds(end_Delay);
-        }
-        heroInfo.action = Soldier_Action.Idle;
+        targetInfo.OnDamaged(atk_Dmg);
     }
 }

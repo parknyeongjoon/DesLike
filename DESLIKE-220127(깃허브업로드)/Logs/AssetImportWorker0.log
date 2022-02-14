@@ -1,0 +1,363 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.21f1 (a38c86f6690f) revision 10718342'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 18362.1256; Version 1903; 64bit' Language: 'ko' Physical Memory: 16332 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.21f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Administrator/Documents/GitHub/DesLike/DESLIKE-220127(깃허브업로드)
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+49523
+Successfully changed project path to: C:/Users/Administrator/Documents/GitHub/DesLike/DESLIKE-220127(깃허브업로드)
+C:/Users/Administrator/Documents/GitHub/DesLike/DESLIKE-220127(깃허브업로드)
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 117.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.21f1 (a38c86f6690f)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Administrator/Documents/GitHub/DesLike/DESLIKE-220127(깃허브업로드)/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 6GB (ID=0x1c03)
+    Vendor:   
+    VRAM:     6052 MB
+    Driver:   27.21.14.5671
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56344
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005020 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 56.15 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.539 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1540ms)
+		BeginReloadAssembly (90ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (472ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (150ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (181ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (56ms)
+				BeforeProcessingInitializeOnLoad (16ms)
+				ProcessInitializeOnLoadAttributes (75ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.012641 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 55.36 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.513 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1514ms)
+		BeginReloadAssembly (177ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (1249ms)
+			LoadAssemblies (143ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (316ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (630ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (56ms)
+				BeforeProcessingInitializeOnLoad (237ms)
+				ProcessInitializeOnLoadAttributes (295ms)
+				ProcessInitializeOnLoadMethodAttributes (19ms)
+				AfterProcessingInitializeOnLoad (19ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2416 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.2 MB.
+System memory in use after: 110.4 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2852.
+Total: 3.738400 ms (FindLiveObjects: 0.259700 ms CreateObjectMapping: 0.063600 ms MarkObjects: 3.332000 ms  DeleteObjects: 0.081900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Data/AgentData/SoldierSO/6스켈레톤 궁수
+  artifactKey: Guid(4f1e392dbc4fa714696699f30f950ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData/SoldierSO/6스켈레톤 궁수 using Guid(4f1e392dbc4fa714696699f30f950ae3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d4bf717cb25a480606ed11d511ea893') in 0.015300 seconds 
+  Import took 0.019266 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/Prefabs/AllySpawner.prefab
+  artifactKey: Guid(f57a0f4970407e44ab01ed436f169e80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/AllySpawner.prefab using Guid(f57a0f4970407e44ab01ed436f169e80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '452a35f938c22abcb204981ff0309e37') in 0.118469 seconds 
+  Import took 0.122590 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/Prefabs/Hero_Btn.prefab
+  artifactKey: Guid(71042e323ecee4e4e87908c8e4828646) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Hero_Btn.prefab using Guid(71042e323ecee4e4e87908c8e4828646) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59e26d827299d2ba4a3880713f6b81c4') in 0.067831 seconds 
+  Import took 0.072024 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/Prefabs/previewPortrait.prefab
+  artifactKey: Guid(df8b68f18a615de489130525d8ebd1db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/previewPortrait.prefab using Guid(df8b68f18a615de489130525d8ebd1db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07774cd25642ed8f049d9fc5eafa8357') in 0.018236 seconds 
+  Import took 0.021791 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Prefabs/Dic_Soldier_Btn.prefab
+  artifactKey: Guid(02867b9e6a27d764fab5a5c27c5914c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dic_Soldier_Btn.prefab using Guid(02867b9e6a27d764fab5a5c27c5914c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4733415a6ff04419e91c856d7d447f39') in 0.013866 seconds 
+  Import took 0.017318 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/Prefabs/Soldier_portrait.prefab
+  artifactKey: Guid(78b530f40ba4ea742aa0c081d00a0e70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Soldier_portrait.prefab using Guid(78b530f40ba4ea742aa0c081d00a0e70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1659adc7bff2c89be5f6624e02b099f4') in 0.017317 seconds 
+  Import took 0.021065 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000267 seconds.
+  path: Assets/Prefabs/Port_Btn.prefab
+  artifactKey: Guid(55bfd44f2b041cd43a94997edc065017) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Port_Btn.prefab using Guid(55bfd44f2b041cd43a94997edc065017) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f1321a46e1d26a2f0482fd10c751b42') in 0.014805 seconds 
+  Import took 0.018659 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/Data/AgentData/HeroSO
+  artifactKey: Guid(56535f6a2b0ac444aa821d3a6d327a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData/HeroSO using Guid(56535f6a2b0ac444aa821d3a6d327a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a78c4d8b9a168008cbb1ce2200f00dac') in 0.009710 seconds 
+  Import took 0.013487 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000358 seconds.
+  path: Assets/Data/AgentData/SoldierSO
+  artifactKey: Guid(3afd20273b6f3db4d86a4ba411312605) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData/SoldierSO using Guid(3afd20273b6f3db4d86a4ba411312605) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ae9ec46acd5a41a0cbf31464e33ebcc') in 0.010547 seconds 
+  Import took 0.014444 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000311 seconds.
+  path: Assets/Prefabs/RelicRewardBtn.prefab
+  artifactKey: Guid(4fd7974f301eb1048b4fa9d92d7f2253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/RelicRewardBtn.prefab using Guid(4fd7974f301eb1048b4fa9d92d7f2253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5cec6a8341825e0c210ff916218253b') in 0.015573 seconds 
+  Import took 0.019919 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000384 seconds.
+  path: Assets/Data/AgentData/Blood.prefab
+  artifactKey: Guid(83b2eb89fe46c6a4db5d18712a94a153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData/Blood.prefab using Guid(83b2eb89fe46c6a4db5d18712a94a153) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '865d4fc9bbd1ac9a7edc74a2906450f3') in 0.066974 seconds 
+  Import took 0.070985 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Data/AgentData/SoldierSO/Soldier_Animator.controller
+  artifactKey: Guid(775842943e6f25945a16b14eb3bea348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData/SoldierSO/Soldier_Animator.controller using Guid(775842943e6f25945a16b14eb3bea348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd00537a48534856bf6585de0d45d308c') in 0.019937 seconds 
+  Import took 0.023534 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000450 seconds.
+  path: Assets/Prefabs/Port Panel.prefab
+  artifactKey: Guid(e26e8248d6fa2d342ba42857ebcf1740) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Port Panel.prefab using Guid(e26e8248d6fa2d342ba42857ebcf1740) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa42593dfeaedbc27061e1bc7a899059') in 0.047744 seconds 
+  Import took 0.052642 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Prefabs/Heal.prefab
+  artifactKey: Guid(461554c2482a9644a884048383853714) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Heal.prefab using Guid(461554c2482a9644a884048383853714) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3c35ab29d408e9f509aaf63da457133') in 0.018495 seconds 
+  Import took 0.022279 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000299 seconds.
+  path: Assets/Data/AgentData
+  artifactKey: Guid(daa928b0023bc604d8c6f2e036ecd8fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData using Guid(daa928b0023bc604d8c6f2e036ecd8fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8f003a61d1fcc8cf018985d4381edc5') in 0.010889 seconds 
+  Import took 0.014916 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/Prefabs/EnemySpawner.prefab
+  artifactKey: Guid(474a18c7c5bd66947b3092227ce3eee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/EnemySpawner.prefab using Guid(474a18c7c5bd66947b3092227ce3eee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94db05b96e59cecc5ab1a56ef52dcd26') in 0.042749 seconds 
+  Import took 0.046976 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Data/AgentData/arrow.prefab
+  artifactKey: Guid(138af845ffec43e41b5b1d2c14d4280d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData/arrow.prefab using Guid(138af845ffec43e41b5b1d2c14d4280d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1750e25db2143a8db7a0191a5fe4ee03') in 0.020458 seconds 
+  Import took 0.024022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/Prefabs/SoldierRewardBtn.prefab
+  artifactKey: Guid(61aec71d49fcb2f47a6aff0d5535c1c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/SoldierRewardBtn.prefab using Guid(61aec71d49fcb2f47a6aff0d5535c1c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe276eb2b4881d0fa5369dc4c01cb601') in 0.016576 seconds 
+  Import took 0.020277 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000409 seconds.
+  path: Assets/Data/AgentData/SoldierSO/7스켈레톤 탱커
+  artifactKey: Guid(229ad28334bcd9a408f0c11719b178e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData/SoldierSO/7스켈레톤 탱커 using Guid(229ad28334bcd9a408f0c11719b178e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07118a0ddb2b60821fd7ab9452efb352') in 0.009849 seconds 
+  Import took 0.013787 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.374350 seconds.
+  path: Assets/Data/AgentData/SoldierSO/7스켈레톤 탱커/BasicSingleAttack(스켈레톤 탱커).asset
+  artifactKey: Guid(6adf9ddc7fc8b394a9c438ed020a85ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData/SoldierSO/7스켈레톤 탱커/BasicSingleAttack(스켈레톤 탱커).asset using Guid(6adf9ddc7fc8b394a9c438ed020a85ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98c714b576f1044afea485a52378e002') in 0.032568 seconds 
+  Import took 0.038667 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000391 seconds.
+  path: Assets/Data/AgentData/SoldierSO/7스켈레톤 탱커/SoldierData7(스켈레톤 탱커).asset
+  artifactKey: Guid(dc098578b6475514e82ce1e5590261c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData/SoldierSO/7스켈레톤 탱커/SoldierData7(스켈레톤 탱커).asset using Guid(dc098578b6475514e82ce1e5590261c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd31fa78c4bcc49fee8cba5e98ea9014') in 0.030399 seconds 
+  Import took 0.036622 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000393 seconds.
+  path: Assets/Data/AgentData/SoldierSO/7스켈레톤 탱커/Skeleton_Tanker.overrideController
+  artifactKey: Guid(787da57707bae294ab96013c2f9ba1c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData/SoldierSO/7스켈레톤 탱커/Skeleton_Tanker.overrideController using Guid(787da57707bae294ab96013c2f9ba1c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88a1170e901df895172ef13f023cf394') in 0.053932 seconds 
+  Import took 0.060387 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.113152 seconds.
+  path: Assets/Data/AgentData/SoldierSO/7스켈레톤 탱커/Skeleton_Tanker_Walk.anim
+  artifactKey: Guid(d6d38744198bb5f49b356ceaac39af44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData/SoldierSO/7스켈레톤 탱커/Skeleton_Tanker_Walk.anim using Guid(d6d38744198bb5f49b356ceaac39af44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f90817e4054b6bcd5cf9712071e5fb4') in 0.018072 seconds 
+  Import took 0.022249 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.279278 seconds.
+  path: Assets/Data/AgentData/SoldierSO/7스켈레톤 탱커/Skeleton_Tanker_Idle.anim
+  artifactKey: Guid(fe749dfaa3e0112478c54a0063bbafeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData/SoldierSO/7스켈레톤 탱커/Skeleton_Tanker_Idle.anim using Guid(fe749dfaa3e0112478c54a0063bbafeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a239594dc794020a2538d5d26e7886e') in 0.011078 seconds 
+  Import took 0.014972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.303658 seconds.
+  path: Assets/Data/AgentData/SoldierSO/7스켈레톤 탱커/Skeleton_Tanker_Dead.anim
+  artifactKey: Guid(567f938332391204ba418f205caec08e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData/SoldierSO/7스켈레톤 탱커/Skeleton_Tanker_Dead.anim using Guid(567f938332391204ba418f205caec08e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63072467f6666e1f1ccc0cd240763284') in 0.011554 seconds 
+  Import took 0.015514 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.669132 seconds.
+  path: Assets/Data/AgentData/SoldierSO/6스켈레톤 궁수/BasicSingleAttack(스켈레톤 궁수).asset
+  artifactKey: Guid(7b3e4819f2068d74f9852ad7fe73f5d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData/SoldierSO/6스켈레톤 궁수/BasicSingleAttack(스켈레톤 궁수).asset using Guid(7b3e4819f2068d74f9852ad7fe73f5d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e65686a9d806f1a2ad4c8c95bd20feeb') in 0.014394 seconds 
+  Import took 0.018217 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/Data/AgentData/SoldierSO/6스켈레톤 궁수/BasicSingleRangeAttack(스켈레톤 궁수).asset
+  artifactKey: Guid(500f4691f712bee4abe3949fecdf7f7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData/SoldierSO/6스켈레톤 궁수/BasicSingleRangeAttack(스켈레톤 궁수).asset using Guid(500f4691f712bee4abe3949fecdf7f7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1038394e0b5fb1b60e300f8841285c5e') in 0.013349 seconds 
+  Import took 0.016839 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Data/AgentData/SoldierSO/6스켈레톤 궁수/SoldierData6(스켈레톤 궁수).asset
+  artifactKey: Guid(1486c69ac1f049a4bb7247a6b2822266) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData/SoldierSO/6스켈레톤 궁수/SoldierData6(스켈레톤 궁수).asset using Guid(1486c69ac1f049a4bb7247a6b2822266) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45528f55dd4e15ca1899ac80dfa3c436') in 0.014834 seconds 
+  Import took 0.018423 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/Data/AgentData/SoldierSO/6스켈레톤 궁수/Skeleton_Bow.overrideController
+  artifactKey: Guid(2e45a8e701b64ea4f8ead4f47e6597b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Data/AgentData/SoldierSO/6스켈레톤 궁수/Skeleton_Bow.overrideController using Guid(2e45a8e701b64ea4f8ead4f47e6597b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e161ed6a35ea0c52517e1408e4c0c6d') in 0.017539 seconds 
+  Import took 0.021970 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class BasicGrenadeAttack : BasicAttack
 {
-    public BasicGrenadeAttackData grenadeAtkData;
-
-    protected override void Start()
+    protected override IEnumerator Attack(CastleInfo targetInfo)
     {
-        base.Start();
-    }
-
-    public void BasicAttack(CastleInfo targetInfo)
-    {
-        StartCoroutine(((BasicGrenadeAttackData)basicAttackData).Effect(targetInfo, heroInfo));
+        yield return new WaitForSeconds(((BasicGrenadeAttackData)basicAttackData).start_Delay);
+        if (targetInfo && targetInfo.gameObject.layer != 7)
+        {
+            heroInfo.animator.SetTrigger("isAtk");
+            ((BasicGrenadeAttackData)basicAttackData).Effect(targetInfo, heroInfo);
+            heroInfo.action = Soldier_Action.End_Delay;
+            yield return new WaitForSeconds(((BasicGrenadeAttackData)basicAttackData).end_Delay);
+        }
+        heroInfo.action = Soldier_Action.Idle;
     }
 }

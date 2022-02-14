@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class BasicSingleRangeAttack : BasicAttack
 {
-    int curAmmo;
-
-    protected override void Start()
+    protected override IEnumerator Attack(CastleInfo targetInfo)
     {
-        base.Start();
-        curAmmo = ((BasicSingleRangeAttackData)basicAttackData).ammo;
-    }
-
-    public void BasicAttack(CastleInfo targetInfo)
-    {
-        StartCoroutine(((BasicSingleRangeAttackData)basicAttackData).Effect(this, targetInfo, heroInfo));
+        yield return new WaitForSeconds(basicAttackData.start_Delay);
+        if (targetInfo && targetInfo.gameObject.layer != 7)
+        {
+            heroInfo.animator.SetTrigger("isAtk");
+            ((BasicSingleRangeAttackData)basicAttackData).Effect(this, heroInfo.targetInfo, heroInfo.transform);
+            heroInfo.action = Soldier_Action.End_Delay;
+            yield return new WaitForSeconds(basicAttackData.end_Delay);
+        }
+        heroInfo.action = Soldier_Action.Idle;
     }
 }

@@ -8,27 +8,21 @@ public class GrenadeAttackData : ActiveSkillData
     public int max_Target;
     public float extent, atk_Dmg;
 
-    public IEnumerator Effect(CastleInfo targetInfo, HeroInfo heroInfo)
+    public void Effect(HeroInfo targetInfo, HeroInfo heroInfo)//이런 식으로 효과는 밖으로 빼기
     {
-        CastleInfo[] targetInfos;
-        yield return new WaitForSeconds(start_Delay);
-        if (targetInfo)
+        HeroInfo[] targetInfos;
+        targetInfos = Get_Targets(targetInfo, heroInfo);
+        for (int i = 0; i < targetInfos.Length; i++)
         {
-            heroInfo.cur_Mp -= mp;
-            targetInfos = Get_Targets(targetInfo, heroInfo);
-            for (int i = 0; i < targetInfos.Length; i++)
-            {
-                targetInfos[i].OnDamaged(atk_Dmg);
-            }
-            heroInfo.action = Soldier_Action.End_Delay;
-            yield return new WaitForSeconds(end_Delay);
+            targetInfos[i].OnDamaged(atk_Dmg);
         }
-        heroInfo.action = Soldier_Action.Idle;
     }
 
-    public CastleInfo[] Get_Targets(CastleInfo targetInfo, HeroInfo heroInfo)// 다른 곳으로 static으로 옮기기, soldier에서 스킬 사용시 null이면 마우스 위치에 사용될 듯?
+
+
+    HeroInfo[] Get_Targets(HeroInfo targetInfo, HeroInfo heroInfo)// 다른 곳으로 static으로 옮기기, soldier에서 스킬 사용시 null이면 마우스 위치에 사용될 듯?
     {
-        CastleInfo[] targetInfos = new CastleInfo[max_Target];
+        HeroInfo[] targetInfos = new HeroInfo[max_Target];
         Vector3 skillPos = new Vector3();
         if (targetInfo) { skillPos = targetInfo.transform.position; }
         else { skillPos = Input.mousePosition; }
@@ -37,7 +31,7 @@ public class GrenadeAttackData : ActiveSkillData
         {
             for (int i = 0; i < targetColliders.Length; i++)//왜 경고 뜨지?
             {
-                targetInfos[i] = targetColliders[i].GetComponent<CastleInfo>();
+                targetInfos[i] = targetColliders[i].GetComponent<HeroInfo>();
                 return targetInfos;
             }
         }
@@ -46,10 +40,10 @@ public class GrenadeAttackData : ActiveSkillData
             bool isTarget = false;
             for (int i = 0; i < max_Target - 1; i++)
             {
-                targetInfos[i] = targetColliders[i].GetComponent<CastleInfo>();
+                targetInfos[i] = targetColliders[i].GetComponent<HeroInfo>();
                 if (targetInfos[i] == targetInfo) { isTarget = true; }
             }
-            if (isTarget) { targetColliders[max_Target - 1].GetComponent<CastleInfo>(); }
+            if (isTarget) { targetColliders[max_Target - 1].GetComponent<HeroInfo>(); }
             else { targetInfos[max_Target - 1] = targetInfo; }
             return targetInfos;
         }

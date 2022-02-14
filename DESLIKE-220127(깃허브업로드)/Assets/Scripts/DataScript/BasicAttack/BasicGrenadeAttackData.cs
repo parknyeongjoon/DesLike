@@ -8,24 +8,17 @@ public class BasicGrenadeAttackData : BasicSingleAttackData
     public int max_Target;
     public float extent;
 
-    public new IEnumerator Effect(CastleInfo targetInfo, HeroInfo heroInfo)
+    public void Effect(CastleInfo targetInfo, HeroInfo heroInfo)
     {
         CastleInfo[] targetInfos;
-        yield return new WaitForSeconds(start_Delay);
-        if (targetInfo)
+        targetInfos = Get_Targets(targetInfo, heroInfo);
+        for (int i = 0; i < targetInfos.Length; i++)
         {
-            targetInfos = Get_Targets(targetInfo, heroInfo);
-            for (int i = 0; i < targetInfos.Length; i++)
-            {
-                targetInfos[i].OnDamaged(atk_Dmg);
-            }
-            heroInfo.action = Soldier_Action.End_Delay;
-            yield return new WaitForSeconds(end_Delay);
+            targetInfos[i].OnDamaged(atk_Dmg);
         }
-        heroInfo.action = Soldier_Action.Idle;
     }
 
-    public CastleInfo[] Get_Targets(CastleInfo targetInfo, HeroInfo heroInfo)// 다른 곳으로 static으로 옮기기, soldier에서 스킬 사용시 null이면 마우스 위치에 사용될 듯?
+    CastleInfo[] Get_Targets(CastleInfo targetInfo, HeroInfo heroInfo)// 다른 곳으로 static으로 옮기기, soldier에서 스킬 사용시 null이면 마우스 위치에 사용될 듯?
     {
         CastleInfo[] targetInfos = new CastleInfo[max_Target];
         Vector3 skillPos = new Vector3();

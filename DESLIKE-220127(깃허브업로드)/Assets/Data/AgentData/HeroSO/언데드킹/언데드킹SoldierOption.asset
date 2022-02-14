@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soldierOption:
   - soldierData: {fileID: 11400000, guid: 8f5bd6d443eb5714780da0f9b57c6d86, type: 2}
-    portNum: 010000000200000003000000
+    portNum: 0100000003000000
     mutant: {fileID: 0}
-  - soldierData: {fileID: 11400000, guid: 1486c69ac1f049a4bb7247a6b2822266, type: 2}
-    portNum: 07000000
+  - soldierData: {fileID: 11400000, guid: dc098578b6475514e82ce1e5590261c8, type: 2}
+    portNum: 02000000
     mutant: {fileID: 0}

@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class SoldierSpriteManager : MonoBehaviour
 {
+    [SerializeField]
     SpriteRenderer spriteRenderer;
+    [SerializeField]
     HeroInfo heroInfo;
     HeroData heroData;
 
@@ -21,8 +24,6 @@ public class SoldierSpriteManager : MonoBehaviour
     IEnumerator Start()
     {
         yield return new WaitUntil(() => heroData == null);
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        heroInfo = GetComponent<HeroInfo>();
         heroData = (HeroData)heroInfo.castleData;
         spriteRenderer.sprite = heroData.sprite;
         if (heroInfo.team == Team.Enemy)
@@ -47,14 +48,21 @@ public class SoldierSpriteManager : MonoBehaviour
     void OneBoxScale()
     {
         float hpscalex = 500f / heroData.hp;
-        float mpscalex = 250f / heroData.mp;
         foreach (Transform child in Hpbar.transform)
         {
             child.gameObject.transform.localScale = new Vector3(hpscalex, 1, 1);
         }
-        foreach (Transform child in Mpbar.transform)
+        try
         {
-            child.gameObject.transform.localScale = new Vector3(mpscalex, 1, 1);
+            float mpscalex = 250f / heroData.mp;
+            foreach (Transform child in Mpbar.transform)
+            {
+                child.gameObject.transform.localScale = new Vector3(mpscalex, 1, 1);
+            }
+        }
+        catch (DivideByZeroException)
+        {
+            Mpbar.SetActive(false);
         }
     }
 }

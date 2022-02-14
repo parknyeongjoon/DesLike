@@ -255,6 +255,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1b927f984a0c728469dabc8d567bf574, type: 2}
   - {fileID: 11400000, guid: 8f5bd6d443eb5714780da0f9b57c6d86, type: 2}
   - {fileID: 11400000, guid: 1486c69ac1f049a4bb7247a6b2822266, type: 2}
+  - {fileID: 11400000, guid: dc098578b6475514e82ce1e5590261c8, type: 2}
   heroDatas:
   - {fileID: 11400000, guid: 1b52e72375322824688473c0dae745e1, type: 2}
   - {fileID: 11400000, guid: 0404a1a6770a903418b6b85fc6e22463, type: 2}
@@ -1274,31 +1275,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 574283936, guid: 0f95ca2c810e0eb4da249c707d046b8b, type: 3}
-      propertyPath: heroInfo
-      value: 
-      objectReference: {fileID: 1145505312}
-    - target: {fileID: 1004540405330416364, guid: 0f95ca2c810e0eb4da249c707d046b8b,
-        type: 3}
-      propertyPath: heroInfo
-      value: 
-      objectReference: {fileID: 1145505312}
     - target: {fileID: 6527479380180569571, guid: 0f95ca2c810e0eb4da249c707d046b8b,
         type: 3}
       propertyPath: m_Name
       value: Hero
       objectReference: {fileID: 0}
-    - target: {fileID: 6527479380180569580, guid: 0f95ca2c810e0eb4da249c707d046b8b,
-        type: 3}
-      propertyPath: heroInfo
-      value: 
-      objectReference: {fileID: 1145505312}
-    - target: {fileID: 6527479380180569581, guid: 0f95ca2c810e0eb4da249c707d046b8b,
-        type: 3}
-      propertyPath: portDatas
-      value: 
-      objectReference: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae,
-        type: 2}
     - target: {fileID: 6527479380180569582, guid: 0f95ca2c810e0eb4da249c707d046b8b,
         type: 3}
       propertyPath: m_RootOrder

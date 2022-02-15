@@ -6,7 +6,7 @@ public class BasicAttack : MonoBehaviour
 {
     public HeroInfo heroInfo;
     public BasicAttackData basicAttackData;
-    public SoldierBehaviour soldierBehaviour;
+    public SoldierBasic soldierBasic;
 
     public int atkArea, atkLayer;
 
@@ -15,9 +15,9 @@ public class BasicAttack : MonoBehaviour
         atkArea = (int)heroInfo.team * (int)basicAttackData.atkArea;
         atkLayer = (int)basicAttackData.atkArea * 7;
 
-        soldierBehaviour.atkDetect += Detect;
-        soldierBehaviour.canAtk += CanAttackCheck;
-        soldierBehaviour.atkHandler += Attack;
+        soldierBasic.atkDetect += Detect;
+        soldierBasic.canAtk += CanAttackCheck;
+        soldierBasic.atkHandler += Attack;
     }
 
     protected void Detect()

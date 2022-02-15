@@ -8,11 +8,10 @@ public class HeroSkillUse: MonoBehaviour
 
     [SerializeField]
     HeroInfo heroInfo;
-    CastleInfo targetInfo;
+    CastleInfo skillTargetInfo;
 
-    public delegate void SkillHandler(CastleInfo castleInfo);
+    public delegate void SkillHandler(CastleInfo targetInfo);
     SkillHandler[] skillHandler = new SkillHandler[4];
-    public GameObject[] heroSkillList = new GameObject[4];
 
     Coroutine skillCoroutine;
 
@@ -23,6 +22,7 @@ public class HeroSkillUse: MonoBehaviour
     void Start()
     {
         mouseManager = MouseManager.Instance;
+        SetSkillHandler();
     }
 
     void Update()
@@ -35,14 +35,17 @@ public class HeroSkillUse: MonoBehaviour
 
     void SetSkillHandler()
     {
+        for (int i = 0; i < 3; i++)
+        {
 
+        }
     }
 
     void QSkill()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            skillHandler[0]?.Invoke(targetInfo);
+            skillHandler[0]?.Invoke(skillTargetInfo);
         }
     }
 
@@ -50,7 +53,7 @@ public class HeroSkillUse: MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            skillHandler[1]?.Invoke(targetInfo);
+            skillHandler[1]?.Invoke(skillTargetInfo);
         }
     }
 
@@ -58,7 +61,7 @@ public class HeroSkillUse: MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            skillHandler[2]?.Invoke(targetInfo);
+            skillHandler[2]?.Invoke(skillTargetInfo);
         }
     }
 
@@ -66,7 +69,7 @@ public class HeroSkillUse: MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            skillHandler[3]?.Invoke(targetInfo);
+            skillHandler[3]?.Invoke(skillTargetInfo);
         }
     }
 
@@ -225,7 +228,7 @@ public class HeroSkillUse: MonoBehaviour
             if (skillCoroutine != null)
             {
                 StopCoroutine(skillCoroutine);
-                targetInfo = null;
+                skillTargetInfo = null;
                 heroInfo.target = null;
                 if (skillFocus != null)
                 {
@@ -255,7 +258,7 @@ public class HeroSkillUse: MonoBehaviour
                 {
                     if (hit.gameObject.layer == 9 && hit.gameObject.tag != "Castle")
                     {
-                        targetInfo = hit.gameObject.GetComponent<CastleInfo>();
+                        skillTargetInfo = hit.gameObject.GetComponent<CastleInfo>();
                         break;
                     }
                 }

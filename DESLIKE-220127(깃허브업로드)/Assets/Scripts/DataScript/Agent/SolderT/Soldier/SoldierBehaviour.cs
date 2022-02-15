@@ -4,19 +4,11 @@ using System.Linq;
 using UnityEngine;
 using System;
 
-
 public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
 {
-    public Func<CastleInfo, IEnumerator> atkHandler;
     public Func<HeroInfo, IEnumerator> skillHandler;
-
-    public delegate void DetectHandler();
-    public DetectHandler atkDetect;
-    public DetectHandler skillDetect;
-
-    public delegate bool CanDoHandler();
-    public CanDoHandler canAtk;
-    public CanDoHandler canSkill;
+    public Action skillDetect;
+    public Func<bool> canSkill;
 
     new void Start()
     {

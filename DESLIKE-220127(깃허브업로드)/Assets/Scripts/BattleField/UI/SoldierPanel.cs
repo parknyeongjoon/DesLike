@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 //스킬 추가
 
 public class SoldierPanel : MonoBehaviour
@@ -11,10 +12,10 @@ public class SoldierPanel : MonoBehaviour
     [SerializeField]
     Text HPText, MPText, SkillCooltime;
 
-    public SoldierInfo soldierInfo;
+    SoldierInfo soldierInfo;
     SoldierData soldierData;
 
-    public Skill skillBehaviour;
+    Skill skill;
     SkillData skillData;
 
     public void OnEnable()
@@ -30,15 +31,23 @@ public class SoldierPanel : MonoBehaviour
 
     void SetSoldierPanel()
     {
+        //병사 정보
         soldierInfo = BattleUIManager.Instance.cur_Soldier;
         soldierData = (SoldierData)soldierInfo.castleData;
-        skillBehaviour = soldierInfo.transform.GetComponent<Skill>();
         Soldier_Portrait.sprite = soldierData.sprite;
-        if (skillData != null)
+        //스킬 정보
+        skill = soldierInfo.gameObject.GetComponent<Skill>();
+        if (skill != null)
         {
-            skillData = soldierData.skillList[0];
+            skillData = skill.skillData;
             SkillIcon.sprite = skillData.skill_Icon;
             BlackSkillIcon.sprite = skillData.skill_Icon;
+        }
+        else
+        {
+            skillData = null;
+            SkillIcon.sprite = null;
+            BlackSkillIcon.sprite = null;
         }
     }
 
@@ -52,10 +61,10 @@ public class SoldierPanel : MonoBehaviour
 
     void RenewalSkillPanel()
     {
-        if (skillBehaviour as ActiveSkill)
+        if (skill as ActiveSkill)
         {
-            SkillIcon.fillAmount = 1 - ((ActiveSkill)skillBehaviour).cur_cooltime / ((ActiveSkillData)skillData).cooltime;
-            SkillCooltime.text = (((ActiveSkill)skillBehaviour).cur_cooltime > 0 ? ((int)((ActiveSkill)skillBehaviour).cur_cooltime).ToString() : "");
+            SkillIcon.fillAmount = 1 - ((ActiveSkill)skill).cur_cooltime / ((ActiveSkillData)skillData).cooltime;
+            SkillCooltime.text = (((ActiveSkill)skill).cur_cooltime > 0 ? ((int)((ActiveSkill)skill).cur_cooltime).ToString() : "");
         }
     }
 }

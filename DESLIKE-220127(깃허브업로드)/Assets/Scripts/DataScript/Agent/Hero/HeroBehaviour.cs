@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class HeroBehaviour : SoldierBasic
 {
     Coroutine moveCoroutine;
+
+    public Func<HeroInfo, IEnumerator>[] skillHandler = new Func<HeroInfo, IEnumerator>[3];
+    public Action[] skillDetect = new Action[3];
+    public Func<bool>[] canSkill = new Func<bool>[3];
 
     new void Start()
     {
@@ -33,7 +38,7 @@ public class HeroBehaviour : SoldierBasic
         while (transform.position != destination)
         {
             transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * ((HeroData)heroInfo.castleData).speed);
-            yield return null;
+            yield return new WaitForFixedUpdate();
         }
     }
 }

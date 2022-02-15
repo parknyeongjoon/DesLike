@@ -25,11 +25,7 @@ using UnityEngine.Events;
 * 객체 풀링 공부하기(필수)
 * OnSceneLoaded를 GameManager에서 관리하기?
 * 타일 굳이 isometric으로 할 이유가 없음
-* Soldier 흭득할 때 relicManager에 soldierConditionCheck 하기
-* SoldierManager클래스 만들어서 soldier 얻을 때와 port에 넣을 때 함수를 만들기
 * continue할 때 gameData에 activeSoldierList에 있는 soldierData들은 값들 allSoldierList에 값 옮기기
-* 병사 마나 0이면 터짐(try catch 사용하기?)
-* soldierData에 sprite를 빼고 animatorManager를 만들기(대표 이미지 하나는 남기기)
 * reward에 병사 누르면 여러 개 중 선택권 주기
 * relic이나 mutant 등 없어질 때 disable로 효과 제거해주기
 * 진행 중인 게임에 대한 데이터는 GameData에 저장하고 전체적인 데이터는 DataSheet에 저장하기
@@ -38,6 +34,8 @@ using UnityEngine.Events;
 * heroSKillUse 다시 만들기
 * 라운드 UI 시간 부분 다시 만지기
 * 전투 중 디버프 병사 개개인에게 적용하는 방법이랑 중첩되지 않고 시간만 초기화되게 만들기
+* 때리다가 일정 범위 이상 벗어나면 그만 쫒아오게 하기
+* 버프 시스템 중복 가능한 경우 다시 생각하기
 * ///////////////////////////////////////////////////////////////////////////////////////////////컨텐츠 기획
 * 방어력 수식 만들기
 * 배틀 중간중간에도 이벤트 나오게 하기(배틀의 템포를 끊을 것 같으므로 보류)

@@ -26,7 +26,7 @@ public class HeroPanel : MonoBehaviour
     {
         hero = GameObject.Find("Hero");
         heroInfo = hero.GetComponent<HeroInfo>();
-        heroSkillList = hero.GetComponent<HeroSkillUse>().heroSkillList;
+        //heroSkillList = hero.GetComponent<HeroSkillUse>().heroSkillList;
 
     }
 
@@ -48,7 +48,7 @@ public class HeroPanel : MonoBehaviour
         for (int i = 0; i < heroSkillList.Length; i++)
         {
             skillBehaviours[i] = heroSkillList[i].GetComponent<Skill>();
-            skillDatas[i] = heroData.skillList[i];
+            //skillDatas[i] = heroData.skillList[i];
             SkillIcons[i].sprite = skillDatas[i].skill_Icon;
             BlackSkillIcons[i].sprite = skillDatas[i].skill_Icon;
         }

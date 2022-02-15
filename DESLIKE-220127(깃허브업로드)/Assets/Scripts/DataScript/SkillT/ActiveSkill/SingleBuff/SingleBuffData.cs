@@ -6,6 +6,7 @@ public class SingleBuffData : ActiveSkillData//퍼센트로 버프 주는 법 생각해내기
 {
     public Buff_Stat buff_Stat;
     public float buff_Time;
+    public bool isStack;
 
     public IEnumerator Add_Buff(HeroInfo targetInfo)//이런 식으로 효과는 밖으로 빼기
     {

@@ -14,7 +14,7 @@ public class SingleBuff : ActiveSkill
             cur_cooltime = ((ActiveSkillData)skillData).cooltime;
             StartCoroutine(SkillCooltime());
             //heroInfo.animator.SetTrigger("isAtk");
-            if (targetInfo.buffCoroutine.ContainsKey(skillData.code))
+            if (targetInfo.buffCoroutine.ContainsKey(skillData.code) && !((SingleBuffData)skillData).isStack)
             {
                 ((SingleBuffData)skillData).Remove_Buff(targetInfo);
             }

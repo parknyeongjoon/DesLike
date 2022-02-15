@@ -18,7 +18,7 @@ public class SoldierInfo : HeroInfo
 
     void Dead()
     {
-        gameObject.GetComponent<SoldierBehaviour>().StopAllCoroutines();
+        gameObject.GetComponent<SoldierBehaviour>().StopAllCoroutines();//unityEvent로 넣기
         gameObject.layer = 7;
         animator.SetTrigger("isDead");
         portDatas.spawnSoldierList.Remove(this);

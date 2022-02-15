@@ -1,10 +1,15 @@
 ﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class SoldierBasic : MonoBehaviour
 {
     public HeroInfo heroInfo;
+
+    public Func<CastleInfo, IEnumerator> atkHandler;
+    public Action atkDetect;
+    public Func<bool> canAtk;
 
     protected void Start()
     {

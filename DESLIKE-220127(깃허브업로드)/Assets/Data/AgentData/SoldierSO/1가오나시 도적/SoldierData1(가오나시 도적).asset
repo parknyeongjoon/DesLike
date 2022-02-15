@@ -19,11 +19,12 @@ MonoBehaviour:
   size: 0.2
   blood: {fileID: 5086979035932333915, guid: 83b2eb89fe46c6a4db5d18712a94a153, type: 3}
   soldier_name: "\uAC00\uC624\uB098\uC2DC \uB3C4\uC801"
-  mp: 50
+  mp: 0
   speed: 6
+  mp_Re: 0
+  hp_Re: 0
   tribe: 2
   extraSkill: []
-  skillList: []
   mutant: {fileID: 0}
   rarity: 1
   cost: 30

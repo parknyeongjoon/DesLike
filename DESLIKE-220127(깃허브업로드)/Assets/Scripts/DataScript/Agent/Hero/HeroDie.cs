@@ -17,7 +17,7 @@ public class HeroDie : MonoBehaviour
     void GameOver()
     {
         Debug.Log("Game Over");
-        Destroy(gameObject);
+        //Destroy(gameObject);
         SaveManager.Instance.gameData.canContinue = false;
         SceneManager.LoadScene("MainTitle");//창 띄우고 거기서 버튼 클릭 시 이동하게 만들기
         GameManager.Instance.gameOverEvent.Invoke();

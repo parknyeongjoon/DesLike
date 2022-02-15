@@ -21,12 +21,15 @@ MonoBehaviour:
   soldier_name: "\uAC00\uC624\uB098\uC2DC \uCAC4\uBCD1"
   mp: 100
   speed: 5
+  mp_Re: 0
+  hp_Re: 0
   tribe: 2
   extraSkill: []
-  skillList: []
+  skillList:
+  - {fileID: 0}
   mutant: {fileID: 0}
-  rarity: 1
+  rarity: 0
   cost: 40
-  remain: 101
+  remain: 0
   unitAmount: 3
   soldier_Type: 0

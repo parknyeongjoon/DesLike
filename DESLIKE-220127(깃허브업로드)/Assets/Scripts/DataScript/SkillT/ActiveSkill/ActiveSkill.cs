@@ -13,13 +13,9 @@ public class ActiveSkill : Skill
         atkArea = (int)heroInfo.team * (int)((ActiveSkillData)skillData).atkArea;
         atkLayer = (int)((ActiveSkillData)skillData).atkArea * 7;
         cur_cooltime = 0;
-
-        soldierBehaviour.skillDetect = Detect;
-        soldierBehaviour.canSkill = CanSkillCheck;
-        soldierBehaviour.skillHandler = UseSkill;
     }
 
-    public bool CanSkillCheck()
+    protected override bool CanSkillCheck()
     {
         if(!heroInfo.targetInfo || heroInfo.target.layer == 7)
         {
@@ -42,7 +38,7 @@ public class ActiveSkill : Skill
         }
     }
 
-    protected void Detect()
+    protected override void Detect()
     {
         Debug.Log("스킬 탐색");
         Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, 100, atkArea ^ atkLayer);
@@ -57,7 +53,7 @@ public class ActiveSkill : Skill
         }
     }
 
-    protected virtual IEnumerator UseSkill(HeroInfo targetInfo)
+    protected override IEnumerator UseSkill(HeroInfo targetInfo)
     {
         yield return null;
     }

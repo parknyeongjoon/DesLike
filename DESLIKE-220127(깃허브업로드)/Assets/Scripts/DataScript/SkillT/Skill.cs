@@ -5,19 +5,18 @@ using System;
 
 public class Skill : MonoBehaviour
 {
-    [SerializeField]
     protected HeroInfo heroInfo;
-    [SerializeField]
-    protected SoldierBasic soldierBasic;
     public SkillData skillData;
 
     protected virtual void Start()
     {
-        if (soldierBasic as SoldierBehaviour)
+        heroInfo = GetComponent<HeroInfo>();
+        if (heroInfo as SoldierInfo)//병사라면
         {
-            ((SoldierBehaviour)soldierBasic).skillDetect = Detect;
-            ((SoldierBehaviour)soldierBasic).canSkill = CanSkillCheck;
-            ((SoldierBehaviour)soldierBasic).skillHandler = UseSkill;
+            SoldierBehaviour soldierBehaviour = GetComponent<SoldierBehaviour>();
+            soldierBehaviour.skillDetect += Detect;
+            soldierBehaviour.canSkill += CanSkillCheck;
+            soldierBehaviour.skillHandler += UseSkill;
         }
     }
 
@@ -38,8 +37,9 @@ public class Skill : MonoBehaviour
 
     public void SetHeroAction(int index)
     {
-        ((HeroBehaviour)soldierBasic).skillHandler[index] = UseSkill;
-        ((HeroBehaviour)soldierBasic).canSkill[index] = CanSkillCheck;
-        ((HeroBehaviour)soldierBasic).skillDetect[index] = Detect;
+        HeroSkillUse heroSkillUse = GetComponent<HeroSkillUse>();
+        heroSkillUse.skillHandlers[index] += UseSkill;
+        heroSkillUse.canSkills[index] += CanSkillCheck;
+        heroSkillUse.skillScripts[index] = this;
     }
 }

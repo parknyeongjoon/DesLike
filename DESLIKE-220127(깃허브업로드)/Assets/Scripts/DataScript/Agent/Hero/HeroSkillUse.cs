@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class HeroSkillUse: MonoBehaviour
 {
@@ -8,10 +9,11 @@ public class HeroSkillUse: MonoBehaviour
 
     [SerializeField]
     HeroInfo heroInfo;
-    CastleInfo skillTargetInfo;
 
-    public delegate void SkillHandler(CastleInfo targetInfo);
-    SkillHandler[] skillHandler = new SkillHandler[4];
+    public Func<HeroInfo, IEnumerator>[] skillHandlers = new Func<HeroInfo, IEnumerator>[3];
+    public Func<bool>[] canSkills = new Func<bool>[3];
+
+    public Skill[] skillScripts = new Skill[3];
 
     Coroutine skillCoroutine;
 
@@ -27,51 +29,45 @@ public class HeroSkillUse: MonoBehaviour
 
     void Update()
     {
-        QSkill();
-        WSkill();
-        ESkill();
-        RSkill();
+        Skill1();
+        SKill2();
+        SKill3();
     }
 
     void SetSkillHandler()
     {
-        for (int i = 0; i < 3; i++)
+        skillScripts = GetComponents<Skill>();
+        for (int i = 0; i < skillScripts.Length; i++)
         {
-
+            skillScripts[i].SetHeroAction(i);
         }
     }
 
-    void QSkill()
+    void Skill1()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
-            skillHandler[0]?.Invoke(skillTargetInfo);
+
         }
     }
 
-    void WSkill()
+    void SKill2()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.X))
         {
-            skillHandler[1]?.Invoke(skillTargetInfo);
+
         }
     }
 
-    void ESkill()
+    void SKill3()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.C))
         {
-            skillHandler[2]?.Invoke(skillTargetInfo);
+
         }
     }
 
-    void RSkill()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            skillHandler[3]?.Invoke(skillTargetInfo);
-        }
-    }
+
 
     /*
     void AddSkillBehaviour(SkillData skillData)
@@ -108,7 +104,7 @@ public class HeroSkillUse: MonoBehaviour
         }
     }
     */
-    
+
     /*
     IEnumerator UseSingleAttack(SkillBehaviour skillBehaviour)
     {
@@ -228,14 +224,13 @@ public class HeroSkillUse: MonoBehaviour
             if (skillCoroutine != null)
             {
                 StopCoroutine(skillCoroutine);
-                skillTargetInfo = null;
+                heroInfo.targetInfo = null;
                 heroInfo.target = null;
                 if (skillFocus != null)
                 {
                     skillFocus.SetActive(false);
                 }
                 mouseManager.mouseState = Mouse_State.Idle;
-                Cursor.visible = true;
                 mouseManager.grenadeExtent.SetActive(false);
                 skillRange.SetActive(false);
                 mouseManager.SetIdleCursorTexture();
@@ -258,7 +253,7 @@ public class HeroSkillUse: MonoBehaviour
                 {
                     if (hit.gameObject.layer == 9 && hit.gameObject.tag != "Castle")
                     {
-                        skillTargetInfo = hit.gameObject.GetComponent<CastleInfo>();
+                        heroInfo.targetInfo = hit.gameObject.GetComponent<CastleInfo>();
                         break;
                     }
                 }

@@ -16,17 +16,13 @@ public class HeroPanel : MonoBehaviour
 
     GameObject hero;
     HeroInfo heroInfo;
-    HeroData heroData;
-
-    GameObject[] heroSkillList;
-    Skill[] skillBehaviours;
-    SkillData[] skillDatas = new SkillData[4];
+    Skill[] skills = new Skill[3];
 
     void Awake()
     {
         hero = GameObject.Find("Hero");
         heroInfo = hero.GetComponent<HeroInfo>();
-        //heroSkillList = hero.GetComponent<HeroSkillUse>().heroSkillList;
+        skills = hero.GetComponent<HeroSkillUse>().skillScripts;
 
     }
 
@@ -43,34 +39,33 @@ public class HeroPanel : MonoBehaviour
 
     public void SetHeroPanel()
     {
-        heroData = SaveManager.Instance.gameData.heroSaveData.heroData;
-        Hero_Portrait.sprite = heroData.sprite;
-        for (int i = 0; i < heroSkillList.Length; i++)
+        heroInfo.castleData = SaveManager.Instance.gameData.heroSaveData.heroData;
+        Hero_Portrait.sprite = heroInfo.castleData.sprite;
+        for (int i = 0; i < skills.Length; i++)
         {
-            skillBehaviours[i] = heroSkillList[i].GetComponent<Skill>();
             //skillDatas[i] = heroData.skillList[i];
-            SkillIcons[i].sprite = skillDatas[i].skill_Icon;
-            BlackSkillIcons[i].sprite = skillDatas[i].skill_Icon;
+            SkillIcons[i].sprite = skills[i].skillData.skill_Icon;
+            BlackSkillIcons[i].sprite = skills[i].skillData.skill_Icon;
         }
     }
 
     public void RenewalHeroPanel()
     {
-        HPBar.fillAmount = heroInfo.cur_Hp / heroData.hp;
-        HPText.text = heroInfo.cur_Hp + "/" + heroData.hp;
-        MPBar.fillAmount = heroInfo.cur_Mp / heroData.mp;
-        MPText.text = heroInfo.cur_Mp + "/" + heroData.mp;
+        HPBar.fillAmount = heroInfo.cur_Hp / heroInfo.castleData.hp;
+        HPText.text = heroInfo.cur_Hp + "/" + heroInfo.castleData.hp;
+        MPBar.fillAmount = heroInfo.cur_Mp / ((HeroData)heroInfo.castleData).mp;
+        MPText.text = heroInfo.cur_Mp + "/" + ((HeroData)heroInfo.castleData).mp;
     }
 
     public void RenewalSkillPanel()
     {
         //if(스킬이 액티브인 경우)
-        for (int i = 0; i < skillBehaviours.Length; i++)
+        for (int i = 0; i < skills.Length; i++)
         {
-            if (skillBehaviours[i] is ActiveSkill)
+            if (skills[i] as ActiveSkill)
             {
-                SkillIcons[i].fillAmount = 1 - ((ActiveSkill)skillBehaviours[i]).cur_cooltime / ((ActiveSkillData)skillDatas[i]).cooltime;
-                SkillCooltimes[i].text = (((ActiveSkill)skillBehaviours[i]).cur_cooltime > 0 ? ((int)((ActiveSkill)skillBehaviours[i]).cur_cooltime).ToString() : "");
+                SkillIcons[i].fillAmount = 1 - ((ActiveSkill)skills[i]).cur_cooltime / ((ActiveSkillData)skills[i].skillData).cooltime;
+                SkillCooltimes[i].text = (((ActiveSkill)skills[i]).cur_cooltime > 0 ? ((int)((ActiveSkill)skills[i]).cur_cooltime).ToString() : "");
             }
         }
     }

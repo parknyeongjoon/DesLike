@@ -12,7 +12,7 @@ public enum Soldier_Type { Tanker, Soldier, Healer, Ranger, Catapult, Flight, Mo
 public enum Tribe { Undead, Mech, Ghost }
 public enum Rarity { normal, rare, epic }
 
-public enum SkillType { targetSkill, grenadeSkill, passiveSkill, Buff, Debuff, Etc}
+public enum SkillType { targetSkill, grenadeSkill, passiveSkill, Etc}
 
 [System.Serializable]
 public class Buff_Stat

@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class BasicAttack : MonoBehaviour
 {
-    public HeroInfo heroInfo;
+    protected HeroInfo heroInfo;
     public BasicAttackData basicAttackData;
-    public SoldierBasic soldierBasic;
+    protected SoldierBasic soldierBasic;
 
     public int atkArea, atkLayer;
 
     protected virtual void Start()
     {
+        heroInfo = GetComponent<HeroInfo>();
+        soldierBasic = GetComponent<SoldierBasic>();
+
         atkArea = (int)heroInfo.team * (int)basicAttackData.atkArea;
         atkLayer = (int)basicAttackData.atkArea * 7;
 

@@ -59,12 +59,17 @@ public class SoldierPanel : MonoBehaviour
         MPText.text = soldierInfo.cur_Mp + "/" + soldierData.mp;
     }
 
-    void RenewalSkillPanel()
+    void RenewalSkillPanel()//코루틴으로
     {
         if (skill as ActiveSkill)
         {
             SkillIcon.fillAmount = 1 - ((ActiveSkill)skill).cur_cooltime / ((ActiveSkillData)skillData).cooltime;
             SkillCooltime.text = (((ActiveSkill)skill).cur_cooltime > 0 ? ((int)((ActiveSkill)skill).cur_cooltime).ToString() : "");
+        }
+        else
+        {
+            SkillIcon.fillAmount = 1;
+            SkillCooltime.text = "";
         }
     }
 }

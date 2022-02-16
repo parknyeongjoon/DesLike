@@ -4,25 +4,22 @@ using UnityEngine;
 
 public class a : MonoBehaviour
 {
-    public delegate IEnumerator TestHandler();
+    public delegate void TestHandler();
     public TestHandler testHandler;
 
     IEnumerator testCoroutineA;
 
     void Start()
     {
-        testCoroutineA = testAA();
+
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            StartCoroutine(testCoroutineA);
-        }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            StopCoroutine(testCoroutineA);
+            GameObject.Find("B").GetComponent<a>().plusTestA();
+            GameObject.Find("B").GetComponent<a>().testHandler.Invoke();
         }
     }
     protected virtual void testA()
@@ -38,5 +35,11 @@ public class a : MonoBehaviour
             Debug.Log("AA");
             yield return new WaitForSeconds(1.0f);
         }
+    }
+
+    public void plusTestA()
+    {
+        testA();
+        testHandler = testA;
     }
 }

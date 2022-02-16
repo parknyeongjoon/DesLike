@@ -4,16 +4,11 @@ using UnityEngine;
 
 public class b : a
 {
-    void Start()
-    {
-        GameObject.Find("A").GetComponent<a>().testHandler += testBB;
-    }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.B))
         {
-            StartCoroutine(testBB());
+            testHandler?.Invoke();
         }
     }
 
@@ -28,4 +23,6 @@ public class b : a
         yield return StartCoroutine(testAA());
         Debug.Log("BB코루틴 끝");
     }
+
+    
 }

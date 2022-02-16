@@ -8,7 +8,7 @@ public class c : b
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-
+            GameObject.Find("B").SendMessage("testA");
         }
     }
 }

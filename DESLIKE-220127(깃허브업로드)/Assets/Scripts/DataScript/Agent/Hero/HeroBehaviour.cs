@@ -7,10 +7,6 @@ public class HeroBehaviour : SoldierBasic
 {
     Coroutine moveCoroutine;
 
-    public Func<HeroInfo, IEnumerator>[] skillHandler = new Func<HeroInfo, IEnumerator>[3];
-    public Action[] skillDetect = new Action[3];
-    public Func<bool>[] canSkill = new Func<bool>[3];
-
     new void Start()
     {
         base.Start();

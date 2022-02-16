@@ -10,9 +10,6 @@ public class HeroSkillUse: MonoBehaviour
     [SerializeField]
     HeroInfo heroInfo;
 
-    public Func<HeroInfo, IEnumerator>[] skillHandlers = new Func<HeroInfo, IEnumerator>[3];
-    public Func<bool>[] canSkills = new Func<bool>[3];
-
     public Skill[] skillScripts = new Skill[3];
 
     Coroutine skillCoroutine;
@@ -37,73 +34,104 @@ public class HeroSkillUse: MonoBehaviour
     void SetSkillHandler()
     {
         skillScripts = GetComponents<Skill>();
-        for (int i = 0; i < skillScripts.Length; i++)
-        {
-            skillScripts[i].SetHeroAction(i);
-        }
     }
 
     void Skill1()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z) && skillScripts[0])
         {
-
+            if (CheckMpNCool(skillScripts[0].skillData))
+            {
+                skillCoroutine = StartCoroutine(UseSkill(skillScripts[0].skillData));
+            }
         }
     }
 
     void SKill2()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.X) && skillScripts[1])
         {
-
+            if (CheckMpNCool(skillScripts[1].skillData))
+            {
+                skillCoroutine = StartCoroutine(UseSkill(skillScripts[1].skillData));
+            }
         }
     }
 
     void SKill3()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && skillScripts[2])
         {
-
+            if (CheckMpNCool(skillScripts[2].skillData))
+            {
+                skillCoroutine = StartCoroutine(UseSkill(skillScripts[2].skillData));
+            }
         }
     }
 
-
-
-    /*
-    void AddSkillBehaviour(SkillData skillData)
+    bool CheckMpNCool(SkillData skillData)
     {
-        if (skillData.sort == "SingleAttack")
+        if (skillData as ActiveSkillData)
         {
-            SingleAttackBehaviour createBehaviour;
-            createBehaviour = gameObject.AddComponent<SingleAttackBehaviour>();
-            createBehaviour.skillData = skillData;
-            skillBehaviours.Add(createBehaviour);
+            if(((ActiveSkillData)skillData).cooltime <= 0)
+            {
+                Debug.Log("쿨타임");
+                return false;
+            }
+            else if(((ActiveSkillData)skillData).mp <= heroInfo.cur_Mp)
+            {
+                Debug.Log("마나 부족");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
-        else if (skillData.sort == "GrenadeAttack")
-        {
-            GrenadeAttackBehaviour createBehaviour;
-            createBehaviour = gameObject.AddComponent<GrenadeAttackBehaviour>();
-            createBehaviour.skillData = skillData;
-            skillBehaviours.Add(createBehaviour);
-        }
+        return false;
     }
-    //할 때마다 찾지말고 지정해놓고 쓰는 방법 찾아보기
-    void UseSkillBehaviour(SkillData skillData, SkillBehaviour skillBehaviour)
+
+    IEnumerator UseSkill(SkillData skillData)
     {
-        if(skillCoroutine != null)
+        if (skillData.skillType == SkillType.targetSkill)
         {
-            StopCoroutine(skillCoroutine);
+            mouseManager.mouseState = Mouse_State.Target;
+            yield return StartCoroutine(SetTarget());
         }
-        if (skillData.sort == "SingleAttack")
+        else if (skillData.skillType == SkillType.grenadeSkill)
         {
-            skillCoroutine = StartCoroutine(UseSingleAttack(skillBehaviour));
+            mouseManager.mouseState = Mouse_State.Grenade;
+            yield return StartCoroutine(SetTarget());
         }
-        else if(skillData.sort == "GrenadeAttack")
+        else
         {
-            skillCoroutine = StartCoroutine(UseGrenadeAttack(skillBehaviour));
+
         }
     }
-    */
+
+    IEnumerator SetTarget()
+    {
+
+        MouseManager.Instance.mouseState = Mouse_State.Target;
+        MouseManager.Instance.SetAimCursorTexture();
+        Collider2D hit;
+        while (true)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                hit = MouseManager.Instance.CastRay();
+                if (hit != null)
+                {
+                    if (hit.gameObject.layer == 9 && hit.gameObject.tag != "Castle")
+                    {
+                        heroInfo.targetInfo = hit.gameObject.GetComponent<CastleInfo>();
+                        break;
+                    }
+                }
+            }
+            yield return null;
+        }
+    }
 
     /*
     IEnumerator UseSingleAttack(SkillBehaviour skillBehaviour)
@@ -235,30 +263,6 @@ public class HeroSkillUse: MonoBehaviour
                 skillRange.SetActive(false);
                 mouseManager.SetIdleCursorTexture();
             }
-        }
-    }
-
-    IEnumerator Set_SkillTarget()
-    {
-        
-        MouseManager.Instance.mouseState = Mouse_State.Target;
-        MouseManager.Instance.SetAimCursorTexture();
-        Collider2D hit;
-        while (true)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                hit = MouseManager.Instance.CastRay();
-                if (hit != null)
-                {
-                    if (hit.gameObject.layer == 9 && hit.gameObject.tag != "Castle")
-                    {
-                        heroInfo.targetInfo = hit.gameObject.GetComponent<CastleInfo>();
-                        break;
-                    }
-                }
-            }
-            yield return null;
         }
     }
 }

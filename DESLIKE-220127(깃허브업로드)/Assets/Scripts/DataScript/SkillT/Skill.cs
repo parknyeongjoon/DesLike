@@ -20,26 +20,18 @@ public class Skill : MonoBehaviour
         }
     }
 
-    protected virtual bool CanSkillCheck()
+    public virtual bool CanSkillCheck()
     {
         return false;
     }
 
-    protected virtual void Detect()
+    public virtual void Detect()
     {
 
     }
 
-    protected virtual IEnumerator UseSkill(HeroInfo targetInfo)
+    public virtual IEnumerator UseSkill(HeroInfo targetInfo)
     {
         yield return null;
-    }
-
-    public void SetHeroAction(int index)
-    {
-        HeroSkillUse heroSkillUse = GetComponent<HeroSkillUse>();
-        heroSkillUse.skillHandlers[index] += UseSkill;
-        heroSkillUse.canSkills[index] += CanSkillCheck;
-        heroSkillUse.skillScripts[index] = this;
     }
 }

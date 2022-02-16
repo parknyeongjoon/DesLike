@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GrenadeAttack : ActiveSkill
 {
-    protected override IEnumerator UseSkill(HeroInfo targetInfo)
+    public override IEnumerator UseSkill(HeroInfo targetInfo)
     {
         yield return new WaitForSeconds(((GrenadeAttackData)skillData).start_Delay);
         if (targetInfo && targetInfo.gameObject.layer != 7)

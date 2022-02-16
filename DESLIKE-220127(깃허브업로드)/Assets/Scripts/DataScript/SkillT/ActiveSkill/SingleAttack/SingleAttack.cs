@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SingleAttack : ActiveSkill
 {
-    protected override IEnumerator UseSkill(HeroInfo targetInfo)
+    public override IEnumerator UseSkill(HeroInfo targetInfo)
     {
         Debug.Log("SingleAttack");
         yield return new WaitForSeconds(((SingleAttackData)skillData).start_Delay);

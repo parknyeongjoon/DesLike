@@ -15,7 +15,7 @@ public class ActiveSkill : Skill
         cur_cooltime = 0;
     }
 
-    protected override bool CanSkillCheck()
+    public override bool CanSkillCheck()
     {
         if(!heroInfo.targetInfo || heroInfo.target.layer == 7)
         {
@@ -38,7 +38,7 @@ public class ActiveSkill : Skill
         }
     }
 
-    protected override void Detect()
+    public override void Detect()
     {
         Debug.Log("스킬 탐색");
         Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, 100, atkArea ^ atkLayer);
@@ -53,7 +53,7 @@ public class ActiveSkill : Skill
         }
     }
 
-    protected override IEnumerator UseSkill(HeroInfo targetInfo)
+    public override IEnumerator UseSkill(HeroInfo targetInfo)
     {
         yield return null;
     }

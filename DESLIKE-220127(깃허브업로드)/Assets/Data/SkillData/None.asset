@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: None
   m_EditorClassIdentifier: 
   code: 0
-  sort: etc
   skill_name: "\uC878\uAC1C"
-  skill_type: None
+  skillType: 2
   skill_Icon: {fileID: 21300000, guid: e6df41fad22f4e7459bbfcfc46e79a52, type: 3}

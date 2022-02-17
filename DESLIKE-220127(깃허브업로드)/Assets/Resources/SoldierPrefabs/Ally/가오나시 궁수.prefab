@@ -1406,6 +1406,15 @@ MonoBehaviour:
   team: 1
   healWeight: 0
   resurrection: 0
+  buff_Stat:
+    speed: 0
+    mp: 0
+    mp_Re: 0
+    atk: 0
+    atk_Speed: 0
+    hp: 0
+    hp_Re: 0
+    def: 0
   animator: {fileID: -8904327211606176233}
   soldierCode: 2
 --- !u!114 &1805136670179630442
@@ -1433,9 +1442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f26b66f7d1b2384c8d4ec388b7e71f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroInfo: {fileID: -6878065226668501377}
   basicAttackData: {fileID: 11400000, guid: 44ab94840f15ac549a0f61ec7dae9f98, type: 2}
-  soldierBehaviour: {fileID: 1805136670179630442}
   atkArea: 0
   atkLayer: 0
 --- !u!114 &3218131933784094050
@@ -1450,9 +1457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 196eeb1ee06889c4d83389564e732b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroInfo: {fileID: -6878065226668501377}
   basicAttackData: {fileID: 11400000, guid: 17edd08738f01964db3de6a2e70ea2f0, type: 2}
-  soldierBehaviour: {fileID: 1805136670179630442}
   atkArea: 0
   atkLayer: 0
 --- !u!1 &5488699387805153504
@@ -2748,7 +2753,7 @@ Transform:
   m_GameObject: {fileID: 8254202882655553987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 5346442293094215224}
   m_RootOrder: 1

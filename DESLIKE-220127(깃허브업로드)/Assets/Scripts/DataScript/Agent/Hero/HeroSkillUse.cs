@@ -10,13 +10,13 @@ public class HeroSkillUse: MonoBehaviour
     [SerializeField]
     HeroInfo heroInfo;
 
-    public Skill[] skillScripts = new Skill[3];
-
-    Coroutine skillCoroutine;
-
     GameObject skillFocus;
     [SerializeField]
     GameObject skillRange;
+
+    public Skill[] skillScripts = new Skill[3];
+
+    Coroutine skillCoroutine;
 
     void Start()
     {
@@ -29,6 +29,7 @@ public class HeroSkillUse: MonoBehaviour
         Skill1();
         SKill2();
         SKill3();
+        StopSkillCoroutine();
     }
 
     void SetSkillHandler()
@@ -40,9 +41,9 @@ public class HeroSkillUse: MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z) && skillScripts[0])
         {
-            if (CheckMpNCool(skillScripts[0].skillData))
+            if (CheckMpNCool(skillScripts[0]))
             {
-                skillCoroutine = StartCoroutine(UseSkill(skillScripts[0].skillData));
+                skillCoroutine = StartCoroutine(UseSkill(skillScripts[0]));
             }
         }
     }
@@ -51,9 +52,9 @@ public class HeroSkillUse: MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X) && skillScripts[1])
         {
-            if (CheckMpNCool(skillScripts[1].skillData))
+            if (CheckMpNCool(skillScripts[1]))
             {
-                skillCoroutine = StartCoroutine(UseSkill(skillScripts[1].skillData));
+                skillCoroutine = StartCoroutine(UseSkill(skillScripts[1]));
             }
         }
     }
@@ -62,23 +63,23 @@ public class HeroSkillUse: MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C) && skillScripts[2])
         {
-            if (CheckMpNCool(skillScripts[2].skillData))
+            if (CheckMpNCool(skillScripts[2]))
             {
-                skillCoroutine = StartCoroutine(UseSkill(skillScripts[2].skillData));
+                skillCoroutine = StartCoroutine(UseSkill(skillScripts[2]));
             }
         }
     }
 
-    bool CheckMpNCool(SkillData skillData)
+    bool CheckMpNCool(Skill skillScript)
     {
-        if (skillData as ActiveSkillData)
+        if (skillScript as ActiveSkill)
         {
-            if(((ActiveSkillData)skillData).cooltime <= 0)
+            if(((ActiveSkill)skillScript).cur_cooltime > 0)
             {
                 Debug.Log("쿨타임");
                 return false;
             }
-            else if(((ActiveSkillData)skillData).mp <= heroInfo.cur_Mp)
+            else if(heroInfo.cur_Mp <= ((ActiveSkillData)skillScript.skillData).mp)
             {
                 Debug.Log("마나 부족");
                 return false;
@@ -91,45 +92,95 @@ public class HeroSkillUse: MonoBehaviour
         return false;
     }
 
-    IEnumerator UseSkill(SkillData skillData)
+    IEnumerator UseSkill(Skill skillScript)
     {
-        if (skillData.skillType == SkillType.targetSkill)
+        if(skillScript.skillData as ActiveSkillData)
         {
-            mouseManager.mouseState = Mouse_State.Target;
+            if (skillScript.skillData.skillType == SkillType.targetSkill)
+            {
+                mouseManager.mouseState = Mouse_State.Target;
+            }
+            else if (skillScript.skillData.skillType == SkillType.grenadeSkill)
+            {
+                mouseManager.mouseState = Mouse_State.Grenade;
+                mouseManager.grenadeExtent.transform.localScale = new Vector2(((GrenadeAttackData)skillScript.skillData).extent, ((GrenadeAttackData)skillScript.skillData).extent);
+            }
+            skillRange.transform.localScale = new Vector2(((ActiveSkillData)skillScript.skillData).range, ((ActiveSkillData)skillScript.skillData).range);
             yield return StartCoroutine(SetTarget());
-        }
-        else if (skillData.skillType == SkillType.grenadeSkill)
-        {
-            mouseManager.mouseState = Mouse_State.Grenade;
-            yield return StartCoroutine(SetTarget());
-        }
-        else
-        {
-
+            skillCoroutine = StartCoroutine(skillScript.UseSkill((HeroInfo)heroInfo.targetInfo));
         }
     }
 
     IEnumerator SetTarget()
     {
-
-        MouseManager.Instance.mouseState = Mouse_State.Target;
+        heroInfo.targetInfo = null;
         MouseManager.Instance.SetAimCursorTexture();
+        skillRange.SetActive(true);
         Collider2D hit;
-        while (true)
+        while (mouseManager.mouseState != Mouse_State.Idle)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (mouseManager.mouseState == Mouse_State.Grenade && Input.GetKey(KeyCode.LeftAlt))
+            {
+                mouseManager.grenadeExtent.transform.parent = mouseManager.transform;
+                mouseManager.grenadeExtent.SetActive(true);
+                while (Input.GetKey(KeyCode.LeftAlt))
+                {
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        mouseManager.skillPos = Input.mousePosition;
+                        mouseManager.mouseState = Mouse_State.Idle;
+                        break;
+                    }
+                    yield return null;
+                }
+                mouseManager.grenadeExtent.SetActive(false);
+            }
+            else if (Input.GetMouseButtonDown(0))
             {
                 hit = MouseManager.Instance.CastRay();
                 if (hit != null)
                 {
                     if (hit.gameObject.layer == 9 && hit.gameObject.tag != "Castle")
                     {
+                        ActiveSkillFocus(hit.gameObject);
                         heroInfo.targetInfo = hit.gameObject.GetComponent<CastleInfo>();
+                        mouseManager.mouseState = Mouse_State.Idle;
                         break;
                     }
                 }
             }
             yield return null;
+        }
+    }
+
+    void ActiveSkillFocus(GameObject gameObject)
+    {
+        if (skillFocus != null)
+        {
+            skillFocus.SetActive(false);
+        }
+        skillFocus = gameObject.transform.Find("skillFocus").gameObject;
+        skillFocus.SetActive(true);
+    }
+
+    void StopSkillCoroutine()
+    {
+        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape) && heroInfo.action != Soldier_Action.End_Delay)
+        {
+            if (skillCoroutine != null)
+            {
+                StopCoroutine(skillCoroutine);
+                heroInfo.targetInfo = null;
+                heroInfo.target = null;
+                if (skillFocus != null)
+                {
+                    skillFocus.SetActive(false);
+                }
+                mouseManager.mouseState = Mouse_State.Idle;
+                mouseManager.grenadeExtent.SetActive(false);
+                skillRange.SetActive(false);
+                mouseManager.SetIdleCursorTexture();
+            }
         }
     }
 
@@ -244,25 +295,4 @@ public class HeroSkillUse: MonoBehaviour
         }
     }
     */
-
-    void StopSkillCoroutine()
-    {
-        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (skillCoroutine != null)
-            {
-                StopCoroutine(skillCoroutine);
-                heroInfo.targetInfo = null;
-                heroInfo.target = null;
-                if (skillFocus != null)
-                {
-                    skillFocus.SetActive(false);
-                }
-                mouseManager.mouseState = Mouse_State.Idle;
-                mouseManager.grenadeExtent.SetActive(false);
-                skillRange.SetActive(false);
-                mouseManager.SetIdleCursorTexture();
-            }
-        }
-    }
 }

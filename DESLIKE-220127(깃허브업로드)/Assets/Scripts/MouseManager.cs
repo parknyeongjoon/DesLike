@@ -14,6 +14,8 @@ public class MouseManager : MonoBehaviour
     public GameObject grenadeExtent;
     GameObject mouseFocus;
 
+    public Vector3 skillPos;
+
     public Mouse_State mouseState;
 
     //전역변수로써 manager에 접근할 수 있게 만들기

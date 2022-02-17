@@ -1277,7 +1277,7 @@ Transform:
   m_GameObject: {fileID: 3561280394030399213}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 7116624685446316912}
   m_RootOrder: 1
@@ -2433,6 +2433,15 @@ MonoBehaviour:
   team: 2
   healWeight: 0
   resurrection: 0
+  buff_Stat:
+    speed: 0
+    mp: 0
+    mp_Re: 0
+    atk: 0
+    atk_Speed: 0
+    hp: 0
+    hp_Re: 0
+    def: 0
   animator: {fileID: -2061201791654159332}
   soldierCode: 
 --- !u!1 &7184772303122657817
@@ -3117,7 +3126,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &5623920407317126669
 MonoBehaviour:
   m_ObjectHideFlags: 0

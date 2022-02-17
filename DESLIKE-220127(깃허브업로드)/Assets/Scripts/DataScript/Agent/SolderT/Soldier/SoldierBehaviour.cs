@@ -29,7 +29,6 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
     {
         while(heroInfo.state == Soldier_State.Idle)
         {
-            Debug.Log("Idle");
             heroInfo.state = Soldier_State.Detect;
             yield return new WaitForFixedUpdate();
         }
@@ -42,7 +41,6 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
         heroInfo.animator.SetBool("isWalk", true);
         while (heroInfo.state == Soldier_State.Detect)
         {
-            Debug.Log("탐색");
             Move();
             yield return new WaitForFixedUpdate();
         }
@@ -69,7 +67,6 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
         {
             if(canAtk != null && !canAtk.Invoke())
             {
-                Debug.Log("공성");
                 heroInfo.action = Soldier_Action.Attack;
                 yield return StartCoroutine(atkHandler?.Invoke(heroInfo.targetInfo));
             }
@@ -88,22 +85,18 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
         heroInfo.animator.SetBool("isWalk", false);
         while (heroInfo.state == Soldier_State.Battle)
         {
-            Debug.Log("전투");
             if (canSkill != null && canSkill.Invoke())
             {
-                Debug.Log("스킬 사용");
                 heroInfo.action = Soldier_Action.Skill;
                 yield return StartCoroutine(skillHandler?.Invoke(heroInfo.targetInfo as HeroInfo));
             }
             else if (canAtk != null && canAtk.Invoke())
             {
-                Debug.Log("평타 사용");
                 heroInfo.action = Soldier_Action.Attack;
                 yield return StartCoroutine(atkHandler?.Invoke(heroInfo.targetInfo));
             }
             else if(!heroInfo.targetInfo)
             {
-                Debug.Log("둘 다 불가");
                 heroInfo.state = Soldier_State.Idle;
             }
             else

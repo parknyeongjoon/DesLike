@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Bomb
   m_EditorClassIdentifier: 
   code: 2
-  sort: GrenadeAttack
   skill_name: "\uD3ED\uD0C4"
-  atk_Type: 2
+  skillType: 1
   skill_Icon: {fileID: 21300000, guid: f9c05d47b57c0ac4a98f6e360924701b, type: 3}
   cooltime: 10
   mp: 30

@@ -49,6 +49,8 @@ public class SoldierPanel : MonoBehaviour
             SkillIcon.sprite = null;
             BlackSkillIcon.sprite = null;
         }
+        RenewalSoldierPanel();
+        RenewalSkillPanel();
     }
 
     void RenewalSoldierPanel()//피나 마나의 변경이 생길때만 바꾸기?

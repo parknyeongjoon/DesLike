@@ -127,13 +127,12 @@ public class HeroSkillUse: MonoBehaviour
                 {
                     if (Input.GetMouseButtonDown(0))
                     {
-                        mouseManager.skillPos = Input.mousePosition;
-                        mouseManager.mouseState = Mouse_State.Idle;
+                        mouseManager.skillPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                        Set_Idle();
                         break;
                     }
                     yield return null;
                 }
-                mouseManager.grenadeExtent.SetActive(false);
             }
             else if (Input.GetMouseButtonDown(0))
             {
@@ -144,7 +143,7 @@ public class HeroSkillUse: MonoBehaviour
                     {
                         ActiveSkillFocus(hit.gameObject);
                         heroInfo.targetInfo = hit.gameObject.GetComponent<CastleInfo>();
-                        mouseManager.mouseState = Mouse_State.Idle;
+                        Set_Idle();
                         break;
                     }
                 }
@@ -176,12 +175,17 @@ public class HeroSkillUse: MonoBehaviour
                 {
                     skillFocus.SetActive(false);
                 }
-                mouseManager.mouseState = Mouse_State.Idle;
-                mouseManager.grenadeExtent.SetActive(false);
-                skillRange.SetActive(false);
-                mouseManager.SetIdleCursorTexture();
+                Set_Idle();
             }
         }
+    }
+
+    void Set_Idle()
+    {
+        mouseManager.mouseState = Mouse_State.Idle;
+        mouseManager.grenadeExtent.SetActive(false);
+        skillRange.SetActive(false);
+        mouseManager.SetIdleCursorTexture();
     }
 
     /*

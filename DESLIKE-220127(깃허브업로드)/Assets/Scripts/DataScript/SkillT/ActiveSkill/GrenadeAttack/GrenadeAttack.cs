@@ -6,8 +6,9 @@ public class GrenadeAttack : ActiveSkill
 {
     public override IEnumerator UseSkill(HeroInfo targetInfo)
     {
+        Debug.Log("GrenadeAttack");
         yield return new WaitForSeconds(((GrenadeAttackData)skillData).start_Delay);
-        if (targetInfo && targetInfo.gameObject.layer != 7)
+        if ((targetInfo && targetInfo.gameObject.layer != 7) || !targetInfo)
         {
             heroInfo.cur_Mp -= ((GrenadeAttackData)skillData).mp;
             cur_cooltime = ((ActiveSkillData)skillData).cooltime;

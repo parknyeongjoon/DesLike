@@ -2682,7 +2682,7 @@ MonoBehaviour:
     hp: 0
     hp_Re: 0
     def: 0
-  animator: {fileID: 0}
+  animator: {fileID: 3693772616464287285}
 --- !u!114 &6527479380180569580
 MonoBehaviour:
   m_ObjectHideFlags: 0

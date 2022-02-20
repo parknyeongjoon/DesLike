@@ -14,12 +14,13 @@ public class HeroInfo : CastleInfo
     public Team team;
     public float healWeight;
     public bool resurrection;
+    [SerializeField]
     public Buff_Stat buff_Stat;
 
     public Animator animator;
 
-    public Dictionary<string, Coroutine> buffCoroutine;
-    public Dictionary<string, Coroutine> debuffCoroutine;
+    public Dictionary<string, Coroutine> buffCoroutine = new Dictionary<string, Coroutine>();
+    public Dictionary<string, Coroutine> debuffCoroutine = new Dictionary<string, Coroutine>();
 
     void Start()
     {
@@ -39,9 +40,9 @@ public class HeroInfo : CastleInfo
 
     public bool TargetCheck(float range)
     {
-        if (target != null)
+        if (target != null && target.layer != 7)
         {
-            if (Vector3.Distance(transform.position, target.transform.position) <= range)//몸의 중심 말고 테투리부터 거리 targetInfo.castleData.size
+            if (Vector3.Distance(transform.position, target.transform.position) <= range)
             {
                 return true;
             }

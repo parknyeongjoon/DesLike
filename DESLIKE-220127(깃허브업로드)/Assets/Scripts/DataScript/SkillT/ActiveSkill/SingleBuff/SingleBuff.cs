@@ -14,8 +14,9 @@ public class SingleBuff : ActiveSkill
             cur_cooltime = ((ActiveSkillData)skillData).cooltime;
             StartCoroutine(SkillCooltime());
             //heroInfo.animator.SetTrigger("isAtk");
-            if (targetInfo.buffCoroutine.ContainsKey(skillData.code) && !((SingleBuffData)skillData).isStack)
+            if (targetInfo.buffCoroutine.ContainsKey(skillData.code) && !((SingleBuffData)skillData).isStack)//스택이 가능하다면 dictionary는 키 중복 오류 일어날듯
             {
+                StopCoroutine(heroInfo.buffCoroutine[skillData.code]);
                 ((SingleBuffData)skillData).Remove_Buff(targetInfo);
             }
             targetInfo.buffCoroutine.Add(skillData.code, StartCoroutine(((SingleBuffData)skillData).Add_Buff(targetInfo)));//버프 실행해주고 heroInfo 버프 딕셔너리에 넣어주기

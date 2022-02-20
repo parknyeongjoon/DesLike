@@ -33,7 +33,7 @@ public class HeroBehaviour : SoldierBasic
     {
         while (transform.position != destination)
         {
-            transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * ((HeroData)heroInfo.castleData).speed);
+            transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * (((HeroData)heroInfo.castleData).speed + heroInfo.buff_Stat.speed));
             yield return new WaitForFixedUpdate();
         }
     }

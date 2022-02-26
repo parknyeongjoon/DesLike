@@ -41,10 +41,7 @@ public class HeroSkillUse: MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Z) && skillScripts[0])
         {
-            if (CheckMpNCool(skillScripts[0]))
-            {
-                skillCoroutine = StartCoroutine(UseSkill(skillScripts[0]));
-            }
+            SkillFunc(skillScripts[0]);
         }
     }
 
@@ -52,10 +49,7 @@ public class HeroSkillUse: MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X) && skillScripts[1])
         {
-            if (CheckMpNCool(skillScripts[1]))
-            {
-                skillCoroutine = StartCoroutine(UseSkill(skillScripts[1]));
-            }
+            SkillFunc(skillScripts[1]);
         }
     }
 
@@ -63,10 +57,16 @@ public class HeroSkillUse: MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C) && skillScripts[2])
         {
-            if (CheckMpNCool(skillScripts[2]))
-            {
-                skillCoroutine = StartCoroutine(UseSkill(skillScripts[2]));
-            }
+            SkillFunc(skillScripts[2]);
+        }
+    }
+
+    void SkillFunc(Skill skillScript)
+    {
+        if (CheckMpNCool(skillScript) && heroInfo.action == Soldier_Action.Idle)
+        {
+            if (skillCoroutine != null) { StopCoroutine(skillCoroutine); }
+            skillCoroutine = StartCoroutine(UseSkill(skillScript));
         }
     }
 
@@ -97,7 +97,7 @@ public class HeroSkillUse: MonoBehaviour
         heroInfo.targetInfo = null;
         if(skillScript.skillData.skillType == SkillType.InstanceSkill)
         {
-            skillCoroutine = StartCoroutine(skillScript.UseSkill(heroInfo));
+            StartCoroutine(skillScript.UseSkill(heroInfo));
         }
         else if (skillScript as ActiveSkill)
         {
@@ -113,7 +113,7 @@ public class HeroSkillUse: MonoBehaviour
             skillRange.transform.localScale = new Vector2(((ActiveSkillData)skillScript.skillData).range, ((ActiveSkillData)skillScript.skillData).range);
             yield return StartCoroutine(SetTarget());
             yield return MoveToSkill(heroInfo.targetInfo, ((ActiveSkillData)skillScript.skillData).range);
-            skillCoroutine = StartCoroutine(skillScript.UseSkill((HeroInfo)heroInfo.targetInfo));
+            StartCoroutine(skillScript.UseSkill((HeroInfo)heroInfo.targetInfo));
         }
     }
 
@@ -126,8 +126,7 @@ public class HeroSkillUse: MonoBehaviour
         {
             if (mouseManager.mouseState == Mouse_State.Grenade && Input.GetKey(KeyCode.LeftAlt))
             {
-                mouseManager.grenadeExtent.transform.parent = mouseManager.transform;
-                mouseManager.grenadeExtent.SetActive(true);
+                mouseManager.SetGrenadeExtent(mouseManager.transform);
                 while (Input.GetKey(KeyCode.LeftAlt))
                 {
                     if (Input.GetMouseButtonDown(0))
@@ -160,20 +159,25 @@ public class HeroSkillUse: MonoBehaviour
     IEnumerator MoveToSkill(CastleInfo targetInfo, float range)
     {
         Vector3 destination;
+        Debug.Log("MoveToSkill");
         if (targetInfo)//타켓이 있다면 타켓쪽으로 없다면 논타켓 위치로
         {
+            Debug.Log("0");
             destination = targetInfo.transform.position;
-            while(!heroInfo.TargetCheck(range - targetInfo.castleData.size))
+            while(targetInfo != null && targetInfo.gameObject.layer != 7 && Vector3.Distance(transform.position, targetInfo.transform.position) > range - targetInfo.castleData.size)
             {
+                Debug.Log("1");
                 transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * ((HeroData)heroInfo.castleData).speed);
                 yield return new WaitForFixedUpdate();
             }
         }
         else
         {
+            Debug.Log("2");
             destination = mouseManager.skillPos;
             while (Vector3.Distance(transform.position, destination) > range)
             {
+                Debug.Log("3");
                 transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * ((HeroData)heroInfo.castleData).speed);
                 yield return new WaitForFixedUpdate();
             }

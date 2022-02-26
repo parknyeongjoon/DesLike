@@ -6,6 +6,7 @@ public class BasicGrenadeAttack : BasicAttack
 {
     protected override IEnumerator Attack(CastleInfo targetInfo)
     {
+        heroInfo.action = Soldier_Action.Attack;
         yield return new WaitForSeconds(((BasicGrenadeAttackData)basicAttackData).start_Delay);
         if (targetInfo && targetInfo.gameObject.layer != 7)
         {

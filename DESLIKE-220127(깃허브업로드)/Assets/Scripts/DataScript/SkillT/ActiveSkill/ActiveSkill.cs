@@ -40,6 +40,14 @@ public class ActiveSkill : Skill
 
     public override void Detect()
     {
+        /*if(skillData.skillType == SkillType.InstanceSkill)//instance 스킬 병사한테 넣어줄 방법 생각하기
+        {
+            Debug.Log("Instance Detect");
+            heroInfo.target = gameObject;
+            heroInfo.targetInfo = heroInfo;
+            heroInfo.state = Soldier_State.Battle;
+            return;
+        }*/
         Debug.Log("스킬 탐색");
         Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, 100, atkArea ^ atkLayer);
         if (targets != null)

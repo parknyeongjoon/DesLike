@@ -67,7 +67,6 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
         {
             if(canAtk != null && !canAtk.Invoke())
             {
-                heroInfo.action = Soldier_Action.Attack;
                 yield return StartCoroutine(atkHandler?.Invoke(heroInfo.targetInfo));
             }
             else
@@ -87,12 +86,10 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
         {
             if (canSkill != null && canSkill.Invoke())
             {
-                heroInfo.action = Soldier_Action.Skill;
                 yield return StartCoroutine(skillHandler?.Invoke(heroInfo.targetInfo as HeroInfo));
             }
             else if (canAtk != null && canAtk.Invoke())
             {
-                heroInfo.action = Soldier_Action.Attack;
                 yield return StartCoroutine(atkHandler?.Invoke(heroInfo.targetInfo));
             }
             else if(!heroInfo.targetInfo)

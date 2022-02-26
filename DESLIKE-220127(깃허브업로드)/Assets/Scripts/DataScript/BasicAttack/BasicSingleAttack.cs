@@ -6,6 +6,7 @@ public class BasicSingleAttack : BasicAttack
 {
     protected override IEnumerator Attack(CastleInfo targetInfo)
     {
+        heroInfo.action = Soldier_Action.Attack;
         yield return new WaitForSeconds(((BasicSingleAttackData)basicAttackData).start_Delay);
         if (targetInfo && targetInfo.gameObject.layer != 7)
         {

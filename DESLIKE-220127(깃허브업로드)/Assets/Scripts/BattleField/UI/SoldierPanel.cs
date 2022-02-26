@@ -11,12 +11,16 @@ public class SoldierPanel : MonoBehaviour
     Image Soldier_Portrait, HPBar, MPBar, SkillIcon, BlackSkillIcon;
     [SerializeField]
     Text HPText, MPText, SkillCooltime;
+    [SerializeField]
+    GameObject buffPanel;
 
     SoldierInfo soldierInfo;
     SoldierData soldierData;
 
     Skill skill;
     SkillData skillData;
+
+    Dictionary<string, GameObject> buffDic;
 
     public void OnEnable()
     {

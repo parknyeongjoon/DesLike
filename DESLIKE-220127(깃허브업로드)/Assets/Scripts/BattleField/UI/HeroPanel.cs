@@ -13,6 +13,10 @@ public class HeroPanel : MonoBehaviour
     Text HPText, MPText;
     [SerializeField]
     Text[] SkillCooltimes;
+    [SerializeField]
+    Transform buffPanel;
+
+    Dictionary<string, SkillData> buffDic;
 
     GameObject hero;
     HeroInfo heroInfo;
@@ -31,41 +35,43 @@ public class HeroPanel : MonoBehaviour
         SetHeroPanel();
     }
 
-    void FixedUpdate()
-    {
-        RenewalHeroPanel();
-        RenewalSkillPanel();
-    }
-
     public void SetHeroPanel()
     {
         heroInfo.castleData = SaveManager.Instance.gameData.heroSaveData.heroData;
         Hero_Portrait.sprite = heroInfo.castleData.sprite;
         for (int i = 0; i < skills.Length; i++)
         {
-            //skillDatas[i] = heroData.skillList[i];
             SkillIcons[i].sprite = skills[i].skillData.skill_Icon;
             BlackSkillIcons[i].sprite = skills[i].skillData.skill_Icon;
         }
-    }
-
-    public void RenewalHeroPanel()
-    {
-        HPBar.fillAmount = heroInfo.cur_Hp / heroInfo.castleData.hp;
-        HPText.text = heroInfo.cur_Hp + "/" + heroInfo.castleData.hp;
-        MPBar.fillAmount = heroInfo.cur_Mp / ((HeroData)heroInfo.castleData).mp;
-        MPText.text = heroInfo.cur_Mp + "/" + ((HeroData)heroInfo.castleData).mp;
-    }
-
-    public void RenewalSkillPanel()
-    {
-        //if(스킬이 액티브인 경우)
-        for (int i = 0; i < skills.Length; i++)
+        StartCoroutine(RenewalHeroPanel());
+        for(int i = 0; i < skills.Length; i++)
         {
-            if (skills[i] as ActiveSkill)
+            StartCoroutine(RenewalSkillPanel(i));
+        }
+    }
+
+    public IEnumerator RenewalHeroPanel()
+    {
+        while (true)
+        {
+            HPBar.fillAmount = heroInfo.cur_Hp / heroInfo.castleData.hp;
+            HPText.text = heroInfo.cur_Hp + "/" + heroInfo.castleData.hp;
+            MPBar.fillAmount = heroInfo.cur_Mp / ((HeroData)heroInfo.castleData).mp;
+            MPText.text = heroInfo.cur_Mp + "/" + ((HeroData)heroInfo.castleData).mp;
+            yield return new WaitForFixedUpdate();
+        }
+    }
+
+    public IEnumerator RenewalSkillPanel(int index)//코루틴으로 3개 돌리기
+    {
+        if (skills[index] as ActiveSkill)
+        {
+            while (true)
             {
-                SkillIcons[i].fillAmount = 1 - ((ActiveSkill)skills[i]).cur_cooltime / ((ActiveSkillData)skills[i].skillData).cooltime;
-                SkillCooltimes[i].text = (((ActiveSkill)skills[i]).cur_cooltime > 0 ? ((int)((ActiveSkill)skills[i]).cur_cooltime).ToString() : "");
+                SkillIcons[index].fillAmount = 1 - ((ActiveSkill)skills[index]).cur_cooltime / ((ActiveSkillData)skills[index].skillData).cooltime;
+                SkillCooltimes[index].text = (((ActiveSkill)skills[index]).cur_cooltime > 0 ? ((int)((ActiveSkill)skills[index]).cur_cooltime).ToString() : "");
+                yield return new WaitForFixedUpdate();
             }
         }
     }

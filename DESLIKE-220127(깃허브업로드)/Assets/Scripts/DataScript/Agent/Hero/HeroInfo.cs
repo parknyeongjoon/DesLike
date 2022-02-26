@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class HeroInfo : CastleInfo
 {
-    public CastleInfo targetInfo;
     public GameObject target;
+    public CastleInfo targetInfo;
     public float cur_Mp;
     public Vector3 moveDir;
     public Soldier_State state;

@@ -7,6 +7,7 @@ public class SingleBuff : ActiveSkill
     //singleBuff는 타켓에 이미 버프가 걸려있다면 다른 대상 찾기
     public override IEnumerator UseSkill(HeroInfo targetInfo)//코루틴은 monoBehaviour로 가져가기
     {
+        heroInfo.action = Soldier_Action.Skill;
         yield return new WaitForSeconds(((ActiveSkillData)skillData).start_Delay);
         if (targetInfo && targetInfo.gameObject.layer != 7)
         {

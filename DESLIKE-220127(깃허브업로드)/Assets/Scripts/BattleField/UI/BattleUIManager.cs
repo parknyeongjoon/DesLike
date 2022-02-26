@@ -93,6 +93,7 @@ public class BattleUIManager : MonoBehaviour
                 SetPortPanel.gameObject.SetActive(true);
                 break;
             case 3:
+                EmptyPanel.gameObject.SetActive(true);
                 break;
             case 4:
                 ChallengePanel.gameObject.SetActive(true);

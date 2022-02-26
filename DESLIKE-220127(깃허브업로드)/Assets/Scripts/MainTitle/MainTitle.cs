@@ -84,6 +84,7 @@ public class MainTitle : MonoBehaviour
 
     public SoldierData[] soldierDatas;
     public HeroData[] heroDatas;
+    public SkillData[] skillDatas;
 
     public void SaveDataSheet()//지우기
     {
@@ -101,6 +102,13 @@ public class MainTitle : MonoBehaviour
             if (!SaveManager.Instance.dataSheet.heroDataSheet.ContainsKey(heroDatas[i].code))
             {
                 SaveManager.Instance.dataSheet.heroDataSheet.Add(heroDatas[i].code, heroDatas[i]);
+            }
+        }
+        for (int i = 0; i < skillDatas.Length; i++)
+        {
+            if (!SaveManager.Instance.dataSheet.skillDataSheet.ContainsKey(skillDatas[i].code))
+            {
+                SaveManager.Instance.dataSheet.skillDataSheet.Add(skillDatas[i].code, skillDatas[i]);
             }
         }
         SaveManager.Instance.SaveDataSheet();

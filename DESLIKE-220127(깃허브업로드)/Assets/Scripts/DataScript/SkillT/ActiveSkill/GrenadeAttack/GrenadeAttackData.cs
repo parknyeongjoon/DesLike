@@ -28,7 +28,7 @@ public class GrenadeAttackData : ActiveSkillData
         HeroInfo[] targetInfos;
         Vector3 skillPos = new Vector3();
         if (targetInfo) { skillPos = targetInfo.transform.position; }
-        else { skillPos = MouseManager.Instance.skillPos; Debug.Log(skillPos); }
+        else { skillPos = MouseManager.Instance.skillPos; }
         Collider2D[] targetColliders = Physics2D.OverlapCircleAll(skillPos, extent, ((int)atkArea * (int)heroInfo.team) ^ ((int)atkArea * 7));
         if (targetColliders.Length <= max_Target)
         {

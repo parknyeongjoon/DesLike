@@ -14,6 +14,7 @@ public class SoldierInfo : HeroInfo
         cur_Mp = ((SoldierData)castleData).mp;
         portDatas.spawnSoldierList.Add(this);
         afterDeadHandler += Dead;
+        StartCoroutine(Hp_Mp_Re());
     }
 
     void Dead()

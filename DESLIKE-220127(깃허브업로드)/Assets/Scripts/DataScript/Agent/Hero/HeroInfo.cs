@@ -7,6 +7,8 @@ public class HeroInfo : CastleInfo
 {
     public GameObject target;
     public CastleInfo targetInfo;
+    public GameObject skillTarget;
+    public CastleInfo skillTargetInfo;
     public float cur_Mp;
     public Vector3 moveDir;
     public Soldier_State state;
@@ -29,6 +31,7 @@ public class HeroInfo : CastleInfo
         cur_Hp = saveManager.gameData.heroSaveData.cur_Hp;
         cur_Mp = saveManager.gameData.heroSaveData.cur_Mp;
         resurrection = saveManager.gameData.heroSaveData.resurrection;
+        StartCoroutine(Hp_Mp_Re());
         //allyPortDatas.spawnSoldierList.Add(this);
     }
 
@@ -38,7 +41,31 @@ public class HeroInfo : CastleInfo
         //StartCoroutine(soldierBehaviour.Stun_Behaviour());
     }
 
-    public bool TargetCheck(float range)
+    protected IEnumerator Hp_Mp_Re()
+    {
+        while (true)
+        {
+            if (cur_Hp + (((HeroData)castleData).hp_Re + buff_Stat.hp_Re) >= castleData.hp)
+            {
+                cur_Hp = castleData.hp;
+            }
+            else
+            {
+                cur_Hp += (((HeroData)castleData).hp_Re + buff_Stat.hp_Re);
+            }
+            if (cur_Mp + (((HeroData)castleData).mp_Re + buff_Stat.mp_Re) >= ((HeroData)castleData).mp)
+            {
+                cur_Mp = ((HeroData)castleData).mp;
+            }
+            else
+            {
+                cur_Mp += (((HeroData)castleData).mp_Re + buff_Stat.mp_Re);
+            }
+            yield return new WaitForSeconds(1.0f);
+        }
+    }
+
+    public bool TargetCheck(GameObject target, float range)
     {
         if (target != null && target.layer != 7)
         {

@@ -16,7 +16,7 @@ MonoBehaviour:
   skill_name: Rage
   skillType: 2
   skill_Icon: {fileID: 21300000, guid: 15aeed476f8082143b8e7c03125b914b, type: 3}
-  cooltime: 2
+  cooltime: 10
   mp: 10
   range: 0
   start_Delay: 0.5

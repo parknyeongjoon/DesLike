@@ -36,7 +36,7 @@ using UnityEngine.Events;
 * 병사 체력, 마나 리젠 만들기
 * BattleUIManager에 있는 클릭 시 나오는 애들은 전부 OnMouseDown 함수로 넣어버리기
 * atkDetect랑 skillDetect 둘 다 있으면 skillDetect만 사용됨
-* 병사가 자버프 쓸 수 있게 하는 법 생각하기
+* 어그로 수준을 만들어야 하나? 때리다가 다른 더 위협적인 애를 때리는 수준으로 해야하나 고민
 * ///////////////////////////////////////////////////////////////////////////////////////////////컨텐츠 기획
 * 방어력 수식 만들기
 * 배틀 중간중간에도 이벤트 나오게 하기(배틀의 템포를 끊을 것 같으므로 보류)
@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
     }
 
     //일시정지
-    void GamePause()
+    public void GamePause()
     {
         gamePause = !gamePause;
         if (gamePause)

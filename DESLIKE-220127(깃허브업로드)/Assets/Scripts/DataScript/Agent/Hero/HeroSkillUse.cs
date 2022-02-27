@@ -94,10 +94,10 @@ public class HeroSkillUse: MonoBehaviour
 
     IEnumerator UseSkill(Skill skillScript)
     {
-        heroInfo.targetInfo = null;
+        heroInfo.skillTargetInfo = null;
         if(skillScript.skillData.skillType == SkillType.InstanceSkill)
         {
-            StartCoroutine(skillScript.UseSkill(heroInfo));
+            yield return skillScript.UseSkill(heroInfo);
         }
         else if (skillScript as ActiveSkill)
         {
@@ -111,9 +111,9 @@ public class HeroSkillUse: MonoBehaviour
                 mouseManager.grenadeExtent.transform.localScale = new Vector2(((GrenadeAttackData)skillScript.skillData).extent, ((GrenadeAttackData)skillScript.skillData).extent);
             }
             skillRange.transform.localScale = new Vector2(((ActiveSkillData)skillScript.skillData).range, ((ActiveSkillData)skillScript.skillData).range);
-            yield return StartCoroutine(SetTarget());
-            yield return MoveToSkill(heroInfo.targetInfo, ((ActiveSkillData)skillScript.skillData).range);
-            StartCoroutine(skillScript.UseSkill((HeroInfo)heroInfo.targetInfo));
+            yield return SetTarget();
+            yield return MoveToSkill(heroInfo.skillTargetInfo, ((ActiveSkillData)skillScript.skillData).range);
+            yield return skillScript.UseSkill((HeroInfo)heroInfo.skillTargetInfo);
         }
     }
 
@@ -146,7 +146,7 @@ public class HeroSkillUse: MonoBehaviour
                     if (hit.gameObject.layer == 9 && hit.gameObject.tag != "Castle")
                     {
                         ActiveSkillFocus(hit.gameObject);
-                        heroInfo.targetInfo = hit.gameObject.GetComponent<CastleInfo>();
+                        heroInfo.skillTargetInfo = hit.gameObject.GetComponent<CastleInfo>();
                         Set_Idle();
                         break;
                     }
@@ -167,7 +167,7 @@ public class HeroSkillUse: MonoBehaviour
             while(targetInfo != null && targetInfo.gameObject.layer != 7 && Vector3.Distance(transform.position, targetInfo.transform.position) > range - targetInfo.castleData.size)
             {
                 Debug.Log("1");
-                transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * ((HeroData)heroInfo.castleData).speed);
+                transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * (((HeroData)heroInfo.castleData).speed + heroInfo.buff_Stat.speed));
                 yield return new WaitForFixedUpdate();
             }
         }
@@ -178,7 +178,7 @@ public class HeroSkillUse: MonoBehaviour
             while (Vector3.Distance(transform.position, destination) > range)
             {
                 Debug.Log("3");
-                transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * ((HeroData)heroInfo.castleData).speed);
+                transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * (((HeroData)heroInfo.castleData).speed + heroInfo.buff_Stat.speed));
                 yield return new WaitForFixedUpdate();
             }
         }
@@ -196,13 +196,13 @@ public class HeroSkillUse: MonoBehaviour
 
     void StopSkillCoroutine()
     {
-        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape) && heroInfo.action != Soldier_Action.End_Delay)
+        if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape)) && heroInfo.action != Soldier_Action.End_Delay)
         {
             if (skillCoroutine != null)
             {
                 StopCoroutine(skillCoroutine);
-                heroInfo.targetInfo = null;
-                heroInfo.target = null;
+                heroInfo.skillTargetInfo = null;
+                heroInfo.skillTarget = null;
                 if (skillFocus != null)
                 {
                     skillFocus.SetActive(false);
@@ -215,6 +215,7 @@ public class HeroSkillUse: MonoBehaviour
     void Set_Idle()
     {
         mouseManager.mouseState = Mouse_State.Idle;
+        heroInfo.action = Soldier_Action.Idle;
         mouseManager.grenadeExtent.SetActive(false);
         skillRange.SetActive(false);
         mouseManager.SetIdleCursorTexture();

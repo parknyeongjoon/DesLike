@@ -49,7 +49,7 @@ public class SoldierBasic : MonoBehaviour
 
     protected void OnMouseEnter()
     {
-        if(MouseManager.Instance.mouseState == Mouse_State.Grenade && !Input.GetKey(KeyCode.LeftAlt))
+        if(MouseManager.Instance.mouseState == Mouse_State.Grenade && heroInfo.team == Team.Enemy && !Input.GetKey(KeyCode.LeftAlt) && gameObject.layer != 7)
         {
             MouseManager.Instance.SetGrenadeExtent(transform);
         }
@@ -57,6 +57,11 @@ public class SoldierBasic : MonoBehaviour
 
     protected void Move()
     {
-        transform.Translate(Time.deltaTime * ((HeroData)heroInfo.castleData).speed * heroInfo.moveDir);
+        transform.Translate(Time.deltaTime * (((HeroData)heroInfo.castleData).speed + heroInfo.buff_Stat.speed) * heroInfo.moveDir);
+    }
+
+    protected void Move(Vector3 destination)
+    {
+        transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * (((HeroData)heroInfo.castleData).speed + heroInfo.buff_Stat.speed));
     }
 }

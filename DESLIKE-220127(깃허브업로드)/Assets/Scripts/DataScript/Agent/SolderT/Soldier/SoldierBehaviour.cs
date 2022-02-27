@@ -86,18 +86,18 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
         {
             if (canSkill != null && canSkill.Invoke())
             {
-                yield return StartCoroutine(skillHandler?.Invoke(heroInfo.targetInfo as HeroInfo));
+                yield return StartCoroutine(skillHandler?.Invoke(heroInfo.skillTargetInfo as HeroInfo));
             }
             else if (canAtk != null && canAtk.Invoke())
             {
                 yield return StartCoroutine(atkHandler?.Invoke(heroInfo.targetInfo));
             }
-            else if(!heroInfo.targetInfo)
+            else if(!heroInfo.targetInfo)//skillTargetInfo도 넣어야하나?
             {
                 heroInfo.state = Soldier_State.Idle;
             }
             else
-            {   
+            {
                 Move();
             }
             yield return new WaitForFixedUpdate();

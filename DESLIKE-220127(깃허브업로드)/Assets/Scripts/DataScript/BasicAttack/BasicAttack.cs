@@ -30,7 +30,7 @@ public class BasicAttack : MonoBehaviour
         if (targets != null)
         {
             heroInfo.target = heroInfo.FindNearestSoldier(targets);
-            if (heroInfo.TargetCheck(basicAttackData.range + 2))
+            if (heroInfo.TargetCheck(heroInfo.target, basicAttackData.range + 2))
             {
                 Debug.Log("½Î¿ò½ÃÀÛ");
                 if(heroInfo.target.tag == "Castle") { heroInfo.state = Soldier_State.Siege; }
@@ -47,7 +47,7 @@ public class BasicAttack : MonoBehaviour
             heroInfo.state = Soldier_State.Idle;
             return false;
         }
-        if (heroInfo.TargetCheck(basicAttackData.range + heroInfo.targetInfo.castleData.size))
+        if (heroInfo.TargetCheck(heroInfo.target, basicAttackData.range + heroInfo.targetInfo.castleData.size))
         {
             return true;
         }

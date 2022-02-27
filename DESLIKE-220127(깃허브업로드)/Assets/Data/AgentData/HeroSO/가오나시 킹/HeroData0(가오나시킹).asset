@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 2590185811940133651, guid: 76fe55c66fd58ff4d93cf9450d0eade3, type: 3}
   code: 0
-  defType: 4
   hp: 500
   def: 0
   size: 0.2
@@ -22,10 +21,8 @@ MonoBehaviour:
   soldier_name: "\uAC00\uC624\uB098\uC2DC  \uD0B9"
   mp: 200
   speed: 3
+  mp_Re: 0
+  hp_Re: 0
   tribe: 0
-  basicAttack: {fileID: 0}
   extraSkill: []
-  skillList:
-  - {fileID: 11400000, guid: c9ee331d85776ca47ad5de63d042086b, type: 2}
-  - {fileID: 11400000, guid: 5b8c70da27a464e4db6320073b74c184, type: 2}
   mutant: {fileID: 0}

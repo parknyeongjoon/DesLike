@@ -21,8 +21,8 @@ public class HeroInfo : CastleInfo
 
     public Animator animator;
 
-    public Dictionary<string, Coroutine> buffCoroutine = new Dictionary<string, Coroutine>();
-    public Dictionary<string, Coroutine> debuffCoroutine = new Dictionary<string, Coroutine>();
+    public Dictionary<string, List<Coroutine>> buffCoroutine = new Dictionary<string, List<Coroutine>>();
+    public Dictionary<string, List<Coroutine>> debuffCoroutine = new Dictionary<string, List<Coroutine>>();
 
     void Start()
     {

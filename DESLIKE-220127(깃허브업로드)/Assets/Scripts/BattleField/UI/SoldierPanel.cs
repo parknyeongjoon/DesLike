@@ -13,6 +13,10 @@ public class SoldierPanel : MonoBehaviour
     Text HPText, MPText, SkillCooltime;
     [SerializeField]
     GameObject buffPanel;
+    [SerializeField]
+    GameObject buffObject;
+    [SerializeField]
+    Image buffImg;
 
     SoldierInfo soldierInfo;
     SoldierData soldierData;
@@ -22,12 +26,13 @@ public class SoldierPanel : MonoBehaviour
 
     Dictionary<string, GameObject> buffDic;
 
-    public void OnEnable()
+    void OnEnable()
     {
+        buffDic = new Dictionary<string, GameObject>();
         SetSoldierPanel();
     }
 
-    public void FixedUpdate()
+    void FixedUpdate()
     {
         RenewalSoldierPanel();
         RenewalSkillPanel();
@@ -53,6 +58,13 @@ public class SoldierPanel : MonoBehaviour
             SkillIcon.sprite = null;
             BlackSkillIcon.sprite = null;
         }
+        GameManager.DeleteChilds(buffPanel);
+        foreach (string code in soldierInfo.buffCoroutine.Keys)
+        {
+            buffImg.sprite = SaveManager.Instance.dataSheet.skillDataSheet[code].skill_Icon;
+            buffDic.Add(code, Instantiate(buffObject, buffPanel.transform));
+            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.buffCoroutine[code].Count.ToString();
+        }
         RenewalSoldierPanel();
         RenewalSkillPanel();
     }
@@ -76,6 +88,33 @@ public class SoldierPanel : MonoBehaviour
         {
             SkillIcon.fillAmount = 1;
             SkillCooltime.text = "";
+        }
+    }
+
+    public void AddBuff(string code)
+    {
+        if (buffDic.ContainsKey(code))
+        {
+            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.buffCoroutine[code].Count.ToString();
+        }
+        else
+        {
+            buffImg.sprite = SaveManager.Instance.dataSheet.skillDataSheet[code].skill_Icon;
+            buffDic.Add(code, Instantiate(buffObject, buffPanel.transform));
+            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.buffCoroutine[code].Count.ToString();
+        }
+    }
+
+    public void RemoveBuff(string code)
+    {
+        if(soldierInfo.buffCoroutine[code].Count == 0)
+        {
+            Destroy(buffDic[code]);
+            buffDic.Remove(code);
+        }
+        else
+        {
+            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.buffCoroutine[code].Count.ToString();
         }
     }
 }

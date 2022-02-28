@@ -25,14 +25,12 @@ public class BasicAttack : MonoBehaviour
 
     protected void Detect()
     {
-        Debug.Log("ÆòÅ¸ Å½»ö");
         Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, 100, atkArea ^ atkLayer);
         if (targets != null)
         {
             heroInfo.target = heroInfo.FindNearestSoldier(targets);
             if (heroInfo.TargetCheck(heroInfo.target, basicAttackData.range + 2))
             {
-                Debug.Log("½Î¿ò½ÃÀÛ");
                 if(heroInfo.target.tag == "Castle") { heroInfo.state = Soldier_State.Siege; }
                 else { heroInfo.state = Soldier_State.Battle; }
                 heroInfo.targetInfo = heroInfo.target.GetComponent<CastleInfo>();

@@ -23,7 +23,6 @@ public class SoldierInfo : HeroInfo
         gameObject.layer = 7;
         animator.SetTrigger("isDead");
         portDatas.spawnSoldierList.Remove(this);
-        Debug.Log("사망");
         Destroy(gameObject, 10.0f);
     }
 }

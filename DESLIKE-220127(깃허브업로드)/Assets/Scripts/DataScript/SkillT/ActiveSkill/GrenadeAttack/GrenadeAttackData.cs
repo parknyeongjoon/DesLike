@@ -33,7 +33,6 @@ public class GrenadeAttackData : ActiveSkillData
         if (targetColliders.Length <= max_Target)
         {
             targetInfos = new HeroInfo[targetColliders.Length];
-            Debug.Log(targetColliders.Length);
             for (int i = 0; i < targetColliders.Length; i++)//왜 경고 뜨지?
             {
                 targetInfos[i] = targetColliders[i].GetComponent<HeroInfo>();

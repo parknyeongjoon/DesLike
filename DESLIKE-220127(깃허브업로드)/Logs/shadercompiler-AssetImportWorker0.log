@@ -1,3 +1,9 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2020.3.21f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 
+<<<<<<< Updated upstream:DESLIKE-220127(깃허브업로드)/Logs/shadercompiler-AssetImportWorker0.log
+=======
+Cmd: shutdown
+
+Quitting shader compiler process
+>>>>>>> Stashed changes:DESLIKE-220127(깃허브업로드)/Logs/shadercompiler-UnityShaderCompiler.exe10.log

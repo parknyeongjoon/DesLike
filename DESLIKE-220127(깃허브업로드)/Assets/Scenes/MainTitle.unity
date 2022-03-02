@@ -259,6 +259,12 @@ MonoBehaviour:
   heroDatas:
   - {fileID: 11400000, guid: 1b52e72375322824688473c0dae745e1, type: 2}
   - {fileID: 11400000, guid: 0404a1a6770a903418b6b85fc6e22463, type: 2}
+  skillDatas:
+  - {fileID: 11400000, guid: 5b8c70da27a464e4db6320073b74c184, type: 2}
+  - {fileID: 11400000, guid: 117efa8e6ed5c2a4d929e16639e71060, type: 2}
+  - {fileID: 11400000, guid: c9ee331d85776ca47ad5de63d042086b, type: 2}
+  - {fileID: 11400000, guid: 011132be2e886994b846d8f747db8166, type: 2}
+  - {fileID: 11400000, guid: 4f19ae2ca981e31469ac4fb8bba04e2f, type: 2}
 --- !u!1 &18028645
 GameObject:
   m_ObjectHideFlags: 0

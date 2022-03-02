@@ -13,21 +13,24 @@ public class HeroPanel : MonoBehaviour
     Text HPText, MPText;
     [SerializeField]
     Text[] SkillCooltimes;
+    [SerializeField]
+    GameObject buffPanel;
+    [SerializeField]
+    GameObject buffObject;
+    [SerializeField]
+    Image buffImg;
+
+    Dictionary<string, GameObject> buffDic = new Dictionary<string, GameObject>();
 
     GameObject hero;
     HeroInfo heroInfo;
-    HeroData heroData;
-
-    GameObject[] heroSkillList;
-    Skill[] skillBehaviours;
-    SkillData[] skillDatas = new SkillData[4];
+    Skill[] skills = new Skill[3];
 
     void Awake()
     {
         hero = GameObject.Find("Hero");
         heroInfo = hero.GetComponent<HeroInfo>();
-        //heroSkillList = hero.GetComponent<HeroSkillUse>().heroSkillList;
-
+        skills = hero.GetComponent<HeroSkillUse>().skillScripts;
     }
 
     void Start()
@@ -35,43 +38,78 @@ public class HeroPanel : MonoBehaviour
         SetHeroPanel();
     }
 
-    void FixedUpdate()
-    {
-        RenewalHeroPanel();
-        RenewalSkillPanel();
-    }
-
     public void SetHeroPanel()
     {
-        heroData = SaveManager.Instance.gameData.heroSaveData.heroData;
-        Hero_Portrait.sprite = heroData.sprite;
-        for (int i = 0; i < heroSkillList.Length; i++)
+        heroInfo.castleData = SaveManager.Instance.gameData.heroSaveData.heroData;
+        Hero_Portrait.sprite = heroInfo.castleData.sprite;
+        for (int i = 0; i < skills.Length; i++)
         {
-            skillBehaviours[i] = heroSkillList[i].GetComponent<Skill>();
-            //skillDatas[i] = heroData.skillList[i];
-            SkillIcons[i].sprite = skillDatas[i].skill_Icon;
-            BlackSkillIcons[i].sprite = skillDatas[i].skill_Icon;
+            SkillIcons[i].sprite = skills[i].skillData.skill_Icon;
+            BlackSkillIcons[i].sprite = skills[i].skillData.skill_Icon;
+        }
+        foreach(string code in heroInfo.buffCoroutine.Keys)
+        {
+            buffImg.sprite = SaveManager.Instance.dataSheet.skillDataSheet[code].skill_Icon;
+            buffDic.Add(code, Instantiate(buffObject, buffPanel.transform));
+            buffDic[code].GetComponentInChildren<Text>().text = heroInfo.buffCoroutine[code].Count.ToString();
+        }
+        //코루틴 시작
+        StartCoroutine(RenewalHeroPanel());
+        for(int i = 0; i < skills.Length; i++)
+        {
+            StartCoroutine(RenewalSkillPanel(i));
         }
     }
 
-    public void RenewalHeroPanel()
+    public IEnumerator RenewalHeroPanel()
     {
-        HPBar.fillAmount = heroInfo.cur_Hp / heroData.hp;
-        HPText.text = heroInfo.cur_Hp + "/" + heroData.hp;
-        MPBar.fillAmount = heroInfo.cur_Mp / heroData.mp;
-        MPText.text = heroInfo.cur_Mp + "/" + heroData.mp;
+        while (true)
+        {
+            HPBar.fillAmount = heroInfo.cur_Hp / heroInfo.castleData.hp;
+            HPText.text = heroInfo.cur_Hp + "/" + heroInfo.castleData.hp;
+            MPBar.fillAmount = heroInfo.cur_Mp / ((HeroData)heroInfo.castleData).mp;
+            MPText.text = heroInfo.cur_Mp + "/" + ((HeroData)heroInfo.castleData).mp;
+            yield return new WaitForFixedUpdate();
+        }
     }
 
-    public void RenewalSkillPanel()
+    public IEnumerator RenewalSkillPanel(int index)//코루틴으로 3개 돌리기
     {
-        //if(스킬이 액티브인 경우)
-        for (int i = 0; i < skillBehaviours.Length; i++)
+        if (skills[index] as ActiveSkill)
         {
-            if (skillBehaviours[i] is ActiveSkill)
+            while (true)
             {
-                SkillIcons[i].fillAmount = 1 - ((ActiveSkill)skillBehaviours[i]).cur_cooltime / ((ActiveSkillData)skillDatas[i]).cooltime;
-                SkillCooltimes[i].text = (((ActiveSkill)skillBehaviours[i]).cur_cooltime > 0 ? ((int)((ActiveSkill)skillBehaviours[i]).cur_cooltime).ToString() : "");
+                SkillIcons[index].fillAmount = 1 - ((ActiveSkill)skills[index]).cur_cooltime / ((ActiveSkillData)skills[index].skillData).cooltime;
+                SkillCooltimes[index].text = (((ActiveSkill)skills[index]).cur_cooltime > 0 ? ((int)((ActiveSkill)skills[index]).cur_cooltime).ToString() : "");
+                yield return new WaitForFixedUpdate();
             }
+        }
+    }
+
+    public void AddBuff(string code)//얘들도 오브젝트 풀링해도 될 듯
+    {
+        if (buffDic.ContainsKey(code))
+        {
+            buffDic[code].GetComponentInChildren<Text>().text = heroInfo.buffCoroutine[code].Count.ToString();
+        }
+        else
+        {
+            buffImg.sprite = SaveManager.Instance.dataSheet.skillDataSheet[code].skill_Icon;
+            buffDic.Add(code, Instantiate(buffObject, buffPanel.transform));
+            buffDic[code].GetComponentInChildren<Text>().text = heroInfo.buffCoroutine[code].Count.ToString();
+        }
+    }
+
+    public void RemoveBuff(string code)
+    {
+        if (heroInfo.buffCoroutine[code].Count == 0)
+        {
+            Destroy(buffDic[code]);
+            buffDic.Remove(code);
+        }
+        else
+        {
+            buffDic[code].GetComponentInChildren<Text>().text = heroInfo.buffCoroutine[code].Count.ToString();
         }
     }
 }

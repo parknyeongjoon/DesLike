@@ -1228,7 +1228,7 @@ GameObject:
   - component: {fileID: -1456767297910133745}
   - component: {fileID: 8541465875496748737}
   - component: {fileID: 9041123231194856513}
-  - component: {fileID: 3112718692913510526}
+  - component: {fileID: 8416756983583422182}
   m_Layer: 8
   m_Name: "\uAC00\uC624\uB098\uC2DC \uCAC4\uBCD1"
   m_TagString: Soldier
@@ -1397,8 +1397,10 @@ MonoBehaviour:
   castleData: {fileID: 11400000, guid: a29c1d8c1343ac342b7934d4fa64b8d3, type: 2}
   cur_Hp: 0
   portDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
-  targetInfo: {fileID: 0}
   target: {fileID: 0}
+  targetInfo: {fileID: 0}
+  skillTarget: {fileID: 0}
+  skillTargetInfo: {fileID: 0}
   cur_Mp: 0
   moveDir: {x: 0, y: 0, z: 0}
   state: 0
@@ -1442,12 +1444,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f26b66f7d1b2384c8d4ec388b7e71f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroInfo: {fileID: -1456767297910133745}
   basicAttackData: {fileID: 11400000, guid: fb1cf684ebe3c184486697bc246cd0dc, type: 2}
-  soldierBehaviour: {fileID: 8541465875496748737}
   atkArea: 0
   atkLayer: 0
---- !u!114 &3112718692913510526
+--- !u!114 &8416756983583422182
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1456,12 +1456,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5346442293094215222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74c89014b4975f448b068fcb4174dcb4, type: 3}
+  m_Script: {fileID: 11500000, guid: c4a6b10b3da80494daf85423738fbe65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heroInfo: {fileID: -1456767297910133745}
-  soldierBehaviour: {fileID: 8541465875496748737}
-  skillData: {fileID: 11400000, guid: 4f19ae2ca981e31469ac4fb8bba04e2f, type: 2}
+  skillData: {fileID: 11400000, guid: 011132be2e886994b846d8f747db8166, type: 2}
   cur_cooltime: 0
   atkArea: 0
   atkLayer: 0
@@ -2758,7 +2756,7 @@ Transform:
   m_GameObject: {fileID: 8254202882655553987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 5346442293094215224}
   m_RootOrder: 1

@@ -14,6 +14,8 @@ public class MouseManager : MonoBehaviour
     public GameObject grenadeExtent;
     GameObject mouseFocus;
 
+    public Vector3 skillPos;
+
     public Mouse_State mouseState;
 
     //전역변수로써 manager에 접근할 수 있게 만들기
@@ -48,7 +50,7 @@ public class MouseManager : MonoBehaviour
                 hit = CastRay();
                 if (hit != null)
                 {
-                    if (hit.CompareTag("Soldier"))
+                    if (hit.CompareTag("Soldier"))//병사들 스크립트에 OnMouseDown으로 넣기
                     {
                         if (mouseFocus != null)
                         {
@@ -64,7 +66,6 @@ public class MouseManager : MonoBehaviour
                         battleUIManager.SetMidPanel(4);
                     }
                 }
-
             }
             else if(mouseState == Mouse_State.Grenade)
             {
@@ -95,5 +96,12 @@ public class MouseManager : MonoBehaviour
     public void SetIdleCursorTexture()
     {
         Cursor.SetCursor(null, new Vector2(0, 0), CursorMode.Auto);
+    }
+
+    public void SetGrenadeExtent(Transform parentTrans)
+    {
+        grenadeExtent.transform.parent = parentTrans;
+        grenadeExtent.transform.position = new Vector3(parentTrans.position.x, parentTrans.position.y, 0);
+        grenadeExtent.SetActive(true);
     }
 }

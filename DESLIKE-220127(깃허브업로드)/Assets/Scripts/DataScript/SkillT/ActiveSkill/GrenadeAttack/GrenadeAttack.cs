@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class GrenadeAttack : ActiveSkill
 {
-    protected override IEnumerator UseSkill(HeroInfo targetInfo)
+    public override IEnumerator UseSkill(HeroInfo targetInfo)
     {
+        Debug.Log("GrenadeAttack");
+        heroInfo.action = Soldier_Action.Skill;
         yield return new WaitForSeconds(((GrenadeAttackData)skillData).start_Delay);
-        if (targetInfo && targetInfo.gameObject.layer != 7)
+        if ((targetInfo && targetInfo.gameObject.layer != 7) || !targetInfo)
         {
             heroInfo.cur_Mp -= ((GrenadeAttackData)skillData).mp;
             cur_cooltime = ((ActiveSkillData)skillData).cooltime;

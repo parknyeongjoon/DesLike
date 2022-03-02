@@ -7,8 +7,6 @@ public class RewardPanel : MonoBehaviour
 {
     [SerializeField]
     GameObject rewardSoldierBtnPrefab, rewardRelicBtnPrefab;
-    [SerializeField]
-    GameObject rewardPanel;
     Map map;
 
     public void SetRewardPanel()
@@ -18,14 +16,14 @@ public class RewardPanel : MonoBehaviour
         GameObject createBtn;
         Reward reward = map.curMapNode.reward;
         //soldierBtn
-        createBtn = Instantiate(rewardSoldierBtnPrefab, rewardPanel.transform);
+        createBtn = Instantiate(rewardSoldierBtnPrefab, transform);
         createBtn.GetComponent<SoldierRewardBtn>().soldierCode = reward.soldierReward.soldier.code;
         createBtn.GetComponent<SoldierRewardBtn>().soldierRemain = reward.soldierReward.remain;
         createBtn.transform.GetChild(0).GetComponent<Text>().text = reward.soldierReward.soldier.soldier_name.ToString();
         createBtn.transform.GetChild(1).GetComponent<Image>().sprite = reward.soldierReward.soldier.sprite;
         //relicBtn
         RelicData relicData = reward.relic.GetComponent<Relic>().relicData;
-        createBtn = Instantiate(rewardRelicBtnPrefab, rewardPanel.transform);
+        createBtn = Instantiate(rewardRelicBtnPrefab, transform);
         createBtn.GetComponent<RelicRewardBtn>().relic = reward.relic;
         createBtn.transform.GetChild(0).GetComponent<Text>().text = relicData.relicName.ToString();
         createBtn.transform.GetChild(1).GetComponent<Image>().sprite = relicData.relicImg;

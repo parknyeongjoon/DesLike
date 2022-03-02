@@ -11,6 +11,12 @@ public class SoldierPanel : MonoBehaviour
     Image Soldier_Portrait, HPBar, MPBar, SkillIcon, BlackSkillIcon;
     [SerializeField]
     Text HPText, MPText, SkillCooltime;
+    [SerializeField]
+    GameObject buffPanel;
+    [SerializeField]
+    GameObject buffObject;
+    [SerializeField]
+    Image buffImg;
 
     SoldierInfo soldierInfo;
     SoldierData soldierData;
@@ -18,12 +24,15 @@ public class SoldierPanel : MonoBehaviour
     Skill skill;
     SkillData skillData;
 
-    public void OnEnable()
+    Dictionary<string, GameObject> buffDic;
+
+    void OnEnable()
     {
+        buffDic = new Dictionary<string, GameObject>();
         SetSoldierPanel();
     }
 
-    public void FixedUpdate()
+    void FixedUpdate()
     {
         RenewalSoldierPanel();
         RenewalSkillPanel();
@@ -49,6 +58,15 @@ public class SoldierPanel : MonoBehaviour
             SkillIcon.sprite = null;
             BlackSkillIcon.sprite = null;
         }
+        GameManager.DeleteChilds(buffPanel);
+        foreach (string code in soldierInfo.buffCoroutine.Keys)
+        {
+            buffImg.sprite = SaveManager.Instance.dataSheet.skillDataSheet[code].skill_Icon;
+            buffDic.Add(code, Instantiate(buffObject, buffPanel.transform));
+            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.buffCoroutine[code].Count.ToString();
+        }
+        RenewalSoldierPanel();
+        RenewalSkillPanel();
     }
 
     void RenewalSoldierPanel()//피나 마나의 변경이 생길때만 바꾸기?
@@ -59,12 +77,44 @@ public class SoldierPanel : MonoBehaviour
         MPText.text = soldierInfo.cur_Mp + "/" + soldierData.mp;
     }
 
-    void RenewalSkillPanel()
+    void RenewalSkillPanel()//코루틴으로
     {
         if (skill as ActiveSkill)
         {
             SkillIcon.fillAmount = 1 - ((ActiveSkill)skill).cur_cooltime / ((ActiveSkillData)skillData).cooltime;
             SkillCooltime.text = (((ActiveSkill)skill).cur_cooltime > 0 ? ((int)((ActiveSkill)skill).cur_cooltime).ToString() : "");
+        }
+        else
+        {
+            SkillIcon.fillAmount = 1;
+            SkillCooltime.text = "";
+        }
+    }
+
+    public void AddBuff(string code)
+    {
+        if (buffDic.ContainsKey(code))
+        {
+            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.buffCoroutine[code].Count.ToString();
+        }
+        else
+        {
+            buffImg.sprite = SaveManager.Instance.dataSheet.skillDataSheet[code].skill_Icon;
+            buffDic.Add(code, Instantiate(buffObject, buffPanel.transform));
+            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.buffCoroutine[code].Count.ToString();
+        }
+    }
+
+    public void RemoveBuff(string code)
+    {
+        if(soldierInfo.buffCoroutine[code].Count == 0)
+        {
+            Destroy(buffDic[code]);
+            buffDic.Remove(code);
+        }
+        else
+        {
+            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.buffCoroutine[code].Count.ToString();
         }
     }
 }

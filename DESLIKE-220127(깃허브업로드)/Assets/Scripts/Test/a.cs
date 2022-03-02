@@ -4,25 +4,29 @@ using UnityEngine;
 
 public class a : MonoBehaviour
 {
-    public delegate IEnumerator TestHandler();
+    public delegate void TestHandler();
     public TestHandler testHandler;
 
     IEnumerator testCoroutineA;
 
+    [SerializeField]
+    List<Coroutine> coroutines = new List<Coroutine>();
+
     void Start()
     {
-        testCoroutineA = testAA();
+
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            StartCoroutine(testCoroutineA);
+            coroutines.Add(StartCoroutine(testAA()));
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        Debug.Log(coroutines.Count);
+        if(coroutines[0] != null)
         {
-            StopCoroutine(testCoroutineA);
+            Debug.Log("널 아님");
         }
     }
     protected virtual void testA()
@@ -32,11 +36,6 @@ public class a : MonoBehaviour
 
     public virtual IEnumerator testAA()
     {
-        Debug.Log("AA코루틴 시작");
-        for(int i = 0; i < 10; i++)
-        {
-            Debug.Log("AA");
-            yield return new WaitForSeconds(1.0f);
-        }
+        yield return new WaitForSeconds(2.0f);
     }
 }

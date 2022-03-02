@@ -48,6 +48,8 @@ public class Spawner : MonoBehaviour
 
     public void battleStart()
     {
+        GameManager.Instance.gamePause = false;
+        Time.timeScale = 1;
         StartCoroutine(RoundControll());
     }
 

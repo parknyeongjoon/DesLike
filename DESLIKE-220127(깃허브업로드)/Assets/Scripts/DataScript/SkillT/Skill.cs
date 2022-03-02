@@ -5,41 +5,33 @@ using System;
 
 public class Skill : MonoBehaviour
 {
-    [SerializeField]
     protected HeroInfo heroInfo;
-    [SerializeField]
-    protected SoldierBasic soldierBasic;
     public SkillData skillData;
 
     protected virtual void Start()
     {
-        if (soldierBasic as SoldierBehaviour)
+        heroInfo = GetComponent<HeroInfo>();
+        if (heroInfo as SoldierInfo)//병사라면
         {
-            ((SoldierBehaviour)soldierBasic).skillDetect = Detect;
-            ((SoldierBehaviour)soldierBasic).canSkill = CanSkillCheck;
-            ((SoldierBehaviour)soldierBasic).skillHandler = UseSkill;
+            SoldierBehaviour soldierBehaviour = GetComponent<SoldierBehaviour>();
+            soldierBehaviour.skillDetect += Detect;
+            soldierBehaviour.canSkill += CanSkillCheck;
+            soldierBehaviour.skillHandler += UseSkill;
         }
     }
 
-    protected virtual bool CanSkillCheck()
+    public virtual bool CanSkillCheck()
     {
         return false;
     }
 
-    protected virtual void Detect()
+    public virtual void Detect()
     {
 
     }
 
-    protected virtual IEnumerator UseSkill(HeroInfo targetInfo)
+    public virtual IEnumerator UseSkill(HeroInfo targetInfo)
     {
         yield return null;
-    }
-
-    public void SetHeroAction(int index)
-    {
-        ((HeroBehaviour)soldierBasic).skillHandler[index] = UseSkill;
-        ((HeroBehaviour)soldierBasic).canSkill[index] = CanSkillCheck;
-        ((HeroBehaviour)soldierBasic).skillDetect[index] = Detect;
     }
 }

@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class HeroInfo : CastleInfo
 {
-    public CastleInfo targetInfo;
     public GameObject target;
+    public CastleInfo targetInfo;
+    public GameObject skillTarget;
+    public CastleInfo skillTargetInfo;
     public float cur_Mp;
     public Vector3 moveDir;
     public Soldier_State state;
@@ -14,12 +16,13 @@ public class HeroInfo : CastleInfo
     public Team team;
     public float healWeight;
     public bool resurrection;
+    [SerializeField]
     public Buff_Stat buff_Stat;
 
     public Animator animator;
 
-    public Dictionary<string, Coroutine> buffCoroutine;
-    public Dictionary<string, Coroutine> debuffCoroutine;
+    public Dictionary<string, List<Coroutine>> buffCoroutine = new Dictionary<string, List<Coroutine>>();
+    public Dictionary<string, List<Coroutine>> debuffCoroutine = new Dictionary<string, List<Coroutine>>();
 
     void Start()
     {
@@ -28,6 +31,7 @@ public class HeroInfo : CastleInfo
         cur_Hp = saveManager.gameData.heroSaveData.cur_Hp;
         cur_Mp = saveManager.gameData.heroSaveData.cur_Mp;
         resurrection = saveManager.gameData.heroSaveData.resurrection;
+        StartCoroutine(Hp_Mp_Re());
         //allyPortDatas.spawnSoldierList.Add(this);
     }
 
@@ -37,11 +41,35 @@ public class HeroInfo : CastleInfo
         //StartCoroutine(soldierBehaviour.Stun_Behaviour());
     }
 
-    public bool TargetCheck(float range)
+    protected IEnumerator Hp_Mp_Re()
     {
-        if (target != null)
+        while (true)
         {
-            if (Vector3.Distance(transform.position, target.transform.position) <= range)//몸의 중심 말고 테투리부터 거리 targetInfo.castleData.size
+            if (cur_Hp + (((HeroData)castleData).hp_Re + buff_Stat.hp_Re) >= castleData.hp)
+            {
+                cur_Hp = castleData.hp;
+            }
+            else
+            {
+                cur_Hp += (((HeroData)castleData).hp_Re + buff_Stat.hp_Re);
+            }
+            if (cur_Mp + (((HeroData)castleData).mp_Re + buff_Stat.mp_Re) >= ((HeroData)castleData).mp)
+            {
+                cur_Mp = ((HeroData)castleData).mp;
+            }
+            else
+            {
+                cur_Mp += (((HeroData)castleData).mp_Re + buff_Stat.mp_Re);
+            }
+            yield return new WaitForSeconds(1.0f);
+        }
+    }
+
+    public bool TargetCheck(GameObject target, float range)
+    {
+        if (target != null && target.layer != 7)
+        {
+            if (Vector3.Distance(transform.position, target.transform.position) <= range)
             {
                 return true;
             }

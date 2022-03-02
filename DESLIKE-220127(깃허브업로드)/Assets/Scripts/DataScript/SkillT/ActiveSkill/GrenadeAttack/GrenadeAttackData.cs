@@ -12,9 +12,12 @@ public class GrenadeAttackData : ActiveSkillData
     {
         HeroInfo[] targetInfos;
         targetInfos = Get_Targets(targetInfo, heroInfo);
-        for (int i = 0; i < targetInfos.Length; i++)
+        if (targetInfos != null)
         {
-            targetInfos[i].OnDamaged(atk_Dmg);
+            for (int i = 0; i < targetInfos.Length; i++)
+            {
+                targetInfos[i].OnDamaged(atk_Dmg);
+            }
         }
     }
 
@@ -22,13 +25,14 @@ public class GrenadeAttackData : ActiveSkillData
 
     HeroInfo[] Get_Targets(HeroInfo targetInfo, HeroInfo heroInfo)// 다른 곳으로 static으로 옮기기, soldier에서 스킬 사용시 null이면 마우스 위치에 사용될 듯?
     {
-        HeroInfo[] targetInfos = new HeroInfo[max_Target];
+        HeroInfo[] targetInfos;
         Vector3 skillPos = new Vector3();
         if (targetInfo) { skillPos = targetInfo.transform.position; }
-        else { skillPos = Input.mousePosition; }
+        else { skillPos = MouseManager.Instance.skillPos; }
         Collider2D[] targetColliders = Physics2D.OverlapCircleAll(skillPos, extent, ((int)atkArea * (int)heroInfo.team) ^ ((int)atkArea * 7));
         if (targetColliders.Length <= max_Target)
         {
+            targetInfos = new HeroInfo[targetColliders.Length];
             for (int i = 0; i < targetColliders.Length; i++)//왜 경고 뜨지?
             {
                 targetInfos[i] = targetColliders[i].GetComponent<HeroInfo>();
@@ -37,6 +41,7 @@ public class GrenadeAttackData : ActiveSkillData
         }
         else
         {
+            targetInfos = new HeroInfo[max_Target];
             bool isTarget = false;
             for (int i = 0; i < max_Target - 1; i++)
             {

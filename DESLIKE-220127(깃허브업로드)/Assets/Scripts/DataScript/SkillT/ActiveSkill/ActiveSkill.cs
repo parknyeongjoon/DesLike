@@ -15,14 +15,14 @@ public class ActiveSkill : Skill
         cur_cooltime = 0;
     }
 
-    protected override bool CanSkillCheck()
+    public override bool CanSkillCheck()
     {
-        if(!heroInfo.targetInfo || heroInfo.target.layer == 7)
+        if(!heroInfo.skillTargetInfo || heroInfo.skillTarget.layer == 7)
         {
             heroInfo.state = Soldier_State.Idle;
             return false;
         }
-        if (cur_cooltime <= 0 && heroInfo.cur_Mp >= ((ActiveSkillData)skillData).mp && heroInfo.TargetCheck(((ActiveSkillData)skillData).range + heroInfo.targetInfo.castleData.size))
+        if (cur_cooltime <= 0 && heroInfo.cur_Mp >= ((ActiveSkillData)skillData).mp && heroInfo.TargetCheck(heroInfo.skillTarget, ((ActiveSkillData)skillData).range + heroInfo.skillTargetInfo.castleData.size))
         {
             return true;
         }
@@ -38,22 +38,21 @@ public class ActiveSkill : Skill
         }
     }
 
-    protected override void Detect()
+    public override void Detect()
     {
-        Debug.Log("스킬 탐색");
         Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, 100, atkArea ^ atkLayer);
         if (targets != null)
         {
-            heroInfo.target = heroInfo.FindNearestSoldier(targets);
-            if (heroInfo.TargetCheck(((ActiveSkillData)skillData).range + 2))
+            heroInfo.skillTarget = heroInfo.FindNearestSoldier(targets);
+            if (heroInfo.TargetCheck(heroInfo.skillTarget, ((ActiveSkillData)skillData).range + 2))
             {
-                if (!(heroInfo.target.tag == "Castle")) { heroInfo.state = Soldier_State.Battle; }
-                heroInfo.targetInfo = heroInfo.target.GetComponent<HeroInfo>();
+                if (heroInfo.skillTarget.tag != "Castle") { heroInfo.state = Soldier_State.Battle; }
+                heroInfo.skillTargetInfo = heroInfo.skillTarget.GetComponent<HeroInfo>();
             }
         }
     }
 
-    protected override IEnumerator UseSkill(HeroInfo targetInfo)
+    public override IEnumerator UseSkill(HeroInfo targetInfo)
     {
         yield return null;
     }

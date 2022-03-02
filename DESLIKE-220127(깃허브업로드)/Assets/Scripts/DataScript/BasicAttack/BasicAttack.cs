@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class BasicAttack : MonoBehaviour
 {
-    public HeroInfo heroInfo;
+    protected HeroInfo heroInfo;
     public BasicAttackData basicAttackData;
-    public SoldierBasic soldierBasic;
+    protected SoldierBasic soldierBasic;
 
     public int atkArea, atkLayer;
 
     protected virtual void Start()
     {
+        heroInfo = GetComponent<HeroInfo>();
+        soldierBasic = GetComponent<SoldierBasic>();
+
         atkArea = (int)heroInfo.team * (int)basicAttackData.atkArea;
         atkLayer = (int)basicAttackData.atkArea * 7;
 
@@ -22,14 +25,12 @@ public class BasicAttack : MonoBehaviour
 
     protected void Detect()
     {
-        Debug.Log("ÆòÅ¸ Å½»ö");
         Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, 100, atkArea ^ atkLayer);
         if (targets != null)
         {
             heroInfo.target = heroInfo.FindNearestSoldier(targets);
-            if (heroInfo.TargetCheck(basicAttackData.range + 2))
+            if (heroInfo.TargetCheck(heroInfo.target, basicAttackData.range + 2))
             {
-                Debug.Log("½Î¿ò½ÃÀÛ");
                 if(heroInfo.target.tag == "Castle") { heroInfo.state = Soldier_State.Siege; }
                 else { heroInfo.state = Soldier_State.Battle; }
                 heroInfo.targetInfo = heroInfo.target.GetComponent<CastleInfo>();
@@ -44,7 +45,7 @@ public class BasicAttack : MonoBehaviour
             heroInfo.state = Soldier_State.Idle;
             return false;
         }
-        if (heroInfo.TargetCheck(basicAttackData.range + heroInfo.targetInfo.castleData.size))
+        if (heroInfo.TargetCheck(heroInfo.target, basicAttackData.range + heroInfo.targetInfo.castleData.size))
         {
             return true;
         }

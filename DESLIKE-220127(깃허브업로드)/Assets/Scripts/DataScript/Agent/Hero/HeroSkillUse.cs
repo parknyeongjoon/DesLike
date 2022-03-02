@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class HeroSkillUse: MonoBehaviour
 {
@@ -8,16 +9,14 @@ public class HeroSkillUse: MonoBehaviour
 
     [SerializeField]
     HeroInfo heroInfo;
-    CastleInfo skillTargetInfo;
-
-    public delegate void SkillHandler(CastleInfo targetInfo);
-    SkillHandler[] skillHandler = new SkillHandler[4];
-
-    Coroutine skillCoroutine;
 
     GameObject skillFocus;
     [SerializeField]
     GameObject skillRange;
+
+    public Skill[] skillScripts = new Skill[3];
+
+    Coroutine skillCoroutine;
 
     void Start()
     {
@@ -27,243 +26,198 @@ public class HeroSkillUse: MonoBehaviour
 
     void Update()
     {
-        QSkill();
-        WSkill();
-        ESkill();
-        RSkill();
+        Skill1();
+        SKill2();
+        SKill3();
+        StopSkillCoroutine();
     }
 
     void SetSkillHandler()
     {
-        for (int i = 0; i < 3; i++)
-        {
-
-        }
+        skillScripts = GetComponents<Skill>();
     }
 
-    void QSkill()
+    void Skill1()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Z) && skillScripts[0])
         {
-            skillHandler[0]?.Invoke(skillTargetInfo);
+            SkillFunc(skillScripts[0]);
         }
     }
 
-    void WSkill()
+    void SKill2()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.X) && skillScripts[1])
         {
-            skillHandler[1]?.Invoke(skillTargetInfo);
+            SkillFunc(skillScripts[1]);
         }
     }
 
-    void ESkill()
+    void SKill3()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.C) && skillScripts[2])
         {
-            skillHandler[2]?.Invoke(skillTargetInfo);
+            SkillFunc(skillScripts[2]);
         }
     }
 
-    void RSkill()
+    void SkillFunc(Skill skillScript)
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (CheckMpNCool(skillScript) && heroInfo.action == Soldier_Action.Idle)
         {
-            skillHandler[3]?.Invoke(skillTargetInfo);
+            if (skillCoroutine != null) { StopCoroutine(skillCoroutine); }
+            skillCoroutine = StartCoroutine(UseSkill(skillScript));
         }
     }
 
-    /*
-    void AddSkillBehaviour(SkillData skillData)
+    bool CheckMpNCool(Skill skillScript)
     {
-        if (skillData.sort == "SingleAttack")
+        if (skillScript as ActiveSkill)
         {
-            SingleAttackBehaviour createBehaviour;
-            createBehaviour = gameObject.AddComponent<SingleAttackBehaviour>();
-            createBehaviour.skillData = skillData;
-            skillBehaviours.Add(createBehaviour);
-        }
-        else if (skillData.sort == "GrenadeAttack")
-        {
-            GrenadeAttackBehaviour createBehaviour;
-            createBehaviour = gameObject.AddComponent<GrenadeAttackBehaviour>();
-            createBehaviour.skillData = skillData;
-            skillBehaviours.Add(createBehaviour);
-        }
-    }
-    //할 때마다 찾지말고 지정해놓고 쓰는 방법 찾아보기
-    void UseSkillBehaviour(SkillData skillData, SkillBehaviour skillBehaviour)
-    {
-        if(skillCoroutine != null)
-        {
-            StopCoroutine(skillCoroutine);
-        }
-        if (skillData.sort == "SingleAttack")
-        {
-            skillCoroutine = StartCoroutine(UseSingleAttack(skillBehaviour));
-        }
-        else if(skillData.sort == "GrenadeAttack")
-        {
-            skillCoroutine = StartCoroutine(UseGrenadeAttack(skillBehaviour));
-        }
-    }
-    */
-    
-    /*
-    IEnumerator UseSingleAttack(SkillBehaviour skillBehaviour)
-    {
-        SingleAttackBehaviour singleAttackBehaviour = ((SingleAttackBehaviour)skillBehaviour);
-        if (singleAttackBehaviour.cur_cooltime > 0)
-        {
-            //쿨타임 출력
-        }
-        else if (heroInfo.cur_Mp < singleAttackBehaviour.singleAttackSkillData.mp)
-        {
-            //마나 부족 출력
-        }
-        else
-        {
-            mouseManager.mouseState = MouseState.Skill;
-            mouseManager.SetAimCursorTexture();
-            skillRange.transform.localScale = new Vector2(singleAttackBehaviour.singleAttackSkillData.range, singleAttackBehaviour.singleAttackSkillData.range);
-            skillRange.SetActive(true);
-            while (mouseManager.SkillTarget == null)
+            if(((ActiveSkill)skillScript).cur_cooltime > 0)
             {
-                yield return null;
+                Debug.Log("쿨타임");
+                return false;
             }
-            heroInfo.target = mouseManager.SkillTarget;
-            skillRange.SetActive(false);
-            if (skillFocus != null)
+            else if(heroInfo.cur_Mp <= ((ActiveSkillData)skillScript.skillData).mp)
             {
-                skillFocus.SetActive(false);
+                Debug.Log("마나 부족");
+                return false;
             }
-            skillFocus = heroInfo.target.transform.Find("skillFocus").gameObject;
-            skillFocus.SetActive(true);
-            mouseManager.mouseState = MouseState.Idle;
-            mouseManager.SetIdleCursorTexture();
-            while (mouseManager.SkillTarget != null)
+            else
             {
-                if (singleAttackBehaviour.CanSkillCheck())
-                {
-                    WaitWhile waitWhile = new WaitWhile(() => GameManager.Instance.gamePause);
-                    yield return waitWhile;
-                    CastleInfo targetInfo = mouseManager.SkillTarget.GetComponent<CastleInfo>();
-                    StartCoroutine(singleAttackBehaviour.SkillCoroutine(targetInfo));
-                    break;
-                }
-                else
-                {
-                    heroInfo.moveDir = (heroInfo.target.transform.position - transform.position).normalized;
-                    transform.Translate(Time.deltaTime * heroInfo.heroData.speed * heroInfo.moveDir);
-                }
-                yield return null;
-            }
-            skillFocus.SetActive(false);
-            mouseManager.SkillTarget = null;
-            heroInfo.target = null;
-        }
-    }
-
-    IEnumerator UseGrenadeAttack(SkillBehaviour skillBehaviour)
-    {
-        GrenadeAttackBehaviour grenadeAttackBehaviour = ((GrenadeAttackBehaviour)skillBehaviour);
-        if (grenadeAttackBehaviour.cur_cooltime > 0)
-        {
-            //쿨타임 출력
-        }
-        else if (heroInfo.cur_Mp < grenadeAttackBehaviour.grenadeAttackSkillData.mp)
-        {
-            //마나 부족 출력
-        }
-        else
-        {
-            Vector3 grenadePos;
-            mouseManager.mouseState = MouseState.Grenade;
-            Cursor.visible = false;
-            skillRange.transform.localScale = new Vector2(grenadeAttackBehaviour.grenadeAttackSkillData.range, grenadeAttackBehaviour.grenadeAttackSkillData.range);
-            skillRange.SetActive(true);
-            mouseManager.grenadeExtent.SetActive(true);
-            mouseManager.grenadeExtent.transform.localScale = new Vector2(grenadeAttackBehaviour.grenadeAttackSkillData.extent * 3, grenadeAttackBehaviour.grenadeAttackSkillData.extent * 3);
-            while (!Input.GetMouseButtonDown(0))
-            {
-                yield return null;
-            }
-            grenadePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mouseManager.mouseState = MouseState.Idle;
-            Cursor.visible = true;
-            skillRange.SetActive(false);
-            mouseManager.grenadeExtent.SetActive(false);
-            while (true)
-            {
-                float distance = Vector2.Distance(transform.position, grenadePos);
-                if (distance < grenadeAttackBehaviour.grenadeAttackSkillData.range)
-                {
-                    WaitWhile waitWhileResume = new WaitWhile(() => GameManager.Instance.gamePause);
-                    yield return waitWhileResume;
-                    //grenadeBehaviour안에 함수로 넣기
-                    Collider2D[] targetColliders = Physics2D.OverlapCircleAll(grenadePos, grenadeAttackBehaviour.grenadeAttackSkillData.extent, grenadeAttackBehaviour.atkArea ^ grenadeAttackBehaviour.atkLayer);//스킬 범위로 변경
-                    CastleInfo[] targetInfos = new CastleInfo[grenadeAttackBehaviour.grenadeAttackSkillData.max_Target];
-                    for (int i = 0; i < targetColliders.Length && i < grenadeAttackBehaviour.grenadeAttackSkillData.max_Target; i++)
-                    {
-                        targetInfos[i] = targetColliders[i].GetComponent<CastleInfo>();
-                    }
-                    StartCoroutine(grenadeAttackBehaviour.SkillCoroutine(targetInfos));
-                    break;
-                }
-                else
-                {
-                    heroInfo.moveDir = (grenadePos - transform.position).normalized;
-                    transform.Translate(Time.deltaTime * heroInfo.heroData.speed * heroInfo.moveDir);
-                }
-                yield return null;
+                return true;
             }
         }
+        return false;
     }
-    */
 
-    void StopSkillCoroutine()
+    IEnumerator UseSkill(Skill skillScript)
     {
-        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
+        heroInfo.skillTargetInfo = null;
+        if(skillScript.skillData.skillType == SkillType.InstanceSkill)
         {
-            if (skillCoroutine != null)
+            yield return skillScript.UseSkill(heroInfo);
+        }
+        else if (skillScript as ActiveSkill)
+        {
+            if (skillScript.skillData.skillType == SkillType.TargetSkill)
             {
-                StopCoroutine(skillCoroutine);
-                skillTargetInfo = null;
-                heroInfo.target = null;
-                if (skillFocus != null)
-                {
-                    skillFocus.SetActive(false);
-                }
-                mouseManager.mouseState = Mouse_State.Idle;
-                Cursor.visible = true;
-                mouseManager.grenadeExtent.SetActive(false);
-                skillRange.SetActive(false);
-                mouseManager.SetIdleCursorTexture();
+                mouseManager.mouseState = Mouse_State.Target;
             }
+            else if (skillScript.skillData.skillType == SkillType.GrenadeSkill)
+            {
+                mouseManager.mouseState = Mouse_State.Grenade;
+                mouseManager.grenadeExtent.transform.localScale = new Vector2(((GrenadeAttackData)skillScript.skillData).extent, ((GrenadeAttackData)skillScript.skillData).extent);
+            }
+            skillRange.transform.localScale = new Vector2(((ActiveSkillData)skillScript.skillData).range, ((ActiveSkillData)skillScript.skillData).range);
+            yield return SetTarget();
+            yield return MoveToSkill(heroInfo.skillTargetInfo, ((ActiveSkillData)skillScript.skillData).range);
+            yield return skillScript.UseSkill((HeroInfo)heroInfo.skillTargetInfo);
         }
     }
 
-    IEnumerator Set_SkillTarget()
+    IEnumerator SetTarget()
     {
-        
-        MouseManager.Instance.mouseState = Mouse_State.Target;
         MouseManager.Instance.SetAimCursorTexture();
+        skillRange.SetActive(true);
         Collider2D hit;
-        while (true)
+        while (mouseManager.mouseState != Mouse_State.Idle)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (mouseManager.mouseState == Mouse_State.Grenade && Input.GetKey(KeyCode.LeftAlt))
+            {
+                mouseManager.SetGrenadeExtent(mouseManager.transform);
+                while (Input.GetKey(KeyCode.LeftAlt))
+                {
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        mouseManager.skillPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                        Set_Idle();
+                        break;
+                    }
+                    yield return null;
+                }
+            }
+            else if (Input.GetMouseButtonDown(0))
             {
                 hit = MouseManager.Instance.CastRay();
                 if (hit != null)
                 {
                     if (hit.gameObject.layer == 9 && hit.gameObject.tag != "Castle")
                     {
-                        skillTargetInfo = hit.gameObject.GetComponent<CastleInfo>();
+                        ActiveSkillFocus(hit.gameObject);
+                        heroInfo.skillTargetInfo = hit.gameObject.GetComponent<CastleInfo>();
+                        Set_Idle();
                         break;
                     }
                 }
             }
             yield return null;
         }
+    }
+
+    IEnumerator MoveToSkill(CastleInfo targetInfo, float range)
+    {
+        Vector3 destination;
+        Debug.Log("MoveToSkill");
+        if (targetInfo)//타켓이 있다면 타켓쪽으로 없다면 논타켓 위치로
+        {
+            Debug.Log("0");
+            destination = targetInfo.transform.position;
+            while(targetInfo != null && targetInfo.gameObject.layer != 7 && Vector3.Distance(transform.position, targetInfo.transform.position) > range - targetInfo.castleData.size)
+            {
+                Debug.Log("1");
+                transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * (((HeroData)heroInfo.castleData).speed + heroInfo.buff_Stat.speed));
+                yield return new WaitForFixedUpdate();
+            }
+        }
+        else
+        {
+            Debug.Log("2");
+            destination = mouseManager.skillPos;
+            while (Vector3.Distance(transform.position, destination) > range)
+            {
+                Debug.Log("3");
+                transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * (((HeroData)heroInfo.castleData).speed + heroInfo.buff_Stat.speed));
+                yield return new WaitForFixedUpdate();
+            }
+        }
+    }
+
+    void ActiveSkillFocus(GameObject gameObject)
+    {
+        if (skillFocus != null)
+        {
+            skillFocus.SetActive(false);
+        }
+        skillFocus = gameObject.transform.Find("skillFocus").gameObject;
+        skillFocus.SetActive(true);
+    }
+
+    void StopSkillCoroutine()
+    {
+        if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape)) && heroInfo.action != Soldier_Action.End_Delay)
+        {
+            if (skillCoroutine != null)
+            {
+                StopCoroutine(skillCoroutine);
+                heroInfo.skillTargetInfo = null;
+                heroInfo.skillTarget = null;
+                if (skillFocus != null)
+                {
+                    skillFocus.SetActive(false);
+                }
+                Set_Idle();
+            }
+        }
+    }
+
+    void Set_Idle()
+    {
+        mouseManager.mouseState = Mouse_State.Idle;
+        heroInfo.action = Soldier_Action.Idle;
+        mouseManager.grenadeExtent.SetActive(false);
+        skillRange.SetActive(false);
+        mouseManager.SetIdleCursorTexture();
     }
 }

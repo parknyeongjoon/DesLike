@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class SingleAttack : ActiveSkill
 {
-    protected override IEnumerator UseSkill(HeroInfo targetInfo)
+    public override IEnumerator UseSkill(HeroInfo targetInfo)
     {
+        heroInfo.action = Soldier_Action.Skill;
         yield return new WaitForSeconds(((SingleAttackData)skillData).start_Delay);
         if (targetInfo && targetInfo.gameObject.layer != 7)
         {

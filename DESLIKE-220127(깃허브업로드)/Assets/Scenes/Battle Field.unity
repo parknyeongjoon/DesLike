@@ -403,6 +403,7 @@ GameObject:
   - component: {fileID: 102012503}
   - component: {fileID: 102012502}
   - component: {fileID: 102012504}
+  - component: {fileID: 102012505}
   m_Layer: 5
   m_Name: RewardPanel
   m_TagString: Untagged
@@ -491,6 +492,22 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 3}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &102012505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102012500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814156bff57d3444fb3bf38b58e41035, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardSoldierBtnPrefab: {fileID: 6502130361829748299, guid: 61aec71d49fcb2f47a6aff0d5535c1c8,
+    type: 3}
+  rewardRelicBtnPrefab: {fileID: 6502130361829748299, guid: 4fd7974f301eb1048b4fa9d92d7f2253,
+    type: 3}
 --- !u!1 &103147965
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,7 +1207,12 @@ MonoBehaviour:
   start_Btn: {fileID: 1084522025}
   cur_Port: {fileID: 0}
   cur_Soldier: {fileID: 0}
-  infoPanel: {fileID: 0}
+  soldierPanel: {fileID: 715787160}
+  setPortPanel: {fileID: 1904692510}
+  rewardPanel: {fileID: 102012505}
+  heroPanel: {fileID: 1369046789}
+  infoPanel: {fileID: 205184481}
+  challengePanel: {fileID: 0}
 --- !u!4 &448480551
 Transform:
   m_ObjectHideFlags: 0
@@ -16244,6 +16266,9 @@ MonoBehaviour:
   MPText: {fileID: 1252185665}
   SkillCooltime: {fileID: 663179168}
   buffPanel: {fileID: 1992109400}
+  buffObject: {fileID: 3873672435639752891, guid: df8b68f18a615de489130525d8ebd1db,
+    type: 3}
+  buffImg: {fileID: 3873672435639752837, guid: df8b68f18a615de489130525d8ebd1db, type: 3}
 --- !u!1 &734755609
 GameObject:
   m_ObjectHideFlags: 0
@@ -18678,7 +18703,10 @@ MonoBehaviour:
   - {fileID: 1842427393}
   - {fileID: 1886863473}
   - {fileID: 271308891}
-  buffPanel: {fileID: 1741166840}
+  buffPanel: {fileID: 1741166839}
+  buffObject: {fileID: 3873672435639752891, guid: df8b68f18a615de489130525d8ebd1db,
+    type: 3}
+  buffImg: {fileID: 3873672435639752837, guid: df8b68f18a615de489130525d8ebd1db, type: 3}
 --- !u!1 &1429855236
 GameObject:
   m_ObjectHideFlags: 0
@@ -19232,7 +19260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1741166840}
   - component: {fileID: 1741166842}
-  - component: {fileID: 1741166841}
+  - component: {fileID: 1741166843}
   m_Layer: 5
   m_Name: BuffPanel
   m_TagString: Untagged
@@ -19259,36 +19287,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 70}
   m_SizeDelta: {x: 300, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1741166841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741166839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1741166842
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19297,6 +19295,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1741166839}
   m_CullTransparentMesh: 1
+--- !u!114 &1741166843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741166839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 5
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 5
+  m_ChildAlignment: 6
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 20, y: 20}
+  m_Spacing: {x: 3, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &1769750032
 GameObject:
   m_ObjectHideFlags: 0
@@ -19894,7 +19916,6 @@ GameObject:
   - component: {fileID: 1859943160}
   - component: {fileID: 1859943159}
   - component: {fileID: 1859943158}
-  - component: {fileID: 1859943161}
   m_Layer: 5
   m_Name: Reward Canvas
   m_TagString: Untagged
@@ -19984,23 +20005,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1859943161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859943156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 814156bff57d3444fb3bf38b58e41035, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rewardSoldierBtnPrefab: {fileID: 6502130361829748299, guid: 61aec71d49fcb2f47a6aff0d5535c1c8,
-    type: 3}
-  rewardRelicBtnPrefab: {fileID: 6502130361829748299, guid: 4fd7974f301eb1048b4fa9d92d7f2253,
-    type: 3}
-  rewardPanel: {fileID: 102012500}
 --- !u!1 &1871013112
 GameObject:
   m_ObjectHideFlags: 0
@@ -20391,27 +20395,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1992109400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_Padding:
+    m_Left: 5
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 3
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 20, y: 20}
+  m_Spacing: {x: 3, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!222 &1992109402
 CanvasRenderer:
   m_ObjectHideFlags: 0

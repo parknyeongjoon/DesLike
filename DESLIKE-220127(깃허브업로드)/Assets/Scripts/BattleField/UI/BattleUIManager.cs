@@ -15,24 +15,17 @@ public class BattleUIManager : MonoBehaviour
     public PortData cur_Port;
     public SoldierInfo cur_Soldier;
 
-    SoldierPanel soldierPanel;
-    SetPortPanel setPortPanel;
-    RewardPanel rewardPanel;
-    HeroPanel heroPanel;
+    public SoldierPanel soldierPanel;
+    public SetPortPanel setPortPanel;
+    public RewardPanel rewardPanel;
+    public HeroPanel heroPanel;
     public InfoPanel infoPanel;
-    ChallengePanel challengePanel;
+    public ChallengePanel challengePanel;
 
     void Awake()
     {
         instance = this;
         MouseManager.Instance.battleUIManager = this;
-
-        soldierPanel = SoldierPanel.GetComponent<SoldierPanel>();
-        setPortPanel = SetPortPanel.GetComponent<SetPortPanel>();
-        rewardPanel = RewardPanel.GetComponent<RewardPanel>();
-        heroPanel = HeroPanel.GetComponent<HeroPanel>();
-        infoPanel = InfoPanel.GetComponent<InfoPanel>();
-        challengePanel = ChallengePanel.GetComponent<ChallengePanel>();
 
         SetMidPanel(3);
     }

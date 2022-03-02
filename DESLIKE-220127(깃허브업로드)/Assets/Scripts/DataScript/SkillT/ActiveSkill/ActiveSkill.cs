@@ -40,7 +40,6 @@ public class ActiveSkill : Skill
 
     public override void Detect()
     {
-        Debug.Log("스킬 탐색");
         Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, 100, atkArea ^ atkLayer);
         if (targets != null)
         {

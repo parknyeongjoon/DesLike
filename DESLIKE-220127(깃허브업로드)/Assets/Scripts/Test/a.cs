@@ -9,6 +9,9 @@ public class a : MonoBehaviour
 
     IEnumerator testCoroutineA;
 
+    [SerializeField]
+    List<Coroutine> coroutines = new List<Coroutine>();
+
     void Start()
     {
 
@@ -18,8 +21,12 @@ public class a : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            GameObject.Find("B").GetComponent<a>().plusTestA();
-            GameObject.Find("B").GetComponent<a>().testHandler.Invoke();
+            coroutines.Add(StartCoroutine(testAA()));
+        }
+        Debug.Log(coroutines.Count);
+        if(coroutines[0] != null)
+        {
+            Debug.Log("널 아님");
         }
     }
     protected virtual void testA()
@@ -29,17 +36,6 @@ public class a : MonoBehaviour
 
     public virtual IEnumerator testAA()
     {
-        Debug.Log("AA코루틴 시작");
-        for(int i = 0; i < 10; i++)
-        {
-            Debug.Log("AA");
-            yield return new WaitForSeconds(1.0f);
-        }
-    }
-
-    public void plusTestA()
-    {
-        testA();
-        testHandler = testA;
+        yield return new WaitForSeconds(2.0f);
     }
 }

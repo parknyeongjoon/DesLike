@@ -90,6 +90,7 @@ public class MainTitle : MonoBehaviour
     {
         SaveManager.Instance.dataSheet.soldierDataSheet.Clear();
         SaveManager.Instance.dataSheet.heroDataSheet.Clear();
+        SaveManager.Instance.dataSheet.skillDataSheet.Clear();
         for(int i = 0; i < soldierDatas.Length; i++)
         {
             if (!SaveManager.Instance.dataSheet.soldierDataSheet.ContainsKey(soldierDatas[i].code))//딕셔너리에 추가되어있지 않다면 추가하기

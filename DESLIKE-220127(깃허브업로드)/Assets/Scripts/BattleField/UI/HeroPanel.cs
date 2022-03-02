@@ -14,9 +14,13 @@ public class HeroPanel : MonoBehaviour
     [SerializeField]
     Text[] SkillCooltimes;
     [SerializeField]
-    Transform buffPanel;
+    GameObject buffPanel;
+    [SerializeField]
+    GameObject buffObject;
+    [SerializeField]
+    Image buffImg;
 
-    Dictionary<string, SkillData> buffDic;
+    Dictionary<string, GameObject> buffDic = new Dictionary<string, GameObject>();
 
     GameObject hero;
     HeroInfo heroInfo;
@@ -27,7 +31,6 @@ public class HeroPanel : MonoBehaviour
         hero = GameObject.Find("Hero");
         heroInfo = hero.GetComponent<HeroInfo>();
         skills = hero.GetComponent<HeroSkillUse>().skillScripts;
-
     }
 
     void Start()
@@ -44,6 +47,13 @@ public class HeroPanel : MonoBehaviour
             SkillIcons[i].sprite = skills[i].skillData.skill_Icon;
             BlackSkillIcons[i].sprite = skills[i].skillData.skill_Icon;
         }
+        foreach(string code in heroInfo.buffCoroutine.Keys)
+        {
+            buffImg.sprite = SaveManager.Instance.dataSheet.skillDataSheet[code].skill_Icon;
+            buffDic.Add(code, Instantiate(buffObject, buffPanel.transform));
+            buffDic[code].GetComponentInChildren<Text>().text = heroInfo.buffCoroutine[code].Count.ToString();
+        }
+        //코루틴 시작
         StartCoroutine(RenewalHeroPanel());
         for(int i = 0; i < skills.Length; i++)
         {
@@ -73,6 +83,33 @@ public class HeroPanel : MonoBehaviour
                 SkillCooltimes[index].text = (((ActiveSkill)skills[index]).cur_cooltime > 0 ? ((int)((ActiveSkill)skills[index]).cur_cooltime).ToString() : "");
                 yield return new WaitForFixedUpdate();
             }
+        }
+    }
+
+    public void AddBuff(string code)//얘들도 오브젝트 풀링해도 될 듯
+    {
+        if (buffDic.ContainsKey(code))
+        {
+            buffDic[code].GetComponentInChildren<Text>().text = heroInfo.buffCoroutine[code].Count.ToString();
+        }
+        else
+        {
+            buffImg.sprite = SaveManager.Instance.dataSheet.skillDataSheet[code].skill_Icon;
+            buffDic.Add(code, Instantiate(buffObject, buffPanel.transform));
+            buffDic[code].GetComponentInChildren<Text>().text = heroInfo.buffCoroutine[code].Count.ToString();
+        }
+    }
+
+    public void RemoveBuff(string code)
+    {
+        if (heroInfo.buffCoroutine[code].Count == 0)
+        {
+            Destroy(buffDic[code]);
+            buffDic.Remove(code);
+        }
+        else
+        {
+            buffDic[code].GetComponentInChildren<Text>().text = heroInfo.buffCoroutine[code].Count.ToString();
         }
     }
 }

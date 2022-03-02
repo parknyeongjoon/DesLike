@@ -11,6 +11,10 @@ public class SoldierBasic : MonoBehaviour
     public Action atkDetect;
     public Func<bool> canAtk;
 
+    public Func<HeroInfo, IEnumerator> skillHandler;
+    public Action skillDetect;
+    public Func<bool> canSkill;
+
     protected void Start()
     {
         heroInfo.moveDir = new Vector3(0, 0, 0);

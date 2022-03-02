@@ -2,8 +2,62 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealerBehaviour : SoldierBehaviour
+public class HealerBehaviour : SoldierBasic
 {
+    new void Start()
+    {
+        base.Start();
+    }
+
+    protected override IEnumerator Idle_Behaviour()
+    {
+        while (heroInfo.state == Soldier_State.Idle)
+        {
+            heroInfo.state = Soldier_State.Detect;
+            yield return new WaitForFixedUpdate();
+        }
+        StartCoroutine(Detect_Behaviour());
+    }
+
+    protected override IEnumerator Detect_Behaviour()
+    {
+        Coroutine detectCoroutine = StartCoroutine(Detect());
+        heroInfo.animator.SetBool("isWalk", true);
+        while (heroInfo.state == Soldier_State.Detect)
+        {
+            if(heroInfo.skillTarget != null)
+            {
+                Move(heroInfo.skillTarget.transform.position - new Vector3(2,0,0));
+            }
+            yield return new WaitForFixedUpdate();
+        }
+        StopCoroutine(detectCoroutine);
+        if (heroInfo.state == Soldier_State.Battle) { StartCoroutine(Battle_Behaviour()); }
+        else { StartCoroutine(Idle_Behaviour()); }
+    }
+
+    protected IEnumerator Detect()
+    {
+        while (true)
+        {
+
+        }
+    }
+
+    protected override IEnumerator Battle_Behaviour()
+    {
+        yield return new WaitForFixedUpdate();
+    }
+
+    protected override IEnumerator Stun_Behaviour()
+    {
+        while (heroInfo.state == Soldier_State.Stun)
+        {
+            Debug.Log("스턴");
+            yield return new WaitForFixedUpdate();
+        }
+        StartCoroutine(Idle_Behaviour());
+    }
     /*
     GameObject healEffect;
     [SerializeField]

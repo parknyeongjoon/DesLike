@@ -13,10 +13,10 @@ public class Skill : MonoBehaviour
         heroInfo = GetComponent<HeroInfo>();
         if (heroInfo as SoldierInfo)//병사라면
         {
-            SoldierBehaviour soldierBehaviour = GetComponent<SoldierBehaviour>();
-            soldierBehaviour.skillDetect += Detect;
-            soldierBehaviour.canSkill += CanSkillCheck;
-            soldierBehaviour.skillHandler += UseSkill;
+            SoldierBasic soldierBasic = GetComponent<SoldierBasic>();
+            soldierBasic.skillDetect += Detect;
+            soldierBasic.canSkill += CanSkillCheck;
+            soldierBasic.skillHandler += UseSkill;
         }
     }
 

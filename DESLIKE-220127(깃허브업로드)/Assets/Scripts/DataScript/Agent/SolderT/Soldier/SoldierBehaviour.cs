@@ -6,10 +6,6 @@ using System;
 
 public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
 {
-    public Func<HeroInfo, IEnumerator> skillHandler;
-    public Action skillDetect;
-    public Func<bool> canSkill;
-
     new void Start()
     {
         base.Start();
@@ -65,7 +61,7 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
         heroInfo.animator.SetBool("isWalk", false);
         while (heroInfo.state == Soldier_State.Siege)
         {
-            if(canAtk != null && !canAtk.Invoke())
+            if(canAtk != null && canAtk.Invoke())
             {
                 yield return StartCoroutine(atkHandler?.Invoke(heroInfo.targetInfo));
             }

@@ -8,6 +8,7 @@ public class a : MonoBehaviour
     public TestHandler testHandler;
 
     IEnumerator testCoroutineA;
+    Coroutine testCoroutine;
 
     [SerializeField]
     List<Coroutine> coroutines = new List<Coroutine>();
@@ -21,12 +22,7 @@ public class a : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            coroutines.Add(StartCoroutine(testAA()));
-        }
-        Debug.Log(coroutines.Count);
-        if(coroutines[0] != null)
-        {
-            Debug.Log("³Î ¾Æ´Ô");
+            StopCoroutine(testCoroutine);
         }
     }
     protected virtual void testA()

@@ -32,6 +32,10 @@ public class a : MonoBehaviour
 
     public virtual IEnumerator testAA()
     {
-        yield return new WaitForSeconds(2.0f);
+        while (true)
+        {
+            Debug.Log("AA");
+            yield return null;
+        }
     }
 }

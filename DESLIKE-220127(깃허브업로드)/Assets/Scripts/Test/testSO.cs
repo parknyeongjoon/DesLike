@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(menuName ="testSO")]
 public class testSO : ScriptableObject
 {
-    public void TestSO(int testInt)
-    {
-        testInt++;
-        Debug.Log(testInt);
-    }
+    [SerializeField]
+    a a;
 }

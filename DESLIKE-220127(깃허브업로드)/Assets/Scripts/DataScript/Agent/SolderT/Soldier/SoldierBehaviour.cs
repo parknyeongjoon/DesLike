@@ -34,10 +34,9 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
     protected override IEnumerator Detect_Behaviour()
     {
         Coroutine detectCoroutine = StartCoroutine(Detect());
-        heroInfo.animator.SetBool("isWalk", true);
+        if (heroInfo.action != Soldier_Action.Move) { StartCoroutine(Move()); }
         while (heroInfo.state == Soldier_State.Detect)
         {
-            Move();
             yield return new WaitForFixedUpdate();
         }
         StopCoroutine(detectCoroutine);
@@ -58,16 +57,11 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
     protected override IEnumerator Siege_Behaviour()
     {
         Coroutine detectCoroutine = StartCoroutine(Detect());
-        heroInfo.animator.SetBool("isWalk", false);
         while (heroInfo.state == Soldier_State.Siege)
         {
             if(canAtk != null && canAtk.Invoke())
             {
                 yield return StartCoroutine(atkHandler?.Invoke(heroInfo.targetInfo));
-            }
-            else
-            {
-                Move();
             }
             yield return new WaitForFixedUpdate();
         }
@@ -77,7 +71,6 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
 
     protected override IEnumerator Battle_Behaviour()
     {
-        heroInfo.animator.SetBool("isWalk", false);
         while (heroInfo.state == Soldier_State.Battle)
         {
             if (canSkill != null && canSkill.Invoke())
@@ -88,13 +81,9 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
             {
                 yield return StartCoroutine(atkHandler?.Invoke(heroInfo.targetInfo));
             }
-            else if(!heroInfo.targetInfo)//skillTargetInfo도 넣어야하나?
-            {
-                heroInfo.state = Soldier_State.Idle;
-            }
             else
             {
-                Move();
+                heroInfo.state = Soldier_State.Idle;
             }
             yield return new WaitForFixedUpdate();
         }

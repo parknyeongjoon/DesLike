@@ -66,4 +66,10 @@ public class SoldierSpriteManager : MonoBehaviour
             }
         }
     }
+
+    public void Dead()
+    {
+        hp_mp_bar.SetActive(false);
+        spriteRenderer.color -= new Color(0, 0, 0, 0.3f);
+    }
 }

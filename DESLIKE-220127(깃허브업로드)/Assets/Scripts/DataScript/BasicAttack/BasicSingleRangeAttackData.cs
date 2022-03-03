@@ -6,7 +6,6 @@ using UnityEngine;
 public class BasicSingleRangeAttackData : BasicAttackData
 {
     public GameObject arrow;
-    public int ammo;
     public float arrowSpeed;
 
     public void Effect(MonoBehaviour caller, CastleInfo targetInfo, Transform startTrans)
@@ -14,7 +13,7 @@ public class BasicSingleRangeAttackData : BasicAttackData
         caller.StartCoroutine(ShootArrow(targetInfo, startTrans));
     }
 
-    IEnumerator ShootArrow(CastleInfo targetInfo, Transform startTrans)//화살 쓰게 추가하기, heroInfo.targetInfo말고 저장해놓고 걔인지 체크하기
+    IEnumerator ShootArrow(CastleInfo targetInfo, Transform startTrans)
     {
         float shotTime = 0.0f;
         GameObject createArrow;

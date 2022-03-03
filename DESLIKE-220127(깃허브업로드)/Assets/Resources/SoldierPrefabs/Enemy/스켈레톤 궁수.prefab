@@ -1227,7 +1227,6 @@ GameObject:
   - component: {fileID: 5526397366469184701}
   - component: {fileID: -6878065226668501377}
   - component: {fileID: 6438918860846744813}
-  - component: {fileID: -4346227655336202108}
   - component: {fileID: -3761290515098687047}
   m_Layer: 9
   m_Name: "\uC2A4\uCF08\uB808\uD1A4 \uAD81\uC218"
@@ -1396,8 +1395,37 @@ MonoBehaviour:
   castleData: {fileID: 11400000, guid: db3462a20d8cfa14c8edf08bdfc59714, type: 2}
   cur_Hp: 0
   portDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
-  targetInfo: {fileID: 0}
+  deadEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5526397366469184701}
+        m_TargetAssemblyTypeName: SoldierSpriteManager, Assembly-CSharp
+        m_MethodName: Dead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6438918860846744813}
+        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
+        m_MethodName: StopAllCoroutines
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   target: {fileID: 0}
+  targetInfo: {fileID: 0}
+  skillTarget: {fileID: 0}
+  skillTargetInfo: {fileID: 0}
   cur_Mp: 0
   moveDir: {x: 0, y: 0, z: 0}
   state: 0
@@ -1429,21 +1457,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroInfo: {fileID: -6878065226668501377}
---- !u!114 &-4346227655336202108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5346442293094215222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f26b66f7d1b2384c8d4ec388b7e71f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  basicAttackData: {fileID: 11400000, guid: 7b3e4819f2068d74f9852ad7fe73f5d1, type: 2}
-  atkArea: 0
-  atkLayer: 0
 --- !u!114 &-3761290515098687047
 MonoBehaviour:
   m_ObjectHideFlags: 0

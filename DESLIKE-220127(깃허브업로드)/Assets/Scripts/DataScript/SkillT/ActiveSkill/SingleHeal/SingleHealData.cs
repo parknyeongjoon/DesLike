@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SingleHealData : MonoBehaviour
+public class SingleHealData : ActiveSkillData
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject healEffect;
+    public float heal_Amount;
 
-    // Update is called once per frame
-    void Update()
+    public void Effect(HeroInfo targetInfo)
     {
-        
+        targetInfo.OnHealed(heal_Amount);
     }
 }

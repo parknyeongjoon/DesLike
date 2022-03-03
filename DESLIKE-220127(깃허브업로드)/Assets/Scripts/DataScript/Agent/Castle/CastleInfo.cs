@@ -7,12 +7,12 @@ public class CastleInfo : MonoBehaviour
 {
     public CastleData castleData;
     public float cur_Hp;
-    [SerializeField]
-    protected PortDatas portDatas;
+    public PortDatas portDatas;
 
     public delegate void DeadHandler();
     public DeadHandler beforeDeadHandler;//죽기 전에 발동한 효과들을 넣는 델리게이트
     public DeadHandler afterDeadHandler;//진짜 죽었을 때 나올 효과들을 넣을 델리게이트
+    public UnityEvent deadEvent;
 
     void Start()
     {
@@ -28,6 +28,7 @@ public class CastleInfo : MonoBehaviour
         else
         {
             afterDeadHandler?.Invoke();
+            deadEvent?.Invoke();
         }
     }
 

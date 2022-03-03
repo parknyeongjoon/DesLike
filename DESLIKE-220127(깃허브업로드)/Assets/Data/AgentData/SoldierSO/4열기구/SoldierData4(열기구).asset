@@ -9,26 +9,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b35f46a48d582574691f5e74f6fe5e7d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ec170fb41403794194fcac022439d2a, type: 3}
   m_Name: "SoldierData4(\uC5F4\uAE30\uAD6C)"
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 6c9acb6b28de62c43a251107e93669c0, type: 3}
   code: 4
-  defType: 2
-  hp: 200
-  def: 4
+  hp: 100
+  def: 3
   size: 0.2
-  blood: {fileID: 0}
+  blood: {fileID: 5086979035932333915, guid: 83b2eb89fe46c6a4db5d18712a94a153, type: 3}
   soldier_name: "\uC5F4\uAE30\uAD6C"
-  mp: 50
-  speed: 3.5
+  mp: 0
+  speed: 1
+  mp_Re: 0
+  hp_Re: 0
   tribe: 1
-  basicAttack: {fileID: 5733717636373781249, guid: 473389407e4e55f45a7ed1aa43fb76c1,
-    type: 3}
   extraSkill: []
-  skillList: []
   mutant: {fileID: 0}
   rarity: 2
-  cost: 150
-  remain: 100
-  soldier_Type: 3
+  cost: 200
+  remain: 0
+  unitAmount: 1
+  soldier_Type: 5

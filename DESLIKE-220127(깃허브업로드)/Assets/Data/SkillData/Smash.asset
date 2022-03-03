@@ -19,7 +19,7 @@ MonoBehaviour:
   cooltime: 4
   mp: 10
   range: 2
-  start_Delay: 3
-  end_Delay: 4
+  start_Delay: 0.2
+  end_Delay: 0.3
   atkArea: 256
   atk_Dmg: 20

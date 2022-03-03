@@ -7,6 +7,7 @@ public class HealerBehaviour : SoldierBasic
     new void Start()
     {
         base.Start();
+        heroInfo.healWeight = -100;
     }
 
     protected override IEnumerator Idle_Behaviour()
@@ -22,13 +23,9 @@ public class HealerBehaviour : SoldierBasic
     protected override IEnumerator Detect_Behaviour()
     {
         Coroutine detectCoroutine = StartCoroutine(Detect());
-        heroInfo.animator.SetBool("isWalk", true);
+        if (heroInfo.action != Soldier_Action.Move) { StartCoroutine(Move(heroInfo.skillTarget.transform.position - new Vector3(2, 0, 0))); }
         while (heroInfo.state == Soldier_State.Detect)
         {
-            if(heroInfo.skillTarget != null)
-            {
-                Move(heroInfo.skillTarget.transform.position - new Vector3(2,0,0));
-            }
             yield return new WaitForFixedUpdate();
         }
         StopCoroutine(detectCoroutine);
@@ -40,13 +37,35 @@ public class HealerBehaviour : SoldierBasic
     {
         while (true)
         {
-
+            skillDetect?.Invoke();
+            yield return new WaitForSeconds(0.1f);
         }
     }
 
     protected override IEnumerator Battle_Behaviour()
     {
-        yield return new WaitForFixedUpdate();
+        while(heroInfo.state == Soldier_State.Battle)
+        {
+            if (canSkill != null && canSkill.Invoke())
+            {
+                yield return StartCoroutine(skillHandler?.Invoke(heroInfo.skillTargetInfo as HeroInfo));
+            }
+            else
+            {
+                heroInfo.state = Soldier_State.Idle;
+            }
+            yield return new WaitForFixedUpdate();
+        }
+        if(heroInfo.state == Soldier_State.Idle) { StartCoroutine(Idle_Behaviour()); }
+        else if(heroInfo.state == Soldier_State.Charge) { StartCoroutine(Charge_Behaviour()); }
+    }
+
+    protected override IEnumerator Charge_Behaviour()
+    {
+        while(heroInfo.state == Soldier_State.Charge)
+        {
+            yield return new WaitForFixedUpdate();
+        }
     }
 
     protected override IEnumerator Stun_Behaviour()
@@ -58,52 +77,7 @@ public class HealerBehaviour : SoldierBasic
         }
         StartCoroutine(Idle_Behaviour());
     }
-    /*
-    GameObject healEffect;
-    [SerializeField]
-    PortDatas allyPortDatas;
 
-    new void Start()
-    {
-        base.Start();
-        soldier = (SoldierData)heroInfo.castleData;
-        healEffect = ((HealerData)soldier).HealEffect;
-        heroInfo.healWeight = -1;
-        Set_Idle();
-    }
-
-    new void FixedUpdate()
-    {
-        base.FixedUpdate();
-    }
-
-    protected override void Detect_Behaviour()
-    {
-        Move();
-        if (heroInfo.target == null)
-        {
-            Set_Idle();
-        }
-        else
-        {
-            targetPos = heroInfo.target.transform.position;
-        }
-        if (heroInfo.TargetCheck(atkRange))
-        {
-            //StartCoroutine(Heal());
-        }
-    }
-
-    /*protected override IEnumerator Detect()//최적화 필요
-    {
-        while (heroInfo.state != Soldier_State.Heal)
-        {
-            heroInfo.targetInfo = allyPortDatas.spawnSoldierList[0];
-            heroInfo.target = heroInfo.targetInfo.transform.gameObject;
-            heroInfo.state = Soldier_State.Detect;
-            yield return new WaitForSeconds(0.1f);
-        }
-    }*/
     /*
     IEnumerator Heal()//탈출 타이밍 만들기 마나 0이면 날뜀
     {

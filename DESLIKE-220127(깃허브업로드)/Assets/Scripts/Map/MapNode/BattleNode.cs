@@ -29,8 +29,7 @@ public class BattleNode : MapNode
 
     public void Play_BattleNode()
     {
-        if (isPlayable)
-        {
+        //  if (isPlayable) {   => 맵 구성 바뀌면서 필요없어짐
             List<Option> option = enemyPortOption.soldierOption;
             for (int i = 0; i < 50; i++)
             {
@@ -52,6 +51,6 @@ public class BattleNode : MapNode
             }
             map.curMapNode = this;
             SceneManager.LoadScene("Battle Field");
-        }
+        //  }
     }
 }

@@ -18,12 +18,11 @@ public class EventNode : MapNode
 
     public void Play_EventNode()
     {
-        if (isPlayable)
-        {
+        // if (isPlayable) {
             map.curMapNode = this;
             map.playerX = x; map.playerY = y;
             map.CheckPlayableNode();
             SceneManager.LoadScene("Event");
-        }
+        //}
     }
 }

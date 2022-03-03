@@ -2850,7 +2850,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 960591376085462521, guid: 3e18a405e47e1db478ef2d0dd1a2d404, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3e18a405e47e1db478ef2d0dd1a2d404, type: 3}
 --- !u!224 &457604859 stripped
 RectTransform:
@@ -4795,7 +4796,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 960591376085462521, guid: 3e18a405e47e1db478ef2d0dd1a2d404, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3e18a405e47e1db478ef2d0dd1a2d404, type: 3}
 --- !u!224 &710034713 stripped
 RectTransform:
@@ -8739,7 +8741,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 960591376085462521, guid: 3e18a405e47e1db478ef2d0dd1a2d404, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3e18a405e47e1db478ef2d0dd1a2d404, type: 3}
 --- !u!224 &1247408832 stripped
 RectTransform:
@@ -12874,7 +12877,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 960591376085462521, guid: 3e18a405e47e1db478ef2d0dd1a2d404, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3e18a405e47e1db478ef2d0dd1a2d404, type: 3}
 --- !u!224 &1973290750 stripped
 RectTransform:
@@ -13943,7 +13947,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 960591376085462521, guid: 3e18a405e47e1db478ef2d0dd1a2d404, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3e18a405e47e1db478ef2d0dd1a2d404, type: 3}
 --- !u!224 &2089891582 stripped
 RectTransform:

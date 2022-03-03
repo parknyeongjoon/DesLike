@@ -10,6 +10,8 @@ public class HeroSaveData
     public float cur_Mp;
     public bool resurrection;
     public int curDay;  // 추가(by 시후), 맵 날짜 체크용
+    public int EvntStream;  // 추가(by 시후), 이벤트 3번 연속 시 전투 생성
+    public int EvntCount;   // '전투 - 이벤트 - 전투'에서 이벤트 횟수
 }
 
 [System.Serializable]

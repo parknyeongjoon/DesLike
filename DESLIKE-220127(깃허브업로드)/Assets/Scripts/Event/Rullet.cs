@@ -101,4 +101,10 @@ public class Rullet : MonoBehaviour
                 break;
         }
     }
+
+    public void EndEvent()
+    {
+        rollBtn.interactable = false;
+        endBtn.gameObject.SetActive(true);
+    }
 }

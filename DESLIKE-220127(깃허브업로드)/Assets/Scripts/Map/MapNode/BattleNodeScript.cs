@@ -25,8 +25,8 @@ public class BattleNodeScript : NodeScript
     {
         if (battleNode.isPlayable)
         {
-            GameObject createPrefab;
             List<Option> option = battleNode.enemyPortOption.soldierOption;
+            GameObject createPrefab;
             GameManager.DeleteChilds(BattleNodePanel);
             BattleNodePanel.SetActive(true);
             for (int i = 0; i < option.Count; i++)

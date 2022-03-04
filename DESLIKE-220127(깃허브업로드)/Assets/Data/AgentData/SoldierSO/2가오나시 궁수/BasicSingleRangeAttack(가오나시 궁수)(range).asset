@@ -12,12 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74101a4c9c77dac408b94021ad490e5b, type: 3}
   m_Name: "BasicSingleRangeAttack(\uAC00\uC624\uB098\uC2DC \uAD81\uC218)(range)"
   m_EditorClassIdentifier: 
-  startDelay: 0.5
-  endDelay: 0.5
+  start_Delay: 0.2
+  end_Delay: 0.1
   range: 7
-  atkDmg: 10
-  atk_Type: 4
+  atk_Dmg: 5
   atkArea: 2304
   arrow: {fileID: 8406533173498701255, guid: 138af845ffec43e41b5b1d2c14d4280d, type: 3}
-  ammo: 10
   arrowSpeed: 0.5

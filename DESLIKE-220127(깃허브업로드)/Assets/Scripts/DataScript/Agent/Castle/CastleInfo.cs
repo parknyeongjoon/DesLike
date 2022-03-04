@@ -7,12 +7,12 @@ public class CastleInfo : MonoBehaviour
 {
     public CastleData castleData;
     public float cur_Hp;
-    [SerializeField]
-    protected PortDatas portDatas;
+    public PortDatas portDatas;
 
     public delegate void DeadHandler();
     public DeadHandler beforeDeadHandler;//죽기 전에 발동한 효과들을 넣는 델리게이트
     public DeadHandler afterDeadHandler;//진짜 죽었을 때 나올 효과들을 넣을 델리게이트
+    public UnityEvent deadEvent;
 
     void Start()
     {
@@ -28,13 +28,13 @@ public class CastleInfo : MonoBehaviour
         else
         {
             afterDeadHandler?.Invoke();
+            deadEvent?.Invoke();
         }
     }
 
-    public void OnDamaged(float damage)//이벤트로 분리하기
+    public virtual void OnDamaged(float damage)
     {
         cur_Hp -= (damage - castleData.def);
-        //힐 가중치 계산
         if (castleData.blood != null)
         {
             StartCoroutine(Bleeding());
@@ -45,7 +45,7 @@ public class CastleInfo : MonoBehaviour
         }
     }
 
-    public void OnHealed(float heal)//이벤트로 분리하기
+    public virtual void OnHealed(float heal)
     {
         if(cur_Hp + heal >= castleData.hp)
         {
@@ -55,7 +55,6 @@ public class CastleInfo : MonoBehaviour
         {
             cur_Hp += heal;
         }
-        //힐 가중치 계산
     }
     //피격 유혈 효과
     IEnumerator Bleeding()

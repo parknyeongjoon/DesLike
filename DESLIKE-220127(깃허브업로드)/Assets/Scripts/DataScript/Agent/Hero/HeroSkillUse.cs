@@ -162,22 +162,18 @@ public class HeroSkillUse: MonoBehaviour
         Debug.Log("MoveToSkill");
         if (targetInfo)//타켓이 있다면 타켓쪽으로 없다면 논타켓 위치로
         {
-            Debug.Log("0");
             destination = targetInfo.transform.position;
             while(targetInfo != null && targetInfo.gameObject.layer != 7 && Vector3.Distance(transform.position, targetInfo.transform.position) > range - targetInfo.castleData.size)
             {
-                Debug.Log("1");
                 transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * (((HeroData)heroInfo.castleData).speed + heroInfo.buff_Stat.speed));
                 yield return new WaitForFixedUpdate();
             }
         }
         else
         {
-            Debug.Log("2");
             destination = mouseManager.skillPos;
             while (Vector3.Distance(transform.position, destination) > range)
             {
-                Debug.Log("3");
                 transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * (((HeroData)heroInfo.castleData).speed + heroInfo.buff_Stat.speed));
                 yield return new WaitForFixedUpdate();
             }

@@ -6,14 +6,9 @@ using System;
 
 public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
 {
-    public Func<HeroInfo, IEnumerator> skillHandler;
-    public Action skillDetect;
-    public Func<bool> canSkill;
-
     new void Start()
     {
         base.Start();
-        heroInfo.healWeight = 1;
     }
 
     void FixedUpdate()
@@ -38,10 +33,9 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
     protected override IEnumerator Detect_Behaviour()
     {
         Coroutine detectCoroutine = StartCoroutine(Detect());
-        heroInfo.animator.SetBool("isWalk", true);
+        if (heroInfo.action != Soldier_Action.Move) { StartCoroutine(Move()); }
         while (heroInfo.state == Soldier_State.Detect)
         {
-            Move();
             yield return new WaitForFixedUpdate();
         }
         StopCoroutine(detectCoroutine);
@@ -62,16 +56,11 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
     protected override IEnumerator Siege_Behaviour()
     {
         Coroutine detectCoroutine = StartCoroutine(Detect());
-        heroInfo.animator.SetBool("isWalk", false);
         while (heroInfo.state == Soldier_State.Siege)
         {
-            if(canAtk != null && !canAtk.Invoke())
+            if(canAtk != null && canAtk.Invoke())
             {
                 yield return StartCoroutine(atkHandler?.Invoke(heroInfo.targetInfo));
-            }
-            else
-            {
-                Move();
             }
             yield return new WaitForFixedUpdate();
         }
@@ -81,7 +70,6 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
 
     protected override IEnumerator Battle_Behaviour()
     {
-        heroInfo.animator.SetBool("isWalk", false);
         while (heroInfo.state == Soldier_State.Battle)
         {
             if (canSkill != null && canSkill.Invoke())
@@ -92,24 +80,10 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
             {
                 yield return StartCoroutine(atkHandler?.Invoke(heroInfo.targetInfo));
             }
-            else if(!heroInfo.targetInfo)//skillTargetInfo도 넣어야하나?
+            else
             {
                 heroInfo.state = Soldier_State.Idle;
             }
-            else
-            {
-                Move();
-            }
-            yield return new WaitForFixedUpdate();
-        }
-        StartCoroutine(Idle_Behaviour());
-    }
-
-    protected override IEnumerator Stun_Behaviour()
-    {
-        while (heroInfo.state == Soldier_State.Stun)
-        {
-            Debug.Log("스턴");
             yield return new WaitForFixedUpdate();
         }
         StartCoroutine(Idle_Behaviour());

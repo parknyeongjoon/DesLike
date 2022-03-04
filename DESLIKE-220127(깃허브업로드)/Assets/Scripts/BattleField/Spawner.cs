@@ -43,6 +43,7 @@ public class Spawner : MonoBehaviour
     {
         portDatas.round = 0;
         portDatas.cur_producetime = portDatas.produceTime;
+        portDatas.spawnSoldierList.Clear();
         SetUI.Invoke();
     }
 
@@ -51,11 +52,7 @@ public class Spawner : MonoBehaviour
         GameManager.Instance.gamePause = false;
         Time.timeScale = 1;
         StartCoroutine(RoundControll());
-    }
-
-    void FixedUpdate()
-    {
-        //portDatas.spawnSoldierList.Sort((s1,s2) => ((HeroInfo)s2).healWeight.CompareTo(((HeroInfo)s1).healWeight));
+        StartCoroutine(SortSoldierList());
     }
 
     IEnumerator RoundControll()
@@ -121,6 +118,15 @@ public class Spawner : MonoBehaviour
         while (true)
         {
             portDatas.cur_producetime -= Time.deltaTime;
+            yield return null;
+        }
+    }
+
+    IEnumerator SortSoldierList()
+    {
+        while (true)
+        {
+            portDatas.spawnSoldierList.Sort((s1, s2) => ((HeroInfo)s2).healWeight.CompareTo(((HeroInfo)s1).healWeight));
             yield return null;
         }
     }

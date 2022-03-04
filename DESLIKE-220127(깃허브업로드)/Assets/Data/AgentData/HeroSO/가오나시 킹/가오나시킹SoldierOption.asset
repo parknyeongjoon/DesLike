@@ -19,3 +19,6 @@ MonoBehaviour:
   - soldierData: {fileID: 11400000, guid: 505df875aa52d6c429dc1729c124a209, type: 2}
     portNum: 0100000003000000
     mutant: {fileID: 0}
+  - soldierData: {fileID: 11400000, guid: af820736225c7c64bacdd0238f6182ab, type: 2}
+    portNum: 07000000
+    mutant: {fileID: 0}

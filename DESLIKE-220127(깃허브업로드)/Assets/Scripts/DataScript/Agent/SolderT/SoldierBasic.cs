@@ -11,6 +11,13 @@ public class SoldierBasic : MonoBehaviour
     public Action atkDetect;
     public Func<bool> canAtk;
 
+    public Func<HeroInfo, IEnumerator> skillHandler;
+    public Action skillDetect;
+    public Func<bool> isSkillActive;
+    public Func<bool> canSkill;
+
+    protected Coroutine moveCoroutine;
+
     protected void Start()
     {
         heroInfo.moveDir = new Vector3(0, 0, 0);
@@ -37,9 +44,20 @@ public class SoldierBasic : MonoBehaviour
         yield return new WaitForFixedUpdate();
     }
 
-    protected virtual IEnumerator Stun_Behaviour()
+    protected virtual IEnumerator Charge_Behaviour()
     {
         yield return new WaitForFixedUpdate();
+    }
+
+    protected virtual IEnumerator Stun_Behaviour()
+    {
+        while (heroInfo.state == Soldier_State.Stun)
+        {
+            Debug.Log("스턴");
+            yield return new WaitForFixedUpdate();
+        }
+        heroInfo.state = Soldier_State.Idle;
+        StartCoroutine(Idle_Behaviour());
     }
 
     protected virtual void Dead_Behaviour()
@@ -47,7 +65,7 @@ public class SoldierBasic : MonoBehaviour
 
     }
 
-    protected void OnMouseEnter()
+    protected void OnMouseEnter()//EnemyResource에만 따로넣기
     {
         if(MouseManager.Instance.mouseState == Mouse_State.Grenade && heroInfo.team == Team.Enemy && !Input.GetKey(KeyCode.LeftAlt) && gameObject.layer != 7)
         {
@@ -55,13 +73,27 @@ public class SoldierBasic : MonoBehaviour
         }
     }
 
-    protected void Move()
+    protected IEnumerator Move()
     {
-        transform.Translate(Time.deltaTime * (((HeroData)heroInfo.castleData).speed + heroInfo.buff_Stat.speed) * heroInfo.moveDir);
+        heroInfo.animator.SetBool("isWalk", true);
+        heroInfo.action = Soldier_Action.Move;
+        while (heroInfo.action == Soldier_Action.Move)
+        {
+            transform.Translate(Time.deltaTime * (((HeroData)heroInfo.castleData).speed + heroInfo.buff_Stat.speed) * heroInfo.moveDir);
+            yield return new WaitForFixedUpdate();
+        }
+        heroInfo.animator.SetBool("isWalk", false);
     }
 
-    protected void Move(Vector3 destination)
+    protected IEnumerator Move(Vector3 destination)
     {
-        transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * (((HeroData)heroInfo.castleData).speed + heroInfo.buff_Stat.speed));
+        heroInfo.animator.SetBool("isWalk", true);
+        heroInfo.action = Soldier_Action.Move;
+        while (transform.position != destination && heroInfo.action == Soldier_Action.Move)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * (((HeroData)heroInfo.castleData).speed + heroInfo.buff_Stat.speed));
+            yield return new WaitForFixedUpdate();
+        }
+        heroInfo.animator.SetBool("isWalk", false);
     }
 }

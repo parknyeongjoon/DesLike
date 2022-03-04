@@ -10,9 +10,19 @@ public class ActiveSkill : Skill
     protected override void Start()
     {
         base.Start();
+        soldierBasic.isSkillActive = IsActive;
         atkArea = (int)heroInfo.team * (int)((ActiveSkillData)skillData).atkArea;
         atkLayer = (int)((ActiveSkillData)skillData).atkArea * 7;
         cur_cooltime = 0;
+    }
+
+    public bool IsActive()
+    {
+        if (cur_cooltime <= 0 && heroInfo.cur_Mp >= ((ActiveSkillData)skillData).mp)
+        {
+            return true;
+        }
+        return false;
     }
 
     public override bool CanSkillCheck()
@@ -22,7 +32,7 @@ public class ActiveSkill : Skill
             heroInfo.state = Soldier_State.Idle;
             return false;
         }
-        if (cur_cooltime <= 0 && heroInfo.cur_Mp >= ((ActiveSkillData)skillData).mp && heroInfo.TargetCheck(heroInfo.skillTarget, ((ActiveSkillData)skillData).range + heroInfo.skillTargetInfo.castleData.size))
+        if (IsActive() && heroInfo.TargetCheck(heroInfo.skillTarget, ((ActiveSkillData)skillData).range + heroInfo.skillTargetInfo.castleData.size))
         {
             return true;
         }

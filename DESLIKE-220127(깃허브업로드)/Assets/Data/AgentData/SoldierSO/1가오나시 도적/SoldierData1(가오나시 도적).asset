@@ -28,6 +28,6 @@ MonoBehaviour:
   mutant: {fileID: 0}
   rarity: 1
   cost: 30
-  remain: 106
+  remain: 0
   unitAmount: 4
   soldier_Type: 1

@@ -1226,7 +1226,7 @@ GameObject:
   - component: {fileID: -5346434434137291554}
   - component: {fileID: 5526397366469184701}
   - component: {fileID: -8501808418590617708}
-  - component: {fileID: 3520839883794518162}
+  - component: {fileID: 3126617058279121828}
   - component: {fileID: 1032298004279883651}
   m_Layer: 12
   m_Name: "\uC5F4\uAE30\uAD6C"
@@ -1395,8 +1395,37 @@ MonoBehaviour:
   castleData: {fileID: 11400000, guid: b90777931e55fd244beef9bc36f7e580, type: 2}
   cur_Hp: 0
   portDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
-  targetInfo: {fileID: 0}
+  deadEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5526397366469184701}
+        m_TargetAssemblyTypeName: SoldierSpriteManager, Assembly-CSharp
+        m_MethodName: Dead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3126617058279121828}
+        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
+        m_MethodName: StopAllCoroutines
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   target: {fileID: 0}
+  targetInfo: {fileID: 0}
+  skillTarget: {fileID: 0}
+  skillTargetInfo: {fileID: 0}
   cur_Mp: 0
   moveDir: {x: 0, y: 0, z: 0}
   state: 0
@@ -1415,7 +1444,7 @@ MonoBehaviour:
     def: 0
   animator: {fileID: -5346434434137291554}
   soldierCode: 4
---- !u!114 &3520839883794518162
+--- !u!114 &3126617058279121828
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1424,7 +1453,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5346442293094215222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 196c5a0352e65e94bb2cf6e339b947b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 03937479573bb0b4f87d9d09c8aa4da3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   heroInfo: {fileID: -8501808418590617708}

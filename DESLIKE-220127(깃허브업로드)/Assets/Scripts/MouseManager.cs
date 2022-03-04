@@ -50,7 +50,7 @@ public class MouseManager : MonoBehaviour
                 hit = CastRay();
                 if (hit != null)
                 {
-                    if (hit.CompareTag("Soldier"))//병사들 스크립트에 OnMouseDown으로 넣기
+                    if (hit.CompareTag("Soldier") && hit.gameObject.layer != 7)//병사들 스크립트에 OnMouseDown으로 넣기
                     {
                         if (mouseFocus != null)
                         {

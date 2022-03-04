@@ -250,11 +250,11 @@ MonoBehaviour:
   soldierDatas:
   - {fileID: 11400000, guid: a29c1d8c1343ac342b7934d4fa64b8d3, type: 2}
   - {fileID: 11400000, guid: 505df875aa52d6c429dc1729c124a209, type: 2}
-  - {fileID: 11400000, guid: d71aa34aaed1ae748b8acaabf4eea2eb, type: 2}
-  - {fileID: 11400000, guid: 4f32157127a9f514eb38cd27b48d6caa, type: 2}
-  - {fileID: 11400000, guid: 1b927f984a0c728469dabc8d567bf574, type: 2}
+  - {fileID: 11400000, guid: 790abeee750e88647a10efc6bb80386d, type: 2}
+  - {fileID: 11400000, guid: af820736225c7c64bacdd0238f6182ab, type: 2}
+  - {fileID: 11400000, guid: ebe56b79ff6403343912e9b69d38602e, type: 2}
+  - {fileID: 11400000, guid: 6e40740d778918e4ba73ef05d5237467, type: 2}
   - {fileID: 11400000, guid: 8f5bd6d443eb5714780da0f9b57c6d86, type: 2}
-  - {fileID: 11400000, guid: 1486c69ac1f049a4bb7247a6b2822266, type: 2}
   - {fileID: 11400000, guid: dc098578b6475514e82ce1e5590261c8, type: 2}
   heroDatas:
   - {fileID: 11400000, guid: 1b52e72375322824688473c0dae745e1, type: 2}

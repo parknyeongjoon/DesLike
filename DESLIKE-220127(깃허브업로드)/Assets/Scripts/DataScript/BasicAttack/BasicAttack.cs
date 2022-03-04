@@ -18,9 +18,9 @@ public class BasicAttack : MonoBehaviour
         atkArea = (int)heroInfo.team * (int)basicAttackData.atkArea;
         atkLayer = (int)basicAttackData.atkArea * 7;
 
-        soldierBasic.atkDetect += Detect;
-        soldierBasic.canAtk += CanAttackCheck;
-        soldierBasic.atkHandler += Attack;
+        soldierBasic.atkDetect = Detect;
+        soldierBasic.canAtk = CanAttackCheck;
+        soldierBasic.atkHandler = Attack;
     }
 
     protected void Detect()

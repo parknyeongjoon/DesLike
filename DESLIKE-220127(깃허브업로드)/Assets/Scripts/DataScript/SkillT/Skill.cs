@@ -6,18 +6,16 @@ using System;
 public class Skill : MonoBehaviour
 {
     protected HeroInfo heroInfo;
+    protected SoldierBasic soldierBasic;
     public SkillData skillData;
 
     protected virtual void Start()
     {
         heroInfo = GetComponent<HeroInfo>();
-        if (heroInfo as SoldierInfo)//병사라면
-        {
-            SoldierBehaviour soldierBehaviour = GetComponent<SoldierBehaviour>();
-            soldierBehaviour.skillDetect += Detect;
-            soldierBehaviour.canSkill += CanSkillCheck;
-            soldierBehaviour.skillHandler += UseSkill;
-        }
+        soldierBasic = GetComponent<SoldierBasic>();
+        soldierBasic.skillDetect = Detect;
+        soldierBasic.canSkill = CanSkillCheck;
+        soldierBasic.skillHandler = UseSkill;
     }
 
     public virtual bool CanSkillCheck()

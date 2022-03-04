@@ -1227,7 +1227,7 @@ GameObject:
   - component: {fileID: 5526397366469184701}
   - component: {fileID: -6878065226668501377}
   - component: {fileID: 56348522758608086}
-  - component: {fileID: 951348222894323368}
+  - component: {fileID: 5468391893114392635}
   m_Layer: 8
   m_Name: "\uAC00\uC624\uB098\uC2DC \uD790\uB7EC"
   m_TagString: Soldier
@@ -1396,8 +1396,37 @@ MonoBehaviour:
   castleData: {fileID: 11400000, guid: 4f32157127a9f514eb38cd27b48d6caa, type: 2}
   cur_Hp: 0
   portDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
-  targetInfo: {fileID: 0}
+  deadEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5526397366469184701}
+        m_TargetAssemblyTypeName: SoldierSpriteManager, Assembly-CSharp
+        m_MethodName: Dead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 56348522758608086}
+        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
+        m_MethodName: StopAllCoroutines
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   target: {fileID: 0}
+  targetInfo: {fileID: 0}
+  skillTarget: {fileID: 0}
+  skillTargetInfo: {fileID: 0}
   cur_Mp: 0
   moveDir: {x: 0, y: 0, z: 0}
   state: 0
@@ -1429,7 +1458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroInfo: {fileID: -6878065226668501377}
---- !u!114 &951348222894323368
+--- !u!114 &5468391893114392635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1438,10 +1467,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5346442293094215222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f26b66f7d1b2384c8d4ec388b7e71f5, type: 3}
+  m_Script: {fileID: 11500000, guid: eb2cac30e7aa0704ebf6c459a8b7ffea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicAttackData: {fileID: 0}
+  skillData: {fileID: 11400000, guid: 3506caf890a940141adc17abe26b9219, type: 2}
+  cur_cooltime: 0
   atkArea: 0
   atkLayer: 0
 --- !u!1 &5488699387805153504

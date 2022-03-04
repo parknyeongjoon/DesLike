@@ -2,17 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SingleHealData : MonoBehaviour
+[CreateAssetMenu(fileName = "SingleHealData",menuName ="ScriptableObject/SkillT/SingleHealData")]
+public class SingleHealData : ActiveSkillData
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject healEffect;
+    public float heal_Amount;
+
+    public void Effect(MonoBehaviour caller, HeroInfo targetInfo)
     {
-        
+        targetInfo.OnHealed(heal_Amount);
+        caller.StartCoroutine(Healing(targetInfo));
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator Healing(HeroInfo targetInfo)
     {
-        
+        GameObject createBlood;
+        createBlood = Instantiate(healEffect, targetInfo.transform);
+        yield return new WaitForSeconds(0.4f);
+        Destroy(createBlood);
     }
 }

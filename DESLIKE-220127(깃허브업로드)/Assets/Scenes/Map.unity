@@ -1865,6 +1865,7 @@ MonoBehaviour:
   EventNode3_1: {fileID: 562278210}
   EventNode3_2: {fileID: 1543687818}
   EventNode3_3: {fileID: 1118592119}
+  map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
 --- !u!224 &304971557 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1513785455926707531, guid: 49b329142d69b1f42ad20d49cac98a40,

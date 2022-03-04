@@ -31,7 +31,7 @@ public class Thief : MonoBehaviour
             goodsCollection.food = 0;
         }
         //µ∑ ¿“¥¬ ¿Ã∆Â∆Æ
-        Debug.Log("1");
+        Debug.Log("Thief 1");
     }
 
     public void ThiefOption2()//«« ±Ô¿Ã±‚
@@ -39,7 +39,7 @@ public class Thief : MonoBehaviour
         EndEvent();
         GameObject.Find("Hero").GetComponent<HeroInfo>().OnDamaged(15 + level * 0.5f);
         // «« ±Ô¿Ã¥¬ ¿Ã∆Â∆Æ
-        Debug.Log("2");
+        Debug.Log("Thief 2");
     }
 
     public void ThiefOption3()//»Æ∑¸∑Œ «««œ±‚ ∏¯ «««“Ω√ 1 + 2
@@ -55,7 +55,7 @@ public class Thief : MonoBehaviour
             ThiefOption1();
             ThiefOption2();
         }
-        Debug.Log("3");
+        Debug.Log("Thief 3");
     }
 
     void EndEvent()

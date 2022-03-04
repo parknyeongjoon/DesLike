@@ -7,13 +7,13 @@ public class MapCreate : MonoBehaviour
     Map map;
     [SerializeField]
     NodeScript[] nodeScripts;
-
+/*
     void Awake()
     {
         map = SaveManager.Instance.gameData.map;
 
         CreateMap();
-        map.CheckPlayableNode();
+        // map.CheckPlayableNode();
     }
 
     public void CreateMap()
@@ -64,4 +64,5 @@ public class MapCreate : MonoBehaviour
             map.mapNodesX[i - 1].mapNodesY[line].isNode = true;
         }
     }
+*/
 }

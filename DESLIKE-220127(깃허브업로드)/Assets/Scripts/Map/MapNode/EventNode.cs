@@ -10,7 +10,7 @@ public class EventNode : MapNode
     string[] eventNames;
     public string eventName;
 
-    public void SetEvent()
+    public void  SetEvent()
     {
         int temp = Random.Range(0, eventNames.Length);
         eventName = eventNames[temp];
@@ -20,8 +20,8 @@ public class EventNode : MapNode
     {
         // if (isPlayable) {
             map.curMapNode = this;
-            map.playerX = x; map.playerY = y;
-            map.CheckPlayableNode();
+            // map.playerX = x; map.playerY = y;
+            // map.CheckPlayableNode();
             SceneManager.LoadScene("Event");
         //}
     }

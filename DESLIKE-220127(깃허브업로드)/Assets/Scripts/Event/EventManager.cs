@@ -24,6 +24,13 @@ public class EventManager : MonoBehaviour
 
     void EventActive()
     {
+        Thief.SetActive(false);
+        Training.SetActive(false);
+        Merchant.SetActive(false);
+        Rullet.SetActive(false);
+        CampFire.SetActive(false);
+        Infection.SetActive(false);
+        
         switch (EvntList)
         {
             case 0:
@@ -46,40 +53,5 @@ public class EventManager : MonoBehaviour
                 break;
             default: break;
         }
-    }
-
-    void EventInactive()
-    {
-        Debug.Log("꺼지는 거 실행");
-        switch (EvntList)
-        {
-            case 0:
-                Thief.SetActive(false);
-                break;
-            case 1:
-                Training.SetActive(false);
-                break;
-            case 2:
-                Merchant.SetActive(false);
-                break;
-            case 3:
-                Rullet.SetActive(false);
-                break;
-            case 4:
-                CampFire.SetActive(false);
-                break;
-            case 5:
-                Infection.SetActive(false);
-                break;
-            default: break;
-        }
-        Debug.Log("꺼지는 거 실행 완료");
-
-    }
-
-    public void EndEvent()
-    {
-        EventInactive();
-        map.EndMapNode();
     }
 }

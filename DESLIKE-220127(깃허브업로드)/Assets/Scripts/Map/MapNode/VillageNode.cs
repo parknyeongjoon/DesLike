@@ -8,11 +8,11 @@ public class VillageNode : MapNode
 {
     public void Play_VillageNode()
     {
-        if (isPlayable)
-        {
+        // if (isPlayable)
+        // {
             map.playerX = x; map.playerY = y;
-            map.CheckPlayableNode();
+            // map.CheckPlayableNode();
             SceneManager.LoadScene("Village");
-        }
+        // }
     }
 }

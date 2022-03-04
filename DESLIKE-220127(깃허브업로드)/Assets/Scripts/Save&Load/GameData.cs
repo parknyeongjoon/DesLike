@@ -12,6 +12,7 @@ public class HeroSaveData
     public int curDay;  // 추가(by 시후), 맵 날짜 체크용
     public int EvntStream;  // 추가(by 시후), 이벤트 3번 연속 시 전투 생성
     public int EvntCount;   // '전투 - 이벤트 - 전투'에서 이벤트 횟수
+    public bool midBossCheck = false, villageCheck = false, organCheck = false; // 중간 보스, 마을, 정비 여부
 }
 
 [System.Serializable]

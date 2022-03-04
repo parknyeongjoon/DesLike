@@ -34,8 +34,8 @@ public class Map : ScriptableObject
             }
         }
     }
-
-    public void CheckPlayableNode()
+    /*
+    public void CheckPlayableNode() // 맵 양식 바뀌고 필요없어짐
     {
         for (int i = 0; i < 35; i++)
         {
@@ -59,12 +59,13 @@ public class Map : ScriptableObject
             }
         }
     }
+    */
 
-    public void EndMapNode()//각 노드에서 수행?
+    public void EndMapNode()    //각 노드에서 수행?
     {
         playerX = curMapNode.x; playerY = curMapNode.y;
-        CheckPlayableNode();
-        curMapNode.isVisited = true;
+        // CheckPlayableNode();
+        // curMapNode.isVisited = true;
         SceneManager.LoadScene("Map");
     }
 }

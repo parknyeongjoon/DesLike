@@ -13,6 +13,7 @@ public class SoldierBasic : MonoBehaviour
 
     public Func<HeroInfo, IEnumerator> skillHandler;
     public Action skillDetect;
+    public Func<bool> isSkillActive;
     public Func<bool> canSkill;
 
     protected Coroutine moveCoroutine;
@@ -50,7 +51,13 @@ public class SoldierBasic : MonoBehaviour
 
     protected virtual IEnumerator Stun_Behaviour()
     {
-        yield return new WaitForFixedUpdate();
+        while (heroInfo.state == Soldier_State.Stun)
+        {
+            Debug.Log("스턴");
+            yield return new WaitForFixedUpdate();
+        }
+        heroInfo.state = Soldier_State.Idle;
+        StartCoroutine(Idle_Behaviour());
     }
 
     protected virtual void Dead_Behaviour()

@@ -14,40 +14,42 @@ public class SingleHeal : ActiveSkill
             cur_cooltime = ((ActiveSkillData)skillData).cooltime;
             StartCoroutine(SkillCooltime());
             heroInfo.animator.SetTrigger("isAtk");
-            ((SingleHealData)skillData).Effect(targetInfo);
+            ((SingleHealData)skillData).Effect(this, targetInfo);
             heroInfo.action = Soldier_Action.End_Delay;
-            yield return new WaitForSeconds(((SingleAttackData)skillData).end_Delay);
+            yield return new WaitForSeconds(((ActiveSkillData)skillData).end_Delay);
         }
         heroInfo.action = Soldier_Action.Idle;
-        if(heroInfo.cur_Mp < ((ActiveSkillData)skillData).mp)
-        {
-            heroInfo.state = Soldier_State.Charge;
-        }
     }
 
     public override void Detect()
     {
-        FindNearestSoldier(heroInfo.portDatas.spawnSoldierList);
+        SetHealTarget(heroInfo.portDatas.spawnSoldierList);
     }
 
-    void FindNearestSoldier(List<SoldierInfo> soldierInfos)//힐 가중치 + 거리 등등 다양한 요소 합산해서 구하기
+    void SetHealTarget(List<SoldierInfo> soldierInfos)//힐 가중치 + 거리 등등 다양한 요소 합산해서 구하기
     {
-        float minDistance = 10e9F;
-        CastleInfo targetInfo = null;
+        float targetHealWeight = 0;
+        HeroInfo targetInfo = null;
         for (int i = 0; i < soldierInfos.Count || i < 5; i++)
         {
-            float distance = Vector3.Distance(this.transform.position, soldierInfos[i].transform.position);
-            if (distance < minDistance)
+            if (soldierInfos[i].healWeight > targetHealWeight)
             {
-                minDistance = distance;
+                targetHealWeight = soldierInfos[i].healWeight;
                 targetInfo = soldierInfos[i];
             }
         }
-        heroInfo.skillTargetInfo = targetInfo;
-        heroInfo.skillTarget = targetInfo.gameObject;
-        if(heroInfo.TargetCheck(heroInfo.skillTarget, ((ActiveSkillData)skillData).range + 2))
+        if(targetInfo != null)
         {
-            heroInfo.state = Soldier_State.Battle;
+            heroInfo.skillTargetInfo = targetInfo;
+            heroInfo.skillTarget = targetInfo.gameObject;
+            if (heroInfo.TargetCheck(heroInfo.skillTarget, ((ActiveSkillData)skillData).range + 2))
+            {
+                heroInfo.state = Soldier_State.Battle;
+            }
+        }
+        else
+        {
+            heroInfo.skillTarget = heroInfo.portDatas.spawnSoldierList[0].gameObject;
         }
     }
 }

@@ -20,7 +20,7 @@ MonoBehaviour:
   blood: {fileID: 5086979035932333915, guid: 83b2eb89fe46c6a4db5d18712a94a153, type: 3}
   soldier_name: "\uAC00\uC624\uB098\uC2DC \uD790\uB7EC"
   mp: 100
-  speed: 1
+  speed: 3.5
   mp_Re: 0
   hp_Re: 0
   tribe: 2

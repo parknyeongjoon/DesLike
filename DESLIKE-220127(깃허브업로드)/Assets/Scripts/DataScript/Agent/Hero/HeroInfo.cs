@@ -14,7 +14,7 @@ public class HeroInfo : CastleInfo
     public Soldier_State state;
     public Soldier_Action action;
     public Team team;
-    public float healWeight;
+    public float healWeight = 0;
     public bool resurrection;
     [SerializeField]
     public Buff_Stat buff_Stat;
@@ -91,5 +91,17 @@ public class HeroInfo : CastleInfo
             }
         }
         return target;
+    }
+
+    public override void OnDamaged(float damage)
+    {
+        base.OnDamaged(damage);
+        healWeight += 1;//계산식 만들어서 변경
+    }
+
+    public override void OnHealed(float heal)
+    {
+        base.OnHealed(heal);
+        healWeight -= 1;//계산식 만들어서 변경
     }
 }

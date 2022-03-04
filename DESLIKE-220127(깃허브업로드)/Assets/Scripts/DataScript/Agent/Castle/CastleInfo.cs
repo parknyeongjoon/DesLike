@@ -32,10 +32,9 @@ public class CastleInfo : MonoBehaviour
         }
     }
 
-    public void OnDamaged(float damage)//이벤트로 분리하기
+    public virtual void OnDamaged(float damage)
     {
         cur_Hp -= (damage - castleData.def);
-        //힐 가중치 계산
         if (castleData.blood != null)
         {
             StartCoroutine(Bleeding());
@@ -46,7 +45,7 @@ public class CastleInfo : MonoBehaviour
         }
     }
 
-    public void OnHealed(float heal)//이벤트로 분리하기
+    public virtual void OnHealed(float heal)
     {
         if(cur_Hp + heal >= castleData.hp)
         {
@@ -56,7 +55,6 @@ public class CastleInfo : MonoBehaviour
         {
             cur_Hp += heal;
         }
-        //힐 가중치 계산
     }
     //피격 유혈 효과
     IEnumerator Bleeding()

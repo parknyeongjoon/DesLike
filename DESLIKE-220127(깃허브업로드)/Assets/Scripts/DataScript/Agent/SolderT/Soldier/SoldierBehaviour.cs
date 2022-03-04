@@ -9,7 +9,6 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
     new void Start()
     {
         base.Start();
-        heroInfo.healWeight = 1;
     }
 
     void FixedUpdate()
@@ -85,16 +84,6 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
             {
                 heroInfo.state = Soldier_State.Idle;
             }
-            yield return new WaitForFixedUpdate();
-        }
-        StartCoroutine(Idle_Behaviour());
-    }
-
-    protected override IEnumerator Stun_Behaviour()
-    {
-        while (heroInfo.state == Soldier_State.Stun)
-        {
-            Debug.Log("스턴");
             yield return new WaitForFixedUpdate();
         }
         StartCoroutine(Idle_Behaviour());

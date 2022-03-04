@@ -1227,6 +1227,7 @@ GameObject:
   - component: {fileID: 5526397366469184701}
   - component: {fileID: -6878065226668501377}
   - component: {fileID: 56348522758608086}
+  - component: {fileID: -9140971072031628593}
   m_Layer: 9
   m_Name: "\uAC00\uC624\uB098\uC2DC \uD790\uB7EC"
   m_TagString: Soldier
@@ -1457,6 +1458,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroInfo: {fileID: -6878065226668501377}
+--- !u!114 &-9140971072031628593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346442293094215222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb2cac30e7aa0704ebf6c459a8b7ffea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 3506caf890a940141adc17abe26b9219, type: 2}
+  cur_cooltime: 0
+  atkArea: 0
+  atkLayer: 0
 --- !u!1 &5488699387805153504
 GameObject:
   m_ObjectHideFlags: 0

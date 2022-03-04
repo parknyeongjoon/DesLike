@@ -1228,7 +1228,7 @@ GameObject:
   - component: {fileID: -1456767297910133745}
   - component: {fileID: 8541465875496748737}
   - component: {fileID: 9041123231194856513}
-  - component: {fileID: 8416756983583422182}
+  - component: {fileID: 8649993382331320886}
   m_Layer: 8
   m_Name: "\uAC00\uC624\uB098\uC2DC \uCAC4\uBCD1"
   m_TagString: Soldier
@@ -1474,7 +1474,7 @@ MonoBehaviour:
   basicAttackData: {fileID: 11400000, guid: fb1cf684ebe3c184486697bc246cd0dc, type: 2}
   atkArea: 0
   atkLayer: 0
---- !u!114 &8416756983583422182
+--- !u!114 &8649993382331320886
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1483,10 +1483,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5346442293094215222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4a6b10b3da80494daf85423738fbe65, type: 3}
+  m_Script: {fileID: 11500000, guid: 74c89014b4975f448b068fcb4174dcb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillData: {fileID: 11400000, guid: 011132be2e886994b846d8f747db8166, type: 2}
+  skillData: {fileID: 11400000, guid: 4f19ae2ca981e31469ac4fb8bba04e2f, type: 2}
   cur_cooltime: 0
   atkArea: 0
   atkLayer: 0

@@ -1,13 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class HealerBehaviour : SoldierBasic
 {
     new void Start()
     {
         base.Start();
-        heroInfo.healWeight = -100;
+        heroInfo.healWeight = -1;
+    }
+
+    void FixedUpdate()
+    {
+        if (heroInfo.skillTarget)
+        {
+            heroInfo.moveDir = (heroInfo.skillTarget.transform.position - new Vector3(2, 0, 0) - transform.position).normalized;
+        }
+        else { heroInfo.moveDir = new Vector3(0, 0, 0); }
     }
 
     protected override IEnumerator Idle_Behaviour()
@@ -23,7 +33,7 @@ public class HealerBehaviour : SoldierBasic
     protected override IEnumerator Detect_Behaviour()
     {
         Coroutine detectCoroutine = StartCoroutine(Detect());
-        if (heroInfo.action != Soldier_Action.Move) { StartCoroutine(Move(heroInfo.skillTarget.transform.position - new Vector3(2, 0, 0))); }
+        if (heroInfo.action != Soldier_Action.Move) { StartCoroutine(Move()); }
         while (heroInfo.state == Soldier_State.Detect)
         {
             yield return new WaitForFixedUpdate();
@@ -46,9 +56,17 @@ public class HealerBehaviour : SoldierBasic
     {
         while(heroInfo.state == Soldier_State.Battle)
         {
-            if (canSkill != null && canSkill.Invoke())
+            if (heroInfo.action == Soldier_Action.Charge)
+            {
+                if (isSkillActive.Invoke())
+                {
+                    heroInfo.action = Soldier_Action.Idle;
+                }
+            }
+            else if (canSkill != null && canSkill.Invoke())
             {
                 yield return StartCoroutine(skillHandler?.Invoke(heroInfo.skillTargetInfo as HeroInfo));
+                heroInfo.action = Soldier_Action.Charge;
             }
             else
             {
@@ -57,48 +75,5 @@ public class HealerBehaviour : SoldierBasic
             yield return new WaitForFixedUpdate();
         }
         if(heroInfo.state == Soldier_State.Idle) { StartCoroutine(Idle_Behaviour()); }
-        else if(heroInfo.state == Soldier_State.Charge) { StartCoroutine(Charge_Behaviour()); }
     }
-
-    protected override IEnumerator Charge_Behaviour()
-    {
-        while(heroInfo.state == Soldier_State.Charge)
-        {
-            yield return new WaitForFixedUpdate();
-        }
-    }
-
-    protected override IEnumerator Stun_Behaviour()
-    {
-        while (heroInfo.state == Soldier_State.Stun)
-        {
-            Debug.Log("스턴");
-            yield return new WaitForFixedUpdate();
-        }
-        StartCoroutine(Idle_Behaviour());
-    }
-
-    /*
-    IEnumerator Heal()//탈출 타이밍 만들기 마나 0이면 날뜀
-    {
-        soldierInfo.State = State.Heal;
-        while (TargetCheck(soldier.Range) && soldierInfo.Cur_mp >= ((HealerData)soldier).HealMp)//여기 조건부로 넣으면 될 듯
-        {
-            soldierInfo.Cur_mp -= ((HealerData)soldier).HealMp;
-            soldierInfo.OnHealed(soldierInfo.SoldierData.Atk);
-            StartCoroutine(Healing());
-            yield return new WaitForSeconds(soldierInfo.SoldierData.Atk_Speed);
-        }
-        Set_Idle();
-    }
-    */
-    /*
-    IEnumerator Healing()
-    {
-        GameObject createBlood;
-        createBlood = Instantiate(healEffect, heroInfo.target.transform);
-        yield return new WaitForSeconds(0.8f);
-        Destroy(createBlood);
-    }
-    */
 }

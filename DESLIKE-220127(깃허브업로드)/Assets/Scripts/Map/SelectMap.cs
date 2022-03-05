@@ -23,7 +23,12 @@ public class SelectMap : MonoBehaviour
 
     public Map map;
     
-    SaveManager saveManager = SaveManager.Instance; // SaveManager 전역 사용
+    SaveManager saveManager; // SaveManager 전역 사용
+
+    void Awake()
+    {
+        saveManager = SaveManager.Instance;
+    }
 
     void Start()
     {

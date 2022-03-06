@@ -8,7 +8,7 @@ public class Rullet : MonoBehaviour
     [SerializeField]
     Button rollBtn, endBtn;
     [SerializeField]
-    Text rollBtn_Text;
+    Text rollBtn_Text, EndButton;
     [SerializeField]
     RectTransform rulletTransform;
 
@@ -23,6 +23,7 @@ public class Rullet : MonoBehaviour
         isRoll = false;
         goodsCollection = SaveManager.Instance.gameData.goodsCollection;
         map = SaveManager.Instance.gameData.map;
+        EndButton.text = "∏ ¿∏∑Œ\n(√— 1¿œ º“∏)";
         Debug.Log("Rullet");
     }
 
@@ -45,7 +46,10 @@ public class Rullet : MonoBehaviour
         float rotateAmount = 0;
         float rotateSpeed = 700;
 
-        while(isRoll)
+        SaveManager saveManager = SaveManager.Instance;
+        saveManager.gameData.map.curDay += 1;
+
+        while (isRoll)
         {
             float rotateAngle = rotateSpeed * Time.deltaTime;
             rotateAmount += rotateAngle;
@@ -61,13 +65,15 @@ public class Rullet : MonoBehaviour
             yield return null;
         }
         GiveReward(rotateAmount);
-        endBtn.gameObject.SetActive(true);
+        // endBtn.gameObject.SetActive(true);
+        EndButton.text = "∏ ¿∏∑Œ";
     }
 
     void GiveReward(float rotateAmount)
     {
         rotateAmount = rotateAmount % 360;
         rotateAmount = rotateAmount / (360 / eventCount);
+        
         switch ((int)rotateAmount)
         {
             case 0:
@@ -105,6 +111,9 @@ public class Rullet : MonoBehaviour
     public void EndEvent()
     {
         rollBtn.interactable = false;
-        endBtn.gameObject.SetActive(true);
+        // endBtn.gameObject.SetActive(true);
+        SaveManager saveManager = SaveManager.Instance;
+        saveManager.gameData.map.curDay += 1;
+
     }
 }

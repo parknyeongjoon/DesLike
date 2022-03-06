@@ -46,7 +46,7 @@ public class MainTitle : MonoBehaviour
         saveManager.gameData.allyPortDatas = allyPortDatas;
         startHandler?.Invoke();
         hero.SetActive(true);
-        SceneManager.LoadScene("Map");
+        SceneManager.LoadScene("StageSelect");
     }
 
     public void Continue()

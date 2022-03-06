@@ -8,4 +8,10 @@ public class Merchant : MonoBehaviour
     {
         Debug.Log("Merchant");
     }
+
+    public void EndButton()
+    {
+        SaveManager saveManager = SaveManager.Instance;
+        saveManager.gameData.map.curDay += 2;
+    }
 }

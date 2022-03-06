@@ -20,6 +20,10 @@ public class Map : ScriptableObject
     public int playerX= -1, playerY;
     public int level;
 
+    public int curStage = 0;
+    public int curDay;  // 추가(by 시후), 맵 날짜 체크용
+    public bool midBossCheck = false, villageCheck = false, organCheck = false; // 중간 보스, 마을, 정비 여부
+    
     public void MapClear()
     {
         playerX = -1;

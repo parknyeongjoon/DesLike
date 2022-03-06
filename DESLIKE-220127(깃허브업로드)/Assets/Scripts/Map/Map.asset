@@ -55,11 +55,18 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3aa2d7aa68e1530478218cbfeb7eb106, type: 2}
     - {fileID: 11400000, guid: ba2101d8a5e73e94bba296a457a6da1c, type: 2}
     - {fileID: 11400000, guid: 7f4d54cc7bfdf2543bf4b26049b62dd7, type: 2}
-  curMapNode: {fileID: 11400000, guid: 70e3128dbecde584491713c2aeb3f1ba, type: 2}
-  soldierRewardList: {fileID: 11400000, guid: 20e0ee6c797b969498324d0564459d10, type: 2}
+  curMapNode: {fileID: 11400000, guid: d8ef4df345a17bb4ea289317dba6b0b4, type: 2}
+  soldierRewardList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   relicRewardList:
   - {fileID: 4835315866048107822, guid: bdc55f89b7fc82046a549df921abb5dc, type: 3}
-  isMap: 1
+  isMap: 0
   playerX: 0
-  playerY: 1
-  level: 1
+  playerY: 0
+  level: 2
+  curDay: 0
+  midBossCheck: 0
+  villageCheck: 0
+  organCheck: 0

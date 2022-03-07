@@ -4,8 +4,9 @@ using UnityEngine.UI;
 public class SelectMap : MonoBehaviour
 {
     public GameObject[] Track = new GameObject[3];
-    [SerializeField] Text HPText, CurrentDayText;
+    [SerializeField] Text HPText, CurrentDayText, MoneyText;
     [SerializeField] Text[] SelText = new Text[6]; // 0 : 1_1 / 1,2 : 2_1, 2 / 3, 4, 5 = 3_1, 2, 3 
+    [SerializeField] Text[] InfoText = new Text[6]; // 0 : 1_1 / 1,2 : 2_1, 2 / 3, 4, 5 = 3_1, 2, 3 
 
     GameObject hero;
     HeroInfo heroInfo;
@@ -19,13 +20,19 @@ public class SelectMap : MonoBehaviour
     [SerializeField] GameObject[] BattleNode = new GameObject[5]; // 0, 1 : 2_1, 2 / 2, 3, 4 = 3_1, 2, 3 
     [SerializeField] GameObject[] EvntNode = new GameObject[5];// 0, 1 : 2_1, 2 / 2, 3, 4 = 3_1, 2, 3 
     [SerializeField] GameObject[] ExtraNode = new GameObject[4]; // 0 : 중간 보스, 1 : 마을, 2 : 정비, 3 : 최종 보스
-    
+    [SerializeField] GameObject[] Info = new GameObject[6]; // 0 : 1_1 / 1, 2 : 2_1, 2 / 3, 4, 5 : 3_1, 2, 3
+
+
     public Map map;
-    
-    private object BattleNode2_2;
+    SaveManager saveManager;
+
+    [SerializeField]
+    PortDatas portDatas;
+    GoodsCollection goodsCollection;
 
     void Start()
     {
+        saveManager = SaveManager.Instance;
         ObjectInactive();   // 맵 초기화
         FindData(); // 데이터 찾기
         CommonSetting(); // 일반 세팅
@@ -58,11 +65,11 @@ public class SelectMap : MonoBehaviour
 
     void FindData() // 외부 데이터 가져오기
     {
-        SaveManager saveManager = SaveManager.Instance; // SaveManager 전역 사용
         curDay = saveManager.gameData.map.curDay;
         midBossCheck = saveManager.gameData.map.midBossCheck;
         villageCheck = saveManager.gameData.map.villageCheck;
         organCheck = saveManager.gameData.map.organCheck;
+        goodsCollection = saveManager.gameData.goodsCollection;
     }
 
     void CommonSetting()    // 공통 세팅
@@ -75,6 +82,7 @@ public class SelectMap : MonoBehaviour
         }
         NextEventChoice(); // 다음 내용 조정
         CurrentDayText.text = curDay + " / 30";
+        MoneyText.text = "- 식량 : " + goodsCollection.food + "\n- 골드 : " + goodsCollection.gold;
     }
 
     void ObjectInactive()   // 맵 초기화
@@ -93,8 +101,6 @@ public class SelectMap : MonoBehaviour
         // 기본 랜덤 설정
         for (int i = 0; i < 3; i++)
             selEvnt[i] = Random.Range(0, 2);
-
-        SaveManager saveManager = SaveManager.Instance; // SaveManager 전역 사용
 
         if (curDay == 0) // 첫 라운드는 무조건 전투
             for (int i = 0; i < 3; i++)
@@ -139,19 +145,23 @@ public class SelectMap : MonoBehaviour
             case 0: // 중간 보스
                 ExtraNode[0].SetActive(true);
                 SelText[0].text = "중간 보스";
+                InfoText[0].text = "중간보스 설명";
                 break;
             case 1: // 마을
                 ExtraNode[1].SetActive(true);
                 SelText[0].text = "마을";
+                InfoText[0].text = "마을 설명";
                 break;
             case 2: // 정비
                     // 노드 추가 필요
                 ExtraNode[2].SetActive(true);
                 SelText[0].text = "정비";
+                InfoText[0].text = "정비 설명";
                 break;
             case 3: // 최종 보스
                 ExtraNode[3].SetActive(true);
                 SelText[0].text = "최종 보스";
+                InfoText[0].text = "최종 보스 설명";
                 break;
             default:
                 SelText[0].text = "에러";
@@ -170,6 +180,7 @@ public class SelectMap : MonoBehaviour
                 selDay[i] = 1;
                 BattleNode[i].SetActive(true);
                 SelText[i+1].text = "전투";
+                InfoText[i + 1].text = "전투 내용 설명";
             }
         }
         else // 이외
@@ -180,11 +191,13 @@ public class SelectMap : MonoBehaviour
                 {
                     BattleNode[i].SetActive(true);
                     SelText[i+1].text = "전투";
+                    InfoText[i + 1].text = "전투 내용 설명";
                 }
                 else
                 {
                     EvntNode[i].SetActive(true);
                     SelText[i+1].text = "이벤트";
+                    InfoText[i + 1].text = "이벤트 내용 설명";
                 }
             }
         }
@@ -200,6 +213,7 @@ public class SelectMap : MonoBehaviour
             {
                 BattleNode[i+2].SetActive(true);
                 SelText[i+3].text = "전투";
+                InfoText[i + 3].text = "전투 내용 설명";
             }
         }
         else // 이외
@@ -211,20 +225,57 @@ public class SelectMap : MonoBehaviour
                 {
                     BattleNode[i+2].SetActive(true);
                     SelText[i+3].text = "전투";
+                    InfoText[i+3].text = "전투 내용 설명";
                 }
                 else
                 {
                     EvntNode[i+2].SetActive(true);
                     SelText[i+3].text = "이벤트";
+                    InfoText[i+3].text = "이벤트 내용 설명";
                 }
             }
         }
     }
 
+    public void ButtonDown1_1()
+    {
+        Info[0].SetActive(true);
+    }
+    
+    public void ButtonDown2_1()
+    {
+        Info[1].SetActive(true);
+    }
+
+    public void ButtonDown2_2()
+    {
+        Info[2].SetActive(true);
+    }
+
+    public void ButtonDown3_1()
+    {
+        Info[3].SetActive(true);
+    }
+
+    public void ButtonDown3_2()
+    {
+        Info[4].SetActive(true);
+    }
+
+    public void ButtonDown3_3()
+    {
+        Info[5].SetActive(true);
+    }
+
+    public void ButtonOut()
+    {
+        for (int i = 0; i < 6; i++)
+            Info[i].SetActive(false);
+    }
+
     public void Select1Btn()   // 1번 선택지
     {
         map.level = curDay;
-        SaveManager saveManager = SaveManager.Instance; 
         if (selEvnt[0] == 0)
             saveManager.gameData.map.curDay += 2;  // 전투 시에만 2일 추가
         // 다음 단계 이동 => by 노드
@@ -233,7 +284,6 @@ public class SelectMap : MonoBehaviour
     public void Select2Btn()   // 2번 선택지
     {
         map.level = curDay;
-        SaveManager saveManager = SaveManager.Instance; 
         if (selEvnt[1] == 0)
             saveManager.gameData.map.curDay += 2;  // 전투 시에만 2일 추가
         // 다음 단계 이동 => by 노드
@@ -242,7 +292,6 @@ public class SelectMap : MonoBehaviour
     public void Select3Btn()   // 3번 선택지
     {
         map.level = curDay;
-        SaveManager saveManager = SaveManager.Instance; 
         if (selEvnt[2] == 0)
             saveManager.gameData.map.curDay += 2;  // 전투 시에만 2일 추가
         // 다음 단계 이동 => by 노드

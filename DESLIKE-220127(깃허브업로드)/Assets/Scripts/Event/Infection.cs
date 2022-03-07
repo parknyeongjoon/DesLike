@@ -7,12 +7,15 @@ public class Infection : MonoBehaviour
     Dictionary<string, SoldierData> activeSoldierList;
     GoodsCollection goodsCollection;
     int level;
+    SaveManager saveManager;
+
 
     void OnEnable()
     {
-        activeSoldierList = SaveManager.Instance.activeSoldierList;
-        goodsCollection = SaveManager.Instance.gameData.goodsCollection;
-        level = SaveManager.Instance.gameData.map.level;
+        SaveManager saveManager = SaveManager.Instance;
+        activeSoldierList = saveManager.activeSoldierList;
+        goodsCollection = saveManager.gameData.goodsCollection;
+        level = saveManager.gameData.map.level;
     }
 
     public void InfectionOption1()//·£´ý À¯´Ö ·£´ý ¹ÂÅÏÆ®
@@ -40,7 +43,6 @@ public class Infection : MonoBehaviour
 
     public void EndButton() // 2ÀÏ ¼Ò¸ð
     {
-        SaveManager saveManager = SaveManager.Instance;
         saveManager.gameData.map.curDay += 2;
     }
 }

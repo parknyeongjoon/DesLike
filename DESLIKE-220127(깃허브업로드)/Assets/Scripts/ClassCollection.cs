@@ -8,7 +8,7 @@ public enum AttackArea { None = 0, Ground = 1 << 8, Sky = 1 << 11, Dual = Attack
 public enum BodyArea { Ground = 1 << 8, Sky = 1 << 11 }
 public enum Soldier_State { Idle, Detect, Stun, Siege, Battle, Dead}//유닛들 상태
 public enum Soldier_Action { Idle, Move, Attack, Skill, End_Delay, Charge }
-public enum Soldier_Type { Tanker, Soldier, Healer, Ranger, Catapult, Flight, Monster}
+public enum Soldier_Type { Tanker, Soldier, Healer, Buffer, Debuffer, Ranger, Catapult, Flight, Monster}
 public enum Tribe { Undead, Mech, Ghost }
 public enum Rarity { normal, rare, epic }
 

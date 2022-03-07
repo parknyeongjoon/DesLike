@@ -48,7 +48,7 @@ public class HealerBehaviour : SoldierBasic
         while (true)
         {
             skillDetect?.Invoke();
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.2f);
         }
     }
 

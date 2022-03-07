@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e37eac7c856100b49b5f3ee0dbc80f3c, type: 3}
+  m_Name: Madecasol
+  m_EditorClassIdentifier: 
+  code: 6
+  skill_name: "\uB9C8\uB370\uCE74\uC194"
+  skillType: 0
+  skill_Icon: {fileID: 0}
+  cooltime: 5
+  mp: 10
+  range: 3
+  start_Delay: 0.1
+  end_Delay: 0.1
+  atkArea: 256
+  buff_Stat:
+    speed: 0
+    mp: 0
+    mp_Re: 0
+    atk: 0
+    atk_Speed: 0
+    hp: 0
+    hp_Re: 10
+    def: 0
+  buff_Time: 2
+  max_Stack: 1

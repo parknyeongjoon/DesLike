@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SingleBuff : ActiveSkill
+public class SingleBuff : ActiveSkill//우선 버프 대상 정할 방법 구하기(portDatas에서 a,b,c 진영으로 구분하기?)
 {
     //singleBuff는 타켓에 이미 버프가 걸려있다면 다른 대상 찾기, remove 버프 해줄때 soldierInfo 존재하는가 체크하기
     public override IEnumerator UseSkill(HeroInfo targetInfo)//코루틴은 monoBehaviour로 가져가기
@@ -27,9 +27,6 @@ public class SingleBuff : ActiveSkill
             }
             targetInfo.buffCoroutine[skillData.code].Add(StartCoroutine(BuffCoroutine(targetInfo)));//스택이 가능하다면 계속해서 List<Coroutine>에 넣기//버프 실행해주고 heroInfo 버프 딕셔너리에 넣어주기
 
-            if(targetInfo.gameObject.CompareTag("Player")) { BattleUIManager.Instance.heroPanel.AddBuff(skillData.code); }//영웅에게 버프를 줬다면 버프 패널 업데이트
-            else if(targetInfo == BattleUIManager.Instance.cur_Soldier) { BattleUIManager.Instance.soldierPanel.AddBuff(skillData.code); }//현재 soldierPanel에서 보여주고 있는 병사라면 버프 패널 업데이트
-
             heroInfo.action = Soldier_Action.End_Delay;
             yield return new WaitForSeconds(((ActiveSkillData)skillData).end_Delay);
         }
@@ -39,9 +36,11 @@ public class SingleBuff : ActiveSkill
     IEnumerator BuffCoroutine(HeroInfo targetInfo)
     {
         ((SingleBuffData)skillData).Effect(targetInfo);
+        if (targetInfo.gameObject.CompareTag("Player")) { BattleUIManager.Instance.heroPanel.AddBuff(skillData.code); }//영웅에게 버프를 줬다면 버프 패널 업데이트
+        else if (targetInfo == BattleUIManager.Instance.cur_Soldier) { BattleUIManager.Instance.soldierPanel.AddBuff(skillData.code); }//현재 soldierPanel에서 보여주고 있는 병사라면 버프 패널 업데이트
         yield return new WaitForSeconds(((SingleBuffData)skillData).buff_Time);
         ((SingleBuffData)skillData).Remove_Buff(targetInfo, heroInfo.buffCoroutine[skillData.code][0]);//고치기(0번째 인덱스말고 실행된 코루틴을 담을 방법이 없을까?)
-        if (targetInfo is HeroInfo) { BattleUIManager.Instance.heroPanel.RemoveBuff(skillData.code); }//영웅에게 버프를 줬다면 버프 패널 업데이트
+        if (targetInfo.gameObject.CompareTag("Player")) { BattleUIManager.Instance.heroPanel.RemoveBuff(skillData.code); }//영웅에게 버프를 줬다면 버프 패널 업데이트
         else if (targetInfo == BattleUIManager.Instance.cur_Soldier) { BattleUIManager.Instance.soldierPanel.RemoveBuff(skillData.code); }//현재 soldierPanel에서 보여주고 있는 병사라면 버프 패널 업데이트
     }
 
@@ -49,11 +48,28 @@ public class SingleBuff : ActiveSkill
     {
         if (skillData.skillType == SkillType.InstanceSkill)//instance 스킬 병사한테 넣어줄 방법 생각하기
         {
-            heroInfo.skillTarget = gameObject;
-            heroInfo.skillTargetInfo = heroInfo;
-            if (CanSkillCheck()) { heroInfo.state = Soldier_State.Battle; }
+            if (IsActive())
+            {
+                heroInfo.skillTarget = gameObject;
+                heroInfo.skillTargetInfo = heroInfo;
+                heroInfo.state = Soldier_State.Battle;
+            }
             return;
         }
-        base.Detect();
+
+        for (int i = 0; i < heroInfo.portDatas.spawnSoldierList.Count; i++)//Awake에서 적용 군중에 따라 SoldierList 따로따로 적용해주기
+        {
+            if (!heroInfo.portDatas.spawnSoldierList[i].buffCoroutine.ContainsKey(skillData.code) && heroInfo.portDatas.spawnSoldierList[i].buffCoroutine[skillData.code].Count < ((SingleBuffData)skillData).max_Stack)
+            {
+                heroInfo.skillTarget = heroInfo.portDatas.spawnSoldierList[i].gameObject;
+                heroInfo.skillTargetInfo = heroInfo.portDatas.spawnSoldierList[i];
+                break;
+            }
+        }
+
+        if (heroInfo.TargetCheck(heroInfo.skillTarget, ((ActiveSkillData)skillData).range + 2))
+        {
+            heroInfo.state = Soldier_State.Battle;
+        }
     }
 }

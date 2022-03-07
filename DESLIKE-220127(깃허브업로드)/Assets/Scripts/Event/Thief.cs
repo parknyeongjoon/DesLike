@@ -22,7 +22,7 @@ public class Thief : MonoBehaviour
         Debug.Log("Thief");
     }
 
-    public void ThiefOption1()//»≠∆Û ∂‚±‚±‚
+    public void ThiefOption1()//»≠∆Û ∂‚±‚±‚ 1¿œ º“∏
     {
         EndEvent();
         goodsCollection.food -= 50 * level;
@@ -30,21 +30,26 @@ public class Thief : MonoBehaviour
         {
             goodsCollection.food = 0;
         }
+        SaveManager saveManager = SaveManager.Instance;
+        saveManager.gameData.map.curDay += 1;
         //µ∑ ¿“¥¬ ¿Ã∆Â∆Æ
-        Debug.Log("Thief 1");
     }
 
     public void ThiefOption2()//«« ±Ô¿Ã±‚
     {
         EndEvent();
         GameObject.Find("Hero").GetComponent<HeroInfo>().OnDamaged(15 + level * 0.5f);
+        SaveManager saveManager = SaveManager.Instance;
+        saveManager.gameData.map.curDay += 1;
         // «« ±Ô¿Ã¥¬ ¿Ã∆Â∆Æ
-        Debug.Log("Thief 2");
     }
 
     public void ThiefOption3()//»Æ∑¸∑Œ «««œ±‚ ∏¯ «««“Ω√ 1 + 2
     {
         EndEvent();
+        SaveManager saveManager = SaveManager.Instance;
+        saveManager.gameData.map.curDay += 2;
+        /*
         int randomInt = Random.Range(0, 100);
         if (randomInt >= 50)
         {
@@ -55,6 +60,7 @@ public class Thief : MonoBehaviour
             ThiefOption1();
             ThiefOption2();
         }
+        */
         Debug.Log("Thief 3");
     }
 

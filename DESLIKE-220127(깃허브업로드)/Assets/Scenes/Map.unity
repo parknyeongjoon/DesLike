@@ -1838,33 +1838,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74424a99aaf501f46b78a9f62ca12f2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oneTrack: {fileID: 836908720}
-  twoTrack: {fileID: 392609686}
-  threeTrack: {fileID: 661195191}
+  Track:
+  - {fileID: 836908720}
+  - {fileID: 392609686}
+  - {fileID: 661195191}
   HPText: {fileID: 773448646}
-  Sel1_1Text: {fileID: 489042217}
-  Sel2_1Text: {fileID: 1933420677}
-  Sel2_2Text: {fileID: 1793858904}
-  Sel3_1Text: {fileID: 799304229}
-  Sel3_2Text: {fileID: 1740172130}
-  Sel3_3Text: {fileID: 91456703}
   CurrentDayText: {fileID: 2006031015}
-  OneTrackNode: {fileID: 803839334}
-  TwoTrackNode: {fileID: 9142551}
-  ThreeTrackNode: {fileID: 1259625698}
-  BossNode: {fileID: 2061028760}
-  VillageNode: {fileID: 1017799111}
-  EliteNode: {fileID: 765889132}
-  BattleNode2_1: {fileID: 710034714}
-  BattleNode2_2: {fileID: 1247408833}
-  BattleNode3_1: {fileID: 457604860}
-  BattleNode3_2: {fileID: 2089891583}
-  BattleNode3_3: {fileID: 1973290751}
-  EventNode2_1: {fileID: 543301945}
-  EventNode2_2: {fileID: 916543819}
-  EventNode3_1: {fileID: 562278210}
-  EventNode3_2: {fileID: 1543687818}
-  EventNode3_3: {fileID: 1118592119}
+  SelText:
+  - {fileID: 489042217}
+  - {fileID: 1933420677}
+  - {fileID: 1793858904}
+  - {fileID: 799304229}
+  - {fileID: 1740172130}
+  - {fileID: 91456703}
+  TrackNode:
+  - {fileID: 803839334}
+  - {fileID: 9142551}
+  - {fileID: 1259625698}
+  BattleNode:
+  - {fileID: 710034714}
+  - {fileID: 1247408833}
+  - {fileID: 457604860}
+  - {fileID: 2089891583}
+  - {fileID: 1973290751}
+  EvntNode:
+  - {fileID: 543301945}
+  - {fileID: 916543819}
+  - {fileID: 562278210}
+  - {fileID: 1543687818}
+  - {fileID: 1118592119}
+  ExtraNode:
+  - {fileID: 2061028760}
+  - {fileID: 1017799111}
+  - {fileID: 1017799111}
+  - {fileID: 765889132}
   map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
 --- !u!224 &304971557 stripped
 RectTransform:

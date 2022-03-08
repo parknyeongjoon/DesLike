@@ -6,7 +6,7 @@ public class SelectMap : MonoBehaviour
     public GameObject[] Track = new GameObject[3];
     [SerializeField] Text HPText, CurrentDayText, MoneyText;
     [SerializeField] Text[] SelText = new Text[6]; // 0 : 1_1 / 1,2 : 2_1, 2 / 3, 4, 5 = 3_1, 2, 3 
-    [SerializeField] Text[] InfoText = new Text[6]; // 0 : 1_1 / 1,2 : 2_1, 2 / 3, 4, 5 = 3_1, 2, 3 
+    // [SerializeField] Text[] InfoText = new Text[6]; // 0 : 1_1 / 1,2 : 2_1, 2 / 3, 4, 5 = 3_1, 2, 3 
 
     GameObject hero;
     HeroInfo heroInfo;
@@ -14,14 +14,19 @@ public class SelectMap : MonoBehaviour
     int curDay = 0; // 현재 날짜
     bool midBossCheck = false, villageCheck = false, organCheck = false; // 중간 보스, 마을, 정비 여부
     int[] selDay = new int[3];
-    int[] selEvnt = new int[3];
+    int[] selEvnt = new int[6]; // 0 : 1_1 / 1, 2 : 2_1, 2 / 3, 4, 5 : 3_1, 2, 3
+    int nodeNum;   // 노드 지정용(selEvnt[nodeNum]용)
+    int curTrack = 0;
 
+    [SerializeField] GameObject MyTeamPanel;
+    [SerializeField] GameObject InfoPanel;
     [SerializeField] GameObject[] TrackNode = new GameObject[3];
-    [SerializeField] GameObject[] BattleNode = new GameObject[5]; // 0, 1 : 2_1, 2 / 2, 3, 4 = 3_1, 2, 3 
-    [SerializeField] GameObject[] EvntNode = new GameObject[5];// 0, 1 : 2_1, 2 / 2, 3, 4 = 3_1, 2, 3 
-    [SerializeField] GameObject[] ExtraNode = new GameObject[4]; // 0 : 중간 보스, 1 : 마을, 2 : 정비, 3 : 최종 보스
-    [SerializeField] GameObject[] Info = new GameObject[6]; // 0 : 1_1 / 1, 2 : 2_1, 2 / 3, 4, 5 : 3_1, 2, 3
-
+    [SerializeField] GameObject[] Nodes = new GameObject[14];
+    /*
+    - 0~3 => 외길 { 0 : 중간 보스; 1 : 마을; 2 : 정비; 3 : 최종 보스 }
+    - 4~7 => 두갈래길 { 4,5 : 2_1, 2 전투; 6, 7 : 2_1, 2 이벤트 }
+    - 8~13 => 세갈래길 { 8, 9, 10 : 3_1, 2, 3 전투; 3_1, 2, 3 이벤트 }
+    */
 
     public Map map;
     SaveManager saveManager;
@@ -36,31 +41,30 @@ public class SelectMap : MonoBehaviour
         ObjectInactive();   // 맵 초기화
         FindData(); // 데이터 찾기
         CommonSetting(); // 일반 세팅
-        
-        int mapSelect = 0; // mapSelect 선언 및 초기화용
-       
+
         if ((selEvnt[0] != 0) && (selEvnt[0] != 1)) // 일반적인 상황(이벤트 or 전투)이 아니라면
-            mapSelect = 3;   // 외길
-        else mapSelect = Random.Range(0, 2); // 일반적인 상황(이벤트 or 전투)이면 두갈래길과 세갈래길 결정
+            curTrack = 0;   // 외길
+        else curTrack = Random.Range(0, 2) + 1; // 일반적인 상황(이벤트 or 전투)이면 두갈래길과 세갈래길 결정
 
         for (int i = 0; i < 3; i++)
             Track[i].SetActive(false);
 
-        switch(mapSelect)
+        switch (curTrack)
         {
-            case 0: // 두갈래길
-                Track[1].SetActive(true);
+            case 0: // 외길
+                OneTrackSet();
+                break;
+            case 1: // 두갈래길
                 TwoTrackSet();
                 break;
-            case 1: // 세갈래길
-                Track[2].SetActive(true);
+            case 2: // 세갈래길
                 ThreeTrackSet();
                 break;
             default:    // 특수 상황 외길
-                Track[0].SetActive(true);
-                OneTrackSet();
+                Debug.Log("오류 발생");
                 break;
         }
+        Track[curTrack].SetActive(true);
     }
 
     void FindData() // 외부 데이터 가져오기
@@ -74,12 +78,7 @@ public class SelectMap : MonoBehaviour
 
     void CommonSetting()    // 공통 세팅
     {
-        if (curDay != 0)
-        {
-            hero = GameObject.Find("Hero");
-            heroInfo = hero.GetComponent<HeroInfo>();
-            HPText.text = heroInfo.cur_Hp + "/" + heroInfo.castleData.hp;
-        }
+        // hero 체력 가져오기
         NextEventChoice(); // 다음 내용 조정
         CurrentDayText.text = curDay + " / 30";
         MoneyText.text = "- 식량 : " + goodsCollection.food + "\n- 골드 : " + goodsCollection.gold;
@@ -87,47 +86,38 @@ public class SelectMap : MonoBehaviour
 
     void ObjectInactive()   // 맵 초기화
     {
-        for(int i = 0; i<5; i++)
+        InfoPanel.gameObject.SetActive(false);
+        for (int i = 0; i < 3; i++)
         {
-            if (i < 3) TrackNode[i].SetActive(false);  // 길 노드
-            if (i < 4) ExtraNode[i].SetActive(false);  // 기타 노드
-            BattleNode[i].SetActive(false); // 배틀 노드
-            EvntNode[i].SetActive(false);   // 이벤트 노드
+            TrackNode[i].SetActive(false);  // 길 노드
         }
     }
 
     void NextEventChoice()  // 0 : 전투, 1 : 이벤트, 2 : 중간 보스, 3 : 마을, 4 : 정비, 5 : 최종 보스
     {
-        // 기본 랜덤 설정
-        for (int i = 0; i < 3; i++)
+        for (int i = 1; i < 6; i++) // 두,세갈래길 랜덤(전투, 이벤트) 설정
             selEvnt[i] = Random.Range(0, 2);
-
-        if (curDay == 0) // 첫 라운드는 무조건 전투
-            for (int i = 0; i < 3; i++)
-                selEvnt[i] = 0;
-        else
+        
+        if (curDay >= 14)
         {
-            if (curDay >= 14)
+            if (midBossCheck == false)    // 중간 보스 라운드
             {
-                if (midBossCheck == false)    // 중간 보스 라운드
+                selEvnt[0] = 2;
+                saveManager.gameData.map.midBossCheck = true;
+            }
+            else if (villageCheck == false)
+            {
+                selEvnt[0] = 3;
+                saveManager.gameData.map.villageCheck = true;
+            }
+            else if (curDay >= 29 && villageCheck == true)  // 정비 라운드
+            {
+                if (organCheck == false)
                 {
-                    selEvnt[0] = 2;
-                    saveManager.gameData.map.midBossCheck = true;
+                    selEvnt[0] = 4;
+                    saveManager.gameData.map.organCheck = true;
                 }
-                else if (villageCheck == false)
-                {
-                    selEvnt[0] = 3;
-                    saveManager.gameData.map.villageCheck = true;
-                }
-                else if (curDay >= 29 && villageCheck == true)  // 정비 라운드
-                {
-                    if (organCheck == false)
-                    {
-                        selEvnt[0] = 4;
-                        saveManager.gameData.map.organCheck = true;
-                    }
-                    else selEvnt[0] = 5;
-                }
+                else selEvnt[0] = 5;
             }
         }
     }
@@ -136,32 +126,23 @@ public class SelectMap : MonoBehaviour
     {
         TrackNode[0].SetActive(true);
 
-        for (int i = 0; i < 4; i++)
-            ExtraNode[i].SetActive(false);
-
-        selDay[0] = 1;   // 날짜 1로 고정
-        switch (selEvnt[0]-2)
+        switch (selEvnt[0] - 2)
         {
             case 0: // 중간 보스
-                ExtraNode[0].SetActive(true);
                 SelText[0].text = "중간 보스";
-                InfoText[0].text = "중간보스 설명";
+                // 중간 보스 데이터 세팅
                 break;
             case 1: // 마을
-                ExtraNode[1].SetActive(true);
                 SelText[0].text = "마을";
-                InfoText[0].text = "마을 설명";
+                // 마을 데이터 세팅
                 break;
             case 2: // 정비
-                    // 노드 추가 필요
-                ExtraNode[2].SetActive(true);
                 SelText[0].text = "정비";
-                InfoText[0].text = "정비 설명";
+                // 정비 데이터 세팅
                 break;
             case 3: // 최종 보스
-                ExtraNode[3].SetActive(true);
                 SelText[0].text = "최종 보스";
-                InfoText[0].text = "최종 보스 설명";
+                // 최종 보스 데이터 세팅
                 break;
             default:
                 SelText[0].text = "에러";
@@ -172,71 +153,43 @@ public class SelectMap : MonoBehaviour
     void TwoTrackSet()  // 두갈래길 세팅
     {
         TrackNode[1].SetActive(true);
-            
-        if (curDay == 0) // 첫 전투
+
+    for (int i = 0; i < 2; i++)
         {
-            for(int i = 0; i<2; i++)
+            if (curDay == 0 || selEvnt[i+1] == 0)
             {
-                selDay[i] = 1;
-                BattleNode[i].SetActive(true);
-                SelText[i+1].text = "전투";
-                InfoText[i + 1].text = "전투 내용 설명";
+                SelText[i + 1].text = "전투";
+                // 전투 데이터 세팅
             }
-        }
-        else // 이외
-        {
-            for(int i = 0; i<2; i++)
+            else
             {
-                if (selEvnt[i] == 0)
-                {
-                    BattleNode[i].SetActive(true);
-                    SelText[i+1].text = "전투";
-                    InfoText[i + 1].text = "전투 내용 설명";
-                }
-                else
-                {
-                    EvntNode[i].SetActive(true);
-                    SelText[i+1].text = "이벤트";
-                    InfoText[i + 1].text = "이벤트 내용 설명";
-                }
+                SelText[i + 1].text = "이벤트";
+                // 이벤트 데이터 세팅
             }
         }
     }
 
     void ThreeTrackSet()    // 세갈래길 세팅
     {
-            TrackNode[2].SetActive(true);
+        TrackNode[2].SetActive(true);
 
-        if (curDay == 0) // 첫 전투
+        for (int i = 0; i < 3; i++)
         {
-            for(int i = 0; i<3; i++)
+            int j = i + 3;
+            if (curDay == 0 || selEvnt[i] == 0)
             {
-                BattleNode[i+2].SetActive(true);
-                SelText[i+3].text = "전투";
-                InfoText[i + 3].text = "전투 내용 설명";
+                SelText[i + 3].text = "전투";
+                // 전투 데이터 세팅
             }
-        }
-        else // 이외
-        {
-            for(int i = 0; i<3; i++)
+            else
             {
-                int j = i + 3;
-                if (selEvnt[i] == 0)
-                {
-                    BattleNode[i+2].SetActive(true);
-                    SelText[i+3].text = "전투";
-                    InfoText[i+3].text = "전투 내용 설명";
-                }
-                else
-                {
-                    EvntNode[i+2].SetActive(true);
-                    SelText[i+3].text = "이벤트";
-                    InfoText[i+3].text = "이벤트 내용 설명";
-                }
+                SelText[i + 3].text = "이벤트";
+                // 이벤트 데이터 세팅
             }
         }
     }
 
+    /* 
     public void ButtonDown1_1()
     {
         Info[0].SetActive(true);
@@ -272,28 +225,112 @@ public class SelectMap : MonoBehaviour
         for (int i = 0; i < 6; i++)
             Info[i].SetActive(false);
     }
+    */
 
-    public void Select1Btn()   // 1번 선택지
+    public void Button1()
     {
-        map.level = curDay;
-        if (selEvnt[0] == 0)
-            saveManager.gameData.map.curDay += 2;  // 전투 시에만 2일 추가
-        // 다음 단계 이동 => by 노드
+        switch(curTrack)
+        {
+            case 0: // 1_1
+                switch(selEvnt[0])
+                {
+                    case 0:
+                        nodeNum = 0;    // 중간 보스
+                        break;
+
+                    case 1:
+                        nodeNum = 1;    // 마을
+                        break;
+
+                    case 2:
+                        nodeNum = 2;    // 정비 노드 추가 필요
+                        break;
+
+                    case 3:
+                        nodeNum = 3;    // 최종 보스
+                        break;
+
+                    default:
+                        Debug.Log("오류 발생");
+                        break;
+                }
+                break;
+
+            case 1: // 2_1
+                if(selEvnt[1] == 0 || curDay == 0)
+                    nodeNum = 4;
+                else nodeNum = 6;
+                break;
+
+            case 2: // 3_1
+                if (selEvnt[3] == 0 || curDay == 0)
+                    nodeNum = 8;
+                else nodeNum = 11;
+                break;
+
+            default:
+                Debug.Log("오류 발생");
+                break;
+        }
+        Nodes[nodeNum].gameObject.SetActive(true);
+        InfoPanel.gameObject.SetActive(true);
     }
 
-    public void Select2Btn()   // 2번 선택지
+    public void Button2()
     {
-        map.level = curDay;
-        if (selEvnt[1] == 0)
-            saveManager.gameData.map.curDay += 2;  // 전투 시에만 2일 추가
-        // 다음 단계 이동 => by 노드
+        switch (curTrack)
+        {   
+            case 1: // 2_2
+                if (selEvnt[2] == 0 || curDay == 0)
+                    nodeNum = 5;
+                else nodeNum = 7;
+                break;
+                
+            case 2: // 3_2
+                if (selEvnt[4] == 0 || curDay == 0)
+                    nodeNum = 9;
+                else nodeNum = 12;
+                break;
+        }
+        Nodes[nodeNum].gameObject.SetActive(true);
+        InfoPanel.gameObject.SetActive(true);
     }
 
-    public void Select3Btn()   // 3번 선택지
+    
+    public void Button3()
+    {
+        if(selEvnt[5] == 0)
+            nodeNum = 10;    // 전투
+        else nodeNum = 13;    // 이벤트
+        Nodes[nodeNum].gameObject.SetActive(true);
+        InfoPanel.gameObject.SetActive(true);
+    }
+    
+    public void InfoPanelClose()
+    {
+        InfoPanel.gameObject.SetActive(false);
+        Nodes[nodeNum].SetActive(false);   // 이벤트 노드
+    }
+
+    public void MyTeamPanelOpen()
+    {
+        MyTeamPanel.gameObject.SetActive(true);
+    }
+    
+    public void MyTeamPanelClose()
+    {
+        MyTeamPanel.gameObject.SetActive(false);
+    }
+
+
+    public void GameStart()
     {
         map.level = curDay;
-        if (selEvnt[2] == 0)
-            saveManager.gameData.map.curDay += 2;  // 전투 시에만 2일 추가
-        // 다음 단계 이동 => by 노드
+        if (nodeNum >= 0 && nodeNum <=3)
+            saveManager.gameData.map.curDay += 1;  // 특수 이벤트 1일 추가
+        else if (nodeNum <= 10)
+            if(nodeNum !=6 && nodeNum !=7)
+                saveManager.gameData.map.curDay += 2;  // 전투 이벤트 2일 추가
+        Nodes[nodeNum].gameObject.SetActive(false);
     }
 }

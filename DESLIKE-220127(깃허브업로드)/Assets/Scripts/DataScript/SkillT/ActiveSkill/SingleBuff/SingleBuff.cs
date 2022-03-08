@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class SingleBuff : ActiveSkill//우선 버프 대상 정할 방법 구하기(portDatas에서 a,b,c 진영으로 구분하기?)
 {
-    //singleBuff는 타켓에 이미 버프가 걸려있다면 다른 대상 찾기, remove 버프 해줄때 soldierInfo 존재하는가 체크하기
+    List<SoldierInfo> soldierList;
+
+    protected override void Start()
+    {
+        base.Start();
+        soldierList = heroInfo.portDatas.spawnSoldierList;
+    }
+
+    //singleBuff는 타켓에 이미 버프가 걸려있다면 다른 대상 찾기
     public override IEnumerator UseSkill(HeroInfo targetInfo)//코루틴은 monoBehaviour로 가져가기
     {
         heroInfo.action = Soldier_Action.Skill;
@@ -57,12 +65,12 @@ public class SingleBuff : ActiveSkill//우선 버프 대상 정할 방법 구하기(portDatas
             return;
         }
 
-        for (int i = 0; i < heroInfo.portDatas.spawnSoldierList.Count; i++)//Awake에서 적용 군중에 따라 SoldierList 따로따로 적용해주기
+        for (int i = 0; i < soldierList.Count; i++)//Awake에서 적용 군중에 따라 SoldierList 따로따로 적용해주기
         {
-            if (!heroInfo.portDatas.spawnSoldierList[i].buffCoroutine.ContainsKey(skillData.code) && heroInfo.portDatas.spawnSoldierList[i].buffCoroutine[skillData.code].Count < ((SingleBuffData)skillData).max_Stack)
+            if (!(soldierList[i].buffCoroutine.ContainsKey(skillData.code) && soldierList[i].buffCoroutine[skillData.code].Count < ((SingleBuffData)skillData).max_Stack))
             {
-                heroInfo.skillTarget = heroInfo.portDatas.spawnSoldierList[i].gameObject;
-                heroInfo.skillTargetInfo = heroInfo.portDatas.spawnSoldierList[i];
+                heroInfo.skillTarget = soldierList[i].gameObject;
+                heroInfo.skillTargetInfo = soldierList[i];
                 break;
             }
         }

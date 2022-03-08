@@ -95,5 +95,6 @@ public class SoldierBasic : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
         heroInfo.animator.SetBool("isWalk", false);
+        heroInfo.action = Soldier_Action.Idle;
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 구현해야함, 그레네이드 어택 오류
+public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 구현해야함
 {
     MouseManager mouseManager;
 

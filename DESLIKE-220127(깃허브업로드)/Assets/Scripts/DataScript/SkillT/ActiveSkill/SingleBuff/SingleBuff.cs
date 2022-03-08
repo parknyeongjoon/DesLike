@@ -31,7 +31,7 @@ public class SingleBuff : ActiveSkill//우선 버프 대상 정할 방법 구하기(portDatas
             if (targetInfo.buffCoroutine[skillData.code].Count >= ((SingleBuffData)skillData).max_Stack)//최대 스택 수 보다 많은 지 검사
             {
                 StopCoroutine(heroInfo.buffCoroutine[skillData.code][0]);//제일 오래된 코루틴 정지시키고 갱신하기
-                ((SingleBuffData)skillData).Remove_Buff(targetInfo, heroInfo.buffCoroutine[skillData.code][0]);//고치기(0번째 인덱스말고 실행된 코루틴을 담을 방법이 없을까?)//효과 제거해주기
+                ((SingleBuffData)skillData).Remove_Buff(targetInfo, targetInfo.buffCoroutine[skillData.code][0]);//고치기(0번째 인덱스말고 실행된 코루틴을 담을 방법이 없을까?)//효과 제거해주기
             }
             targetInfo.buffCoroutine[skillData.code].Add(StartCoroutine(BuffCoroutine(targetInfo)));//스택이 가능하다면 계속해서 List<Coroutine>에 넣기//버프 실행해주고 heroInfo 버프 딕셔너리에 넣어주기
 
@@ -47,7 +47,7 @@ public class SingleBuff : ActiveSkill//우선 버프 대상 정할 방법 구하기(portDatas
         if (targetInfo.gameObject.CompareTag("Player")) { BattleUIManager.Instance.heroPanel.AddBuff(skillData.code); }//영웅에게 버프를 줬다면 버프 패널 업데이트
         else if (targetInfo == BattleUIManager.Instance.cur_Soldier) { BattleUIManager.Instance.soldierPanel.AddBuff(skillData.code); }//현재 soldierPanel에서 보여주고 있는 병사라면 버프 패널 업데이트
         yield return new WaitForSeconds(((SingleBuffData)skillData).buff_Time);
-        ((SingleBuffData)skillData).Remove_Buff(targetInfo, heroInfo.buffCoroutine[skillData.code][0]);//고치기(0번째 인덱스말고 실행된 코루틴을 담을 방법이 없을까?)
+        ((SingleBuffData)skillData).Remove_Buff(targetInfo, targetInfo.buffCoroutine[skillData.code][0]);//고치기(0번째 인덱스말고 실행된 코루틴을 담을 방법이 없을까?)
         if (targetInfo.gameObject.CompareTag("Player")) { BattleUIManager.Instance.heroPanel.RemoveBuff(skillData.code); }//영웅에게 버프를 줬다면 버프 패널 업데이트
         else if (targetInfo == BattleUIManager.Instance.cur_Soldier) { BattleUIManager.Instance.soldierPanel.RemoveBuff(skillData.code); }//현재 soldierPanel에서 보여주고 있는 병사라면 버프 패널 업데이트
     }

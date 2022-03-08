@@ -20,19 +20,16 @@ public class Training : MonoBehaviour
 
     public void TrainingOption1() // 1老 家葛
     {
-        SaveManager saveManager = SaveManager.Instance;
         saveManager.gameData.map.curDay += 1;
     }
 
     public void TrainingOption2()   // 2老 家葛
     {
-        SaveManager saveManager = SaveManager.Instance;
         saveManager.gameData.map.curDay += 2;
     }
 
     public void TrainingOption3()   // 3老 家葛
     {
-        SaveManager saveManager = SaveManager.Instance;
         saveManager.gameData.map.curDay += 3;
     }
 

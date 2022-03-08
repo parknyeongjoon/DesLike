@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Merchant : MonoBehaviour
 {
+    SaveManager saveManager;
+
     void OnEnable()
     {
+        SaveManager saveManager = SaveManager.Instance;
         Debug.Log("Merchant");
     }
 
     public void EndButton()
     {
-        SaveManager saveManager = SaveManager.Instance;
         saveManager.gameData.map.curDay += 2;
     }
 }

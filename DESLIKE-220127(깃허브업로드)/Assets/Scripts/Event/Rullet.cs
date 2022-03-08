@@ -14,15 +14,22 @@ public class Rullet : MonoBehaviour
 
     GoodsCollection goodsCollection;
     Map map;
+    SaveManager saveManager;
 
     int eventCount = 8;
     bool isRoll;
 
+    void Awake()
+    {
+        SaveManager saveManager = SaveManager.Instance;
+    }
+
+
     void OnEnable()
     {
         isRoll = false;
-        goodsCollection = SaveManager.Instance.gameData.goodsCollection;
-        map = SaveManager.Instance.gameData.map;
+        goodsCollection = saveManager.gameData.goodsCollection;
+        map = saveManager.gameData.map;
         EndButton.text = "¸ÊÀ¸·Î\n(ÃÑ 1ÀÏ ¼Ò¸ð)";
         Debug.Log("Rullet");
     }
@@ -46,7 +53,6 @@ public class Rullet : MonoBehaviour
         float rotateAmount = 0;
         float rotateSpeed = 700;
 
-        SaveManager saveManager = SaveManager.Instance;
         saveManager.gameData.map.curDay += 1;
 
         while (isRoll)
@@ -112,7 +118,6 @@ public class Rullet : MonoBehaviour
     {
         rollBtn.interactable = false;
         // endBtn.gameObject.SetActive(true);
-        SaveManager saveManager = SaveManager.Instance;
         saveManager.gameData.map.curDay += 1;
 
     }

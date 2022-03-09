@@ -15,7 +15,7 @@ MonoBehaviour:
   sprite: {fileID: 2590185811940133651, guid: 76fe55c66fd58ff4d93cf9450d0eade3, type: 3}
   code: 0
   hp: 500
-  def: 0
+  def: 20
   size: 0.2
   blood: {fileID: 5086979035932333915, guid: 83b2eb89fe46c6a4db5d18712a94a153, type: 3}
   soldier_name: "\uAC00\uC624\uB098\uC2DC  \uD0B9"

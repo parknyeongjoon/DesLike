@@ -25,15 +25,19 @@ public class BasicGrenadeAttackData : BasicSingleAttackData
         if (targetInfo) { skillPos = targetInfo.transform.position; }
         else { skillPos = Input.mousePosition; }
         Collider2D[] targetColliders = Physics2D.OverlapCircleAll(skillPos, extent, ((int)atkArea * (int)heroInfo.team) ^ ((int)atkArea * 7));
-        if (targetColliders.Length <= max_Target)
+        if(targetColliders.Length == 0)
         {
-            for (int i = 0; i < targetColliders.Length; i++)//¿Ö °æ°í ¶ßÁö?
+            return null;
+        }
+        else if (targetColliders.Length <= max_Target)
+        {
+            for (int i = 0; i < targetColliders.Length; i++)
             {
                 targetInfos[i] = targetColliders[i].GetComponent<CastleInfo>();
-                return targetInfos;
             }
+            return targetInfos;
         }
-        else
+        else if(targetColliders.Length > max_Target)
         {
             bool isTarget = false;
             for (int i = 0; i < max_Target - 1; i++)

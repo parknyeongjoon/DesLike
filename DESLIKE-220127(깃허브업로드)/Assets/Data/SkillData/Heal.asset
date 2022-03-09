@@ -15,7 +15,7 @@ MonoBehaviour:
   code: 5
   skill_name: "\uD790"
   skillType: 0
-  skill_Icon: {fileID: 0}
+  skill_Icon: {fileID: 21300000, guid: 01711fda73aa7f845be2ed67ba5065cd, type: 3}
   cooltime: 3
   mp: 10
   range: 7

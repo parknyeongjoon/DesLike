@@ -30,16 +30,20 @@ public class GrenadeAttackData : ActiveSkillData
         if (targetInfo) { skillPos = targetInfo.transform.position; }
         else { skillPos = MouseManager.Instance.skillPos; }
         Collider2D[] targetColliders = Physics2D.OverlapCircleAll(skillPos, extent, ((int)atkArea * (int)heroInfo.team) ^ ((int)atkArea * 7));
-        if (targetColliders.Length <= max_Target)
+        if(targetColliders.Length == 0)
+        {
+            return null;
+        }
+        else if (targetColliders.Length <= max_Target)
         {
             targetInfos = new HeroInfo[targetColliders.Length];
-            for (int i = 0; i < targetColliders.Length; i++)//왜 경고 뜨지?
+            for (int i = 0; i < targetColliders.Length; i++)
             {
                 targetInfos[i] = targetColliders[i].GetComponent<HeroInfo>();
-                return targetInfos;
             }
+            return targetInfos;
         }
-        else
+        else if(targetColliders.Length > max_Target)
         {
             targetInfos = new HeroInfo[max_Target];
             bool isTarget = false;

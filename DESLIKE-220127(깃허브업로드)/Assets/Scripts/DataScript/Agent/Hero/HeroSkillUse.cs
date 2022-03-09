@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class HeroSkillUse: MonoBehaviour
+public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 구현해야함
 {
     MouseManager mouseManager;
 
@@ -63,7 +63,7 @@ public class HeroSkillUse: MonoBehaviour
 
     void SkillFunc(Skill skillScript)
     {
-        if (CheckMpNCool(skillScript) && heroInfo.action == Soldier_Action.Idle)
+        if (CheckMpNCool(skillScript) && heroInfo.action != Soldier_Action.End_Delay)
         {
             if (skillCoroutine != null) { StopCoroutine(skillCoroutine); }
             skillCoroutine = StartCoroutine(UseSkill(skillScript));
@@ -192,7 +192,7 @@ public class HeroSkillUse: MonoBehaviour
 
     void StopSkillCoroutine()
     {
-        if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape)) && heroInfo.action != Soldier_Action.End_Delay)
+        if (Input.GetKeyDown(KeyCode.Escape) && heroInfo.action != Soldier_Action.End_Delay)
         {
             if (skillCoroutine != null)
             {

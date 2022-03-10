@@ -19,14 +19,16 @@ public class SelectMap : MonoBehaviour
     int curTrack = 0;
 
     [SerializeField] GameObject MyTeamPanel;
-    [SerializeField] GameObject InfoPanel;
+    [SerializeField] GameObject InfoPanel, EventPanel;  // ev- 임시 가림막
     [SerializeField] GameObject[] TrackNode = new GameObject[3];
+    [SerializeField] GameObject[] StartBtn = new GameObject[14];
     [SerializeField] GameObject[] Nodes = new GameObject[14];
     /*
     - 0~3 => 외길 { 0 : 중간 보스; 1 : 마을; 2 : 정비; 3 : 최종 보스 }
     - 4~7 => 두갈래길 { 4,5 : 2_1, 2 전투; 6, 7 : 2_1, 2 이벤트 }
-    - 8~13 => 세갈래길 { 8, 9, 10 : 3_1, 2, 3 전투; 3_1, 2, 3 이벤트 }
+    - 8~13 => 세갈래길 { 8, 9, 10 : 3_1, 2, 3 전투; 11, 12, 12 : 3_1, 2, 3 이벤트 }
     */
+    
 
     public Map map;
     SaveManager saveManager;
@@ -67,6 +69,17 @@ public class SelectMap : MonoBehaviour
         Track[curTrack].SetActive(true);
     }
 
+    void ObjectInactive()   // 맵 초기화
+    {
+        InfoPanel.gameObject.SetActive(false);
+        EventPanel.gameObject.SetActive(false); // 임시
+        for (int i = 0; i < 14; i++)
+        {
+            if (i < 3) TrackNode[i].SetActive(false);  // 길 노드
+            Nodes[i].SetActive(false);
+        }
+    }
+
     void FindData() // 외부 데이터 가져오기
     {
         curDay = saveManager.gameData.map.curDay;
@@ -75,7 +88,7 @@ public class SelectMap : MonoBehaviour
         organCheck = saveManager.gameData.map.organCheck;
         goodsCollection = saveManager.gameData.goodsCollection;
     }
-
+    
     void CommonSetting()    // 공통 세팅
     {
         // hero 체력 가져오기
@@ -83,16 +96,7 @@ public class SelectMap : MonoBehaviour
         CurrentDayText.text = curDay + " / 30";
         MoneyText.text = "- 식량 : " + goodsCollection.food + "\n- 골드 : " + goodsCollection.gold;
     }
-
-    void ObjectInactive()   // 맵 초기화
-    {
-        InfoPanel.gameObject.SetActive(false);
-        for (int i = 0; i < 3; i++)
-        {
-            TrackNode[i].SetActive(false);  // 길 노드
-        }
-    }
-
+    
     void NextEventChoice()  // 0 : 전투, 1 : 이벤트, 2 : 중간 보스, 3 : 마을, 4 : 정비, 5 : 최종 보스
     {
         for (int i = 1; i < 6; i++) // 두,세갈래길 랜덤(전투, 이벤트) 설정
@@ -130,18 +134,24 @@ public class SelectMap : MonoBehaviour
         {
             case 0: // 중간 보스
                 SelText[0].text = "중간 보스";
+                Nodes[0].SetActive(true);
                 // 중간 보스 데이터 세팅
                 break;
             case 1: // 마을
                 SelText[0].text = "마을";
+                Nodes[1].SetActive(true);
+                EventPanel.gameObject.SetActive(true);
                 // 마을 데이터 세팅
                 break;
             case 2: // 정비
                 SelText[0].text = "정비";
+                Nodes[2].SetActive(true);
+                EventPanel.gameObject.SetActive(true);
                 // 정비 데이터 세팅
                 break;
             case 3: // 최종 보스
                 SelText[0].text = "최종 보스";
+                Nodes[3].SetActive(true);
                 // 최종 보스 데이터 세팅
                 break;
             default:
@@ -159,11 +169,14 @@ public class SelectMap : MonoBehaviour
             if (curDay == 0 || selEvnt[i+1] == 0)
             {
                 SelText[i + 1].text = "전투";
+                Nodes[i+4].SetActive(true);
                 // 전투 데이터 세팅
             }
             else
             {
                 SelText[i + 1].text = "이벤트";
+                Nodes[i + 6].SetActive(true);
+                EventPanel.gameObject.SetActive(true);
                 // 이벤트 데이터 세팅
             }
         }
@@ -179,11 +192,14 @@ public class SelectMap : MonoBehaviour
             if (curDay == 0 || selEvnt[i] == 0)
             {
                 SelText[i + 3].text = "전투";
+                Nodes[i + 8].SetActive(true);
                 // 전투 데이터 세팅
             }
             else
             {
                 SelText[i + 3].text = "이벤트";
+                Nodes[i + 11].SetActive(true);
+                EventPanel.gameObject.SetActive(true);
                 // 이벤트 데이터 세팅
             }
         }
@@ -292,7 +308,7 @@ public class SelectMap : MonoBehaviour
                 else nodeNum = 12;
                 break;
         }
-        Nodes[nodeNum].gameObject.SetActive(true);
+        StartBtn[nodeNum].gameObject.SetActive(true);
         InfoPanel.gameObject.SetActive(true);
     }
 
@@ -302,14 +318,15 @@ public class SelectMap : MonoBehaviour
         if(selEvnt[5] == 0)
             nodeNum = 10;    // 전투
         else nodeNum = 13;    // 이벤트
-        Nodes[nodeNum].gameObject.SetActive(true);
+        StartBtn[nodeNum].gameObject.SetActive(true);
         InfoPanel.gameObject.SetActive(true);
     }
     
     public void InfoPanelClose()
     {
         InfoPanel.gameObject.SetActive(false);
-        Nodes[nodeNum].SetActive(false);   // 이벤트 노드
+        EventPanel.gameObject.SetActive(false);
+        StartBtn[nodeNum].SetActive(false);   // 이벤트 노드
     }
 
     public void MyTeamPanelOpen()
@@ -331,6 +348,6 @@ public class SelectMap : MonoBehaviour
         else if (nodeNum <= 10)
             if(nodeNum !=6 && nodeNum !=7)
                 saveManager.gameData.map.curDay += 2;  // 전투 이벤트 2일 추가
-        Nodes[nodeNum].gameObject.SetActive(false);
+        StartBtn[nodeNum].gameObject.SetActive(false);
     }
 }

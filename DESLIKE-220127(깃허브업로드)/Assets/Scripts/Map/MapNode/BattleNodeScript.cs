@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class BattleNodeScript : NodeScript
 {
     BattleNode battleNode;
-    [SerializeField]
-    GameObject BattleNodePanel, previewPrefab;
+    [SerializeField] GameObject BattleNodePanel, previewPrefab;
 
     void Start()
     {
@@ -23,18 +22,17 @@ public class BattleNodeScript : NodeScript
 
     public void See_BattleNode()
     {
-        if (battleNode.isPlayable)
+        Debug.Log("See");
+        List<Option> option = battleNode.enemyPortOption.soldierOption;
+        GameObject createPrefab;
+        // GameManager.DeleteChilds(BattleNodePanel);
+        BattleNodePanel.SetActive(true);
+        for (int i = 0; i < option.Count; i++)
         {
-            List<Option> option = battleNode.enemyPortOption.soldierOption;
-            GameObject createPrefab;
-            // GameManager.DeleteChilds(BattleNodePanel);
-            BattleNodePanel.SetActive(true);
-            for (int i = 0; i < option.Count; i++)
-            {
-                createPrefab = Instantiate(previewPrefab, BattleNodePanel.transform);
-                createPrefab.GetComponent<Image>().sprite = option[i].soldierData.sprite;
-                createPrefab.GetComponentInChildren<Text>().text = option[i].portNum.Length.ToString();
-            }
+            createPrefab = Instantiate(previewPrefab, BattleNodePanel.transform);
+            createPrefab.transform.position = new Vector3((i % 5) * 70 - 210, 160 - 70 * (i / 5), 0); // 6개가 넘어가면 다음 줄로
+            createPrefab.GetComponent<Image>().sprite = option[i].soldierData.sprite;
+            createPrefab.GetComponentInChildren<Text>().text = option[i].portNum.Length.ToString();
         }
     }
 

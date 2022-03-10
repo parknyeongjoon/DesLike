@@ -22,6 +22,7 @@ public class HealerBehaviour : SoldierBasic
 
     protected override IEnumerator Idle_Behaviour()
     {
+        heroInfo.action = Soldier_Action.Idle;
         while (heroInfo.state == Soldier_State.Idle)
         {
             heroInfo.state = Soldier_State.Detect;
@@ -56,19 +57,27 @@ public class HealerBehaviour : SoldierBasic
     {
         while(heroInfo.state == Soldier_State.Battle)
         {
-            if (heroInfo.action == Soldier_Action.Charge)
-            {
-                if (isSkillActive.Invoke())
-                {
-                    heroInfo.action = Soldier_Action.Idle;
-                }
-            }
-            else if (canSkill != null && canSkill.Invoke())
+            if (canSkill != null && canSkill.Invoke())
             {
                 yield return StartCoroutine(skillHandler?.Invoke(heroInfo.skillTargetInfo as HeroInfo));
-                heroInfo.action = Soldier_Action.Charge;
+                heroInfo.state = Soldier_State.Charge;
             }
             else
+            {
+                heroInfo.state = Soldier_State.Idle;
+            }
+            yield return new WaitForFixedUpdate();
+        }
+        if(heroInfo.state == Soldier_State.Idle) { StartCoroutine(Idle_Behaviour()); }
+        else if(heroInfo.state == Soldier_State.Charge) { StartCoroutine(Charge_Behaviour()); }
+    }
+
+    protected override IEnumerator Charge_Behaviour()
+    {
+        while(heroInfo.state == Soldier_State.Charge)
+        {
+            if (heroInfo.action != Soldier_Action.Move) { StartCoroutine(Move(heroInfo.skillTarget.transform.position - new Vector3(2, 0, 0))); }
+            if (isSkillActive.Invoke())
             {
                 heroInfo.state = Soldier_State.Idle;
             }

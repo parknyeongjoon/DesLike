@@ -61,9 +61,12 @@ public class SoldierPanel : MonoBehaviour
         GameManager.DeleteChilds(buffPanel);
         foreach (string code in soldierInfo.buffCoroutine.Keys)
         {
-            buffImg.sprite = SaveManager.Instance.dataSheet.skillDataSheet[code].skill_Icon;
-            buffDic.Add(code, Instantiate(buffObject, buffPanel.transform));
-            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.buffCoroutine[code].Count.ToString();
+            if(soldierInfo.buffCoroutine[code].Count != 0)
+            {
+                buffImg.sprite = SaveManager.Instance.dataSheet.skillDataSheet[code].skill_Icon;
+                buffDic.Add(code, Instantiate(buffObject, buffPanel.transform));
+                buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.buffCoroutine[code].Count.ToString();
+            }
         }
         RenewalSoldierPanel();
         RenewalSkillPanel();

@@ -41,8 +41,8 @@ public class BattleNodeScript : NodeScript
                 createPrefab = Instantiate(InfoPrefab, InfoTemp.transform);
                 createPrefab.GetComponent<RectTransform>().position = new Vector3(330, 440 - 70 * i, 0); // 3줄
                 createPrefab.GetComponentInChildren<Image>().sprite = option[i].soldierData.sprite;
-                createPrefab.GetComponentInChildren<Text>().text = "총 유닛 수 : " 
-                    + option[i].portNum.Length.ToString() + "마리";
+                createPrefab.GetComponentInChildren<Text>().text = "총 유닛 포트 : " 
+                    + option[i].portNum.Length.ToString() + "포트";
             }
         }
     }
@@ -57,7 +57,7 @@ public class BattleNodeScript : NodeScript
         for (int i = 0; i < option.Count; i++)  // 병력 전체 정렬
         {
             createPrefab = Instantiate(MorePrefab, MoreTemp.transform);
-            createPrefab.GetComponent<RectTransform>().position = new Vector3((i % 5) * 27 + 369, 435 - 27 * (i / 5), 0); // 5개가 넘어가면 다음 줄로
+            createPrefab.GetComponent<RectTransform>().position = new Vector3((i % 5) * 90 + 369, 435 - 27 * (i / 5), 0); // 5개가 넘어가면 다음 줄로
             createPrefab.GetComponentInChildren<Image>().sprite = option[i].soldierData.sprite;
             createPrefab.GetComponentInChildren<Text>().text = option[i].portNum.Length.ToString();
         }

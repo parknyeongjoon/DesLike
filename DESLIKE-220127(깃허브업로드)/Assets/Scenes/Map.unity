@@ -560,7 +560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &33533290
 RectTransform:
   m_ObjectHideFlags: 0
@@ -705,7 +705,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &40504602
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3274,7 +3274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &294811015
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4917,6 +4917,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3963912957987146594, guid: 3e18a405e47e1db478ef2d0dd1a2d404,
         type: 3}
+      propertyPath: mapNode
+      value: 
+      objectReference: {fileID: 11400000, guid: b1d6d1616310d8e43b29432d3085164a,
+        type: 2}
+    - target: {fileID: 3963912957987146594, guid: 3e18a405e47e1db478ef2d0dd1a2d404,
+        type: 3}
       propertyPath: InfoTemp
       value: 
       objectReference: {fileID: 1643093304}
@@ -6267,7 +6273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &529252561
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13038,7 +13044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1089357187
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14396,6 +14402,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9142552}
     m_Modifications:
+    - target: {fileID: 3963912957987146594, guid: 3e18a405e47e1db478ef2d0dd1a2d404,
+        type: 3}
+      propertyPath: mapNode
+      value: 
+      objectReference: {fileID: 11400000, guid: 70e3128dbecde584491713c2aeb3f1ba,
+        type: 2}
     - target: {fileID: 3963912957987146594, guid: 3e18a405e47e1db478ef2d0dd1a2d404,
         type: 3}
       propertyPath: InfoTemp
@@ -16437,7 +16449,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2061028761}
         m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: See_More
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17170,7 +17182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1501892120
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21085,6 +21097,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3963912957987146594, guid: 3e18a405e47e1db478ef2d0dd1a2d404,
         type: 3}
+      propertyPath: mapNode
+      value: 
+      objectReference: {fileID: 11400000, guid: 028c16eab3acba34fba04a80fd4cfb59,
+        type: 2}
+    - target: {fileID: 3963912957987146594, guid: 3e18a405e47e1db478ef2d0dd1a2d404,
+        type: 3}
       propertyPath: InfoTemp
       value: 
       objectReference: {fileID: 1643093304}
@@ -23041,6 +23059,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1259625699}
     m_Modifications:
+    - target: {fileID: 3963912957987146594, guid: 3e18a405e47e1db478ef2d0dd1a2d404,
+        type: 3}
+      propertyPath: mapNode
+      value: 
+      objectReference: {fileID: 11400000, guid: 9a840319facb6c0408d35210516426c8,
+        type: 2}
     - target: {fileID: 3963912957987146594, guid: 3e18a405e47e1db478ef2d0dd1a2d404,
         type: 3}
       propertyPath: InfoTemp

@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: BattleNode 0,1
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
-  isNode: 0
+  isNode: 1
   isPlayable: 1
   isPath: 000000
+  eventableDot: 000000000000000000000000
   isVisited: 0
   rewardSoldierList:
   - {fileID: 11400000, guid: d71aa34aaed1ae748b8acaabf4eea2eb, type: 2}
@@ -27,9 +28,14 @@ MonoBehaviour:
   rewardRelicList:
   - {fileID: 4835315866048107822, guid: bdc55f89b7fc82046a549df921abb5dc, type: 3}
   reward:
-    soldierData: {fileID: 11400000, guid: a29c1d8c1343ac342b7934d4fa64b8d3, type: 2}
-    remainReward: 0
+    soldierReward:
+      soldier: {fileID: 0}
+      remain: 0
+      mutant: {fileID: 0}
     relic: {fileID: 4835315866048107822, guid: bdc55f89b7fc82046a549df921abb5dc, type: 3}
+    gold: 0
+    scrap: 0
+    magicalStone: 0
   x: 0
   y: 1
   enemyPortsOptions:
@@ -39,5 +45,6 @@ MonoBehaviour:
   challengeList:
   - {fileID: 11400000, guid: b1631dcc2b64c9548b4049199e2900f1, type: 2}
   - {fileID: 11400000, guid: 55a8da69afcd3ca44aab384d9d983744, type: 2}
-  challengeOption: {fileID: 0}
+  challengeOption: {fileID: 11400000, guid: b1631dcc2b64c9548b4049199e2900f1, type: 2}
   enemyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
+  isChallenge: 0

@@ -5137,7 +5137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Hero_Img: {fileID: 7235609801294035768}
   Start_Btn: {fileID: 4760406436434542130}
-  previewPrefab: {fileID: 3873672435639752891, guid: df8b68f18a615de489130525d8ebd1db,
+  previewPrefab: {fileID: 3873672435639752891, guid: 1997a686e47a0f848a5660e9c15d0586,
     type: 3}
   optionPreviewPanel: {fileID: 1152225646}
   heroDetailPanel: {fileID: 186210380}

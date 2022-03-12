@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SelectMap : MonoBehaviour
 {
     public GameObject[] Track = new GameObject[3];
-    [SerializeField] Text HPText, CurrentDayText, MoneyText;
-    [SerializeField] Text[] SelText = new Text[6]; // 0 : 1_1 / 1,2 : 2_1, 2 / 3, 4, 5 = 3_1, 2, 3 
+    [SerializeField] TMP_Text HPText, CurrentDayText, MoneyText;
+    [SerializeField] TMP_Text[] SelText = new TMP_Text[6]; // 0 : 1_1 / 1,2 : 2_1, 2 / 3, 4, 5 = 3_1, 2, 3 
     GameObject hero;
     HeroInfo heroInfo;
 

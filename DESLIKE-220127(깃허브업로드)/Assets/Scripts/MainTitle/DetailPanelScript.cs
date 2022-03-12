@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 //scriptable로 건들여보기
 public class DetailPanelScript : MonoBehaviour
 {
     public Image soldier_Img;
-    public Text soldier_name, atk_Type, def_Type, tribe, hp, mp, range, atk, def, rarity, cost;
+    public TMP_Text soldier_name, atk_Type, def_Type, tribe, hp, mp, range, atk, def, rarity, cost;
 
     public void Set_DetailPanel(SoldierData soldierData)//궁수와 힐러 케이스 추가
     {

@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Rullet : MonoBehaviour
 {
     [SerializeField]
     Button rollBtn, endBtn;
     [SerializeField]
-    Text rollBtn_Text, EndButton;
+    TMP_Text rollBtn_Text, EndButton;
     [SerializeField]
     RectTransform rulletTransform;
 

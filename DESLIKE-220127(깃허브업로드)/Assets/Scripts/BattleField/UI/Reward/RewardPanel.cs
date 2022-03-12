@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class RewardPanel : MonoBehaviour
 {
@@ -19,13 +20,13 @@ public class RewardPanel : MonoBehaviour
         createBtn = Instantiate(rewardSoldierBtnPrefab, transform);
         createBtn.GetComponent<SoldierRewardBtn>().soldierCode = reward.soldierReward.soldier.code;
         createBtn.GetComponent<SoldierRewardBtn>().soldierRemain = reward.soldierReward.remain;
-        createBtn.transform.GetChild(0).GetComponent<Text>().text = reward.soldierReward.soldier.soldier_name.ToString();
+        createBtn.transform.GetChild(0).GetComponent<TMP_Text>().text = reward.soldierReward.soldier.soldier_name.ToString();
         createBtn.transform.GetChild(1).GetComponent<Image>().sprite = reward.soldierReward.soldier.sprite;
         //relicBtn
         RelicData relicData = reward.relic.GetComponent<Relic>().relicData;
         createBtn = Instantiate(rewardRelicBtnPrefab, transform);
         createBtn.GetComponent<RelicRewardBtn>().relic = reward.relic;
-        createBtn.transform.GetChild(0).GetComponent<Text>().text = relicData.relicName.ToString();
+        createBtn.transform.GetChild(0).GetComponent<TMP_Text>().text = relicData.relicName.ToString();
         createBtn.transform.GetChild(1).GetComponent<Image>().sprite = relicData.relicImg;
     }
 }

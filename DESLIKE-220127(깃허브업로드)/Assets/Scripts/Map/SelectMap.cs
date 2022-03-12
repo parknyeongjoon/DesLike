@@ -28,7 +28,6 @@ public class SelectMap : MonoBehaviour
     - 8~13 => 세갈래길 { 8, 9, 10 : 3_1, 2, 3 전투; 11, 12, 12 : 3_1, 2, 3 이벤트 }
     */
     
-
     public Map map;
     SaveManager saveManager;
 
@@ -126,8 +125,7 @@ public class SelectMap : MonoBehaviour
             }
         }
     }
-
-   
+    
     void OneTrackSet()  // 외길 세팅
     {
         TrackNode[0].SetActive(true);
@@ -311,8 +309,7 @@ public class SelectMap : MonoBehaviour
         InfoPanel.gameObject.SetActive(true);
         StartBtn[nodeNum].gameObject.SetActive(true);
     }
-
-
+    
     public void Button3()
     {
         if(selEvnt[5] == 0)

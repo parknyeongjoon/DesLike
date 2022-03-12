@@ -51,7 +51,6 @@ public class BattleUIManager : MonoBehaviour
                 SetMidPanel(3);
             }
         }
-        
     }
 
     public static BattleUIManager Instance

@@ -5,10 +5,7 @@ using UnityEngine.UI;
 
 public class NodeScript : MonoBehaviour
 {
-    [SerializeField]
-    Image[] path;
-    [SerializeField]
-    MapNode mapNode;
+    [SerializeField] MapNode mapNode;
 
     protected Image nodeImg;
 
@@ -29,16 +26,7 @@ public class NodeScript : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
-        else
-        {
-            for (int i = 0; i < 3; i++)
-            {
-                if (!MapNode.isPath[i])
-                {
-                    path[i].gameObject.SetActive(false);
-                }
-            }
-        }
+       
         nodeImg = transform.GetComponent<Image>();
         if (gameObject.activeSelf)
         {

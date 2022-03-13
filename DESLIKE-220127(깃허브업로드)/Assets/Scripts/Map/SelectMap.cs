@@ -11,7 +11,7 @@ public class SelectMap : MonoBehaviour
     HeroInfo heroInfo;
 
     int curDay = 0; // 현재 날짜
-    bool midBossCheck = false, villageCheck = false, organCheck = false; // 중간 보스, 마을, 정비 여부
+    bool midBossCheck1 = false, midBossCheck2 = false, villageCheck = false, organCheck = false; // 중간 보스, 마을, 정비 여부
     int[] selDay = new int[3];
     int[] selEvnt = new int[6]; // 0 : 1_1 / 1, 2 : 2_1, 2 / 3, 4, 5 : 3_1, 2, 3
     int nodeNum;   // 노드 지정용(selEvnt[nodeNum]용)
@@ -27,7 +27,8 @@ public class SelectMap : MonoBehaviour
     - 4~7 => 두갈래길 { 4,5 : 2_1, 2 전투; 6, 7 : 2_1, 2 이벤트 }
     - 8~13 => 세갈래길 { 8, 9, 10 : 3_1, 2, 3 전투; 11, 12, 12 : 3_1, 2, 3 이벤트 }
     */
-    
+
+    [SerializeField] BattleNode[] BattleNodes;   
     public Map map;
     SaveManager saveManager;
 
@@ -80,7 +81,8 @@ public class SelectMap : MonoBehaviour
     void FindData() // 외부 데이터 가져오기
     {
         curDay = saveManager.gameData.map.curDay;
-        midBossCheck = saveManager.gameData.map.midBossCheck;
+        midBossCheck1 = saveManager.gameData.map.midBossCheck1;
+        midBossCheck2 = saveManager.gameData.map.midBossCheck2;
         villageCheck = saveManager.gameData.map.villageCheck;
         organCheck = saveManager.gameData.map.organCheck;
         goodsCollection = saveManager.gameData.goodsCollection;
@@ -101,28 +103,31 @@ public class SelectMap : MonoBehaviour
     {
         for (int i = 1; i < 6; i++) // 두,세갈래길 랜덤(전투, 이벤트) 설정
             selEvnt[i] = Random.Range(0, 2);
-        
-        if (curDay >= 14)
+
+        if (curDay >= 10 && midBossCheck1 == false)    // 중간 보스 라운드
         {
-            if (midBossCheck == false)    // 중간 보스 라운드
+            selEvnt[0] = 2;
+            saveManager.gameData.map.midBossCheck1 = true;
+        }
+        else if (curDay >= 15 && villageCheck == false)
+        {
+            selEvnt[0] = 3;
+            saveManager.gameData.map.villageCheck = true;
+        }
+        else if (curDay >= 20 && midBossCheck2 == false)
+        {
+            selEvnt[0] = 2;
+            saveManager.gameData.map.midBossCheck2 = true;
+
+        }
+        else if (curDay >= 29 && villageCheck == true)  // 정비 라운드
+        {
+            if (organCheck == false)
             {
-                selEvnt[0] = 2;
-                saveManager.gameData.map.midBossCheck = true;
+                selEvnt[0] = 4;
+                saveManager.gameData.map.organCheck = true;
             }
-            else if (villageCheck == false)
-            {
-                selEvnt[0] = 3;
-                saveManager.gameData.map.villageCheck = true;
-            }
-            else if (curDay >= 29 && villageCheck == true)  // 정비 라운드
-            {
-                if (organCheck == false)
-                {
-                    selEvnt[0] = 4;
-                    saveManager.gameData.map.organCheck = true;
-                }
-                else selEvnt[0] = 5;
-            }
+            else selEvnt[0] = 5;
         }
     }
     

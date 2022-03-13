@@ -22,7 +22,7 @@ public class Map : ScriptableObject
 
     public int curStage = 0;
     public int curDay;  // 추가(by 시후), 맵 날짜 체크용
-    public bool midBossCheck = false, villageCheck = false, organCheck = false; // 중간 보스, 마을, 정비 여부
+    public bool midBossCheck1 = false, midBossCheck2 = false, villageCheck = false, organCheck = false; // 중간 보스, 마을, 정비 여부
     
     public void MapClear()
     {

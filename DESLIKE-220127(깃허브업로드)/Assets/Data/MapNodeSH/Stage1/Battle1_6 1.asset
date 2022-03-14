@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6fbcdd9962f05c546a8d6d52f8dd09bc, type: 3}
-  m_Name: BattleNode 0,0
+  m_Name: Battle1_6 1
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
   isNode: 1
@@ -19,10 +19,8 @@ MonoBehaviour:
   eventableDot: 000000000000000000000000
   isVisited: 0
   rewardSoldierList:
-  - {fileID: 11400000, guid: a29c1d8c1343ac342b7934d4fa64b8d3, type: 2}
   - {fileID: 11400000, guid: 505df875aa52d6c429dc1729c124a209, type: 2}
-  - {fileID: 11400000, guid: 790abeee750e88647a10efc6bb80386d, type: 2}
-  - {fileID: 11400000, guid: af820736225c7c64bacdd0238f6182ab, type: 2}
+  - {fileID: 11400000, guid: a29c1d8c1343ac342b7934d4fa64b8d3, type: 2}
   - {fileID: 11400000, guid: 8f5bd6d443eb5714780da0f9b57c6d86, type: 2}
   rewardRelicList:
   - {fileID: 4835315866048107822, guid: bdc55f89b7fc82046a549df921abb5dc, type: 3}
@@ -40,10 +38,10 @@ MonoBehaviour:
   enemyPortsOptions:
   - {fileID: 11400000, guid: 873738ffde2fb3b44b4660d7cd20a6c7, type: 2}
   - {fileID: 11400000, guid: 8e79fe8a14ef79349ad33bc1738c96f3, type: 2}
-  enemyPortOption: {fileID: 11400000, guid: 873738ffde2fb3b44b4660d7cd20a6c7, type: 2}
+  enemyPortOption: {fileID: 11400000, guid: 8e79fe8a14ef79349ad33bc1738c96f3, type: 2}
   challengeList:
   - {fileID: 11400000, guid: b1631dcc2b64c9548b4049199e2900f1, type: 2}
   - {fileID: 11400000, guid: 55a8da69afcd3ca44aab384d9d983744, type: 2}
-  challengeOption: {fileID: 11400000, guid: 55a8da69afcd3ca44aab384d9d983744, type: 2}
+  challengeOption: {fileID: 0}
   enemyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
   isChallenge: 0

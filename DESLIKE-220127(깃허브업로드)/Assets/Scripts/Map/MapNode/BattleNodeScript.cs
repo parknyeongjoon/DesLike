@@ -8,7 +8,8 @@ public class BattleNodeScript : NodeScript
 {
     BattleNode battleNode;
     [SerializeField] GameObject InfoPanel, InfoTemp, InfoPrefab, MoreInfoPanel, MoreTemp, MorePrefab;
-
+    SaveManager saveManager;
+    
     void Start()
     {
         battleNode = (BattleNode)MapNode;
@@ -23,8 +24,16 @@ public class BattleNodeScript : NodeScript
 
     public void Play_BattleNode()
     {
+        // saveManager.gameData.map.curDay += 2;  // 전투 이벤트 2일 추가
         battleNode.Play_BattleNode();
     }
+
+    public void Play_BossNode()
+    {
+        // saveManager.gameData.map.curDay += 1;  // 전투 이벤트 1일 추가
+        battleNode.Play_BattleNode();
+    }
+
 
     public void See_InfoPanel()
     {
@@ -34,12 +43,11 @@ public class BattleNodeScript : NodeScript
         GameManager.DeleteChilds(InfoTemp);
         for (int i = 0; i < option.Count; i++) // 주요 병력 3개만 보여주기
         {
-            // 병력 전투력순 정렬
+            // 병력 전투력순 정렬 필요
             // 주요 병력 3개 고르기
             if (i < 3)
             {
                 createPrefab = Instantiate(InfoPrefab, InfoTemp.transform);
-                createPrefab.GetComponent<RectTransform>().position = new Vector3(330, 440 - 70 * i, 0); // 3줄
                 createPrefab.GetComponentInChildren<Image>().sprite = option[i].soldierData.sprite;
                 createPrefab.GetComponentInChildren<TMP_Text>().text = "총 유닛 포트 : " 
                     + option[i].portNum.Length.ToString() + "포트";
@@ -56,7 +64,6 @@ public class BattleNodeScript : NodeScript
         for (int i = 0; i < option.Count; i++)  // 병력 전체 정렬
         {
             createPrefab = Instantiate(MorePrefab, MoreTemp.transform);
-            createPrefab.GetComponent<RectTransform>().position = new Vector3((i % 5) * 90 + 369, 435 - 27 * (i / 5), 0); // 5개가 넘어가면 다음 줄로
             createPrefab.GetComponentInChildren<Image>().sprite = option[i].soldierData.sprite;
             createPrefab.GetComponentInChildren<TMP_Text>().text = option[i].portNum.Length.ToString();
         }

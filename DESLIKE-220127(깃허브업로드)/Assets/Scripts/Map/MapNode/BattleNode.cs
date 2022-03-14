@@ -29,28 +29,26 @@ public class BattleNode : MapNode
 
     public void Play_BattleNode()
     {
-        //  if (isPlayable) {   => ¸Ê ±¸¼º ¹Ù²î¸é¼­ ÇÊ¿ä¾ø¾îÁü
-            List<Option> option = enemyPortOption.soldierOption;
-            for (int i = 0; i < 50; i++)
+        List<Option> option = enemyPortOption.soldierOption;
+        for (int i = 0; i < 50; i++)
+        {
+            enemyPortDatas.portDatas[i].soldierCode = null;
+        }
+        enemyPortDatas.activeSoldierList = new Dictionary<string, SoldierData>();
+        for (int i = 0; i < option.Count; i++)
+        {
+            SoldierData tempSoldier = Instantiate(option[i].soldierData);
+            if (option[i].mutant)
             {
-                enemyPortDatas.portDatas[i].soldierCode = null;
+                tempSoldier.mutant = option[i].mutant;
             }
-            enemyPortDatas.activeSoldierList = new Dictionary<string, SoldierData>();
-            for (int i = 0; i < option.Count; i++)
+            enemyPortDatas.activeSoldierList.Add(tempSoldier.code, tempSoldier);
+            for (int j = 0; j < option[i].portNum.Length; j++)
             {
-                SoldierData tempSoldier = Instantiate(option[i].soldierData);
-                if (option[i].mutant)
-                {
-                    tempSoldier.mutant = option[i].mutant;
-                }
-                enemyPortDatas.activeSoldierList.Add(tempSoldier.code, tempSoldier);
-                for (int j = 0; j < option[i].portNum.Length; j++)
-                {
-                    enemyPortDatas.portDatas[option[i].portNum[j]].soldierCode = tempSoldier.code;
-                }
+                enemyPortDatas.portDatas[option[i].portNum[j]].soldierCode = tempSoldier.code;
             }
-            map.curMapNode = this;
-            SceneManager.LoadScene("Battle Field");
-        //  }
+        }
+        map.curMapNode = this;
+        SceneManager.LoadScene("Battle Field");
     }
 }

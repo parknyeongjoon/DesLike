@@ -64,7 +64,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a9855a2d6caa4cb4ebcbe97e0203abd4, type: 2}
   - {fileID: 11400000, guid: b1038c5b3cf46f146af05f6cd9b79eba, type: 2}
   spawnSoldierList: []
-  cur_producetime: 5
+  cur_producetime: -0.0020461474
   produceTime: 5
-  round: 0
+  round: 1
   max_round: 1

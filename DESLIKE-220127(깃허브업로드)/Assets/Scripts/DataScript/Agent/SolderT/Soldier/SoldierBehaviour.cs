@@ -39,8 +39,7 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
             yield return new WaitForFixedUpdate();
         }
         StopCoroutine(detectCoroutine);
-        if(heroInfo.state == Soldier_State.Siege) { StartCoroutine(Siege_Behaviour()); }
-        else if(heroInfo.state == Soldier_State.Battle) { StartCoroutine(Battle_Behaviour()); }
+        if(heroInfo.state == Soldier_State.Battle) { StartCoroutine(Battle_Behaviour()); }
     }
 
     protected IEnumerator Detect()
@@ -51,21 +50,6 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
             skillDetect?.Invoke();
             yield return new WaitForSeconds(0.1f);
         }
-    }
-
-    protected override IEnumerator Siege_Behaviour()
-    {
-        Coroutine detectCoroutine = StartCoroutine(Detect());
-        while (heroInfo.state == Soldier_State.Siege)
-        {
-            if(canAtk != null && canAtk.Invoke())
-            {
-                yield return StartCoroutine(atkHandler?.Invoke(heroInfo.targetInfo));
-            }
-            yield return new WaitForFixedUpdate();
-        }
-        StopCoroutine(detectCoroutine);
-        if(heroInfo.state == Soldier_State.Battle) { StartCoroutine(Battle_Behaviour()); }
     }
 
     protected override IEnumerator Battle_Behaviour()

@@ -56,7 +56,7 @@ public class ActiveSkill : Skill
             heroInfo.skillTarget = heroInfo.FindNearestSoldier(targets);
             if (heroInfo.TargetCheck(heroInfo.skillTarget, ((ActiveSkillData)skillData).range + 2))
             {
-                if (heroInfo.skillTarget.tag != "Castle") { heroInfo.state = Soldier_State.Battle; }
+                heroInfo.state = Soldier_State.Battle;
                 heroInfo.skillTargetInfo = heroInfo.skillTarget.GetComponent<HeroInfo>();
             }
         }

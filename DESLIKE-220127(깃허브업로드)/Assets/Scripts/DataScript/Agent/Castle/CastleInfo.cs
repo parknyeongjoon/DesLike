@@ -19,7 +19,7 @@ public class CastleInfo : MonoBehaviour
         cur_Hp = castleData.hp;
     }
 
-    public void Die()
+    public void Die()//DeadBehaviour로 넘겨버리기
     {
         if (beforeDeadHandler != null)
         {
@@ -34,7 +34,7 @@ public class CastleInfo : MonoBehaviour
 
     public virtual void OnDamaged(float damage)
     {
-        cur_Hp -= (damage - castleData.def);
+        cur_Hp -= (damage - castleData.def);//버프 스탯 넣기, 수식 설정하기
         if (castleData.blood != null)
         {
             StartCoroutine(Bleeding());

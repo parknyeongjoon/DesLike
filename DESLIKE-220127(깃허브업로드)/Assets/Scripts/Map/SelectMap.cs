@@ -20,8 +20,16 @@ public class SelectMap : MonoBehaviour
     [SerializeField] GameObject MyTeamPanel, MorePanel;
     [SerializeField] GameObject InfoPanel;
     [SerializeField] GameObject[] TrackNode = new GameObject[3];
-    [SerializeField] GameObject[] StartBtn = new GameObject[6]; // 0 : 1_1 / 1, 2 : 2_1, 2 / 3, 4, 5 : 3_1, 2, 3
-                                                              
+    // [SerializeField] GameObject[] StartBtn = new GameObject[6]; // 0 : 1_1 / 1, 2 : 2_1, 2 / 3, 4, 5 : 3_1, 2, 3
+    [SerializeField] GameObject[] Button1_1;    // 0-2 1차 중간 / 3-5 2차 중간 / 6-8 최종 / 9 마을 / 10 정비
+    [SerializeField] GameObject[] Button2_1;
+    [SerializeField] GameObject[] Button2_2;
+    [SerializeField] GameObject[] Button3_1;
+    [SerializeField] GameObject[] Button3_2;
+    [SerializeField] GameObject[] Button3_3;
+    [SerializeField] GameObject[] EventButton;
+    [SerializeField] GameObject[] Title;    // 0 전투 / 1 이벤트
+
     [SerializeField] BattleNodeScript[] S1T1B1; // Stage1, Track1, Button1
     [SerializeField] BattleNodeScript[] S1T2B1; // Stage1, Track2, Button1
     [SerializeField] BattleNodeScript[] S1T2B2; // Stage1, Track2, Button2
@@ -36,6 +44,7 @@ public class SelectMap : MonoBehaviour
 
     [SerializeField] PortDatas portDatas;
     GoodsCollection goodsCollection;
+    int selectNum = 0;
 
     void Start()
     {
@@ -221,7 +230,6 @@ public class SelectMap : MonoBehaviour
 
     void BattleNodeSet(int btn)
     {
-        Debug.Log(curStage);
         switch (curStage)
         {
             case 0: // 스테이지1
@@ -281,29 +289,127 @@ public class SelectMap : MonoBehaviour
 
     public void Button1()
     {
-        if (curTrack == 0) StartBtn[0].gameObject.SetActive(true);   // 1트랙
-        else if (curTrack == 1) StartBtn[1].gameObject.SetActive(true); // 2트랙
-        else StartBtn[3].gameObject.SetActive(true);    // 3트랙
-        InfoPanel.gameObject.SetActive(true);
+        selectNum = 1;
+        InfoPanel.SetActive(true);
+        if (curTrack == 0) // 1트랙
+        {
+            switch (selEvnt[0] - 2)
+            {
+                case 0: // 1차 중간 보스
+                    Button1_1[nextEvent[0]].SetActive(true);
+                    Title[0].gameObject.SetActive(true);
+                    break;
+
+                case 1: // 마을
+                    Button1_1[9].SetActive(true);
+                    break;
+
+                case 2: // 2차 중간 보스
+                    Button1_1[nextEvent[0] + 3].SetActive(true);
+                    Title[0].gameObject.SetActive(true);
+                    break;
+
+                case 3: // 정비
+                    Button1_1[10].SetActive(true);
+                    break;
+
+                case 4: // 최종 보스
+                    Button1_1[nextEvent[0] + 6].SetActive(true);
+                    Title[0].gameObject.SetActive(true);
+                    break;
+            }
+        }
+
+        else if (curTrack == 1) // 2트랙
+        {
+            if (curDay == 0 || selEvnt[1] == 0)
+            {
+                Button2_1[nextEvent[0] + 3 * (curDay / 5)].SetActive(true);
+                Title[0].SetActive(true);
+            }
+            else
+            {
+                EventButton[0].SetActive(true);
+                Title[1].SetActive(true);
+            }
+        }
+        else    // 3트랙
+        {
+            if (curDay == 0 || selEvnt[3] == 0)
+            {
+                Button3_1[nextEvent[0] + 3 * (curDay / 5)].SetActive(true);
+                Title[0].SetActive(true);
+            }
+            else
+            {
+                EventButton[2].SetActive(true);
+                Title[1].SetActive(true);
+            }
+        }
     }
 
     public void Button2()
     {
-        if (curTrack == 1) StartBtn[2].gameObject.SetActive(true); // 2트랙
-        else StartBtn[4].gameObject.SetActive(true);    // 3트랙
-        InfoPanel.gameObject.SetActive(true);
+        selectNum = 2;
+        InfoPanel.SetActive(true);
+        if (curTrack == 1) // 2_2
+        {
+            if (curDay == 0 || selEvnt[2] == 0)
+            {
+                Button2_2[nextEvent[0] + 3 * (curDay / 5)].SetActive(true);
+                Title[0].SetActive(true);
+            }
+            else
+            {
+                EventButton[1].SetActive(true);
+                Title[1].SetActive(true);
+            }
+        }
+        else    // 3_2
+        {
+            if (curDay == 0 || selEvnt[4] == 0)
+            {
+                Button3_2[nextEvent[0] + 3 * (curDay / 5)].SetActive(true);
+                Title[0].SetActive(true);
+            }
+            else
+            {
+                EventButton[3].SetActive(true);
+                Title[1].SetActive(true);
+
+            }
+        }
     }
-    
+
     public void Button3()
     {
-        StartBtn[5].gameObject.SetActive(true);    // 3트랙
-        InfoPanel.gameObject.SetActive(true);
-    }
+        selectNum = 3;            
+        InfoPanel.SetActive(true);
+        if (curDay == 0 || selEvnt[5] == 0)
+        {
+            Button3_3[nextEvent[0] + 3 * (curDay / 5)].SetActive(true);
+            Title[0].SetActive(true);
+        }
+        else
+        {
+            EventButton[4].SetActive(true);
+            Title[1].SetActive(true);
+        }
+     }
 
     public void InfoPanelClose()
     {
-        for(int i = 0; i<6; i++)
-            StartBtn[i].SetActive(false); 
+        
+        for(int i = 0; i<18; i++)
+        {
+            if (i < 2) Title[i].SetActive(false);
+            if (i < 11) Button1_1[i].SetActive(false);
+            Button2_1[i].SetActive(false);
+            Button2_2[i].SetActive(false);
+            Button3_1[i].SetActive(false);
+            Button3_2[i].SetActive(false);
+            Button3_3[i].SetActive(false);
+        }
         InfoPanel.gameObject.SetActive(false);
     }
 
@@ -325,6 +431,23 @@ public class SelectMap : MonoBehaviour
     public void GameStart()
     {
         map.level = curDay;
+        switch(curTrack)    // curDay 추가
+        {
+            case 0:
+                if (selEvnt[0] % 2 == 0)
+                    saveManager.gameData.map.curDay += 2;
+                break;
+
+            case 1: // 2트랙
+                if (curDay == 0 || selEvnt[selectNum] == 0)
+                    saveManager.gameData.map.curDay += 2;
+                break;
+
+            case 2: // 3트랙
+                if (curDay == 0 || selEvnt[selectNum+2] == 0)
+                    saveManager.gameData.map.curDay += 2;
+                break;
+        }
         InfoPanelClose();
     }
 }

@@ -29,7 +29,8 @@ public class BattleNode : MapNode
 
     public void Play_BattleNode()
     {
-        List<Option> option = enemyPortOption.soldierOption;
+        List<Option> option = new List<Option>();
+        option = enemyPortOption.soldierOption;
         for (int i = 0; i < 50; i++)
         {
             enemyPortDatas.portDatas[i].soldierCode = null;

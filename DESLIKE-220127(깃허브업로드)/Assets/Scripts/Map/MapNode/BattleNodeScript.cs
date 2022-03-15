@@ -24,13 +24,11 @@ public class BattleNodeScript : NodeScript
 
     public void Play_BattleNode()
     {
-        // saveManager.gameData.map.curDay += 2;  // 전투 이벤트 2일 추가
         battleNode.Play_BattleNode();
     }
 
     public void Play_BossNode()
     {
-        // saveManager.gameData.map.curDay += 1;  // 전투 이벤트 1일 추가
         battleNode.Play_BattleNode();
     }
 
@@ -38,7 +36,8 @@ public class BattleNodeScript : NodeScript
     public void See_InfoPanel()
     {
         InfoPanel.SetActive(true);
-        List<Option> option = battleNode.enemyPortOption.soldierOption;
+        List<Option> option = new List<Option>();
+        option = battleNode.enemyPortOption.soldierOption;
         GameObject createPrefab;
         GameManager.DeleteChilds(InfoTemp);
         for (int i = 0; i < option.Count; i++) // 주요 병력 3개만 보여주기
@@ -58,7 +57,8 @@ public class BattleNodeScript : NodeScript
     public void See_More()
     {
         MoreInfoPanel.SetActive(true);
-        List<Option> option = battleNode.enemyPortOption.soldierOption;
+        List<Option> option = new List<Option>();
+        option = battleNode.enemyPortOption.soldierOption;
         GameObject createPrefab;
         GameManager.DeleteChilds(MoreTemp);
         for (int i = 0; i < option.Count; i++)  // 병력 전체 정렬

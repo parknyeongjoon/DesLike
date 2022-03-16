@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: APortData 23
   m_EditorClassIdentifier: 
   soldierCode: 
-  unlock: 1
-  portImg: {fileID: 2113455958750467913, guid: 878c66274d2a7f448b1333a07be66d2a, type: 3}
+  unlock: 0
+  portImg: {fileID: 0}

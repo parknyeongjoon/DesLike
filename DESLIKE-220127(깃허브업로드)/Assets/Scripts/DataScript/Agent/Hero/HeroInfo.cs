@@ -104,10 +104,4 @@ public class HeroInfo : CastleInfo
         base.OnHealed(heal);
         healWeight -= 1;//계산식 만들어서 변경
     }
-
-    void Update()
-    {
-        //지우기
-        Debug.Log(portDatas.portDatas[0].soldierCode);
-    }
 }

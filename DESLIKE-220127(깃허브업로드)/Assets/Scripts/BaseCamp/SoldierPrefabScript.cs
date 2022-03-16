@@ -7,7 +7,6 @@ public class SoldierPrefabScript : MonoBehaviour
 {
     [SerializeField] Image prefabImg;
     public string soldierCode;
-    public SoldierScrollScript scrollScript;
 
     void OnEnable()
     {
@@ -16,10 +15,11 @@ public class SoldierPrefabScript : MonoBehaviour
 
     public void Set_Port()//병사 버튼 프리팹을 눌렀을 때 중복되지 않게 코루틴을 실행해주는 함수
     {
-        if(scrollScript.setPortCoroutine != null)
+        if(PortManager.Instance.setPortCoroutine != null)
         {
-            StopCoroutine(scrollScript.setPortCoroutine);
+            StopCoroutine(PortManager.Instance.setPortCoroutine);
         }
-        scrollScript.setPortCoroutine = StartCoroutine(scrollScript.SetPortCoroutine(soldierCode));
+        PortManager.Instance.setPortCoroutine = StartCoroutine(PortManager.Instance.SetPortCoroutine());
+        PortManager.Instance.soldierCode = soldierCode;
     }
 }

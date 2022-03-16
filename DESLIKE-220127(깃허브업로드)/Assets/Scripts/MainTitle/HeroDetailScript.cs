@@ -23,7 +23,7 @@ public class HeroDetailScript : MonoBehaviour
     {
         GameObject createPrefab;
         createPrefab = Instantiate(previewPrefab, optionPreviewPanel.transform);
-        createPrefab.GetComponent<Image>().sprite = option.soldierData.sprite;
+        createPrefab.GetComponentInChildren<Image>().sprite = option.soldierData.sprite;
         createPrefab.GetComponentInChildren<Text>().text = option.portNum.Length.ToString();
     }
 

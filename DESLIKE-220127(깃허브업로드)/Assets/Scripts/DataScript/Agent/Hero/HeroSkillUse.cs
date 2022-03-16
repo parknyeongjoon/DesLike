@@ -143,7 +143,7 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
                 hit = MouseManager.Instance.CastRay();
                 if (hit != null)
                 {
-                    if (hit.gameObject.layer == 9 && hit.gameObject.tag != "Castle")
+                    if (hit.gameObject.layer == 9)
                     {
                         ActiveSkillFocus(hit.gameObject);
                         heroInfo.skillTargetInfo = hit.gameObject.GetComponent<CastleInfo>();

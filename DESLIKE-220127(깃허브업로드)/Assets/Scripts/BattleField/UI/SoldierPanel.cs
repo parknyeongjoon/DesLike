@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using TMPro;
 //스킬 추가
 
 public class SoldierPanel : MonoBehaviour
@@ -10,7 +11,7 @@ public class SoldierPanel : MonoBehaviour
     [SerializeField]
     Image Soldier_Portrait, HPBar, MPBar, SkillIcon, BlackSkillIcon;
     [SerializeField]
-    Text HPText, MPText, SkillCooltime;
+    TMP_Text HPText, MPText, SkillCooltime;
     [SerializeField]
     GameObject buffPanel;
     [SerializeField]

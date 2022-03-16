@@ -23,5 +23,9 @@ public class SoldierInfo : HeroInfo
         animator.SetTrigger("isDead");
         portDatas.spawnSoldierList.Remove(this);
         Destroy(gameObject, 10.0f);
+        if(portDatas.spawnSoldierList.Count == 0)
+        {
+            BattleUIManager.Instance.EndStage();
+        }
     }
 }

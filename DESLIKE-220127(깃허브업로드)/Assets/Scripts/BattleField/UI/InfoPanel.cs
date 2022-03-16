@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InfoPanel : MonoBehaviour
 {
     SaveManager saveManager;
 
     [SerializeField]
-    Text money_txt, ally_produce_time, enemy_produce_time, ally_Round_txt, enemy_Round_txt;
+    TMP_Text money_txt, ally_produce_time, enemy_produce_time, ally_Round_txt, enemy_Round_txt;
     [SerializeField]
     PortDatas ally_ports, enemy_ports;
     GoodsCollection goodsCollection;

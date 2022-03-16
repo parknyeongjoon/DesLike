@@ -31,8 +31,7 @@ public class BasicAttack : MonoBehaviour
             heroInfo.target = heroInfo.FindNearestSoldier(targets);
             if (heroInfo.TargetCheck(heroInfo.target, basicAttackData.range + 2))
             {
-                if(heroInfo.target.tag == "Castle") { heroInfo.state = Soldier_State.Siege; }
-                else { heroInfo.state = Soldier_State.Battle; }
+                heroInfo.state = Soldier_State.Battle;
                 heroInfo.targetInfo = heroInfo.target.GetComponent<CastleInfo>();
             }
         }

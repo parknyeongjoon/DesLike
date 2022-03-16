@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HeroPanel : MonoBehaviour
 {
@@ -10,9 +11,9 @@ public class HeroPanel : MonoBehaviour
     [SerializeField]
     Image[] SkillIcons, BlackSkillIcons;
     [SerializeField]
-    Text HPText, MPText;
+    TMP_Text HPText, MPText;
     [SerializeField]
-    Text[] SkillCooltimes;
+    TMP_Text[] SkillCooltimes;
     [SerializeField]
     GameObject buffPanel;
     [SerializeField]

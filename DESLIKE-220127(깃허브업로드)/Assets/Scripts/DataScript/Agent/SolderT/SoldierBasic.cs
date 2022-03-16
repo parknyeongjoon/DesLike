@@ -39,11 +39,6 @@ public class SoldierBasic : MonoBehaviour
         yield return new WaitForFixedUpdate();
     }
 
-    protected virtual IEnumerator Siege_Behaviour()
-    {
-        yield return new WaitForFixedUpdate();
-    }
-
     protected virtual IEnumerator Charge_Behaviour()
     {
         yield return new WaitForFixedUpdate();

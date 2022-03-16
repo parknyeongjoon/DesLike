@@ -12,6 +12,7 @@ public class BattleUIManager : MonoBehaviour
     GameObject PortPanel, HeroPanel, SoldierPanel, ProducePanel, SetPortPanel, EmptyPanel, ChallengePanel, InfoPanel, RewardPanel;
     [SerializeField]
     Button start_Btn;
+    [SerializeField] PortDatas allyPortDatas, enemyPortDatas;
     public PortData cur_Port;
     public SoldierInfo cur_Soldier;
 
@@ -51,7 +52,6 @@ public class BattleUIManager : MonoBehaviour
                 SetMidPanel(3);
             }
         }
-        
     }
 
     public static BattleUIManager Instance
@@ -106,14 +106,28 @@ public class BattleUIManager : MonoBehaviour
         }
     }
 
-    public void SetRewardPanel()
-    {
-        RewardPanel.gameObject.SetActive(true);
-        rewardPanel.SetRewardPanel();
-    }
-
     public void RemoveStartBtn()
     {
         start_Btn.gameObject.SetActive(false);
+    }
+
+    public void EndStage()
+    {
+        GameManager.Instance.gamePause = true;
+        Time.timeScale = 0;
+        if (enemyPortDatas.spawnSoldierList.Count == 0)//승리
+        {
+            SetRewardPanel();
+        }
+        else if(allyPortDatas.spawnSoldierList.Count == 0)//패배
+        {
+            Debug.Log("패배");
+        }
+    }
+
+    void SetRewardPanel()
+    {
+        RewardPanel.gameObject.SetActive(true);
+        rewardPanel.SetRewardPanel();
     }
 }

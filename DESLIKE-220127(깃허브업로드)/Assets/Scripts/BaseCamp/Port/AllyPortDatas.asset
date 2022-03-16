@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c27a5bbd2df91324e855c570845121cb, type: 3}
+  m_Name: AllyPortDatas
+  m_EditorClassIdentifier: 
+  portDatas:
+  - {fileID: 11400000, guid: b396ed3d979c00f4ca0e1a848a9185f4, type: 2}
+  - {fileID: 11400000, guid: d45ffa831010a0a46aebaa8169ee3c30, type: 2}
+  - {fileID: 11400000, guid: c73f58c941e931c4d8cf549342ed8dd2, type: 2}
+  - {fileID: 11400000, guid: 68d6e708182f7b646ac0a726e1b2c73a, type: 2}
+  - {fileID: 11400000, guid: 9e8b0414874bfd345ab42027d0615c9f, type: 2}
+  - {fileID: 11400000, guid: 05329b4fe41435945ba059ddb78960c1, type: 2}
+  - {fileID: 11400000, guid: da6220f9cea5bba4aa23b9232f7abbe1, type: 2}
+  - {fileID: 11400000, guid: cf0f54f7cb063484489f8cc02467c34b, type: 2}
+  - {fileID: 11400000, guid: f9fee303872c7ee4cb9939807f506100, type: 2}
+  - {fileID: 11400000, guid: e699dc9011bc8394da4d53a70462530f, type: 2}
+  - {fileID: 11400000, guid: 7d345f2203b60024fa523b6358d79825, type: 2}
+  - {fileID: 11400000, guid: aea260d3778495b49a88d7d72218fda4, type: 2}
+  - {fileID: 11400000, guid: 030146db163cd524cbb64633389fe7fa, type: 2}
+  - {fileID: 11400000, guid: 2d3a71cfbb47b8c498515afe78f1e722, type: 2}
+  - {fileID: 11400000, guid: 6d2076b23f967c24982616ade025e756, type: 2}
+  - {fileID: 11400000, guid: 44e79da8139604944a8e7da15635c203, type: 2}
+  - {fileID: 11400000, guid: 7e867501ffdfd92418f72b1a20545c61, type: 2}
+  - {fileID: 11400000, guid: 1655ace6d00f3784d84786aa82900de5, type: 2}
+  - {fileID: 11400000, guid: fd0a6cee4c1a47f4d9c76355bf97cd2e, type: 2}
+  - {fileID: 11400000, guid: da7de0e572a871d499c08c3825d46f7c, type: 2}
+  - {fileID: 11400000, guid: 1b76d3ea7e1261341a98a728e28ea683, type: 2}
+  - {fileID: 11400000, guid: 9dd47bc13dda5f34490182b5025dc599, type: 2}
+  - {fileID: 11400000, guid: 38e25a99052456d4d9953739486c1321, type: 2}
+  - {fileID: 11400000, guid: d201548f51599154aa17194228bf1c3e, type: 2}
+  - {fileID: 11400000, guid: a5ca73f7226546d4bbd5b23b30210478, type: 2}
+  - {fileID: 11400000, guid: 9a91af2a2227cf34cb5866192435538f, type: 2}
+  - {fileID: 11400000, guid: 24d03201884e94843bac2f02ef6ab96f, type: 2}
+  - {fileID: 11400000, guid: cfb333726cf99b6459713d96e1b76ec0, type: 2}
+  - {fileID: 11400000, guid: 80092a98fcdf52e49804f3092adc63b7, type: 2}
+  - {fileID: 11400000, guid: 433f2c4770d33ce40906c75d01df9171, type: 2}
+  - {fileID: 11400000, guid: 252a088df567745448cf905d035531ba, type: 2}
+  - {fileID: 11400000, guid: 632ee18aff84aba47a6a32e06d5507e7, type: 2}
+  - {fileID: 11400000, guid: 53537c33d789d2c439c0cfb61a558686, type: 2}
+  - {fileID: 11400000, guid: 918e8ae56d005cb4ba9b889fdc0ea9c2, type: 2}
+  - {fileID: 11400000, guid: 46c23fc8d0431d64c952ef3ee5662d7a, type: 2}
+  - {fileID: 11400000, guid: a3d368650d6faf243816ab4df871aa0e, type: 2}
+  - {fileID: 11400000, guid: 342bd33bfcff66e408b46b94ee3b831e, type: 2}
+  - {fileID: 11400000, guid: 6048f7daf4c84c64fbc1215da2b5bfde, type: 2}
+  - {fileID: 11400000, guid: 7decf81323b8da14489586e7511b4482, type: 2}
+  - {fileID: 11400000, guid: 329b50f03ff032347b75f9d06d3419e9, type: 2}
+  - {fileID: 11400000, guid: c500f2abc3f04f345b5ba0fd51e09c20, type: 2}
+  - {fileID: 11400000, guid: fdf7ac80cea0de34d8e7b8249cd3a324, type: 2}
+  - {fileID: 11400000, guid: 152785ef691b14847b826bf598358e90, type: 2}
+  - {fileID: 11400000, guid: b592eab17dc69304b91720d5e2d02372, type: 2}
+  - {fileID: 11400000, guid: 329fdd0f7ad96d643b21b405780d40ff, type: 2}
+  - {fileID: 11400000, guid: a99bbe77e88762340bef4c4ce5221ebb, type: 2}
+  - {fileID: 11400000, guid: 1883727d2e3e4424884d0e5c1cc9113c, type: 2}
+  - {fileID: 11400000, guid: 4a86e6b7d18cd124ebf7e02431245f0f, type: 2}
+  - {fileID: 11400000, guid: 327acea70002d6a42a9537113cd5e1ed, type: 2}
+  - {fileID: 11400000, guid: e4fbb1f688ec72c4083a005614eb6533, type: 2}
+  spawnSoldierList: []
+  produceTime: 5
+  round: 0
+  max_round: 1

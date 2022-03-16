@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 //enum 모음
-public enum Mouse_State { Idle, Target, Grenade }
+public enum Battle_Mouse_State { Idle, Target, Grenade }
 
 public enum Team { Ally = 1, Enemy = 2, Neutral = 4 }
 public enum AttackArea { None = 0, Ground = 1 << 8, Sky = 1 << 11, Dual = AttackArea.Ground + AttackArea.Sky }//공격 범위

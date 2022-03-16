@@ -67,7 +67,7 @@ public class SoldierBasic : MonoBehaviour
 
     protected void OnMouseEnter()//EnemyResource에만 따로넣기
     {
-        if(MouseManager.Instance.mouseState == Mouse_State.Grenade && heroInfo.team == Team.Enemy && !Input.GetKey(KeyCode.LeftAlt) && gameObject.layer != 7)
+        if(MouseManager.Instance.mouseState == Battle_Mouse_State.Grenade && heroInfo.team == Team.Enemy && !Input.GetKey(KeyCode.LeftAlt) && gameObject.layer != 7)
         {
             MouseManager.Instance.SetGrenadeExtent(transform);
         }

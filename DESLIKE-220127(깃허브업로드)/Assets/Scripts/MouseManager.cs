@@ -16,7 +16,7 @@ public class MouseManager : MonoBehaviour
 
     public Vector3 skillPos;
 
-    public Mouse_State mouseState;
+    public Battle_Mouse_State mouseState;
 
     //전역변수로써 manager에 접근할 수 있게 만들기
     public static MouseManager Instance
@@ -36,15 +36,15 @@ public class MouseManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this.gameObject);
         SetIdleCursorTexture();
-        mouseState = Mouse_State.Idle;
+        mouseState = Battle_Mouse_State.Idle;
     }
 
-    void Update()
+    void Update()//배틀 밖에서 할 필요 없음
     {
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
-            if(mouseState == Mouse_State.Idle)
+            if(mouseState == Battle_Mouse_State.Idle)
             {
                 Collider2D hit;
                 hit = CastRay();
@@ -67,7 +67,7 @@ public class MouseManager : MonoBehaviour
                     }
                 }
             }
-            else if(mouseState == Mouse_State.Grenade)
+            else if(mouseState == Battle_Mouse_State.Grenade)
             {
 
             }

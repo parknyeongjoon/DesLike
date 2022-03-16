@@ -103,11 +103,11 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
         {
             if (skillScript.skillData.skillType == SkillType.TargetSkill)
             {
-                mouseManager.mouseState = Mouse_State.Target;
+                mouseManager.mouseState = Battle_Mouse_State.Target;
             }
             else if (skillScript.skillData.skillType == SkillType.GrenadeSkill)
             {
-                mouseManager.mouseState = Mouse_State.Grenade;
+                mouseManager.mouseState = Battle_Mouse_State.Grenade;
                 mouseManager.grenadeExtent.transform.localScale = new Vector2(((GrenadeAttackData)skillScript.skillData).extent, ((GrenadeAttackData)skillScript.skillData).extent);
             }
             skillRange.transform.localScale = new Vector2(((ActiveSkillData)skillScript.skillData).range, ((ActiveSkillData)skillScript.skillData).range);
@@ -122,9 +122,9 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
         MouseManager.Instance.SetAimCursorTexture();
         skillRange.SetActive(true);
         Collider2D hit;
-        while (mouseManager.mouseState != Mouse_State.Idle)
+        while (mouseManager.mouseState != Battle_Mouse_State.Idle)
         {
-            if (mouseManager.mouseState == Mouse_State.Grenade && Input.GetKey(KeyCode.LeftAlt))
+            if (mouseManager.mouseState == Battle_Mouse_State.Grenade && Input.GetKey(KeyCode.LeftAlt))
             {
                 mouseManager.SetGrenadeExtent(mouseManager.transform);
                 while (Input.GetKey(KeyCode.LeftAlt))
@@ -210,7 +210,7 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
 
     void Set_Idle()
     {
-        mouseManager.mouseState = Mouse_State.Idle;
+        mouseManager.mouseState = Battle_Mouse_State.Idle;
         heroInfo.action = Soldier_Action.Idle;
         mouseManager.grenadeExtent.SetActive(false);
         skillRange.SetActive(false);

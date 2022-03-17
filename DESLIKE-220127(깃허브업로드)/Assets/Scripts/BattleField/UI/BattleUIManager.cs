@@ -9,7 +9,7 @@ public class BattleUIManager : MonoBehaviour
     static BattleUIManager instance;
 
     [SerializeField]
-    GameObject PortPanel, HeroPanel, SoldierPanel, ProducePanel, SetPortPanel, EmptyPanel, ChallengePanel, InfoPanel, RewardPanel;
+    GameObject PortPanel, HeroPanel, SoldierPanel, ProducePanel, SetPortPanel, EmptyPanel, ChallengePanel, RewardPanel;
     [SerializeField]
     Button start_Btn;
     [SerializeField] PortDatas allyPortDatas, enemyPortDatas;
@@ -20,13 +20,13 @@ public class BattleUIManager : MonoBehaviour
     public SetPortPanel setPortPanel;
     public RewardPanel rewardPanel;
     public HeroPanel heroPanel;
-    public InfoPanel infoPanel;
     public ChallengePanel challengePanel;
 
     void Awake()
     {
         instance = this;
-        MouseManager.Instance.battleUIManager = this;
+        SaveManager saveManager = SaveManager.Instance;//지우기
+        //MouseManager.Instance.battleUIManager = this;
 
         SetMidPanel(3);
     }

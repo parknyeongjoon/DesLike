@@ -28,4 +28,19 @@ public class SoldierInfo : HeroInfo
             BattleUIManager.Instance.EndStage();
         }
     }
+
+    void OnMouseDown()
+    {
+        if(MouseManager.Instance.mouseState == Mouse_State.Idle && gameObject.layer != 7)
+        {
+            if (MouseManager.Instance.mouseFocus != null)
+            {
+                MouseManager.Instance.mouseFocus.SetActive(false);
+            }
+            MouseManager.Instance.mouseFocus = transform.Find("mouseFocus").gameObject;
+            MouseManager.Instance.mouseFocus.SetActive(true);
+            BattleUIManager.Instance.cur_Soldier = GetComponent<SoldierInfo>();
+            BattleUIManager.Instance.SetMidPanel(0);
+        }
+    }
 }

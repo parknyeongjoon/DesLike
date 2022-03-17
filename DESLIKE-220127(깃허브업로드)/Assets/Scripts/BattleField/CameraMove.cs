@@ -50,18 +50,18 @@ public class CameraMove : MonoBehaviour
     //카메라 위치 이동 함수
     void CameraUp()
     {
-        mainCameraTransform.position += new Vector3(0, 0.5f + 0.05f * mainCamera.orthographicSize, 0);
+        mainCameraTransform.position += new Vector3(0, 0.5f + 0.005f * mainCamera.orthographicSize, 0);
     }
     void CameraDown()
     {
-        mainCameraTransform.position += new Vector3(0, -0.5f - 0.05f * mainCamera.orthographicSize, 0);
+        mainCameraTransform.position += new Vector3(0, -0.5f - 0.005f * mainCamera.orthographicSize, 0);
     }
     void CameraLeft()
     {
-        mainCameraTransform.position += new Vector3(-1.5f - 0.05f * mainCamera.orthographicSize, 0, 0);
+        mainCameraTransform.position += new Vector3(-1.5f - 0.005f * mainCamera.orthographicSize, 0, 0);
     }
     void CameraRight()
     {
-        mainCameraTransform.position += new Vector3(1.5f + 0.05f * mainCamera.orthographicSize, 0, 0);
+        mainCameraTransform.position += new Vector3(1.5f + 0.005f * mainCamera.orthographicSize, 0, 0);
     }
 }

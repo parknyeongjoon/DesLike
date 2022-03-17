@@ -31,7 +31,7 @@ public class BattleNode : MapNode
     {
         List<Option> option = new List<Option>();
         option = enemyPortOption.soldierOption;
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < enemyPortDatas.portDatas.Length; i++)
         {
             enemyPortDatas.portDatas[i].soldierCode = null;
         }

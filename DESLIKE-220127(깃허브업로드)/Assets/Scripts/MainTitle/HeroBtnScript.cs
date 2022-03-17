@@ -55,7 +55,7 @@ public class HeroBtnScript : MonoBehaviour
     {
         List<Option> option = heroSelectSoldierOption.soldierOption;
         //빌드 전 초기화 해주고 지우기
-        for(int i = 0; i < 50; i++)
+        for(int i = 0; i < allyPorts.portDatas.Length; i++)
         {
             allyPorts.portDatas[i].soldierCode = null;
         }

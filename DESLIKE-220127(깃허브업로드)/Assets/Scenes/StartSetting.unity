@@ -123,6 +123,86 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &863185869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 863185871}
+  - component: {fileID: 863185870}
+  m_Layer: 0
+  m_Name: SaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &863185870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863185869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79bcf9018de32d46b373044dfb95482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataSheet:
+    relicObjectSheet: []
+    relicDataSheet: []
+    mutantObjectSheet: []
+    mutantDataSheet: []
+  soldierDatas:
+  - {fileID: 11400000, guid: a29c1d8c1343ac342b7934d4fa64b8d3, type: 2}
+  - {fileID: 11400000, guid: 505df875aa52d6c429dc1729c124a209, type: 2}
+  - {fileID: 11400000, guid: 790abeee750e88647a10efc6bb80386d, type: 2}
+  - {fileID: 11400000, guid: af820736225c7c64bacdd0238f6182ab, type: 2}
+  - {fileID: 11400000, guid: ebe56b79ff6403343912e9b69d38602e, type: 2}
+  - {fileID: 11400000, guid: 6e40740d778918e4ba73ef05d5237467, type: 2}
+  - {fileID: 11400000, guid: 8f5bd6d443eb5714780da0f9b57c6d86, type: 2}
+  - {fileID: 11400000, guid: dc098578b6475514e82ce1e5590261c8, type: 2}
+  - {fileID: 11400000, guid: 3e65cdd5953d474479ec0533c1a36487, type: 2}
+  heroDatas:
+  - {fileID: 11400000, guid: 1b52e72375322824688473c0dae745e1, type: 2}
+  - {fileID: 11400000, guid: 0404a1a6770a903418b6b85fc6e22463, type: 2}
+  skillDatas:
+  - {fileID: 11400000, guid: 5b8c70da27a464e4db6320073b74c184, type: 2}
+  - {fileID: 11400000, guid: 3506caf890a940141adc17abe26b9219, type: 2}
+  - {fileID: 11400000, guid: 5668e2e631ab2fd409ccb798643c9927, type: 2}
+  - {fileID: 11400000, guid: 117efa8e6ed5c2a4d929e16639e71060, type: 2}
+  - {fileID: 11400000, guid: c9ee331d85776ca47ad5de63d042086b, type: 2}
+  - {fileID: 11400000, guid: 011132be2e886994b846d8f747db8166, type: 2}
+  - {fileID: 11400000, guid: 4f19ae2ca981e31469ac4fb8bba04e2f, type: 2}
+  gameData:
+    canContinue: 0
+    goodsCollection: {fileID: 0}
+    map: {fileID: 0}
+    allyPortDatas: {fileID: 0}
+    soldierSaveList: []
+    heroSaveData:
+      heroData: {fileID: 0}
+      cur_Hp: 0
+      cur_Mp: 0
+      resurrection: 0
+--- !u!4 &863185871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863185869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2061094023
 GameObject:
   m_ObjectHideFlags: 0

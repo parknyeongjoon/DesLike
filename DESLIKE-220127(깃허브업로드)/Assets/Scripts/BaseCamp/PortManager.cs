@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-//포트 매니저도 스테이트 만들기
+
 public class PortManager : MonoBehaviour
 {
     static PortManager instance;
@@ -19,7 +19,7 @@ public class PortManager : MonoBehaviour
     }
 
     [SerializeField] PortDatas allyPortDatas;
-    [SerializeField] GameObject curSellBtn;
+    public GameObject activeBtn;
 
     public Coroutine setPortCoroutine;
     public bool isSet = false;
@@ -40,6 +40,7 @@ public class PortManager : MonoBehaviour
         {
             yield return null;
         }
+        isSet = false;
         ReturnPortImg();
     }
 
@@ -65,5 +66,12 @@ public class PortManager : MonoBehaviour
             if (allyPortDatas.portDatas[i].unlock) { allyPortDatas.portDatas[i].portImg.color = new Color(1, 1, 1); }//포트가 해제되어있다면 흰색
             else { allyPortDatas.portDatas[i].portImg.color = new Color(0.3f, 0.3f, 0.3f); }//아니라면 회색
         }
+    }
+
+    public void ControllActiveBtn(GameObject gameObject)
+    {
+        if (activeBtn != null) { activeBtn.SetActive(false); }
+        activeBtn = gameObject;
+        gameObject.SetActive(true);
     }
 }

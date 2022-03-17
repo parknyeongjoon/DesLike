@@ -7,16 +7,15 @@ public class MouseManager : MonoBehaviour
 {
     static MouseManager instance;
 
-    public BattleUIManager battleUIManager;
     [SerializeField]
     Texture2D aimCursorTexture;
 
     public GameObject grenadeExtent;
-    GameObject mouseFocus;
+    public GameObject mouseFocus;
 
     public Vector3 skillPos;
 
-    public Battle_Mouse_State mouseState;
+    public Mouse_State mouseState;
 
     //전역변수로써 manager에 접근할 수 있게 만들기
     public static MouseManager Instance
@@ -36,42 +35,12 @@ public class MouseManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this.gameObject);
         SetIdleCursorTexture();
-        mouseState = Battle_Mouse_State.Idle;
+        mouseState = Mouse_State.Idle;
     }
 
-    void Update()//배틀 밖에서 할 필요 없음
+    void Update()//배틀 밖에서 할 필요 없음(지우기)
     {
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
-        {
-            if(mouseState == Battle_Mouse_State.Idle)
-            {
-                Collider2D hit;
-                hit = CastRay();
-                if (hit != null)
-                {
-                    if (hit.CompareTag("Soldier") && hit.gameObject.layer != 7)//병사들 스크립트에 OnMouseDown으로 넣기
-                    {
-                        if (mouseFocus != null)
-                        {
-                            mouseFocus.SetActive(false);
-                        }
-                        mouseFocus = hit.transform.Find("mouseFocus").gameObject;
-                        mouseFocus.SetActive(true);
-                        battleUIManager.cur_Soldier = hit.GetComponent<SoldierInfo>();
-                        battleUIManager.SetMidPanel(0);
-                    }
-                    else if(hit.CompareTag("Challenge"))
-                    {
-                        battleUIManager.SetMidPanel(4);
-                    }
-                }
-            }
-            else if(mouseState == Battle_Mouse_State.Grenade)
-            {
-
-            }
-        }
     }
 
     public Collider2D CastRay()

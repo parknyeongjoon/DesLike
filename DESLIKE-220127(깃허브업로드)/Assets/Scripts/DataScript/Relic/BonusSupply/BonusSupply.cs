@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+/*
 public class BonusSupply : Relic
 {
     PortDatas allyPortDatas;
@@ -26,7 +26,7 @@ public class BonusSupply : Relic
 
     void AddEffect()
     {
-        GameObject.Find("AllySpawner").GetComponent<Spawner>().turnHandler.AddListener(BonusSupplyEffect);
+        //GameObject.Find("AllySpawner").GetComponent<Spawner>().turnHandler.AddListener(BonusSupplyEffect);
     }
 
     void BonusSupplyEffect()//3의 배수에서 스테이지 끝나면 흭득하고 추가 돈 받음
@@ -47,3 +47,4 @@ public class BonusSupply : Relic
         return false;
     }
 }
+*/

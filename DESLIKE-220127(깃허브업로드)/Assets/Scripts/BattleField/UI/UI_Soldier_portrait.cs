@@ -43,7 +43,6 @@ public class UI_Soldier_portrait : MonoBehaviour
         if (battleUIManager.cur_Port.soldierCode == null && goodsCollection.food >= soldier.cost && soldier.remain > 0)
         {
             goodsCollection.food -= soldier.cost;
-            battleUIManager.infoPanel.SetMoneyText();
             soldier.remain -= 1;
             battleUIManager.cur_Port.soldierCode = soldier.code;
             battleUIManager.cur_Port.portImg.sprite = soldier.sprite;

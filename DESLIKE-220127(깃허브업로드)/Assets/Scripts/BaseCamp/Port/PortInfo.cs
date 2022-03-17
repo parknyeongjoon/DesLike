@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class PortInfo : MonoBehaviour
 {
     [SerializeField] PortData portData;
-    [SerializeField] GameObject SellBtn;
+    [SerializeField] GameObject SellBtn, UnlockBtn;
+    [SerializeField] Text unlockPrice;
     Image image;
 
     void Awake()
@@ -19,6 +20,7 @@ public class PortInfo : MonoBehaviour
 
     void OnEnable()
     {
+        if (portData.soldierCode == "") { portData.soldierCode = null; }//지우기
         if (portData.soldierCode != null)
         {
             image.sprite = SaveManager.Instance.dataSheet.soldierDataSheet[portData.soldierCode].sprite;
@@ -35,7 +37,12 @@ public class PortInfo : MonoBehaviour
         }
         else if(!PortManager.Instance.isSet && portData.soldierCode != null)//병사가 들어있다면 판매
         {
-            SellBtn.SetActive(true);//다시 없애기
+            PortManager.Instance.ControllActiveBtn(SellBtn);
+        }
+        else if(!PortManager.Instance.isSet && !portData.unlock)//포트가 잠겨있다면 포트를 언락하는 버튼 열기
+        {
+            //unlockPrice 값 변경해주기
+            PortManager.Instance.ControllActiveBtn(UnlockBtn);
         }
     }
 
@@ -45,8 +52,19 @@ public class PortInfo : MonoBehaviour
         //SaveManager.Instance.gameData.goodsCollection.food += (int)(tempSoldier.cost * 0.7f);//골드로 바꾸기
         //battleUIManager.infoPanel.SetMoneyText();//바꿔줘야함
         //tempSoldier.remain += 1;
+        //돈 빼기
+        //병사 수 -1
+        //병사 수가 0이라면 밑에 버튼 삭제
         portData.soldierCode = null;
         portData.portImg.sprite = null;
         SellBtn.SetActive(false);
+    }
+
+    public void UnlockPort()
+    {
+        //돈 빼기
+        UnlockBtn.SetActive(false);
+        portData.unlock = true;
+        image.color = new Color(1, 1, 1);
     }
 }

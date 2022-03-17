@@ -28,20 +28,13 @@ public class SoldierScrollScript : MonoBehaviour
     void SetScroll()//스크롤 안에 담긴 오브젝트 수에 따라 스크롤의 스케일 변경해주는 함수
     {
         int count = 0;
-
-        //지우기
-        for(int i = 0; i < allyPortDatas.portDatas.Length; i++)
-        {
-            if(allyPortDatas.portDatas[i].soldierCode == "")
-            allyPortDatas.portDatas[i].soldierCode = null;
-        }
-
         foreach(var soldierData in allyPortDatas.activeSoldierList.Values)
         {
             count++;
             prefabScript.soldierCode = soldierData.code;
             Instantiate(portPrefab, scrollRect.content);
         }
-        scrollRect.content.sizeDelta = new Vector2((xSize + xSpace) * count, scrollRect.content.sizeDelta.y);
+        count = 10;//지우기
+        scrollRect.content.sizeDelta = new Vector2((xSize + xSpace) * count + 60, scrollRect.content.sizeDelta.y);
     }
 }

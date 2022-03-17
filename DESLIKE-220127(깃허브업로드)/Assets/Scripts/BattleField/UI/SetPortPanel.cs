@@ -25,7 +25,6 @@ public class SetPortPanel : MonoBehaviour
     {
         SoldierData tempSoldier = SaveManager.Instance.activeSoldierList[portData.soldierCode];
         SaveManager.Instance.gameData.goodsCollection.food += (int)(tempSoldier.cost * 0.7f);
-        battleUIManager.infoPanel.SetMoneyText();//event로 넣어버리기
         tempSoldier.remain += 1;
         portData.soldierCode = null;
         portData.portImg.sprite = null;

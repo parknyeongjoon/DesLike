@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabImg: {fileID: 1176865655738109196}
-  soldierCode: 
+  soldierCode: 0
 --- !u!114 &7202276668584654029
 MonoBehaviour:
   m_ObjectHideFlags: 0

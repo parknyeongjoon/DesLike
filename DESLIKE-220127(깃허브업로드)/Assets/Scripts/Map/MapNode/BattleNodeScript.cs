@@ -7,7 +7,7 @@ using TMPro;
 public class BattleNodeScript : NodeScript
 {
     BattleNode battleNode;
-    [SerializeField] GameObject InfoPanel, InfoTemp, InfoPrefab, MoreInfoPanel, MoreTemp, MorePrefab;
+    [SerializeField] GameObject InfoTemp, InfoPrefab, MoreInfoPanel, MoreTemp, MorePrefab;
     SaveManager saveManager;
     
     void Start()
@@ -35,7 +35,6 @@ public class BattleNodeScript : NodeScript
 
     public void See_InfoPanel()
     {
-        InfoPanel.SetActive(true);
         List<Option> option = new List<Option>();
         option = battleNode.enemyPortOption.soldierOption;
         GameObject createPrefab;

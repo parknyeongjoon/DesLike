@@ -7,7 +7,7 @@ using TMPro;
 public class Rullet : MonoBehaviour
 {
     [SerializeField]
-    Button rollBtn, endBtn;
+    Button rollBtn, endBtn, backBtn;
     [SerializeField]
     TMP_Text rollBtn_Text, EndButton;
     [SerializeField]
@@ -19,20 +19,14 @@ public class Rullet : MonoBehaviour
 
     int eventCount = 8;
     bool isRoll;
-
-    void Awake()
-    {
-        SaveManager saveManager = SaveManager.Instance;
-    }
-
-
+    
     void OnEnable()
     {
+        SaveManager saveManager = SaveManager.Instance;
         isRoll = false;
+        backBtn.gameObject.SetActive(false);
         goodsCollection = saveManager.gameData.goodsCollection;
         map = saveManager.gameData.map;
-        EndButton.text = "∏ ¿∏∑Œ\n(√— 1¿œ º“∏)";
-        Debug.Log("Rullet");
     }
 
     public void RollBtn()//µπ∏Æ∞≈≥™ ∏ÿ√ﬂ±‚
@@ -42,6 +36,7 @@ public class Rullet : MonoBehaviour
         {
             rollBtn_Text.text = "∏ÿ√„";
             StartCoroutine(RollRullet());
+            backBtn.gameObject.SetActive(true);
         }
         else
         {
@@ -53,8 +48,6 @@ public class Rullet : MonoBehaviour
     {
         float rotateAmount = 0;
         float rotateSpeed = 700;
-
-        saveManager.gameData.map.curDay += 1;
 
         while (isRoll)
         {
@@ -72,8 +65,6 @@ public class Rullet : MonoBehaviour
             yield return null;
         }
         GiveReward(rotateAmount);
-        // endBtn.gameObject.SetActive(true);
-        EndButton.text = "∏ ¿∏∑Œ";
     }
 
     void GiveReward(float rotateAmount)
@@ -118,8 +109,5 @@ public class Rullet : MonoBehaviour
     public void EndEvent()
     {
         rollBtn.interactable = false;
-        // endBtn.gameObject.SetActive(true);
-        saveManager.gameData.map.curDay += 1;
-
     }
 }

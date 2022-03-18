@@ -13,7 +13,7 @@ public class SelectMap : MonoBehaviour
     int curDay = 0, curStage; // 현재 날짜
     bool midBossCheck1 = false, midBossCheck2 = false, villageCheck = false, organCheck = false; // 중간 보스, 마을, 정비 여부
     int[] selDay = new int[3];
-    int[] selEvnt = new int[6]; // 0 : 1_1 / 1, 2 : 2_1, 2 / 3, 4, 5 : 3_1, 2, 3
+    int[] selEvnt = new int[3];
     int nodeNum;   // 노드 지정용(selEvnt[nodeNum]용)
     int curTrack = 0;
 
@@ -120,23 +120,26 @@ public class SelectMap : MonoBehaviour
 
     void NextEventChoice()  // 0 : 전투, 1 : 이벤트, 2 : 중간 보스, 3 : 마을, 4 : 정비, 5 : 최종 보스
     {
-        for (int i = 1; i < 6; i++) // 두,세갈래길 랜덤(전투, 이벤트) 설정
+        for (int i = 0; i < 3; i++) // 두,세갈래길 랜덤(전투, 이벤트) 설정
             selEvnt[i] = Random.Range(0, 2);
         
         // 특수 상황
         if (curDay >= 10 && midBossCheck1 == false)    // 1차 중간 보스 라운드
         {
             selEvnt[0] = 2;
+            curTrack = 0;
             saveManager.gameData.map.midBossCheck1 = true;
         }
         else if (curDay >= 15 && villageCheck == false) // 마을 라운드 
         {
             selEvnt[0] = 3;
+            curTrack = 0;
             saveManager.gameData.map.villageCheck = true;
         }
         else if (curDay >= 20 && midBossCheck2 == false) // 2차 중간 보스 라운드
         {
             selEvnt[0] = 4;
+            curTrack = 0;
             saveManager.gameData.map.midBossCheck2 = true;
 
         }
@@ -145,6 +148,7 @@ public class SelectMap : MonoBehaviour
             if (organCheck == false)
             {
                 selEvnt[0] = 5;
+                curTrack = 0;
                 saveManager.gameData.map.organCheck = true;
             }
             else selEvnt[0] = 6;    // 최종 보스
@@ -195,7 +199,7 @@ public class SelectMap : MonoBehaviour
         
         for (int i = 0; i < 2; i++)
         {
-            if (curDay == 0 || selEvnt[i+1] == 0)
+            if (curDay == 0 || selEvnt[i] == 0)
             {
                 SelText[i + 1].text = "전투";
                 BattleNodeSet(i);
@@ -214,7 +218,6 @@ public class SelectMap : MonoBehaviour
         
         for (int i = 0; i < 3; i++)
         {
-            int j = i + 3;
             if (curDay == 0 || selEvnt[i] == 0)
             {
                 SelText[i + 3].text = "전투";
@@ -322,7 +325,7 @@ public class SelectMap : MonoBehaviour
 
         else if (curTrack == 1) // 2트랙
         {
-            if (curDay == 0 || selEvnt[1] == 0)
+            if (curDay == 0 || selEvnt[0] == 0)
             {
                 Button2_1[nextEvent[0] + 3 * (curDay / 5)].SetActive(true);
                 Title[0].SetActive(true);
@@ -335,7 +338,7 @@ public class SelectMap : MonoBehaviour
         }
         else    // 3트랙
         {
-            if (curDay == 0 || selEvnt[3] == 0)
+            if (curDay == 0 || selEvnt[0] == 0)
             {
                 Button3_1[nextEvent[0] + 3 * (curDay / 5)].SetActive(true);
                 Title[0].SetActive(true);
@@ -354,9 +357,9 @@ public class SelectMap : MonoBehaviour
         InfoPanel.SetActive(true);
         if (curTrack == 1) // 2_2
         {
-            if (curDay == 0 || selEvnt[2] == 0)
+            if (curDay == 0 || selEvnt[1] == 0)
             {
-                Button2_2[nextEvent[0] + 3 * (curDay / 5)].SetActive(true);
+                Button2_2[nextEvent[1] + 3 * (curDay / 5)].SetActive(true);
                 Title[0].SetActive(true);
             }
             else
@@ -367,9 +370,9 @@ public class SelectMap : MonoBehaviour
         }
         else    // 3_2
         {
-            if (curDay == 0 || selEvnt[4] == 0)
+            if (curDay == 0 || selEvnt[1] == 0)
             {
-                Button3_2[nextEvent[0] + 3 * (curDay / 5)].SetActive(true);
+                Button3_2[nextEvent[1] + 3 * (curDay / 5)].SetActive(true);
                 Title[0].SetActive(true);
             }
             else
@@ -385,9 +388,9 @@ public class SelectMap : MonoBehaviour
     {
         selectNum = 3;            
         InfoPanel.SetActive(true);
-        if (curDay == 0 || selEvnt[5] == 0)
+        if (curDay == 0 || selEvnt[2] == 0)
         {
-            Button3_3[nextEvent[0] + 3 * (curDay / 5)].SetActive(true);
+            Button3_3[nextEvent[2] + 3 * (curDay / 5)].SetActive(true);
             Title[0].SetActive(true);
         }
         else
@@ -439,12 +442,12 @@ public class SelectMap : MonoBehaviour
                 break;
 
             case 1: // 2트랙
-                if (curDay == 0 || selEvnt[selectNum] == 0)
+                if (curDay == 0 || selEvnt[selectNum-1] == 0)
                     saveManager.gameData.map.curDay += 2;
                 break;
 
             case 2: // 3트랙
-                if (curDay == 0 || selEvnt[selectNum+2] == 0)
+                if (curDay == 0 || selEvnt[selectNum-1] == 0)
                     saveManager.gameData.map.curDay += 2;
                 break;
         }

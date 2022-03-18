@@ -29,7 +29,6 @@ public class Thief : MonoBehaviour
         {
             goodsCollection.gold = 0;
         }
-        saveManager.gameData.map.curDay += 1;
         //µ∑ ¿“¥¬ ¿Ã∆Â∆Æ
     }
 
@@ -37,27 +36,12 @@ public class Thief : MonoBehaviour
     {
         EndEvent();
         GameObject.Find("Hero").GetComponent<HeroInfo>().OnDamaged(15 + level * 0.5f);
-        saveManager.gameData.map.curDay += 1;
         // «« ±Ô¿Ã¥¬ ¿Ã∆Â∆Æ
     }
 
     public void ThiefOption3()//»Æ∑¸∑Œ «««œ±‚ ∏¯ «««“Ω√ 1 + 2
     {
         EndEvent();
-        saveManager.gameData.map.curDay += 2;
-        /*
-        int randomInt = Random.Range(0, 100);
-        if (randomInt >= 50)
-        {
-            //µµ∏¡∞°¥¬ ¿Ã∆Â∆Æ
-        }
-        else
-        {
-            ThiefOption1();
-            ThiefOption2();
-        }
-        */
-        Debug.Log("Thief 3");
     }
 
     void EndEvent()

@@ -12,10 +12,12 @@ public class EventManager : MonoBehaviour
     GameObject Thief, Training, Merchant, Rullet, CampFire, Infection;
     EventNode eventNode;
     int EvntList;
+    SaveManager saveManager;
 
     void OnEnable()
     {
-        map = SaveManager.Instance.gameData.map;
+        saveManager = SaveManager.Instance;
+        map = saveManager.gameData.map;
         eventNode = (EventNode)map.curMapNode;
         EventCanvas.transform.Find(eventNode.eventName).gameObject.SetActive(true);
         EvntList = Random.Range(0, 6);
@@ -54,4 +56,20 @@ public class EventManager : MonoBehaviour
             default: break;
         }
     }
+
+    public void AddCurDay1()
+    {
+        saveManager.gameData.map.curDay += 1;
+    }
+
+    public void AddCurDay2()
+    {
+        saveManager.gameData.map.curDay += 2;
+    }
+
+    public void AddCurDay3()
+    {
+        saveManager.gameData.map.curDay += 3;
+    }
+
 }

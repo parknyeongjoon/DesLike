@@ -6,23 +6,23 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu(fileName = "EventNode", menuName = "ScriptableObject/MapNodeT/EventNode")]
 public class EventNode : MapNode
 {
-    [SerializeField]
-    string[] eventNames;
+    [SerializeField] string[] eventNames;
     public string eventName;
+    bool CheckSet= false;
 
-    public void  SetEvent()
+    public void SetEvent()
     {
-        int temp = Random.Range(0, eventNames.Length);
-        eventName = eventNames[temp];
+        if (CheckSet == false)
+        {
+            int temp = Random.Range(0, eventNames.Length);
+            eventName = eventNames[temp];
+            CheckSet = true;
+        }
     }
 
     public void Play_EventNode()
     {
-        // if (isPlayable) {
-            map.curMapNode = this;
-            // map.playerX = x; map.playerY = y;
-            // map.CheckPlayableNode();
-            SceneManager.LoadScene("Event");
-        //}
+        map.curMapNode = this;
+        SceneManager.LoadScene("Event");
     }
 }

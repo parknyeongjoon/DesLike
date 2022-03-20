@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StageSelect.unity
     guid: 995558356ecd91b47b0c43921abd7e69
+  - enabled: 1
+    path: Assets/Scenes/BaseCamp.unity
+    guid: 0bb24d7ba0708cd4e8a8dbdc0c6cb73f
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: c48961304e685d74686a25785e3d8dab,
       type: 2}

@@ -120,7 +120,6 @@ public class SelectMap : MonoBehaviour
             MoneyText.text = "- °ñµå : 0";
         else
             MoneyText.text = "\n- °ñµå : " + goodsCollection.gold;
-            MoneyText.text = "- ½Ä·® : 0 \n- °ñµå : 0";
 
         if (newSet == true)
         {

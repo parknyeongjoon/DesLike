@@ -75,6 +75,7 @@ public class PortManager : MonoBehaviour
                 allyPortDatas.portDatas[i].portImg.color = new Color(0.7f, 0, 0);
             }
         }
+        originPort.portImg.color = new Color(1, 1, 1);
     }
 
     public void ReturnPortImg()

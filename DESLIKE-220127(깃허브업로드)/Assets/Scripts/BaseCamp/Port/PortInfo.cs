@@ -72,7 +72,7 @@ public class PortInfo : MonoBehaviour
         image.color = new Color(1, 1, 1);
     }
 
-    public void PortDrag()
+    public void PortDragStart()
     {
         if(PortManager.Instance.portState == Port_State.Idle && portData.soldierCode != null)
         {
@@ -83,9 +83,24 @@ public class PortInfo : MonoBehaviour
         }
     }
 
+    public void PortDragEnd()
+    {
+        StartCoroutine(DragEndCoroutine());
+    }
+
+    IEnumerator DragEndCoroutine()
+    {
+        yield return null;
+        if(PortManager.Instance.portState == Port_State.Drag)
+        {
+            PortManager.Instance.portState = Port_State.Idle;
+            PortManager.Instance.ReturnPortImg();
+        }
+    }
+
     public void PortDrop()
     {
-        if(PortManager.Instance.portState == Port_State.Drag)
+        if(PortManager.Instance.portState == Port_State.Drag && portData.unlock)
         {
             if(portData.soldierCode == null)
             {
@@ -102,8 +117,42 @@ public class PortInfo : MonoBehaviour
                 PortManager.Instance.originPort.portImg.sprite = SaveManager.Instance.dataSheet.soldierDataSheet[PortManager.Instance.originPort.soldierCode].sprite;
             }
             image.sprite = SaveManager.Instance.dataSheet.soldierDataSheet[portData.soldierCode].sprite;
-            PortManager.Instance.portState = Port_State.Idle;
-            PortManager.Instance.ReturnPortImg();
+        }
+    }
+
+    public void PortPointEnter()
+    {
+        if(PortManager.Instance.portState == Port_State.Drag)//드래그 중에 마우스 커서가 들어가면 색깔이 바뀌는 함수
+        {
+            if (PortManager.Instance.originPort != portData && portData.unlock)//드래그를 시작한 포트거나 잠겨있는 포트면 제외
+            {
+                image.color = new Color(0.7f, 0, 0.7f);
+            }
+        }
+        else if(PortManager.Instance.portState == Port_State.Set)//세팅중이라면
+        {
+            if (portData.unlock && portData.soldierCode == null)
+            {
+                image.color = new Color(0.7f, 0, 0.7f);
+            }
+        }
+    }
+
+    public void PortPointExit()
+    {
+        if(PortManager.Instance.portState == Port_State.Drag)
+        {
+            if (PortManager.Instance.originPort != portData && portData.unlock)//드래그를 시작한 포트거나 잠겨있는 포트면 제외
+            {
+                image.color = new Color(0, 0.7f, 0);
+            }
+        }
+        else if (PortManager.Instance.portState == Port_State.Set)//세팅중이라면
+        {
+            if (portData.unlock && portData.soldierCode == null)
+            {
+                image.color = new Color(0, 0.7f, 0);
+            }
         }
     }
 }

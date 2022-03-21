@@ -13,6 +13,7 @@ public class SoldierInfo : HeroInfo
         cur_Hp = castleData.hp;
         cur_Mp = ((SoldierData)castleData).mp;
         portDatas.spawnSoldierList.Add(this);
+        BattleUIManager.Instance.UpdateSoldierRatioBar();
         afterDeadHandler += Dead;
         StartCoroutine(Hp_Mp_Re());
     }
@@ -22,11 +23,12 @@ public class SoldierInfo : HeroInfo
         gameObject.layer = 7;
         animator.SetTrigger("isDead");
         portDatas.spawnSoldierList.Remove(this);
-        Destroy(gameObject, 10.0f);
-        if(portDatas.spawnSoldierList.Count == 0)
+        BattleUIManager.Instance.UpdateSoldierRatioBar();
+        if (portDatas.spawnSoldierList.Count == 0)
         {
             BattleUIManager.Instance.EndStage();
         }
+        Destroy(gameObject, 10.0f);
     }
 
     void OnMouseDown()

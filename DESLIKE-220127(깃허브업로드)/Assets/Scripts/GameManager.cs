@@ -89,6 +89,18 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1;
     }
 
+    public void timeScale1()
+    {
+        gamePause = false;
+        Time.timeScale = 1;
+    }
+
+    public void timeScale2()
+    {
+        gamePause = false;
+        Time.timeScale = 2;
+    }
+
     public static void DeleteChilds(GameObject gameObject)
     {
         Transform[] childList = gameObject.GetComponentsInChildren<Transform>();

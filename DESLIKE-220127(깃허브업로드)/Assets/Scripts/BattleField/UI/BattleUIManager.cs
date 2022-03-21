@@ -8,10 +8,9 @@ public class BattleUIManager : MonoBehaviour
 {
     static BattleUIManager instance;
 
-    [SerializeField]
-    GameObject PortPanel, HeroPanel, SoldierPanel, SetPortPanel, EmptyPanel, RewardPanel;
-    [SerializeField]
-    Button start_Btn;
+    [SerializeField] GameObject PortPanel, HeroPanel, SoldierPanel, SetPortPanel, EmptyPanel, RewardPanel;
+    [SerializeField] Button start_Btn;
+    [SerializeField] Image soldierRatioBarImg;
     [SerializeField] PortDatas allyPortDatas, enemyPortDatas;
     public PortData cur_Port;
     public SoldierInfo cur_Soldier;
@@ -64,7 +63,7 @@ public class BattleUIManager : MonoBehaviour
         }
     }
 
-    //0 병사 패널 1생성 패널 2포트 정보 패널 3끄기 4챌린지 패널
+    //0 병사 패널 1생성 패널 2포트 정보 패널 3끄기
     public void SetMidPanel(int index)//string 매개변수 가능? 가독성 너무 떨어짐
     {
         SoldierPanel.SetActive(false);
@@ -118,5 +117,10 @@ public class BattleUIManager : MonoBehaviour
     {
         enemyPortDatas.spawnSoldierList.Clear();
         EndStage();
+    }
+
+    public void UpdateSoldierRatioBar()
+    {
+        soldierRatioBarImg.fillAmount = (float)allyPortDatas.spawnSoldierList.Count / (allyPortDatas.spawnSoldierList.Count + enemyPortDatas.spawnSoldierList.Count);
     }
 }

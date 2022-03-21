@@ -9,7 +9,7 @@ public class BattleUIManager : MonoBehaviour
     static BattleUIManager instance;
 
     [SerializeField]
-    GameObject PortPanel, HeroPanel, SoldierPanel, ProducePanel, SetPortPanel, EmptyPanel, ChallengePanel, RewardPanel;
+    GameObject PortPanel, HeroPanel, SoldierPanel, SetPortPanel, EmptyPanel, RewardPanel;
     [SerializeField]
     Button start_Btn;
     [SerializeField] PortDatas allyPortDatas, enemyPortDatas;
@@ -68,17 +68,12 @@ public class BattleUIManager : MonoBehaviour
     public void SetMidPanel(int index)//string 매개변수 가능? 가독성 너무 떨어짐
     {
         SoldierPanel.SetActive(false);
-        ProducePanel.SetActive(false);
         SetPortPanel.SetActive(false);
-        ChallengePanel.SetActive(false);
         EmptyPanel.SetActive(false);
         switch (index)
         {
             case 0:
                 SoldierPanel.gameObject.SetActive(true);
-                break;
-            case 1:
-                ProducePanel.gameObject.SetActive(true);
                 break;
             case 2:
                 SetPortPanel.gameObject.SetActive(true);
@@ -86,22 +81,12 @@ public class BattleUIManager : MonoBehaviour
             case 3:
                 EmptyPanel.gameObject.SetActive(true);
                 break;
-            case 4:
-                ChallengePanel.gameObject.SetActive(true);
-                break;
         }
     }
 
     public void ClickPort()
     {
-        if (cur_Port.soldierCode == null)
-        {
-            SetMidPanel(1);
-        }
-        else
-        {
-            SetMidPanel(2);
-        }
+        SetMidPanel(2);
     }
 
     public void RemoveStartBtn()
@@ -127,5 +112,11 @@ public class BattleUIManager : MonoBehaviour
     {
         RewardPanel.gameObject.SetActive(true);
         rewardPanel.SetRewardPanel();
+    }
+
+    public void Skip()//지우기
+    {
+        enemyPortDatas.spawnSoldierList.Clear();
+        EndStage();
     }
 }

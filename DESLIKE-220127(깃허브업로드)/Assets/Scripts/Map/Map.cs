@@ -26,6 +26,8 @@ public class Map : ScriptableObject
     public int curDay;  // 현재 날짜
     public int[] selEvent = new int[3];
     public int[] nextEvent = new int[3];   // 현재 이벤트(전투) 저장용. 0 : 1트랙, 1 : 2트랙, 2 : 3트랙
+    public bool[] isChallenge = new bool[3];
+    public int challengeCount = 0;
     public bool midBossCheck1 = false, midBossCheck2 = false, villageCheck = false, organCheck = false; // 중간 보스, 마을, 정비 여부
 
 

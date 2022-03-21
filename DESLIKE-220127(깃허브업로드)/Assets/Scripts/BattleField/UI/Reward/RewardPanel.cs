@@ -17,11 +17,13 @@ public class RewardPanel : MonoBehaviour
         GameObject createBtn;
         Reward reward = map.curMapNode.reward;
         //soldierBtn
+        int i = Random.Range(0, 3); // 임시값 by 시후
         createBtn = Instantiate(rewardSoldierBtnPrefab, transform);
-        createBtn.GetComponent<SoldierRewardBtn>().soldierCode = reward.soldierReward.soldier.code;
+        createBtn.GetComponent<SoldierRewardBtn>().soldierCode = reward.soldierReward.soldier[i].code;
         createBtn.GetComponent<SoldierRewardBtn>().soldierRemain = reward.soldierReward.remain;
-        createBtn.transform.GetChild(0).GetComponent<TMP_Text>().text = reward.soldierReward.soldier.soldier_name.ToString();
-        createBtn.transform.GetChild(1).GetComponent<Image>().sprite = reward.soldierReward.soldier.sprite;
+        createBtn.transform.GetChild(0).GetComponent<TMP_Text>().text = reward.soldierReward.soldier[i].soldier_name.ToString();
+        createBtn.transform.GetChild(1).GetComponent<Image>().sprite = reward.soldierReward.soldier[i].sprite;
+        
         //relicBtn
         RelicData relicData = reward.relic.GetComponent<Relic>().relicData;
         createBtn = Instantiate(rewardRelicBtnPrefab, transform);

@@ -14,10 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
   isNode: 1
-  isPlayable: 1
-  isPath: 000001
-  eventableDot: 000000000000000000000000
-  isVisited: 0
   rewardSoldierList:
   - {fileID: 11400000, guid: 505df875aa52d6c429dc1729c124a209, type: 2}
   - {fileID: 11400000, guid: a29c1d8c1343ac342b7934d4fa64b8d3, type: 2}
@@ -26,8 +22,8 @@ MonoBehaviour:
   - {fileID: 4835315866048107822, guid: bdc55f89b7fc82046a549df921abb5dc, type: 3}
   reward:
     soldierReward:
-      soldier: {fileID: 0}
-      remain: 0
+      soldier: {fileID: 11400000, guid: a29c1d8c1343ac342b7934d4fa64b8d3, type: 2}
+      remain: 1
       mutant: {fileID: 0}
     relic: {fileID: 4835315866048107822, guid: bdc55f89b7fc82046a549df921abb5dc, type: 3}
     gold: 0

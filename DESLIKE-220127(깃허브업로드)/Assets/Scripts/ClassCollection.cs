@@ -91,7 +91,7 @@ public class Reward
 [System.Serializable]
 public struct SoldierReward
 {
-    public SoldierData soldier;
+    public SoldierData[] soldier;
     public int remain;
     public GameObject mutant;
 }

@@ -15,7 +15,6 @@ public class BattleNodeScript : NodeScript
         battleNode = (BattleNode)MapNode;
         battleNode.SetenemyPortOption();
         battleNode.SetChallengeOption();
-        battleNode.isChallenge = false;
     }
 
     public void SetEnemyPort()  // 외부 참조용
@@ -36,15 +35,6 @@ public class BattleNodeScript : NodeScript
 
     public void See_InfoPanel()
     {
-        if (battleNode.isChallenge == true)
-        {
-            ChallengeO.gameObject.SetActive(true);
-        }
-        else
-        {
-            ChallengeO.gameObject.SetActive(false);
-        }
-
         List<Option> option = new List<Option>();
         option = battleNode.enemyPortOption.soldierOption;
         GameObject createPrefab;
@@ -75,20 +65,6 @@ public class BattleNodeScript : NodeScript
             createPrefab = Instantiate(MorePrefab, MoreTemp.transform);
             createPrefab.GetComponentInChildren<Image>().sprite = option[i].soldierData.sprite;
             createPrefab.GetComponentInChildren<TMP_Text>().text = option[i].portNum.Length.ToString();
-        }
-    }
-
-    public void ChallengeOnOff()
-    {
-        if (battleNode.isChallenge == true)
-        {
-            battleNode.isChallenge = false;
-            ChallengeO.gameObject.SetActive(false);
-        }
-        else
-        {
-            battleNode.isChallenge = true;
-            ChallengeO.gameObject.SetActive(true);
         }
     }
 }

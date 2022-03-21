@@ -7,7 +7,6 @@ public class SelectMap : MonoBehaviour
     public GameObject[] Track = new GameObject[3];
     [SerializeField] TMP_Text HPText, CurrentDayText, MoneyText;
     [SerializeField] TMP_Text[] SelText = new TMP_Text[6]; // 0 : 1_1 / 1,2 : 2_1, 2 / 3, 4, 5 = 3_1, 2, 3 
-    [SerializeField] GameObject ChallengeO;
     GameObject hero;
     HeroInfo heroInfo;
 
@@ -49,6 +48,7 @@ public class SelectMap : MonoBehaviour
 
     void Start()
     {
+        
         saveManager = SaveManager.Instance;
         ObjectInactive();   // 맵 초기화
         FindData(); // 데이터 찾기
@@ -119,7 +119,7 @@ public class SelectMap : MonoBehaviour
         if (curDay == 0)
             MoneyText.text = "- 골드 : 0";
         else
-            MoneyText.text = "\n- 골드 : " + goodsCollection.gold;
+            MoneyText.text = "- 골드 : " + goodsCollection.gold;
 
         if (newSet == true)
         {
@@ -326,7 +326,6 @@ public class SelectMap : MonoBehaviour
 
                 case 1: // 마을
                     Button1_1[9].SetActive(true);
-                    ChallengeO.gameObject.SetActive(false);
                     break;
 
                 case 2: // 2차 중간 보스
@@ -336,7 +335,6 @@ public class SelectMap : MonoBehaviour
 
                 case 3: // 정비
                     Button1_1[10].SetActive(true);
-                    ChallengeO.gameObject.SetActive(false);
                     break;
 
                 case 4: // 최종 보스
@@ -357,7 +355,6 @@ public class SelectMap : MonoBehaviour
             {
                 EventButton[0].SetActive(true);
                 Title[1].SetActive(true);
-                ChallengeO.gameObject.SetActive(false);
             }
         }
         else    // 3트랙
@@ -371,7 +368,6 @@ public class SelectMap : MonoBehaviour
             {
                 EventButton[2].SetActive(true);
                 Title[1].SetActive(true);
-                ChallengeO.gameObject.SetActive(false);
             }
         }
     }
@@ -391,7 +387,6 @@ public class SelectMap : MonoBehaviour
             {
                 EventButton[1].SetActive(true);
                 Title[1].SetActive(true);
-                ChallengeO.gameObject.SetActive(false);
             }
         }
         else    // 3_2
@@ -405,7 +400,6 @@ public class SelectMap : MonoBehaviour
             {
                 EventButton[3].SetActive(true);
                 Title[1].SetActive(true);
-                ChallengeO.gameObject.SetActive(false);
             }
         }
     }
@@ -423,7 +417,6 @@ public class SelectMap : MonoBehaviour
         {
             EventButton[4].SetActive(true);
             Title[1].SetActive(true);
-            ChallengeO.gameObject.SetActive(false);
         }
     }
 

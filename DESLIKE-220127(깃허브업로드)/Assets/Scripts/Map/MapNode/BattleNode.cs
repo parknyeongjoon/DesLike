@@ -10,11 +10,9 @@ public class BattleNode : MapNode
     public List<PortsOption> enemyPortsOptions;
     public PortsOption enemyPortOption;
     public List<PortsOption> challengeList;
-    public PortsOption challengeOption;
     public PortDatas enemyPortDatas;
 
-    public bool isChallenge;
-
+   
     public void SetenemyPortOption()
     {
         int temp = Random.Range(0, enemyPortsOptions.Count);
@@ -24,7 +22,6 @@ public class BattleNode : MapNode
     public void SetChallengeOption()
     {
         int temp = Random.Range(0, challengeList.Count);
-        challengeOption = challengeList[temp];
     }
 
     public void Play_BattleNode()

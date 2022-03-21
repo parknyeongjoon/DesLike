@@ -9,7 +9,6 @@ public class SoldierManager : MonoBehaviour
     {
         SoldierData getSoldier = Instantiate(SaveManager.Instance.dataSheet.soldierDataSheet[code]);
         getSoldier.mutant = mutant;
-        getSoldier.remain = remain;
         RelicManager.Instance.CheckRelicCondition(getSoldier);
         SaveManager.Instance.activeSoldierList.Add(code, getSoldier);
     }

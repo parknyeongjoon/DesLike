@@ -81,4 +81,9 @@ public class MainTitle : MonoBehaviour
     {
         saveManager.SaveNExit();
     }
+
+    public void BaseCamp()
+    {
+        SceneManager.LoadScene("BaseCamp");
+    }
 }

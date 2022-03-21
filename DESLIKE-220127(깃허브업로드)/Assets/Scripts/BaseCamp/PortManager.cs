@@ -22,8 +22,10 @@ public class PortManager : MonoBehaviour
     public GameObject activeBtn;
 
     public Coroutine setPortCoroutine;
-    public bool isSet = false;
+    public Port_State portState;
     public string soldierCode;
+
+    public PortData originPort;
 
     public 
 
@@ -34,13 +36,14 @@ public class PortManager : MonoBehaviour
 
     public IEnumerator SetPortCoroutine()
     {
-        isSet = true;
+        portState = Port_State.Set;
+        if (activeBtn != null) { activeBtn.SetActive(false); }
         SetPortImg();
-        while (!Input.GetKeyDown(KeyCode.Escape) && isSet)
+        while (!Input.GetKeyDown(KeyCode.Escape) && portState == Port_State.Set)
         {
             yield return null;
         }
-        isSet = false;
+        portState = Port_State.Idle;
         ReturnPortImg();
     }
 
@@ -53,6 +56,21 @@ public class PortManager : MonoBehaviour
                 allyPortDatas.portDatas[i].portImg.color = new Color(0, 0.7f, 0);
             }
             else if (!allyPortDatas.portDatas[i].unlock || allyPortDatas.portDatas[i].soldierCode != null)
+            {
+                allyPortDatas.portDatas[i].portImg.color = new Color(0.7f, 0, 0);
+            }
+        }
+    }
+
+    public void DragPortImg()
+    {
+        for (int i = 0; i < allyPortDatas.portDatas.Length; i++)
+        {
+            if (allyPortDatas.portDatas[i].unlock)
+            {
+                allyPortDatas.portDatas[i].portImg.color = new Color(0, 0.7f, 0);
+            }
+            else if (!allyPortDatas.portDatas[i].unlock)
             {
                 allyPortDatas.portDatas[i].portImg.color = new Color(0.7f, 0, 0);
             }

@@ -29,32 +29,36 @@ public class PortInfo : MonoBehaviour
 
     public void SetPortCode()
     {
-        if(PortManager.Instance.isSet && portData.unlock && portData.soldierCode == null)//set 상태면 빈 포트에 병사 적용
+        if(PortManager.Instance.portState == Port_State.Set)//set 상태일 때
         {
-            PortManager.Instance.isSet = false;
-            portData.soldierCode = PortManager.Instance.soldierCode;
-            image.sprite = SaveManager.Instance.dataSheet.soldierDataSheet[portData.soldierCode].sprite;
+            if(portData.unlock && portData.soldierCode == null)//언락된 빈 포트면 병사 적용
+            {
+                PortManager.Instance.portState = Port_State.Idle;
+                portData.soldierCode = PortManager.Instance.soldierCode;
+                image.sprite = SaveManager.Instance.dataSheet.soldierDataSheet[portData.soldierCode].sprite;
+            }
         }
-        else if(!PortManager.Instance.isSet && portData.soldierCode != null)//병사가 들어있다면 판매
+        else if(PortManager.Instance.portState == Port_State.Idle)//idle 상태일 때
         {
-            PortManager.Instance.ControllActiveBtn(SellBtn);
+            if(!portData.unlock)//포트가 잠겨있다면 포트를 언락하기
+            {
+                PortManager.Instance.ControllActiveBtn(UnlockBtn);
+                //unlockPrice.text = 설정.ToString();
+            }
         }
-        else if(!PortManager.Instance.isSet && !portData.unlock)//포트가 잠겨있다면 포트를 언락하는 버튼 열기
+        else if(PortManager.Instance.portState == Port_State.Sell)
         {
-            //unlockPrice 값 변경해주기
-            PortManager.Instance.ControllActiveBtn(UnlockBtn);
+            if (portData.soldierCode != null)//병사가 들어있다면 판매
+            {
+                PortManager.Instance.ControllActiveBtn(SellBtn);
+            }
         }
     }
 
     public void SellPort()
     {
-        //SoldierData tempSoldier = SaveManager.Instance.activeSoldierList[portData.soldierCode];
         //SaveManager.Instance.gameData.goodsCollection.food += (int)(tempSoldier.cost * 0.7f);//골드로 바꾸기
-        //battleUIManager.infoPanel.SetMoneyText();//바꿔줘야함
-        //tempSoldier.remain += 1;
-        //돈 빼기
-        //병사 수 -1
-        //병사 수가 0이라면 밑에 버튼 삭제
+        //돈 추가
         portData.soldierCode = null;
         portData.portImg.sprite = null;
         SellBtn.SetActive(false);
@@ -66,5 +70,40 @@ public class PortInfo : MonoBehaviour
         UnlockBtn.SetActive(false);
         portData.unlock = true;
         image.color = new Color(1, 1, 1);
+    }
+
+    public void PortDrag()
+    {
+        if(PortManager.Instance.portState == Port_State.Idle && portData.soldierCode != null)
+        {
+            PortManager.Instance.portState = Port_State.Drag;
+            PortManager.Instance.originPort = portData;
+            if (PortManager.Instance.activeBtn != null) { PortManager.Instance.activeBtn.SetActive(false); }
+            PortManager.Instance.DragPortImg();
+        }
+    }
+
+    public void PortDrop()
+    {
+        if(PortManager.Instance.portState == Port_State.Drag)
+        {
+            if(portData.soldierCode == null)
+            {
+                portData.soldierCode = PortManager.Instance.originPort.soldierCode;
+                PortManager.Instance.originPort.soldierCode = null;
+                PortManager.Instance.originPort.portImg.sprite = null;
+            }
+            else if(portData.soldierCode != null)
+            {
+                string tempSoldierCode;
+                tempSoldierCode = portData.soldierCode;
+                portData.soldierCode = PortManager.Instance.originPort.soldierCode;
+                PortManager.Instance.originPort.soldierCode = tempSoldierCode;
+                PortManager.Instance.originPort.portImg.sprite = SaveManager.Instance.dataSheet.soldierDataSheet[PortManager.Instance.originPort.soldierCode].sprite;
+            }
+            image.sprite = SaveManager.Instance.dataSheet.soldierDataSheet[portData.soldierCode].sprite;
+            PortManager.Instance.portState = Port_State.Idle;
+            PortManager.Instance.ReturnPortImg();
+        }
     }
 }

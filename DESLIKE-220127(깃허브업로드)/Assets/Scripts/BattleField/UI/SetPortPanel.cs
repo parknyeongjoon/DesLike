@@ -19,15 +19,6 @@ public class SetPortPanel : MonoBehaviour
     {
         portData = battleUIManager.cur_Port;
         soldier_Portrait.sprite = portData.portImg.sprite;
-    }
-
-    public void SellPort()
-    {
-        SoldierData tempSoldier = SaveManager.Instance.activeSoldierList[portData.soldierCode];
-        SaveManager.Instance.gameData.goodsCollection.food += (int)(tempSoldier.cost * 0.7f);
-        tempSoldier.remain += 1;
-        portData.soldierCode = null;
-        portData.portImg.sprite = null;
-        battleUIManager.SetMidPanel(1);//이벤트로 넣을 수 있으려나?
+        //포트 정보 추가
     }
 }

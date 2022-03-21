@@ -7,6 +7,6 @@ using UnityEngine;
 public class SoldierData : HeroData
 {
     public Rarity rarity;
-    public int cost, remain, unitAmount;
+    public int cost, unitAmount;
     public Soldier_Type soldier_Type;
 }

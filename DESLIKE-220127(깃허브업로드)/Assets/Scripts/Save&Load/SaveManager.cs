@@ -5,6 +5,7 @@ using System.IO;
 
 public class SaveManager : MonoBehaviour
 {
+    static GameObject container;
     static SaveManager instance;
     public static SaveManager Instance
     {
@@ -12,7 +13,10 @@ public class SaveManager : MonoBehaviour
         {
             if (instance == null)
             {
-                return null;
+                container = new GameObject();
+                container.name = "SaveManager";
+                DontDestroyOnLoad(container);
+                instance = container.AddComponent<SaveManager>();
             }
             return instance;
         }
@@ -22,8 +26,9 @@ public class SaveManager : MonoBehaviour
     {
         instance = this;
         DontDestroyOnLoad(gameObject);
-        gameData = GameData;
         dataSheet = DataSheet;
+        LoadDataSheet();
+        gameData = GameData;
     }
 
     public DataSheet dataSheet;
@@ -33,7 +38,7 @@ public class SaveManager : MonoBehaviour
         {
             if(dataSheet == null)
             {
-                LoadDataSheet();
+                dataSheet = new DataSheet();
             }
             return dataSheet;
         }
@@ -128,7 +133,6 @@ public class SaveManager : MonoBehaviour
                 SoldierSaveData tempSoldierSaveData = new SoldierSaveData();
                 tempSoldierSaveData.soldierCode = soldierData.code;
                 tempSoldierSaveData.mutant = soldierData.mutant;
-                tempSoldierSaveData.remain = soldierData.remain;
                 gameData.soldierSaveList.Add(tempSoldierSaveData);
             }
         }
@@ -142,7 +146,6 @@ public class SaveManager : MonoBehaviour
             SoldierData tempSoldierData;
             tempSoldierData = Instantiate(dataSheet.soldierDataSheet[gameData.soldierSaveList[i].soldierCode]);
             tempSoldierData.mutant = gameData.soldierSaveList[i].mutant;
-            tempSoldierData.remain = gameData.soldierSaveList[i].remain;
             activeSoldierList.Add(tempSoldierData.code, tempSoldierData);
         }
     }

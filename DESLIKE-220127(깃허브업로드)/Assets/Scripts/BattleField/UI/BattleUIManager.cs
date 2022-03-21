@@ -20,13 +20,11 @@ public class BattleUIManager : MonoBehaviour
     public SetPortPanel setPortPanel;
     public RewardPanel rewardPanel;
     public HeroPanel heroPanel;
-    public ChallengePanel challengePanel;
 
     void Awake()
     {
         instance = this;
         SaveManager saveManager = SaveManager.Instance;//지우기
-        //MouseManager.Instance.battleUIManager = this;
 
         SetMidPanel(3);
     }

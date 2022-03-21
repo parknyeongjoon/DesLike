@@ -11,6 +11,7 @@ public class BattleNode : MapNode
     public PortsOption enemyPortOption;
     public List<PortsOption> challengeList;
     public PortDatas enemyPortDatas;
+    public bool isChallenge;
 
    
     public void SetenemyPortOption()

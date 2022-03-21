@@ -39,7 +39,8 @@ public class SelectMap : MonoBehaviour
     [SerializeField] BattleNodeScript[] S1T3B3; // Stage1, Track3, Button3
     [SerializeField] GameObject[] EventNode = new GameObject[7]; // 0:마을 / 1:정비 / 2,3 : 2_1,2이벤트 / 4,5,6 : 3_1,2,3 이벤트
     int[] nextEvent;   // [0~2] : Btn1~3, int : 0~2 => 랜덤값 배정(전투 배정)
-    
+    bool[] isChallenge = new bool[3];
+
     public Map map;
     SaveManager saveManager;
 
@@ -109,7 +110,11 @@ public class SelectMap : MonoBehaviour
         villageCheck = saveManager.gameData.map.villageCheck;
         organCheck = saveManager.gameData.map.organCheck;
         goodsCollection = saveManager.gameData.goodsCollection;
-        for(int i = 0; i<3; i++) selEvnt[i] = saveManager.gameData.map.selEvent[i];
+        for (int i = 0; i < 3; i++)
+        {
+            selEvnt[i] = saveManager.gameData.map.selEvent[i];
+            isChallenge[i] = saveManager.gameData.map.isChallenge[i];
+        }
     }
 
     void CommonSetting()    // 공통 세팅
@@ -133,10 +138,20 @@ public class SelectMap : MonoBehaviour
     {
         if (newSet == true)
         {
+            int cRandom;
             for (int i = 0; i < 3; i++) // 두,세갈래길 랜덤(전투, 이벤트) 설정
             {
                 selEvnt[i] = Random.Range(0, 2);
                 saveManager.gameData.map.selEvent[i] = selEvnt[i];  // 데이터 저장
+
+                isChallenge[i] = false; // 초기화
+                cRandom = Random.Range(0, 5);   // 20퍼 확률
+                if (cRandom == 4)   // 도전모드 실행
+                {
+                    isChallenge[i] = true;
+                    saveManager.gameData.map.isChallenge[i] = isChallenge[i];   // 데이터 저장
+                    Debug.Log( i+1 + "도전모드 활성화");
+                }
             }
 
             // 특수 상황
@@ -228,6 +243,8 @@ public class SelectMap : MonoBehaviour
             else
             {
                 SelText[i + 1].text = "이벤트";
+                if (isChallenge[i] == true) Debug.Log("도전모드" + i + " 비활성화");
+                isChallenge[i] = false;
                 EventNodeSet(i);
             }
         }
@@ -247,6 +264,8 @@ public class SelectMap : MonoBehaviour
             else
             {
                 SelText[i + 3].text = "이벤트";
+                if (isChallenge[i] == true) Debug.Log("도전모드" + i + " 비활성화");
+                isChallenge[i] = false;
                 EventNodeSet(i);
             }
         }
@@ -259,14 +278,34 @@ public class SelectMap : MonoBehaviour
             case 0: // 스테이지1
                 if (curTrack == 1) // 2트랙
                 {
-                    if (btn == 0) S1T2B1[nextEvent[btn] + 3 * (curDay / 5)].gameObject.SetActive(true); // 버튼1
-                    else S1T2B2[nextEvent[btn] + 3 * (curDay / 5)].gameObject.SetActive(true);  // 버튼2
+                    if (btn == 0)
+                    {
+                        if (isChallenge[0] == true) S1T2B1[nextEvent[btn] + 3 * (curDay / 5) + 3].gameObject.SetActive(true);
+                        else S1T2B1[nextEvent[btn] + 3 * (curDay / 5)].gameObject.SetActive(true); // 버튼1
+                    }
+                    else
+                    {
+                        if (isChallenge[1] == true) S1T2B2[nextEvent[btn] + 3 * (curDay / 5) + 3].gameObject.SetActive(true);
+                        else S1T2B2[nextEvent[btn] + 3 * (curDay / 5)].gameObject.SetActive(true); // 버튼2
+                    }
                 }
                 else if (curTrack == 2)   // 3트랙
                 {
-                    if (btn == 0) S1T3B1[nextEvent[btn] + 3 * (curDay / 5)].gameObject.SetActive(true); // 버튼1
-                    else if (btn == 1) S1T3B2[nextEvent[btn] + 3 * (curDay / 5)].gameObject.SetActive(true);    // 버튼2
-                    else S1T3B3[nextEvent[btn] + 3 * (curDay / 5)].gameObject.SetActive(true);  // 버튼3
+                    if (btn == 0)
+                    {
+                        if (isChallenge[0] == true) S1T3B1[nextEvent[btn] + 3 * (curDay / 5) + 3].gameObject.SetActive(true);
+                        else S1T3B1[nextEvent[btn] + 3 * (curDay / 5)].gameObject.SetActive(true); // 버튼1
+                    }
+                    else if (btn == 1)
+                    {
+                        if (isChallenge[1] == true) S1T3B2[nextEvent[btn] + 3 * (curDay / 5) + 3].gameObject.SetActive(true);
+                        else S1T3B2[nextEvent[btn] + 3 * (curDay / 5)].gameObject.SetActive(true); // 버튼2
+                    }
+                    else
+                    {
+                        if (isChallenge[2] == true) S1T3B3[nextEvent[btn] + 3 * (curDay / 5) + 3].gameObject.SetActive(true);
+                        else S1T3B3[nextEvent[btn] + 3 * (curDay / 5)].gameObject.SetActive(true); // 버튼3
+                    }
                 }
                 else // 1트랙
                     S1T1B1[nextEvent[btn] + 3 * (selEvnt[0] / 2 - 1)].gameObject.SetActive(true);    // 0~2 : 1차 중간 / 3~5 : 2차 중간 / 6~8 : 3차 중간
@@ -350,7 +389,8 @@ public class SelectMap : MonoBehaviour
         {
             if (curDay == 0 || selEvnt[0] == 0)
             {
-                Button2_1[nextEvent[0] + 3 * (curDay / 5)].SetActive(true);
+                if (isChallenge[0] == true) Button2_1[nextEvent[0] + 3 * (curDay / 5) + 3].SetActive(true);
+                else Button2_1[nextEvent[0] + 3 * (curDay / 5)].SetActive(true);
                 Title[0].SetActive(true);
             }
             else
@@ -364,7 +404,8 @@ public class SelectMap : MonoBehaviour
         {
             if (curDay == 0 || selEvnt[0] == 0)
             {
-                Button3_1[nextEvent[0] + 3 * (curDay / 5)].SetActive(true);
+                if (isChallenge[0] == true) Button3_1[nextEvent[0] + 3 * (curDay / 5) + 3].SetActive(true);
+                else Button3_1[nextEvent[0] + 3 * (curDay / 5)].SetActive(true);
                 Title[0].SetActive(true);
             }
             else
@@ -384,7 +425,8 @@ public class SelectMap : MonoBehaviour
         {
             if (curDay == 0 || selEvnt[1] == 0)
             {
-                Button2_2[nextEvent[1] + 3 * (curDay / 5)].SetActive(true);
+                if (isChallenge[1] == true) Button2_2[nextEvent[1] + 3 * (curDay / 5) + 3].SetActive(true);
+                else Button2_2[nextEvent[1] + 3 * (curDay / 5)].SetActive(true);
                 Title[0].SetActive(true);
             }
             else
@@ -398,8 +440,10 @@ public class SelectMap : MonoBehaviour
         {
             if (curDay == 0 || selEvnt[1] == 0)
             {
-                Button3_2[nextEvent[1] + 3 * (curDay / 5)].SetActive(true);
+                if (isChallenge[1] == true) Button3_2[nextEvent[1] + 3 * (curDay / 5) + 3].SetActive(true);
+                else Button3_2[nextEvent[1] + 3 * (curDay / 5)].SetActive(true);
                 Title[0].SetActive(true);
+                
             }
             else
             {
@@ -416,7 +460,8 @@ public class SelectMap : MonoBehaviour
         InfoPanel.SetActive(true);
         if (curDay == 0 || selEvnt[2] == 0)
         {
-            Button3_3[nextEvent[2] + 3 * (curDay / 5)].SetActive(true);
+            if (isChallenge[2] == true) Button3_3[nextEvent[2] + 3 * (curDay / 5) + 3].SetActive(true);
+            else Button3_3[nextEvent[2] + 3 * (curDay / 5)].SetActive(true);
             Title[0].SetActive(true);
         }
         else
@@ -461,23 +506,35 @@ public class SelectMap : MonoBehaviour
     public void GameStart()
     {
         map.level = curDay;
-        switch(curTrack)    // curDay 추가
+        switch (curTrack)    // curDay 추가
         {
             case 0:
                 if (selEvnt[0] % 2 == 0)
+                {
+                    if (isChallenge[0] == true) saveManager.gameData.map.challengeCount += 1;
                     saveManager.gameData.map.curDay += 2;
+                }
                 break;
 
             case 1: // 2트랙
-                if (curDay == 0 || selEvnt[selectNum-1] == 0)
+                if (curDay == 0 || selEvnt[selectNum - 1] == 0)
+                {
+                    if (isChallenge[1] == true) saveManager.gameData.map.challengeCount += 1;
                     saveManager.gameData.map.curDay += 2;
+                }
                 break;
 
             case 2: // 3트랙
-                if (curDay == 0 || selEvnt[selectNum-1] == 0)
+                if (curDay == 0 || selEvnt[selectNum - 1] == 0)
+                {
                     saveManager.gameData.map.curDay += 2;
+                }
                 break;
         }
+
+        if (isChallenge[selectNum] == true)
+            saveManager.gameData.map.challengeCount += 1;
+        
         InfoPanelClose();
     }
 }

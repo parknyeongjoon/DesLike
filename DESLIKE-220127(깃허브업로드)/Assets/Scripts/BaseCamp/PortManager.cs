@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
+using TMPro;
 
 public class PortManager : MonoBehaviour
 {
@@ -19,19 +21,19 @@ public class PortManager : MonoBehaviour
     }
 
     [SerializeField] PortDatas allyPortDatas;
-    public GameObject activeBtn;
+    [SerializeField] TMP_Text barrierStrength;
+    public GameObject rewardSoldierPanel, activeBtn;
 
-    public Coroutine setPortCoroutine;
     public Port_State portState;
-    public string soldierCode;
+
+    public string rewardSoldierCode;
 
     public PortData originPort;
-
-    public 
 
     void Awake()
     {
         instance = this;
+        barrierStrength.text = allyPortDatas.curBarrierStrength + "/" + allyPortDatas.maxBarrierStrength;
     }
 
     public IEnumerator SetPortCoroutine()
@@ -39,12 +41,17 @@ public class PortManager : MonoBehaviour
         portState = Port_State.Set;
         if (activeBtn != null) { activeBtn.SetActive(false); }
         SetPortImg();
+        rewardSoldierPanel.SetActive(true);
         while (!Input.GetKeyDown(KeyCode.Escape) && portState == Port_State.Set)
         {
             yield return null;
         }
         portState = Port_State.Idle;
+        allyPortDatas.curBarrierStrength += SaveManager.Instance.dataSheet.soldierDataSheet[PortManager.Instance.rewardSoldierCode].needBarrier;
+        barrierStrength.text = allyPortDatas.curBarrierStrength + "/" + allyPortDatas.maxBarrierStrength;
         ReturnPortImg();
+        rewardSoldierPanel.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     public void SetPortImg()

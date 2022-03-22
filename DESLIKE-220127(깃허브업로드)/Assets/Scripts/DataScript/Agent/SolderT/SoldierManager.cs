@@ -5,7 +5,7 @@ using UnityEngine;
 public class SoldierManager : MonoBehaviour
 {
     //º´»ç Å‰µæ ÇÔ¼ö
-    public static void GetSoldier(string code, GameObject mutant, int remain)
+    public static void GetSoldier(string code, GameObject mutant)
     {
         SoldierData getSoldier = Instantiate(SaveManager.Instance.dataSheet.soldierDataSheet[code]);
         getSoldier.mutant = mutant;

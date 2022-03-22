@@ -92,7 +92,6 @@ public class Reward
 public struct SoldierReward
 {
     public SoldierData[] soldier;
-    public int remain;
     public GameObject mutant;
 }
 

@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PortInfo : MonoBehaviour
 {
     [SerializeField] PortData portData;
     [SerializeField] GameObject SellBtn, UnlockBtn;
-    [SerializeField] Text unlockPrice;
+    [SerializeField] TMP_Text unlockPrice;
     Image image;
 
     void Awake()
@@ -34,7 +35,7 @@ public class PortInfo : MonoBehaviour
             if(portData.unlock && portData.soldierCode == null)//언락된 빈 포트면 병사 적용
             {
                 PortManager.Instance.portState = Port_State.Idle;
-                portData.soldierCode = PortManager.Instance.soldierCode;
+                portData.soldierCode = PortManager.Instance.rewardSoldierCode;
                 image.sprite = SaveManager.Instance.dataSheet.soldierDataSheet[portData.soldierCode].sprite;
             }
         }

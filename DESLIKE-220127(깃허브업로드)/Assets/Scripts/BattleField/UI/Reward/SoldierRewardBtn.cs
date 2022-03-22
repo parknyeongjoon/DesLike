@@ -7,7 +7,7 @@ public class SoldierRewardBtn : MonoBehaviour
     [SerializeField]
     Button button;
     [SerializeField]
-    GameObject mutantPanel, changeMutantPanel;
+    GameObject mutantPanel, changeMutantPanel, PortCanvas;
     [SerializeField]
     MutantPanelScript mutantPanelScript;
     [SerializeField]
@@ -30,7 +30,10 @@ public class SoldierRewardBtn : MonoBehaviour
             }
             else
             {
-                SoldierManager.GetSoldier(soldierCode, null, soldierRemain);
+                Instantiate(PortCanvas);
+                PortManager.Instance.rewardSoldierCode = soldierCode;
+                StartCoroutine(PortManager.Instance.SetPortCoroutine());
+                //SoldierManager.GetSoldier(soldierCode, null);
             }
             button.interactable = false;
         }

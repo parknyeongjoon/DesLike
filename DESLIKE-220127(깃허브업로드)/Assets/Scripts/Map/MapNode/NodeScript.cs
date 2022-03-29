@@ -6,22 +6,53 @@ using UnityEngine.UI;
 public class NodeScript : MonoBehaviour
 {
     [SerializeField] MapNode mapNode;
-
+    SaveManager saveManager = SaveManager.Instance;
     protected Image nodeImg;
-
+    bool isRewardSet;
     public MapNode MapNode { get => mapNode; set => mapNode = value; }
 
-    public void SetReward()
+    public void SetReward1()
     {
-        int solCount = mapNode.rewardSoldierList.Count; 
-
-        for (int i = 0; i < solCount; i++)
+        isRewardSet = saveManager.gameData.map.isRewardSet[0];
+        if (isRewardSet == false)
         {
-            mapNode.reward.soldierReward.soldier[i] = mapNode.rewardSoldierList[i];
-            // int soldierRewardIndex = Random.Range(0, mapNode.rewardSoldierList.Count);
-            // mapNode.reward.soldierReward.soldier = mapNode.rewardSoldierList[soldierRewardIndex];
-            int relicRewardIndex = Random.Range(0, mapNode.rewardRelicList.Count);
-            mapNode.reward.relic = mapNode.rewardRelicList[relicRewardIndex];
+            int solCount = mapNode.rewardSoldierList.Count;
+            for (int i = 0; i < solCount; i++)
+            {
+                mapNode.reward.soldierReward.soldier[i] = mapNode.rewardSoldierList[i];
+                int relicRewardIndex = Random.Range(0, mapNode.rewardRelicList.Count);
+                mapNode.reward.relic = mapNode.rewardRelicList[relicRewardIndex];
+            }
+        }
+    }
+
+    public void SetReward2()
+    {
+        isRewardSet = saveManager.gameData.map.isRewardSet[1];
+        if (isRewardSet == false)
+        {
+            int solCount = mapNode.rewardSoldierList.Count;
+            for (int i = 0; i < solCount; i++)
+            {
+                mapNode.reward.soldierReward.soldier[i] = mapNode.rewardSoldierList[i];
+                int relicRewardIndex = Random.Range(0, mapNode.rewardRelicList.Count);
+                mapNode.reward.relic = mapNode.rewardRelicList[relicRewardIndex];
+            }
+        }
+    }
+
+    public void SetReward3()
+    {
+        isRewardSet = saveManager.gameData.map.isRewardSet[2];
+        if (isRewardSet == false)
+        {
+            int solCount = mapNode.rewardSoldierList.Count;
+            for (int i = 0; i < solCount; i++)
+            {
+                mapNode.reward.soldierReward.soldier[i] = mapNode.rewardSoldierList[i];
+                int relicRewardIndex = Random.Range(0, mapNode.rewardRelicList.Count);
+                mapNode.reward.relic = mapNode.rewardRelicList[relicRewardIndex];
+            }
         }
     }
 }

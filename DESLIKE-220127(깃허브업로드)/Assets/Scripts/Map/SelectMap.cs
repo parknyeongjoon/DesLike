@@ -81,10 +81,14 @@ public class SelectMap : MonoBehaviour
     void ObjectInactive()   // 맵 초기화
     {
         InfoPanel.gameObject.SetActive(false);
-        for (int i = 0; i < 18; i++)
+        for (int i = 0; i < 6; i++)
         {
-            if (i < 3) TrackNode[i].SetActive(false);  // 길 노드
-            if (i < 9) S1T1B1[i].gameObject.SetActive(false);
+            if (i < 3)
+            {
+                TrackNode[i].SetActive(false);  // 길 노드
+                S1T1B1[i].gameObject.SetActive(false);
+                saveManager.gameData.map.isEventSet[i] = false;
+            }
             S1T2B1[i].gameObject.SetActive(false);
             S1T2B2[i].gameObject.SetActive(false);
             S1T3B1[i].gameObject.SetActive(false);
@@ -188,12 +192,6 @@ public class SelectMap : MonoBehaviour
                 }
                 else selEvnt[0] = 6;    // 최종 보스
             }
-
-            for (int i = 0; i < 3; i++)
-            {
-                nextEvent[i] = Random.Range(0, 3);  // 랜덤값 지정
-                saveManager.gameData.map.nextEvent[i] = nextEvent[i];   // 데이터 저장
-            }
         }
     }
 
@@ -280,35 +278,35 @@ public class SelectMap : MonoBehaviour
                 {
                     if (btn == 0)
                     {
-                        if (isChallenge[0] == true) S1T2B1[nextEvent[btn] + 3 * (curDay / 5) + 3].gameObject.SetActive(true);
-                        else S1T2B1[nextEvent[btn] + 3 * (curDay / 5)].gameObject.SetActive(true); // 버튼1
+                        if (isChallenge[0] == true) S1T2B1[(curDay / 5) + 1].gameObject.SetActive(true);
+                        else S1T2B1[(curDay / 5)].gameObject.SetActive(true); // 버튼1
                     }
                     else
                     {
-                        if (isChallenge[1] == true) S1T2B2[nextEvent[btn] + 3 * (curDay / 5) + 3].gameObject.SetActive(true);
-                        else S1T2B2[nextEvent[btn] + 3 * (curDay / 5)].gameObject.SetActive(true); // 버튼2
+                        if (isChallenge[1] == true) S1T2B2[(curDay / 5) + 1].gameObject.SetActive(true);
+                        else S1T2B2[(curDay / 5)].gameObject.SetActive(true); // 버튼2
                     }
                 }
                 else if (curTrack == 2)   // 3트랙
                 {
                     if (btn == 0)
                     {
-                        if (isChallenge[0] == true) S1T3B1[nextEvent[btn] + 3 * (curDay / 5) + 3].gameObject.SetActive(true);
-                        else S1T3B1[nextEvent[btn] + 3 * (curDay / 5)].gameObject.SetActive(true); // 버튼1
+                        if (isChallenge[0] == true) S1T3B1[(curDay / 5) + 1].gameObject.SetActive(true);
+                        else S1T3B1[(curDay / 5)].gameObject.SetActive(true); // 버튼1
                     }
                     else if (btn == 1)
                     {
-                        if (isChallenge[1] == true) S1T3B2[nextEvent[btn] + 3 * (curDay / 5) + 3].gameObject.SetActive(true);
-                        else S1T3B2[nextEvent[btn] + 3 * (curDay / 5)].gameObject.SetActive(true); // 버튼2
+                        if (isChallenge[1] == true) S1T3B2[(curDay / 5) + 1].gameObject.SetActive(true);
+                        else S1T3B2[(curDay / 5)].gameObject.SetActive(true); // 버튼2
                     }
                     else
                     {
-                        if (isChallenge[2] == true) S1T3B3[nextEvent[btn] + 3 * (curDay / 5) + 3].gameObject.SetActive(true);
-                        else S1T3B3[nextEvent[btn] + 3 * (curDay / 5)].gameObject.SetActive(true); // 버튼3
+                        if (isChallenge[2] == true) S1T3B3[(curDay / 5) + 1].gameObject.SetActive(true);
+                        else S1T3B3[(curDay / 5)].gameObject.SetActive(true); // 버튼3
                     }
                 }
                 else // 1트랙
-                    S1T1B1[nextEvent[btn] + 3 * (selEvnt[0] / 2 - 1)].gameObject.SetActive(true);    // 0~2 : 1차 중간 / 3~5 : 2차 중간 / 6~8 : 3차 중간
+                    S1T1B1[(selEvnt[0] / 2 - 1)].gameObject.SetActive(true);    // 0~2 : 1차 중간 / 3~5 : 2차 중간 / 6~8 : 3차 중간
                 break;
 
             case 1: // 2스테이지
@@ -359,7 +357,7 @@ public class SelectMap : MonoBehaviour
             switch (selEvnt[0] - 2)
             {
                 case 0: // 1차 중간 보스
-                    Button1_1[nextEvent[0]].SetActive(true);
+                    Button1_1[0].SetActive(true);
                     Title[0].gameObject.SetActive(true);
                     break;
 
@@ -368,7 +366,7 @@ public class SelectMap : MonoBehaviour
                     break;
 
                 case 2: // 2차 중간 보스
-                    Button1_1[nextEvent[0] + 3].SetActive(true);
+                    Button1_1[1].SetActive(true);
                     Title[0].gameObject.SetActive(true);
                     break;
 
@@ -377,7 +375,7 @@ public class SelectMap : MonoBehaviour
                     break;
 
                 case 4: // 최종 보스
-                    Button1_1[nextEvent[0] + 6].SetActive(true);
+                    Button1_1[2].SetActive(true);
                     Title[0].gameObject.SetActive(true);
                     break;
             }
@@ -387,8 +385,8 @@ public class SelectMap : MonoBehaviour
         {
             if (curDay == 0 || selEvnt[0] == 0)
             {
-                if (isChallenge[0] == true) Button2_1[nextEvent[0] + 3 * (curDay / 5) + 3].SetActive(true);
-                else Button2_1[nextEvent[0] + 3 * (curDay / 5)].SetActive(true);
+                if (isChallenge[0] == true) Button2_1[(curDay / 5) + 1].SetActive(true);
+                else Button2_1[curDay / 5].SetActive(true);
                 Title[0].SetActive(true);
             }
             else
@@ -401,8 +399,8 @@ public class SelectMap : MonoBehaviour
         {
             if (curDay == 0 || selEvnt[0] == 0)
             {
-                if (isChallenge[0] == true) Button3_1[nextEvent[0] + 3 * (curDay / 5) + 3].SetActive(true);
-                else Button3_1[nextEvent[0] + 3 * (curDay / 5)].SetActive(true);
+                if (isChallenge[0] == true) Button3_1[curDay / 5 + 1].SetActive(true);
+                else Button3_1[curDay / 5].SetActive(true);
                 Title[0].SetActive(true);
             }
             else
@@ -421,8 +419,8 @@ public class SelectMap : MonoBehaviour
         {
             if (curDay == 0 || selEvnt[1] == 0)
             {
-                if (isChallenge[1] == true) Button2_2[nextEvent[1] + 3 * (curDay / 5) + 3].SetActive(true);
-                else Button2_2[nextEvent[1] + 3 * (curDay / 5)].SetActive(true);
+                if (isChallenge[1] == true) Button2_2[curDay / 5 + 1].SetActive(true);
+                else Button2_2[curDay / 5].SetActive(true);
                 Title[0].SetActive(true);
             }
             else
@@ -435,8 +433,8 @@ public class SelectMap : MonoBehaviour
         {
             if (curDay == 0 || selEvnt[1] == 0)
             {
-                if (isChallenge[1] == true) Button3_2[nextEvent[1] + 3 * (curDay / 5) + 3].SetActive(true);
-                else Button3_2[nextEvent[1] + 3 * (curDay / 5)].SetActive(true);
+                if (isChallenge[1] == true) Button3_2[curDay / 5 + 3].SetActive(true);
+                else Button3_2[curDay / 5].SetActive(true);
                 Title[0].SetActive(true);
                 
             }
@@ -454,8 +452,8 @@ public class SelectMap : MonoBehaviour
         InfoPanel.SetActive(true);
         if (curDay == 0 || selEvnt[2] == 0)
         {
-            if (isChallenge[2] == true) Button3_3[nextEvent[2] + 3 * (curDay / 5) + 3].SetActive(true);
-            else Button3_3[nextEvent[2] + 3 * (curDay / 5)].SetActive(true);
+            if (isChallenge[2] == true) Button3_3[curDay / 5 + 3].SetActive(true);
+            else Button3_3[curDay / 5].SetActive(true);
             Title[0].SetActive(true);
         }
         else
@@ -468,10 +466,10 @@ public class SelectMap : MonoBehaviour
     public void InfoPanelClose()
     {
         
-        for(int i = 0; i<18; i++)
+        for(int i = 0; i<6; i++)
         {
             if (i < 2) Title[i].SetActive(false);
-            if (i < 11) Button1_1[i].SetActive(false);
+            if (i < 5) Button1_1[i].SetActive(false);
             Button2_1[i].SetActive(false);
             Button2_2[i].SetActive(false);
             Button3_1[i].SetActive(false);

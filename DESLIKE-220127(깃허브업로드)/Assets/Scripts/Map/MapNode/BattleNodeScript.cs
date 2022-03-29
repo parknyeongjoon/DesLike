@@ -12,23 +12,46 @@ public class BattleNodeScript : NodeScript
     
     void Start()
     {
+        saveManager = SaveManager.Instance;
         battleNode = (BattleNode)MapNode;
-        battleNode.SetenemyPortOption();
         battleNode.SetChallengeOption();
     }
 
-    public void SetEnemyPort()  // 외부 참조용
+    public void SetEnemyPort1()  // 외부 참조용
     {
-        battleNode.SetenemyPortOption();
+        battleNode.SetEnemyPortOption(1);
+        saveManager.gameData.map.isEventSet[0] = true;
+        saveManager.gameData.map.isRewardSet[0] = true;
+    }
+
+    public void SetEnemyPort2()  // 외부 참조용
+    {
+        battleNode.SetEnemyPortOption(2);
+        saveManager.gameData.map.isEventSet[1] = true;
+        saveManager.gameData.map.isRewardSet[1] = true;
+    }
+
+    public void SetEnemyPort3()  // 외부 참조용
+    {
+        battleNode.SetEnemyPortOption(3);
+        saveManager.gameData.map.isEventSet[2] = true;
+        saveManager.gameData.map.isRewardSet[2] = true;
     }
 
     public void Play_BattleNode()
     {
+        for (int i = 0; i < 3; i++)
+        {
+            saveManager.gameData.map.isEventSet[i] = false;
+            saveManager.gameData.map.isRewardSet[i] = false;
+        }
         battleNode.Play_BattleNode();
     }
 
     public void Play_BossNode()
     {
+        for (int i = 0; i < 3; i++)
+            saveManager.gameData.map.isEventSet[i] = false;
         battleNode.Play_BattleNode();
     }
 

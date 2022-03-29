@@ -12,12 +12,21 @@ public class BattleNode : MapNode
     public List<PortsOption> challengeList;
     public PortDatas enemyPortDatas;
     public bool isChallenge;
-
+    SaveManager saveManager = SaveManager.Instance;
    
-    public void SetenemyPortOption()
+    public void SetEnemyPortOption(int i)
     {
-        int temp = Random.Range(0, enemyPortsOptions.Count);
-        enemyPortOption = enemyPortsOptions[temp];
+        bool isEventSet = saveManager.gameData.map.isEventSet[i];
+        if (isEventSet == false)    // 새로운 정보 세팅
+        {
+            int temp = Random.Range(0, enemyPortsOptions.Count);
+            enemyPortOption = enemyPortsOptions[temp];
+        }
+        else   // 기존 정보 가져오기
+        {
+            int nextEvent = saveManager.gameData.map.nextEvent[i];
+            enemyPortOption = enemyPortsOptions[nextEvent];
+        }
     }
 
     public void SetChallengeOption()

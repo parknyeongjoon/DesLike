@@ -6,10 +6,15 @@ using UnityEngine.UI;
 public class NodeScript : MonoBehaviour
 {
     [SerializeField] MapNode mapNode;
-    SaveManager saveManager = SaveManager.Instance;
     protected Image nodeImg;
     bool isRewardSet;
     public MapNode MapNode { get => mapNode; set => mapNode = value; }
+    SaveManager saveManager;
+
+    void Awake()
+    {
+        SaveManager saveManager = SaveManager.Instance;
+    }
 
     public void SetReward1()
     {

@@ -7,6 +7,7 @@ public class SaveManager : MonoBehaviour
 {
     static GameObject container;
     static SaveManager instance;
+
     public static SaveManager Instance
     {
         get

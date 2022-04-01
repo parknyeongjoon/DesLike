@@ -26,7 +26,7 @@ public class SingleHeal : ActiveSkill
         SetHealTarget(heroInfo.portDatas.spawnSoldierList);
     }
 
-    void SetHealTarget(List<SoldierInfo> soldierInfos)//힐 가중치 + 거리 등등 다양한 요소 합산해서 구하기
+    void SetHealTarget(List<HeroInfo> soldierInfos)//힐 가중치 + 거리 등등 다양한 요소 합산해서 구하기
     {
         float targetHealWeight = 0;
         HeroInfo targetInfo = null;

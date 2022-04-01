@@ -21,7 +21,7 @@ Effect plug-ins	ID	Name	Type				Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	23314993	Idle_01_01	C:\Users\박정식\Desktop\DesLike-Wwise\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Idle_01_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\skeleton_Idle\Idle_01_01		363028
 	192387954	Pain_01_01	C:\Users\박정식\Desktop\DesLike-Wwise\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Pain_01_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\skeletin_Pain\Pain_01_01		363028
-	369774400	Sword_Print_02	C:\Users\박정식\Desktop\DesLike-Wwise\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Sword_Print_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\skeleton_Atk\Sword_Print_02		363028
+	369774400	test_UI	C:\Users\박정식\Desktop\DesLike-Wwise\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Sword_Print_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\test_UI		363028
 	971131732	Pain_02_01	C:\Users\박정식\Desktop\DesLike-Wwise\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Pain_02_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\skeletin_Pain\Pain_02_01		367846
 	971680492	Idle_02_01	C:\Users\박정식\Desktop\DesLike-Wwise\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Idle_02_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\skeleton_Idle\Idle_02_01		363028
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SingleBuff : ActiveSkill//우선 버프 대상 정할 방법 구하기(portDatas에서 a,b,c 진영으로 구분하기?)
 {
-    List<SoldierInfo> soldierList;
+    List<HeroInfo> soldierList;
 
     protected override void Start()
     {

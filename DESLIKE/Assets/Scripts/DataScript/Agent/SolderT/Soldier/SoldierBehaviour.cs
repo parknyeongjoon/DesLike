@@ -9,7 +9,7 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
     new void Start()
     {
         base.Start();
-        StartCoroutine(moveCall());
+        StartCoroutine(MoveCall());
     }
 
     void FixedUpdate()
@@ -44,7 +44,7 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
         if(heroInfo.state == Soldier_State.Battle) { StartCoroutine(Battle_Behaviour()); }
     }
 
-    IEnumerator moveCall()
+    IEnumerator MoveCall()
     {
         float randomMoveCall = UnityEngine.Random.Range(0, 5.0f);
         yield return new WaitForSeconds(randomMoveCall);

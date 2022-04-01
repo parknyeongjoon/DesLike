@@ -5,6 +5,21 @@
 			<ChildrenList>
 				<RandomSequenceContainer Name="skeleton_Atk" ID="{64B4AE77-75B8-477D-BF95-8985A1D8EFE8}" ShortID="679339381">
 					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>70</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Priority" Type="int16">
+							<ValueList>
+								<Value>80</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-5</Value>
@@ -86,7 +101,22 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="skeleton_Idle" ID="{B0EA1062-22F0-4241-A6AF-BE3C00EDB55A}" ShortID="897842096">
 					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
 						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="Priority" Type="int16">
+							<ValueList>
+								<Value>70</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-16</Value>

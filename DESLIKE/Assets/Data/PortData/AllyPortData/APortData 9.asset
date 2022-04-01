@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8a64bf258f5d347821faa968d690da, type: 3}
   m_Name: APortData 9
   m_EditorClassIdentifier: 
-  soldierCode: 
+  soldierCode: 5
   unlock: 1
-  portImg: {fileID: 1917602445372788851, guid: 00143a42fac7d0245b2e8b11ac33a11e, type: 3}
+  portImg: {fileID: 0}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soldierCode: 5
   unlock: 1
-  portImg: {fileID: 5450293836013371207, guid: 2751065962a53494bb00562bbe3477a8, type: 3}
+  portImg: {fileID: 0}

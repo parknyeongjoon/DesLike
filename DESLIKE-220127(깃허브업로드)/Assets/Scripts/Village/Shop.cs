@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    [SerializeField]
-    GameObject shopPanel;
+    public GameObject shopPanel;
 
+    public void OpenBtn()
+    {
+        shopPanel.SetActive(true);
+    }
+
+    public void CloseBtn()
+    {
+        shopPanel.SetActive(false);
+    }
 }

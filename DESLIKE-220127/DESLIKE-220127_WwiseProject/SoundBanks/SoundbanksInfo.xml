@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>/Users/joon_0/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/DesLike/DESLIKE-220127/DESLIKE-220127_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/joon_0/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/DesLike/DESLIKE-220127/DESLIKE-220127_WwiseProject/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/joon_0/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/DesLike/DESLIKE-220127/DESLIKE-220127_WwiseProject/SoundBanks/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/joon_0/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/DesLike/DESLIKE-220127/DESLIKE-220127_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX" Hash="3690994985">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX" Hash="437394987">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1896376002" Name="test_UI" ObjectPath="\Events\Default Work Unit\test_UI" DurationType="OneShot" DurationMin="1.490604" DurationMax="1.490604">
+					<IncludedMemoryFiles>
+						<File Id="306005788" Language="SFX">
+							<ShortName>IceGem_Blast.wav</ShortName>
+							<Path>SFX/IceGem_Blast_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c78aea86fc932424484b302d322f583c, type: 3}
+  m_Name: "HeroData0(\uAC00\uC624\uB098\uC2DC\uD0B9)"
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 2590185811940133651, guid: 76fe55c66fd58ff4d93cf9450d0eade3, type: 3}
+  code: 0
+  hp: 500
+  def: 20
+  size: 0.2
+  blood: {fileID: 5086979035932333915, guid: 83b2eb89fe46c6a4db5d18712a94a153, type: 3}
+  soldier_name: "\uAC00\uC624\uB098\uC2DC  \uD0B9"
+  mp: 200
+  speed: 3
+  mp_Re: 0
+  hp_Re: 0
+  tribe: 0
+  extraSkill: []
+  mutant: {fileID: 0}

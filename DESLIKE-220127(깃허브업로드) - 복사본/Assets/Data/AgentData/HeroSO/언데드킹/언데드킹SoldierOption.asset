@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d2d310121892549905c5bfe8a1c6e6, type: 3}
+  m_Name: "\uC5B8\uB370\uB4DC\uD0B9SoldierOption"
+  m_EditorClassIdentifier: 
+  soldierOption:
+  - soldierData: {fileID: 11400000, guid: 6e40740d778918e4ba73ef05d5237467, type: 2}
+    portNum: 0100000003000000
+    mutant: {fileID: 0}
+  - soldierData: {fileID: 11400000, guid: dc098578b6475514e82ce1e5590261c8, type: 2}
+    portNum: 02000000
+    mutant: {fileID: 0}
+  - soldierData: {fileID: 11400000, guid: 3e65cdd5953d474479ec0533c1a36487, type: 2}
+    portNum: 07000000
+    mutant: {fileID: 0}

@@ -86,4 +86,9 @@ public class MainTitle : MonoBehaviour
     {
         SceneManager.LoadScene("BaseCamp");
     }
+
+    public void Test()
+    {
+        SceneManager.LoadScene("Test");
+    }
 }

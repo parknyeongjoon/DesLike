@@ -9,6 +9,7 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
     new void Start()
     {
         base.Start();
+        StartCoroutine(moveCall());
     }
 
     void FixedUpdate()
@@ -36,10 +37,24 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
         if (heroInfo.action != Soldier_Action.Move) { StartCoroutine(Move()); }
         while (heroInfo.state == Soldier_State.Detect)
         {
+
             yield return new WaitForFixedUpdate();
         }
         StopCoroutine(detectCoroutine);
         if(heroInfo.state == Soldier_State.Battle) { StartCoroutine(Battle_Behaviour()); }
+    }
+
+    IEnumerator moveCall()
+    {
+        float randomMoveCall = UnityEngine.Random.Range(0, 5.0f);
+        yield return new WaitForSeconds(randomMoveCall);
+        while (true)
+        {
+            AkSoundEngine.PostEvent("skeleton_Move", gameObject);
+            randomMoveCall = UnityEngine.Random.Range(3.0f, 10.0f);
+            yield return new WaitForSeconds(randomMoveCall);
+            
+        }
     }
 
     protected IEnumerator Detect()

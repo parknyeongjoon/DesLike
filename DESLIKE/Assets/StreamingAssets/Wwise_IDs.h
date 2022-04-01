@@ -11,6 +11,30 @@
 
 namespace AK
 {
+    namespace EVENTS
+    {
+        static const AkUniqueID DEAD_OR_ALIVE = 3575957003U;
+        static const AkUniqueID SKELETON_ATK = 180084035U;
+        static const AkUniqueID SKELETON_MOVE = 3933512188U;
+        static const AkUniqueID TEST_UI = 1896376002U;
+    } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace DEAD_OR_ALIVE
+        {
+            static const AkUniqueID GROUP = 3575957003U;
+
+            namespace STATE
+            {
+                static const AkUniqueID ALIVE = 655265632U;
+                static const AkUniqueID DEAD = 2044049779U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace DEAD_OR_ALIVE
+
+    } // namespace STATES
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;

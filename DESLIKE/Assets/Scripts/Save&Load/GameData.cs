@@ -33,6 +33,13 @@ public class IsFind
 }
 
 [System.Serializable]
+public class GameOption
+{
+    public float soundVol;
+    public bool storySkip;
+}
+
+[System.Serializable]
 public class GameData
 {
     public bool canContinue;

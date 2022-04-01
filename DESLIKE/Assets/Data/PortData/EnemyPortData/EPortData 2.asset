@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8a64bf258f5d347821faa968d690da, type: 3}
   m_Name: EPortData 2
   m_EditorClassIdentifier: 
-  soldier: {fileID: 11400000, guid: a29c1d8c1343ac342b7934d4fa64b8d3, type: 2}
-  portImage: {fileID: 0}
+  soldierCode: 5
+  unlock: 0
+  portImg: {fileID: 0}

@@ -11,6 +11,7 @@ public class BasicSingleAttack : BasicAttack
         if (targetInfo && targetInfo.gameObject.layer != 7)
         {
             heroInfo.animator.SetTrigger("isAtk");
+            AkSoundEngine.PostEvent("skeleton_Atk", gameObject);
             ((BasicSingleAttackData)basicAttackData).Effect(targetInfo);
             heroInfo.action = Soldier_Action.End_Delay;
             yield return new WaitForSeconds(((BasicSingleAttackData)basicAttackData).end_Delay);

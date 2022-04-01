@@ -1,6 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	1896376002	test_UI			\Default Work Unit\test_UI	
-
-In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	306005788	test_UI	Y:\Documents\GitHub\DesLike\DESLIKE-220127\DESLIKE-220127_WwiseProject\.cache\Windows\SFX\IceGem_Blast_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\test_UI		286260
-

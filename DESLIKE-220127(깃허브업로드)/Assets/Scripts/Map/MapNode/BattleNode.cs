@@ -12,8 +12,13 @@ public class BattleNode : MapNode
     public List<PortsOption> challengeList;
     public PortDatas enemyPortDatas;
     public bool isChallenge;
-    SaveManager saveManager = SaveManager.Instance;
-   
+    SaveManager saveManager;
+
+    void Enable()
+    {
+        saveManager = SaveManager.Instance;
+    }
+
     public void SetEnemyPortOption(int i)
     {
         bool isEventSet = saveManager.gameData.map.isEventSet[i];

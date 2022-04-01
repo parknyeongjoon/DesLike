@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+static class ConstNum
+{
+    public const int soldierNum = 45;
+    public const int relicNum = 30;
+}
+
 [System.Serializable]
 public class HeroSaveData
 {
@@ -20,9 +26,17 @@ public class SoldierSaveData
 }
 
 [System.Serializable]
+public class IsFind
+{
+    public bool[] soldierFind = new bool[ConstNum.soldierNum];
+    public bool[] relicFind = new bool[ConstNum.relicNum];
+}
+
+[System.Serializable]
 public class GameData
 {
     public bool canContinue;
+    public IsFind isFind;
     public GoodsCollection goodsCollection;//¾ÈµÊ
     public Map map;//¾ÈµÊ
     public PortDatas allyPortDatas;//¾ÈµÊ

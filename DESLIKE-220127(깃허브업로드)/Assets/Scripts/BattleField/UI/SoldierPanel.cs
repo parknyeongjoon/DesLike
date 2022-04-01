@@ -27,6 +27,11 @@ public class SoldierPanel : MonoBehaviour
 
     Dictionary<string, GameObject> buffDic;
 
+    void Awake()
+    {
+        buffImg = buffObject.GetComponentInChildren<Image>();
+    }
+
     void OnEnable()
     {
         buffDic = new Dictionary<string, GameObject>();

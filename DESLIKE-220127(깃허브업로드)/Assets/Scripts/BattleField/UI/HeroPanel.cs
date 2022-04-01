@@ -32,6 +32,7 @@ public class HeroPanel : MonoBehaviour
         hero = GameObject.Find("Hero");
         heroInfo = hero.GetComponent<HeroInfo>();
         skills = hero.GetComponent<HeroSkillUse>().skillScripts;
+        buffImg = buffObject.GetComponentInChildren<Image>();
     }
 
     void Start()

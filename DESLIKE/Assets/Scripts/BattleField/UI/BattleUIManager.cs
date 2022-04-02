@@ -90,6 +90,7 @@ public class BattleUIManager : MonoBehaviour
 
     public void RemoveStartBtn()
     {
+        AkSoundEngine.PostEvent("Battle_Start", gameObject);
         start_Btn.gameObject.SetActive(false);
     }
 

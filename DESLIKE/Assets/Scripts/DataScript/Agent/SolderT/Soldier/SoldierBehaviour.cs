@@ -9,7 +9,6 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
     new void Start()
     {
         base.Start();
-        StartCoroutine(MoveCall());
     }
 
     void FixedUpdate()
@@ -23,7 +22,8 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
 
     protected override IEnumerator Idle_Behaviour()
     {
-        while(heroInfo.state == Soldier_State.Idle)
+        AkSoundEngine.PostEvent("skeleton_Move", gameObject);
+        while (heroInfo.state == Soldier_State.Idle)
         {
             heroInfo.state = Soldier_State.Detect;
             yield return new WaitForFixedUpdate();
@@ -42,19 +42,6 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
         }
         StopCoroutine(detectCoroutine);
         if(heroInfo.state == Soldier_State.Battle) { StartCoroutine(Battle_Behaviour()); }
-    }
-
-    IEnumerator MoveCall()
-    {
-        float randomMoveCall = UnityEngine.Random.Range(0, 5.0f);
-        yield return new WaitForSeconds(randomMoveCall);
-        while (true)
-        {
-            AkSoundEngine.PostEvent("skeleton_Move", gameObject);
-            randomMoveCall = UnityEngine.Random.Range(3.0f, 10.0f);
-            yield return new WaitForSeconds(randomMoveCall);
-            
-        }
     }
 
     protected IEnumerator Detect()

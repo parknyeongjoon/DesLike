@@ -5,24 +5,27 @@
 			<ChildrenList>
 				<RandomSequenceContainer Name="skeleton_Atk" ID="{64B4AE77-75B8-477D-BF95-8985A1D8EFE8}" ShortID="679339381">
 					<PropertyList>
-						<Property Name="MaxSoundPerInstance" Type="int16">
+						<Property Name="BelowThresholdBehavior" Type="int16" Value="1"/>
+						<Property Name="Highpass" Type="int16">
 							<ValueList>
-								<Value>70</Value>
+								<Value>23</Value>
 							</ValueList>
 						</Property>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
 						<Property Name="Priority" Type="int16">
 							<ValueList>
 								<Value>80</Value>
 							</ValueList>
 						</Property>
-						<Property Name="UseMaxSoundPerInstance" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-5</Value>
+								<Value>-13</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -31,18 +34,29 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+							<ObjectRef Name="skeleton_Atk Bus" ID="{C2F290A2-0AC2-4A3E-9C4D-415C11BA88D0}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="Sword_Print_02" ID="{F610DFEF-32BA-4A25-824E-69D986C93B36}" ShortID="964793485">
 							<PropertyList>
+								<Property Name="BelowThresholdBehavior" Type="int16" Value="1"/>
+								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
+								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
-										<Value>23</Value>
+										<Value>9</Value>
 									</ValueList>
 								</Property>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="OverrideVirtualVoice" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -55,16 +69,18 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
-								<Property Name="Volume" Type="Real64">
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
 									<ValueList>
-										<Value>-9</Value>
+										<Value>True</Value>
 									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{6A1242BE-BB7F-4DEC-9F57-6AB2C07B25A5}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="26"/>
+													<Property Name="Max" Type="Real64" Value="10"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -84,10 +100,17 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Sword_Print_02" ID="{1C83063C-11DF-422E-B745-D5BFD200F618}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0497483552631579"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.425624817251462"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.176883040935673"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.3210952119883"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Sword_Print_02.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="369774400"/>
+										<MediaID ID="50927963"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
@@ -101,9 +124,12 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="skeleton_Idle" ID="{B0EA1062-22F0-4241-A6AF-BE3C00EDB55A}" ShortID="897842096">
 					<PropertyList>
+						<Property Name="BelowThresholdBehavior" Type="int16" Value="1"/>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
-								<Value>1</Value>
+								<Value>4</Value>
 							</ValueList>
 						</Property>
 						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -119,7 +145,7 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-16</Value>
+								<Value>-96</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -152,8 +178,7 @@
 											<Modifier Name="" ID="{57A7895B-252C-4964-AAEE-03EEA7DFBAEF}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="39"/>
-													<Property Name="Min" Type="Real64" Value="-9"/>
+													<Property Name="Max" Type="Real64" Value="10"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -235,6 +260,13 @@
 					<ObjectLists/>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="skeletin_Pain" ID="{B9B7E529-29A5-4AF2-A413-1EA08F68ACC4}" ShortID="774436273">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
@@ -281,6 +313,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Pain_01_01" ID="{C7B4B001-21C7-4E78-B95C-1473F75FDAC4}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.93416355994152"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.66933369883041"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Pain_01_01.wav</AudioFile>
 									<MediaIDList>
@@ -330,6 +367,13 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Pain_02_01" ID="{5000B2CA-56D7-463F-8548-1BBA3833357A}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.76733269371345"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.761731725146199"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.347260051169591"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.61867991593567"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Pain_02_01.wav</AudioFile>
 									<MediaIDList>

@@ -5,11 +5,17 @@
 			<ChildrenList>
 				<Effect Name="New_Wwise_Parametric_EQ" ID="{C467F416-A33D-4657-87CF-88448CBC860B}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 					<PropertyList>
-						<Property Name="FilterTypeBand2" Type="int32" Value="5"/>
-						<Property Name="FrequencyBand2" Type="Real32" Value="5091"/>
+						<Property Name="FilterTypeBand2" Type="int32" Value="4"/>
+						<Property Name="FrequencyBand2" Type="Real32" Value="620"/>
 						<Property Name="GainBand2" Type="Real32" Value="-11.5"/>
 						<Property Name="OnOffBand1" Type="bool" Value="False"/>
 						<Property Name="OnOffBand3" Type="bool" Value="False"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Wwise_Peak_Limiter" ID="{67C4BD29-BC7A-4D7F-9AF3-5697F3594D96}" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+					<PropertyList>
+						<Property Name="Ratio" Type="Real32" Value="50"/>
+						<Property Name="Threshold" Type="Real32" Value="-1"/>
 					</PropertyList>
 				</Effect>
 			</ChildrenList>

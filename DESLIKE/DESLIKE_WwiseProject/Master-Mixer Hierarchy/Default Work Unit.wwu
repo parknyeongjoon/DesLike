@@ -8,7 +8,23 @@
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{C66C3F69-82D6-4713-9015-089C992FB1C8}" WorkUnitID="{A9423D8E-A8B1-4131-B4D2-8EC43638A8FB}"/>
 						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+							<ObjectRef Name="New_Wwise_Peak_Limiter" ID="{67C4BD29-BC7A-4D7F-9AF3-5697F3594D96}" WorkUnitID="{FEC2F2B6-1383-49BB-9E99-766A03935AEF}"/>
+						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="skeleton_Atk Bus" ID="{C2F290A2-0AC2-4A3E-9C4D-415C11BA88D0}">
+							<PropertyList>
+								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ObjectLists/>
+						</Bus>
+					</ChildrenList>
 					<ObjectLists/>
 				</Bus>
 			</ChildrenList>

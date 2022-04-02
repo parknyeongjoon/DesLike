@@ -21,7 +21,7 @@ public class BattleNode : MapNode
 
     public void SetEnemyPortOption(int i)
     {
-        bool isEventSet = saveManager.gameData.map.isEventSet[i];
+        bool isEventSet = saveManager.gameData.mapData.isEventSet[i];
         if (isEventSet == false)    // 새로운 정보 세팅
         {
             int temp = Random.Range(0, enemyPortsOptions.Count);
@@ -29,7 +29,7 @@ public class BattleNode : MapNode
         }
         else   // 기존 정보 가져오기
         {
-            int nextEvent = saveManager.gameData.map.nextEvent[i];
+            int nextEvent = saveManager.gameData.mapData.nextEvent[i];
             enemyPortOption = enemyPortsOptions[nextEvent];
         }
     }

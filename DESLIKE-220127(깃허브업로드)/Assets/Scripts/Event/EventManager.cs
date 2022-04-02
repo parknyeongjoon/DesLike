@@ -59,17 +59,17 @@ public class EventManager : MonoBehaviour
 
     public void AddCurDay1()
     {
-        saveManager.gameData.map.curDay += 1;
+        saveManager.gameData.mapData.curDay += 1;
     }
 
     public void AddCurDay2()
     {
-        saveManager.gameData.map.curDay += 2;
+        saveManager.gameData.mapData.curDay += 2;
     }
 
     public void AddCurDay3()
     {
-        saveManager.gameData.map.curDay += 3;
+        saveManager.gameData.mapData.curDay += 3;
     }
 
 }

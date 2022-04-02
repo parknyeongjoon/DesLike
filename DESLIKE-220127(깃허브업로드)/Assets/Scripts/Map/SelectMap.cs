@@ -11,7 +11,7 @@ public class SelectMap : MonoBehaviour
     HeroInfo heroInfo;
 
     int curDay = 0, curStage; // 현재 날짜
-    bool midBossCheck1 = false, midBossCheck2 = false, villageCheck = false, organCheck = false; // 중간 보스, 마을, 정비 여부
+    bool midBossCheck1 = false, midBossCheck2 = false, villageCheck = false, organCheck = false, isContinue; // 중간 보스, 마을, 정비 여부
     int[] selDay = new int[3];
     int[] selEvnt = new int[3];
     int nodeNum;   // 노드 지정용(selEvnt[nodeNum]용)
@@ -87,7 +87,7 @@ public class SelectMap : MonoBehaviour
             {
                 TrackNode[i].SetActive(false);  // 길 노드
                 S1T1B1[i].gameObject.SetActive(false);
-                saveManager.gameData.map.isEventSet[i] = false;
+                saveManager.gameData.mapData.isEventSet[i] = false;
             }
             S1T2B1[i].gameObject.SetActive(false);
             S1T2B2[i].gameObject.SetActive(false);
@@ -99,25 +99,26 @@ public class SelectMap : MonoBehaviour
 
     void FindData() // 외부 데이터 가져오기
     {
-        curDay = saveManager.gameData.map.curDay;
 
-        if (curDay != saveManager.gameData.map.checkDay || curDay == 0)    // 이번 라운드 맵에 처음 온다면
+        curDay = saveManager.gameData.mapData.curDay;
+        isContinue = saveManager.gameData.mapData.isContinue;
+        if (curDay != saveManager.gameData.mapData.checkDay || curDay == 0)    // 이번 라운드 맵에 처음 온다면
         {
             newSet = true;
-            saveManager.gameData.map.checkDay = curDay;
+            saveManager.gameData.mapData.checkDay = curDay;
         }
-        curStage = saveManager.gameData.map.curStage;
-        curTrack = saveManager.gameData.map.curTrack;
-        nextEvent = saveManager.gameData.map.nextEvent;
-        midBossCheck1 = saveManager.gameData.map.midBossCheck1;
-        midBossCheck2 = saveManager.gameData.map.midBossCheck2;
-        villageCheck = saveManager.gameData.map.villageCheck;
-        organCheck = saveManager.gameData.map.organCheck;
+        curStage = saveManager.gameData.mapData.curStage;
+        curTrack = saveManager.gameData.mapData.curTrack;
+        nextEvent = saveManager.gameData.mapData.nextEvent;
+        midBossCheck1 = saveManager.gameData.mapData.midBossCheck1;
+        midBossCheck2 = saveManager.gameData.mapData.midBossCheck2;
+        villageCheck = saveManager.gameData.mapData.villageCheck;
+        organCheck = saveManager.gameData.mapData.organCheck;
         goodsCollection = saveManager.gameData.goodsCollection;
         for (int i = 0; i < 3; i++)
         {
-            selEvnt[i] = saveManager.gameData.map.selEvent[i];
-            isChallenge[i] = saveManager.gameData.map.isChallenge[i];
+            selEvnt[i] = saveManager.gameData.mapData.selEvent[i];
+            isChallenge[i] = saveManager.gameData.mapData.isChallenge[i];
         }
     }
 
@@ -146,14 +147,14 @@ public class SelectMap : MonoBehaviour
             for (int i = 0; i < 3; i++) // 두,세갈래길 랜덤(전투, 이벤트) 설정
             {
                 selEvnt[i] = Random.Range(0, 2);
-                saveManager.gameData.map.selEvent[i] = selEvnt[i];  // 데이터 저장
+                saveManager.gameData.mapData.selEvent[i] = selEvnt[i];  // 데이터 저장
 
                 isChallenge[i] = false; // 초기화
                 cRandom = Random.Range(0, 5);   // 20퍼 확률
                 if (cRandom == 4)   // 도전모드 실행
                 {
                     isChallenge[i] = true;
-                    saveManager.gameData.map.isChallenge[i] = isChallenge[i];   // 데이터 저장
+                    saveManager.gameData.mapData.isChallenge[i] = isChallenge[i];   // 데이터 저장
                     Debug.Log( i+1 + "도전모드 활성화");
                 }
             }
@@ -161,68 +162,74 @@ public class SelectMap : MonoBehaviour
             // 특수 상황
             if (curDay >= 10 && midBossCheck1 == false)    // 1차 중간 보스 라운드
             {
-                selEvnt[0] = 2;
+                selEvnt[0] = 0;
                 curTrack = 0;
-                saveManager.gameData.map.curTrack = 0;
-                saveManager.gameData.map.midBossCheck1 = true;
+                saveManager.gameData.mapData.curTrack = 0;
+                saveManager.gameData.mapData.midBossCheck1 = true;
             }
             else if (curDay >= 15 && villageCheck == false) // 마을 라운드 
             {
                 selEvnt[0] = 3;
                 curTrack = 0;
-                saveManager.gameData.map.curTrack = 0;
-                saveManager.gameData.map.villageCheck = true;
+                saveManager.gameData.mapData.curTrack = 0;
+                saveManager.gameData.mapData.villageCheck = true;
             }
             else if (curDay >= 20 && midBossCheck2 == false) // 2차 중간 보스 라운드
             {
-                selEvnt[0] = 4;
+                selEvnt[0] = 1;
                 curTrack = 0;
-                saveManager.gameData.map.curTrack = 0;
-                saveManager.gameData.map.midBossCheck2 = true;
+                saveManager.gameData.mapData.curTrack = 0;
+                saveManager.gameData.mapData.midBossCheck2 = true;
 
             }
             else if (curDay >= 29 && villageCheck == true)  // 정비 라운드
             {
+                Debug.Log("29이상");
                 if (organCheck == false)
                 {
-                    selEvnt[0] = 5;
+                    selEvnt[0] = 4;
                     curTrack = 0;
-                    saveManager.gameData.map.curTrack = 0;
-                    saveManager.gameData.map.organCheck = true;
+                    saveManager.gameData.mapData.curTrack = 0;
+                    saveManager.gameData.mapData.organCheck = true;
                 }
-                else selEvnt[0] = 6;    // 최종 보스
+                else
+                {
+                    Debug.Log("최종보스");
+                    selEvnt[0] = 2;    // 최종 보스
+                    saveManager.gameData.mapData.curTrack = 0;
+                }
             }
         }
     }
 
     void OneTrackSet()  // 외길 세팅
     {
-        
         TrackNode[0].SetActive(true);
         
-        switch (selEvnt[0] - 2)
+        switch (selEvnt[0])
         {
-            case 0: // 중간 보스
+            case 0: // 1차 중간 보스
                 SelText[0].text = "중간 보스";
                 BattleNodeSet(0);
                 break;
-            case 1: // 마을
+            case 1: // 2차 중간 보스
+                SelText[0].text = "중간 보스";
+                BattleNodeSet(0);
+                break;
+
+            case 2: // 최종 보스
+                SelText[0].text = "최종 보스";
+                BattleNodeSet(0);
+                break;
+
+            case 3: // 마을
                 SelText[0].text = "마을";
                 EventNodeSet(0);
                 break;
-            case 2:
-                SelText[0].text = "중간 보스";
-                BattleNodeSet(0);
-                break;
 
-            case 3: // 정비
+            case 4: // 정비
                 SelText[0].text = "정비";
                 EventNodeSet(0);
-                break;
-
-            case 4: // 최종 보스
-                SelText[0].text = "최종 보스";
-                BattleNodeSet(0);
                 break;
         }
     }
@@ -306,7 +313,7 @@ public class SelectMap : MonoBehaviour
                     }
                 }
                 else // 1트랙
-                    S1T1B1[(selEvnt[0] / 2 - 1)].gameObject.SetActive(true);    // 0~2 : 1차 중간 / 3~5 : 2차 중간 / 6~8 : 3차 중간
+                    S1T1B1[selEvnt[0]].gameObject.SetActive(true);    // 0 : 1차 중간 / 1 : 2차 중간 / 2 : 최종
                 break;
 
             case 1: // 2스테이지
@@ -362,7 +369,7 @@ public class SelectMap : MonoBehaviour
                     break;
 
                 case 1: // 마을
-                    Button1_1[9].SetActive(true);
+                    // EventButton[0].SetActive(true);
                     break;
 
                 case 2: // 2차 중간 보스
@@ -371,7 +378,7 @@ public class SelectMap : MonoBehaviour
                     break;
 
                 case 3: // 정비
-                    Button1_1[10].SetActive(true);
+                    // EventButton[1].SetActive(true);
                     break;
 
                 case 4: // 최종 보스
@@ -502,30 +509,27 @@ public class SelectMap : MonoBehaviour
             case 0:
                 if (selEvnt[0] % 2 == 0)
                 {
-                    if (isChallenge[0] == true) saveManager.gameData.map.challengeCount += 1;
-                    saveManager.gameData.map.curDay += 2;
+                    if (isChallenge[0] == true) saveManager.gameData.mapData.challengeCount += 1;
+                    saveManager.gameData.mapData.curDay += 2;
                 }
                 break;
 
             case 1: // 2트랙
                 if (curDay == 0 || selEvnt[selectNum - 1] == 0)
                 {
-                    if (isChallenge[1] == true) saveManager.gameData.map.challengeCount += 1;
-                    saveManager.gameData.map.curDay += 2;
+                    if (isChallenge[1] == true) saveManager.gameData.mapData.challengeCount += 1;
+                    saveManager.gameData.mapData.curDay += 2;
                 }
                 break;
 
             case 2: // 3트랙
                 if (curDay == 0 || selEvnt[selectNum - 1] == 0)
                 {
-                    saveManager.gameData.map.curDay += 2;
+                    if (isChallenge[2] == true) saveManager.gameData.mapData.challengeCount += 1;
+                    saveManager.gameData.mapData.curDay += 2;
                 }
                 break;
         }
-
-        if (isChallenge[selectNum] == true)
-            saveManager.gameData.map.challengeCount += 1;
-        
         InfoPanelClose();
     }
 }

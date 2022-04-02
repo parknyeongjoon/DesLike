@@ -43,6 +43,6 @@ public class Infection : MonoBehaviour
 
     public void EndButton() // 2ÀÏ ¼Ò¸ð
     {
-        saveManager.gameData.map.curDay += 2;
+        saveManager.gameData.mapData.curDay += 2;
     }
 }

@@ -13,7 +13,7 @@ public class StageSelect : MonoBehaviour
     void Awake()
     {
         SaveManager saveManager = SaveManager.Instance;
-        curStage = saveManager.gameData.map.curStage;
+        curStage = saveManager.gameData.mapData.curStage;
 
         FirstBtn.gameObject.SetActive(false);
         SecondBtn.gameObject.SetActive(false);
@@ -36,21 +36,21 @@ public class StageSelect : MonoBehaviour
     public void Stage1()
     {
         SaveManager saveManager = SaveManager.Instance;
-        saveManager.gameData.map.curDay = 0;
+        saveManager.gameData.mapData.curDay = 0;
         SceneManager.LoadScene("Map");
     }
 
     public void Stage2()
     {
         SaveManager saveManager = SaveManager.Instance;
-        saveManager.gameData.map.curDay = 0;
+        saveManager.gameData.mapData.curDay = 0;
         SceneManager.LoadScene("Map");
     }
 
     public void Stage3()
     {
         SaveManager saveManager = SaveManager.Instance;
-        saveManager.gameData.map.curDay = 0;
+        saveManager.gameData.mapData.curDay = 0;
         SceneManager.LoadScene("Map");
     }
 

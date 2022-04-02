@@ -33,6 +33,41 @@ public class IsFind
 }
 
 [System.Serializable]
+<<<<<<< Updated upstream:DESLIKE-220127(源껎뿀釉뚯뾽濡쒕뱶)/Assets/Scripts/Save&Load/GameData.cs
+=======
+public class GameOption
+{
+    public float soundVol;
+    public bool storySkip;
+}
+
+[System.Serializable]
+public class MapData
+{
+    public int curStage = 0;
+    public int curTrack;
+    public int checkDay; // 맵 날짜 체크용 
+    public int curDay;  // 현재 날짜
+    public int[] selEvent = new int[3];
+    public int[] nextEvent = new int[3];   // 현재 이벤트(전투) 저장용. 0 : 1트랙, 1 : 2트랙, 2 : 3트랙
+    public bool[] isEventSet = new bool[3];
+    public bool[] isRewardSet = new bool[3];
+    public bool[] isChallenge = new bool[3];
+    public int challengeCount = 0;
+    public bool midBossCheck1 = false, midBossCheck2 = false, villageCheck = false, organCheck = false; // 중간 보스, 마을, 정비 여부
+    public bool isContinue = false;
+}
+
+
+[System.Serializable]
+public class RewardData
+{
+    public int[] relicRewardIndex = new int[3];
+    public int[] soldierRewardIndex = new int[3];
+}
+
+[System.Serializable]
+>>>>>>> Stashed changes:DESLIKE/Assets/Scripts/Save&Load/GameData.cs
 public class GameData
 {
     public bool canContinue;
@@ -42,5 +77,7 @@ public class GameData
     public PortDatas allyPortDatas;//안됨
     public List<SoldierSaveData> soldierSaveList;
     public HeroSaveData heroSaveData;
+    public MapData mapData;
+    public RewardData rewardData;
     //mutant, 유물, extraSkills 등 바뀐 애들 저장해야함(continue 누르면 복제하는 식으로 하면 될 듯)
 }

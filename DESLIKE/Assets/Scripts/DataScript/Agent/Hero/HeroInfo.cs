@@ -32,7 +32,7 @@ public class HeroInfo : CastleInfo
         cur_Mp = saveManager.gameData.heroSaveData.cur_Mp;
         resurrection = saveManager.gameData.heroSaveData.resurrection;
         StartCoroutine(Hp_Mp_Re());
-        //allyPortDatas.spawnSoldierList.Add(this);
+        portDatas.spawnSoldierList.Add(this);
     }
 
     public void Stun(float stunTime)

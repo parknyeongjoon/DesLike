@@ -97,6 +97,7 @@ public class BattleUIManager : MonoBehaviour
     public void EndStage()
     {
         GameManager.Instance.gamePause = true;
+        AkSoundEngine.PostEvent("Battle_End", gameObject);
         Time.timeScale = 0;
         if (enemyPortDatas.spawnSoldierList.Count == 0)//승리
         {

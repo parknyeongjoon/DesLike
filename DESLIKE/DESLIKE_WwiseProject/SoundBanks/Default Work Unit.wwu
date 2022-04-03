@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BE7F1A11-E9E2-47C6-A254-20F19D3C634F}" SchemaVersion="103">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{BE7F1A11-E9E2-47C6-A254-20F19D3C634F}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="main" ID="{FB569861-3BBA-4E8A-81EF-C0E9B7C68D55}">
+					<ObjectInclusionList>
+						<ObjectRef Name="skeleton_Atk" ID="{14322E6C-5CE8-4445-BC7D-52E123E55A47}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="skeleton_Move" ID="{C199CDD3-65DF-45DE-9720-345F3677245B}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Dead_or_Alive" ID="{9C3A3187-624A-4760-B9EF-E5A40674CAC0}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="test_UI" ID="{8B4F8B67-E687-4CD5-89DD-564E295D8ADD}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

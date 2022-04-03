@@ -1,0 +1,27 @@
+Event	ID	Name			Wwise Object Path	Notes
+	180084035	skeleton_Atk			\Default Work Unit\skeleton_Atk	
+	1896376002	test_UI			\Default Work Unit\test_UI	
+	3575957003	Dead_or_Alive			\Default Work Unit\Dead_or_Alive	
+	3933512188	skeleton_Move			\Default Work Unit\skeleton_Move	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3575957003	Dead_or_Alive			\Default Work Unit\Dead_or_Alive	
+
+State	ID	Name	State Group			Notes
+	655265632	Alive	Dead_or_Alive			
+	748895195	None	Dead_or_Alive			
+	2044049779	Dead	Dead_or_Alive			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	398000548	Alive	Dead_or_Alive	\Actor-Mixer Hierarchy\Default Work Unit\skeletin_Pain		
+
+Effect plug-ins	ID	Name	Type				Notes
+	4180247629	New_Wwise_Parametric_EQ	Wwise Parametric EQ			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	23314993	Idle_01_01	C:\Users\박정식\Desktop\DesLike-Wwise\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Idle_01_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\skeleton_Idle\Idle_01_01		363028
+	192387954	Pain_01_01	C:\Users\박정식\Desktop\DesLike-Wwise\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Pain_01_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\skeletin_Pain\Pain_01_01		363028
+	369774400	test_UI	C:\Users\박정식\Desktop\DesLike-Wwise\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Sword_Print_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\test_UI		363028
+	971131732	Pain_02_01	C:\Users\박정식\Desktop\DesLike-Wwise\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Pain_02_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\skeletin_Pain\Pain_02_01		367846
+	971680492	Idle_02_01	C:\Users\박정식\Desktop\DesLike-Wwise\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Idle_02_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\skeleton_Idle\Idle_02_01		363028
+

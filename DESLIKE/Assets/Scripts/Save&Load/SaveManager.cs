@@ -27,9 +27,8 @@ public class SaveManager : MonoBehaviour
     {
         instance = this;
         DontDestroyOnLoad(gameObject);
-        dataSheet = DataSheet;
-        LoadDataSheet();
         gameData = GameData;
+        dataSheet = DataSheet;
     }
 
     public DataSheet dataSheet;
@@ -37,10 +36,7 @@ public class SaveManager : MonoBehaviour
     {
         get
         {
-            if(dataSheet == null)
-            {
-                dataSheet = new DataSheet();
-            }
+            LoadDataSheet();
             return dataSheet;
         }
     }
@@ -82,11 +78,8 @@ public class SaveManager : MonoBehaviour
     {
         get
         {
-            if (gameData == null)
-            {
-                LoadGameData();
-                SaveGameData();
-            }
+            LoadGameData();
+            SaveGameData();
             return gameData;
         }
     }
@@ -98,10 +91,12 @@ public class SaveManager : MonoBehaviour
         {
             string fromJsonData = File.ReadAllText(filePath);
             gameData = JsonUtility.FromJson<GameData>(fromJsonData);
+            Debug.Log("데이터불러오기");
         }
         else
         {
             gameData = new GameData();
+            Debug.Log("데이터 새로 생성");
         }
         //LoadSoldierData();
         Debug.Log("데이터불러오기완료");

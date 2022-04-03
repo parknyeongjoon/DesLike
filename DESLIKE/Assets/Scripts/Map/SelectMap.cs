@@ -52,6 +52,7 @@ public class SelectMap : MonoBehaviour
         FindData(); // 데이터 찾기
         TrackSetting(); // 트랙 세팅(갈랫길, 버튼, 세부 이벤트 등)
         saveManager.gameData.mapData.newSet = false;
+        saveManager.SaveGameData(); // 저장
     }
 
     void ObjectInactive()   // 맵 초기화
@@ -507,5 +508,6 @@ public class SelectMap : MonoBehaviour
         }
         saveManager.gameData.mapData.newSet = true; // 맵 탈출
         InfoPanelClose();
+        saveManager.SaveGameData(); // 저장
     }
 }

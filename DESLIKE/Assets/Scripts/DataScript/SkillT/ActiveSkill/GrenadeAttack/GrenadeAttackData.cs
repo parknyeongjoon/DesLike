@@ -21,8 +21,6 @@ public class GrenadeAttackData : ActiveSkillData
         }
     }
 
-
-
     HeroInfo[] Get_Targets(HeroInfo targetInfo, HeroInfo heroInfo)// 다른 곳으로 static으로 옮기기, soldier에서 스킬 사용시 null이면 마우스 위치에 사용될 듯?
     {
         HeroInfo[] targetInfos;

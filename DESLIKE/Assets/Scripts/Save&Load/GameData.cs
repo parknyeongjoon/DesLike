@@ -6,6 +6,7 @@ static class ConstNum
 {
     public const int soldierNum = 45;
     public const int relicNum = 30;
+    public const int stroyNum = 3;
 }
 
 [System.Serializable]
@@ -30,14 +31,14 @@ public class IsFind
 {
     public bool[] soldierFind = new bool[ConstNum.soldierNum];
     public bool[] relicFind = new bool[ConstNum.relicNum];
+    public bool[] stroyFine = new bool[ConstNum.stroyNum];
 }
-
-[System.Serializable]
 
 public class GameOption
 {
     public float soundVol;
     public bool storySkip;
+    public bool autoBattleStart;
 }
 
 [System.Serializable]

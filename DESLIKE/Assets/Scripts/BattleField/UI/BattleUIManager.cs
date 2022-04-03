@@ -88,10 +88,12 @@ public class BattleUIManager : MonoBehaviour
         SetMidPanel(2);
     }
 
-    public void RemoveStartBtn()
+    public void BattleStart()
     {
-        AkSoundEngine.PostEvent("Battle_Start", gameObject);
         start_Btn.gameObject.SetActive(false);
+        AkSoundEngine.PostEvent("Battle_Start", gameObject);
+        GameManager.Instance.gamePause = false;
+        Time.timeScale = 1;
     }
 
     public void EndStage()

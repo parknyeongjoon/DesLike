@@ -34,12 +34,6 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         portDatas.spawnSoldierList.Clear();
-    }
-
-    public void battleStart()
-    {
-        GameManager.Instance.gamePause = false;
-        Time.timeScale = 1;
         SpawnSoldier();
         StartCoroutine(SortSoldierList());
     }

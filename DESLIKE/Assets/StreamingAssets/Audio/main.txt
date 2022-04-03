@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	180084035	skeleton_Atk			\Default Work Unit\skeleton_Atk	
+<<<<<<< Updated upstream
 	1896376002	test_UI			\Default Work Unit\test_UI	
 	3575957003	Dead_or_Alive			\Default Work Unit\Dead_or_Alive	
 	3933512188	skeleton_Move			\Default Work Unit\skeleton_Move	
@@ -15,14 +16,30 @@ State	ID	Name	State Group			Notes
 Custom State	ID	Name	State Group	Owner		Notes
 	398000548	Alive	Dead_or_Alive	\Actor-Mixer Hierarchy\Default Work Unit\skeletin_Pain		
 
+=======
+	461545889	Battle_End			\Default Work Unit\Battle_End	
+	1896376002	test_UI			\Default Work Unit\test_UI	
+	2706291346	Battle_Start			\Default Work Unit\Battle_Start	
+	3710894717	skeleton_Dead			\Default Work Unit\skeleton_Dead	
+	3933512188	skeleton_Move			\Default Work Unit\skeleton_Move	
+
+>>>>>>> Stashed changes
 Effect plug-ins	ID	Name	Type				Notes
 	4180247629	New_Wwise_Parametric_EQ	Wwise Parametric EQ			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	23314993	Idle_01_01	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Idle_01_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\skeleton_Idle\Idle_01_01		363028
+<<<<<<< Updated upstream
 	50927963	Sword_Print_02	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Sword_Print_02_AE53FB9C.wem		\Actor-Mixer Hierarchy\Default Work Unit\skeleton_Atk\Sword_Print_02		62150
 	192387954	Pain_01_01	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Pain_01_01_AB529961.wem		\Actor-Mixer Hierarchy\Default Work Unit\skeletin_Pain\Pain_01_01		160320
 	369774400	test_UI	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Sword_Print_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\test_UI		363028
 	971131732	Pain_02_01	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Pain_02_01_AB18661B.wem		\Actor-Mixer Hierarchy\Default Work Unit\skeletin_Pain\Pain_02_01		122122
+=======
+	248098358	BGM1	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\DesLikeBGMver1_60905F14.wem		\Actor-Mixer Hierarchy\Default Work Unit\BGM1		27449372
+	369774400	test_UI	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Sword_Print_02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\test_UI		363028
+	690581539	Battle_End_SFX	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Battle_End_Print_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Battle_End_SFX		322384
+	744371293	Sword_Print_02	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Sword_Print_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\skeleton_Atk\Sword_Print_02		154428
+	971131732	Pain_02_01	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Pain_02_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\skeleton_Dead\Pain_02_01		367846
+>>>>>>> Stashed changes
 	971680492	Idle_02_01	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Idle_02_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\skeleton_Idle\Idle_02_01		363028
 

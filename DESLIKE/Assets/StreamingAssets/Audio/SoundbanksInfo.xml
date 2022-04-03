@@ -16,11 +16,16 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
+<<<<<<< Updated upstream
 		<SoundBank Id="3161908922" Language="SFX" Hash="2789213456">
+=======
+		<SoundBank Id="3161908922" Language="SFX" Hash="3023839459">
+>>>>>>> Stashed changes
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<IncludedEvents>
+<<<<<<< Updated upstream
 				<Event Id="3575957003" Name="Dead_or_Alive" ObjectPath="\Events\Default Work Unit\Dead_or_Alive" DurationType="OneShot" DurationMin="1.082805" DurationMax="1.669334">
 					<IncludedMemoryFiles>
 						<File Id="192387954" Language="SFX">
@@ -38,6 +43,37 @@
 						<File Id="50927963" Language="SFX">
 							<ShortName>Sword_Print_02.wav</ShortName>
 							<Path>SFX/Sword_Print_02_AE53FB9C.wem</Path>
+=======
+				<Event Id="461545889" Name="Battle_End" ObjectPath="\Events\Default Work Unit\Battle_End" DurationType="OneShot" DurationMin="1.67875" DurationMax="1.67875">
+					<IncludedMemoryFiles>
+						<File Id="690581539" Language="SFX">
+							<ShortName>Battle_End_Print_01.wav</ShortName>
+							<Path>SFX/Battle_End_Print_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2706291346" Name="Battle_Start" ObjectPath="\Events\Default Work Unit\Battle_Start" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="248098358" Language="SFX">
+							<ShortName>DesLikeBGMver1.wav</ShortName>
+							<Path>SFX/DesLikeBGMver1_60905F14.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="180084035" Name="skeleton_Atk" ObjectPath="\Events\Default Work Unit\skeleton_Atk" DurationType="OneShot" DurationMin="1.218605" DurationMax="1.607958">
+					<IncludedMemoryFiles>
+						<File Id="744371293" Language="SFX">
+							<ShortName>Sword_Print_03.wav</ShortName>
+							<Path>SFX/Sword_Print_03_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3710894717" Name="skeleton_Dead" ObjectPath="\Events\Default Work Unit\skeleton_Dead" DurationType="OneShot" DurationMin="3.831063" DurationMax="3.831063">
+					<IncludedMemoryFiles>
+						<File Id="971131732" Language="SFX">
+							<ShortName>Pain_02_01.wav</ShortName>
+							<Path>SFX/Pain_02_01_10C4C929.wem</Path>
+>>>>>>> Stashed changes
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

@@ -5,10 +5,24 @@
 			<ChildrenList>
 				<RandomSequenceContainer Name="skeleton_Atk" ID="{64B4AE77-75B8-477D-BF95-8985A1D8EFE8}" ShortID="679339381">
 					<PropertyList>
+<<<<<<< Updated upstream
 						<Property Name="BelowThresholdBehavior" Type="int16" Value="1"/>
 						<Property Name="Highpass" Type="int16">
 							<ValueList>
 								<Value>23</Value>
+=======
+						<Property Name="CenterPercentage" Type="int32">
+							<ValueList>
+								<Value>15</Value>
+							</ValueList>
+						</Property>
+						<Property Name="EnableAttenuation" Type="bool" Value="False"/>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>100</Value>
+>>>>>>> Stashed changes
 							</ValueList>
 						</Property>
 						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
@@ -30,6 +44,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Atk_Position" ID="{5FAA0C11-A7EE-4686-A185-AEFAA247CAE2}" WorkUnitID="{D1693E2D-D473-4C45-B3FF-C96532F1B0E7}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
 						</Reference>
@@ -40,6 +57,7 @@
 					<ChildrenList>
 						<Sound Name="Sword_Print_02" ID="{F610DFEF-32BA-4A25-824E-69D986C93B36}" ShortID="964793485">
 							<PropertyList>
+<<<<<<< Updated upstream
 								<Property Name="BelowThresholdBehavior" Type="int16" Value="1"/>
 								<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
 								<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
@@ -55,6 +73,8 @@
 									</ValueList>
 								</Property>
 								<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
+=======
+>>>>>>> Stashed changes
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 								<Property Name="OverrideVirtualVoice" Type="bool" Value="True"/>
 								<Property Name="Pitch" Type="int32">
@@ -80,7 +100,11 @@
 											<Modifier Name="" ID="{6A1242BE-BB7F-4DEC-9F57-6AB2C07B25A5}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
+<<<<<<< Updated upstream
 													<Property Name="Max" Type="Real64" Value="10"/>
+=======
+													<Property Name="Max" Type="Real64" Value="8"/>
+>>>>>>> Stashed changes
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -99,6 +123,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
+<<<<<<< Updated upstream
 								<AudioFileSource Name="Sword_Print_02" ID="{1C83063C-11DF-422E-B745-D5BFD200F618}">
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="0.0497483552631579"/>
@@ -107,29 +132,163 @@
 										<Property Name="TrimBegin" Type="Real64" Value="0.176883040935673"/>
 										<Property Name="TrimEnd" Type="Real64" Value="1.3210952119883"/>
 									</PropertyList>
+=======
+								<AudioFileSource Name="Sword_Print_03" ID="{0EB2ABFD-2A51-48DE-A739-C24A095D0196}">
+>>>>>>> Stashed changes
 									<Language>SFX</Language>
-									<AudioFile>Sword_Print_02.wav</AudioFile>
+									<AudioFile>Sword_Print_03.wav</AudioFile>
 									<MediaIDList>
+<<<<<<< Updated upstream
 										<MediaID ID="50927963"/>
+=======
+										<MediaID ID="744371293"/>
+>>>>>>> Stashed changes
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ObjectLists/>
 							<ActiveSourceList>
-								<ActiveSource Name="Sword_Print_02" ID="{1C83063C-11DF-422E-B745-D5BFD200F618}" Platform="Linked"/>
+								<ActiveSource Name="Sword_Print_03" ID="{0EB2ABFD-2A51-48DE-A739-C24A095D0196}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<PositioningInfo>
+						<Position Name="" ID="{184B3877-099F-42B8-BE30-9333D1D0A781}">
+							<ChildrenList>
+								<Path2D Name="skeleton_Atk_Path" ID="{80D4A9E1-F6AB-4BBE-B38E-499B078C39B6}">
+									<PointList>
+										<Point>
+											<XPos>0.50761</XPos>
+											<YPos>50</YPos>
+											<Flags>12</Flags>
+											<Time>0</Time>
+										</Point>
+										<Point>
+											<XPos>-46.1928934010152</XPos>
+											<YPos>27.1186440677966</YPos>
+											<Flags>0</Flags>
+											<Time>1250</Time>
+										</Point>
+										<Point>
+											<XPos>33.502538071066</XPos>
+											<YPos>-7.90960451977401</YPos>
+											<Flags>0</Flags>
+											<Time>2500</Time>
+										</Point>
+										<Point>
+											<XPos>-25.8883248730965</XPos>
+											<YPos>-36.1581920903955</YPos>
+											<Flags>0</Flags>
+											<Time>3750</Time>
+										</Point>
+										<Point>
+											<XPos>70.5583756345178</XPos>
+											<YPos>-53.1073446327684</YPos>
+											<Flags>0</Flags>
+											<Time>5000</Time>
+										</Point>
+									</PointList>
+								</Path2D>
+								<Path2D Name="skeleton_Atk_Path_01" ID="{62F9A00E-7E58-4263-BB8E-AC92D139EACD}">
+									<PointList>
+										<Point>
+											<XPos>0</XPos>
+											<YPos>50</YPos>
+											<Flags>12</Flags>
+											<Time>0</Time>
+										</Point>
+										<Point>
+											<XPos>45.6852791878173</XPos>
+											<YPos>11.864406779661</YPos>
+											<Flags>0</Flags>
+											<Time>1000</Time>
+										</Point>
+										<Point>
+											<XPos>-20.8121827411168</XPos>
+											<YPos>-7.34463276836158</YPos>
+											<Flags>0</Flags>
+											<Time>2000</Time>
+										</Point>
+										<Point>
+											<XPos>-72.5888324873096</XPos>
+											<YPos>8.47457627118644</YPos>
+											<Flags>0</Flags>
+											<Time>3000</Time>
+										</Point>
+										<Point>
+											<XPos>62.4365482233503</XPos>
+											<YPos>6.21468926553672</YPos>
+											<Flags>0</Flags>
+											<Time>4000</Time>
+										</Point>
+										<Point>
+											<XPos>-26.9035532994924</XPos>
+											<YPos>23.728813559322</YPos>
+											<Flags>0</Flags>
+											<Time>5000</Time>
+										</Point>
+									</PointList>
+								</Path2D>
+								<Path2D Name="skeleton_Atk_Path_02" ID="{6BF2D650-002F-4457-A6A5-44268A0487D5}">
+									<PointList>
+										<Point>
+											<XPos>0</XPos>
+											<YPos>50</YPos>
+											<Flags>12</Flags>
+											<Time>0</Time>
+										</Point>
+										<Point>
+											<XPos>-52.7918781725888</XPos>
+											<YPos>5.64971751412429</YPos>
+											<Flags>0</Flags>
+											<Time>1000</Time>
+										</Point>
+										<Point>
+											<XPos>37.5634517766497</XPos>
+											<YPos>6.77966101694915</YPos>
+											<Flags>0</Flags>
+											<Time>2000</Time>
+										</Point>
+										<Point>
+											<XPos>7.61421319796955</XPos>
+											<YPos>-7.90960451977401</YPos>
+											<Flags>0</Flags>
+											<Time>3000</Time>
+										</Point>
+										<Point>
+											<XPos>53.8071065989848</XPos>
+											<YPos>-4.51977401129943</YPos>
+											<Flags>0</Flags>
+											<Time>4000</Time>
+										</Point>
+										<Point>
+											<XPos>-73.6040609137056</XPos>
+											<YPos>-6.77966101694915</YPos>
+											<Flags>0</Flags>
+											<Time>5000</Time>
+										</Point>
+									</PointList>
+								</Path2D>
+							</ChildrenList>
+						</Position>
+					</PositioningInfo>
 					<ObjectLists/>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="skeleton_Idle" ID="{B0EA1062-22F0-4241-A6AF-BE3C00EDB55A}" ShortID="897842096">
 					<PropertyList>
+<<<<<<< Updated upstream
 						<Property Name="BelowThresholdBehavior" Type="int16" Value="1"/>
+=======
+>>>>>>> Stashed changes
 						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
+<<<<<<< Updated upstream
 								<Value>4</Value>
+=======
+								<Value>5</Value>
+>>>>>>> Stashed changes
 							</ValueList>
 						</Property>
 						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
@@ -145,7 +304,11 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
+<<<<<<< Updated upstream
 								<Value>-96</Value>
+=======
+								<Value>-10</Value>
+>>>>>>> Stashed changes
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -178,7 +341,12 @@
 											<Modifier Name="" ID="{57A7895B-252C-4964-AAEE-03EEA7DFBAEF}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
+<<<<<<< Updated upstream
 													<Property Name="Max" Type="Real64" Value="10"/>
+=======
+													<Property Name="Max" Type="Real64" Value="6"/>
+													<Property Name="Min" Type="Real64" Value="-3"/>
+>>>>>>> Stashed changes
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -227,7 +395,8 @@
 											<Modifier Name="" ID="{8EDBCB3F-5890-4F4B-BC19-71294E678118}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="10"/>
+													<Property Name="Max" Type="Real64" Value="8"/>
+													<Property Name="Min" Type="Real64" Value="-2"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -259,6 +428,7 @@
 					</ChildrenList>
 					<ObjectLists/>
 				</RandomSequenceContainer>
+<<<<<<< Updated upstream
 				<RandomSequenceContainer Name="skeletin_Pain" ID="{B9B7E529-29A5-4AF2-A413-1EA08F68ACC4}" ShortID="774436273">
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
@@ -267,6 +437,9 @@
 							</ValueList>
 						</Property>
 					</PropertyList>
+=======
+				<Sound Name="test_UI" ID="{500BFA5F-14CB-4F61-A721-A8467C117EF7}" ShortID="505064086">
+>>>>>>> Stashed changes
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
@@ -276,6 +449,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
+<<<<<<< Updated upstream
 						<Sound Name="Pain_01_01" ID="{EA68BE04-54CF-4D88-93F7-D0983936AF1E}" ShortID="113916420">
 							<PropertyList>
 								<Property Name="Pitch" Type="int32">
@@ -331,95 +505,7 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Pain_02_01" ID="{48245B01-0580-4A93-A369-A82BD4EA67C4}" ShortID="491899518">
-							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{80365AD9-6F2C-4982-933E-940D930EAB27}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="278"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{D4349C50-016F-43DD-9ABA-CA6F97DE1AE9}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="18"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Pain_02_01" ID="{5000B2CA-56D7-463F-8548-1BBA3833357A}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.76733269371345"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.761731725146199"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.347260051169591"/>
-										<Property Name="TrimEnd" Type="Real64" Value="1.61867991593567"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Pain_02_01.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="971131732"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="Pain_02_01" ID="{5000B2CA-56D7-463F-8548-1BBA3833357A}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-					<StateInfo>
-						<StateGroupList>
-							<StateGroupInfo>
-								<StateGroupRef Name="Dead_or_Alive" ID="{22C2FBAE-C61F-4963-AC8A-A051DC154FB6}"/>
-							</StateGroupInfo>
-						</StateGroupList>
-						<CustomStateList>
-							<CustomState>
-								<StateRef Name="Alive" ID="{DC9FC439-631C-41BA-97C8-7E73EDC4E34F}"/>
-								<CustomState Name="" ID="{9403E87D-A18C-4852-B8CB-8363C1877566}" ShortID="398000548">
-									<PropertyList>
-										<Property Name="Volume" Type="Real64" Value="-108"/>
-									</PropertyList>
-								</CustomState>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="Dead" ID="{E5DF9AF6-854E-46E7-81A2-8A5D1BA3BE84}"/>
-								<CustomState Name="" ID="{A92FDFFA-61C1-499B-B162-AFEB5AE1A2C3}" ShortID="379505195"/>
-							</CustomState>
-						</CustomStateList>
-					</StateInfo>
-					<ObjectLists/>
-				</RandomSequenceContainer>
-				<Sound Name="test_UI" ID="{500BFA5F-14CB-4F61-A721-A8467C117EF7}" ShortID="505064086">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
+=======
 						<AudioFileSource Name="Sword_Print_02" ID="{B174C00A-E26A-40F7-AD95-014602A0336F}">
 							<Language>SFX</Language>
 							<AudioFile>Sword_Print_02.wav</AudioFile>
@@ -433,6 +519,134 @@
 						<ActiveSource Name="Sword_Print_02" ID="{B174C00A-E26A-40F7-AD95-014602A0336F}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="BGM1" ID="{BF83F4AC-3754-466E-9C2B-9DC0CF3D8BBC}" ShortID="990755601">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Priority" Type="int16">
+							<ValueList>
+								<Value>100</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="DesLikeBGMver1" ID="{90F67E9D-EAD8-4222-9E34-DCB276BEDEC5}">
+>>>>>>> Stashed changes
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.143496937653755"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.545884680127415"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.902452237349449"/>
+								<Property Name="TrimEnd" Type="Real64" Value="143.86759848395"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>DesLikeBGMver1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="248098358"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="DesLikeBGMver1" ID="{90F67E9D-EAD8-4222-9E34-DCB276BEDEC5}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Battle_End_SFX" ID="{48345CEF-BAD1-4AAD-BF2F-9C0EDB15E878}" ShortID="289614134">
+					<PropertyList>
+						<Property Name="Priority" Type="int16">
+							<ValueList>
+								<Value>100</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Battle_End_Print_01" ID="{55A1BB74-0BE5-4F2D-942D-F73B0B597D92}">
+							<Language>SFX</Language>
+							<AudioFile>Battle_End_Print_01.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="690581539"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Battle_End_Print_01" ID="{55A1BB74-0BE5-4F2D-942D-F73B0B597D92}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="skeleton_Dead" ID="{9B01BDD5-43CC-440F-98E8-02CB8EAA20B4}" ShortID="852674043">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>30</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Pain_02_01" ID="{2565A656-1B2D-4E17-ACF2-33C6685D35F6}" ShortID="692114552">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+<<<<<<< Updated upstream
+								<AudioFileSource Name="Pain_02_01" ID="{5000B2CA-56D7-463F-8548-1BBA3833357A}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.76733269371345"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.761731725146199"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.347260051169591"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.61867991593567"/>
+									</PropertyList>
+=======
+								<AudioFileSource Name="Pain_02_01" ID="{E9CF806B-F3E8-4229-8563-76D77EEA7555}">
+>>>>>>> Stashed changes
+									<Language>SFX</Language>
+									<AudioFile>Pain_02_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="971131732"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Pain_02_01" ID="{E9CF806B-F3E8-4229-8563-76D77EEA7555}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

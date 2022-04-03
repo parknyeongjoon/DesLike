@@ -24,7 +24,11 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics/Default Work Unit
     guid: 3a3054e085388a409cee132f734b55bb
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8585527865034775808
+=======
+    m_lastTime: -8585527059584775808
+>>>>>>> Stashed changes
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
@@ -38,7 +42,11 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Default Work Unit
     guid: c86f71637841d14eb3f4825e4affab97
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8585527096514775808
+=======
+    m_lastTime: -8585526338374775808
+>>>>>>> Stashed changes
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -54,6 +62,7 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus
+<<<<<<< Updated upstream
     - name: skeleton_Atk Bus
       guid: a290f2c2c20a3e4a9c4d415c11ba88d0
       id: 2491616377
@@ -72,6 +81,8 @@ MonoBehaviour:
         guid: a290f2c2c20a3e4a9c4d415c11ba88d0
       Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/skeleton_Atk
         Bus
+=======
+>>>>>>> Stashed changes
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     PathAndIcons:
@@ -84,7 +95,11 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: 111a7fbee2e9c647a25420f19d3c634f
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8585527147504775808
+=======
+    m_lastTime: -8585526274084775808
+>>>>>>> Stashed changes
     List:
     - name: main
       guid: 619856fbba3b8a4e81efc0e9b7c68d55
@@ -112,11 +127,19 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 9afb6cf7ad351747ac19859bb342359b
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8585527088464775808
     List:
     - name: Dead_or_Alive
       guid: 87313a9c4a626047b9efe5a40674cac0
       id: 3575957003
+=======
+    m_lastTime: -8585526274384775808
+    List:
+    - name: Battle_End
+      guid: ffd22a0df35b7a4faccb7a2add45729c
+      id: 461545889
+>>>>>>> Stashed changes
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -124,6 +147,7 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+<<<<<<< Updated upstream
       - ElementName: Dead_or_Alive
         ObjectType: 3
         guid: 87313a9c4a626047b9efe5a40674cac0
@@ -131,6 +155,32 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.669334
       minDuration: 1.082805
+=======
+      - ElementName: Battle_End
+        ObjectType: 3
+        guid: ffd22a0df35b7a4faccb7a2add45729c
+      Path: Events/Default Work Unit/Battle_End
+      maxAttenuation: 0
+      maxDuration: 1.67875
+      minDuration: 1.67875
+    - name: Battle_Start
+      guid: 089bea6a1ef24141a6137cca2c4df710
+      id: 2706291346
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: Battle_Start
+        ObjectType: 3
+        guid: 089bea6a1ef24141a6137cca2c4df710
+      Path: Events/Default Work Unit/Battle_Start
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+>>>>>>> Stashed changes
     - name: skeleton_Atk
       guid: 6c2e3214e85c4544bc7d52e123e55a47
       id: 180084035
@@ -146,11 +196,19 @@ MonoBehaviour:
         guid: 6c2e3214e85c4544bc7d52e123e55a47
       Path: Events/Default Work Unit/skeleton_Atk
       maxAttenuation: 0
+<<<<<<< Updated upstream
       maxDuration: 0.646729
       minDuration: 0.490129
     - name: skeleton_Move
       guid: d3cd99c1df65de459720345f3677245b
       id: 3933512188
+=======
+      maxDuration: 1.607958
+      minDuration: 1.218605
+    - name: skeleton_Dead
+      guid: b61922fa4545854b8beda1dfe0908018
+      id: 3710894717
+>>>>>>> Stashed changes
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -158,6 +216,7 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+<<<<<<< Updated upstream
       - ElementName: skeleton_Move
         ObjectType: 3
         guid: d3cd99c1df65de459720345f3677245b
@@ -168,6 +227,18 @@ MonoBehaviour:
     - name: test_Idle
       guid: 461a51ee7e27f54dbc91175cd4eabde5
       id: 3563682626
+=======
+      - ElementName: skeleton_Dead
+        ObjectType: 3
+        guid: b61922fa4545854b8beda1dfe0908018
+      Path: Events/Default Work Unit/skeleton_Dead
+      maxAttenuation: 0
+      maxDuration: 3.831063
+      minDuration: 3.831063
+    - name: skeleton_Move
+      guid: d3cd99c1df65de459720345f3677245b
+      id: 3933512188
+>>>>>>> Stashed changes
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -175,6 +246,7 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+<<<<<<< Updated upstream
       - ElementName: test_Idle
         ObjectType: 3
         guid: 461a51ee7e27f54dbc91175cd4eabde5
@@ -182,6 +254,15 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+=======
+      - ElementName: skeleton_Move
+        ObjectType: 3
+        guid: d3cd99c1df65de459720345f3677245b
+      Path: Events/Default Work Unit/skeleton_Move
+      maxAttenuation: 0
+      maxDuration: 3.780875
+      minDuration: 2.907045
+>>>>>>> Stashed changes
     - name: test_UI
       guid: 678b4f8b87e6d54c89dd564e295d8add
       id: 1896376002
@@ -211,7 +292,11 @@ MonoBehaviour:
     ParentPath: Game Parameters/Default Work Unit
     guid: 66256ddd69eb61449ffee9adf1459c2a
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8585527865034775808
+=======
+    m_lastTime: -8585527059584775808
+>>>>>>> Stashed changes
     List: []
   StateWwu:
   - PhysicalPath: States/Default Work Unit.wwu
@@ -225,7 +310,11 @@ MonoBehaviour:
     ParentPath: States/Default Work Unit
     guid: 447c063f9a794e4384dee4b16a1ebf61
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8585527147504775808
+=======
+    m_lastTime: -8585527059584775808
+>>>>>>> Stashed changes
     List:
     - name: Dead_or_Alive
       guid: aefbc2221fc66349ac8aa051dc154fb6
@@ -305,7 +394,11 @@ MonoBehaviour:
     ParentPath: Switches/Default Work Unit
     guid: 3577efce741fb946b3097ffdf71f2fa2
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8585527865034775808
+=======
+    m_lastTime: -8585527059584775808
+>>>>>>> Stashed changes
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers/Default Work Unit.wwu
@@ -319,7 +412,11 @@ MonoBehaviour:
     ParentPath: Triggers/Default Work Unit
     guid: 0a7647b42d6f7e4688f5c47f0ff78d4a
     GuidInternal: 
+<<<<<<< Updated upstream
     m_lastTime: -8585527865034775808
+=======
+    m_lastTime: -8585527059584775808
+>>>>>>> Stashed changes
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 

@@ -5,10 +5,12 @@
 			<ChildrenList>
 				<SoundBank Name="main" ID="{FB569861-3BBA-4E8A-81EF-C0E9B7C68D55}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Battle_Start" ID="{6AEA9B08-F21E-4141-A613-7CCA2C4DF710}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="skeleton_Atk" ID="{14322E6C-5CE8-4445-BC7D-52E123E55A47}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="skeleton_Move" ID="{C199CDD3-65DF-45DE-9720-345F3677245B}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Dead_or_Alive" ID="{9C3A3187-624A-4760-B9EF-E5A40674CAC0}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="skeleton_Dead" ID="{FA2219B6-4545-4B85-8BED-A1DFE0908018}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="test_UI" ID="{8B4F8B67-E687-4CD5-89DD-564E295D8ADD}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Battle_End" ID="{0D2AD2FF-5BF3-4F7A-ACCB-7A2ADD45729C}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

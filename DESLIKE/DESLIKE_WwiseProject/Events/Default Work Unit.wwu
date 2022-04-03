@@ -25,40 +25,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Dead_or_Alive" ID="{9C3A3187-624A-4760-B9EF-E5A40674CAC0}">
-					<ChildrenList>
-						<Action Name="" ID="{F655CECC-E1EE-4CEB-AE52-7BDB3D2A6EB5}" ShortID="909957961">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="skeleton_Idle" ID="{B0EA1062-22F0-4241-A6AF-BE3C00EDB55A}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{66EDB1AB-23F7-4A1C-AF6C-6AE97AB9E477}" ShortID="838162709">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="skeletin_Pain" ID="{B9B7E529-29A5-4AF2-A413-1EA08F68ACC4}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{C51A3FBF-C6A1-4A3A-A434-9FF39C2B2379}" ShortID="88835492">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="skeletin_Pain" ID="{B9B7E529-29A5-4AF2-A413-1EA08F68ACC4}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="test_UI" ID="{8B4F8B67-E687-4CD5-89DD-564E295D8ADD}">
 					<ChildrenList>
 						<Action Name="" ID="{49387F96-DEEE-44DD-9240-EFCDE35769EA}" ShortID="766649548">
@@ -70,7 +36,64 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="test_Idle" ID="{EE511A46-277E-4DF5-BC91-175CD4EABDE5}"/>
+				<Event Name="Battle_Start" ID="{6AEA9B08-F21E-4141-A613-7CCA2C4DF710}">
+					<ChildrenList>
+						<Action Name="" ID="{33849A33-0BE1-4721-A1E9-54C50FAFFCC8}" ShortID="113627922">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BGM1" ID="{BF83F4AC-3754-466E-9C2B-9DC0CF3D8BBC}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Battle_End" ID="{0D2AD2FF-5BF3-4F7A-ACCB-7A2ADD45729C}">
+					<ChildrenList>
+						<Action Name="" ID="{0C9A49A7-25E0-486E-AF0B-D90E0630CA0B}" ShortID="763038442">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{68D198B4-BA09-4939-9950-EB5AEDE0BE8E}" ShortID="161435031">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BGM1" ID="{BF83F4AC-3754-466E-9C2B-9DC0CF3D8BBC}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+<<<<<<< Updated upstream
+						<Action Name="" ID="{C51A3FBF-C6A1-4A3A-A434-9FF39C2B2379}" ShortID="88835492">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2"/>
+							</PropertyList>
+=======
+						<Action Name="" ID="{5546E106-6E67-474C-9A87-4B532398F65D}" ShortID="129794428">
+>>>>>>> Stashed changes
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Battle_End_SFX" ID="{48345CEF-BAD1-4AAD-BF2F-9C0EDB15E878}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="skeleton_Dead" ID="{FA2219B6-4545-4B85-8BED-A1DFE0908018}">
+					<ChildrenList>
+						<Action Name="" ID="{FBEC8BEA-55DA-48D9-BFB0-23CE4597FB8B}" ShortID="1053212745">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="skeleton_Dead" ID="{9B01BDD5-43CC-440F-98E8-02CB8EAA20B4}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

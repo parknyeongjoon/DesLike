@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{58F1C3E4-6730-4823-B094-BB4F82EF3D8C}" SchemaVersion="103">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{58F1C3E4-6730-4823-B094-BB4F82EF3D8C}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{58F1C3E4-6730-4823-B094-BB4F82EF3D8C}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="New Soundcaster Session" ID="{90793157-7D74-4E16-8F4C-A8049F8C9CCA}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="skeleton_Atk" ID="{64B4AE77-75B8-477D-BF95-8985A1D8EFE8}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Sword_Print_02" ID="{F610DFEF-32BA-4A25-824E-69D986C93B36}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="None" ID="{AB2882AF-C7FF-4E55-90F0-F02C513C7D20}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

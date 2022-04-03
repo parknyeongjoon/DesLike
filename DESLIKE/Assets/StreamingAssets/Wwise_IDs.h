@@ -44,6 +44,7 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID SKELETON_ATK_BUS = 2491616377U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

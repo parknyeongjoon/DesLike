@@ -48,6 +48,9 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{C51A3FBF-C6A1-4A3A-A434-9FF39C2B2379}" ShortID="88835492">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="skeletin_Pain" ID="{B9B7E529-29A5-4AF2-A413-1EA08F68ACC4}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>

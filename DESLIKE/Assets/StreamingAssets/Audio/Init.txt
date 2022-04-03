@@ -7,7 +7,11 @@ State	ID	Name	State Group			Notes
 	2044049779	Dead	Dead_or_Alive			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	2491616377	skeleton_Atk Bus			\Default Work Unit\Master Audio Bus\skeleton_Atk Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Effect plug-ins	ID	Name	Type				Notes
+	3970951098	New_Wwise_Peak_Limiter	Wwise Peak Limiter			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

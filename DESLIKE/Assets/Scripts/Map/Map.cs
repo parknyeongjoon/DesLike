@@ -3,22 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[System.Serializable]
-public class SerializableMapNode
-{
-    public MapNode[] mapNodesY;
-}
-
 [CreateAssetMenu(fileName = "Map", menuName = "ScriptableObject/Map")]
 public class Map : ScriptableObject
 {
-    public SerializableMapNode[] mapNodesX;
-    public MapNode curMapNode;
+    public MapNode curMapNode;//지우기
     public List<SoldierData> soldierRewardList;
     public List<GameObject> relicRewardList;
-    public bool isMap = false;
-    public int playerX= -1, playerY;
-    public int level;
+    public bool isMap = false;//지우기
+    public int playerX= -1, playerY;//지우기
+    public int level;//지우기
 
     public void EndMapNode()
     {

@@ -1228,6 +1228,7 @@ GameObject:
   - component: {fileID: -6878065226668501377}
   - component: {fileID: 6438918860846744813}
   - component: {fileID: 2335375491945075816}
+  - component: {fileID: 3814704361404262784}
   m_Layer: 8
   m_Name: "\uC2A4\uCF08\uB808\uD1A4 \uC804\uC0AC"
   m_TagString: Soldier
@@ -1394,7 +1395,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   castleData: {fileID: 11400000, guid: 8f5bd6d443eb5714780da0f9b57c6d86, type: 2}
   cur_Hp: 0
-  portDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
+  allyPortDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
+  enemyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
   deadEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1470,6 +1472,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basicAttackData: {fileID: 11400000, guid: 182708ae229a77e46b7998962b7e7c74, type: 2}
+  atkArea: 0
+  atkLayer: 0
+--- !u!114 &3814704361404262784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346442293094215222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be296ab79aa612446905a3d2103cac96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 7665bb0fd1761804cb3ce5489ce62d92, type: 2}
+  cur_cooltime: 0
   atkArea: 0
   atkLayer: 0
 --- !u!1 &5488699387805153504

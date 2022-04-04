@@ -400,6 +400,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3976412869529563661, guid: e9d00c61469d46c449d81c4e380dc386,
+        type: 3}
+      propertyPath: gameData.map
+      value: 
+      objectReference: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014,
+        type: 2}
+    - target: {fileID: 3976412869529563661, guid: e9d00c61469d46c449d81c4e380dc386,
+        type: 3}
+      propertyPath: gameData.allyPortDatas
+      value: 
+      objectReference: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae,
+        type: 2}
     - target: {fileID: 3976412869529563662, guid: e9d00c61469d46c449d81c4e380dc386,
         type: 3}
       propertyPath: m_Name

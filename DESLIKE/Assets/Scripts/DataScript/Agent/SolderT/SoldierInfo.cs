@@ -9,10 +9,10 @@ public class SoldierInfo : HeroInfo
 
     void Start()
     {
-        castleData = portDatas.activeSoldierList[soldierCode];
+        castleData = allyPortDatas.activeSoldierList[soldierCode];
         cur_Hp = castleData.hp;
         cur_Mp = ((SoldierData)castleData).mp;
-        portDatas.spawnSoldierList.Add(this);
+        allyPortDatas.spawnSoldierList.Add(this);
         BattleUIManager.Instance.UpdateSoldierRatioBar();
         afterDeadHandler += Dead;
         StartCoroutine(Hp_Mp_Re());
@@ -23,9 +23,9 @@ public class SoldierInfo : HeroInfo
         gameObject.layer = 7;
         animator.SetTrigger("isDead");
         AkSoundEngine.PostEvent("skeleton_Dead", gameObject);
-        portDatas.spawnSoldierList.Remove(this);
+        allyPortDatas.spawnSoldierList.Remove(this);
         BattleUIManager.Instance.UpdateSoldierRatioBar();
-        if (portDatas.spawnSoldierList.Count == 0)
+        if (allyPortDatas.spawnSoldierList.Count == 0)
         {
             BattleUIManager.Instance.EndStage();
         }

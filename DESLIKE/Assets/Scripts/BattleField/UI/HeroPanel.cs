@@ -17,9 +17,9 @@ public class HeroPanel : MonoBehaviour
     [SerializeField]
     GameObject buffPanel;
     [SerializeField]
-    GameObject buffObject;
+    GameObject buffObject, debuffObject;
     [SerializeField]
-    Image buffImg;
+    Image buffImg, debuffImg;
 
     Dictionary<string, GameObject> buffDic = new Dictionary<string, GameObject>();
 
@@ -33,6 +33,7 @@ public class HeroPanel : MonoBehaviour
         heroInfo = hero.GetComponent<HeroInfo>();
         skills = hero.GetComponent<HeroSkillUse>().skillScripts;
         buffImg = buffObject.GetComponentInChildren<Image>();
+        debuffImg = debuffObject.GetComponentInChildren<Image>();
     }
 
     void Start()
@@ -55,6 +56,12 @@ public class HeroPanel : MonoBehaviour
             buffDic.Add(code, Instantiate(buffObject, buffPanel.transform));
             buffDic[code].GetComponentInChildren<Text>().text = heroInfo.buffCoroutine[code].Count.ToString();
         }
+        foreach(string code in heroInfo.debuffCoroutine.Keys)
+        {
+            debuffImg.sprite = SaveManager.Instance.dataSheet.skillDataSheet[code].skill_Icon;
+            buffDic.Add(code, Instantiate(debuffObject, buffPanel.transform));
+            buffDic[code].GetComponentInChildren<Text>().text = heroInfo.debuffCoroutine[code].Count.ToString();
+        }
         //코루틴 시작
         StartCoroutine(RenewalHeroPanel());
         for(int i = 0; i < skills.Length; i++)
@@ -63,7 +70,7 @@ public class HeroPanel : MonoBehaviour
         }
     }
 
-    public IEnumerator RenewalHeroPanel()
+    public IEnumerator RenewalHeroPanel()//OnDamaged시에만으로 한정하기
     {
         while (true)
         {
@@ -75,7 +82,7 @@ public class HeroPanel : MonoBehaviour
         }
     }
 
-    public IEnumerator RenewalSkillPanel(int index)//코루틴으로 3개 돌리기
+    public IEnumerator RenewalSkillPanel(int index)//코루틴으로 3개 돌리기 스킬 쓰고 나면 코루틴 돌리는 식으로
     {
         if (skills[index] as ActiveSkill)
         {
@@ -102,6 +109,20 @@ public class HeroPanel : MonoBehaviour
         }
     }
 
+    public void AddDebuff(string code)//얘들도 오브젝트 풀링해도 될 듯
+    {
+        if (buffDic.ContainsKey(code))
+        {
+            buffDic[code].GetComponentInChildren<Text>().text = heroInfo.debuffCoroutine[code].Count.ToString();
+        }
+        else
+        {
+            debuffImg.sprite = SaveManager.Instance.dataSheet.skillDataSheet[code].skill_Icon;
+            buffDic.Add(code, Instantiate(debuffObject, buffPanel.transform));
+            buffDic[code].GetComponentInChildren<Text>().text = heroInfo.debuffCoroutine[code].Count.ToString();
+        }
+    }
+
     public void RemoveBuff(string code)
     {
         if (heroInfo.buffCoroutine[code].Count == 0)
@@ -112,6 +133,19 @@ public class HeroPanel : MonoBehaviour
         else
         {
             buffDic[code].GetComponentInChildren<Text>().text = heroInfo.buffCoroutine[code].Count.ToString();
+        }
+    }
+
+    public void RemoveDebuff(string code)
+    {
+        if (heroInfo.debuffCoroutine[code].Count == 0)
+        {
+            Destroy(buffDic[code]);
+            buffDic.Remove(code);
+        }
+        else
+        {
+            buffDic[code].GetComponentInChildren<Text>().text = heroInfo.debuffCoroutine[code].Count.ToString();
         }
     }
 }

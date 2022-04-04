@@ -2425,7 +2425,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   castleData: {fileID: 11400000, guid: 3e65cdd5953d474479ec0533c1a36487, type: 2}
   cur_Hp: 0
-  portDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
+  allyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
+  enemyPortDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
   deadEvent:
     m_PersistentCalls:
       m_Calls:

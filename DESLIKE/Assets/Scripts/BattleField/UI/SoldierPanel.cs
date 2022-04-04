@@ -15,9 +15,9 @@ public class SoldierPanel : MonoBehaviour
     [SerializeField]
     GameObject buffPanel;
     [SerializeField]
-    GameObject buffObject;
+    GameObject buffObject, debuffObject;
     [SerializeField]
-    Image buffImg;
+    Image buffImg, debuffImg;
 
     SoldierInfo soldierInfo;
     SoldierData soldierData;
@@ -30,6 +30,7 @@ public class SoldierPanel : MonoBehaviour
     void Awake()
     {
         buffImg = buffObject.GetComponentInChildren<Image>();
+        debuffImg = debuffObject.GetComponentInChildren<Image>();
     }
 
     void OnEnable()
@@ -74,6 +75,12 @@ public class SoldierPanel : MonoBehaviour
                 buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.buffCoroutine[code].Count.ToString();
             }
         }
+        foreach (string code in soldierInfo.debuffCoroutine.Keys)
+        {
+            debuffImg.sprite = SaveManager.Instance.dataSheet.skillDataSheet[code].skill_Icon;
+            buffDic.Add(code, Instantiate(debuffObject, buffPanel.transform));
+            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.debuffCoroutine[code].Count.ToString();
+        }
         RenewalSoldierPanel();
         RenewalSkillPanel();
     }
@@ -114,6 +121,20 @@ public class SoldierPanel : MonoBehaviour
         }
     }
 
+    public void AddDebuff(string code)//얘들도 오브젝트 풀링해도 될 듯
+    {
+        if (buffDic.ContainsKey(code))
+        {
+            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.debuffCoroutine[code].Count.ToString();
+        }
+        else
+        {
+            debuffImg.sprite = SaveManager.Instance.dataSheet.skillDataSheet[code].skill_Icon;
+            buffDic.Add(code, Instantiate(debuffObject, buffPanel.transform));
+            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.debuffCoroutine[code].Count.ToString();
+        }
+    }
+
     public void RemoveBuff(string code)
     {
         if(soldierInfo.buffCoroutine[code].Count == 0)
@@ -124,6 +145,19 @@ public class SoldierPanel : MonoBehaviour
         else
         {
             buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.buffCoroutine[code].Count.ToString();
+        }
+    }
+
+    public void RemoveDebuff(string code)
+    {
+        if (soldierInfo.debuffCoroutine[code].Count == 0)
+        {
+            Destroy(buffDic[code]);
+            buffDic.Remove(code);
+        }
+        else
+        {
+            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.debuffCoroutine[code].Count.ToString();
         }
     }
 }

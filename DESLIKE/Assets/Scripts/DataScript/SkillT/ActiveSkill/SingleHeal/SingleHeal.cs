@@ -23,7 +23,7 @@ public class SingleHeal : ActiveSkill
 
     public override void Detect()
     {
-        SetHealTarget(heroInfo.portDatas.spawnSoldierList);
+        SetHealTarget(heroInfo.allyPortDatas.spawnSoldierList);
     }
 
     void SetHealTarget(List<HeroInfo> soldierInfos)//힐 가중치 + 거리 등등 다양한 요소 합산해서 구하기
@@ -49,7 +49,7 @@ public class SingleHeal : ActiveSkill
         }
         else
         {
-            heroInfo.skillTarget = heroInfo.portDatas.spawnSoldierList[0].gameObject;
+            heroInfo.skillTarget = heroInfo.allyPortDatas.spawnSoldierList[0].gameObject;
         }
     }
 }

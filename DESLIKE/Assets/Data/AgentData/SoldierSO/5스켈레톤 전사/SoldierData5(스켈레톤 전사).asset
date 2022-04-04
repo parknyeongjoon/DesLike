@@ -19,7 +19,7 @@ MonoBehaviour:
   size: 0.2
   blood: {fileID: 5086979035932333915, guid: 83b2eb89fe46c6a4db5d18712a94a153, type: 3}
   soldier_name: "\uC2A4\uCF08\uB808\uD1A4 \uC804\uC0AC"
-  mp: 0
+  mp: 20
   speed: 3
   mp_Re: 0
   hp_Re: 0
@@ -28,6 +28,6 @@ MonoBehaviour:
   mutant: {fileID: 0}
   rarity: 0
   cost: 100
-  remain: 0
+  needBarrier: 0
   unitAmount: 3
   soldier_Type: 1

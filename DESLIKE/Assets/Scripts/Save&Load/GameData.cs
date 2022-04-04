@@ -59,7 +59,6 @@ public class MapData
     public bool midBossCheck1, midBossCheck2, villageCheck, organCheck, newSet; // 중간 보스, 마을, 정비, 이미 세팅했는지 여부
 }
 
-
 [System.Serializable]
 public class RewardData
 {

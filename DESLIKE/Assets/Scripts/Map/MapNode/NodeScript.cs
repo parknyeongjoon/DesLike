@@ -26,7 +26,6 @@ public class NodeScript : MonoBehaviour
             for (int i = 0; i < solCount; i++)
             {
                 mapNode.reward.soldierReward.soldier[i] = mapNode.rewardSoldierList[i];
-
                 relicRewardIndex = Random.Range(0, mapNode.rewardRelicList.Count);
                 mapNode.reward.relic = mapNode.rewardRelicList[relicRewardIndex]; // 유물 보상(1종류)
                 saveManager.gameData.rewardData.relicRewardIndex[0] = relicRewardIndex;    // 유물 저장

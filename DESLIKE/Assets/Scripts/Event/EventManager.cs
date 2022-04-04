@@ -6,12 +6,10 @@ using UnityEngine.SceneManagement;
 public class EventManager : MonoBehaviour
 {
     Map map;
-    [SerializeField]
-    Canvas EventCanvas;
-    [SerializeField]
-    GameObject Thief, Training, Merchant, Rullet, CampFire, Infection;
+    [SerializeField] Canvas EventCanvas;
+    [SerializeField] GameObject Thief, Training, Merchant, Rullet, CampFire, Infection;
     EventNode eventNode;
-    int EvntList;
+    int curBtn, EvntList;
     SaveManager saveManager;
 
     void OnEnable()
@@ -20,11 +18,12 @@ public class EventManager : MonoBehaviour
         map = saveManager.gameData.map;
         eventNode = (EventNode)map.curMapNode;
         EventCanvas.transform.Find(eventNode.eventName).gameObject.SetActive(true);
-        EvntList = Random.Range(0, 6);
+        curBtn = saveManager.gameData.mapData.curBtn;
+        EvntList = saveManager.gameData.mapData.evntList[curBtn];
         EventActive();
     }
 
-    void EventActive()
+    void EventActive() 
     {
         Thief.SetActive(false);
         Training.SetActive(false);

@@ -50,6 +50,8 @@ public class MapData
     public int curWindow;   // 현재 창이 맵(0), 이벤트(1), 전투(2)인지
     public int[] selEvent = new int[3];
     public int[] nextEvent = new int[3];   // 현재 이벤트(전투) 저장용. 0 : 1트랙, 1 : 2트랙, 2 : 3트랙
+    public int[] evntList = new int[3];    // 이벤트가 어떤 이벤트인지 저장, 0 : 1트랙, 1 : 2트랙, 2 : 3트랙
+    public int curBtn;  // 현재 어떤 버튼을 눌러서 이 곳으로 왔는지
     public bool[] isEventSet = new bool[3];
     public bool[] isRewardSet = new bool[3];
     public bool[] isChallenge = new bool[3];

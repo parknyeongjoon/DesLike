@@ -165,8 +165,12 @@ public class SelectMap : MonoBehaviour
             {
                 if (curDay == 0)
                     nxtEvnt[i] = 0;
-                else nxtEvnt[i] = Random.Range(0, 2);    // 전투 or 이벤트
+                else nxtEvnt[i] = Random.Range(0, 2);    // 전투(0) or 이벤트(1)
                 saveManager.gameData.mapData.selEvent[i] = nxtEvnt[i];  // 데이터 저장
+
+                if (nxtEvnt[i] == 1) // 이벤트라면
+                    saveManager.gameData.mapData.evntList[i] = Random.Range(0, 6);  // 이벤트 리스트에 따라서 다름
+                else saveManager.gameData.mapData.evntList[i] = 0;  // 전투면 0 표시
 
                 // 도전모드 관련 코드
                 isChallenge[i] = false; // 초기화
@@ -333,11 +337,10 @@ public class SelectMap : MonoBehaviour
     public void Button1()
     {
         selectNum = 1;
+        saveManager.gameData.mapData.curBtn = 0;
         InfoPanel.SetActive(true);
         if (curTrack == 0) // 1트랙
         {
-            Debug.Log(nxtEvnt[0]);
-            Debug.Log(curTrack);
             switch (nxtEvnt[0])
             {
                 case 0: // 1차 중간 보스
@@ -399,6 +402,7 @@ public class SelectMap : MonoBehaviour
     public void Button2()
     {
         selectNum = 2;
+        saveManager.gameData.mapData.curBtn = 1;
         InfoPanel.SetActive(true);
         if (curTrack == 1) // 2_2
         {
@@ -433,7 +437,8 @@ public class SelectMap : MonoBehaviour
 
     public void Button3()
     {
-        selectNum = 3;            
+        selectNum = 3;
+        saveManager.gameData.mapData.curBtn = 2;
         InfoPanel.SetActive(true);
         if (curDay == 0 || nxtEvnt[2] == 0)
         {

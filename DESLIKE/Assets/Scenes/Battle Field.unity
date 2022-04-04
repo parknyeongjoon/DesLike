@@ -17032,9 +17032,12 @@ MonoBehaviour:
   MPText: {fileID: 1906549848}
   SkillCooltime: {fileID: 1605660529}
   buffPanel: {fileID: 1992109400}
-  buffObject: {fileID: 3873672435639752891, guid: 1997a686e47a0f848a5660e9c15d0586,
+  buffObject: {fileID: 3873672435639752891, guid: a147196b84a864349bce84ff1aa94d4a,
+    type: 3}
+  debuffObject: {fileID: 3873672435639752891, guid: 88b33a2bfdf1a174d81efbf3f0405676,
     type: 3}
   buffImg: {fileID: 3873672435639752837, guid: df8b68f18a615de489130525d8ebd1db, type: 3}
+  debuffImg: {fileID: 0}
 --- !u!1 &734755609
 GameObject:
   m_ObjectHideFlags: 0
@@ -19152,9 +19155,12 @@ MonoBehaviour:
   - {fileID: 578269419}
   - {fileID: 1386132203}
   buffPanel: {fileID: 1741166839}
-  buffObject: {fileID: 3873672435639752891, guid: 1997a686e47a0f848a5660e9c15d0586,
+  buffObject: {fileID: 3873672435639752891, guid: a147196b84a864349bce84ff1aa94d4a,
+    type: 3}
+  debuffObject: {fileID: 3873672435639752891, guid: 88b33a2bfdf1a174d81efbf3f0405676,
     type: 3}
   buffImg: {fileID: 3873672435639752837, guid: df8b68f18a615de489130525d8ebd1db, type: 3}
+  debuffImg: {fileID: 0}
 --- !u!1 &1386132200
 GameObject:
   m_ObjectHideFlags: 0

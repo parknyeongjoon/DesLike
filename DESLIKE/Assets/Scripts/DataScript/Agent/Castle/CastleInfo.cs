@@ -7,7 +7,8 @@ public class CastleInfo : MonoBehaviour
 {
     public CastleData castleData;
     public float cur_Hp;
-    public PortDatas portDatas;
+    public PortDatas allyPortDatas;
+    public PortDatas enemyPortDatas;
 
     public delegate void DeadHandler();
     public DeadHandler beforeDeadHandler;//죽기 전에 발동한 효과들을 넣는 델리게이트

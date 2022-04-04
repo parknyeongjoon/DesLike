@@ -29,13 +29,7 @@ public class MainTitle : MonoBehaviour
         saveManager = SaveManager.Instance;
         if (!saveManager.gameData.canContinue)
         {
-            continueBtn.GetComponent<Image>().color = new Color(1, 1, 1, 0.5f);
             continueBtn.interactable = false;
-        }
-        else
-        {
-            continueBtn.GetComponent<Image>().color = new Color(1, 1, 1, 1);
-            continueBtn.interactable = true;
         }
     }
 

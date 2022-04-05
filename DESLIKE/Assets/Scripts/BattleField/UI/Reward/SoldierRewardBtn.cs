@@ -22,22 +22,22 @@ public class SoldierRewardBtn : MonoBehaviour
     {
        if(soldierCode != null)
         {
-            if (SaveManager.Instance.activeSoldierList.ContainsKey(soldierCode))
+            if (SaveManager.Instance.activeSoldierList.ContainsKey(soldierCode))//이미 병사를 가지고 있다면 포트 한 칸 더 생성하기와 특화 중에 하나 선택하기
             {
                 tempSoldier = SaveManager.Instance.activeSoldierList[soldierCode];
                 mutantPanel.SetActive(true);
             }
-            else
+            else//안 갖고 있다면 바로 포트에 생성하기
             {
                 Instantiate(PortCanvas);
                 PortManager.Instance.rewardSoldierCode = soldierCode;
-                StartCoroutine(PortManager.Instance.SetPortCoroutine());
+                StartCoroutine(PortManager.Instance.SetSoldierCoroutine());
                 //SoldierManager.GetSoldier(soldierCode, null);
             }
             button.interactable = false;
         }
     }
-
+    /*
     public void ChangeMutant()
     {
         if (tempSoldier.mutantCode != "0")  // 이것도 적당히 바꿔보십쇼-sh
@@ -60,4 +60,5 @@ public class SoldierRewardBtn : MonoBehaviour
         Debug.Log("설정됨");
         //mutant 설정 완료 화면 띄워주기
     }
+    */
 }

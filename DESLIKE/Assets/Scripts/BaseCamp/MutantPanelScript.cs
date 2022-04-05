@@ -9,7 +9,7 @@ public class MutantPanelScript : MonoBehaviour
     Image mutantImg;
     [SerializeField]
     Text mutantToolTip, rerollText;
-    List<GameObject> mutantList;
+    Dictionary<string, GameObject> mutantList;
 
     public string mutantCode;
     Mutant mutantScript;
@@ -26,7 +26,6 @@ public class MutantPanelScript : MonoBehaviour
 
     void SetMutant()
     {
-        int mutantIndex = Random.Range(0,mutantList.Count);
         /*  일단 주석처리 해놨으니 알아서 살려보십쇼
         mutant = mutantList[mutantIndex];
         mutantScript = mutant.GetComponent<Mutant>();

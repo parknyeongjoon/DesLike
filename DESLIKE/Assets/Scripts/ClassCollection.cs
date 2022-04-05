@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 //enum 모음
 public enum Mouse_State { Idle, Target, Grenade }
-public enum Port_State { Idle, Set, Drag, Sell }
+public enum Port_State { Idle, SetSoldier, SetMutant, Drag, Sell }
 
 public enum Team { Ally = 1, Enemy = 2, Neutral = 4 }
 public enum AttackArea { None = 0, Ground = 1 << 8, Sky = 1 << 11, Dual = AttackArea.Ground + AttackArea.Sky }//공격 범위

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System;
 
 public class CastleInfo : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class CastleInfo : MonoBehaviour
     public PortDatas allyPortDatas;
     public PortDatas enemyPortDatas;
 
-    public UnityEvent beforeDeadEvent;//죽기 전에 발동하는 이벤트(부활)
+    public Action beforeDeadEvent;//죽기 전에 발동하는 이벤트(부활)
     public UnityEvent afterDeadEvent;//죽고 난 뒤 일어나는 이벤트(시체가 터진다거나)
     public UnityEvent hitEvent;//캐릭터 피격 시 발동하는 이벤트
 
@@ -23,10 +24,12 @@ public class CastleInfo : MonoBehaviour
     {
         if (beforeDeadEvent != null)
         {
-            beforeDeadEvent.Invoke();
+            Debug.Log("사망 전 이벤트");
+            beforeDeadEvent?.Invoke();
         }
         else
         {
+            Debug.Log("사망 후 이벤트");
             afterDeadEvent?.Invoke();
         }
     }
@@ -41,6 +44,7 @@ public class CastleInfo : MonoBehaviour
         }
         if (cur_Hp <= 0)
         {
+            Debug.Log("사망");
             Die();
         }
     }

@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d2d310121892549905c5bfe8a1c6e6, type: 3}
-  m_Name: "\uAC00\uC624\uB098\uC2DC\uD0B9SoldierOption"
+  m_Script: {fileID: 11500000, guid: 58ff0c33c4c7a074d909e49103c0bf8c, type: 3}
+  m_Name: 21101 BasicSingleAttack
   m_EditorClassIdentifier: 
-  soldierOption:
-  - soldierData: {fileID: 11400000, guid: 27be6089e9daeb6499a3dfc2addf52a9, type: 2}
-    portNum: 0100000003000000
-    mutant: {fileID: 0}
+  start_Delay: 0.3
+  end_Delay: 0.2
+  range: 1
+  atk_Dmg: 1
+  atkArea: 256

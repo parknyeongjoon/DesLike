@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ec170fb41403794194fcac022439d2a, type: 3}
-  m_Name: "SoldierData6(\uC2A4\uCF08\uB808\uD1A4 \uAD81\uC218)"
+  m_Name: 21101
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: eb3711790d9a7304992355d8f5f9eeae, type: 3}
-  code: 6
-  hp: 40
-  def: 1
-  size: 0.2
+  sprite: {fileID: 0}
+  code: 21101
+  hp: 20
+  def: 0
+  size: 1
   blood: {fileID: 5086979035932333915, guid: 83b2eb89fe46c6a4db5d18712a94a153, type: 3}
-  soldier_name: "\uC2A4\uCF08\uB808\uD1A4 \uAD81\uC218"
-  mp: 0
+  soldier_name: ratHero
+  mp: 10
   speed: 2
-  mp_Re: 0
-  hp_Re: 0
-  tribe: 4
+  mp_Re: 1
+  hp_Re: 1
+  tribe: 2
   extraSkill: []
   mutant: {fileID: 0}
   rarity: 0
-  cost: 60
+  cost: 0
   needBarrier: 0
-  unitAmount: 2
-  soldier_Type: 3
+  unitAmount: 0
+  soldier_Type: 0

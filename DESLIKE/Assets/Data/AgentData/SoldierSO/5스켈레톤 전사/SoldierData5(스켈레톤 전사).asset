@@ -23,7 +23,7 @@ MonoBehaviour:
   speed: 3
   mp_Re: 0
   hp_Re: 0
-  tribe: 0
+  tribe: 4
   extraSkill: []
   mutant: {fileID: 0}
   rarity: 0

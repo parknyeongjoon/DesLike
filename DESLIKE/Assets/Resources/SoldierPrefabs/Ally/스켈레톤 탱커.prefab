@@ -1372,20 +1372,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a937bf1ca3267e04388ea345e4ac773a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  castleData: {fileID: 0}
+  castleData: {fileID: 11400000, guid: dc098578b6475514e82ce1e5590261c8, type: 2}
   cur_Hp: 0
   allyPortDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
   enemyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
   beforeDeadEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   afterDeadEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5526397366469184701, guid: dca6cea79c0cb544eb544424757f35b5,
-          type: 3}
+      - m_Target: {fileID: 5526397366469184701}
         m_TargetAssemblyTypeName: SoldierSpriteManager, Assembly-CSharp
         m_MethodName: Dead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4996919333659142438}
+        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
+        m_MethodName: StopAllCoroutines
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1398,8 +1421,7 @@ MonoBehaviour:
   hitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5526397366469184701, guid: dca6cea79c0cb544eb544424757f35b5,
-          type: 3}
+      - m_Target: {fileID: 5526397366469184701}
         m_TargetAssemblyTypeName: SoldierSpriteManager, Assembly-CSharp
         m_MethodName: SetHpMpBar
         m_Mode: 1

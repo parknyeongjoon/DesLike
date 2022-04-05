@@ -1379,14 +1379,37 @@ MonoBehaviour:
   enemyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
   beforeDeadEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   afterDeadEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5526397366469184701, guid: dca6cea79c0cb544eb544424757f35b5,
-          type: 3}
+      - m_Target: {fileID: 5526397366469184701}
         m_TargetAssemblyTypeName: SoldierSpriteManager, Assembly-CSharp
         m_MethodName: Dead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6438918860846744813}
+        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
+        m_MethodName: StopAllCoroutines
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1399,8 +1422,7 @@ MonoBehaviour:
   hitEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5526397366469184701, guid: dca6cea79c0cb544eb544424757f35b5,
-          type: 3}
+      - m_Target: {fileID: 5526397366469184701}
         m_TargetAssemblyTypeName: SoldierSpriteManager, Assembly-CSharp
         m_MethodName: SetHpMpBar
         m_Mode: 1

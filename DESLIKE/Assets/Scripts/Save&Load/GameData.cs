@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
 
 static class ConstNum
 {
@@ -13,7 +12,7 @@ static class ConstNum
 [System.Serializable]
 public class HeroSaveData
 {
-    public string heroCode;
+    public HeroData heroData;
     public float cur_Hp;
     public float cur_Mp;
     public bool resurrection;
@@ -23,9 +22,8 @@ public class HeroSaveData
 public class SoldierSaveData
 {
     public string soldierCode;
-    public string mutantCode;
     public int portNum;
-    public int remain;
+    public GameObject mutant;
 }
 
 [System.Serializable]
@@ -71,29 +69,6 @@ public class RewardData
 }
 
 [System.Serializable]
-public class SaveData//게임 껐다 켰을 때 데이터 저장용 클래스들. 수시로 저장해주고 불러오는 건 게임 continue 누를 때만 해주면 됨
-{
-    public HeroSaveData heroSaveData;
-    public List<string> activeSoldierList;
-
-    public void SaveActiveSoldierList(List<string> _activeSoldierList)
-    {
-        for(int i = 0; i < _activeSoldierList.Count; i++)
-        {
-
-        }
-    }
-
-    public void SaveHeroData(HeroInfo heroInfo)
-    {
-        heroSaveData.heroCode = heroInfo.castleData.code;
-        heroSaveData.cur_Hp = heroInfo.cur_Hp;
-        heroSaveData.cur_Mp = heroInfo.cur_Mp;
-        heroSaveData.resurrection = heroInfo.resurrection;
-    }
-}
-
-[System.Serializable]
 public class GameData
 {
     public bool canContinue;
@@ -101,7 +76,9 @@ public class GameData
     public GoodsCollection goodsCollection;//안됨
     public Map map;//안됨
     public PortDatas allyPortDatas;//안됨
-    public SaveData saveData;
+    public List<SoldierSaveData> soldierSaveList;
+    public HeroSaveData heroSaveData;
     public MapData mapData;
     public RewardData rewardData;
+    //mutant, 유물, extraSkills 등 바뀐 애들 저장해야함(continue 누르면 복제하는 식으로 하면 될 듯)
 }

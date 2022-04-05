@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class PortData : ScriptableObject
 {
     public string soldierCode;
-    public string mutantCode;
     public bool unlock;
     public Image portImg;
 }

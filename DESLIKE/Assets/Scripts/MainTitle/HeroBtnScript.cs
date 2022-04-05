@@ -45,7 +45,10 @@ public class HeroBtnScript : MonoBehaviour
 
     void SetHeroSaveData()
     {
-        SaveManager.Instance.gameData.saveData.SaveHeroData(heroInfo);
+        saveManager.gameData.heroSaveData.heroData = heroData;
+        saveManager.gameData.heroSaveData.cur_Hp = heroData.hp;
+        saveManager.gameData.heroSaveData.cur_Mp = heroData.mp;
+        saveManager.gameData.heroSaveData.resurrection = heroInfo.resurrection;
     }
 
     void Set_PortsOption()

@@ -16,7 +16,6 @@ public class SoldierRewardBtn : MonoBehaviour
 
 
     public string soldierCode;
-    public int soldierRemain;
     SoldierData tempSoldier;
 
     public void GetReward()

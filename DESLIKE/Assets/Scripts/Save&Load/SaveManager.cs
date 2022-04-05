@@ -119,6 +119,7 @@ public class SaveManager : MonoBehaviour
 
     public Dictionary<string, SoldierData> activeSoldierList = new Dictionary<string, SoldierData>();
 
+    /*
     public void SaveSoldierData()
     {
         gameData.soldierSaveList.Clear();//키 중복 체크하기
@@ -145,4 +146,5 @@ public class SaveManager : MonoBehaviour
             activeSoldierList.Add(tempSoldierData.code, tempSoldierData);
         }
     }
+    */
 }

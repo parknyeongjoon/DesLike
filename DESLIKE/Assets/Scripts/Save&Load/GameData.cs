@@ -22,8 +22,8 @@ public class HeroSaveData
 public class SoldierSaveData
 {
     public string soldierCode;
+    public int portNum;
     public GameObject mutant;
-    public int remain;
 }
 
 [System.Serializable]
@@ -31,7 +31,7 @@ public class IsFind
 {
     public bool[] soldierFind = new bool[ConstNum.soldierNum];
     public bool[] relicFind = new bool[ConstNum.relicNum];
-    public bool[] stroyFine = new bool[ConstNum.stroyNum];
+    public bool[] stroyFind = new bool[ConstNum.stroyNum];
 }
 
 public class GameOption
@@ -40,6 +40,8 @@ public class GameOption
     public bool storySkip;
     public bool autoBattleStart;
 }
+
+public enum curWindow { Map, Event, Battle }
 
 [System.Serializable]
 public class MapData

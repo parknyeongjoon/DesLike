@@ -10,8 +10,9 @@ public enum BodyArea { Ground = 1 << 8, Sky = 1 << 11 }
 public enum Soldier_State { Idle, Detect, Stun, Battle, Charge, Taunt, Dead }//유닛들 상태
 public enum Soldier_Action { Idle, Move, Attack, Skill, End_Delay }
 public enum Soldier_Type { Tanker, Soldier, Healer, Buffer, Debuffer, Ranger, Catapult, Flight, Monster}
+public enum Kingdom { Common, Physical, THural}
 public enum Tribe { Undead, Mech, Ghost }
-public enum Rarity { normal, rare, epic }
+public enum Rarity { Normal, Rare, Epic }
 
 public enum SkillType { TargetSkill, GrenadeSkill, InstanceSkill, PassiveSkill, Etc}
 
@@ -83,13 +84,12 @@ public class Reward
 {
     public SoldierReward soldierReward;
     public GameObject relic;
-    public int gold;
-    public int scrap;
-    public int magicalStone;
+    public int gold;//골드
+    public int magicalStone;//진영화폐
 }
 
 [System.Serializable]
-public struct SoldierReward
+public struct SoldierReward//soldier랑 mutant 한 쌍으로 묶일 수 있게 만들어서 저장하기
 {
     public SoldierData[] soldier;
     public GameObject mutant;

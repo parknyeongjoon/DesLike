@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class ContinueGame : MonoBehaviour
 {
     SaveManager saveManager;
-    
-    public void Continue()
+
+    public void Continue()//enum으로 바꾸기
     {
         if (saveManager.gameData.mapData.curWindow == 0)
             saveManager.gameData.mapData.newSet = false;

@@ -38,6 +38,7 @@ public class MainTitle : MonoBehaviour
     public void NewGameStart()
     {
         map.isMap = false;
+        SaveManager.Instance.gameData.canContinue = true;
         saveManager.gameData.map = map;
         saveManager.gameData.allyPortDatas = allyPortDatas;
         startHandler?.Invoke();

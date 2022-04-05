@@ -44,9 +44,8 @@ Map)-시후
 1. 머든 해야함 ㅋㅋ
 
 병사 Resource 생산시 설정해줘야하는 것
-1. 적절한 Behaviour 붙여주고 SoldierInfo 할당해주기
+1. 적절한 Prefab으로 PrefabVariant 생성
 2. 평타나 스킬 붙여주기
 3. SoldierInfo에 code 설정해주기
-4. SoldierInfo에 Dead Event에 Behaviour StopAllCoroutine 추가해주기
-5. 콜라이더 크기 수정해주기(수정하고 soldierData에 PhysicCollider 반지름 size에 넣어주기)
-6. SpriteRenderer에 대표 이미지 설정해주기(선택)
+4. 콜라이더 크기 수정해주기(수정하고 soldierData에 PhysicCollider 반지름 size에 넣어주기)
+5. SpriteRenderer에 대표 이미지 설정해주기(선택)

@@ -11,7 +11,7 @@ public class MutantPanelScript : MonoBehaviour
     Text mutantToolTip, rerollText;
     List<GameObject> mutantList;
 
-    public GameObject mutant;
+    public string mutantCode;
     Mutant mutantScript;
 
     int remainReroll;
@@ -27,8 +27,10 @@ public class MutantPanelScript : MonoBehaviour
     void SetMutant()
     {
         int mutantIndex = Random.Range(0,mutantList.Count);
+        /*  일단 주석처리 해놨으니 알아서 살려보십쇼
         mutant = mutantList[mutantIndex];
         mutantScript = mutant.GetComponent<Mutant>();
+        */    
         Debug.Log("SetMutant");//애니메이션 효과 넣기
     }
 

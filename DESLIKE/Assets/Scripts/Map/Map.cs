@@ -7,8 +7,26 @@ using UnityEngine.SceneManagement;
 public class Map : ScriptableObject
 {
     public MapNode curMapNode;//지우기
-    public List<SoldierData> soldierRewardList;
-    public List<GameObject> relicRewardList;
+    public List<SoldierData> physicNorSol;
+    public List<SoldierData> physicEpicSol;
+
+    public List<SoldierData> spellNorSol;
+    public List<SoldierData> spellEpicSol;
+
+    public List<SoldierData> commonNorSol;
+    public List<SoldierData> commonEpicSol;
+
+    public List<GameObject> physicNorRel;
+    public List<GameObject> physicEpicRel;
+    public List<GameObject> physicLegendRel;
+
+    public List<GameObject> spellNorRel;
+    public List<GameObject> spellEpicRel;
+    public List<GameObject> spellLegendRel;
+    public List<GameObject> commonNorRel;
+    public List<GameObject> commonEpicRel;
+    public List<GameObject> commonLegendRel;
+    
     public bool isMap = false;//지우기
     public int playerX= -1, playerY;//지우기
     public int level;//지우기

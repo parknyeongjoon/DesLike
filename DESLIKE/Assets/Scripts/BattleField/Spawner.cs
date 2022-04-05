@@ -49,9 +49,9 @@ public class Spawner : MonoBehaviour
             {
                 soldierData = portDatas.activeSoldierList[portDatas.portDatas[portIndex].soldierCode];
                 createSoldier = Instantiate(soldierPrefabs[soldierData.code], spawner[portIndex].transform);
-                if (soldierData.mutant)
+                if (soldierData.mutantCode != "0")
                 {
-                    Instantiate(soldierData.mutant, createSoldier.transform);
+                    // Instantiate(soldierData.mutantCode, createSoldier.transform);
                 }
                 if (soldierData.extraSkill != null)
                 {

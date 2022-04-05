@@ -23,7 +23,7 @@ public class SoldierSaveData
 {
     public string soldierCode;
     public int portNum;
-    public GameObject mutant;
+    public string mutantCode;
 }
 
 [System.Serializable]
@@ -46,6 +46,7 @@ public enum curWindow { Map, Event, Battle }
 [System.Serializable]
 public class MapData
 {
+    public Kingdom kingdom;
     public int curStage = 0;
     public int curTrack;
     public int curDay;  // 현재 날짜
@@ -65,7 +66,7 @@ public class MapData
 public class RewardData
 {
     public int[] relicRewardIndex = new int[3];
-    public int[] soldierRewardIndex = new int[3];
+    public int[,] soldierRewardIndex = new int[2, 3];
 }
 
 [System.Serializable]

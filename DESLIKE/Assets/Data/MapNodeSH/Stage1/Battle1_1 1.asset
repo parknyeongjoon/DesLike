@@ -13,42 +13,72 @@ MonoBehaviour:
   m_Name: Battle1_1 1
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
-  isNode: 1
-  rewardSoldierList:
-  - {fileID: 11400000, guid: a29c1d8c1343ac342b7934d4fa64b8d3, type: 2}
-  - {fileID: 11400000, guid: 505df875aa52d6c429dc1729c124a209, type: 2}
-  - {fileID: 11400000, guid: 790abeee750e88647a10efc6bb80386d, type: 2}
-  - {fileID: 11400000, guid: af820736225c7c64bacdd0238f6182ab, type: 2}
-  - {fileID: 11400000, guid: 8f5bd6d443eb5714780da0f9b57c6d86, type: 2}
-  - {fileID: 11400000, guid: dc098578b6475514e82ce1e5590261c8, type: 2}
-  rewardRelicList:
-  - {fileID: 4835315866048107822, guid: bdc55f89b7fc82046a549df921abb5dc, type: 3}
+  isNode: 0
+  ableSoldierRewards:
+  - {fileID: 11400000, guid: 8788303e8e13c9748bc94ba89034ed6e, type: 2}
+  - {fileID: 11400000, guid: 41a8f96bef094ba40b4a9d38cc39f0e3, type: 2}
+  - {fileID: 11400000, guid: 8788303e8e13c9748bc94ba89034ed6e, type: 2}
+  - {fileID: 11400000, guid: 41a8f96bef094ba40b4a9d38cc39f0e3, type: 2}
+  - {fileID: 11400000, guid: 2075f09dbfe04234d8af88f78289b70b, type: 2}
+  - {fileID: 11400000, guid: b5db2c1dfa8479a43878915615555eae, type: 2}
+  - {fileID: 11400000, guid: 8788303e8e13c9748bc94ba89034ed6e, type: 2}
+  - {fileID: 11400000, guid: 41a8f96bef094ba40b4a9d38cc39f0e3, type: 2}
+  - {fileID: 11400000, guid: 9ab41620d8ca793468ec8807f8b44095, type: 2}
+  - {fileID: 11400000, guid: 2de555b8ef466224186a2e7f4daa2687, type: 2}
+  - {fileID: 11400000, guid: 2075f09dbfe04234d8af88f78289b70b, type: 2}
+  - {fileID: 11400000, guid: b5db2c1dfa8479a43878915615555eae, type: 2}
+  - {fileID: 11400000, guid: 8788303e8e13c9748bc94ba89034ed6e, type: 2}
+  - {fileID: 11400000, guid: 41a8f96bef094ba40b4a9d38cc39f0e3, type: 2}
+  - {fileID: 11400000, guid: 9ab41620d8ca793468ec8807f8b44095, type: 2}
+  - {fileID: 11400000, guid: 2de555b8ef466224186a2e7f4daa2687, type: 2}
+  - {fileID: 11400000, guid: 2075f09dbfe04234d8af88f78289b70b, type: 2}
+  - {fileID: 11400000, guid: b5db2c1dfa8479a43878915615555eae, type: 2}
+  - {fileID: 11400000, guid: 8788303e8e13c9748bc94ba89034ed6e, type: 2}
+  - {fileID: 11400000, guid: 41a8f96bef094ba40b4a9d38cc39f0e3, type: 2}
+  - {fileID: 11400000, guid: 9ab41620d8ca793468ec8807f8b44095, type: 2}
+  - {fileID: 11400000, guid: 2de555b8ef466224186a2e7f4daa2687, type: 2}
+  - {fileID: 11400000, guid: 2075f09dbfe04234d8af88f78289b70b, type: 2}
+  - {fileID: 11400000, guid: b5db2c1dfa8479a43878915615555eae, type: 2}
+  - {fileID: 11400000, guid: 8788303e8e13c9748bc94ba89034ed6e, type: 2}
+  - {fileID: 11400000, guid: 41a8f96bef094ba40b4a9d38cc39f0e3, type: 2}
+  - {fileID: 11400000, guid: 9ab41620d8ca793468ec8807f8b44095, type: 2}
+  - {fileID: 11400000, guid: 2de555b8ef466224186a2e7f4daa2687, type: 2}
+  - {fileID: 11400000, guid: 2075f09dbfe04234d8af88f78289b70b, type: 2}
+  - {fileID: 11400000, guid: b5db2c1dfa8479a43878915615555eae, type: 2}
+  - {fileID: 11400000, guid: 8788303e8e13c9748bc94ba89034ed6e, type: 2}
+  - {fileID: 11400000, guid: 41a8f96bef094ba40b4a9d38cc39f0e3, type: 2}
+  - {fileID: 11400000, guid: 9ab41620d8ca793468ec8807f8b44095, type: 2}
+  - {fileID: 11400000, guid: 2de555b8ef466224186a2e7f4daa2687, type: 2}
+  - {fileID: 11400000, guid: 2075f09dbfe04234d8af88f78289b70b, type: 2}
+  - {fileID: 11400000, guid: b5db2c1dfa8479a43878915615555eae, type: 2}
+  ableRelicRewards:
+  - {fileID: 4835315866048107822, guid: a2a4895075d4bae4fab94d06af5f6102, type: 3}
+  - {fileID: 4835315866048107822, guid: bab1c3b4ea968194ba769df36c83f7f6, type: 3}
+  - {fileID: 4835315866048107822, guid: f9516c03915799f4d9420c053d457c29, type: 3}
+  - {fileID: 4835315866048107822, guid: 995ea8cf016b6b24b806b3a8fc5e3b91, type: 3}
+  - {fileID: 4835315866048107822, guid: 6aa07b9d6db7eed44bcd9fe4b49d5fe4, type: 3}
+  - {fileID: 4835315866048107822, guid: c84f84e144709fc4dba1a51874eb5e70, type: 3}
+  - {fileID: 4835315866048107822, guid: bf6f51f4cebaf7b42beb40660adbc9dd, type: 3}
+  - {fileID: 4835315866048107822, guid: 49be580c4be9d754484afd988dd79773, type: 3}
+  - {fileID: 4835315866048107822, guid: 19f858c2e012ff14fbaf251130c27e91, type: 3}
+  - {fileID: 4835315866048107822, guid: 717ad9e692db14343a36a69e7ae957b2, type: 3}
+  - {fileID: 4835315866048107822, guid: 99980c64839d6204d91a2725414728c6, type: 3}
+  - {fileID: 4835315866048107822, guid: ee1045f0a4403834eaeb87f0e27b7742, type: 3}
   reward:
     soldierReward:
       soldier:
-      - {fileID: 11400000, guid: a29c1d8c1343ac342b7934d4fa64b8d3, type: 2}
-      - {fileID: 11400000, guid: 505df875aa52d6c429dc1729c124a209, type: 2}
-      - {fileID: 11400000, guid: 790abeee750e88647a10efc6bb80386d, type: 2}
-      - {fileID: 11400000, guid: af820736225c7c64bacdd0238f6182ab, type: 2}
-      - {fileID: 11400000, guid: 8f5bd6d443eb5714780da0f9b57c6d86, type: 2}
-      - {fileID: 11400000, guid: dc098578b6475514e82ce1e5590261c8, type: 2}
-      mutant: {fileID: 0}
-    relic: {fileID: 4835315866048107822, guid: bdc55f89b7fc82046a549df921abb5dc, type: 3}
-    gold: 1
-    scrap: 50
+      - {fileID: 11400000, guid: 8788303e8e13c9748bc94ba89034ed6e, type: 2}
+      - {fileID: 0}
+      mutantCode: 
+    relic: {fileID: 0}
+    gold: 0
     magicalStone: 0
   x: 0
   y: 0
-  enemyPortsOptions:
-  - {fileID: 11400000, guid: 873738ffde2fb3b44b4660d7cd20a6c7, type: 2}
-  - {fileID: 11400000, guid: 8e79fe8a14ef79349ad33bc1738c96f3, type: 2}
-  - {fileID: 11400000, guid: 8e79fe8a14ef79349ad33bc1738c96f3, type: 2}
-  - {fileID: 11400000, guid: 8e79fe8a14ef79349ad33bc1738c96f3, type: 2}
-  - {fileID: 11400000, guid: 8e79fe8a14ef79349ad33bc1738c96f3, type: 2}
-  - {fileID: 11400000, guid: 8e79fe8a14ef79349ad33bc1738c96f3, type: 2}
-  enemyPortOption: {fileID: 11400000, guid: 8e79fe8a14ef79349ad33bc1738c96f3, type: 2}
-  challengeList:
-  - {fileID: 11400000, guid: b1631dcc2b64c9548b4049199e2900f1, type: 2}
-  - {fileID: 11400000, guid: 55a8da69afcd3ca44aab384d9d983744, type: 2}
+  kingdom: 0
+  enemyPortsOptions: []
+  enemyPortOption: {fileID: 11400000, guid: 873738ffde2fb3b44b4660d7cd20a6c7, type: 2}
+  challengeList: []
   enemyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
   isChallenge: 0
+  saveManager: {fileID: 0}

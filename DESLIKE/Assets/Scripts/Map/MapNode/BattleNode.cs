@@ -12,17 +12,18 @@ public class BattleNode : MapNode
     public List<PortsOption> challengeList;
     public PortDatas enemyPortDatas;
     public bool isChallenge;
-    SaveManager saveManager;
-
+    public SaveManager saveManager;
+    bool[] isEventSet = new bool[3];
     void Enable()
     {
         saveManager = SaveManager.Instance;
+        for(int i = 0; i<3; i++)
+            isEventSet[i] = saveManager.gameData.mapData.isEventSet[i];
     }
 
     public void SetEnemyPortOption(int i)
     {
-        bool isEventSet = saveManager.gameData.mapData.isEventSet[i];
-        if (isEventSet == false)    // 새로운 정보 세팅
+        if (isEventSet[i] == false)    // 새로운 정보 세팅
         {
             int temp = Random.Range(0, enemyPortsOptions.Count);
             enemyPortOption = enemyPortsOptions[temp];
@@ -53,7 +54,7 @@ public class BattleNode : MapNode
             SoldierData tempSoldier = Instantiate(option[i].soldierData);
             if (option[i].mutant)
             {
-                tempSoldier.mutant = option[i].mutant;
+                // tempSoldier.mutantCode = option[i].mutantCode;
             }
             enemyPortDatas.activeSoldierList.Add(tempSoldier.code, tempSoldier);
             for (int j = 0; j < option[i].portNum.Length; j++)

@@ -41,10 +41,10 @@ public class SoldierRewardBtn : MonoBehaviour
 
     public void ChangeMutant()
     {
-        if (tempSoldier.mutant)
+        if (tempSoldier.mutantCode != "0")  // 이것도 적당히 바꿔보십쇼-sh
         {
             changeMutantPanelScript.soldierData = tempSoldier;
-            changeMutantPanelScript.changeMutant = mutantPanelScript.mutant;
+            changeMutantPanelScript.changeMutant = mutantPanelScript.mutantCode;
             changeMutantPanel.SetActive(true);
         }
         else
@@ -55,7 +55,7 @@ public class SoldierRewardBtn : MonoBehaviour
 
     public void OkMutant()
     {
-        tempSoldier.mutant = mutantPanelScript.mutant;
+        tempSoldier.mutantCode = mutantPanelScript.mutantCode;
         mutantPanel.SetActive(false);
         changeMutantPanel.SetActive(false);
         Debug.Log("설정됨");

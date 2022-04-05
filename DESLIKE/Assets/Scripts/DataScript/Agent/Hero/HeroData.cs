@@ -10,5 +10,5 @@ public class HeroData : CastleData
     public float mp, speed, mp_Re, hp_Re;
     public Tribe tribe;
     public List<GameObject> extraSkill;
-    public GameObject mutant;
+    public string mutantCode;
 }

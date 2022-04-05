@@ -8,42 +8,40 @@ public class BattleNodeScript : NodeScript
 {
     BattleNode battleNode;
     [SerializeField] GameObject InfoTemp, InfoPrefab, MoreInfoPanel, MoreTemp, MorePrefab, ChallengeO;
-    SaveManager saveManager;
     
     void Start()
     {
-        saveManager = SaveManager.Instance;
         battleNode = (BattleNode)MapNode;
         battleNode.SetChallengeOption();
     }
 
     public void SetEnemyPort1()  // 외부 참조용
     {
-        battleNode.SetEnemyPortOption(1);
-        saveManager.gameData.mapData.isEventSet[0] = true;
-        saveManager.gameData.mapData.isRewardSet[0] = true;
+        battleNode.SetEnemyPortOption(0);
+        battleNode.saveManager.gameData.mapData.isEventSet[0] = true;
+        battleNode.saveManager.gameData.mapData.isRewardSet[0] = true;
     }
 
     public void SetEnemyPort2()  // 외부 참조용
     {
-        battleNode.SetEnemyPortOption(2);
-        saveManager.gameData.mapData.isEventSet[1] = true;
-        saveManager.gameData.mapData.isRewardSet[1] = true;
+        battleNode.SetEnemyPortOption(1);
+        battleNode.saveManager.gameData.mapData.isEventSet[1] = true;
+        battleNode.saveManager.gameData.mapData.isRewardSet[1] = true;
     }
 
     public void SetEnemyPort3()  // 외부 참조용
     {
-        battleNode.SetEnemyPortOption(3);
-        saveManager.gameData.mapData.isEventSet[2] = true;
-        saveManager.gameData.mapData.isRewardSet[2] = true;
+        battleNode.SetEnemyPortOption(2);
+        battleNode.saveManager.gameData.mapData.isEventSet[2] = true;
+        battleNode.saveManager.gameData.mapData.isRewardSet[2] = true;
     }
 
     public void Play_BattleNode()
     {
         for (int i = 0; i < 3; i++)
         {
-            saveManager.gameData.mapData.isEventSet[i] = false;
-            saveManager.gameData.mapData.isRewardSet[i] = false;
+            battleNode.saveManager.gameData.mapData.isEventSet[i] = false;
+            battleNode.saveManager.gameData.mapData.isRewardSet[i] = false;
         }
         battleNode.Play_BattleNode();
     }
@@ -51,11 +49,10 @@ public class BattleNodeScript : NodeScript
     public void Play_BossNode()
     {
         for (int i = 0; i < 3; i++)
-            saveManager.gameData.mapData.isEventSet[i] = false;
+            battleNode.saveManager.gameData.mapData.isEventSet[i] = false;
         battleNode.Play_BattleNode();
     }
-
-
+    
     public void See_InfoPanel()
     {
         List<Option> option = new List<Option>();

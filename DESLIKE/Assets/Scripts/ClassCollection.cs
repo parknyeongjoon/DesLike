@@ -1,5 +1,7 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+
 //enum 모음
 public enum Mouse_State { Idle, Target, Grenade }
 public enum Port_State { Idle, Set, Drag, Sell }
@@ -10,7 +12,7 @@ public enum BodyArea { Ground = 1 << 8, Sky = 1 << 11 }
 public enum Soldier_State { Idle, Detect, Stun, Battle, Charge, Taunt, Dead }//유닛들 상태
 public enum Soldier_Action { Idle, Move, Attack, Skill, End_Delay }
 public enum Soldier_Type { Tanker, Soldier, Healer, Buffer, Debuffer, Ranger, Catapult, Flight, Monster}
-public enum Kingdom { Common, Physical, THural}
+public enum Kingdom { Physic, Spell, Common }
 public enum Tribe { Undead, Mech, Ghost }
 public enum Rarity { Normal, Rare, Epic }
 
@@ -84,15 +86,15 @@ public class Reward
 {
     public SoldierReward soldierReward;
     public GameObject relic;
-    public int gold;//골드
-    public int magicalStone;//진영화폐
+    public int gold;    //골드
+    public int magicalStone;    //진영화폐
 }
 
 [System.Serializable]
-public struct SoldierReward//soldier랑 mutant 한 쌍으로 묶일 수 있게 만들어서 저장하기
+public struct SoldierReward //soldier랑 mutant 한 쌍으로 묶일 수 있게 만들어서 저장하기
 {
-    public SoldierData[] soldier;
-    public GameObject mutant;
+    public List<SoldierData> soldier;
+    public string mutantCode;
 }
 
 [System.Serializable]

@@ -11,7 +11,7 @@ public class ChangeMutantPanelScript : MonoBehaviour
     Text originToolTip, changeToolTip;
 
     public SoldierData soldierData;
-    public GameObject changeMutant;
+    public string changeMutant;
     Mutant mutantScript;
     Mutant changeMutantScript;
 
@@ -22,10 +22,10 @@ public class ChangeMutantPanelScript : MonoBehaviour
 
     void SetChangeMutantPanel()
     {
-        mutantScript = soldierData.mutant.GetComponent<Mutant>();
+        // mutantScript = soldierData.mutantCode.GetComponent<Mutant>();
         originMutantImg.sprite = mutantScript.mutantData.mutantImg;
         originToolTip.text = mutantScript.mutantData.toolTip;
-        changeMutantScript = changeMutant.GetComponent<Mutant>();
+        // changeMutantScript = changeMutant.GetComponent<Mutant>();
         changeMutantImg.sprite = changeMutantScript.mutantData.mutantImg;
         changeToolTip.text = changeMutantScript.mutantData.toolTip;
     }

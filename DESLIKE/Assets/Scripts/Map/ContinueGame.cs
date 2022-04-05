@@ -35,5 +35,8 @@ public class ContinueGame : MonoBehaviour
         saveManager.gameData.mapData.villageCheck = false; 
         saveManager.gameData.mapData.organCheck = false; // 중간 보스, 마을, 정비 여부
         saveManager.gameData.mapData.newSet = true;
+        saveManager.gameData.mapData.kingdom = Kingdom.Physic;  // 임시값
+        for (int i = 0; i < 3; i++)
+            saveManager.gameData.mapData.isEventSet[i] = false;
     }
 }

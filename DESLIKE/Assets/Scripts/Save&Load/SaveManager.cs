@@ -128,7 +128,7 @@ public class SaveManager : MonoBehaviour
             {
                 SoldierSaveData tempSoldierSaveData = new SoldierSaveData();
                 tempSoldierSaveData.soldierCode = soldierData.code;
-                tempSoldierSaveData.mutant = soldierData.mutant;
+                tempSoldierSaveData.mutantCode = soldierData.mutantCode;
                 gameData.soldierSaveList.Add(tempSoldierSaveData);
             }
         }
@@ -141,7 +141,7 @@ public class SaveManager : MonoBehaviour
         {
             SoldierData tempSoldierData;
             tempSoldierData = Instantiate(dataSheet.soldierDataSheet[gameData.soldierSaveList[i].soldierCode]);
-            tempSoldierData.mutant = gameData.soldierSaveList[i].mutant;
+            tempSoldierData.mutantCode = gameData.soldierSaveList[i].mutantCode;
             activeSoldierList.Add(tempSoldierData.code, tempSoldierData);
         }
     }

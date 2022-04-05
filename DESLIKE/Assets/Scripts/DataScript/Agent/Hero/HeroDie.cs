@@ -6,15 +6,7 @@ using UnityEngine.Events;
 
 public class HeroDie : MonoBehaviour
 {
-    [SerializeField]
-    HeroInfo heroInfo;
-
-    void Awake()
-    {
-        heroInfo.afterDeadHandler += GameOver;
-    }
-
-    void GameOver()
+    public void GameOver()
     {
         Debug.Log("Game Over");
         //Destroy(gameObject);

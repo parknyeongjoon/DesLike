@@ -19,8 +19,6 @@ public class SoldierSpriteManager : MonoBehaviour
     [SerializeField]
     GameObject hp_mp_bar;
 
-    int sightNum;
-
     IEnumerator Start()
     {
         yield return new WaitUntil(() => heroData == null);
@@ -31,19 +29,16 @@ public class SoldierSpriteManager : MonoBehaviour
             spriteRenderer.flipX = true;
         }
         OneBoxScale();
-        StartCoroutine(SetHpMpBar());
     }
 
-    IEnumerator SetHpMpBar()//데미지 받을 때만 실행하기
+    public void SetHpMpBar()//데미지 받을 때만 실행하기
     {
-        while (heroInfo.state != Soldier_State.Dead)
+        if(heroInfo.state != Soldier_State.Dead)
         {
             hp_mp_bar.transform.position = transform.position + new Vector3(0, 1f, 0);
             hpbar.fillAmount = heroInfo.cur_Hp / heroData.hp;
             mpbar.fillAmount = heroInfo.cur_Mp / heroData.mp;
-            yield return null;
         }
-        hp_mp_bar.SetActive(false);
     }
 
     void OneBoxScale()

@@ -5,21 +5,21 @@ using UnityEngine;
 
 public class HeroInfo : CastleInfo
 {
+    public Soldier_State state;
+    public Soldier_Action action;
+    public Team team;
+
     public GameObject target;
     public CastleInfo targetInfo;
     public GameObject skillTarget;
     public CastleInfo skillTargetInfo;
+
     public float cur_Mp;
     public Vector3 moveDir;
-    public Soldier_State state;
-    public Soldier_Action action;
-    public Team team;
     public float healWeight = 0;
     public bool resurrection;
-    [SerializeField]
-    public Buff_Stat buff_Stat;
 
-    public Animator animator;
+    public Buff_Stat buff_Stat;
 
     public Dictionary<string, List<Coroutine>> buffCoroutine = new Dictionary<string, List<Coroutine>>();
     public Dictionary<string, List<Coroutine>> debuffCoroutine = new Dictionary<string, List<Coroutine>>();

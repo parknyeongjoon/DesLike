@@ -13,7 +13,7 @@ public class SingleHeal : ActiveSkill
             heroInfo.cur_Mp -= ((ActiveSkillData)skillData).mp;
             cur_cooltime = ((ActiveSkillData)skillData).cooltime;
             StartCoroutine(SkillCooltime());
-            heroInfo.animator.SetTrigger("isAtk");
+            //heroInfo.animator.SetTrigger("isAtk");
             ((SingleHealData)skillData).Effect(this, targetInfo);
             heroInfo.action = Soldier_Action.End_Delay;
             yield return new WaitForSeconds(((ActiveSkillData)skillData).end_Delay);

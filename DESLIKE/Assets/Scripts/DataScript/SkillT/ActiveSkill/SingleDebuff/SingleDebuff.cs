@@ -30,7 +30,7 @@ public class SingleDebuff : ActiveSkill
 
             if (targetInfo.debuffCoroutine[skillData.code].Count >= ((SingleDebuffData)skillData).max_Stack)//최대 스택 수 보다 많은 지 검사
             {
-                StopCoroutine(heroInfo.debuffCoroutine[skillData.code][0]);//제일 오래된 코루틴 정지시키고 갱신하기
+                StopCoroutine(targetInfo.debuffCoroutine[skillData.code][0]);//제일 오래된 코루틴 정지시키고 갱신하기
                 ((SingleDebuffData)skillData).Remove_Debuff(targetInfo, targetInfo.debuffCoroutine[skillData.code][0]);//고치기(0번째 인덱스말고 실행된 코루틴을 담을 방법이 없을까?)//효과 제거해주기
             }
             targetInfo.debuffCoroutine[skillData.code].Add(StartCoroutine(((SingleDebuffData)skillData).DebuffCoroutine(targetInfo)));//스택이 가능하다면 계속해서 List<Coroutine>에 넣기//버프 실행해주고 heroInfo 버프 딕셔너리에 넣어주기

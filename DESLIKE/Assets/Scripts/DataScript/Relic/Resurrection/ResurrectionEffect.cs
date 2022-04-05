@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ResurrectionEffect : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class ResurrectionEffect : MonoBehaviour
     void Awake()
     {
         heroInfo = GetComponentInParent<HeroInfo>();
-        heroInfo.beforeDeadHandler += Effect;
+        heroInfo.beforeDeadEvent.AddListener(Effect);
         heroInfo.resurrection = true;
     }
 
@@ -18,6 +19,6 @@ public class ResurrectionEffect : MonoBehaviour
         heroInfo.cur_Hp = heroInfo.castleData.hp * 0.15f;
         Debug.Log("resurrection");
         heroInfo.resurrection = false;
-        heroInfo.beforeDeadHandler -= Effect;
+        heroInfo.beforeDeadEvent.RemoveListener(Effect);
     }
 }

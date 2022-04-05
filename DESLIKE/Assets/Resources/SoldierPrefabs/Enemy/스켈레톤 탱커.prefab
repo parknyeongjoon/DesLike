@@ -2254,7 +2254,6 @@ GameObject:
   - component: {fileID: 7116624685446316876}
   - component: {fileID: 4448198707694892068}
   - component: {fileID: 3178092740169865627}
-  - component: {fileID: -1315901735184964035}
   - component: {fileID: 8576553565259397100}
   - component: {fileID: -3554134871425548847}
   - component: {fileID: -4048077354837490848}
@@ -2373,25 +2372,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.3, y: 1}
   m_Direction: 0
---- !u!95 &-1315901735184964035
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7116624685446316913}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &8576553565259397100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2427,10 +2407,14 @@ MonoBehaviour:
   cur_Hp: 0
   allyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
   enemyPortDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
-  deadEvent:
+  beforeDeadEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  afterDeadEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8576553565259397100}
+      - m_Target: {fileID: 5526397366469184701, guid: dca6cea79c0cb544eb544424757f35b5,
+          type: 3}
         m_TargetAssemblyTypeName: SoldierSpriteManager, Assembly-CSharp
         m_MethodName: Dead
         m_Mode: 1
@@ -2442,9 +2426,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: -4048077354837490848}
-        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
-        m_MethodName: StopAllCoroutines
+  hitEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5526397366469184701, guid: dca6cea79c0cb544eb544424757f35b5,
+          type: 3}
+        m_TargetAssemblyTypeName: SoldierSpriteManager, Assembly-CSharp
+        m_MethodName: SetHpMpBar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2454,15 +2442,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  state: 0
+  action: 0
+  team: 2
   target: {fileID: 0}
   targetInfo: {fileID: 0}
   skillTarget: {fileID: 0}
   skillTargetInfo: {fileID: 0}
   cur_Mp: 0
   moveDir: {x: 0, y: 0, z: 0}
-  state: 0
-  action: 0
-  team: 2
   healWeight: 0
   resurrection: 0
   buff_Stat:
@@ -2474,7 +2462,6 @@ MonoBehaviour:
     hp: 0
     hp_Re: 0
     def: 0
-  animator: {fileID: -1315901735184964035}
   soldierCode: 7
 --- !u!114 &-4048077354837490848
 MonoBehaviour:

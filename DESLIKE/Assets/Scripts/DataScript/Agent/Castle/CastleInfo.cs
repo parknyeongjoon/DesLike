@@ -10,10 +10,9 @@ public class CastleInfo : MonoBehaviour
     public PortDatas allyPortDatas;
     public PortDatas enemyPortDatas;
 
-    public delegate void DeadHandler();
-    public DeadHandler beforeDeadHandler;//죽기 전에 발동한 효과들을 넣는 델리게이트
-    public DeadHandler afterDeadHandler;//진짜 죽었을 때 나올 효과들을 넣을 델리게이트
-    public UnityEvent deadEvent;
+    public UnityEvent beforeDeadEvent;//죽기 전에 발동하는 이벤트(부활)
+    public UnityEvent afterDeadEvent;//죽고 난 뒤 일어나는 이벤트(시체가 터진다거나)
+    public UnityEvent hitEvent;//캐릭터 피격 시 발동하는 이벤트
 
     void Start()
     {
@@ -22,19 +21,19 @@ public class CastleInfo : MonoBehaviour
 
     public void Die()//DeadBehaviour로 넘겨버리기
     {
-        if (beforeDeadHandler != null)
+        if (beforeDeadEvent != null)
         {
-            beforeDeadHandler.Invoke();
+            beforeDeadEvent.Invoke();
         }
         else
         {
-            afterDeadHandler?.Invoke();
-            deadEvent?.Invoke();
+            afterDeadEvent?.Invoke();
         }
     }
 
     public virtual void OnDamaged(float damage)
     {
+        hitEvent?.Invoke();
         cur_Hp -= (damage - castleData.def);//버프 스탯 넣기, 수식 설정하기
         if (castleData.blood != null)
         {

@@ -70,26 +70,26 @@ public class SoldierBasic : MonoBehaviour
 
     protected IEnumerator Move()
     {
-        heroInfo.animator.SetBool("isWalk", true);
+        //heroInfo.animator.SetBool("isWalk", true);
         heroInfo.action = Soldier_Action.Move;
         while (heroInfo.action == Soldier_Action.Move)
         {
             transform.Translate(Time.deltaTime * (((HeroData)heroInfo.castleData).speed + heroInfo.buff_Stat.speed) * heroInfo.moveDir);
             yield return new WaitForFixedUpdate();
         }
-        heroInfo.animator.SetBool("isWalk", false);
+        //heroInfo.animator.SetBool("isWalk", false);
     }
 
     protected IEnumerator Move(Vector3 destination)
     {
-        heroInfo.animator.SetBool("isWalk", true);
+        //heroInfo.animator.SetBool("isWalk", true);
         heroInfo.action = Soldier_Action.Move;
         while (transform.position != destination && heroInfo.action == Soldier_Action.Move)
         {
             transform.position = Vector3.MoveTowards(transform.position, destination, Time.deltaTime * (((HeroData)heroInfo.castleData).speed + heroInfo.buff_Stat.speed));
             yield return new WaitForFixedUpdate();
         }
-        heroInfo.animator.SetBool("isWalk", false);
+        //heroInfo.animator.SetBool("isWalk", false);
         heroInfo.action = Soldier_Action.Idle;
     }
 }

@@ -1223,11 +1223,11 @@ GameObject:
   - component: {fileID: 5346442293094215225}
   - component: {fileID: -1573145474374502888}
   - component: {fileID: 6782014734319213554}
-  - component: {fileID: -5346434434137291554}
   - component: {fileID: 5526397366469184701}
-  - component: {fileID: -8501808418590617708}
-  m_Layer: 11
-  m_Name: Ally Flight
+  - component: {fileID: -6878065226668501377}
+  - component: {fileID: 1170367030026811516}
+  m_Layer: 8
+  m_Name: Ally Healer
   m_TagString: Soldier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1340,25 +1340,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.3515625, y: 0.828125}
   m_Direction: 0
---- !u!95 &-5346434434137291554
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5346442293094215222}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &5526397366469184701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1372,13 +1353,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5346442293094215225}
-  heroInfo: {fileID: -8501808418590617708}
+  heroInfo: {fileID: -6878065226668501377}
   Hpbar: {fileID: 3421288505172815408}
   Mpbar: {fileID: 7341851713505146119}
   hpbar: {fileID: 656011340784530830}
   mpbar: {fileID: 7561757787368840642}
   hp_mp_bar: {fileID: 6678462704121574981}
---- !u!114 &-8501808418590617708
+--- !u!114 &-6878065226668501377
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1394,7 +1375,10 @@ MonoBehaviour:
   cur_Hp: 0
   allyPortDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
   enemyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
-  deadEvent:
+  beforeDeadEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  afterDeadEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5526397366469184701}
@@ -1409,15 +1393,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1170367030026811516}
+        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
+        m_MethodName: StopAllCoroutines
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hitEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5526397366469184701}
+        m_TargetAssemblyTypeName: SoldierSpriteManager, Assembly-CSharp
+        m_MethodName: SetHpMpBar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  state: 0
+  action: 0
+  team: 1
   target: {fileID: 0}
   targetInfo: {fileID: 0}
   skillTarget: {fileID: 0}
   skillTargetInfo: {fileID: 0}
   cur_Mp: 0
   moveDir: {x: 0, y: 0, z: 0}
-  state: 0
-  action: 0
-  team: 1
   healWeight: 0
   resurrection: 0
   buff_Stat:
@@ -1429,8 +1440,20 @@ MonoBehaviour:
     hp: 0
     hp_Re: 0
     def: 0
-  animator: {fileID: -5346434434137291554}
   soldierCode: 
+--- !u!114 &1170367030026811516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346442293094215222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6047187d47cc9f4ab2b25ee2aa5dfbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroInfo: {fileID: -6878065226668501377}
 --- !u!1 &5488699387805153504
 GameObject:
   m_ObjectHideFlags: 0

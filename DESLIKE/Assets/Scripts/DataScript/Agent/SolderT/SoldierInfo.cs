@@ -14,15 +14,15 @@ public class SoldierInfo : HeroInfo
         cur_Mp = ((SoldierData)castleData).mp;
         allyPortDatas.spawnSoldierList.Add(this);
         BattleUIManager.Instance.UpdateSoldierRatioBar();
-        afterDeadHandler += Dead;
+        afterDeadEvent.AddListener(Dead);
         StartCoroutine(Hp_Mp_Re());
     }
 
     void Dead()
     {
         gameObject.layer = 7;
-        animator.SetTrigger("isDead");
-        AkSoundEngine.PostEvent("skeleton_Dead", gameObject);
+        //animator.SetTrigger("isDead"); 애니메이터 스크립트 만들어서 거기서 관리하기
+        AkSoundEngine.PostEvent("skeleton_Dead", gameObject);//사운드도 그럴까?
         allyPortDatas.spawnSoldierList.Remove(this);
         BattleUIManager.Instance.UpdateSoldierRatioBar();
         if (allyPortDatas.spawnSoldierList.Count == 0)

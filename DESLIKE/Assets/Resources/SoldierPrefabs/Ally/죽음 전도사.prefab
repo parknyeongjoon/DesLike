@@ -1223,7 +1223,6 @@ GameObject:
   - component: {fileID: 5346442293094215225}
   - component: {fileID: -1573145474374502888}
   - component: {fileID: 6782014734319213554}
-  - component: {fileID: -5375571338300488675}
   - component: {fileID: 5526397366469184701}
   - component: {fileID: -6878065226668501377}
   - component: {fileID: -9178497116803864703}
@@ -1342,25 +1341,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.1}
   m_Size: {x: 0.3, y: 0.6}
   m_Direction: 0
---- !u!95 &-5375571338300488675
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5346442293094215222}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &5526397366469184701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1396,7 +1376,10 @@ MonoBehaviour:
   cur_Hp: 0
   allyPortDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
   enemyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
-  deadEvent:
+  beforeDeadEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  afterDeadEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5526397366469184701}
@@ -1411,9 +1394,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: -9178497116803864703}
-        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
-        m_MethodName: StopAllCoroutines
+  hitEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5526397366469184701}
+        m_TargetAssemblyTypeName: SoldierSpriteManager, Assembly-CSharp
+        m_MethodName: SetHpMpBar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1423,15 +1409,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  state: 0
+  action: 0
+  team: 1
   target: {fileID: 0}
   targetInfo: {fileID: 0}
   skillTarget: {fileID: 0}
   skillTargetInfo: {fileID: 0}
   cur_Mp: 0
   moveDir: {x: 0, y: 0, z: 0}
-  state: 0
-  action: 0
-  team: 1
   healWeight: 0
   resurrection: 0
   buff_Stat:
@@ -1443,7 +1429,6 @@ MonoBehaviour:
     hp: 0
     hp_Re: 0
     def: 0
-  animator: {fileID: -5375571338300488675}
   soldierCode: 8
 --- !u!114 &-9178497116803864703
 MonoBehaviour:
@@ -2162,7 +2147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6940762471096945288

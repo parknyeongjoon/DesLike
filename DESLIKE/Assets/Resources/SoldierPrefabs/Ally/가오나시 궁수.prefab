@@ -1223,7 +1223,6 @@ GameObject:
   - component: {fileID: 5346442293094215225}
   - component: {fileID: -1573145474374502888}
   - component: {fileID: 6782014734319213554}
-  - component: {fileID: -8904327211606176233}
   - component: {fileID: 5526397366469184701}
   - component: {fileID: -6878065226668501377}
   - component: {fileID: 9144205648680251285}
@@ -1343,25 +1342,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.3515625, y: 0.828125}
   m_Direction: 0
---- !u!95 &-8904327211606176233
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5346442293094215222}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &5526397366469184701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1393,14 +1373,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a937bf1ca3267e04388ea345e4ac773a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  castleData: {fileID: 11400000, guid: d71aa34aaed1ae748b8acaabf4eea2eb, type: 2}
+  castleData: {fileID: 11400000, guid: a29c1d8c1343ac342b7934d4fa64b8d3, type: 2}
   cur_Hp: 0
   allyPortDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
   enemyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
-  deadEvent:
+  beforeDeadEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  afterDeadEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5526397366469184701}
+      - m_Target: {fileID: 5526397366469184701, guid: dca6cea79c0cb544eb544424757f35b5,
+          type: 3}
         m_TargetAssemblyTypeName: SoldierSpriteManager, Assembly-CSharp
         m_MethodName: Dead
         m_Mode: 1
@@ -1412,9 +1396,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 9144205648680251285}
-        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
-        m_MethodName: StopAllCoroutines
+  hitEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5526397366469184701, guid: dca6cea79c0cb544eb544424757f35b5,
+          type: 3}
+        m_TargetAssemblyTypeName: SoldierSpriteManager, Assembly-CSharp
+        m_MethodName: SetHpMpBar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1424,15 +1412,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  state: 0
+  action: 0
+  team: 1
   target: {fileID: 0}
   targetInfo: {fileID: 0}
   skillTarget: {fileID: 0}
   skillTargetInfo: {fileID: 0}
   cur_Mp: 0
   moveDir: {x: 0, y: 0, z: 0}
-  state: 0
-  action: 0
-  team: 1
   healWeight: 0
   resurrection: 0
   buff_Stat:
@@ -1444,7 +1432,6 @@ MonoBehaviour:
     hp: 0
     hp_Re: 0
     def: 0
-  animator: {fileID: -8904327211606176233}
   soldierCode: 2
 --- !u!114 &9144205648680251285
 MonoBehaviour:

@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
+using Spine.Unity;
 
 public class SoldierSpriteManager : MonoBehaviour
 {
     [SerializeField]
-    SpriteRenderer spriteRenderer;
+    SkeletonAnimation skeletonAnimation;
+    [SerializeField]
+    AnimationReferenceAsset[] animClips;
     [SerializeField]
     HeroInfo heroInfo;
     HeroData heroData;
@@ -19,34 +21,30 @@ public class SoldierSpriteManager : MonoBehaviour
     [SerializeField]
     GameObject hp_mp_bar;
 
-    int sightNum;
-
     IEnumerator Start()
     {
         yield return new WaitUntil(() => heroData == null);
         heroData = (HeroData)heroInfo.castleData;
-        spriteRenderer.sprite = heroData.sprite;
-        if (heroInfo.team == Team.Enemy)
+        if (heroInfo.team == Team.Ally)
         {
-            spriteRenderer.flipX = true;
+            skeletonAnimation.skeleton.FlipX = true;
         }
+        SetHpMpBar();
+        skeletonAnimation.state.SetAnimation(0, animClips[(int)AnimState.Move], true);//지우고 유닛 상태 바꿔줄 때 넣어주기
         OneBoxScale();
-        StartCoroutine(SetHpMpBar());
     }
 
-    IEnumerator SetHpMpBar()//데미지 받을 때만 실행하기
+    public void SetHpMpBar()//데미지 받을 때만 실행하기
     {
-        while (heroInfo.state != Soldier_State.Dead)
+        if(heroInfo.state != Soldier_State.Dead)
         {
             hp_mp_bar.transform.position = transform.position + new Vector3(0, 1f, 0);
             hpbar.fillAmount = heroInfo.cur_Hp / heroData.hp;
             mpbar.fillAmount = heroInfo.cur_Mp / heroData.mp;
-            yield return null;
         }
-        hp_mp_bar.SetActive(false);
     }
 
-    void OneBoxScale()
+    void OneBoxScale()//지우고 그냥 bar형태로
     {
         float hpscalex = 500f / heroData.hp;
         foreach (Transform child in Hpbar.transform)
@@ -70,6 +68,6 @@ public class SoldierSpriteManager : MonoBehaviour
     public void Dead()
     {
         hp_mp_bar.SetActive(false);
-        spriteRenderer.color -= new Color(0, 0, 0, 0.3f);
+        skeletonAnimation.skeleton.SetColor(skeletonAnimation.skeleton.GetColor() - new Color(0, 0, 0, 0.3f));
     }
 }

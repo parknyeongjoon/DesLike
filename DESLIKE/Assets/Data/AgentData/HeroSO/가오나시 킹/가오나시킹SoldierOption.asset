@@ -13,12 +13,6 @@ MonoBehaviour:
   m_Name: "\uAC00\uC624\uB098\uC2DC\uD0B9SoldierOption"
   m_EditorClassIdentifier: 
   soldierOption:
-  - soldierData: {fileID: 11400000, guid: a29c1d8c1343ac342b7934d4fa64b8d3, type: 2}
-    portNum: 02000000
-    mutant: {fileID: 0}
-  - soldierData: {fileID: 11400000, guid: 505df875aa52d6c429dc1729c124a209, type: 2}
+  - soldierData: {fileID: 11400000, guid: 27be6089e9daeb6499a3dfc2addf52a9, type: 2}
     portNum: 0100000003000000
-    mutant: {fileID: 0}
-  - soldierData: {fileID: 11400000, guid: af820736225c7c64bacdd0238f6182ab, type: 2}
-    portNum: 07000000
     mutant: {fileID: 0}

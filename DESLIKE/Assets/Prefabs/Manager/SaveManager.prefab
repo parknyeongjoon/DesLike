@@ -69,14 +69,40 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c9ee331d85776ca47ad5de63d042086b, type: 2}
   - {fileID: 11400000, guid: 011132be2e886994b846d8f747db8166, type: 2}
   - {fileID: 11400000, guid: 4f19ae2ca981e31469ac4fb8bba04e2f, type: 2}
+  - {fileID: 11400000, guid: 7665bb0fd1761804cb3ce5489ce62d92, type: 2}
   gameData:
     canContinue: 0
+    isFind:
+      soldierFind: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+      relicFind: 000000000000000000000000000000000000000000000000000000000000
+      stroyFind: 000000
     goodsCollection: {fileID: 0}
-    map: {fileID: 0}
-    allyPortDatas: {fileID: 0}
+    map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
+    allyPortDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
     soldierSaveList: []
     heroSaveData:
       heroData: {fileID: 0}
       cur_Hp: 0
       cur_Mp: 0
       resurrection: 0
+    mapData:
+      curStage: 0
+      curTrack: 0
+      curDay: 0
+      curWindow: 0
+      selEvent: 000000000000000000000000
+      nextEvent: 000000000000000000000000
+      evntList: 000000000000000000000000
+      curBtn: 0
+      isEventSet: 000000
+      isRewardSet: 000000
+      isChallenge: 000000
+      challengeCount: 0
+      midBossCheck1: 0
+      midBossCheck2: 0
+      villageCheck: 0
+      organCheck: 0
+      newSet: 0
+    rewardData:
+      relicRewardIndex: 000000000000000000000000
+      soldierRewardIndex: 000000000000000000000000

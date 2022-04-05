@@ -23,11 +23,11 @@ MonoBehaviour:
   speed: 2
   mp_Re: 0
   hp_Re: 0
-  tribe: 0
+  tribe: 4
   extraSkill: []
   mutant: {fileID: 0}
   rarity: 0
   cost: 60
-  remain: 0
+  needBarrier: 0
   unitAmount: 2
   soldier_Type: 3

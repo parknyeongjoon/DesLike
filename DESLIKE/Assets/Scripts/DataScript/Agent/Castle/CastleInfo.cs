@@ -12,6 +12,7 @@ public class CastleInfo : MonoBehaviour
     public PortDatas enemyPortDatas;
 
     public Action beforeDeadEvent;//죽기 전에 발동하는 이벤트(부활)
+    public Action AtkEvent;//캐릭터가 공격 시 발동하는 이벤트
     public UnityEvent afterDeadEvent;//죽고 난 뒤 일어나는 이벤트(시체가 터진다거나)
     public UnityEvent hitEvent;//캐릭터 피격 시 발동하는 이벤트
 

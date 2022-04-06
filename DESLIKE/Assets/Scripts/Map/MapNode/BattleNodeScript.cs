@@ -18,30 +18,30 @@ public class BattleNodeScript : NodeScript
     public void SetEnemyPort1()  // 외부 참조용
     {
         battleNode.SetEnemyPortOption(0);
-        battleNode.saveManager.gameData.mapData.isEventSet[0] = true;
-        battleNode.saveManager.gameData.mapData.isRewardSet[0] = true;
+        battleNode.isEventSet[0] = true;
+        isRewardSet[0] = true;
     }
 
     public void SetEnemyPort2()  // 외부 참조용
     {
         battleNode.SetEnemyPortOption(1);
-        battleNode.saveManager.gameData.mapData.isEventSet[1] = true;
-        battleNode.saveManager.gameData.mapData.isRewardSet[1] = true;
+        battleNode.isEventSet[1] = true;
+        isRewardSet[1] = true;
     }
 
     public void SetEnemyPort3()  // 외부 참조용
     {
         battleNode.SetEnemyPortOption(2);
-        battleNode.saveManager.gameData.mapData.isEventSet[2] = true;
-        battleNode.saveManager.gameData.mapData.isRewardSet[2] = true;
+        battleNode.isEventSet[2] = true;
+        isRewardSet[2] = true;
     }
 
     public void Play_BattleNode()
     {
         for (int i = 0; i < 3; i++)
         {
-            battleNode.saveManager.gameData.mapData.isEventSet[i] = false;
-            battleNode.saveManager.gameData.mapData.isRewardSet[i] = false;
+            battleNode.isEventSet[i] = false;
+            isRewardSet[i] = false;
         }
         battleNode.Play_BattleNode();
     }
@@ -49,7 +49,7 @@ public class BattleNodeScript : NodeScript
     public void Play_BossNode()
     {
         for (int i = 0; i < 3; i++)
-            battleNode.saveManager.gameData.mapData.isEventSet[i] = false;
+            battleNode.isEventSet[i] = false;
         battleNode.Play_BattleNode();
     }
     

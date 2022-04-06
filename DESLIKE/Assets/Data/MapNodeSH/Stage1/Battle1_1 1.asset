@@ -69,15 +69,17 @@ MonoBehaviour:
       soldier:
       - {fileID: 11400000, guid: 8788303e8e13c9748bc94ba89034ed6e, type: 2}
       - {fileID: 0}
-      mutantCode: 
+      mutant: {fileID: 0}
     relic: {fileID: 0}
     gold: 0
     magicalStone: 0
   x: 0
   y: 0
   kingdom: 0
-  enemyPortsOptions: []
-  enemyPortOption: {fileID: 11400000, guid: 873738ffde2fb3b44b4660d7cd20a6c7, type: 2}
+  enemyPortsOptions:
+  - {fileID: 11400000, guid: 873738ffde2fb3b44b4660d7cd20a6c7, type: 2}
+  - {fileID: 11400000, guid: 8e79fe8a14ef79349ad33bc1738c96f3, type: 2}
+  enemyPortOption: {fileID: 0}
   challengeList: []
   enemyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
   isChallenge: 0

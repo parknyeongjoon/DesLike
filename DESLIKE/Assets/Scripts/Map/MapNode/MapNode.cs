@@ -10,7 +10,6 @@ public class MapNode : ScriptableObject
     public List<SoldierData> ableSoldierRewards = new List<SoldierData>();    // 위 3개를 조합해서 나오는 리워드 리스트
     public List<GameObject> ableRelicRewards = new List<GameObject>();
     public Reward reward;
-    public int x, y;    // 잘 모르겠음
     public Kingdom kingdom;
 
     public void SetAbleReward()

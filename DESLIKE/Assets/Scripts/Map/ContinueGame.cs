@@ -31,12 +31,15 @@ public class ContinueGame : MonoBehaviour
         saveManager.gameData.mapData.curWindow = 0;   // 현재 창이 맵(0), 이벤트(1), 전투(2)인지
         saveManager.gameData.mapData.challengeCount = 0;
         saveManager.gameData.mapData.midBossCheck1 = false;
-        saveManager.gameData.mapData.midBossCheck2 = false; 
-        saveManager.gameData.mapData.villageCheck = false; 
+        saveManager.gameData.mapData.midBossCheck2 = false;
+        saveManager.gameData.mapData.villageCheck = false;
         saveManager.gameData.mapData.organCheck = false; // 중간 보스, 마을, 정비 여부
         saveManager.gameData.mapData.newSet = true;
         saveManager.gameData.mapData.kingdom = Kingdom.Physic;  // 임시값
         for (int i = 0; i < 3; i++)
-            saveManager.gameData.mapData.isEventSet[i] = false;
+        {
+            saveManager.gameData.mapData.isEventSet[i] = true;  // 확인용 변경
+            saveManager.gameData.mapData.isRewardSet[i] = true; // 확인용 변경
+        }
     }
 }

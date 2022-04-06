@@ -13,7 +13,8 @@ public class BattleNode : MapNode
     public PortDatas enemyPortDatas;
     public bool isChallenge;
     public SaveManager saveManager;
-    bool[] isEventSet = new bool[3];
+    public bool[] isEventSet = new bool[3];
+
     void Enable()
     {
         saveManager = SaveManager.Instance;

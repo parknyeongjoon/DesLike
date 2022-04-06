@@ -66,7 +66,8 @@ public class MapData
 public class RewardData
 {
     public int[] relicRewardIndex = new int[3];
-    public int[,] soldierRewardIndex = new int[2, 3];
+    public int[] soldierRewardIndex1 = new int[3];
+    public int[] soldierRewardIndex2 = new int[3];
 }
 
 [System.Serializable]

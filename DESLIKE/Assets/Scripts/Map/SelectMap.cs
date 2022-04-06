@@ -273,12 +273,12 @@ public class SelectMap : MonoBehaviour
                     if (btn == 0)
                     {
                         if (isChallenge[0] == true) S1T2B1[(curDay / 5) + 1].gameObject.SetActive(true);
-                        else S1T2B1[(curDay / 5)].gameObject.SetActive(true); // 버튼1
+                        else S1T2B1[curDay / 5].gameObject.SetActive(true); // 버튼1
                     }
                     else
                     {
                         if (isChallenge[1] == true) S1T2B2[(curDay / 5) + 1].gameObject.SetActive(true);
-                        else S1T2B2[(curDay / 5)].gameObject.SetActive(true); // 버튼2
+                        else S1T2B2[curDay / 5].gameObject.SetActive(true); // 버튼2
                     }
                 }
                 else if (curTrack == 2)   // 3트랙
@@ -286,17 +286,17 @@ public class SelectMap : MonoBehaviour
                     if (btn == 0)
                     {
                         if (isChallenge[0] == true) S1T3B1[(curDay / 5) + 1].gameObject.SetActive(true);
-                        else S1T3B1[(curDay / 5)].gameObject.SetActive(true); // 버튼1
+                        else S1T3B1[curDay / 5].gameObject.SetActive(true); // 버튼1
                     }
                     else if (btn == 1)
                     {
                         if (isChallenge[1] == true) S1T3B2[(curDay / 5) + 1].gameObject.SetActive(true);
-                        else S1T3B2[(curDay / 5)].gameObject.SetActive(true); // 버튼2
+                        else S1T3B2[curDay / 5].gameObject.SetActive(true); // 버튼2
                     }
                     else
                     {
                         if (isChallenge[2] == true) S1T3B3[(curDay / 5) + 1].gameObject.SetActive(true);
-                        else S1T3B3[(curDay / 5)].gameObject.SetActive(true); // 버튼3
+                        else S1T3B3[curDay / 5].gameObject.SetActive(true); // 버튼3
                     }
                 }
                 else // 1트랙

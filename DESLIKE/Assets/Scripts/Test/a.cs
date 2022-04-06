@@ -13,16 +13,19 @@ public class a : MonoBehaviour
     [SerializeField]
     List<Coroutine> coroutines = new List<Coroutine>();
 
+    [SerializeField]
+    testSO testSO;
+
     void Start()
     {
-
+        Debug.Log(testSO.testString);
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            StopCoroutine(testCoroutine);
+
         }
     }
     protected virtual void testA()

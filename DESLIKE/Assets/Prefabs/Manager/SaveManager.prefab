@@ -43,11 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f79bcf9018de32d46b373044dfb95482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataSheet:
-    relicObjectSheet: []
-    relicDataSheet: []
-    mutantObjectSheet: []
-    mutantDataSheet: []
   soldierDatas:
   - {fileID: 11400000, guid: a29c1d8c1343ac342b7934d4fa64b8d3, type: 2}
   - {fileID: 11400000, guid: 505df875aa52d6c429dc1729c124a209, type: 2}
@@ -70,6 +65,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 011132be2e886994b846d8f747db8166, type: 2}
   - {fileID: 11400000, guid: 4f19ae2ca981e31469ac4fb8bba04e2f, type: 2}
   - {fileID: 11400000, guid: 7665bb0fd1761804cb3ce5489ce62d92, type: 2}
+  mutantObjects: []
+  mutantDatas:
+  - {fileID: 11400000, guid: 727b292967e97114e82436a21aea31c7, type: 2}
+  relicObjects: []
+  relicDatas:
+  - {fileID: 11400000, guid: b0d453a794b7dd84f89ee3a2983fd355, type: 2}
+  - {fileID: 11400000, guid: 9e3408289f5d590419f34b699dc06adb, type: 2}
   gameData:
     canContinue: 0
     isFind:
@@ -86,6 +88,7 @@ MonoBehaviour:
       cur_Mp: 0
       resurrection: 0
     mapData:
+      kingdom: 0
       curStage: 0
       curTrack: 0
       curDay: 0
@@ -96,6 +99,7 @@ MonoBehaviour:
       curBtn: 0
       isEventSet: 000000
       isRewardSet: 000000
+      isAbleSet: 000000
       isChallenge: 000000
       challengeCount: 0
       midBossCheck1: 0
@@ -105,4 +109,5 @@ MonoBehaviour:
       newSet: 0
     rewardData:
       relicRewardIndex: 000000000000000000000000
-      soldierRewardIndex: 000000000000000000000000
+      soldierRewardIndex1: 000000000000000000000000
+      soldierRewardIndex2: 000000000000000000000000

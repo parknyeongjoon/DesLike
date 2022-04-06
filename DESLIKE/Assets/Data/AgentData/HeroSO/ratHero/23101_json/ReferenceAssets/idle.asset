@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e8a64bf258f5d347821faa968d690da, type: 3}
-  m_Name: APortData 3
+  m_Script: {fileID: 11500000, guid: 6e3e95a05e4c9774397eeeb7bdee8ccb, type: 3}
+  m_Name: idle
   m_EditorClassIdentifier: 
-  soldierCode: 5
-  mutantCode: 
-  unlock: 1
-  portImg: {fileID: 0}
+  skeletonDataAsset: {fileID: 11400000, guid: 1bdbe572023e41a4abd3d7900ffc6d78, type: 2}
+  animationName: idle

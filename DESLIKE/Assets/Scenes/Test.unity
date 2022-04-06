@@ -169,9 +169,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 1528182058}
   animClips:
-  - {fileID: 11400000, guid: aaf1368e924ad4940a283bd82f31c470, type: 2}
-  - {fileID: 11400000, guid: 60f4ead8a70878247b549a22a536e65d, type: 2}
-  - {fileID: 11400000, guid: c7c6e539de6acce48a42c5ffa1f30e61, type: 2}
+  - {fileID: 11400000, guid: 2ab6ecd7d7d258c4b93ad85f06770314, type: 2}
+  - {fileID: 11400000, guid: ce7bb0ed71dc85246a9bb8dea24f4697, type: 2}
+  - {fileID: 11400000, guid: 3822bf35e1b13ff4494ce2373c18a08f, type: 2}
+  - {fileID: 11400000, guid: ce0374826a3997a43ad52e1134a842db, type: 2}
+  - {fileID: 11400000, guid: 8cf4d3436bb7a3c4f9b8f045e69295dc, type: 2}
 --- !u!1 &716822414
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,6 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94794f80fde83849b3da540b7b24f7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testSO: {fileID: 0}
 --- !u!4 &827868236
 Transform:
   m_ObjectHideFlags: 0
@@ -456,6 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e161b043f37f00e47abee4de5dc7f48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testSO: {fileID: 0}
 --- !u!4 &1017377806
 Transform:
   m_ObjectHideFlags: 0
@@ -806,7 +810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 34551192f3e83914080d206afe20db84, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 1bdbe572023e41a4abd3d7900ffc6d78, type: 2}
   initialSkinName: 
   fixPrefabOverrideViaMeshFilter: 2
   initialFlipX: 0
@@ -851,7 +855,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4b4ac9bdfbb11a24488d92021ed54332, type: 2}
+  - {fileID: 2100000, guid: 718be4ea6fa1d9244894c3a3cf5f91ce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -954,7 +958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2036480456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -967,6 +971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac736a890afef141b21347ac4360c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  testSO: {fileID: 11400000, guid: c8fd17213944c324f9277108460bbea5, type: 2}
 --- !u!4 &2036480457
 Transform:
   m_ObjectHideFlags: 0

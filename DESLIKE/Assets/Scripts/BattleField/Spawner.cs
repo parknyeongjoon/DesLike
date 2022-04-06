@@ -49,7 +49,7 @@ public class Spawner : MonoBehaviour
             {
                 soldierData = portDatas.activeSoldierList[portDatas.portDatas[portIndex].soldierCode];
                 createSoldier = Instantiate(soldierPrefabs[soldierData.code], spawner[portIndex].transform);
-                if (portDatas.portDatas[portIndex].mutantCode != null)
+                if (portDatas.portDatas[portIndex].mutantCode != "")//터지면 null로 바꾸기
                 {
                     GameObject tempMutant = SaveManager.Instance.dataSheet.mutantObjectSheet[portDatas.portDatas[portIndex].mutantCode];
                     Instantiate(tempMutant, createSoldier.transform);

@@ -1473,7 +1473,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 224f414d87e5361419d2850964ae44bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 5346442293094215225}
+  skeletonAnimation: {fileID: 6138720843230423119}
+  animClips: []
   heroInfo: {fileID: -6878065226668501377}
   Hpbar: {fileID: 3421288505172815408}
   Mpbar: {fileID: 7341851713505146119}
@@ -1496,9 +1497,6 @@ MonoBehaviour:
   cur_Hp: 0
   allyPortDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
   enemyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
-  beforeDeadEvent:
-    m_PersistentCalls:
-      m_Calls: []
   afterDeadEvent:
     m_PersistentCalls:
       m_Calls:

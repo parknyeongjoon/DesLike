@@ -19,11 +19,18 @@ public class HeroSaveData
 }
 
 [System.Serializable]
-public class SoldierSaveData
+public class PortSaveData
 {
     public string soldierCode;
     public int portNum;
     public string mutantCode;
+}
+
+[System.Serializable]
+public class PortsSaveData
+{
+    public List<PortSaveData> portSaveList;
+    public int curBarrierStrength, maxBarrierStrength;
 }
 
 [System.Serializable]
@@ -79,7 +86,7 @@ public class GameData
     public GoodsCollection goodsCollection;//¾ÈµÊ
     public Map map;//¾ÈµÊ
     public PortDatas allyPortDatas;//¾ÈµÊ
-    public List<SoldierSaveData> soldierSaveList;
+    public List<PortSaveData> soldierSaveList;
     public HeroSaveData heroSaveData;
     public MapData mapData;
     public RewardData rewardData;

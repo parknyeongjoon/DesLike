@@ -14,7 +14,7 @@ public class SoldierInfo : HeroInfo
         cur_Mp = ((SoldierData)castleData).mp;
         allyPortDatas.spawnSoldierList.Add(this);
         BattleUIManager.Instance.UpdateSoldierRatioBar();
-        afterDeadEvent.AddListener(Dead);
+        afterDeadEvent.AddListener(Dead);//안 죽음
         StartCoroutine(Hp_Mp_Re());
     }
 

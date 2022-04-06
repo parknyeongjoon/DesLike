@@ -1473,7 +1473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 224f414d87e5361419d2850964ae44bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonAnimation: {fileID: 0}
+  skeletonAnimation: {fileID: 7498739126742675681}
   animClips: []
   heroInfo: {fileID: -6878065226668501377}
   Hpbar: {fileID: 3421288505172815408}

@@ -36,55 +36,7 @@ public class SaveManager : MonoBehaviour
     {
         get
         {
-            LoadDataSheet();
             return dataSheet;
-        }
-    }
-
-    public SoldierData[] soldierDatas;
-    public HeroData[] heroDatas;
-    public SkillData[] skillDatas;
-    public GameObject[] mutantObjects;
-    public MutantData[] mutantDatas;
-    public GameObject[] relicObjects;
-    public RelicData[] relicDatas;
-
-    public void LoadDataSheet()
-    {
-        dataSheet.soldierDataSheet.Clear();
-        dataSheet.heroDataSheet.Clear();
-        dataSheet.skillDataSheet.Clear();
-        dataSheet.mutantObjectSheet.Clear();
-        dataSheet.mutantDataSheet.Clear();
-        dataSheet.relicObjectSheet.Clear();
-        dataSheet.relicDataSheet.Clear();
-        for (int i = 0; i < soldierDatas.Length; i++)
-        {
-            if (!dataSheet.soldierDataSheet.ContainsKey(soldierDatas[i].code))//딕셔너리에 추가되어있지 않다면 추가하기
-            {
-                dataSheet.soldierDataSheet.Add(soldierDatas[i].code, soldierDatas[i]);
-            }
-        }
-        for (int i = 0; i < heroDatas.Length; i++)
-        {
-            if (!dataSheet.heroDataSheet.ContainsKey(heroDatas[i].code))
-            {
-                dataSheet.heroDataSheet.Add(heroDatas[i].code, heroDatas[i]);
-            }
-        }
-        for (int i = 0; i < skillDatas.Length; i++)
-        {
-            if (!dataSheet.skillDataSheet.ContainsKey(skillDatas[i].code))
-            {
-                dataSheet.skillDataSheet.Add(skillDatas[i].code, skillDatas[i]);
-            }
-        }
-        for (int i = 0; i < mutantDatas.Length; i++)
-        {
-            if (!dataSheet.mutantDataSheet.ContainsKey(mutantDatas[i].code))
-            {
-                dataSheet.mutantDataSheet.Add(mutantDatas[i].code, mutantDatas[i]);
-            }
         }
     }
 
@@ -160,6 +112,16 @@ public class SaveManager : MonoBehaviour
             tempSoldierData.mutantCode = gameData.soldierSaveList[i].mutantCode;
             activeSoldierList.Add(tempSoldierData.code, tempSoldierData);
         }
+    }
+
+    public void SaveMapSaveData()
+    {
+    //시후 작성
+    }
+
+    public void LoadMapSaveData()
+    {
+    //시후 작성
     }
     */
 }

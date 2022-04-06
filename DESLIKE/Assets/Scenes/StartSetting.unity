@@ -400,6 +400,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3976412869529563661, guid: e9d00c61469d46c449d81c4e380dc386,
+        type: 3}
+      propertyPath: relicDatas.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976412869529563661, guid: e9d00c61469d46c449d81c4e380dc386,
+        type: 3}
+      propertyPath: mutantDatas.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976412869529563661, guid: e9d00c61469d46c449d81c4e380dc386,
+        type: 3}
+      propertyPath: relicDatas.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b0d453a794b7dd84f89ee3a2983fd355,
+        type: 2}
+    - target: {fileID: 3976412869529563661, guid: e9d00c61469d46c449d81c4e380dc386,
+        type: 3}
+      propertyPath: relicDatas.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9e3408289f5d590419f34b699dc06adb,
+        type: 2}
+    - target: {fileID: 3976412869529563661, guid: e9d00c61469d46c449d81c4e380dc386,
+        type: 3}
+      propertyPath: mutantDatas.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 727b292967e97114e82436a21aea31c7,
+        type: 2}
     - target: {fileID: 3976412869529563662, guid: e9d00c61469d46c449d81c4e380dc386,
         type: 3}
       propertyPath: m_Name

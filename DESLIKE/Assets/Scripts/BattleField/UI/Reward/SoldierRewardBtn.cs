@@ -31,7 +31,7 @@ public class SoldierRewardBtn : MonoBehaviour
             {
                 Instantiate(PortCanvas);
                 PortManager.Instance.rewardSoldierCode = soldierCode;
-                StartCoroutine(PortManager.Instance.SetPortCoroutine());
+                StartCoroutine(PortManager.Instance.SetSoldierCoroutine());
                 //SoldierManager.GetSoldier(soldierCode, null);
             }
             button.interactable = false;

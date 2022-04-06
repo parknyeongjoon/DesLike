@@ -37,7 +37,7 @@ public class PortManager : MonoBehaviour
         barrierStrength.text = allyPortDatas.curBarrierStrength + "/" + allyPortDatas.maxBarrierStrength;
     }
 
-    public IEnumerator SetPortCoroutine()
+    public IEnumerator SetSoldierCoroutine()
     {
         originPort = null;
         portState = Port_State.SetSoldier;

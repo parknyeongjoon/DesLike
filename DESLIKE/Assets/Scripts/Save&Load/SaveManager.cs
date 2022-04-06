@@ -44,12 +44,17 @@ public class SaveManager : MonoBehaviour
     public SoldierData[] soldierDatas;
     public HeroData[] heroDatas;
     public SkillData[] skillDatas;
+    public MutantData[] mutantDatas;
+    public RelicData[] relicDatas;
 
     public void LoadDataSheet()
     {
         dataSheet.soldierDataSheet.Clear();
         dataSheet.heroDataSheet.Clear();
         dataSheet.skillDataSheet.Clear();
+        dataSheet.mutantDataSheet.Clear();
+        dataSheet.relicDataSheet.Clear();
+
         for (int i = 0; i < soldierDatas.Length; i++)
         {
             if (!dataSheet.soldierDataSheet.ContainsKey(soldierDatas[i].code))//딕셔너리에 추가되어있지 않다면 추가하기
@@ -69,6 +74,20 @@ public class SaveManager : MonoBehaviour
             if (!dataSheet.skillDataSheet.ContainsKey(skillDatas[i].code))
             {
                 dataSheet.skillDataSheet.Add(skillDatas[i].code, skillDatas[i]);
+            }
+        }
+        for(int i = 0; i < mutantDatas.Length; i++)
+        {
+            if (!dataSheet.mutantDataSheet.ContainsKey(mutantDatas[i].code))
+            {
+                dataSheet.mutantDataSheet.Add(mutantDatas[i].code, mutantDatas[i]);
+            }
+        }
+        for(int i=0; i < relicDatas.Length; i++)
+        {
+            if (!dataSheet.relicDataSheet.ContainsKey(relicDatas[i].code))
+            {
+                dataSheet.relicDataSheet.Add(relicDatas[i].code, relicDatas[i]);
             }
         }
     }

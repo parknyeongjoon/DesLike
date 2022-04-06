@@ -400,6 +400,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3976412869529563661, guid: e9d00c61469d46c449d81c4e380dc386,
+        type: 3}
+      propertyPath: mutantDatas.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976412869529563661, guid: e9d00c61469d46c449d81c4e380dc386,
+        type: 3}
+      propertyPath: mutantObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976412869529563661, guid: e9d00c61469d46c449d81c4e380dc386,
+        type: 3}
+      propertyPath: mutantDatas.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 727b292967e97114e82436a21aea31c7,
+        type: 2}
+    - target: {fileID: 3976412869529563661, guid: e9d00c61469d46c449d81c4e380dc386,
+        type: 3}
+      propertyPath: mutantObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 3340910114177237104, guid: 90e7863938ac48041a9acab8e9974372,
+        type: 3}
     - target: {fileID: 3976412869529563662, guid: e9d00c61469d46c449d81c4e380dc386,
         type: 3}
       propertyPath: m_Name

@@ -22,11 +22,12 @@ public class PortManager : MonoBehaviour
 
     [SerializeField] PortDatas allyPortDatas;
     [SerializeField] TMP_Text barrierStrength;
-    public GameObject rewardSoldierPanel, rewardMutantPanel, activeBtn;
+    public GameObject rewardSoldierPanel, rewardMutantPanel, mutantOKBtn, activeBtn;
 
     public Port_State portState;
 
-    public string rewardSoldierCode, rewardMutantCode;
+    public string rewardSoldierCode;
+    public string rewardMutantCode;
 
     public PortData originPort;
 
@@ -38,6 +39,7 @@ public class PortManager : MonoBehaviour
 
     public IEnumerator SetSoldierCoroutine()
     {
+        originPort = null;
         portState = Port_State.SetSoldier;
         if (activeBtn != null) { activeBtn.SetActive(false); }
         SetSoldierPortImg();
@@ -56,6 +58,7 @@ public class PortManager : MonoBehaviour
 
     public IEnumerator SetMutantCoroutine()
     {
+        originPort = null;
         portState = Port_State.SetMutant;
         if(activeBtn != null) { activeBtn.SetActive(false); }
         SetMutantPortImg();
@@ -66,6 +69,7 @@ public class PortManager : MonoBehaviour
         }
         portState = Port_State.Idle;
         ReturnPortImg();
+        mutantOKBtn.SetActive(false);
         rewardMutantPanel.SetActive(false);
         gameObject.SetActive(false);
     }
@@ -74,11 +78,11 @@ public class PortManager : MonoBehaviour
     {
         for (int i = 0; i < allyPortDatas.portDatas.Length; i++)
         {
-            if (allyPortDatas.portDatas[i].unlock && allyPortDatas.portDatas[i].soldierCode == null)//언락이 되어 있고 솔져 코드가 없다면
+            if (allyPortDatas.portDatas[i].unlock && allyPortDatas.portDatas[i].soldierCode == null)
             {
                 allyPortDatas.portDatas[i].portImg.color = new Color(0, 0.7f, 0);
             }
-            else if (!allyPortDatas.portDatas[i].unlock || allyPortDatas.portDatas[i].soldierCode != null)//언락 안 되어 있거나 이미 솔져 코드가 있다면
+            else if (!allyPortDatas.portDatas[i].unlock || allyPortDatas.portDatas[i].soldierCode != null)
             {
                 allyPortDatas.portDatas[i].portImg.color = new Color(0.7f, 0, 0);
             }
@@ -87,13 +91,13 @@ public class PortManager : MonoBehaviour
 
     public void SetMutantPortImg()
     {
-        for(int i = 0; i < allyPortDatas.portDatas.Length; i++)
+        for (int i = 0; i < allyPortDatas.portDatas.Length; i++)
         {
-            if(allyPortDatas.portDatas[i].soldierCode == rewardSoldierCode)//현재 포트의 솔져코드와 보상 솔져코드가 같다면
+            if (allyPortDatas.portDatas[i].soldierCode == PortManager.instance.rewardSoldierCode)
             {
                 allyPortDatas.portDatas[i].portImg.color = new Color(0, 0.7f, 0);
             }
-            else//그 외
+            else
             {
                 allyPortDatas.portDatas[i].portImg.color = new Color(0.7f, 0, 0);
             }
@@ -118,6 +122,7 @@ public class PortManager : MonoBehaviour
 
     public void ReturnPortImg()
     {
+        activeBtn.SetActive(false);
         for (int i = 0; i < allyPortDatas.portDatas.Length; i++)
         {
             if (allyPortDatas.portDatas[i].unlock) { allyPortDatas.portDatas[i].portImg.color = new Color(1, 1, 1); }//포트가 해제되어있다면 흰색

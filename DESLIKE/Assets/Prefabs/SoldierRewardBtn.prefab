@@ -809,7 +809,7 @@ MonoBehaviour:
   mutantImg: {fileID: 8715141818177383205}
   mutantToolTip: {fileID: 4827360286836428479}
   rerollText: {fileID: 5187515110298063585}
-  mutant: {fileID: 0}
+  mutantCode: 
 --- !u!1 &4710152494705163072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,10 +1174,10 @@ MonoBehaviour:
   button: {fileID: 6502130361829748297}
   mutantPanel: {fileID: 4444926810589537646}
   changeMutantPanel: {fileID: 8211080573164160976}
+  PortCanvas: {fileID: 0}
   mutantPanelScript: {fileID: 2680899518571549450}
   changeMutantPanelScript: {fileID: 9094635289280018858}
   soldierCode: 
-  soldierRemain: 0
 --- !u!1 &6502130362102658786
 GameObject:
   m_ObjectHideFlags: 0
@@ -1818,7 +1818,7 @@ MonoBehaviour:
   originToolTip: {fileID: 5988158812411823959}
   changeToolTip: {fileID: 6760767874187678312}
   soldierData: {fileID: 0}
-  changeMutant: {fileID: 0}
+  changeMutant: 
 --- !u!1 &8365158017069541903
 GameObject:
   m_ObjectHideFlags: 0

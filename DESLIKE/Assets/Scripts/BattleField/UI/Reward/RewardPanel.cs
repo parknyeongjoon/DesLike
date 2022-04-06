@@ -13,10 +13,11 @@ public class RewardPanel : MonoBehaviour
     public void SetRewardPanel()
     {
         map = SaveManager.Instance.gameData.map;
-        //선택지 가능하게 만들기, 각 버튼들 enable로 옮기기
+        // 선택지 가능하게 만들기, 각 버튼들 enable로 옮기기
         GameObject createBtn;
         Reward reward = map.curMapNode.reward;
-        //soldierBtn
+        
+        // soldierBtn
         for(int i = 0; i < 2; i++)//선택지 추가 옵션 넣기
         {
             createBtn = Instantiate(rewardSoldierBtnPrefab, transform);
@@ -25,7 +26,7 @@ public class RewardPanel : MonoBehaviour
             createBtn.transform.GetChild(1).GetComponent<Image>().sprite = reward.soldierReward[i].soldier.sprite;
         }
         
-        //relicBtn
+        // relicBtn
         if(reward.relic != null)
         {
             RelicData relicData = reward.relic.GetComponent<Relic>().relicData;

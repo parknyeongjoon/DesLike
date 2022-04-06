@@ -57,6 +57,7 @@ public class MapData
     public int curBtn;  // 현재 어떤 버튼을 눌러서 이 곳으로 왔는지
     public bool[] isEventSet = new bool[3];
     public bool[] isRewardSet = new bool[3];
+    public bool[] isAbleSet = new bool[3];
     public bool[] isChallenge = new bool[3];
     public int challengeCount = 0;
     public bool midBossCheck1, midBossCheck2, villageCheck, organCheck, newSet; // 중간 보스, 마을, 정비, 이미 세팅했는지 여부

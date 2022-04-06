@@ -511,6 +511,8 @@ public class SelectMap : MonoBehaviour
                 }
                 break;
         }
+        for(int i = 0; i<3; i++)
+            saveManager.gameData.mapData.isAbleSet[i] = false;
         saveManager.gameData.mapData.newSet = true; // ¸Ê Å»Ãâ
         InfoPanelClose();
         saveManager.SaveGameData(); // ÀúÀå

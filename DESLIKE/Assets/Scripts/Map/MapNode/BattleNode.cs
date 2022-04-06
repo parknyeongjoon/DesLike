@@ -14,6 +14,7 @@ public class BattleNode : MapNode
     public bool isChallenge;
     public SaveManager saveManager;
     public bool[] isEventSet = new bool[3];
+    int[] nextEvent = new int[3];
 
     void Enable()
     {
@@ -28,12 +29,14 @@ public class BattleNode : MapNode
         {
             int temp = Random.Range(0, enemyPortsOptions.Count);
             enemyPortOption = enemyPortsOptions[temp];
+            nextEvent[i] = temp;
         }
         else   // 기존 정보 가져오기
         {
-            int nextEvent = saveManager.gameData.mapData.nextEvent[i];
-            enemyPortOption = enemyPortsOptions[nextEvent];
+            // nextEvent[i] = saveManager.gameData.mapData.nextEvent[i];
+            enemyPortOption = enemyPortsOptions[nextEvent[i]];
         }
+        // 오류뜸 saveManager.gameData.mapData.nextEvent[i] = nextEvent[i];
     }
 
     public void SetChallengeOption()

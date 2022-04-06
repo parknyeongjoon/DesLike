@@ -38,8 +38,8 @@ public class ContinueGame : MonoBehaviour
         saveManager.gameData.mapData.kingdom = Kingdom.Physic;  // 임시값
         for (int i = 0; i < 3; i++)
         {
-            saveManager.gameData.mapData.isEventSet[i] = true;  // 확인용 변경
-            saveManager.gameData.mapData.isRewardSet[i] = true; // 확인용 변경
+            saveManager.gameData.mapData.isEventSet[i] = false;  // 확인용 변경
+            saveManager.gameData.mapData.isRewardSet[i] = false; // 확인용 변경
         }
     }
 }

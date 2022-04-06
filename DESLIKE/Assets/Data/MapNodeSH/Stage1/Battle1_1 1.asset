@@ -51,6 +51,30 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2de555b8ef466224186a2e7f4daa2687, type: 2}
   - {fileID: 11400000, guid: 2075f09dbfe04234d8af88f78289b70b, type: 2}
   - {fileID: 11400000, guid: b5db2c1dfa8479a43878915615555eae, type: 2}
+  - {fileID: 11400000, guid: 8788303e8e13c9748bc94ba89034ed6e, type: 2}
+  - {fileID: 11400000, guid: 41a8f96bef094ba40b4a9d38cc39f0e3, type: 2}
+  - {fileID: 11400000, guid: 9ab41620d8ca793468ec8807f8b44095, type: 2}
+  - {fileID: 11400000, guid: 2de555b8ef466224186a2e7f4daa2687, type: 2}
+  - {fileID: 11400000, guid: 2075f09dbfe04234d8af88f78289b70b, type: 2}
+  - {fileID: 11400000, guid: b5db2c1dfa8479a43878915615555eae, type: 2}
+  - {fileID: 11400000, guid: 8788303e8e13c9748bc94ba89034ed6e, type: 2}
+  - {fileID: 11400000, guid: 41a8f96bef094ba40b4a9d38cc39f0e3, type: 2}
+  - {fileID: 11400000, guid: 9ab41620d8ca793468ec8807f8b44095, type: 2}
+  - {fileID: 11400000, guid: 2de555b8ef466224186a2e7f4daa2687, type: 2}
+  - {fileID: 11400000, guid: 2075f09dbfe04234d8af88f78289b70b, type: 2}
+  - {fileID: 11400000, guid: b5db2c1dfa8479a43878915615555eae, type: 2}
+  - {fileID: 11400000, guid: 8788303e8e13c9748bc94ba89034ed6e, type: 2}
+  - {fileID: 11400000, guid: 41a8f96bef094ba40b4a9d38cc39f0e3, type: 2}
+  - {fileID: 11400000, guid: 9ab41620d8ca793468ec8807f8b44095, type: 2}
+  - {fileID: 11400000, guid: 2de555b8ef466224186a2e7f4daa2687, type: 2}
+  - {fileID: 11400000, guid: 2075f09dbfe04234d8af88f78289b70b, type: 2}
+  - {fileID: 11400000, guid: b5db2c1dfa8479a43878915615555eae, type: 2}
+  - {fileID: 11400000, guid: 8788303e8e13c9748bc94ba89034ed6e, type: 2}
+  - {fileID: 11400000, guid: 41a8f96bef094ba40b4a9d38cc39f0e3, type: 2}
+  - {fileID: 11400000, guid: 9ab41620d8ca793468ec8807f8b44095, type: 2}
+  - {fileID: 11400000, guid: 2de555b8ef466224186a2e7f4daa2687, type: 2}
+  - {fileID: 11400000, guid: 2075f09dbfe04234d8af88f78289b70b, type: 2}
+  - {fileID: 11400000, guid: b5db2c1dfa8479a43878915615555eae, type: 2}
   ableRelicRewards:
   - {fileID: 4835315866048107822, guid: a2a4895075d4bae4fab94d06af5f6102, type: 3}
   - {fileID: 4835315866048107822, guid: bab1c3b4ea968194ba769df36c83f7f6, type: 3}
@@ -66,21 +90,20 @@ MonoBehaviour:
   - {fileID: 4835315866048107822, guid: ee1045f0a4403834eaeb87f0e27b7742, type: 3}
   reward:
     soldierReward:
-      soldier:
-      - {fileID: 11400000, guid: 8788303e8e13c9748bc94ba89034ed6e, type: 2}
-      - {fileID: 0}
+    - soldier: {fileID: 11400000, guid: 8788303e8e13c9748bc94ba89034ed6e, type: 2}
       mutant: {fileID: 0}
-    relic: {fileID: 0}
+    - soldier: {fileID: 11400000, guid: 8788303e8e13c9748bc94ba89034ed6e, type: 2}
+      mutant: {fileID: 0}
+    relic: {fileID: 4835315866048107822, guid: a2a4895075d4bae4fab94d06af5f6102, type: 3}
     gold: 0
     magicalStone: 0
-  x: 0
-  y: 0
-  kingdom: 0
+  kingdom: 1
   enemyPortsOptions:
   - {fileID: 11400000, guid: 873738ffde2fb3b44b4660d7cd20a6c7, type: 2}
   - {fileID: 11400000, guid: 8e79fe8a14ef79349ad33bc1738c96f3, type: 2}
-  enemyPortOption: {fileID: 0}
+  enemyPortOption: {fileID: 11400000, guid: 873738ffde2fb3b44b4660d7cd20a6c7, type: 2}
   challengeList: []
   enemyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
   isChallenge: 0
   saveManager: {fileID: 0}
+  isEventSet: 000000

@@ -20,9 +20,9 @@ public class RewardPanel : MonoBehaviour
         for(int i = 0; i < 2; i++)//선택지 추가 옵션 넣기
         {
             createBtn = Instantiate(rewardSoldierBtnPrefab, transform);
-            createBtn.GetComponent<SoldierRewardBtn>().soldierCode = reward.soldierReward.soldier[i].code;
-            createBtn.transform.GetChild(0).GetComponent<TMP_Text>().text = reward.soldierReward.soldier[i].soldier_name.ToString();
-            createBtn.transform.GetChild(1).GetComponent<Image>().sprite = reward.soldierReward.soldier[i].sprite;
+            createBtn.GetComponent<SoldierRewardBtn>().soldierCode = reward.soldierReward[i].soldier.code;
+            createBtn.transform.GetChild(0).GetComponent<TMP_Text>().text = reward.soldierReward[i].soldier.soldier_name.ToString();
+            createBtn.transform.GetChild(1).GetComponent<Image>().sprite = reward.soldierReward[i].soldier.sprite;
         }
         
         //relicBtn

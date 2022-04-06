@@ -84,16 +84,16 @@ public class Buff_Stat
 [System.Serializable]
 public class Reward
 {
-    public SoldierReward soldierReward;
+    public List<SoldierReward> soldierReward;
     public GameObject relic;
     public int gold;//골드
     public int magicalStone;//진영화폐
 }
 
 [System.Serializable]
-public struct SoldierReward//soldier랑 mutant 한 쌍으로 묶일 수 있게 만들어서 저장하기
+public struct SoldierReward //soldier랑 mutant 한 쌍으로 묶일 수 있게 만들어서 저장하기
 {
-    public List<SoldierData> soldier;
+    public SoldierData soldier;
     public GameObject mutant;
 }
 

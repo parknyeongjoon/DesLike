@@ -7,7 +7,7 @@ using TMPro;
 public class PortInfo : MonoBehaviour
 {
     [SerializeField] PortData portData;
-    [SerializeField] GameObject SellBtn, UnlockBtn;
+    [SerializeField] GameObject SellBtn, UnlockBtn, highLightImg;
     [SerializeField] TMP_Text unlockPrice;
     Image image;
 
@@ -21,7 +21,8 @@ public class PortInfo : MonoBehaviour
 
     void OnEnable()
     {
-        if (portData.soldierCode == "") { portData.soldierCode = null; }//지우기
+        if (portData.soldierCode == "") { portData.soldierCode = null; }//지우기?
+        if(portData.mutantCode == "") { portData.mutantCode = null; }//지우기?
         if (portData.soldierCode != null)
         {
             image.sprite = SaveManager.Instance.dataSheet.soldierDataSheet[portData.soldierCode].sprite;
@@ -30,13 +31,25 @@ public class PortInfo : MonoBehaviour
 
     public void SetPortCode()
     {
-        if(PortManager.Instance.portState == Port_State.Set)//set 상태일 때
+        if(PortManager.Instance.portState == Port_State.SetSoldier)//set 상태일 때
         {
             if(portData.unlock && portData.soldierCode == null)//언락된 빈 포트면 병사 적용
             {
                 PortManager.Instance.portState = Port_State.Idle;
                 portData.soldierCode = PortManager.Instance.rewardSoldierCode;
                 image.sprite = SaveManager.Instance.dataSheet.soldierDataSheet[portData.soldierCode].sprite;
+            }
+        }
+        else if(PortManager.Instance.portState == Port_State.SetMutant)//뮤턴트 적용시에
+        {
+            if(portData.soldierCode == PortManager.Instance.rewardSoldierCode)
+            {
+                PortManager.Instance.originPort = portData;
+                PortManager.Instance.ControllActiveBtn(highLightImg);
+                PortManager.Instance.mutantOKBtn.SetActive(true);
+                //껐다켜서 OnEnable 실행시키는건데 다른 방법도 있을 듯
+                PortManager.Instance.rewardMutantPanel.SetActive(false);
+                PortManager.Instance.rewardMutantPanel.SetActive(true);
             }
         }
         else if(PortManager.Instance.portState == Port_State.Idle)//idle 상태일 때
@@ -120,21 +133,27 @@ public class PortInfo : MonoBehaviour
             image.sprite = SaveManager.Instance.dataSheet.soldierDataSheet[portData.soldierCode].sprite;
         }
     }
-
     public void PortPointEnter()
     {
-        if(PortManager.Instance.portState == Port_State.Drag)//드래그 중에 마우스 커서가 들어가면 색깔이 바뀌는 함수
+        if (PortManager.Instance.portState == Port_State.Drag)//드래그 중에 마우스 커서가 들어가면 하이라이트 이미지가 생기는 함수
         {
             if (PortManager.Instance.originPort != portData && portData.unlock)//드래그를 시작한 포트거나 잠겨있는 포트면 제외
             {
-                image.color = new Color(0.7f, 0, 0.7f);
+                PortManager.Instance.ControllActiveBtn(highLightImg);
             }
         }
-        else if(PortManager.Instance.portState == Port_State.Set)//세팅중이라면
+        else if (PortManager.Instance.portState == Port_State.SetSoldier)//세팅중이라면
         {
             if (portData.unlock && portData.soldierCode == null)
             {
-                image.color = new Color(0.7f, 0, 0.7f);
+                PortManager.Instance.ControllActiveBtn(highLightImg);
+            }
+        }
+        else if (PortManager.Instance.portState == Port_State.SetMutant)//뮤턴트 세팅중이라면
+        {
+            if(portData.soldierCode == PortManager.Instance.rewardSoldierCode && PortManager.Instance.originPort == null)
+            {
+                PortManager.Instance.ControllActiveBtn(highLightImg);
             }
         }
     }
@@ -145,14 +164,21 @@ public class PortInfo : MonoBehaviour
         {
             if (PortManager.Instance.originPort != portData && portData.unlock)//드래그를 시작한 포트거나 잠겨있는 포트면 제외
             {
-                image.color = new Color(0, 0.7f, 0);
+                highLightImg.SetActive(false);
             }
         }
-        else if (PortManager.Instance.portState == Port_State.Set)//세팅중이라면
+        else if (PortManager.Instance.portState == Port_State.SetSoldier)//세팅중이라면
         {
             if (portData.unlock && portData.soldierCode == null)
             {
-                image.color = new Color(0, 0.7f, 0);
+                highLightImg.SetActive(false);
+            }
+        }
+        else if (PortManager.Instance.portState == Port_State.SetMutant)//뮤턴트 세팅중이라면
+        {
+            if (portData.soldierCode == PortManager.Instance.rewardSoldierCode && PortManager.Instance.originPort == null)
+            {
+                highLightImg.SetActive(false);
             }
         }
     }

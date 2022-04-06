@@ -22,11 +22,12 @@ public class PortManager : MonoBehaviour
 
     [SerializeField] PortDatas allyPortDatas;
     [SerializeField] TMP_Text barrierStrength;
-    public GameObject rewardSoldierPanel, activeBtn;
+    public GameObject rewardSoldierPanel, rewardMutantPanel, mutantOKBtn, activeBtn;
 
     public Port_State portState;
 
     public string rewardSoldierCode;
+    public string rewardMutantCode;
 
     public PortData originPort;
 
@@ -38,11 +39,12 @@ public class PortManager : MonoBehaviour
 
     public IEnumerator SetPortCoroutine()
     {
-        portState = Port_State.Set;
+        originPort = null;
+        portState = Port_State.SetSoldier;
         if (activeBtn != null) { activeBtn.SetActive(false); }
-        SetPortImg();
+        SetSoldierPortImg();
         rewardSoldierPanel.SetActive(true);
-        while (!Input.GetKeyDown(KeyCode.Escape) && portState == Port_State.Set)
+        while (!Input.GetKeyDown(KeyCode.Escape) && portState == Port_State.SetSoldier)
         {
             yield return null;
         }
@@ -54,7 +56,25 @@ public class PortManager : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    public void SetPortImg()
+    public IEnumerator SetMutantCoroutine()
+    {
+        originPort = null;
+        portState = Port_State.SetMutant;
+        if(activeBtn != null) { activeBtn.SetActive(false); }
+        SetMutantPortImg();
+        rewardMutantPanel.SetActive(true);
+        while (!Input.GetKeyDown(KeyCode.Escape) && portState == Port_State.SetMutant)
+        {
+            yield return null;
+        }
+        portState = Port_State.Idle;
+        ReturnPortImg();
+        mutantOKBtn.SetActive(false);
+        rewardMutantPanel.SetActive(false);
+        gameObject.SetActive(false);
+    }
+    //가능하면 초록색 불가능하면 빨간색
+    public void SetSoldierPortImg()
     {
         for (int i = 0; i < allyPortDatas.portDatas.Length; i++)
         {
@@ -63,6 +83,21 @@ public class PortManager : MonoBehaviour
                 allyPortDatas.portDatas[i].portImg.color = new Color(0, 0.7f, 0);
             }
             else if (!allyPortDatas.portDatas[i].unlock || allyPortDatas.portDatas[i].soldierCode != null)
+            {
+                allyPortDatas.portDatas[i].portImg.color = new Color(0.7f, 0, 0);
+            }
+        }
+    }
+
+    public void SetMutantPortImg()
+    {
+        for (int i = 0; i < allyPortDatas.portDatas.Length; i++)
+        {
+            if (allyPortDatas.portDatas[i].soldierCode == PortManager.instance.rewardSoldierCode)
+            {
+                allyPortDatas.portDatas[i].portImg.color = new Color(0, 0.7f, 0);
+            }
+            else
             {
                 allyPortDatas.portDatas[i].portImg.color = new Color(0.7f, 0, 0);
             }
@@ -87,6 +122,7 @@ public class PortManager : MonoBehaviour
 
     public void ReturnPortImg()
     {
+        activeBtn.SetActive(false);
         for (int i = 0; i < allyPortDatas.portDatas.Length; i++)
         {
             if (allyPortDatas.portDatas[i].unlock) { allyPortDatas.portDatas[i].portImg.color = new Color(1, 1, 1); }//포트가 해제되어있다면 흰색

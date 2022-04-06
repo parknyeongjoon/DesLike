@@ -365,6 +365,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 141877291430639534, guid: cf0edc957ec184b47bb29b88a26c77c5,
+        type: 3}
+      propertyPath: m_Name
+      value: energy
+      objectReference: {fileID: 0}
     - target: {fileID: 5528462980001158599, guid: cf0edc957ec184b47bb29b88a26c77c5,
         type: 3}
       propertyPath: m_Pivot.x
@@ -474,6 +479,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PortCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627733958307159347, guid: cf0edc957ec184b47bb29b88a26c77c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6634317391101983944, guid: cf0edc957ec184b47bb29b88a26c77c5,
+        type: 3}
+      propertyPath: m_Name
+      value: tooltip
+      objectReference: {fileID: 0}
+    - target: {fileID: 6651128923779458711, guid: cf0edc957ec184b47bb29b88a26c77c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827042353131211576, guid: cf0edc957ec184b47bb29b88a26c77c5,
+        type: 3}
+      propertyPath: m_Name
+      value: tootipPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827042353131211576, guid: cf0edc957ec184b47bb29b88a26c77c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf0edc957ec184b47bb29b88a26c77c5, type: 3}

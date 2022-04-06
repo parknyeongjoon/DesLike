@@ -13,12 +13,14 @@ public class NodeScript : MonoBehaviour
     public bool[] isRewardSet = new bool[3];
     int[] soldierRewardIndex1 = new int[3];
     int[] soldierRewardIndex2 = new int[3];
+    int[] relicRewardIndex = new int[3];
+
     int phyNorSolC, speNorSolC, comNorSolC, phyEpicSolC, speEpicSolC, comEpicSolC, 
         phyNorRelC, speNorRelC, comNorRelC, phyEpicRelC, speEpicRelC, comEpicRelC, phyLegendRelC, speLegendRelC, comLegendRelC;
 
     void Awake()
     {
-        SaveManager saveManager = SaveManager.Instance;
+        saveManager = SaveManager.Instance;
         kingdom = mapNode.kingdom;
         SetData();
     }
@@ -27,6 +29,11 @@ public class NodeScript : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
+            if(saveManager != null)
+                Debug.Log("할당됨");
+            else
+                Debug.Log("할당안됨");
+
             isRewardSet[i] = saveManager.gameData.mapData.isRewardSet[i];
             Debug.Log(isRewardSet[i]);
             if (isRewardSet[i] == true) // 이미 세팅 값이 있으면 가져오기
@@ -64,7 +71,6 @@ public class NodeScript : MonoBehaviour
     {
         mapNode.SetAbleReward();
         
-        int relicRewardIndex;
         
         if (isRewardSet[0] == false)
         {
@@ -84,8 +90,8 @@ public class NodeScript : MonoBehaviour
             mapNode.reward.soldierReward.soldier.Add(mapNode.ableSoldierRewards[soldierRewardIndex1[0]]);   // 병사 선택지1
             mapNode.reward.soldierReward.soldier.Add(mapNode.ableSoldierRewards[soldierRewardIndex2[0]]);   // 병사 선택지2
             
-            relicRewardIndex = saveManager.gameData.rewardData.relicRewardIndex[0];    
-            mapNode.reward.relic = mapNode.ableRelicRewards[relicRewardIndex];  // 유물 불러오기
+            relicRewardIndex[0] = saveManager.gameData.rewardData.relicRewardIndex[0];    
+            mapNode.reward.relic = mapNode.ableRelicRewards[relicRewardIndex[0]];  // 유물 불러오기
         }
     }
 
@@ -93,8 +99,6 @@ public class NodeScript : MonoBehaviour
     {
         mapNode.SetAbleReward();
       
-        int relicRewardIndex;
-
         if (isRewardSet[1] == false)
         {
             NorSolSet(0, 1);
@@ -110,8 +114,8 @@ public class NodeScript : MonoBehaviour
             mapNode.reward.soldierReward.soldier[0] = mapNode.ableSoldierRewards[saveManager.gameData.rewardData.soldierRewardIndex1[1]];   // 병사 선택지1
             mapNode.reward.soldierReward.soldier[1] = mapNode.ableSoldierRewards[saveManager.gameData.rewardData.soldierRewardIndex2[1]];   // 병사 선택지2
 
-            relicRewardIndex = saveManager.gameData.rewardData.relicRewardIndex[1];
-            mapNode.reward.relic = mapNode.ableRelicRewards[relicRewardIndex];  // 유물 불러오기
+            relicRewardIndex[1] = saveManager.gameData.rewardData.relicRewardIndex[1];
+            mapNode.reward.relic = mapNode.ableRelicRewards[relicRewardIndex[1]];  // 유물 불러오기
         }
     }
 
@@ -119,8 +123,6 @@ public class NodeScript : MonoBehaviour
     {
         mapNode.SetAbleReward();
      
-        int relicRewardIndex;
-
         if (isRewardSet[2] == false)
         {
             NorSolSet(0, 2);
@@ -136,8 +138,8 @@ public class NodeScript : MonoBehaviour
             mapNode.reward.soldierReward.soldier[0] = mapNode.ableSoldierRewards[soldierRewardIndex1[2]];   // 병사 선택지1
             mapNode.reward.soldierReward.soldier[1] = mapNode.ableSoldierRewards[soldierRewardIndex2[2]];   // 병사 선택지2
 
-            relicRewardIndex = saveManager.gameData.rewardData.relicRewardIndex[2];
-            mapNode.reward.relic = mapNode.ableRelicRewards[relicRewardIndex];  // 유물 불러오기
+            relicRewardIndex[2] = saveManager.gameData.rewardData.relicRewardIndex[2];
+            mapNode.reward.relic = mapNode.ableRelicRewards[relicRewardIndex[2]];  // 유물 불러오기
         }
     }
 

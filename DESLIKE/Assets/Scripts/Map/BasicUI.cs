@@ -21,7 +21,7 @@ public class BasicUI : MonoBehaviour
     {
         curDay = saveManager.gameData.mapData.curDay;
         curHp = saveManager.gameData.heroSaveData.cur_Hp;
-        curGold = saveManager.gameData.goodsCollection.gold;
+        curGold = saveManager.gameData.goodsSaveData.gold;
     }
 
     void UpdateText()

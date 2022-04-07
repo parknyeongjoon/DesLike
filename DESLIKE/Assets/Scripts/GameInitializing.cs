@@ -10,9 +10,10 @@ public class GameInitializing : MonoBehaviour
         GameManager gameManager = GameManager.Instance;
     }
 
-    void Start()
+    IEnumerator Start()
     {
-        SetDataSheet();
+        yield return SetDataSheet();
+        SaveManager.Instance.gameData = SaveManager.Instance.GameData;
         SceneManager.LoadScene("MainTitle");
     }
 
@@ -24,7 +25,7 @@ public class GameInitializing : MonoBehaviour
     public GameObject[] relicObjects;
     public RelicData[] relicDatas;
 
-    void SetDataSheet()
+    IEnumerator SetDataSheet()
     {
         for (int i = 0; i < soldierDatas.Length; i++)
         {
@@ -54,5 +55,8 @@ public class GameInitializing : MonoBehaviour
                 SaveManager.Instance.dataSheet.mutantDataSheet.Add(mutantDatas[i].code, mutantDatas[i]);
             }
         }
+        Debug.Log("세팅완료");
+        Debug.Log(SaveManager.Instance.dataSheet.soldierDataSheet.Count);
+        yield return null;
     }
 }

@@ -13,7 +13,6 @@ public class Rullet : MonoBehaviour
     [SerializeField]
     RectTransform rulletTransform;
 
-    GoodsCollection goodsCollection;
     Map map;
     SaveManager saveManager;
 
@@ -25,8 +24,7 @@ public class Rullet : MonoBehaviour
         SaveManager saveManager = SaveManager.Instance;
         isRoll = false;
         backBtn.gameObject.SetActive(false);
-        goodsCollection = saveManager.gameData.goodsCollection;
-        map = saveManager.gameData.map;
+        map = saveManager.map;
     }
 
     public void RollBtn()//µ¹¸®°Å³ª ¸ØÃß±â
@@ -76,7 +74,7 @@ public class Rullet : MonoBehaviour
         {
             case 0:
                 Debug.Log("0, °ñµå+");
-                goodsCollection.gold += 30 * map.level;
+                SaveManager.Instance.gameData.goodsSaveData.gold += 30 * map.level;
                 break;
             case 1:
                 Debug.Log("1, À¯¹É");
@@ -87,18 +85,18 @@ public class Rullet : MonoBehaviour
                 break;
             case 3:
                 Debug.Log("3, °ñµå-");
-                goodsCollection.gold -= 20 * map.level;
+                SaveManager.Instance.gameData.goodsSaveData.gold -= 20 * map.level;
                 break;
             case 4:
                 Debug.Log("4, °ñµå++");
-                goodsCollection.gold += 50 * map.level;
+                SaveManager.Instance.gameData.goodsSaveData.gold += 50 * map.level;
                 break;
             case 5:
                 Debug.Log("5, ²Î");
                 break;
             case 6:
                 Debug.Log("6, ¸¶¼®");
-                goodsCollection.magicalStone += (int)(1 + map.level * 0.5f);
+                SaveManager.Instance.gameData.goodsSaveData.magicalStone += (int)(1 + map.level * 0.5f);
                 break;
             case 7:
                 Debug.Log("7, ¹öÇÁ");

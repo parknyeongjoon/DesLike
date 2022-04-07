@@ -6,14 +6,12 @@ using UnityEngine.UI;
 public class Training : MonoBehaviour
 {
     SaveManager saveManager;
-    GoodsCollection goodsCollection;
     int level;
 
     void OnEnable()
     {
         saveManager = SaveManager.Instance;
-        level = saveManager.gameData.map.level;
-        goodsCollection = saveManager.gameData.goodsCollection;
+        level = saveManager.map.level;
 
         Debug.Log("Traing");
     }

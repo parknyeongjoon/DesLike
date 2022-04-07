@@ -13,7 +13,7 @@ public class Resurrection : Relic
     {
         relicManager = RelicManager.Instance;
         relicManager.soldierConditionHandler += AddEffect;
-        foreach(SoldierData soldierData in SaveManager.Instance.activeSoldierList.Values)
+        foreach(SoldierData soldierData in SaveManager.Instance.allyPortDatas.activeSoldierList.Values)
         {
             AddEffect(soldierData);
         }

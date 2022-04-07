@@ -7,13 +7,11 @@ using UnityEngine.SceneManagement;
 public class BonusSupply : Relic
 {
     PortDatas allyPortDatas;
-    GoodsCollection goodsCollection;
 
     bool isUse = false;
 
     void Awake()
     {
-        goodsCollection = SaveManager.Instance.gameData.goodsCollection;
         BonusSupplyEffect();
     }
 
@@ -21,7 +19,7 @@ public class BonusSupply : Relic
     {
         if(CheckCondition())
         {
-            goodsCollection.gold += 200;
+            SaveManager.Instance.gameData.goodsSaveData.gold += 200;
             Debug.Log("추가보급 적용");
         }
     }

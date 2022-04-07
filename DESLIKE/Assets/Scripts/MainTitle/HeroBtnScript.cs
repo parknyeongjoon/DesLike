@@ -58,13 +58,13 @@ public class HeroBtnScript : MonoBehaviour
         for(int i = 0; i < allyPorts.portDatas.Length; i++)
         {
             allyPorts.portDatas[i].soldierCode = null;
+            allyPorts.portDatas[i].mutantCode = null;
         }
         //지우기
         allyPorts.activeSoldierList = new Dictionary<string, SoldierData>();
-        SaveManager.Instance.activeSoldierList = allyPorts.activeSoldierList;
         for (int i = 0; i < option.Count; i++)
         {
-            SaveManager.Instance.activeSoldierList.Add(option[i].soldierData.code, Instantiate(option[i].soldierData));
+            allyPorts.activeSoldierList.Add(option[i].soldierData.code, Instantiate(option[i].soldierData));
             for (int j = 0; j < option[i].portNum.Length; j++)
             {
                 allyPorts.portDatas[option[i].portNum[j]].soldierCode = option[i].soldierData.code;
@@ -74,7 +74,8 @@ public class HeroBtnScript : MonoBehaviour
 
    void Set_GoodsCollection()
     {
-        SaveManager.Instance.gameData.goodsCollection = heroSelectGoodsCollection;
+        SaveManager.Instance.gameData.goodsSaveData.gold = heroSelectGoodsCollection.goodsSaveData.gold;
+        SaveManager.Instance.gameData.goodsSaveData.magicalStone = heroSelectGoodsCollection.goodsSaveData.magicalStone;
     }
 
     void SetCampRelic()

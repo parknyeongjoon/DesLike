@@ -5,7 +5,6 @@ using UnityEngine;
 public class Infection : MonoBehaviour
 {
     Dictionary<string, SoldierData> activeSoldierList;
-    GoodsCollection goodsCollection;
     int level;
     SaveManager saveManager;
 
@@ -13,14 +12,13 @@ public class Infection : MonoBehaviour
     void OnEnable()
     {
         SaveManager saveManager = SaveManager.Instance;
-        activeSoldierList = saveManager.activeSoldierList;
-        goodsCollection = saveManager.gameData.goodsCollection;
-        level = saveManager.gameData.map.level;
+        activeSoldierList = saveManager.allyPortDatas.activeSoldierList;
+        level = saveManager.map.level;
     }
 
     public void InfectionOption1()//·£´ý À¯´Ö ·£´ý ¹ÂÅÏÆ®
     {
-        goodsCollection.gold -= 100 * level;
+        SaveManager.Instance.gameData.goodsSaveData.gold -= 100 * level;
         int soldierIndex = Random.Range(0, activeSoldierList.Count);
         //int mutantIndex = Random.Range(0, 0);
 

@@ -43,6 +43,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cfb333726cf99b6459713d96e1b76ec0, type: 2}
   - {fileID: 11400000, guid: 80092a98fcdf52e49804f3092adc63b7, type: 2}
   - {fileID: 11400000, guid: 433f2c4770d33ce40906c75d01df9171, type: 2}
+  curBarrierStrength: 5
+  maxBarrierStrength: 10
   spawnSoldierList:
   - {fileID: 0}
   - {fileID: 0}
@@ -57,7 +59,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  cur_producetime: 0
-  produceTime: 5
-  round: 0
-  max_round: 1
+  meleeSoldierList: []
+  rangerSoldierList: []
+  catapultSoldierList: []

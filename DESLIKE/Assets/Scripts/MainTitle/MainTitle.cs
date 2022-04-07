@@ -9,10 +9,6 @@ public class MainTitle : MonoBehaviour
     [SerializeField]
     GameObject Dictionary_Panel, HeroSelect_Panel;
     [SerializeField]
-    Map map;//여러 개 넣어놓고 랜덤으로 하는 방법도 좋을 듯
-    [SerializeField]
-    PortDatas allyPortDatas;
-    [SerializeField]
     GameObject hero;
     [SerializeField]
     HeroInfo heroInfo;
@@ -37,10 +33,8 @@ public class MainTitle : MonoBehaviour
 
     public void NewGameStart()
     {
-        map.isMap = false;
-        SaveManager.Instance.gameData.canContinue = true;
-        saveManager.gameData.map = map;
-        saveManager.gameData.allyPortDatas = allyPortDatas;
+        saveManager.map.isMap = false;
+        saveManager.gameData.canContinue = true;
         startHandler?.Invoke();
         hero.SetActive(true);
         SceneManager.LoadScene("StageSelect");
@@ -49,7 +43,7 @@ public class MainTitle : MonoBehaviour
     public void Continue()
     {
         heroInfo.castleData = saveManager.gameData.heroSaveData.heroData;
-        //SaveManager.Instance.LoadSoldierData();
+        //SaveMangaer.gameData에서 정보 불러오기
         hero.SetActive(true);
         SceneManager.LoadScene("Map");
     }

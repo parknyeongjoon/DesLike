@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Thief : MonoBehaviour
 {
     SaveManager saveManager;
-    GoodsCollection goodsCollection;
     int level;
 
     [SerializeField]
@@ -15,8 +14,7 @@ public class Thief : MonoBehaviour
     void OnEnable()
     {
         saveManager = SaveManager.Instance;
-        level = saveManager.gameData.map.level;
-        goodsCollection = saveManager.gameData.goodsCollection;
+        level = saveManager.map.level;
 
         Debug.Log("Thief");
     }
@@ -24,10 +22,10 @@ public class Thief : MonoBehaviour
     public void ThiefOption1()//È­Æó ¶â±â±â 1ÀÏ ¼Ò¸ð
     {
         EndEvent();
-        goodsCollection.gold -= 50 * level;
-        if (goodsCollection.gold < 0)
+        saveManager.gameData.goodsSaveData.gold -= 50 * level;
+        if (saveManager.gameData.goodsSaveData.gold < 0)
         {
-            goodsCollection.gold = 0;
+            saveManager.gameData.goodsSaveData.gold = 0;
         }
         //µ· ÀÒ´Â ÀÌÆåÆ®
     }

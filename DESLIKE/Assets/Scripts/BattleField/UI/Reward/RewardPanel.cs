@@ -12,7 +12,7 @@ public class RewardPanel : MonoBehaviour
 
     public void SetRewardPanel()
     {
-        map = SaveManager.Instance.gameData.map;
+        map = SaveManager.Instance.map;
         // 선택지 가능하게 만들기, 각 버튼들 enable로 옮기기
         GameObject createBtn;
         Reward reward = map.curMapNode.reward;

@@ -13,28 +13,35 @@ static class ConstNum
 public class HeroSaveData
 {
     public HeroData heroData;
-    public float cur_Hp;
-    public float cur_Mp;
-    public bool resurrection;
+    public float cur_Hp = 0;
+    public float cur_Mp = 0;
+    public bool resurrection = false;
 }
 
 [System.Serializable]
 public class PortSaveData
 {
-    public string soldierCode;
-    public int portNum;
-    public string mutantCode;
+    public bool isUnlock = false;
+    public string soldierCode ="";
+    public string mutantCode ="";
 }
 
 [System.Serializable]
-public class PortsSaveData
+public class PortSaveDatas
 {
-    public List<PortSaveData> portSaveList;
-    public int curBarrierStrength, maxBarrierStrength;
+    public PortSaveData[] portSaveList = new PortSaveData[30];
+    public int curBarrierStrength = 0, maxBarrierStrength = 0;
 }
 
 [System.Serializable]
-public class IsFind
+public class GoodsSaveData
+{
+    public int gold = 0;
+    public int magicalStone = 0;
+}
+
+[System.Serializable]
+public class IsFind//false로 초기화
 {
     public bool[] soldierFind = new bool[ConstNum.soldierNum];
     public bool[] relicFind = new bool[ConstNum.relicNum];
@@ -43,9 +50,9 @@ public class IsFind
 
 public class GameOption
 {
-    public float soundVol;
-    public bool storySkip;
-    public bool autoBattleStart;
+    public float soundVol = 100;
+    public bool storySkip = false;
+    public bool autoBattleStart = false;
 }
 
 public enum curWindow { Map, Event, Battle }
@@ -81,13 +88,12 @@ public class RewardData
 [System.Serializable]
 public class GameData
 {
-    public bool canContinue;
+    public GameOption gameOption;
     public IsFind isFind;
-    public GoodsCollection goodsCollection;//안됨
-    public Map map;//안됨
-    public PortDatas allyPortDatas;//안됨
-    public List<PortSaveData> soldierSaveList;
-    public HeroSaveData heroSaveData;
+    public bool canContinue;
+    public HeroSaveData heroSaveData = new HeroSaveData();
+    public PortSaveDatas portSaveDatas = new PortSaveDatas();
+    public GoodsSaveData goodsSaveData = new GoodsSaveData();
     public MapData mapData;
     public RewardData rewardData;
     //mutant, 유물, extraSkills 등 바뀐 애들 저장해야함(continue 누르면 복제하는 식으로 하면 될 듯)

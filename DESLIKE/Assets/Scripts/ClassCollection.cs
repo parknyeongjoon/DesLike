@@ -101,6 +101,6 @@ public struct SoldierReward //soldier랑 mutant 한 쌍으로 묶일 수 있게 
 public struct Option
 {
     public SoldierData soldierData;
-    public int[] portNum;
     public GameObject mutant;
+    public int[] portNum;
 }

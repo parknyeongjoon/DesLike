@@ -27,18 +27,9 @@ public class SaveManager : MonoBehaviour
     {
         instance = this;
         DontDestroyOnLoad(gameObject);
-        gameData = GameData;
-        dataSheet = DataSheet;
     }
 
     public DataSheet dataSheet;
-    public DataSheet DataSheet
-    {
-        get
-        {
-            return dataSheet;
-        }
-    }
 
     public GameData gameData;
     public GameData GameData
@@ -53,6 +44,7 @@ public class SaveManager : MonoBehaviour
 
     public void LoadGameData()
     {
+        //로컬 파일 불러오기
         string filePath = Application.persistentDataPath + "GameData.json";
         if (File.Exists(filePath))
         {
@@ -65,16 +57,19 @@ public class SaveManager : MonoBehaviour
             gameData = new GameData();
             Debug.Log("데이터 새로 생성");
         }
-        //LoadSoldierData();
+        //게임 데이터 불러오기
+        LoadPortsDatas();
         Debug.Log("데이터불러오기완료");
     }
 
     public void SaveGameData()
     {
+        //게임 데이터 저장
+        SavePortDatas();
+        //게임 데이터를 로컬 파일로 저장
         string toJsonData = JsonUtility.ToJson(gameData);
         string filePath = Application.persistentDataPath + "GameData.json";
         File.WriteAllText(filePath, toJsonData);
-        //SaveSoldierData();
         Debug.Log("데이터저장완료");
     }
 
@@ -84,8 +79,45 @@ public class SaveManager : MonoBehaviour
         Application.Quit();
     }
 
-    public Dictionary<string, SoldierData> activeSoldierList = new Dictionary<string, SoldierData>();
+    public PortDatas allyPortDatas;//아군이 사용할 PortDatas
+    public Map map;//맵 스크립터블 오브젝트
 
+    public void SavePortDatas()
+    {
+        //각 포트의 값들 저장
+        for(int i = 0; i < allyPortDatas.portDatas.Length; i++)
+        {
+            gameData.portSaveDatas.portSaveList[i].isUnlock = allyPortDatas.portDatas[i].unlock;
+            gameData.portSaveDatas.portSaveList[i].soldierCode = allyPortDatas.portDatas[i].soldierCode;
+            gameData.portSaveDatas.portSaveList[i].mutantCode = allyPortDatas.portDatas[i].mutantCode;
+            Debug.Log("Save : " + gameData.portSaveDatas.portSaveList[i].soldierCode);
+        }
+        //포트 에너지 저장
+        gameData.portSaveDatas.maxBarrierStrength = allyPortDatas.maxBarrierStrength;
+        gameData.portSaveDatas.curBarrierStrength = allyPortDatas.curBarrierStrength;
+    }
+
+    public void LoadPortsDatas()
+    {
+        for (int i = 0; i < gameData.portSaveDatas.portSaveList.Length; i++)
+        {
+            if(gameData.portSaveDatas.portSaveList[i] == null) { gameData.portSaveDatas.portSaveList[i] = new PortSaveData(); }
+            PortSaveData tempData = gameData.portSaveDatas.portSaveList[i];
+            //SoldierData(Clone)을 담아두는 activeSoldierList에 값 불러오기
+            if (gameData.portSaveDatas.portSaveList[i].soldierCode != "" && !allyPortDatas.activeSoldierList.ContainsKey(tempData.soldierCode))//중복되는 키가 없다면 리스트에 추가하기
+            {
+                allyPortDatas.activeSoldierList.Add(tempData.soldierCode, Instantiate(dataSheet.soldierDataSheet[tempData.soldierCode]));
+            }
+            //값 할당
+            allyPortDatas.portDatas[i].unlock = tempData.isUnlock;
+            allyPortDatas.portDatas[i].soldierCode = tempData.soldierCode;
+            allyPortDatas.portDatas[i].mutantCode = tempData.mutantCode;
+            Debug.Log("Load" + allyPortDatas.portDatas[i].soldierCode);
+        }
+        //포트 에너지 저장
+        allyPortDatas.maxBarrierStrength = gameData.portSaveDatas.maxBarrierStrength;
+        allyPortDatas.curBarrierStrength = gameData.portSaveDatas.curBarrierStrength;
+    }
     /*
     public void SaveSoldierData()
     {

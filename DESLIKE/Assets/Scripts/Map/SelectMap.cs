@@ -40,7 +40,6 @@ public class SelectMap : MonoBehaviour
     SaveManager saveManager;
 
     [SerializeField] PortDatas portDatas;
-    GoodsCollection goodsCollection;
     int selectNum = 0;
 
     void Start()
@@ -84,7 +83,6 @@ public class SelectMap : MonoBehaviour
         midBossCheck2 = saveManager.gameData.mapData.midBossCheck2;
         villageCheck = saveManager.gameData.mapData.villageCheck;
         organCheck = saveManager.gameData.mapData.organCheck;
-        goodsCollection = saveManager.gameData.goodsCollection;
     }
 
     void TrackSetting()    // 트랙 세팅

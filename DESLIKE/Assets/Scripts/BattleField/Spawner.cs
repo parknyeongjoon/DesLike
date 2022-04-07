@@ -43,13 +43,13 @@ public class Spawner : MonoBehaviour
         GameObject createSoldier;
         SoldierData soldierData;
 
-        for (int portIndex = 0; portIndex < portDatas.portDatas.Length; portIndex++)//portDatas.length/5
+        for (int portIndex = 0; portIndex < portDatas.portDatas.Length; portIndex++)
         {
-            if (portDatas.portDatas[portIndex].soldierCode != null)
+            if (portDatas.portDatas[portIndex].soldierCode != "")
             {
                 soldierData = portDatas.activeSoldierList[portDatas.portDatas[portIndex].soldierCode];
                 createSoldier = Instantiate(soldierPrefabs[soldierData.code], spawner[portIndex].transform);
-                if (portDatas.portDatas[portIndex].mutantCode != "")//터지면 null로 바꾸기
+                if (portDatas.portDatas[portIndex].mutantCode != "")
                 {
                     GameObject tempMutant = SaveManager.Instance.dataSheet.mutantObjectSheet[portDatas.portDatas[portIndex].mutantCode];
                     Instantiate(tempMutant, createSoldier.transform);

@@ -119,32 +119,6 @@ public class SaveManager : MonoBehaviour
         allyPortDatas.curBarrierStrength = gameData.portSaveDatas.curBarrierStrength;
     }
     /*
-    public void SaveSoldierData()
-    {
-        gameData.soldierSaveList.Clear();//키 중복 체크하기
-        if (activeSoldierList != null)
-        {
-            foreach (SoldierData soldierData in activeSoldierList.Values)
-            {
-                SoldierSaveData tempSoldierSaveData = new SoldierSaveData();
-                tempSoldierSaveData.soldierCode = soldierData.code;
-                tempSoldierSaveData.mutantCode = soldierData.mutantCode;
-                gameData.soldierSaveList.Add(tempSoldierSaveData);
-            }
-        }
-    }
-
-    public void LoadSoldierData()
-    {
-        activeSoldierList.Clear();//키중복 체크하기
-        for(int i = 0; i < gameData.soldierSaveList.Count; i++)
-        {
-            SoldierData tempSoldierData;
-            tempSoldierData = Instantiate(dataSheet.soldierDataSheet[gameData.soldierSaveList[i].soldierCode]);
-            tempSoldierData.mutantCode = gameData.soldierSaveList[i].mutantCode;
-            activeSoldierList.Add(tempSoldierData.code, tempSoldierData);
-        }
-    }
 
     public void SaveMapSaveData()
     {

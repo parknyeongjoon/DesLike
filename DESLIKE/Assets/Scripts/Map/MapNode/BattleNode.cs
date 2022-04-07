@@ -50,9 +50,8 @@ public class BattleNode : MapNode
         option = enemyPortOption.soldierOption;
         for (int i = 0; i < enemyPortDatas.portDatas.Length; i++)
         {
-            enemyPortDatas.portDatas[i].soldierCode = null;
+            enemyPortDatas.portDatas[i].soldierCode = "";
         }
-        enemyPortDatas.activeSoldierList = new Dictionary<string, SoldierData>();
         for (int i = 0; i < option.Count; i++)
         {
             SoldierData tempSoldier = Instantiate(option[i].soldierData);

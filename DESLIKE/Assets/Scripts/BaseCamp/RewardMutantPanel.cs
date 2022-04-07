@@ -17,7 +17,7 @@ public class RewardMutantPanel : MonoBehaviour
 
     public void SetMutantImg()
     {
-        if(PortManager.Instance.originPort && PortManager.Instance.originPort.mutantCode != null)
+        if(PortManager.Instance.originPort && PortManager.Instance.originPort.mutantCode != "")
         {
             originMutantImg.sprite = SaveManager.Instance.dataSheet.mutantDataSheet[PortManager.Instance.originPort.mutantCode].mutantImg;
             originMutantImg.gameObject.SetActive(true);

@@ -78,11 +78,11 @@ public class PortManager : MonoBehaviour
     {
         for (int i = 0; i < allyPortDatas.portDatas.Length; i++)
         {
-            if (allyPortDatas.portDatas[i].unlock && allyPortDatas.portDatas[i].soldierCode == null)
+            if (allyPortDatas.portDatas[i].unlock && allyPortDatas.portDatas[i].soldierCode == "")
             {
                 allyPortDatas.portDatas[i].portImg.color = new Color(0, 0.7f, 0);
             }
-            else if (!allyPortDatas.portDatas[i].unlock || allyPortDatas.portDatas[i].soldierCode != null)
+            else if (!allyPortDatas.portDatas[i].unlock || allyPortDatas.portDatas[i].soldierCode != "")
             {
                 allyPortDatas.portDatas[i].portImg.color = new Color(0.7f, 0, 0);
             }

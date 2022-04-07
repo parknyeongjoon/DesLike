@@ -11,9 +11,8 @@ public class NodeScript : MonoBehaviour
     SaveManager saveManager;
     SoldierReward soldierReward = new SoldierReward();
     Kingdom kingdom;
-    public bool[] isRewardSet = new bool[3];
-    int[] soldierRewardIndex1 = new int[3];
-    int[] soldierRewardIndex2 = new int[3];
+    public bool isRewardSet;
+    int[,] soldierRewardIndex = new int[2, 3];
     int[] relicRewardIndex = new int[3];
 
     int phyNorSolC, speNorSolC, comNorSolC, phyEpicSolC, speEpicSolC, comEpicSolC, 
@@ -32,16 +31,16 @@ public class NodeScript : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            isRewardSet[i] = saveManager.gameData.mapData.isRewardSet[i];
-            if (isRewardSet[i] == true) // 이미 세팅 값이 있으면 가져오기
+            isRewardSet = saveManager.gameData.mapData.isRewardSet[i];
+            if (isRewardSet == true) // 이미 세팅 값이 있으면 가져오기
             {
-                soldierRewardIndex1[i] = saveManager.gameData.rewardData.soldierRewardIndex1[i];
-                soldierRewardIndex2[i] = saveManager.gameData.rewardData.soldierRewardIndex2[i];
+                soldierRewardIndex[0, i] = saveManager.gameData.rewardData.soldierRewardIndex[0, i];
+                soldierRewardIndex[1, i] = saveManager.gameData.rewardData.soldierRewardIndex[1, i];
             }
             else // 아니면 초기화
             {
-                soldierRewardIndex1[i] = 0;
-                soldierRewardIndex2[i] = 0;
+                soldierRewardIndex[0, i] = 0;
+                soldierRewardIndex[1, i] = 0;
             }
         }
 
@@ -68,7 +67,7 @@ public class NodeScript : MonoBehaviour
     {
         mapNode.SetAbleReward();
         
-        if (isRewardSet[0] == false)
+        if (isRewardSet == false)
         {
             NorSolSet(0, 0);
             // EpicSolSet(0,0);
@@ -82,24 +81,24 @@ public class NodeScript : MonoBehaviour
         {
             mapNode.reward.soldierReward.Clear();
 
-            soldierReward.soldier = mapNode.ableSoldierRewards[soldierRewardIndex1[0]];
+            soldierReward.soldier = mapNode.ableSoldierRewards[soldierRewardIndex[0, 0]];
             mapNode.reward.soldierReward.Add(soldierReward);   // 병사 선택지1
 
-            soldierReward.soldier = mapNode.ableSoldierRewards[soldierRewardIndex2[0]];
+            soldierReward.soldier = mapNode.ableSoldierRewards[soldierRewardIndex[1, 0]];
             mapNode.reward.soldierReward.Add(soldierReward);   // 병사 선택지2
             
             relicRewardIndex[0] = saveManager.gameData.rewardData.relicRewardIndex[0];    
             mapNode.reward.relic = mapNode.ableRelicRewards[relicRewardIndex[0]];  // 유물 불러오기
         }
         saveManager.gameData.mapData.isRewardSet[0] = true;
-        isRewardSet[0] = true;
+        isRewardSet = true;
     }
 
     public void SetReward2()
     {
         mapNode.SetAbleReward();
       
-        if (isRewardSet[1] == false)
+        if (isRewardSet == false)
         {
             NorSolSet(0, 1);
             // EpicSolSet(0,1);
@@ -113,24 +112,24 @@ public class NodeScript : MonoBehaviour
         {
             mapNode.reward.soldierReward.Clear();
 
-            soldierReward.soldier = mapNode.ableSoldierRewards[soldierRewardIndex1[1]];
+            soldierReward.soldier = mapNode.ableSoldierRewards[soldierRewardIndex[0, 1]];
             mapNode.reward.soldierReward.Add(soldierReward);   // 병사 선택지1
 
-            soldierReward.soldier = mapNode.ableSoldierRewards[soldierRewardIndex1[2]];
+            soldierReward.soldier = mapNode.ableSoldierRewards[soldierRewardIndex[1, 1]];
             mapNode.reward.soldierReward.Add(soldierReward);   // 병사 선택지2
 
             relicRewardIndex[1] = saveManager.gameData.rewardData.relicRewardIndex[1];
             mapNode.reward.relic = mapNode.ableRelicRewards[relicRewardIndex[1]];  // 유물 불러오기
         }
         saveManager.gameData.mapData.isRewardSet[1] = true;
-        isRewardSet[1] = true;
+        isRewardSet = true;
     }
 
     public void SetReward3()
     {
         mapNode.SetAbleReward();
      
-        if (isRewardSet[2] == false)
+        if (isRewardSet == false)
         {
             NorSolSet(0, 2);
             // EpicSolSet(0,2);
@@ -144,17 +143,17 @@ public class NodeScript : MonoBehaviour
         {
             mapNode.reward.soldierReward.Clear();
 
-            soldierReward.soldier = mapNode.ableSoldierRewards[soldierRewardIndex1[2]];
+            soldierReward.soldier = mapNode.ableSoldierRewards[soldierRewardIndex[0, 2]];
             mapNode.reward.soldierReward.Add(soldierReward);   // 병사 선택지1
 
-            soldierReward.soldier = mapNode.ableSoldierRewards[soldierRewardIndex1[2]];
+            soldierReward.soldier = mapNode.ableSoldierRewards[soldierRewardIndex[1, 2]];
             mapNode.reward.soldierReward.Add(soldierReward);   // 병사 선택지2
 
             relicRewardIndex[2] = saveManager.gameData.rewardData.relicRewardIndex[2];
             mapNode.reward.relic = mapNode.ableRelicRewards[relicRewardIndex[2]];  // 유물 불러오기
         }
         saveManager.gameData.mapData.isRewardSet[2] = true;
-        isRewardSet[2] = true;
+        isRewardSet = true;
     }
 
     public void NorSolSet(int num, int button)  // 일반 병사 1마리 추가
@@ -165,7 +164,7 @@ public class NodeScript : MonoBehaviour
 
         int solReward;  // 다른 선택지와 비교 위한 변수
         if (num == 0) solReward = -1;   // 첫번째 선택지일 경우 비교할 값이 없으니까 쓰레기값 설정
-        else solReward = soldierRewardIndex1[button];   // 두번째 선택지면 첫번째 선택지 가져오기
+        else solReward = soldierRewardIndex[0, button];   // 두번째 선택지면 첫번째 선택지 가져오기
 
         randomInt:
         int rand = Random.Range(0, norTotal);   // 일반 범위 내에서 랜덤값 설정
@@ -177,13 +176,13 @@ public class NodeScript : MonoBehaviour
 
         if (num == 0)
         {
-            soldierRewardIndex1[button] = rand;   // 첫 선택지 저장
-            saveManager.gameData.rewardData.soldierRewardIndex1[button] = rand;
+            soldierRewardIndex[0, button] = rand;   // 첫 선택지 저장
+            saveManager.gameData.rewardData.soldierRewardIndex[0, button] = rand;
         }
         else
         {
-            soldierRewardIndex2[button] = rand;    // 두번째 선택지 저장
-            saveManager.gameData.rewardData.soldierRewardIndex2[button] = rand;
+            soldierRewardIndex[1, button] = rand;    // 두번째 선택지 저장
+            saveManager.gameData.rewardData.soldierRewardIndex[1, button] = rand;
         }
     }
 
@@ -203,7 +202,7 @@ public class NodeScript : MonoBehaviour
 
         int solReward;
         if (num == 0) solReward = -1;
-        else solReward = soldierRewardIndex1[button];
+        else solReward = soldierRewardIndex[0, button];
 
         randomInt:
         int rand = norTotal + Random.Range(0, epicTotal);
@@ -215,13 +214,13 @@ public class NodeScript : MonoBehaviour
 
         if (num == 0)
         {
-            soldierRewardIndex1[button] = rand;
-            saveManager.gameData.rewardData.soldierRewardIndex1[button] = rand;
+            soldierRewardIndex[0, button] = rand;
+            saveManager.gameData.rewardData.soldierRewardIndex[0, button] = rand;
         }
         else
         {
-            soldierRewardIndex2[button] = rand;
-            saveManager.gameData.rewardData.soldierRewardIndex2[button] = rand;
+            soldierRewardIndex[1, button] = rand;
+            saveManager.gameData.rewardData.soldierRewardIndex[1, button] = rand;
         }
     }
 

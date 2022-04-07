@@ -10,13 +10,14 @@ public class ContinueGame : MonoBehaviour
 
     public void Continue()//enum으로 바꾸기
     {
-        if (saveManager.gameData.mapData.curWindow == 0)
+        CurWindow curWindow = saveManager.gameData.mapData.curWindow;
+        if (curWindow == CurWindow.Map)
             saveManager.gameData.mapData.newSet = false;
         else saveManager.gameData.mapData.newSet = true;
 
-        if (saveManager.gameData.mapData.curWindow == 0)
+        if (curWindow == CurWindow.Map)
             SceneManager.LoadScene("Map");
-        else if(saveManager.gameData.mapData.curWindow == 1)
+        else if(curWindow == CurWindow.Event)
             SceneManager.LoadScene("Event");
         else SceneManager.LoadScene("BattleField");
     }

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: a1e99dc4922d4ff4da4679b968609bf5, type: 3}
   code: 23101
-  hp: 20
-  def: -50
+  hp: 100
+  def: -20
   size: 0.375
   blood: {fileID: 0}
   soldier_name: ratHero

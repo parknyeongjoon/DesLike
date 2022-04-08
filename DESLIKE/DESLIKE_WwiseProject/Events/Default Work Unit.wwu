@@ -94,10 +94,22 @@
 						<Action Name="" ID="{F022235D-34D5-4EF3-A153-28CC815C3435}" ShortID="261405867">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Character Bus" ID="{3967C2B0-6B26-475E-BC1B-4C04ED87872C}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4501D95C-C3D4-4235-BB0B-C7CB69B0C8F7}" ShortID="327633244">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{F673E0B0-BCFD-4899-872F-8AA1EF6E7D27}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -108,11 +120,22 @@
 						<Action Name="" ID="{A5F9A6FF-041B-4437-A927-981C21C196E8}" ShortID="740488330">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="9"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Character Bus" ID="{3967C2B0-6B26-475E-BC1B-4C04ED87872C}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{90F58D34-5B5D-4C01-9356-0551D0F5D200}" ShortID="934215288">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="9"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{F673E0B0-BCFD-4899-872F-8AA1EF6E7D27}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

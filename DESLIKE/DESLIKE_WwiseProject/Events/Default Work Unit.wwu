@@ -8,7 +8,7 @@
 						<Action Name="" ID="{7C2DBFAA-D6F3-4F6F-89AD-549817FBF3DE}" ShortID="870113499">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -30,6 +30,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="GameOver_Print_01" ID="{0E86918E-1B7B-4BC2-84EB-82284A9314E4}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EF312915-A462-4E39-88BA-D9BF4B42F1D5}" ShortID="595932760">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="H_Bus" ID="{5ED5E7C1-5ED7-49FF-B2A4-44BE46255ADE}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -75,6 +86,35 @@
 								<Property Name="ActionType" Type="int16" Value="3"/>
 							</PropertyList>
 							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Is_Pause" ID="{4B85E0F3-1440-45F6-8294-BF70F35E7B72}">
+					<ChildrenList>
+						<Action Name="" ID="{F022235D-34D5-4EF3-A153-28CC815C3435}" ShortID="261405867">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Character Bus" ID="{3967C2B0-6B26-475E-BC1B-4C04ED87872C}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Is_Resume" ID="{8085AFB5-04A5-4861-B460-524ECA01CB42}">
+					<ChildrenList>
+						<Action Name="" ID="{A5F9A6FF-041B-4437-A927-981C21C196E8}" ShortID="740488330">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="9"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Character Bus" ID="{3967C2B0-6B26-475E-BC1B-4C04ED87872C}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+								</Reference>
+							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>

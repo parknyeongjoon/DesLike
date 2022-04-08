@@ -13,10 +13,13 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BATTLE_END = 461545889U;
         static const AkUniqueID BATTLE_START = 2706291346U;
         static const AkUniqueID H_23101_DIE = 3025390842U;
         static const AkUniqueID H_23101_SKILL_1 = 2377059575U;
         static const AkUniqueID H_23101_SKILL_2 = 2377059572U;
+        static const AkUniqueID IS_PAUSE = 490612746U;
+        static const AkUniqueID IS_RESUME = 2370616541U;
     } // namespace EVENTS
 
     namespace STATES
@@ -43,6 +46,7 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID CHARACTER_BUS = 2026837964U;
         static const AkUniqueID H_BUS = 1962540672U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
     } // namespace BUSSES

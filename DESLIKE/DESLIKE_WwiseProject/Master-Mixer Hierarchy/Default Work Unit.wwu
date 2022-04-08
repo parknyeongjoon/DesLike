@@ -13,7 +13,12 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Bus Name="H_Bus" ID="{5ED5E7C1-5ED7-49FF-B2A4-44BE46255ADE}">
+						<Bus Name="Character Bus" ID="{3967C2B0-6B26-475E-BC1B-4C04ED87872C}">
+							<ChildrenList>
+								<Bus Name="H_Bus" ID="{5ED5E7C1-5ED7-49FF-B2A4-44BE46255ADE}">
+									<ObjectLists/>
+								</Bus>
+							</ChildrenList>
 							<ObjectLists/>
 						</Bus>
 					</ChildrenList>

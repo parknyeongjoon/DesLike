@@ -12365,7 +12365,7 @@ PrefabInstance:
     - target: {fileID: 2578643761576669270, guid: 2e09879a1504ebd4f8bf0341040f348e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: See_Event
+      value: EventNodeSet1
       objectReference: {fileID: 0}
     - target: {fileID: 2578643761576669270, guid: 2e09879a1504ebd4f8bf0341040f348e,
         type: 3}
@@ -22423,7 +22423,7 @@ PrefabInstance:
     - target: {fileID: 2578643761576669270, guid: 2e09879a1504ebd4f8bf0341040f348e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: See_Event
+      value: EventNodeSet3
       objectReference: {fileID: 0}
     - target: {fileID: 2578643761576669270, guid: 2e09879a1504ebd4f8bf0341040f348e,
         type: 3}
@@ -23846,7 +23846,7 @@ PrefabInstance:
     - target: {fileID: 2578643761576669270, guid: 2e09879a1504ebd4f8bf0341040f348e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: See_Event
+      value: EventNodeSet2
       objectReference: {fileID: 0}
     - target: {fileID: 2578643761576669270, guid: 2e09879a1504ebd4f8bf0341040f348e,
         type: 3}
@@ -47596,7 +47596,7 @@ PrefabInstance:
     - target: {fileID: 2578643761576669270, guid: 2e09879a1504ebd4f8bf0341040f348e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: See_Event
+      value: EventNodeSet1
       objectReference: {fileID: 0}
     - target: {fileID: 2578643761576669270, guid: 2e09879a1504ebd4f8bf0341040f348e,
         type: 3}
@@ -48461,7 +48461,7 @@ PrefabInstance:
     - target: {fileID: 2578643761576669270, guid: 2e09879a1504ebd4f8bf0341040f348e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: See_Event
+      value: EventNodeSet2
       objectReference: {fileID: 0}
     - target: {fileID: 2578643761576669270, guid: 2e09879a1504ebd4f8bf0341040f348e,
         type: 3}

@@ -12,11 +12,11 @@ public enum Soldier_State { Idle, Detect, Stun, Battle, Charge, Taunt, Dead }//ì
 public enum AnimState { Idle, Move, Atk }
 public enum Soldier_Action { Idle, Move, Attack, Skill, End_Delay }
 public enum Soldier_Type { Tanker, Soldier, Healer, Buffer, Debuffer, Ranger, Catapult, Flight, Monster}
-public enum Kingdom { Common, Physic, Spell}
+public enum Kingdom { Common, Physic, Spell }
 public enum Tribe { Bear, Kangaroo, Rat, Frog, Undead, Mech, Ghost }
 public enum Rarity { Normal, Rare, Epic }
-
 public enum SkillType { TargetSkill, GrenadeSkill, InstanceSkill, PassiveSkill, Etc}
+public enum CurWindow { Map, Event, Battle, Village, Organ, StageSel}
 
 [System.Serializable]
 public class Buff_Stat

@@ -45,8 +45,8 @@ public class SelectMap : MonoBehaviour
     void Start()
     {
         saveManager = SaveManager.Instance;
-        saveManager.gameData.mapData.curWindow = 0;
-
+        saveManager.gameData.mapData.curWindow = CurWindow.Event;
+        
         ObjectInactive();   // 맵 초기화
         FindData(); // 데이터 찾기
         TrackSetting(); // 트랙 세팅(갈랫길, 버튼, 세부 이벤트 등)

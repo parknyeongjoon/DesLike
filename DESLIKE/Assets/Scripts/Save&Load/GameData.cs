@@ -55,8 +55,6 @@ public class GameOption
     public bool autoBattleStart = false;
 }
 
-public enum CurWindow { Map, Event, Battle }
-
 [System.Serializable]
 public class MapData
 {

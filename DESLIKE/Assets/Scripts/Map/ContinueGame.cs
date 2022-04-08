@@ -20,7 +20,15 @@ public class ContinueGame : MonoBehaviour
             SceneManager.LoadScene("Map");
         else if(curWindow == CurWindow.Event)
             SceneManager.LoadScene("Event");
-        else SceneManager.LoadScene("BattleField");
+        else if(curWindow == CurWindow.Battle)
+            SceneManager.LoadScene("BattleField");
+        else if (curWindow == CurWindow.Village)
+            SceneManager.LoadScene("Village");
+        else if (curWindow == CurWindow.Organ)
+            SceneManager.LoadScene("Organ");
+        else
+            SceneManager.LoadScene("StageSelect");
+
     }
 
     public void FromFirst() // 데이터 초기화

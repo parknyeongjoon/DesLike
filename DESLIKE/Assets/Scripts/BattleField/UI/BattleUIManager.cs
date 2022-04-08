@@ -24,6 +24,7 @@ public class BattleUIManager : MonoBehaviour
     {
         instance = this;
         SaveManager saveManager = SaveManager.Instance;//지우기
+        saveManager.gameData.mapData.curWindow = CurWindow.Battle;  // 추가 by 시후, 여기 넣는 거 맞나?
 
         SetMidPanel(3);
     }

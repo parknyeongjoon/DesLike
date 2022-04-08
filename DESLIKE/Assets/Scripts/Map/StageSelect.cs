@@ -10,10 +10,11 @@ public class StageSelect : MonoBehaviour
     int curStage;
     [SerializeField] Button FirstBtn, SecondBtn, ThirdBtn;
 
-    void Awake()
+    void OnEnable()
     {
         SaveManager saveManager = SaveManager.Instance;
         curStage = saveManager.gameData.mapData.curStage;
+        saveManager.gameData.mapData.curWindow = CurWindow.StageSel;
 
         FirstBtn.gameObject.SetActive(false);
         SecondBtn.gameObject.SetActive(false);

@@ -78,24 +78,29 @@ public class GameManager : MonoBehaviour
         //게임 일시정지
         if (Input.GetKeyDown(KeyCode.P))
         {
-            GamePause();
+            GamePause(!gamePause);
         }
     }
 
     //일시정지
-    public void GamePause()
+    public void GamePause(bool isPause)
     {
-        gamePause = !gamePause;
+        gamePause = isPause;
         if (gamePause)
+        {
             Time.timeScale = 0;
+            AkSoundEngine.PostEvent("Is_Pause", gameObject);
+        }
         else
+        {
             Time.timeScale = 1;
+            AkSoundEngine.PostEvent("Is_Resume", gameObject);
+        }
     }
 
     public void timeScale1()
     {
-        gamePause = false;
-        Time.timeScale = 1;
+        GamePause(false);
     }
 
     public void timeScale2()

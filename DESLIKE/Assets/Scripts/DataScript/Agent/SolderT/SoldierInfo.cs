@@ -21,7 +21,6 @@ public class SoldierInfo : HeroInfo
     void Dead()
     {
         gameObject.layer = 7;
-        skeletonAnimation.state.SetAnimation(0, "die", false);//idle
         Debug.Log("Dead");
         allyPortDatas.spawnSoldierList.Remove(this);
         BattleUIManager.Instance.UpdateSoldierRatioBar();

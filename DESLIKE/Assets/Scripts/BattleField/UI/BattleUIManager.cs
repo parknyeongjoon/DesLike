@@ -92,15 +92,14 @@ public class BattleUIManager : MonoBehaviour
     {
         start_Btn.gameObject.SetActive(false);
         AkSoundEngine.PostEvent("Battle_Start", gameObject);
-        GameManager.Instance.gamePause = false;
-        Time.timeScale = 1;
+        GameManager.Instance.GamePause(false);
     }
 
     public void EndStage()
     {
         GameManager.Instance.gamePause = true;
         AkSoundEngine.PostEvent("Battle_End", gameObject);
-        Time.timeScale = 0;
+        GameManager.Instance.GamePause(true);
         if (enemyPortDatas.spawnSoldierList.Count == 0)//승리
         {
             SetRewardPanel();

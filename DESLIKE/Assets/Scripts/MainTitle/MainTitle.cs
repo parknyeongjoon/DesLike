@@ -18,7 +18,7 @@ public class MainTitle : MonoBehaviour
 
     void Awake()
     {
-        Time.timeScale = 0;
+        GameManager.Instance.GamePause(true);
         GameManager.Instance.gamePause = true;
         saveManager = SaveManager.Instance;
         if (!saveManager.gameData.canContinue)

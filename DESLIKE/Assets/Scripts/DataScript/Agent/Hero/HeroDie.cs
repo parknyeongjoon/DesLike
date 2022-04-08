@@ -8,13 +8,18 @@ public class HeroDie : MonoBehaviour
 {
     public void GameOver()
     {
+        gameObject.layer = 7;
         Debug.Log("Game Over");
         //Destroy(gameObject);
         SaveManager.Instance.gameData.canContinue = false;
         AkSoundEngine.PostEvent("H_23101_Die", gameObject);
-        GameManager.Instance.gamePause = true;
-        Time.timeScale = 0;
+        Invoke("GamePause", 2.0f);
         //SceneManager.LoadScene("MainTitle");//창 띄우고 거기서 버튼 클릭 시 이동하게 만들기
         GameManager.Instance.gameOverEvent.Invoke();
+    }
+
+    void GamePause()
+    {
+        GameManager.Instance.GamePause(false);
     }
 }

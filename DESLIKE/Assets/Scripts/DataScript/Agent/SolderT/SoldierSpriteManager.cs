@@ -59,6 +59,7 @@ public class SoldierSpriteManager : MonoBehaviour
     public void Dead()
     {
         hp_mp_bar.SetActive(false);
+        heroInfo.skeletonAnimation.state.SetAnimation(0, "die", false);//idle
         heroInfo.skeletonAnimation.skeleton.SetColor(heroInfo.skeletonAnimation.skeleton.GetColor() - new Color(0, 0, 0, 0.4f));
     }
 }

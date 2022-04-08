@@ -10,6 +10,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	1962540672	H_Bus			\Default Work Unit\Master Audio Bus\Character Bus\H_Bus	
 	2026837964	Character Bus			\Default Work Unit\Master Audio Bus\Character Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 
 Effect plug-ins	ID	Name	Type				Notes
 	3970951098	New_Wwise_Peak_Limiter	Wwise Peak Limiter			

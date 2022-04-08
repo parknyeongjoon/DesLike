@@ -21,6 +21,9 @@
 							</ChildrenList>
 							<ObjectLists/>
 						</Bus>
+						<Bus Name="Music" ID="{F673E0B0-BCFD-4899-872F-8AA1EF6E7D27}">
+							<ObjectLists/>
+						</Bus>
 					</ChildrenList>
 					<ObjectLists/>
 				</Bus>

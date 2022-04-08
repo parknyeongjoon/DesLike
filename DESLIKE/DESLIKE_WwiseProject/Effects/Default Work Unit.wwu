@@ -18,6 +18,13 @@
 						<Property Name="Threshold" Type="Real32" Value="-1"/>
 					</PropertyList>
 				</Effect>
+				<Effect Name="New_Wwise_Time_Stretch" ID="{D32C2197-D2FE-4F7F-8C86-0199C3E44FDA}" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+					<PropertyList>
+						<Property Name="TimeStretch" Type="Real32" Value="200"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Wwise_Time_Stretch_01" ID="{1EE4ABB5-5DCE-404D-A422-D22EA377F7C0}" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3"/>
+				<Effect Name="New_Wwise_Time_Stretch_02" ID="{04B946FE-8F78-400E-A9EF-3E070C876FEC}" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

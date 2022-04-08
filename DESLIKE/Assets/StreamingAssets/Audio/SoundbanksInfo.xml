@@ -11,12 +11,22 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="21620069">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3171323304">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<StateGroups>
+				<StateGroup Id="3269609307" Name="Game_Speed" ObjectPath="\States\Default Work Unit\Game_Speed" GUID="{531C82F0-6289-4DC0-9FAC-FBA1DEA54B9E}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\Game_Speed\None" GUID="{B9FFA1F4-7C44-42A8-B90E-8CAD8E38CFA7}"/>
+						<State Id="1500973333" Name="X0" ObjectPath="\States\Default Work Unit\Game_Speed\X0" GUID="{15DBB30C-37CF-4C41-A933-8CD4CB215F7D}"/>
+						<State Id="1500973332" Name="X1" ObjectPath="\States\Default Work Unit\Game_Speed\X1" GUID="{DC2099EF-91E2-4D7C-89BE-0277675B2D01}"/>
+						<State Id="1500973335" Name="X2" ObjectPath="\States\Default Work Unit\Game_Speed\X2" GUID="{A23936D1-BD2F-4A6E-8DF5-16565B571EE3}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="188790486">
+		<SoundBank Id="3161908922" Language="SFX" Hash="232074738">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -30,6 +40,8 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1027347108" Name="Game_Speed_Pause" ObjectPath="\Events\Default Work Unit\Game_Speed_Pause" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2372597559" Name="Game_Speed_Resume" ObjectPath="\Events\Default Work Unit\Game_Speed_Resume" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3025390842" Name="H_23101_Die" ObjectPath="\Events\Default Work Unit\H_23101_Die" DurationType="OneShot" DurationMin="3.940282" DurationMax="4.552415">
 					<IncludedMemoryFiles>
 						<File Id="234665702" Language="SFX">
@@ -58,8 +70,6 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="490612746" Name="Is_Pause" ObjectPath="\Events\Default Work Unit\Is_Pause" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="2370616541" Name="Is_Resume" ObjectPath="\Events\Default Work Unit\Is_Resume" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 		</SoundBank>
 	</SoundBanks>

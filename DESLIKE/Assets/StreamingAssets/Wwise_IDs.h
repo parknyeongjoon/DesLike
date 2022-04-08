@@ -15,26 +15,27 @@ namespace AK
     {
         static const AkUniqueID BATTLE_END = 461545889U;
         static const AkUniqueID BATTLE_START = 2706291346U;
+        static const AkUniqueID GAME_SPEED_PAUSE = 1027347108U;
+        static const AkUniqueID GAME_SPEED_RESUME = 2372597559U;
         static const AkUniqueID H_23101_DIE = 3025390842U;
         static const AkUniqueID H_23101_SKILL_1 = 2377059575U;
         static const AkUniqueID H_23101_SKILL_2 = 2377059572U;
-        static const AkUniqueID IS_PAUSE = 490612746U;
-        static const AkUniqueID IS_RESUME = 2370616541U;
     } // namespace EVENTS
 
     namespace STATES
     {
-        namespace DEAD_OR_ALIVE
+        namespace GAME_SPEED
         {
-            static const AkUniqueID GROUP = 3575957003U;
+            static const AkUniqueID GROUP = 3269609307U;
 
             namespace STATE
             {
-                static const AkUniqueID ALIVE = 655265632U;
-                static const AkUniqueID DEAD = 2044049779U;
                 static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID X0 = 1500973333U;
+                static const AkUniqueID X1 = 1500973332U;
+                static const AkUniqueID X2 = 1500973335U;
             } // namespace STATE
-        } // namespace DEAD_OR_ALIVE
+        } // namespace GAME_SPEED
 
     } // namespace STATES
 

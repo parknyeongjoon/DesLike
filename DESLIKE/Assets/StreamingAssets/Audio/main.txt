@@ -1,7 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	461545889	Battle_End			\Default Work Unit\Battle_End	
-	490612746	Is_Pause			\Default Work Unit\Is_Pause	
-	2370616541	Is_Resume			\Default Work Unit\Is_Resume	
+	1027347108	Game_Speed_Pause			\Default Work Unit\Game_Speed_Pause	
+	2372597559	Game_Speed_Resume			\Default Work Unit\Game_Speed_Resume	
 	2377059572	H_23101_Skill_2			\Default Work Unit\H_23101_Skill_2	
 	2377059575	H_23101_Skill_1			\Default Work Unit\H_23101_Skill_1	
 	2706291346	Battle_Start			\Default Work Unit\Battle_Start	

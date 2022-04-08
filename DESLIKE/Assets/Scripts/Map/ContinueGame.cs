@@ -10,6 +10,7 @@ public class ContinueGame : MonoBehaviour
 
     public void Continue()//enum으로 바꾸기
     {
+        saveManager = SaveManager.Instance;
         CurWindow curWindow = saveManager.gameData.mapData.curWindow;
         if (curWindow == CurWindow.Map)
             saveManager.gameData.mapData.newSet = false;

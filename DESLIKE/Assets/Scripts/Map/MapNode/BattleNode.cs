@@ -46,6 +46,7 @@ public class BattleNode : MapNode
 
     public void Play_BattleNode()
     {
+        enemyPortDatas.activeSoldierList.Clear();
         List<Option> option = new List<Option>();
         option = enemyPortOption.soldierOption;
         for (int i = 0; i < enemyPortDatas.portDatas.Length; i++)

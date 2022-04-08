@@ -45,7 +45,7 @@ public class HeroBtnScript : MonoBehaviour
 
     void SetHeroSaveData()
     {
-        saveManager.gameData.heroSaveData.heroData = heroData;
+        saveManager.gameData.heroSaveData.heroCode = heroData.code;
         saveManager.gameData.heroSaveData.cur_Hp = heroData.hp;
         saveManager.gameData.heroSaveData.cur_Mp = heroData.mp;
         saveManager.gameData.heroSaveData.resurrection = heroPrefab.GetComponent<HeroInfo>().resurrection;

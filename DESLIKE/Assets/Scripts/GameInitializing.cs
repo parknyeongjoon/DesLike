@@ -25,7 +25,7 @@ public class GameInitializing : MonoBehaviour
     public GameObject[] relicObjects;
     public RelicData[] relicDatas;
 
-    IEnumerator SetDataSheet()
+    IEnumerator SetDataSheet()//Object들도 추가
     {
         for (int i = 0; i < soldierDatas.Length; i++)
         {

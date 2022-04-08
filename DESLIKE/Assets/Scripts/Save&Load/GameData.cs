@@ -12,7 +12,7 @@ static class ConstNum
 [System.Serializable]
 public class HeroSaveData
 {
-    public HeroData heroData;
+    public string heroCode = "";
     public float cur_Hp = 0;
     public float cur_Mp = 0;
     public bool resurrection = false;

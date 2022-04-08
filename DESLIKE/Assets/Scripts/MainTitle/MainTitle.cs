@@ -9,8 +9,6 @@ public class MainTitle : MonoBehaviour
     [SerializeField]
     GameObject Dictionary_Panel, HeroSelect_Panel;
     [SerializeField]
-    HeroInfo heroInfo;
-    [SerializeField]
     Button continueBtn;
 
     public delegate void StartHandler();
@@ -39,9 +37,8 @@ public class MainTitle : MonoBehaviour
 
     public void Continue()
     {
-        heroInfo.castleData = saveManager.gameData.heroSaveData.heroData;
-        //SaveMangaer.gameData에서 정보 불러오기
-        SceneManager.LoadScene("Map");
+        string prefabPath = "HeroPrefabs/" + SaveManager.Instance.dataSheet.heroDataSheet[SaveManager.Instance.gameData.heroSaveData.heroCode].soldier_name;
+        SaveManager.Instance.heroPrefab = Resources.Load<GameObject>(prefabPath);
     }
 
     public void Open_Dic()
@@ -74,7 +71,7 @@ public class MainTitle : MonoBehaviour
         SceneManager.LoadScene("BaseCamp");
     }
 
-    public void Test()
+    public void Test()//지우기
     {
         SceneManager.LoadScene("Test");
     }

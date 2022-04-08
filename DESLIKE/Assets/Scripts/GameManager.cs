@@ -89,12 +89,12 @@ public class GameManager : MonoBehaviour
         if (gamePause)
         {
             Time.timeScale = 0;
-            AkSoundEngine.SetState("Game_Speed", "X0");
+            AkSoundEngine.PostEvent("Game_Speed_Pause", gameObject);
         }
         else
         {
             Time.timeScale = 1;
-            AkSoundEngine.SetState("Game_Speed", "X1");
+            AkSoundEngine.PostEvent("Game_Speed_Resume", gameObject);
         }
     }
 
@@ -112,7 +112,6 @@ public class GameManager : MonoBehaviour
     {
         gamePause = false;
         Time.timeScale = 2;
-        AkSoundEngine.SetState("Game_Speed", "X2");
     }
 
     public static void DeleteChilds(GameObject gameObject)

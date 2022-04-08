@@ -8,16 +8,18 @@ public class NodeScript : MonoBehaviour
     [SerializeField] MapNode mapNode;
     protected Image nodeImg;
     public MapNode MapNode { get => mapNode; set => mapNode = value; }
+
+    /*
     SaveManager saveManager;
     SoldierReward soldierReward = new SoldierReward();
     Kingdom kingdom;
-    public bool isRewardSet;
     int[,] soldierRewardIndex = new int[2, 3];
     int[] relicRewardIndex = new int[3];
 
     int phyNorSolC, speNorSolC, comNorSolC, phyEpicSolC, speEpicSolC, comEpicSolC, 
         phyNorRelC, speNorRelC, comNorRelC, phyEpicRelC, speEpicRelC, comEpicRelC, phyLegendRelC, speLegendRelC, comLegendRelC;
 
+    
     void Awake()
     {
         saveManager = SaveManager.Instance;
@@ -273,4 +275,5 @@ public class NodeScript : MonoBehaviour
         mapNode.reward.relic = mapNode.ableRelicRewards[rand];
         saveManager.gameData.rewardData.relicRewardIndex[button] = rand;
     }
+    */
 }

@@ -4,45 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-[CreateAssetMenu(fileName = "BattleNode",menuName = "ScriptableObject/MapNodeT/BattleNode")]
+[CreateAssetMenu(fileName = "BattleNode", menuName = "ScriptableObject/MapNodeT/BattleNode")]
 public class BattleNode : MapNode
 {
     public List<PortsOption> enemyPortsOptions;
     public PortsOption enemyPortOption;
-    public List<PortsOption> challengeList;
     public PortDatas enemyPortDatas;
     public bool isChallenge;
-    public SaveManager saveManager;
     public bool[] isEventSet = new bool[3];
-    int[] nextEvent = new int[3];
-
-    void Enable()
-    {
-        saveManager = SaveManager.Instance;
-        for(int i = 0; i<3; i++)
-            isEventSet[i] = saveManager.gameData.mapData.isEventSet[i];
-    }
-
-    public void SetEnemyPortOption(int i)
-    {
-        if (isEventSet[i] == false)    // 새로운 정보 세팅
-        {
-            int temp = Random.Range(0, enemyPortsOptions.Count);
-            enemyPortOption = enemyPortsOptions[temp];
-            nextEvent[i] = temp;
-        }
-        else   // 기존 정보 가져오기
-        {
-            // nextEvent[i] = saveManager.gameData.mapData.nextEvent[i];
-            enemyPortOption = enemyPortsOptions[nextEvent[i]];
-        }
-        // 오류뜸 saveManager.gameData.mapData.nextEvent[i] = nextEvent[i];
-    }
-
-    public void SetChallengeOption()
-    {
-        int temp = Random.Range(0, challengeList.Count);
-    }
+    public bool isRewardSet;
+    public SoldierReward soldierReward = new SoldierReward();
 
     public void Play_BattleNode()
     {

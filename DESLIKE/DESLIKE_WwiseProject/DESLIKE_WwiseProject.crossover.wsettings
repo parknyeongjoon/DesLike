@@ -3,7 +3,10 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{8C1B3053-4448-4A6F-BE7C-E4719104764C}">
 			<PropertyList>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="Z:\Volumes\Samsung_T5\DesLike\DesLike SFX\23101_Fix\"/>
 				<Property Name="Event Action List\{14322E6C-5CE8-4445-BC7D-52E123E55A47}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{1B80026B-C969-4C40-B2AC-7B1720A802C6}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{62AF0119-7F66-48F1-AAB7-28AB84F16783}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{8B4F8B67-E687-4CD5-89DD-564E295D8ADD}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{9C3A3187-624A-4760-B9EF-E5A40674CAC0}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{C199CDD3-65DF-45DE-9720-345F3677245B}\x64_Expand States" Type="string" Value=""/>
@@ -65,7 +68,7 @@
 				<Property Name="ProjectExplorer\x64_Expanded_21_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_22_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="2KQUFaYdKkGhfnXKDCFJ88hvcWN4QdFOs/SCXkr/q5c="/>
-				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="6aAPyYnUBUeLRXWOHvB6fHeutGS4dX1Hv5WJhaHY7+gp5be5pSnySqQTHqCPaKzE"/>
+				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="6aAPyYnUBUeLRXWOHvB6fABLIghreRRIlg4kgX3MK68="/>
 				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_6_1" Type="string" Value=""/>

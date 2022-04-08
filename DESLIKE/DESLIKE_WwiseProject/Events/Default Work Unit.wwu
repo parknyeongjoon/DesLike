@@ -3,74 +3,8 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="skeleton_Move" ID="{C199CDD3-65DF-45DE-9720-345F3677245B}">
-					<ChildrenList>
-						<Action Name="" ID="{094FD443-6BF7-46A5-8D10-76360B46CA32}" ShortID="1011503778">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="skeleton_Idle" ID="{B0EA1062-22F0-4241-A6AF-BE3C00EDB55A}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="skeleton_Atk" ID="{14322E6C-5CE8-4445-BC7D-52E123E55A47}">
-					<ChildrenList>
-						<Action Name="" ID="{94B49FBC-15D3-4A6A-B1BA-2EA254F6A54C}" ShortID="679560711">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="skeleton_Atk" ID="{64B4AE77-75B8-477D-BF95-8985A1D8EFE8}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Dead_or_Alive" ID="{9C3A3187-624A-4760-B9EF-E5A40674CAC0}">
-					<ChildrenList>
-						<Action Name="" ID="{F655CECC-E1EE-4CEB-AE52-7BDB3D2A6EB5}" ShortID="909957961">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="skeleton_Idle" ID="{B0EA1062-22F0-4241-A6AF-BE3C00EDB55A}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{66EDB1AB-23F7-4A1C-AF6C-6AE97AB9E477}" ShortID="838162709">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="skeletin_Pain" ID="{B9B7E529-29A5-4AF2-A413-1EA08F68ACC4}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{C51A3FBF-C6A1-4A3A-A434-9FF39C2B2379}" ShortID="88835492">
-							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="skeletin_Pain" ID="{B9B7E529-29A5-4AF2-A413-1EA08F68ACC4}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="test_UI" ID="{8B4F8B67-E687-4CD5-89DD-564E295D8ADD}">
-					<ChildrenList>
-						<Action Name="" ID="{49387F96-DEEE-44DD-9240-EFCDE35769EA}" ShortID="766649548">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="test_UI" ID="{500BFA5F-14CB-4F61-A721-A8467C117EF7}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="test_Idle" ID="{EE511A46-277E-4DF5-BC91-175CD4EABDE5}"/>
+				<Event Name="Skill_1" ID="{1B80026B-C969-4C40-B2AC-7B1720A802C6}"/>
+				<Event Name="_23101" ID="{62AF0119-7F66-48F1-AAB7-28AB84F16783}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

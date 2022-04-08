@@ -7,7 +7,7 @@ public class RelicManager : MonoBehaviour
 {
     static RelicManager instance;
 
-    public List<Relic> relicList;
+    public List<Relic> relicList = new List<Relic>();
 
     public Canvas relicCanvas;
 

@@ -33,7 +33,6 @@ public class MouseManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        DontDestroyOnLoad(this.gameObject);
         SetIdleCursorTexture();
         mouseState = Mouse_State.Idle;
     }

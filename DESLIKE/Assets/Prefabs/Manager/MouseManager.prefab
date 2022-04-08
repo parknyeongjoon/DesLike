@@ -98,7 +98,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.33333334
+  m_Radius: 1
 --- !u!1 &2009028312893990654
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,9 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b8e469f7ca501e4b9a8e349dfef5ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleUIManager: {fileID: 0}
   aimCursorTexture: {fileID: 2800000, guid: b45c33ea962e7b84fab4b037f7b927e5, type: 3}
-  IdleCursorTexture: {fileID: 2800000, guid: 5fc5b138b2b30784f8e9ee631befa484, type: 3}
   grenadeExtent: {fileID: 2009028312326696495}
+  mouseFocus: {fileID: 0}
+  skillPos: {x: 0, y: 0, z: 0}
   mouseState: 0
-  SkillTarget: {fileID: 0}

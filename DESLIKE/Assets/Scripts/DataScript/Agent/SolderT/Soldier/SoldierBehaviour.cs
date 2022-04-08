@@ -22,7 +22,6 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
 
     protected override IEnumerator Idle_Behaviour()
     {
-        AkSoundEngine.PostEvent("skeleton_Move", gameObject);
         while (heroInfo.state == Soldier_State.Idle)
         {
             heroInfo.state = Soldier_State.Detect;

@@ -54,14 +54,11 @@ public class HeroBtnScript : MonoBehaviour
     void Set_PortsOption()
     {
         List<Option> option = heroSelectSoldierOption.soldierOption;
-        //빌드 전 초기화 해주고 지우기
         for(int i = 0; i < allyPorts.portDatas.Length; i++)
         {
-            allyPorts.portDatas[i].soldierCode = null;
-            allyPorts.portDatas[i].mutantCode = null;
+            allyPorts.portDatas[i] = new PortData();
         }
-        //지우기
-        allyPorts.activeSoldierList = new Dictionary<string, SoldierData>();
+        allyPorts.activeSoldierList.Clear();
         for (int i = 0; i < option.Count; i++)
         {
             allyPorts.activeSoldierList.Add(option[i].soldierData.code, Instantiate(option[i].soldierData));

@@ -21,9 +21,7 @@ public class PortInfo : MonoBehaviour
 
     void OnEnable()
     {
-        if (portData.soldierCode == "") { portData.soldierCode = null; }//지우기?
-        if(portData.mutantCode == "") { portData.mutantCode = null; }//지우기?
-        if (portData.soldierCode != null)
+        if (portData.soldierCode != "")
         {
             image.sprite = SaveManager.Instance.dataSheet.soldierDataSheet[portData.soldierCode].sprite;
         }
@@ -33,7 +31,7 @@ public class PortInfo : MonoBehaviour
     {
         if(PortManager.Instance.portState == Port_State.SetSoldier)//set 상태일 때
         {
-            if(portData.unlock && portData.soldierCode == null)//언락된 빈 포트면 병사 적용
+            if(portData.unlock && portData.soldierCode == "")//언락된 빈 포트면 병사 적용
             {
                 PortManager.Instance.portState = Port_State.Idle;
                 portData.soldierCode = PortManager.Instance.rewardSoldierCode;
@@ -62,7 +60,7 @@ public class PortInfo : MonoBehaviour
         }
         else if(PortManager.Instance.portState == Port_State.Sell)
         {
-            if (portData.soldierCode != null)//병사가 들어있다면 판매
+            if (portData.soldierCode != "")//병사가 들어있다면 판매
             {
                 PortManager.Instance.ControllActiveBtn(SellBtn);
             }
@@ -73,7 +71,7 @@ public class PortInfo : MonoBehaviour
     {
         //SaveManager.Instance.gameData.goodsCollection.food += (int)(tempSoldier.cost * 0.7f);//골드로 바꾸기
         //돈 추가
-        portData.soldierCode = null;
+        portData.soldierCode = "";
         portData.portImg.sprite = null;
         SellBtn.SetActive(false);
     }
@@ -88,7 +86,7 @@ public class PortInfo : MonoBehaviour
 
     public void PortDragStart()
     {
-        if(PortManager.Instance.portState == Port_State.Idle && portData.soldierCode != null)
+        if(PortManager.Instance.portState == Port_State.Idle && portData.soldierCode != "")
         {
             PortManager.Instance.portState = Port_State.Drag;
             PortManager.Instance.originPort = portData;
@@ -116,13 +114,13 @@ public class PortInfo : MonoBehaviour
     {
         if(PortManager.Instance.portState == Port_State.Drag && portData.unlock)
         {
-            if(portData.soldierCode == null)
+            if(portData.soldierCode == "")
             {
                 portData.soldierCode = PortManager.Instance.originPort.soldierCode;
-                PortManager.Instance.originPort.soldierCode = null;
+                PortManager.Instance.originPort.soldierCode = "";
                 PortManager.Instance.originPort.portImg.sprite = null;
             }
-            else if(portData.soldierCode != null)
+            else if(portData.soldierCode != "")
             {
                 string tempSoldierCode;
                 tempSoldierCode = portData.soldierCode;
@@ -144,7 +142,7 @@ public class PortInfo : MonoBehaviour
         }
         else if (PortManager.Instance.portState == Port_State.SetSoldier)//세팅중이라면
         {
-            if (portData.unlock && portData.soldierCode == null)
+            if (portData.unlock && portData.soldierCode == "")
             {
                 PortManager.Instance.ControllActiveBtn(highLightImg);
             }
@@ -169,7 +167,7 @@ public class PortInfo : MonoBehaviour
         }
         else if (PortManager.Instance.portState == Port_State.SetSoldier)//세팅중이라면
         {
-            if (portData.unlock && portData.soldierCode == null)
+            if (portData.unlock && portData.soldierCode == "")
             {
                 highLightImg.SetActive(false);
             }

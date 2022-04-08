@@ -15,7 +15,7 @@ public class MapNode : ScriptableObject
     public void SetAbleReward()
     {
 
-        kingdom = Kingdom.Physic;   // 수정 필요
+        kingdom = Kingdom.Physic;  // 수정 필요
         int comNorSolC = map.commonNorSol.Count;
         int comEpicSolC = map.commonEpicSol.Count;
         int comNorRelC = map.commonNorRel.Count;

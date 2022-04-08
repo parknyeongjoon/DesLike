@@ -3,8 +3,81 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Skill_1" ID="{1B80026B-C969-4C40-B2AC-7B1720A802C6}"/>
-				<Event Name="_23101" ID="{62AF0119-7F66-48F1-AAB7-28AB84F16783}"/>
+				<Event Name="H_23101_Die" ID="{6DFDF849-465A-4E90-B3F2-65878C467EA7}">
+					<ChildrenList>
+						<Action Name="" ID="{7C2DBFAA-D6F3-4F6F-89AD-549817FBF3DE}" ShortID="870113499">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Escaping the Ruins W" ID="{2D2EA309-68E5-4C44-B320-80D3365AE11C}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FA6080E7-50D6-4B21-93DD-7A51A3127946}" ShortID="466168267">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="23101_Die_Print_01" ID="{A7775F42-4D82-4C91-8C7C-4BB3A4F25390}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6A37626B-57A7-4291-9E02-CE2599F0A4E5}" ShortID="656032919">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GameOver_Print_01" ID="{0E86918E-1B7B-4BC2-84EB-82284A9314E4}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="H_23101_Skill_1" ID="{E52C2AB2-EB1C-4CA5-A2EA-52DC2E7B6B58}">
+					<ChildrenList>
+						<Action Name="" ID="{7DAB055C-CB7A-4570-9ECC-8AFC2772304E}" ShortID="748128606">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="23101_Skill_1_Print_01" ID="{2367BC5A-4E94-49DB-B3C5-FF2D34F55E3E}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="H_23101_Skill_2" ID="{3907E37E-F8D4-466B-8177-FE039240D740}">
+					<ChildrenList>
+						<Action Name="" ID="{4ED2B936-07AA-4E5D-93E4-0E899A856644}" ShortID="109970972">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="23101_Skill_2_Print_01" ID="{8A50DA9E-C9EC-43EB-AB2D-2AC32A3EFF3D}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Battle_Start" ID="{B85E8104-17E7-4C9D-8087-438DF374E492}">
+					<ChildrenList>
+						<Action Name="" ID="{89D6331C-D47F-45D3-B923-A126C31EA4B3}" ShortID="453803723">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Escaping the Ruins W" ID="{2D2EA309-68E5-4C44-B320-80D3365AE11C}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Battle_End" ID="{04CEBDD4-10E3-49F1-BB87-327E717A33EE}">
+					<ChildrenList>
+						<Action Name="" ID="{7EFBE4C9-9ABB-4DE9-B155-9DA8CCA8FD39}" ShortID="746081918">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

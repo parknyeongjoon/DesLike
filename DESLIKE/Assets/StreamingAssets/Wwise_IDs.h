@@ -13,10 +13,10 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID DEAD_OR_ALIVE = 3575957003U;
-        static const AkUniqueID SKELETON_ATK = 180084035U;
-        static const AkUniqueID SKELETON_MOVE = 3933512188U;
-        static const AkUniqueID TEST_UI = 1896376002U;
+        static const AkUniqueID BATTLE_START = 2706291346U;
+        static const AkUniqueID H_23101_DIE = 3025390842U;
+        static const AkUniqueID H_23101_SKILL_1 = 2377059575U;
+        static const AkUniqueID H_23101_SKILL_2 = 2377059572U;
     } // namespace EVENTS
 
     namespace STATES
@@ -43,8 +43,8 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID H_BUS = 1962540672U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
-        static const AkUniqueID SKELETON_ATK_BUS = 2491616377U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

@@ -3,13 +3,18 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{8C1B3053-4448-4A6F-BE7C-E4719104764C}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="Z:\Volumes\Samsung_T5\DesLike\DesLike SFX\23101_Fix\"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Desktop\Music\ProTools\DesLike_Ver_01\Bounced Files\"/>
+				<Property Name="Event Action List\{04CEBDD4-10E3-49F1-BB87-327E717A33EE}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{14322E6C-5CE8-4445-BC7D-52E123E55A47}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{1B80026B-C969-4C40-B2AC-7B1720A802C6}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{3907E37E-F8D4-466B-8177-FE039240D740}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{62AF0119-7F66-48F1-AAB7-28AB84F16783}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{6DFDF849-465A-4E90-B3F2-65878C467EA7}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{8B4F8B67-E687-4CD5-89DD-564E295D8ADD}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{9C3A3187-624A-4760-B9EF-E5A40674CAC0}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{B85E8104-17E7-4C9D-8087-438DF374E492}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{C199CDD3-65DF-45DE-9720-345F3677245B}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{E52C2AB2-EB1C-4CA5-A2EA-52DC2E7B6B58}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{EE511A46-277E-4DF5-BC91-175CD4EABDE5}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
@@ -68,7 +73,7 @@
 				<Property Name="ProjectExplorer\x64_Expanded_21_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_22_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="2KQUFaYdKkGhfnXKDCFJ88hvcWN4QdFOs/SCXkr/q5c="/>
-				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="6aAPyYnUBUeLRXWOHvB6fABLIghreRRIlg4kgX3MK68="/>
+				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="pzoGKlD1Q0Oth4QKP8sWo+mgD8mJ1AVHi0V1jh7wenwASyIIa3kUSJYOJIF9zCuvdtGE6gLsT02Kb/4DaX+x+Q=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_6_1" Type="string" Value=""/>

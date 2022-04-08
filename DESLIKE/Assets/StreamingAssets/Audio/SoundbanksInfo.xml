@@ -11,53 +11,49 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3792091038">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3709902684">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="2789213456">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3913773969">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3575957003" Name="Dead_or_Alive" ObjectPath="\Events\Default Work Unit\Dead_or_Alive" DurationType="OneShot" DurationMin="1.082805" DurationMax="1.669334">
+				<Event Id="2706291346" Name="Battle_Start" ObjectPath="\Events\Default Work Unit\Battle_Start" DurationType="OneShot" DurationMin="136.130417" DurationMax="136.130417">
 					<IncludedMemoryFiles>
-						<File Id="192387954" Language="SFX">
-							<ShortName>Pain_01_01.wav</ShortName>
-							<Path>SFX/Pain_01_01_AB529961.wem</Path>
-						</File>
-						<File Id="971131732" Language="SFX">
-							<ShortName>Pain_02_01.wav</ShortName>
-							<Path>SFX/Pain_02_01_AB18661B.wem</Path>
+						<File Id="62381386" Language="SFX">
+							<ShortName>Escaping the Ruins W.wav</ShortName>
+							<Path>SFX/Escaping the Ruins W_642AD4A4.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="180084035" Name="skeleton_Atk" ObjectPath="\Events\Default Work Unit\skeleton_Atk" DurationType="OneShot" DurationMin="0.490129" DurationMax="0.646729">
+				<Event Id="3025390842" Name="H_23101_Die" ObjectPath="\Events\Default Work Unit\H_23101_Die" DurationType="OneShot" DurationMin="3.940282" DurationMax="4.552415">
 					<IncludedMemoryFiles>
-						<File Id="50927963" Language="SFX">
-							<ShortName>Sword_Print_02.wav</ShortName>
-							<Path>SFX/Sword_Print_02_AE53FB9C.wem</Path>
+						<File Id="234665702" Language="SFX">
+							<ShortName>23101_Die_Print_01.wav</ShortName>
+							<Path>SFX/23101_Die_Print_01_10C4C929.wem</Path>
+						</File>
+						<File Id="554435908" Language="SFX">
+							<ShortName>GameOver_Print_01.wav</ShortName>
+							<Path>SFX/GameOver_Print_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3933512188" Name="skeleton_Move" ObjectPath="\Events\Default Work Unit\skeleton_Move" DurationType="OneShot" DurationMin="2.907045" DurationMax="3.780875">
+				<Event Id="2377059575" Name="H_23101_Skill_1" ObjectPath="\Events\Default Work Unit\H_23101_Skill_1" DurationType="OneShot" DurationMin="4.084604" DurationMax="4.084604">
 					<IncludedMemoryFiles>
-						<File Id="23314993" Language="SFX">
-							<ShortName>Idle_01_01.wav</ShortName>
-							<Path>SFX/Idle_01_01_10C4C929.wem</Path>
-						</File>
-						<File Id="971680492" Language="SFX">
-							<ShortName>Idle_02_01.wav</ShortName>
-							<Path>SFX/Idle_02_01_10C4C929.wem</Path>
+						<File Id="797527484" Language="SFX">
+							<ShortName>23101_Skill_1_Print_01.wav</ShortName>
+							<Path>SFX/23101_Skill_1_Print_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1896376002" Name="test_UI" ObjectPath="\Events\Default Work Unit\test_UI" DurationType="OneShot" DurationMin="3.780875" DurationMax="3.780875">
+				<Event Id="2377059572" Name="H_23101_Skill_2" ObjectPath="\Events\Default Work Unit\H_23101_Skill_2" DurationType="OneShot" DurationMin="3.3165" DurationMax="3.3165">
 					<IncludedMemoryFiles>
-						<File Id="369774400" Language="SFX">
-							<ShortName>Sword_Print_02.wav</ShortName>
-							<Path>SFX/Sword_Print_02_10C4C929.wem</Path>
+						<File Id="290311062" Language="SFX">
+							<ShortName>23101_Skill_2_Print_01.wav</ShortName>
+							<Path>SFX/23101_Skill_2_Print_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

@@ -98,6 +98,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void timeScale0()
+    {
+        GamePause(true);
+    }
+
     public void timeScale1()
     {
         GamePause(false);

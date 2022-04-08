@@ -12,5 +12,6 @@ public class SoldierOptionBtn : MonoBehaviour
         btn0.soldierReward = SaveManager.Instance.map.curMapNode.reward.soldierReward[0];
         btn1.soldierReward = SaveManager.Instance.map.curMapNode.reward.soldierReward[1];
         soldierRewardPanel.SetActive(true);
+        Destroy(gameObject);
     }
 }

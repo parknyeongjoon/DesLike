@@ -1292,7 +1292,7 @@ MonoBehaviour:
   soldierReward:
     soldier: {fileID: 11400000, guid: 27be6089e9daeb6499a3dfc2addf52a9, type: 2}
     mutant: {fileID: 0}
-  rewardMutantCode: 0
+  rewardMutantCode: 
   originPort: {fileID: 0}
 --- !u!1 &5528462981671687439
 GameObject:

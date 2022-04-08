@@ -36,7 +36,7 @@ public class SoldierRewardBtn : MonoBehaviour
     {
         Instantiate(PortCanvas);
         PortManager.Instance.soldierReward = soldierReward;
-        StartCoroutine(PortManager.Instance.SetSoldierCoroutine());
+        PortManager.Instance.StartCoroutine(PortManager.Instance.SetSoldierCoroutine());
         Destroy(transform.parent.gameObject);
     }
 

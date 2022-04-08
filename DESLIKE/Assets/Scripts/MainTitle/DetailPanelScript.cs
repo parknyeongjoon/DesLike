@@ -23,6 +23,5 @@ public class DetailPanelScript : MonoBehaviour
         //detailPanelScript.atk.text = soldierData.Atk.ToString();atkData 받아오기
         def.text = soldierData.def.ToString();
         rarity.text = soldierData.rarity.ToString();
-        cost.text = soldierData.cost.ToString();
     }
 }

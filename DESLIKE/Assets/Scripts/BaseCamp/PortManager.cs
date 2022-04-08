@@ -26,7 +26,7 @@ public class PortManager : MonoBehaviour
 
     public Port_State portState;
 
-    public string rewardSoldierCode;
+    public SoldierReward soldierReward;
     public string rewardMutantCode;
 
     public PortData originPort;
@@ -49,7 +49,7 @@ public class PortManager : MonoBehaviour
             yield return null;
         }
         portState = Port_State.Idle;
-        allyPortDatas.curBarrierStrength += SaveManager.Instance.dataSheet.soldierDataSheet[PortManager.Instance.rewardSoldierCode].needBarrier;
+        allyPortDatas.curBarrierStrength += SaveManager.Instance.dataSheet.soldierDataSheet[PortManager.Instance.soldierReward.soldier.code].needBarrier;
         barrierStrength.text = allyPortDatas.curBarrierStrength + "/" + allyPortDatas.maxBarrierStrength;
         ReturnPortImg();
         rewardSoldierPanel.SetActive(false);
@@ -93,7 +93,7 @@ public class PortManager : MonoBehaviour
     {
         for (int i = 0; i < allyPortDatas.portDatas.Length; i++)
         {
-            if (allyPortDatas.portDatas[i].soldierCode == PortManager.instance.rewardSoldierCode)
+            if (allyPortDatas.portDatas[i].soldierCode == PortManager.instance.soldierReward.soldier.code)
             {
                 allyPortDatas.portDatas[i].portImg.color = new Color(0, 0.7f, 0);
             }

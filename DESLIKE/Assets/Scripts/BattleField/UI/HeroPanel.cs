@@ -29,21 +29,20 @@ public class HeroPanel : MonoBehaviour
 
     void Awake()
     {
-        hero = GameObject.Find("Hero");
-        heroInfo = hero.GetComponent<HeroInfo>();
-        skills = hero.GetComponent<HeroSkillUse>().skillScripts;
         buffImg = buffObject.GetComponentInChildren<Image>();
         debuffImg = debuffObject.GetComponentInChildren<Image>();
     }
 
     void Start()
     {
+        hero = GameObject.Find(SaveManager.Instance.heroPrefab.name + "(Clone)");
+        heroInfo = hero.GetComponent<HeroInfo>();
+        skills = hero.GetComponent<HeroSkillUse>().skillScripts;
         SetHeroPanel();
     }
 
     public void SetHeroPanel()
     {
-        heroInfo.castleData = SaveManager.Instance.gameData.heroSaveData.heroData;
         Hero_Portrait.sprite = heroInfo.castleData.sprite;
         for (int i = 0; i < skills.Length; i++)
         {
@@ -82,7 +81,7 @@ public class HeroPanel : MonoBehaviour
         }
     }
 
-    public IEnumerator RenewalSkillPanel(int index)//코루틴으로 3개 돌리기 스킬 쓰고 나면 코루틴 돌리는 식으로
+    public IEnumerator RenewalSkillPanel(int index)//코루틴으로 3개 돌리기 스킬 쓰고 나면 코루틴 돌리는 식으로//스킬 쓰면 코루틴을 돌리기
     {
         if (skills[index] as ActiveSkill)
         {

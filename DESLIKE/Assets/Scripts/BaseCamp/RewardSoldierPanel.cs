@@ -11,7 +11,7 @@ public class RewardSoldierPanel : MonoBehaviour
 
     void OnEnable()
     {
-        text.text = SaveManager.Instance.dataSheet.soldierDataSheet[PortManager.Instance.rewardSoldierCode].needBarrier.ToString();
-        img.sprite = SaveManager.Instance.dataSheet.soldierDataSheet[PortManager.Instance.rewardSoldierCode].sprite;
+        text.text = SaveManager.Instance.dataSheet.soldierDataSheet[PortManager.Instance.soldierReward.soldier.code].needBarrier.ToString();
+        img.sprite = SaveManager.Instance.dataSheet.soldierDataSheet[PortManager.Instance.soldierReward.soldier.code].sprite;
     }
 }

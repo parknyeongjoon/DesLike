@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e8a64bf258f5d347821faa968d690da, type: 3}
-  m_Name: APortData 17
+  m_Script: {fileID: 11500000, guid: 5abd164c968b2e948b6f190f69b0816a, type: 3}
+  m_Name: ratHero GoodsCollection
   m_EditorClassIdentifier: 
-  soldierCode: 
-  mutantCode: 
-  unlock: 0
-  portImg: {fileID: 0}
+  goodsSaveData:
+    gold: 50
+    magicalStone: 1

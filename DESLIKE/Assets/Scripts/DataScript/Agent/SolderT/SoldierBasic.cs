@@ -44,12 +44,12 @@ public class SoldierBasic : MonoBehaviour
         yield return new WaitForFixedUpdate();
     }
 
-    protected virtual IEnumerator Stun_Behaviour()
+    protected virtual IEnumerator Stun_Behaviour(float stunTime)
     {
         while (heroInfo.state == Soldier_State.Stun)
         {
             Debug.Log("스턴");
-            yield return new WaitForFixedUpdate();
+            yield return new WaitForSeconds(stunTime);
         }
         heroInfo.state = Soldier_State.Idle;
         StartCoroutine(Idle_Behaviour());

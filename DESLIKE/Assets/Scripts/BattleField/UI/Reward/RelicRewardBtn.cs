@@ -2,16 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class RelicRewardBtn : MonoBehaviour
 {
-    RelicManager relicManager;
-    BattleUIManager battleUIManager;
-
-    public GameObject relic;
-
-    [SerializeField]
-    Button button;
     [SerializeField]
     GameObject toolTipPanel;
     [SerializeField]
@@ -22,17 +16,18 @@ public class RelicRewardBtn : MonoBehaviour
 
     void Start()
     {
-        relicManager = RelicManager.Instance;
-        relicScript = relic.GetComponent<Relic>();
+        relicScript = SaveManager.Instance.map.curMapNode.reward.relic.GetComponent<Relic>();
         relicData = relicScript.relicData;
-        toolTipPanel.SetActive(false);
+        //toolTipPanel.SetActive(false);
+        transform.GetChild(0).GetComponent<TMP_Text>().text = relicData.relicName.ToString();
+        transform.GetChild(1).GetComponent<Image>().sprite = relicData.relicImg;
     }
 
     public void GetReward()
     {
-        relicManager.relicList.Add(relicScript);
-        Instantiate(relic, relicManager.relicCanvas.transform.GetChild(0).transform);
-        button.interactable = false;
+        RelicManager.Instance.relicList.Add(relicScript);
+        Instantiate(SaveManager.Instance.map.curMapNode.reward.relic, RelicManager.Instance.relicCanvas.transform.GetChild(0).transform);
+        Destroy(gameObject);
     }
 
     public void SetToolTip()

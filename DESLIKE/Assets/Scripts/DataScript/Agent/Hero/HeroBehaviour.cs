@@ -8,7 +8,6 @@ public class HeroBehaviour : SoldierBasic
     new void Start()
     {
         base.Start();
-        DontDestroyOnLoad(this.gameObject);
     }
 
     void Update()

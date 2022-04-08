@@ -42,7 +42,12 @@ public class Spawner : MonoBehaviour
     {
         GameObject createSoldier;
         SoldierData soldierData;
-
+        //영웅 소환
+        if(team == Team.Ally && SaveManager.Instance.heroPrefab != null)
+        {
+            Instantiate(SaveManager.Instance.heroPrefab, new Vector3(-20, 0, 0), Quaternion.identity);
+        }
+        //병사 소환
         for (int portIndex = 0; portIndex < portDatas.portDatas.Length; portIndex++)
         {
             if (portDatas.portDatas[portIndex].soldierCode != "")

@@ -81,6 +81,7 @@ public class SaveManager : MonoBehaviour
 
     public PortDatas allyPortDatas;//아군이 사용할 PortDatas
     public Map map;//맵 스크립터블 오브젝트
+    public GameObject heroPrefab;
 
     public void SavePortDatas()
     {
@@ -97,7 +98,7 @@ public class SaveManager : MonoBehaviour
         gameData.portSaveDatas.curBarrierStrength = allyPortDatas.curBarrierStrength;
     }
 
-    public void LoadPortsDatas()
+    public void LoadPortsDatas()//Continue버튼에서만 사용할 지
     {
         for (int i = 0; i < gameData.portSaveDatas.portSaveList.Length; i++)
         {

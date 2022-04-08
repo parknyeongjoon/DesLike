@@ -582,7 +582,7 @@ PrefabInstance:
     - target: {fileID: 7116624685446316913, guid: 98c43156be998d34d833a7bf183e4fd5,
         type: 3}
       propertyPath: m_Name
-      value: ratHero
+      value: testRatSoldier
       objectReference: {fileID: 0}
     - target: {fileID: 7295110403389100804, guid: 98c43156be998d34d833a7bf183e4fd5,
         type: 3}
@@ -713,19 +713,19 @@ PrefabInstance:
         type: 3}
       propertyPath: animClips.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: aaf1368e924ad4940a283bd82f31c470,
+      objectReference: {fileID: 11400000, guid: 2ab6ecd7d7d258c4b93ad85f06770314,
         type: 2}
     - target: {fileID: 8576553565259397100, guid: 98c43156be998d34d833a7bf183e4fd5,
         type: 3}
       propertyPath: animClips.Array.data[1]
       value: 
-      objectReference: {fileID: 11400000, guid: 60f4ead8a70878247b549a22a536e65d,
+      objectReference: {fileID: 11400000, guid: ce7bb0ed71dc85246a9bb8dea24f4697,
         type: 2}
     - target: {fileID: 8576553565259397100, guid: 98c43156be998d34d833a7bf183e4fd5,
         type: 3}
       propertyPath: animClips.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: c7c6e539de6acce48a42c5ffa1f30e61,
+      objectReference: {fileID: 11400000, guid: ce0374826a3997a43ad52e1134a842db,
         type: 2}
     - target: {fileID: 8741144036494678244, guid: 98c43156be998d34d833a7bf183e4fd5,
         type: 3}

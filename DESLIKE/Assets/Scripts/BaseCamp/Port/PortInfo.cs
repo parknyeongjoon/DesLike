@@ -34,13 +34,14 @@ public class PortInfo : MonoBehaviour
             if(portData.unlock && portData.soldierCode == "")//언락된 빈 포트면 병사 적용
             {
                 PortManager.Instance.portState = Port_State.Idle;
-                portData.soldierCode = PortManager.Instance.rewardSoldierCode;
+                portData.soldierCode = PortManager.Instance.soldierReward.soldier.code;
+                if (PortManager.Instance.soldierReward.mutant != null) { portData.mutantCode = PortManager.Instance.soldierReward.mutant.code; }
                 image.sprite = SaveManager.Instance.dataSheet.soldierDataSheet[portData.soldierCode].sprite;
             }
         }
         else if(PortManager.Instance.portState == Port_State.SetMutant)//뮤턴트 적용시에
         {
-            if(portData.soldierCode == PortManager.Instance.rewardSoldierCode)
+            if(portData.soldierCode == PortManager.Instance.soldierReward.soldier.code)
             {
                 PortManager.Instance.originPort = portData;
                 PortManager.Instance.ControllActiveBtn(highLightImg);
@@ -149,7 +150,7 @@ public class PortInfo : MonoBehaviour
         }
         else if (PortManager.Instance.portState == Port_State.SetMutant)//뮤턴트 세팅중이라면
         {
-            if(portData.soldierCode == PortManager.Instance.rewardSoldierCode && PortManager.Instance.originPort == null)
+            if(portData.soldierCode == PortManager.Instance.soldierReward.soldier.code && PortManager.Instance.originPort == null)
             {
                 PortManager.Instance.ControllActiveBtn(highLightImg);
             }
@@ -174,7 +175,7 @@ public class PortInfo : MonoBehaviour
         }
         else if (PortManager.Instance.portState == Port_State.SetMutant)//뮤턴트 세팅중이라면
         {
-            if (portData.soldierCode == PortManager.Instance.rewardSoldierCode && PortManager.Instance.originPort == null)
+            if (portData.soldierCode == PortManager.Instance.soldierReward.soldier.code && PortManager.Instance.originPort == null)
             {
                 highLightImg.SetActive(false);
             }

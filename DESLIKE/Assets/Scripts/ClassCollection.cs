@@ -91,14 +91,14 @@ public class Reward
 }
 
 [System.Serializable]
-public struct SoldierReward //soldier랑 mutant 한 쌍으로 묶일 수 있게 만들어서 저장하기
+public class SoldierReward //soldier랑 mutant 한 쌍으로 묶일 수 있게 만들어서 저장하기
 {
     public SoldierData soldier;
-    public GameObject mutant;
+    public MutantData mutant;
 }
 
 [System.Serializable]
-public struct Option
+public class Option
 {
     public SoldierData soldierData;
     public GameObject mutant;

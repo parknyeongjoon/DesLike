@@ -18,7 +18,7 @@ public class HeroBtnScript : MonoBehaviour
     [SerializeField]
     HeroDetailScript heroDetailScript;
     [SerializeField]
-    HeroInfo heroInfo;
+    GameObject heroPrefab;
     [SerializeField]
     GameObject campRelic;
     [SerializeField]
@@ -31,16 +31,16 @@ public class HeroBtnScript : MonoBehaviour
 
     public void SelectHero()
     {
-        mainTitleScript.startHandler = SetHeroInfo;
+        mainTitleScript.startHandler = SetHeroPrefab;
         mainTitleScript.startHandler += SetHeroSaveData;
         mainTitleScript.startHandler += Set_PortsOption;
         mainTitleScript.startHandler += Set_GoodsCollection;
         mainTitleScript.startHandler += SetCampRelic;
     }
 
-    void SetHeroInfo()
+    void SetHeroPrefab()
     {
-        heroInfo.castleData = heroData;
+        SaveManager.Instance.heroPrefab = heroPrefab;
     }
 
     void SetHeroSaveData()
@@ -48,7 +48,7 @@ public class HeroBtnScript : MonoBehaviour
         saveManager.gameData.heroSaveData.heroData = heroData;
         saveManager.gameData.heroSaveData.cur_Hp = heroData.hp;
         saveManager.gameData.heroSaveData.cur_Mp = heroData.mp;
-        saveManager.gameData.heroSaveData.resurrection = heroInfo.resurrection;
+        saveManager.gameData.heroSaveData.resurrection = heroPrefab.GetComponent<HeroInfo>().resurrection;
     }
 
     void Set_PortsOption()
@@ -56,9 +56,15 @@ public class HeroBtnScript : MonoBehaviour
         List<Option> option = heroSelectSoldierOption.soldierOption;
         for(int i = 0; i < allyPorts.portDatas.Length; i++)
         {
-            allyPorts.portDatas[i] = new PortData();
+            allyPorts.portDatas[i].soldierCode = "";
+            allyPorts.portDatas[i].mutantCode = "";
+            allyPorts.portDatas[i].unlock = false;
         }
         allyPorts.activeSoldierList.Clear();
+        for(int i = 0; i < 10; i++)//수 변경
+        {
+            allyPorts.portDatas[i].unlock = true;
+        }
         for (int i = 0; i < option.Count; i++)
         {
             allyPorts.activeSoldierList.Add(option[i].soldierData.code, Instantiate(option[i].soldierData));

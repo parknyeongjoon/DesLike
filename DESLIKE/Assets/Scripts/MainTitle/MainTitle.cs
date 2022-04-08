@@ -9,8 +9,6 @@ public class MainTitle : MonoBehaviour
     [SerializeField]
     GameObject Dictionary_Panel, HeroSelect_Panel;
     [SerializeField]
-    GameObject hero;
-    [SerializeField]
     HeroInfo heroInfo;
     [SerializeField]
     Button continueBtn;
@@ -36,7 +34,6 @@ public class MainTitle : MonoBehaviour
         saveManager.map.isMap = false;
         saveManager.gameData.canContinue = true;
         startHandler?.Invoke();
-        hero.SetActive(true);
         SceneManager.LoadScene("StageSelect");
     }
 
@@ -44,7 +41,6 @@ public class MainTitle : MonoBehaviour
     {
         heroInfo.castleData = saveManager.gameData.heroSaveData.heroData;
         //SaveMangaer.gameData에서 정보 불러오기
-        hero.SetActive(true);
         SceneManager.LoadScene("Map");
     }
 

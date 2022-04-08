@@ -1289,7 +1289,9 @@ MonoBehaviour:
   mutantOKBtn: {fileID: 5207767316505101910}
   activeBtn: {fileID: 0}
   portState: 0
-  rewardSoldierCode: 5
+  soldierReward:
+    soldier: {fileID: 11400000, guid: 27be6089e9daeb6499a3dfc2addf52a9, type: 2}
+    mutant: {fileID: 0}
   rewardMutantCode: 0
   originPort: {fileID: 0}
 --- !u!1 &5528462981671687439
@@ -5725,6 +5727,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5528462981671687436}
     m_Modifications:
+    - target: {fileID: 2783635115931871402, guid: d3a8bfead11276d4d8bda41acc0f5ca7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3448743331257399626, guid: d3a8bfead11276d4d8bda41acc0f5ca7,
         type: 3}
       propertyPath: m_Pivot.x

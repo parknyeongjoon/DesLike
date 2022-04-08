@@ -32,7 +32,7 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
         StopSkillCoroutine();
     }
 
-    void SetSkillHandler()
+    void SetSkillHandler()//지우기?
     {
         skillScripts = GetComponents<Skill>();
     }

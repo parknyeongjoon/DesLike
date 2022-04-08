@@ -9,12 +9,11 @@ public class MapNode : ScriptableObject
     public bool isNode = false;
     public List<SoldierData> ableSoldierRewards = new List<SoldierData>();    // 위 3개를 조합해서 나오는 리워드 리스트
     public List<GameObject> ableRelicRewards = new List<GameObject>();
-    public Reward reward;
     public Kingdom kingdom;
-
+    public Reward reward;
+    
     public void SetAbleReward()
     {
-
         kingdom = Kingdom.Physic;  // 수정 필요
         int comNorSolC = map.commonNorSol.Count;
         int comEpicSolC = map.commonEpicSol.Count;

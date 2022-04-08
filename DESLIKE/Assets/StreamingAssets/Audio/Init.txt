@@ -1,10 +1,11 @@
 State Group	ID	Name			Wwise Object Path	Notes
-	3575957003	Dead_or_Alive			\Default Work Unit\Dead_or_Alive	
+	3269609307	Game_Speed			\Default Work Unit\Game_Speed	
 
 State	ID	Name	State Group			Notes
-	655265632	Alive	Dead_or_Alive			
-	748895195	None	Dead_or_Alive			
-	2044049779	Dead	Dead_or_Alive			
+	748895195	None	Game_Speed			
+	1500973332	X1	Game_Speed			
+	1500973333	X0	Game_Speed			
+	1500973335	X2	Game_Speed			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	1962540672	H_Bus			\Default Work Unit\Master Audio Bus\Character Bus\H_Bus	

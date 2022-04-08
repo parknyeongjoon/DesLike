@@ -6,22 +6,12 @@
 				<SoundcasterSession Name="Pause_Test" ID="{A090452F-9719-4C96-B713-6DB6026A9DE8}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Is_Pause" ID="{4B85E0F3-1440-45F6-8294-BF70F35E7B72}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}"/>
-							<Position X="0" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Is_Resume" ID="{8085AFB5-04A5-4861-B460-524ECA01CB42}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}"/>
-							<Position X="1" Y="0"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Battle_Start" ID="{B85E8104-17E7-4C9D-8087-438DF374E492}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
-					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="None" ID="{AB2882AF-C7FF-4E55-90F0-F02C513C7D20}"/>
-					</CurrentStateList>
+					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 			</ChildrenList>

@@ -3,22 +3,47 @@
 	<States>
 		<WorkUnit Name="Default Work Unit" ID="{3F067C44-799A-434E-84DE-E4B16A1EBF61}" PersistMode="Standalone">
 			<ChildrenList>
-				<StateGroup Name="Dead_or_Alive" ID="{22C2FBAE-C61F-4963-AC8A-A051DC154FB6}">
+				<StateGroup Name="Game_Speed" ID="{531C82F0-6289-4DC0-9FAC-FBA1DEA54B9E}">
 					<ChildrenList>
-						<State Name="None" ID="{AB2882AF-C7FF-4E55-90F0-F02C513C7D20}"/>
-						<State Name="Dead" ID="{E5DF9AF6-854E-46E7-81A2-8A5D1BA3BE84}"/>
-						<State Name="Alive" ID="{DC9FC439-631C-41BA-97C8-7E73EDC4E34F}"/>
+						<State Name="None" ID="{B9FFA1F4-7C44-42A8-B90E-8CAD8E38CFA7}"/>
+						<State Name="X0" ID="{15DBB30C-37CF-4C41-A933-8CD4CB215F7D}"/>
+						<State Name="X1" ID="{DC2099EF-91E2-4D7C-89BE-0277675B2D01}"/>
+						<State Name="X2" ID="{A23936D1-BD2F-4A6E-8DF5-16565B571EE3}"/>
 					</ChildrenList>
 					<TransitionList>
 						<Transition>
-							<StartState Name="Alive" ID="{DC9FC439-631C-41BA-97C8-7E73EDC4E34F}"/>
-							<EndState Name="Dead" ID="{E5DF9AF6-854E-46E7-81A2-8A5D1BA3BE84}"/>
+							<StartState Name="X0" ID="{15DBB30C-37CF-4C41-A933-8CD4CB215F7D}"/>
+							<EndState Name="X1" ID="{DC2099EF-91E2-4D7C-89BE-0277675B2D01}"/>
 							<Time>1</Time>
 							<IsShared>false</IsShared>
 						</Transition>
 						<Transition>
-							<StartState Name="Dead" ID="{E5DF9AF6-854E-46E7-81A2-8A5D1BA3BE84}"/>
-							<EndState Name="Alive" ID="{DC9FC439-631C-41BA-97C8-7E73EDC4E34F}"/>
+							<StartState Name="X0" ID="{15DBB30C-37CF-4C41-A933-8CD4CB215F7D}"/>
+							<EndState Name="X2" ID="{A23936D1-BD2F-4A6E-8DF5-16565B571EE3}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="X1" ID="{DC2099EF-91E2-4D7C-89BE-0277675B2D01}"/>
+							<EndState Name="X0" ID="{15DBB30C-37CF-4C41-A933-8CD4CB215F7D}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="X1" ID="{DC2099EF-91E2-4D7C-89BE-0277675B2D01}"/>
+							<EndState Name="X2" ID="{A23936D1-BD2F-4A6E-8DF5-16565B571EE3}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="X2" ID="{A23936D1-BD2F-4A6E-8DF5-16565B571EE3}"/>
+							<EndState Name="X0" ID="{15DBB30C-37CF-4C41-A933-8CD4CB215F7D}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="X2" ID="{A23936D1-BD2F-4A6E-8DF5-16565B571EE3}"/>
+							<EndState Name="X1" ID="{DC2099EF-91E2-4D7C-89BE-0277675B2D01}"/>
 							<Time>1</Time>
 							<IsShared>false</IsShared>
 						</Transition>

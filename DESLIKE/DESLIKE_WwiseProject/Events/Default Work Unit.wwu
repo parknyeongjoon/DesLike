@@ -89,9 +89,9 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Is_Pause" ID="{4B85E0F3-1440-45F6-8294-BF70F35E7B72}">
+				<Event Name="Game_Speed_Pause" ID="{D0F92340-3C3D-4203-B32C-007AB838B295}">
 					<ChildrenList>
-						<Action Name="" ID="{F022235D-34D5-4EF3-A153-28CC815C3435}" ShortID="261405867">
+						<Action Name="" ID="{9AABE0BD-4D0D-4907-AA8B-3C7EDB779267}" ShortID="993988258">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="7"/>
 								<Property Name="Scope" Type="int16" Value="1"/>
@@ -102,7 +102,7 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{4501D95C-C3D4-4235-BB0B-C7CB69B0C8F7}" ShortID="327633244">
+						<Action Name="" ID="{70E70315-EF1E-4B51-B6E2-AF6555426B90}" ShortID="602638695">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="7"/>
 								<Property Name="Scope" Type="int16" Value="1"/>
@@ -115,9 +115,9 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Is_Resume" ID="{8085AFB5-04A5-4861-B460-524ECA01CB42}">
+				<Event Name="Game_Speed_Resume" ID="{EBB35427-A7BF-45B6-B86C-8AECAD48252D}">
 					<ChildrenList>
-						<Action Name="" ID="{A5F9A6FF-041B-4437-A927-981C21C196E8}" ShortID="740488330">
+						<Action Name="" ID="{70A97266-63BE-4127-8F81-8B1F0ED7A989}" ShortID="410790412">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="9"/>
 								<Property Name="Scope" Type="int16" Value="1"/>
@@ -128,7 +128,7 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{90F58D34-5B5D-4C01-9356-0551D0F5D200}" ShortID="934215288">
+						<Action Name="" ID="{F4A02C58-DDE6-4032-9F3E-5DADCDA7E63F}" ShortID="1009679359">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="9"/>
 								<Property Name="Scope" Type="int16" Value="1"/>

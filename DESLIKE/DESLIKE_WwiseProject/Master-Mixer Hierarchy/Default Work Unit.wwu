@@ -19,6 +19,27 @@
 									<ObjectLists/>
 								</Bus>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Game_Speed" ID="{531C82F0-6289-4DC0-9FAC-FBA1DEA54B9E}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="X2" ID="{A23936D1-BD2F-4A6E-8DF5-16565B571EE3}"/>
+										<CustomState Name="" ID="{6CCE1F59-67AC-4804-AC8C-947B241AA157}" ShortID="780771530"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="X0" ID="{15DBB30C-37CF-4C41-A933-8CD4CB215F7D}"/>
+										<CustomState Name="" ID="{B699BCFC-D4B0-42C9-9006-1EBB18505E73}" ShortID="33610377"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="X1" ID="{DC2099EF-91E2-4D7C-89BE-0277675B2D01}"/>
+										<CustomState Name="" ID="{6E367EE4-D8D3-496E-AF46-0FB65E9AAB85}" ShortID="362849758"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ObjectLists/>
 						</Bus>
 						<Bus Name="Music" ID="{F673E0B0-BCFD-4899-872F-8AA1EF6E7D27}">

@@ -5,7 +5,10 @@
 			<ChildrenList>
 				<SoundBank Name="main" ID="{FB569861-3BBA-4E8A-81EF-C0E9B7C68D55}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Is_Pause" ID="{4B85E0F3-1440-45F6-8294-BF70F35E7B72}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="H_23101_Skill_2" ID="{3907E37E-F8D4-466B-8177-FE039240D740}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Is_Resume" ID="{8085AFB5-04A5-4861-B460-524ECA01CB42}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Battle_End" ID="{04CEBDD4-10E3-49F1-BB87-327E717A33EE}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Battle_Start" ID="{B85E8104-17E7-4C9D-8087-438DF374E492}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="H_23101_Skill_1" ID="{E52C2AB2-EB1C-4CA5-A2EA-52DC2E7B6B58}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="H_23101_Die" ID="{6DFDF849-465A-4E90-B3F2-65878C467EA7}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>

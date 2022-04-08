@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: c86f71637841d14eb3f4825e4affab97
     GuidInternal: 
-    m_lastTime: -8585521713087597145
+    m_lastTime: -8585521598444929129
     List:
     - name: Character Bus
       guid: b0c26739266b5e47bc1b4c04ed87872c
@@ -120,7 +120,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 111a7fbee2e9c647a25420f19d3c634f
     GuidInternal: 
-    m_lastTime: -8585521739099080561
+    m_lastTime: -8585521598443800418
     List:
     - name: main
       guid: 619856fbba3b8a4e81efc0e9b7c68d55
@@ -148,7 +148,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 9afb6cf7ad351747ac19859bb342359b
     GuidInternal: 
-    m_lastTime: -8585521713087627090
+    m_lastTime: -8585521598444978976
     List:
     - name: Battle_End
       guid: d4bdce04e310f149bb87327e717a33ee
@@ -184,6 +184,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 136.13042
       minDuration: 136.13042
+    - name: Game_Speed_Pause
+      guid: 4023f9d03d3c0342b32c007ab838b295
+      id: 1027347108
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: Game_Speed_Pause
+        ObjectType: 3
+        guid: 4023f9d03d3c0342b32c007ab838b295
+      Path: Events\Default Work Unit\Game_Speed_Pause
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Game_Speed_Resume
+      guid: 2754b3ebbfa7b645b86c8aecad48252d
+      id: 2372597559
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: Game_Speed_Resume
+        ObjectType: 3
+        guid: 2754b3ebbfa7b645b86c8aecad48252d
+      Path: Events\Default Work Unit\Game_Speed_Resume
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: H_23101_Die
       guid: 49f8fd6d5a46904eb3f265878c467ea7
       id: 3025390842
@@ -235,40 +269,6 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 3.3165
       minDuration: 3.3165
-    - name: Is_Pause
-      guid: f3e0854b4014f6458294bf70f35e7b72
-      id: 490612746
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 9afb6cf7ad351747ac19859bb342359b
-      - ElementName: Is_Pause
-        ObjectType: 3
-        guid: f3e0854b4014f6458294bf70f35e7b72
-      Path: Events\Default Work Unit\Is_Pause
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
-    - name: Is_Resume
-      guid: b5af8580a5046148b460524eca01cb42
-      id: 2370616541
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 9afb6cf7ad351747ac19859bb342359b
-      - ElementName: Is_Resume
-        ObjectType: 3
-        guid: b5af8580a5046148b460524eca01cb42
-      Path: Events\Default Work Unit\Is_Resume
-      maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -295,11 +295,11 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 447c063f9a794e4384dee4b16a1ebf61
     GuidInternal: 
-    m_lastTime: -8585527701220842278
+    m_lastTime: -8585521598443700670
     List:
-    - name: Dead_or_Alive
-      guid: aefbc2221fc66349ac8aa051dc154fb6
-      id: 3575957003
+    - name: Game_Speed
+      guid: f0821c538962c04d9facfba1dea54b9e
+      id: 3269609307
       PathAndIcons:
       - ElementName: States
         ObjectType: 5
@@ -307,45 +307,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 447c063f9a794e4384dee4b16a1ebf61
-      - ElementName: Dead_or_Alive
+      - ElementName: Game_Speed
         ObjectType: 9
-        guid: aefbc2221fc66349ac8aa051dc154fb6
-      Path: States\Default Work Unit\Dead_or_Alive
+        guid: f0821c538962c04d9facfba1dea54b9e
+      Path: States\Default Work Unit\Game_Speed
       values:
-      - name: Alive
-        guid: 39c49fdc1c63ba4197c87e73edc4e34f
-        id: 655265632
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 447c063f9a794e4384dee4b16a1ebf61
-        - ElementName: Dead_or_Alive
-          ObjectType: 9
-          guid: aefbc2221fc66349ac8aa051dc154fb6
-        - ElementName: Alive
-          ObjectType: 8
-          guid: 39c49fdc1c63ba4197c87e73edc4e34f
-      - name: Dead
-        guid: f69adfe54e85e74681a28a5d1ba3be84
-        id: 2044049779
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 447c063f9a794e4384dee4b16a1ebf61
-        - ElementName: Dead_or_Alive
-          ObjectType: 9
-          guid: aefbc2221fc66349ac8aa051dc154fb6
-        - ElementName: Dead
-          ObjectType: 8
-          guid: f69adfe54e85e74681a28a5d1ba3be84
       - name: None
-        guid: af8228abffc7554e90f0f02c513c7d20
+        guid: f4a1ffb9447ca842b90e8cad8e38cfa7
         id: 748895195
         PathAndIcons:
         - ElementName: States
@@ -354,12 +322,60 @@ MonoBehaviour:
         - ElementName: Default Work Unit
           ObjectType: 12
           guid: 447c063f9a794e4384dee4b16a1ebf61
-        - ElementName: Dead_or_Alive
+        - ElementName: Game_Speed
           ObjectType: 9
-          guid: aefbc2221fc66349ac8aa051dc154fb6
+          guid: f0821c538962c04d9facfba1dea54b9e
         - ElementName: None
           ObjectType: 8
-          guid: af8228abffc7554e90f0f02c513c7d20
+          guid: f4a1ffb9447ca842b90e8cad8e38cfa7
+      - name: X0
+        guid: 0cb3db15cf37414ca9338cd4cb215f7d
+        id: 1500973333
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 447c063f9a794e4384dee4b16a1ebf61
+        - ElementName: Game_Speed
+          ObjectType: 9
+          guid: f0821c538962c04d9facfba1dea54b9e
+        - ElementName: X0
+          ObjectType: 8
+          guid: 0cb3db15cf37414ca9338cd4cb215f7d
+      - name: X1
+        guid: ef9920dce2917c4d89be0277675b2d01
+        id: 1500973332
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 447c063f9a794e4384dee4b16a1ebf61
+        - ElementName: Game_Speed
+          ObjectType: 9
+          guid: f0821c538962c04d9facfba1dea54b9e
+        - ElementName: X1
+          ObjectType: 8
+          guid: ef9920dce2917c4d89be0277675b2d01
+      - name: X2
+        guid: d13639a22fbd6e4a8df516565b571ee3
+        id: 1500973335
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 447c063f9a794e4384dee4b16a1ebf61
+        - ElementName: Game_Speed
+          ObjectType: 9
+          guid: f0821c538962c04d9facfba1dea54b9e
+        - ElementName: X2
+          ObjectType: 8
+          guid: d13639a22fbd6e4a8df516565b571ee3
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []

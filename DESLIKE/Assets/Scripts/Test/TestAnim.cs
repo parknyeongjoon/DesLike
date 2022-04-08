@@ -6,21 +6,20 @@ using Spine.Unity;
 public class TestAnim : MonoBehaviour
 {
     public SkeletonAnimation skeletonAnimation;
-    public AnimationReferenceAsset[] animClips;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            skeletonAnimation.state.SetAnimation(0, animClips[0], true);//idle
+            skeletonAnimation.state.AddAnimation(0, "idle", true, 0);//idle
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
-            skeletonAnimation.state.SetAnimation(0, animClips[1], true);//idle
+            skeletonAnimation.state.AddAnimation(0, "move", true, 0);//idle
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            skeletonAnimation.state.SetAnimation(0, animClips[2], true);//idle
+            skeletonAnimation.state.SetAnimation(0, "skill_1", false);//idle
         }
     }
 }

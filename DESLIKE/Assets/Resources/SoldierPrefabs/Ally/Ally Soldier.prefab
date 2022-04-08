@@ -1473,8 +1473,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 224f414d87e5361419d2850964ae44bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonAnimation: {fileID: 6138720843230423119}
-  animClips: []
   heroInfo: {fileID: -6878065226668501377}
   Hpbar: {fileID: 3421288505172815408}
   Mpbar: {fileID: 7341851713505146119}
@@ -1539,6 +1537,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  skeletonAnimation: {fileID: 6138720843230423119}
   state: 0
   action: 0
   team: 1

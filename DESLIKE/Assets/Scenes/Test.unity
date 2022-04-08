@@ -133,13 +133,14 @@ GameObject:
   m_Component:
   - component: {fileID: 225549622}
   - component: {fileID: 225549623}
+  - component: {fileID: 225549624}
   m_Layer: 0
   m_Name: RatHero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &225549622
 Transform:
   m_ObjectHideFlags: 0
@@ -168,12 +169,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 1528182058}
-  animClips:
-  - {fileID: 11400000, guid: 2ab6ecd7d7d258c4b93ad85f06770314, type: 2}
-  - {fileID: 11400000, guid: ce7bb0ed71dc85246a9bb8dea24f4697, type: 2}
-  - {fileID: 11400000, guid: 3822bf35e1b13ff4494ce2373c18a08f, type: 2}
-  - {fileID: 11400000, guid: ce0374826a3997a43ad52e1134a842db, type: 2}
-  - {fileID: 11400000, guid: 8cf4d3436bb7a3c4f9b8f045e69295dc, type: 2}
+--- !u!33 &225549624
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225549621}
+  m_Mesh: {fileID: 0}
 --- !u!1 &716822414
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,7 +813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 1bdbe572023e41a4abd3d7900ffc6d78, type: 2}
+  skeletonDataAsset: {fileID: 0}
   initialSkinName: 
   fixPrefabOverrideViaMeshFilter: 2
   initialFlipX: 0
@@ -855,7 +858,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 718be4ea6fa1d9244894c3a3cf5f91ce, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

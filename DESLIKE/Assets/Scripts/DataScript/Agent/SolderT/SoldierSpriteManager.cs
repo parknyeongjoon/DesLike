@@ -7,10 +7,6 @@ using Spine.Unity;
 public class SoldierSpriteManager : MonoBehaviour
 {
     [SerializeField]
-    SkeletonAnimation skeletonAnimation;
-    [SerializeField]
-    AnimationReferenceAsset[] animClips;
-    [SerializeField]
     HeroInfo heroInfo;
     HeroData heroData;
 
@@ -25,12 +21,7 @@ public class SoldierSpriteManager : MonoBehaviour
     {
         yield return new WaitUntil(() => heroData == null);
         heroData = (HeroData)heroInfo.castleData;
-        if (heroInfo.team == Team.Ally)
-        {
-            skeletonAnimation.skeleton.FlipX = true;
-        }
         SetHpMpBar();
-        skeletonAnimation.state.SetAnimation(0, animClips[(int)AnimState.Move], true);//지우고 유닛 상태 바꿔줄 때 넣어주기
         OneBoxScale();
     }
 
@@ -68,6 +59,6 @@ public class SoldierSpriteManager : MonoBehaviour
     public void Dead()
     {
         hp_mp_bar.SetActive(false);
-        skeletonAnimation.skeleton.SetColor(skeletonAnimation.skeleton.GetColor() - new Color(0, 0, 0, 0.3f));
+        heroInfo.skeletonAnimation.skeleton.SetColor(heroInfo.skeletonAnimation.skeleton.GetColor() - new Color(0, 0, 0, 0.4f));
     }
 }

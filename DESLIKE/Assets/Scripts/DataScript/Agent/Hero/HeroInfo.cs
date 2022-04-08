@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Spine.Unity;
 
 public class HeroInfo : CastleInfo
 {
+    public SkeletonAnimation skeletonAnimation;
+
     public Soldier_State state;
     public Soldier_Action action;
     public Team team;

@@ -13,7 +13,7 @@ public class SingleAttack : ActiveSkill
             heroInfo.cur_Mp -= ((ActiveSkillData)skillData).mp;
             cur_cooltime = ((ActiveSkillData)skillData).cooltime;
             StartCoroutine(SkillCooltime());
-            //heroInfo.animator.SetTrigger("isAtk");
+            heroInfo.skeletonAnimation.state.SetAnimation(0, "skill_1", false);//스킬
             ((SingleAttackData)skillData).Effect(targetInfo);
             heroInfo.action = Soldier_Action.End_Delay;
             yield return new WaitForSeconds(((ActiveSkillData)skillData).end_Delay);

@@ -11,7 +11,10 @@ public class HeroDie : MonoBehaviour
         Debug.Log("Game Over");
         //Destroy(gameObject);
         SaveManager.Instance.gameData.canContinue = false;
-        SceneManager.LoadScene("MainTitle");//창 띄우고 거기서 버튼 클릭 시 이동하게 만들기
+        AkSoundEngine.PostEvent("23101_Die", gameObject);
+        GameManager.Instance.gamePause = true;
+        Time.timeScale = 0;
+        //SceneManager.LoadScene("MainTitle");//창 띄우고 거기서 버튼 클릭 시 이동하게 만들기
         GameManager.Instance.gameOverEvent.Invoke();
     }
 }

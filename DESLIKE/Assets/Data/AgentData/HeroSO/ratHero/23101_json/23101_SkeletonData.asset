@@ -18,11 +18,13 @@ MonoBehaviour:
   skeletonJSON: {fileID: 4900000, guid: 0b32a96bb60cfd84c9c2822abdca363a, type: 3}
   isUpgradingBlendModeMaterials: 0
   blendModeMaterials:
-    requiresBlendModeMaterials: 0
+    requiresBlendModeMaterials: 1
     applyAdditiveMaterial: 1
     additiveMaterials: []
     multiplyMaterials: []
-    screenMaterials: []
+    screenMaterials:
+    - pageName: 23101.png
+      material: {fileID: 2100000, guid: 643a24e6364b8934fa17229809d38189, type: 2}
   skeletonDataModifiers: []
   fromAnimation: []
   toAnimation: []

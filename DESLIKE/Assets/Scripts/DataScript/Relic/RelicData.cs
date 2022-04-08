@@ -6,8 +6,9 @@ using UnityEngine;
 public class RelicData : ScriptableObject
 {
     public Sprite relicImg;
-    public string code;
+    public string code = "";
     public string relicName;
     public string toopTip;
     public Rarity rarity;
+    public bool continueReuse;
 }

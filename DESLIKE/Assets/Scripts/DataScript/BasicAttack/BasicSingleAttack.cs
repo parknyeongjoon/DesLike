@@ -10,7 +10,7 @@ public class BasicSingleAttack : BasicAttack
         yield return new WaitForSeconds(((BasicSingleAttackData)basicAttackData).start_Delay);
         if (targetInfo && targetInfo.gameObject.layer != 7)
         {
-            //heroInfo.animator.SetTrigger("isAtk");
+            heroInfo.skeletonAnimation.state.SetAnimation(0, "att_1", false);//½ºÅ³
             AkSoundEngine.PostEvent("skeleton_Atk", gameObject);
             ((BasicSingleAttackData)basicAttackData).Effect(targetInfo);
             heroInfo.action = Soldier_Action.End_Delay;

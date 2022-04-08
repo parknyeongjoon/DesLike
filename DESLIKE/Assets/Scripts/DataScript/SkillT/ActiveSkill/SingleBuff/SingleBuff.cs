@@ -22,7 +22,7 @@ public class SingleBuff : ActiveSkill//우선 버프 대상 정할 방법 구하기(portDatas
             heroInfo.cur_Mp -= ((ActiveSkillData)skillData).mp;
             cur_cooltime = ((ActiveSkillData)skillData).cooltime;
             StartCoroutine(SkillCooltime());
-            //heroInfo.animator.SetTrigger("isAtk");
+            heroInfo.skeletonAnimation.state.SetAnimation(0, "skill_1", false);//스킬
             if (!targetInfo.buffCoroutine.ContainsKey(skillData.code))//딕셔너리에 키가 없다면 코루틴 리스트 추가
             {
                 targetInfo.buffCoroutine.Add(skillData.code, new List<Coroutine>());

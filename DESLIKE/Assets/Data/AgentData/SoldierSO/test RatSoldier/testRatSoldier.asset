@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: testRatSoldier
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: a1e99dc4922d4ff4da4679b968609bf5, type: 3}
-  code: 21101
+  code: 23101
   hp: 20
   def: 0
   size: 0.25

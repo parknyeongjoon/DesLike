@@ -17,6 +17,39 @@
 							<ChildrenList>
 								<Bus Name="H_Bus" ID="{5ED5E7C1-5ED7-49FF-B2A4-44BE46255ADE}">
 									<ObjectLists/>
+									<DuckingList>
+										<DuckItem>
+											<BusRef Name="TNE" ID="{E4C08831-5423-4812-ADC9-1C83042BDA0C}"/>
+											<DuckingParam>
+												<Volume>-6</Volume>
+												<FadeInTime>0.5</FadeInTime>
+												<FadeOutTime>0.5</FadeOutTime>
+												<FadeCurve>FadeLinear</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+									</DuckingList>
+								</Bus>
+								<Bus Name="TNE" ID="{E4C08831-5423-4812-ADC9-1C83042BDA0C}">
+									<ChildrenList>
+										<Bus Name="TN_Bus" ID="{6D09DD6C-83B3-4B13-B81E-290B57998183}">
+											<ObjectLists/>
+										</Bus>
+										<Bus Name="TE_Bus" ID="{2E0C69BD-7064-409D-8645-F0060D730C37}">
+											<ObjectLists/>
+											<DuckingList>
+												<DuckItem>
+													<BusRef Name="TN_Bus" ID="{6D09DD6C-83B3-4B13-B81E-290B57998183}"/>
+													<DuckingParam>
+														<Volume>-6</Volume>
+														<FadeInTime>0.5</FadeInTime>
+														<FadeOutTime>0.5</FadeOutTime>
+														<FadeCurve>FadeLinear</FadeCurve>
+													</DuckingParam>
+												</DuckItem>
+											</DuckingList>
+										</Bus>
+									</ChildrenList>
+									<ObjectLists/>
 								</Bus>
 							</ChildrenList>
 							<StateInfo>

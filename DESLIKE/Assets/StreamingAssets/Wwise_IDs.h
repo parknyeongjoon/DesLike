@@ -20,6 +20,11 @@ namespace AK
         static const AkUniqueID H_23101_DIE = 3025390842U;
         static const AkUniqueID H_23101_SKILL_1 = 2377059575U;
         static const AkUniqueID H_23101_SKILL_2 = 2377059572U;
+        static const AkUniqueID T_12202_ATK_1 = 450034178U;
+        static const AkUniqueID T_12202_SKILL_1 = 1526852227U;
+        static const AkUniqueID T_12301_ATK_1 = 1080515304U;
+        static const AkUniqueID T_12302_ATK_1 = 2037815843U;
+        static const AkUniqueID T_12305_SKILL_1 = 2724418929U;
     } // namespace EVENTS
 
     namespace STATES
@@ -51,6 +56,9 @@ namespace AK
         static const AkUniqueID H_BUS = 1962540672U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID TE_BUS = 986497999U;
+        static const AkUniqueID TN_BUS = 208977400U;
+        static const AkUniqueID TNE = 1097649576U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

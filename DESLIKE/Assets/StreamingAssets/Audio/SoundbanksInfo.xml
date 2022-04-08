@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3171323304">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2854116084">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -26,17 +26,17 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="232074738">
+		<SoundBank Id="3161908922" Language="SFX" Hash="297033124">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<IncludedEvents>
 				<Event Id="461545889" Name="Battle_End" ObjectPath="\Events\Default Work Unit\Battle_End" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="2706291346" Name="Battle_Start" ObjectPath="\Events\Default Work Unit\Battle_Start" DurationType="OneShot" DurationMin="136.130417" DurationMax="136.130417">
+				<Event Id="2706291346" Name="Battle_Start" ObjectPath="\Events\Default Work Unit\Battle_Start" DurationType="OneShot" DurationMin="106.332748" DurationMax="106.332748">
 					<IncludedMemoryFiles>
 						<File Id="62381386" Language="SFX">
 							<ShortName>Escaping the Ruins W.wav</ShortName>
-							<Path>SFX/Escaping the Ruins W_9733FE50.wem</Path>
+							<Path>SFX/Escaping the Ruins W_A9E05640.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -67,6 +67,62 @@
 						<File Id="290311062" Language="SFX">
 							<ShortName>23101_Skill_2_Print_01.wav</ShortName>
 							<Path>SFX/23101_Skill_2_Print_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="450034178" Name="T_12202_Atk_1" ObjectPath="\Events\Default Work Unit\T_12202_Atk_1" DurationType="OneShot" DurationMin="0.216952" DurationMax="0.243136">
+					<IncludedMemoryFiles>
+						<File Id="453919233" Language="SFX">
+							<ShortName>12202_Atk_1_Print_01.wav</ShortName>
+							<Path>SFX/12202_Atk_1_Print_01_24AEBA7D.wem</Path>
+						</File>
+						<File Id="643813455" Language="SFX">
+							<ShortName>12202_Atk_1_Print_01.wav</ShortName>
+							<Path>SFX/12202_Atk_1_Print_01_7C1C8851.wem</Path>
+						</File>
+						<File Id="770202027" Language="SFX">
+							<ShortName>12202_Atk_1_Print_01.wav</ShortName>
+							<Path>SFX/12202_Atk_1_Print_01_A22D1004.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1526852227" Name="T_12202_Skill_1" ObjectPath="\Events\Default Work Unit\T_12202_Skill_1" DurationType="OneShot" DurationMin="2.558542" DurationMax="2.558542">
+					<IncludedMemoryFiles>
+						<File Id="460822715" Language="SFX">
+							<ShortName>12202_Skill_1_Print_01.wav</ShortName>
+							<Path>SFX/12202_Skill_1_Print_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1080515304" Name="T_12301_Atk_1" ObjectPath="\Events\Default Work Unit\T_12301_Atk_1" DurationType="OneShot" DurationMin="2.558542" DurationMax="2.558542">
+					<IncludedMemoryFiles>
+						<File Id="572501093" Language="SFX">
+							<ShortName>12301_Atk_1_Print_01.wav</ShortName>
+							<Path>SFX/12301_Atk_1_Print_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2037815843" Name="T_12302_Atk_1" ObjectPath="\Events\Default Work Unit\T_12302_Atk_1" DurationType="OneShot" DurationMin="0.288023" DurationMax="0.437645">
+					<IncludedMemoryFiles>
+						<File Id="442996702" Language="SFX">
+							<ShortName>12302_Atk_1_Print_01.wav</ShortName>
+							<Path>SFX/12302_Atk_1_Print_01_6489EFF2.wem</Path>
+						</File>
+						<File Id="908949220" Language="SFX">
+							<ShortName>12302_Atk_1_Print_01.wav</ShortName>
+							<Path>SFX/12302_Atk_1_Print_01_26890375.wem</Path>
+						</File>
+						<File Id="1066272607" Language="SFX">
+							<ShortName>12302_Atk_1_Print_01.wav</ShortName>
+							<Path>SFX/12302_Atk_1_Print_01_9EDD0D8E.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2724418929" Name="T_12305_Skill_1" ObjectPath="\Events\Default Work Unit\T_12305_Skill_1" DurationType="OneShot" DurationMin="2.558542" DurationMax="2.558542">
+					<IncludedMemoryFiles>
+						<File Id="116424717" Language="SFX">
+							<ShortName>12305_Skill_1_Print_01.wav</ShortName>
+							<Path>SFX/12305_Skill_1_Print_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

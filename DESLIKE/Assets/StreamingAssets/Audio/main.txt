@@ -1,6 +1,8 @@
 Event	ID	Name			Wwise Object Path	Notes
+	270789025	T_12302_Idle			\Default Work Unit\T_12302_Idle	
 	450034178	T_12202_Atk_1			\Default Work Unit\T_12202_Atk_1	
 	461545889	Battle_End			\Default Work Unit\Battle_End	
+	880908724	T_12301_Idle			\Default Work Unit\T_12301_Idle	
 	1027347108	Game_Speed_Pause			\Default Work Unit\Game_Speed_Pause	
 	1080515304	T_12301_Atk_1			\Default Work Unit\T_12301_Atk_1	
 	1526852227	T_12202_Skill_1			\Default Work Unit\T_12202_Skill_1	
@@ -8,13 +10,15 @@ Event	ID	Name			Wwise Object Path	Notes
 	2372597559	Game_Speed_Resume			\Default Work Unit\Game_Speed_Resume	
 	2377059572	H_23101_Skill_2			\Default Work Unit\H_23101_Skill_2	
 	2377059575	H_23101_Skill_1			\Default Work Unit\H_23101_Skill_1	
+	2413801456	T_12305_Idle			\Default Work Unit\T_12305_Idle	
 	2706291346	Battle_Start			\Default Work Unit\Battle_Start	
 	2724418929	T_12305_Skill_1			\Default Work Unit\T_12305_Skill_1	
 	3025390842	H_23101_Die			\Default Work Unit\H_23101_Die	
+	3619100458	T_12202_Idle			\Default Work Unit\T_12202_Idle	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	62381386	Escaping the Ruins W	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Escaping the Ruins W_95E52E4F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Escaping the Ruins W		20415952
-	116424717	12305_Skill_1_Print_01	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\12305_Skill_1_Print_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\T\TE\12305_Skill_1_Print_01		491304
+	116424717	12305_Skill_1_Print_01	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\12305_Skill_1_Print_01_EB7884A3.wem		\Actor-Mixer Hierarchy\Default Work Unit\T\TE\12305_Skill_1_Print_01		323248
 	234665702	23101_Die_Print_01	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\23101_Die_Print_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\H_23101\23101_Die_Print_01		801584
 	290311062	23101_Skill_2_Print_01	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\23101_Skill_2_Print_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\H_23101\23101_Skill_2_Print_01		636832
 	442996702	12302_Atk_1_Print_01	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\12302_Atk_1_Print_01_2BBD420E.wem		\Actor-Mixer Hierarchy\Default Work Unit\T\TN\12302_Atk_1_Random\12302_Atk_1_Print_01		55364
@@ -22,9 +26,12 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	460822715	12202_Skill_1_Print_01	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\12202_Skill_1_Print_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\T\TN\12202\12202_Skill_1_Print_01		491304
 	554435908	GameOver_Print_01	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\GameOver_Print_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Game Event Sound\GameOver_Print_01		247928
 	572501093	12301_Atk_1_Print_01	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\12301_Atk_1_Print_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\T\TN\12301_Atk_1_Print_01		491304
+	586797166	Test_Idle_1_Print_01	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Test_Idle_1_Print_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\T\TN\T_Idle\Test_Idle_1_Print_01		245684
 	643813455	12202_Atk_1_Print_03	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\12202_Atk_1_Print_01_AE6FD2E3.wem		\Actor-Mixer Hierarchy\Default Work Unit\T\TN\12202\12202_Atk_1_Random\12202_Atk_1_Print_03		41716
 	770202027	12202_Atk_1_Print_02	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\12202_Atk_1_Print_01_14A0B0B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\T\TN\12202\12202_Atk_1_Random\12202_Atk_1_Print_02		46744
+	796178526	Test_Idle_2_Print_01	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Test_Idle_2_Print_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\T\TN\T_Idle\Test_Idle_2_Print_01		245684
 	797527484	23101_Skill_1_Print_01	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\23101_Skill_1_Print_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\H_23101\23101_Skill_1_Print_01		784308
 	908949220	12302_Atk_1_Print_02	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\12302_Atk_1_Print_01_D3FAF3C4.wem		\Actor-Mixer Hierarchy\Default Work Unit\T\TN\12302_Atk_1_Random\12302_Atk_1_Print_02		61828
-	1066272607	12302_Atk_1_Print_03	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\12302_Atk_1_Print_01_BAF44E86.wem		\Actor-Mixer Hierarchy\Default Work Unit\T\TN\12302_Atk_1_Random\12302_Atk_1_Print_03		84092
+	968516569	Test_Idle_3_Print_01	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\Test_Idle_3_Print_01_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\T\TN\T_Idle\Test_Idle_3_Print_01		245684
+	1066272607	12302_Atk_1_Print_03	Y:\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\SFX\12302_Atk_1_Print_01_F371FB2C.wem		\Actor-Mixer Hierarchy\Default Work Unit\T\TN\12302_Atk_1_Random\12302_Atk_1_Print_03		22764
 

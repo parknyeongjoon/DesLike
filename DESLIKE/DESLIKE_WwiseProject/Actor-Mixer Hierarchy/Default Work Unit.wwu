@@ -213,6 +213,26 @@
 						<Folder Name="TN" ID="{8089F0CF-C382-4DE8-B629-7DAD76BD2896}" ShortID="453752312">
 							<ChildrenList>
 								<RandomSequenceContainer Name="12302_Atk_1_Random" ID="{90B4572E-FD84-4A98-9496-01EA7FB4F34A}" ShortID="504207213">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{B10AD5C8-B123-4049-9D94-4B93470A626E}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
@@ -281,6 +301,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="12302_Atk_1_Print_03" ID="{B0642300-D394-4CDD-9A88-838C51900971}" ShortID="254305736">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-2</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
@@ -293,9 +320,10 @@
 												<AudioFileSource Name="12302_Atk_1_Print_01" ID="{9E666298-9B64-423C-9FFA-367169E7B8F7}">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.0224433479532165"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0286045692419656"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 														<Property Name="TrimBegin" Type="Real64" Value="1.2343841374269"/>
-														<Property Name="TrimEnd" Type="Real64" Value="1.67202942251462"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.352611732646"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>12302_Atk_1_Print_01.wav</AudioFile>
@@ -313,6 +341,18 @@
 									<ObjectLists/>
 								</RandomSequenceContainer>
 								<Sound Name="12301_Atk_1_Print_01" ID="{EE54388E-3FC9-4D28-B297-09EE9BC0FD18}" ShortID="57521381">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>25</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
@@ -338,6 +378,31 @@
 								<Folder Name="12202" ID="{91EC7250-1E27-43FE-B0B7-F42D11F1CE18}" ShortID="662920619">
 									<ChildrenList>
 										<RandomSequenceContainer Name="12202_Atk_1_Random" ID="{E9D5B2D0-8126-4A83-AD39-C03365E5BD87}" ShortID="191711924">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>40</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{517125F9-C1ED-4B85-B675-E0008D717D68}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="200"/>
+																	<Property Name="Min" Type="Real64" Value="-100"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-4</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
@@ -440,6 +505,13 @@
 											<ObjectLists/>
 										</RandomSequenceContainer>
 										<Sound Name="12202_Skill_1_Print_01" ID="{67ED1A40-F841-4BB8-B6AF-FB8DEBEC9DF6}" ShortID="733326373">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-12</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
@@ -599,10 +671,34 @@
 							<ChildrenList>
 								<Sound Name="12305_Skill_1_Print_01" ID="{8F9A9089-2202-4A9B-AB88-D72F8CDD5342}" ShortID="675866808">
 									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{EF38AE9B-7B14-44F8-99D8-3F179350E13F}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-4</Value>
+												<Value>-7</Value>
 											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{290D5D4B-5440-41D1-951D-1B203B4CEFF6}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1"/>
+															<Property Name="Min" Type="Real64" Value="-1"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -615,6 +711,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="12305_Skill_1_Print_01" ID="{3EE09C92-FF88-4A7D-9DF5-9403577D705D}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.669559880604289"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.68325109649123"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>12305_Skill_1_Print_01.wav</AudioFile>
 											<MediaIDList>

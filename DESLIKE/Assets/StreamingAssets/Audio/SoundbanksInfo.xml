@@ -26,7 +26,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3944325498">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1200456989">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -70,7 +70,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="450034178" Name="T_12202_Atk_1" ObjectPath="\Events\Default Work Unit\T_12202_Atk_1" DurationType="OneShot" DurationMin="0.216952" DurationMax="0.243136">
+				<Event Id="450034178" Name="T_12202_Atk_1" ObjectPath="\Events\Default Work Unit\T_12202_Atk_1" DurationType="OneShot" DurationMin="0.193283" DurationMax="0.257594">
 					<IncludedMemoryFiles>
 						<File Id="453919233" Language="SFX">
 							<ShortName>12202_Atk_1_Print_01.wav</ShortName>
@@ -83,6 +83,22 @@
 						<File Id="770202027" Language="SFX">
 							<ShortName>12202_Atk_1_Print_01.wav</ShortName>
 							<Path>SFX/12202_Atk_1_Print_01_14A0B0B2.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3619100458" Name="T_12202_Idle" ObjectPath="\Events\Default Work Unit\T_12202_Idle" DurationType="OneShot" DurationMin="3.157659" DurationMax="3.814942">
+					<IncludedMemoryFiles>
+						<File Id="586797166" Language="SFX">
+							<ShortName>Test_Idle_1_Print_01.wav</ShortName>
+							<Path>SFX/Test_Idle_1_Print_01_10C4C929.wem</Path>
+						</File>
+						<File Id="796178526" Language="SFX">
+							<ShortName>Test_Idle_2_Print_01.wav</ShortName>
+							<Path>SFX/Test_Idle_2_Print_01_10C4C929.wem</Path>
+						</File>
+						<File Id="968516569" Language="SFX">
+							<ShortName>Test_Idle_3_Print_01.wav</ShortName>
+							<Path>SFX/Test_Idle_3_Print_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -102,7 +118,23 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2037815843" Name="T_12302_Atk_1" ObjectPath="\Events\Default Work Unit\T_12302_Atk_1" DurationType="OneShot" DurationMin="0.288023" DurationMax="0.437645">
+				<Event Id="880908724" Name="T_12301_Idle" ObjectPath="\Events\Default Work Unit\T_12301_Idle" DurationType="OneShot" DurationMin="4.257659" DurationMax="4.914942">
+					<IncludedMemoryFiles>
+						<File Id="586797166" Language="SFX">
+							<ShortName>Test_Idle_1_Print_01.wav</ShortName>
+							<Path>SFX/Test_Idle_1_Print_01_10C4C929.wem</Path>
+						</File>
+						<File Id="796178526" Language="SFX">
+							<ShortName>Test_Idle_2_Print_01.wav</ShortName>
+							<Path>SFX/Test_Idle_2_Print_01_10C4C929.wem</Path>
+						</File>
+						<File Id="968516569" Language="SFX">
+							<ShortName>Test_Idle_3_Print_01.wav</ShortName>
+							<Path>SFX/Test_Idle_3_Print_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2037815843" Name="T_12302_Atk_1" ObjectPath="\Events\Default Work Unit\T_12302_Atk_1" DurationType="OneShot" DurationMin="0.111592" DurationMax="0.340817">
 					<IncludedMemoryFiles>
 						<File Id="442996702" Language="SFX">
 							<ShortName>12302_Atk_1_Print_01.wav</ShortName>
@@ -114,15 +146,47 @@
 						</File>
 						<File Id="1066272607" Language="SFX">
 							<ShortName>12302_Atk_1_Print_01.wav</ShortName>
-							<Path>SFX/12302_Atk_1_Print_01_BAF44E86.wem</Path>
+							<Path>SFX/12302_Atk_1_Print_01_F371FB2C.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2724418929" Name="T_12305_Skill_1" ObjectPath="\Events\Default Work Unit\T_12305_Skill_1" DurationType="OneShot" DurationMin="2.558542" DurationMax="2.558542">
+				<Event Id="270789025" Name="T_12302_Idle" ObjectPath="\Events\Default Work Unit\T_12302_Idle" DurationType="OneShot" DurationMin="4.257659" DurationMax="4.914942">
+					<IncludedMemoryFiles>
+						<File Id="586797166" Language="SFX">
+							<ShortName>Test_Idle_1_Print_01.wav</ShortName>
+							<Path>SFX/Test_Idle_1_Print_01_10C4C929.wem</Path>
+						</File>
+						<File Id="796178526" Language="SFX">
+							<ShortName>Test_Idle_2_Print_01.wav</ShortName>
+							<Path>SFX/Test_Idle_2_Print_01_10C4C929.wem</Path>
+						</File>
+						<File Id="968516569" Language="SFX">
+							<ShortName>Test_Idle_3_Print_01.wav</ShortName>
+							<Path>SFX/Test_Idle_3_Print_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2413801456" Name="T_12305_Idle" ObjectPath="\Events\Default Work Unit\T_12305_Idle" DurationType="OneShot" DurationMin="4.257659" DurationMax="4.914942">
+					<IncludedMemoryFiles>
+						<File Id="586797166" Language="SFX">
+							<ShortName>Test_Idle_1_Print_01.wav</ShortName>
+							<Path>SFX/Test_Idle_1_Print_01_10C4C929.wem</Path>
+						</File>
+						<File Id="796178526" Language="SFX">
+							<ShortName>Test_Idle_2_Print_01.wav</ShortName>
+							<Path>SFX/Test_Idle_2_Print_01_10C4C929.wem</Path>
+						</File>
+						<File Id="968516569" Language="SFX">
+							<ShortName>Test_Idle_3_Print_01.wav</ShortName>
+							<Path>SFX/Test_Idle_3_Print_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2724418929" Name="T_12305_Skill_1" ObjectPath="\Events\Default Work Unit\T_12305_Skill_1" DurationType="OneShot" DurationMin="1.588777" DurationMax="1.783343">
 					<IncludedMemoryFiles>
 						<File Id="116424717" Language="SFX">
 							<ShortName>12305_Skill_1_Print_01.wav</ShortName>
-							<Path>SFX/12305_Skill_1_Print_01_10C4C929.wem</Path>
+							<Path>SFX/12305_Skill_1_Print_01_EB7884A3.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

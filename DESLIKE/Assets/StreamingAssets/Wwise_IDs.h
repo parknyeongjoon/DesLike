@@ -21,9 +21,13 @@ namespace AK
         static const AkUniqueID H_23101_SKILL_1 = 2377059575U;
         static const AkUniqueID H_23101_SKILL_2 = 2377059572U;
         static const AkUniqueID T_12202_ATK_1 = 450034178U;
+        static const AkUniqueID T_12202_IDLE = 3619100458U;
         static const AkUniqueID T_12202_SKILL_1 = 1526852227U;
         static const AkUniqueID T_12301_ATK_1 = 1080515304U;
+        static const AkUniqueID T_12301_IDLE = 880908724U;
         static const AkUniqueID T_12302_ATK_1 = 2037815843U;
+        static const AkUniqueID T_12302_IDLE = 270789025U;
+        static const AkUniqueID T_12305_IDLE = 2413801456U;
         static const AkUniqueID T_12305_SKILL_1 = 2724418929U;
     } // namespace EVENTS
 

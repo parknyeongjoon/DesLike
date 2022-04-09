@@ -199,6 +199,9 @@
 				<Event Name="T_12202_Idle" ID="{E97189DF-2620-4DE7-80DF-4898BDAB9041}">
 					<ChildrenList>
 						<Action Name="" ID="{E628DB03-4073-4C50-A39C-9FE2BED5BC4B}" ShortID="625071125">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="1.4"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="T_Idle" ID="{E875BE77-B8DA-4F5F-B8F9-F63ED199864D}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
@@ -210,6 +213,9 @@
 				<Event Name="T_12301_Idle" ID="{F0CD1C58-555B-4DCD-B1FD-DEC9465D28AA}">
 					<ChildrenList>
 						<Action Name="" ID="{7B376DFD-1376-47E0-B2AA-10BC19A4A29A}" ShortID="520193175">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="T_Idle" ID="{E875BE77-B8DA-4F5F-B8F9-F63ED199864D}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
@@ -221,6 +227,9 @@
 				<Event Name="T_12302_Idle" ID="{B07F26B6-4F7A-4AB0-A1EA-ED1F17B955A0}">
 					<ChildrenList>
 						<Action Name="" ID="{01201AF8-7E16-4E56-A90C-16F496BC8959}" ShortID="715414707">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="T_Idle" ID="{E875BE77-B8DA-4F5F-B8F9-F63ED199864D}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
@@ -232,6 +241,9 @@
 				<Event Name="T_12305_Idle" ID="{5B6AA76F-3723-4B74-836C-B6E0FBD285AA}">
 					<ChildrenList>
 						<Action Name="" ID="{937CFC0E-72A3-4FDF-9B3D-0DAA1C5B53DD}" ShortID="823293894">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="T_Idle" ID="{E875BE77-B8DA-4F5F-B8F9-F63ED199864D}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>

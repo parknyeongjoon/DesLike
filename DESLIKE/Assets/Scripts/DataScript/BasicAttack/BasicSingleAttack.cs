@@ -7,7 +7,8 @@ public class BasicSingleAttack : BasicAttack
     protected override IEnumerator Attack(CastleInfo targetInfo)
     {
         heroInfo.action = Soldier_Action.Attack;
-        //heroInfo.skeletonAnimation.state.SetAnimation(0, "att_1", false);//스킬
+        if (heroInfo.skeletonAnimation.skeleton != null)
+            heroInfo.skeletonAnimation.state.SetAnimation(0, "att_1", false);//스킬
         string temp = "T_" + heroInfo.castleData.code + "_atk_1";
         AkSoundEngine.PostEvent(temp, gameObject);
         yield return new WaitForSeconds(((BasicSingleAttackData)basicAttackData).start_Delay);

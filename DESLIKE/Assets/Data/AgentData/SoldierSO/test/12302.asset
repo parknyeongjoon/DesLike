@@ -27,5 +27,5 @@ MonoBehaviour:
   extraSkill: []
   rarity: 0
   needBarrier: 0
-  unitAmount: 0
+  unitAmount: 3
   soldier_Type: 1

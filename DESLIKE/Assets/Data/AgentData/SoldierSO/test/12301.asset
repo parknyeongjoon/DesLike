@@ -15,7 +15,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 895bb1509bfee2545895c500d8fefe76, type: 3}
   code: 12301
   hp: 15
-  def: 2
+  def: 1
   size: 0.5
   blood: {fileID: 5086979035932333915, guid: 83b2eb89fe46c6a4db5d18712a94a153, type: 3}
   soldier_name: 12301
@@ -27,5 +27,5 @@ MonoBehaviour:
   extraSkill: []
   rarity: 0
   needBarrier: 0
-  unitAmount: 0
+  unitAmount: 3
   soldier_Type: 0

@@ -18,7 +18,8 @@ public class SingleBuff : ActiveSkill//우선 버프 대상 정할 방법 구하기(portDatas
         heroInfo.action = Soldier_Action.Skill;
         string temp = "T_" + heroInfo.castleData.code + "_Skill_1";//밖으로 빼기
         AkSoundEngine.PostEvent(temp, gameObject);
-        //heroInfo.skeletonAnimation.state.SetAnimation(0, "skill_1", false);//스킬
+        if(heroInfo.skeletonAnimation.skeleton != null)
+            heroInfo.skeletonAnimation.state.SetAnimation(0, "skill_1", false);//스킬
         yield return new WaitForSeconds(((ActiveSkillData)skillData).start_Delay);
         if (targetInfo && targetInfo.gameObject.layer != 7)
         {

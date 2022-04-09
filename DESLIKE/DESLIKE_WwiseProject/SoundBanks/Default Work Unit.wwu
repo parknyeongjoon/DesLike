@@ -21,6 +21,7 @@
 						<ObjectRef Name="T_12202_Idle" ID="{E97189DF-2620-4DE7-80DF-4898BDAB9041}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="T_12301_Atk_1" ID="{696AFF79-C6E8-4DF0-9E03-F9753DDC37F2}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="H_23101_Die" ID="{6DFDF849-465A-4E90-B3F2-65878C467EA7}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="H_23101_Idle" ID="{899DA222-5AE7-4F33-9441-F90BC7A012A9}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

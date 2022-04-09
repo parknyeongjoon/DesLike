@@ -265,6 +265,9 @@
 				<Event Name="H_23101_Idle" ID="{899DA222-5AE7-4F33-9441-F90BC7A012A9}">
 					<ChildrenList>
 						<Action Name="" ID="{ABC94BC4-E443-4FE7-AF03-830CADD0F94C}" ShortID="442041341">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="4"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="23101_Idle" ID="{7F96EC15-D814-4421-B6E6-0F410EA60E8A}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>

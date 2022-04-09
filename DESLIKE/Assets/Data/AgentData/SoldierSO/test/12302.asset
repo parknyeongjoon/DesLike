@@ -18,7 +18,7 @@ MonoBehaviour:
   def: 1
   size: 0.5
   blood: {fileID: 5086979035932333915, guid: 83b2eb89fe46c6a4db5d18712a94a153, type: 3}
-  soldier_name: 12202
+  soldier_name: 12302
   mp: 10
   speed: 2
   mp_Re: 0

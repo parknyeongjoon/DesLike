@@ -15,11 +15,11 @@ public class HeroBehaviour : SoldierBasic
         {
             if (Input.GetMouseButtonDown(1))
             {
-                curSoundWeight += 5;
+                curSoundWeight += 2;
                 if (curSoundWeight > Random.Range(0, 100))
                 {
                     AkSoundEngine.PostEvent("H_" + heroInfo.castleData.code + "_Idle", gameObject);
-                    curSoundWeight = basicSoundWeight;
+                    curSoundWeight = 10;
                 }
                 if (moveCoroutine != null) { StopCoroutine(moveCoroutine); }
                 Vector2 mousePos = Input.mousePosition;

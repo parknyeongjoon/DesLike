@@ -26,7 +26,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1200456989">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2541749103">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -54,8 +54,13 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="4029061990" Name="H_23101_Idle" ObjectPath="\Events\Default Work Unit\H_23101_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2377059575" Name="H_23101_Skill_1" ObjectPath="\Events\Default Work Unit\H_23101_Skill_1" DurationType="OneShot" DurationMin="4.084604" DurationMax="4.084604">
 					<IncludedMemoryFiles>
+						<File Id="108942149" Language="SFX">
+							<ShortName>23101_idle_Print_3_01.wav</ShortName>
+							<Path>SFX/23101_idle_Print_3_01_10C4C929.wem</Path>
+						</File>
 						<File Id="797527484" Language="SFX">
 							<ShortName>23101_Skill_1_Print_01.wav</ShortName>
 							<Path>SFX/23101_Skill_1_Print_01_10C4C929.wem</Path>
@@ -182,7 +187,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2724418929" Name="T_12305_Skill_1" ObjectPath="\Events\Default Work Unit\T_12305_Skill_1" DurationType="OneShot" DurationMin="1.588777" DurationMax="1.783343">
+				<Event Id="2724418929" Name="T_12305_Skill_1" ObjectPath="\Events\Default Work Unit\T_12305_Skill_1" DurationType="OneShot" DurationMin="1.683251" DurationMax="1.683251">
 					<IncludedMemoryFiles>
 						<File Id="116424717" Language="SFX">
 							<ShortName>12305_Skill_1_Print_01.wav</ShortName>

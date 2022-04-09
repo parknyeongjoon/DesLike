@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID GAME_SPEED_PAUSE = 1027347108U;
         static const AkUniqueID GAME_SPEED_RESUME = 2372597559U;
         static const AkUniqueID H_23101_DIE = 3025390842U;
+        static const AkUniqueID H_23101_IDLE = 4029061990U;
         static const AkUniqueID H_23101_SKILL_1 = 2377059575U;
         static const AkUniqueID H_23101_SKILL_2 = 2377059572U;
         static const AkUniqueID T_12202_ATK_1 = 450034178U;

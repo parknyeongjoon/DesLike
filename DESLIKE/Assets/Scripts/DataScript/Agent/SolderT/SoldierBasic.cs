@@ -18,7 +18,7 @@ public class SoldierBasic : MonoBehaviour
 
     protected Coroutine moveCoroutine;
 
-    public const int basicSoundWeight = 20;//사운드 가중치 최소값
+    public const int basicSoundWeight = 10;//사운드 가중치 최소값
     public int curSoundWeight;//현재 사운드 가중치
 
     protected void Start()

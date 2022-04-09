@@ -26,7 +26,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="687907555">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3913527328">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -200,6 +200,14 @@
 						<File Id="563299050" Language="SFX">
 							<ShortName>kangaroo test\T_23101_Atk_1_Print_01.wav</ShortName>
 							<Path>SFX/kangaroo test/T_23101_Atk_1_Print_01_5C286891.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="617022462" Name="T_23101_Die" ObjectPath="\Events\Default Work Unit\T_23101_Die" DurationType="OneShot" DurationMin="3.940282" DurationMax="4.552415">
+					<IncludedMemoryFiles>
+						<File Id="234665702" Language="SFX">
+							<ShortName>23101_Die_Print_01.wav</ShortName>
+							<Path>SFX/23101_Die_Print_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

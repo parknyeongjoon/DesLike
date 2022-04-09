@@ -309,6 +309,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="T_23101_Die" ID="{7C257EFF-3381-4AF8-98D5-A51295CDF5D4}">
+					<ChildrenList>
+						<Action Name="" ID="{131C4B55-1FE0-4314-8696-B96ED202BE63}" ShortID="993510443">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="23101_Die_Print_01" ID="{A7775F42-4D82-4C91-8C7C-4BB3A4F25390}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

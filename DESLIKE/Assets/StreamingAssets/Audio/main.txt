@@ -2,6 +2,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	270789025	T_12302_Idle			\Default Work Unit\T_12302_Idle	
 	450034178	T_12202_Atk_1			\Default Work Unit\T_12202_Atk_1	
 	461545889	Battle_End			\Default Work Unit\Battle_End	
+	617022462	T_23101_Die			\Default Work Unit\T_23101_Die	
 	880908724	T_12301_Idle			\Default Work Unit\T_12301_Idle	
 	1027347108	Game_Speed_Pause			\Default Work Unit\Game_Speed_Pause	
 	1080515304	T_12301_Atk_1			\Default Work Unit\T_12301_Atk_1	

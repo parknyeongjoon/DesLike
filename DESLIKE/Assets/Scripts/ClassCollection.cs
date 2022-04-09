@@ -21,7 +21,7 @@ public enum Rarity { Normal, Rare, Epic }
 public enum SkillType { TargetSkill, GrenadeSkill, InstanceSkill, PassiveSkill, Etc}
 public enum BuffType { None, Plague }
 
-public enum CurWindow { Map, Event, Battle, Village, Organ, StageSel}
+public enum CurWindow { Map, Event, Battle, Village, Organ, StageSel }
 
 [System.Serializable]
 public class Buff_Stat

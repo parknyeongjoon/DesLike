@@ -23,6 +23,7 @@ public class SoldierInfo : HeroInfo
         gameObject.layer = 7;
         if (skeletonAnimation.skeleton != null)
             skeletonAnimation.state.SetAnimation(0, "H_23101_Die", false);
+        AkSoundEngine.PostEvent("T_23101_Die", gameObject);
         Debug.Log("Dead");
         allyPortDatas.spawnSoldierList.Remove(this);
         BattleUIManager.Instance.UpdateSoldierRatioBar();

@@ -16,7 +16,7 @@ public class SingleBuff : ActiveSkill//우선 버프 대상 정할 방법 구하기(portDatas
     public override IEnumerator UseSkill(HeroInfo targetInfo)//코루틴은 monoBehaviour로 가져가기
     {
         heroInfo.action = Soldier_Action.Skill;
-        string temp = "T_" + heroInfo.castleData.code + "_Skill_1";
+        string temp = "T_" + heroInfo.castleData.code + "_Skill_1";//밖으로 빼기
         AkSoundEngine.PostEvent(temp, gameObject);
         //heroInfo.skeletonAnimation.state.SetAnimation(0, "skill_1", false);//스킬
         yield return new WaitForSeconds(((ActiveSkillData)skillData).start_Delay);

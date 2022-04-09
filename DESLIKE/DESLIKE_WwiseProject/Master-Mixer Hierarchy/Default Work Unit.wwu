@@ -21,7 +21,7 @@
 										<DuckItem>
 											<BusRef Name="TNE" ID="{E4C08831-5423-4812-ADC9-1C83042BDA0C}"/>
 											<DuckingParam>
-												<Volume>-6</Volume>
+												<Volume>-2</Volume>
 												<FadeInTime>0.5</FadeInTime>
 												<FadeOutTime>0.5</FadeOutTime>
 												<FadeCurve>FadeLinear</FadeCurve>
@@ -40,7 +40,7 @@
 												<DuckItem>
 													<BusRef Name="TN_Bus" ID="{6D09DD6C-83B3-4B13-B81E-290B57998183}"/>
 													<DuckingParam>
-														<Volume>-6</Volume>
+														<Volume>-2</Volume>
 														<FadeInTime>0.5</FadeInTime>
 														<FadeOutTime>0.5</FadeOutTime>
 														<FadeCurve>FadeLinear</FadeCurve>

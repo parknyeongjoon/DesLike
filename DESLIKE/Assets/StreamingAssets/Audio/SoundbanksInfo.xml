@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2854116084">
+		<SoundBank Id="1355168291" Language="SFX" Hash="4016475445">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -26,7 +26,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="297033124">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3944325498">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -36,7 +36,7 @@
 					<IncludedMemoryFiles>
 						<File Id="62381386" Language="SFX">
 							<ShortName>Escaping the Ruins W.wav</ShortName>
-							<Path>SFX/Escaping the Ruins W_A9E05640.wem</Path>
+							<Path>SFX/Escaping the Ruins W_95E52E4F.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -74,15 +74,15 @@
 					<IncludedMemoryFiles>
 						<File Id="453919233" Language="SFX">
 							<ShortName>12202_Atk_1_Print_01.wav</ShortName>
-							<Path>SFX/12202_Atk_1_Print_01_24AEBA7D.wem</Path>
+							<Path>SFX/12202_Atk_1_Print_01_45B5A7D8.wem</Path>
 						</File>
 						<File Id="643813455" Language="SFX">
 							<ShortName>12202_Atk_1_Print_01.wav</ShortName>
-							<Path>SFX/12202_Atk_1_Print_01_7C1C8851.wem</Path>
+							<Path>SFX/12202_Atk_1_Print_01_AE6FD2E3.wem</Path>
 						</File>
 						<File Id="770202027" Language="SFX">
 							<ShortName>12202_Atk_1_Print_01.wav</ShortName>
-							<Path>SFX/12202_Atk_1_Print_01_A22D1004.wem</Path>
+							<Path>SFX/12202_Atk_1_Print_01_14A0B0B2.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -106,15 +106,15 @@
 					<IncludedMemoryFiles>
 						<File Id="442996702" Language="SFX">
 							<ShortName>12302_Atk_1_Print_01.wav</ShortName>
-							<Path>SFX/12302_Atk_1_Print_01_6489EFF2.wem</Path>
+							<Path>SFX/12302_Atk_1_Print_01_2BBD420E.wem</Path>
 						</File>
 						<File Id="908949220" Language="SFX">
 							<ShortName>12302_Atk_1_Print_01.wav</ShortName>
-							<Path>SFX/12302_Atk_1_Print_01_26890375.wem</Path>
+							<Path>SFX/12302_Atk_1_Print_01_D3FAF3C4.wem</Path>
 						</File>
 						<File Id="1066272607" Language="SFX">
 							<ShortName>12302_Atk_1_Print_01.wav</ShortName>
-							<Path>SFX/12302_Atk_1_Print_01_9EDD0D8E.wem</Path>
+							<Path>SFX/12302_Atk_1_Print_01_BAF44E86.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

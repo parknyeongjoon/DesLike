@@ -11,9 +11,9 @@ public class SingleDebuffData : ActiveSkillData
 
     public virtual IEnumerator DebuffCoroutine(HeroInfo targetInfo)
     {
+        Effect(targetInfo);
         if (targetInfo.gameObject.CompareTag("Player")) { BattleUIManager.Instance.heroPanel.AddDebuff(code); }//영웅에게 버프를 줬다면 버프 패널 업데이트
         else if (targetInfo == BattleUIManager.Instance.cur_Soldier) { BattleUIManager.Instance.soldierPanel.AddDebuff(code); }//현재 soldierPanel에서 보여주고 있는 병사라면 버프 패널 업데이트
-        Effect(targetInfo);
         yield return new WaitForSeconds(debuff_Time);
         if (targetInfo.gameObject.CompareTag("Player")) { BattleUIManager.Instance.heroPanel.RemoveDebuff(code); }//영웅에게 버프를 줬다면 버프 패널 업데이트
         else if (targetInfo == BattleUIManager.Instance.cur_Soldier) { BattleUIManager.Instance.soldierPanel.RemoveDebuff(code); }//현재 soldierPanel에서 보여주고 있는 병사라면 버프 패널 업데이트

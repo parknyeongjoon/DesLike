@@ -133,6 +133,7 @@ public class SaveManager : MonoBehaviour
 
     public void LoadRelicData()
     {
+        RelicManager.Instance.relicList.Clear();
         for(int i = 0; i < gameData.relicSaveData.Count; i++)
         {
             RelicManager.Instance.relicList.Add(dataSheet.relicObjectSheet[gameData.relicSaveData[i]].GetComponent<Relic>());

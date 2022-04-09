@@ -55,6 +55,16 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{E3B1EBA5-CAE0-49D2-8949-5AF62BCE1D48}" ShortID="752654459">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.7"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="23101_Skill_1_Voice" ID="{A8A41E60-C744-4FBD-A2A4-9BD0E36EF5F3}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="H_23101_Skill_2" ID="{3907E37E-F8D4-466B-8177-FE039240D740}">
@@ -247,6 +257,17 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="T_Idle" ID="{E875BE77-B8DA-4F5F-B8F9-F63ED199864D}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="H_23101_Idle" ID="{899DA222-5AE7-4F33-9441-F90BC7A012A9}">
+					<ChildrenList>
+						<Action Name="" ID="{ABC94BC4-E443-4FE7-AF03-830CADD0F94C}" ShortID="442041341">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="23101_Idle" ID="{7F96EC15-D814-4421-B6E6-0F410EA60E8A}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -91,6 +91,11 @@ public class BattleUIManager : MonoBehaviour
     public void BattleStart()
     {
         start_Btn.gameObject.SetActive(false);
+        for(int i = 0; i < allyPortDatas.portDatas.Length; i++)
+        {
+            AkSoundEngine.PostEvent("T_" + allyPortDatas.portDatas[i].soldierCode + "Idle", gameObject);
+            AkSoundEngine.PostEvent("T_" + enemyPortDatas.portDatas[i].soldierCode + "Idle", gameObject);
+        }
         AkSoundEngine.PostEvent("Battle_Start", gameObject);
         GameManager.Instance.GamePause(false);
     }

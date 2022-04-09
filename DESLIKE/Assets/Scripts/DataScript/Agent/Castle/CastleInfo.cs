@@ -18,6 +18,7 @@ public class CastleInfo : MonoBehaviour
     void Start()
     {
         cur_Hp = castleData.hp;
+
     }
 
     public void Die()//DeadBehaviour로 넘겨버리기

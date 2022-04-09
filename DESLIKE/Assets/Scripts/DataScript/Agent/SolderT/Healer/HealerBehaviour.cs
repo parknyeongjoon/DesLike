@@ -5,17 +5,21 @@ using System;
 
 public class HealerBehaviour : SoldierBasic
 {
+    Vector3 healPos;
+
     new void Start()
     {
         base.Start();
         heroInfo.healWeight = -1;
+        if(heroInfo.team == Team.Ally) { healPos = new Vector3(-2, 0, 0); }
+        else if(heroInfo.team == Team.Enemy) { healPos = new Vector3(2, 0, 0); }
     }
 
     void FixedUpdate()
     {
         if (heroInfo.skillTarget)
         {
-            heroInfo.moveDir = (heroInfo.skillTarget.transform.position - new Vector3(2, 0, 0) - transform.position).normalized;
+            heroInfo.moveDir = (heroInfo.skillTarget.transform.position + healPos - transform.position).normalized;
         }
         else { heroInfo.moveDir = new Vector3(0, 0, 0); }
     }
@@ -76,7 +80,7 @@ public class HealerBehaviour : SoldierBasic
     {
         while(heroInfo.state == Soldier_State.Charge)
         {
-            if (heroInfo.action != Soldier_Action.Move) { StartCoroutine(Move(heroInfo.skillTarget.transform.position - new Vector3(2, 0, 0))); }
+            if (heroInfo.action != Soldier_Action.Move) { StartCoroutine(Move(heroInfo.skillTarget.transform.position + healPos)); }
             if (isSkillActive.Invoke())
             {
                 heroInfo.state = Soldier_State.Idle;

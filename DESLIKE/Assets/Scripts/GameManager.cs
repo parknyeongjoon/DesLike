@@ -27,6 +27,8 @@ using UnityEngine.Events;
 * 캐릭터들 체력바 soldierInfo에 OnDamaged 될 때만 넣어주기
 * 도발 기능 만들기(Grenade Debuff로)
 * relic save&load 만들기
+* 죽으면 체마나젠 멈추기
+* 사운드 가중치 함수로 빼기
 * ///////////////////////////////////////////////////////////////////////////////////////////////컨텐츠 기획
 * 방어력 수식 만들기
 * 배틀 중간중간에도 이벤트 나오게 하기(배틀이 한 라운드로 바뀌면서 취소)
@@ -78,24 +80,34 @@ public class GameManager : MonoBehaviour
         //게임 일시정지
         if (Input.GetKeyDown(KeyCode.P))
         {
-            GamePause();
+            GamePause(!gamePause);
         }
     }
 
     //일시정지
-    public void GamePause()
+    public void GamePause(bool isPause)
     {
-        gamePause = !gamePause;
+        gamePause = isPause;
         if (gamePause)
+        {
             Time.timeScale = 0;
+            AkSoundEngine.PostEvent("Game_Speed_Pause", gameObject);
+        }
         else
+        {
             Time.timeScale = 1;
+            AkSoundEngine.PostEvent("Game_Speed_Resume", gameObject);
+        }
+    }
+
+    public void timeScale0()
+    {
+        GamePause(true);
     }
 
     public void timeScale1()
     {
-        gamePause = false;
-        Time.timeScale = 1;
+        GamePause(false);
     }
 
     public void timeScale2()

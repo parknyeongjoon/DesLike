@@ -16,13 +16,16 @@ public class SingleBuff : ActiveSkill//우선 버프 대상 정할 방법 구하기(portDatas
     public override IEnumerator UseSkill(HeroInfo targetInfo)//코루틴은 monoBehaviour로 가져가기
     {
         heroInfo.action = Soldier_Action.Skill;
+        string temp = "T_" + heroInfo.castleData.code + "_Skill_1";//밖으로 빼기
+        AkSoundEngine.PostEvent(temp, gameObject);
+        if(heroInfo.skeletonAnimation.skeleton != null)
+            heroInfo.skeletonAnimation.state.SetAnimation(0, "skill_1", false);//스킬
         yield return new WaitForSeconds(((ActiveSkillData)skillData).start_Delay);
         if (targetInfo && targetInfo.gameObject.layer != 7)
         {
             heroInfo.cur_Mp -= ((ActiveSkillData)skillData).mp;
             cur_cooltime = ((ActiveSkillData)skillData).cooltime;
             StartCoroutine(SkillCooltime());
-            heroInfo.skeletonAnimation.state.SetAnimation(0, "skill_1", false);//스킬
             if (!targetInfo.buffCoroutine.ContainsKey(skillData.code))//딕셔너리에 키가 없다면 코루틴 리스트 추가
             {
                 targetInfo.buffCoroutine.Add(skillData.code, new List<Coroutine>());
@@ -56,7 +59,7 @@ public class SingleBuff : ActiveSkill//우선 버프 대상 정할 방법 구하기(portDatas
 
         for (int i = 0; i < soldierList.Count; i++)//Awake에서 적용 군중에 따라 SoldierList 따로따로 적용해주기
         {
-            if (!(soldierList[i].buffCoroutine.ContainsKey(skillData.code) && soldierList[i].buffCoroutine[skillData.code].Count < ((SingleBuffData)skillData).max_Stack))
+            if (soldierList[i] != heroInfo && !(soldierList[i].buffCoroutine.ContainsKey(skillData.code) && soldierList[i].buffCoroutine[skillData.code].Count < ((SingleBuffData)skillData).max_Stack))
             {
                 heroInfo.skillTarget = soldierList[i].gameObject;
                 heroInfo.skillTargetInfo = soldierList[i];

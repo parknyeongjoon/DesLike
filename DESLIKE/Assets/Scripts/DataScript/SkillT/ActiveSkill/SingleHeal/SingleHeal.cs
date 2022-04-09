@@ -32,7 +32,7 @@ public class SingleHeal : ActiveSkill
         HeroInfo targetInfo = null;
         for (int i = 0; i < soldierInfos.Count || i < 5; i++)
         {
-            if (soldierInfos[i].healWeight > targetHealWeight)
+            if (soldierInfos[i].healWeight > targetHealWeight && soldierInfos[i] != heroInfo)//힐 가중치가 높은 대상 찾기 && 자신 제외
             {
                 targetHealWeight = soldierInfos[i].healWeight;
                 targetInfo = soldierInfos[i];

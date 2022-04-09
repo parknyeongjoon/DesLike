@@ -92,16 +92,20 @@ public class BattleUIManager : MonoBehaviour
     public void BattleStart()
     {
         start_Btn.gameObject.SetActive(false);
+        for(int i = 0; i < allyPortDatas.portDatas.Length; i++)
+        {
+            if (allyPortDatas.portDatas[i].soldierCode != "") { AkSoundEngine.PostEvent("T_" + allyPortDatas.portDatas[i].soldierCode + "_Idle", gameObject); }
+            if (enemyPortDatas.portDatas[i].soldierCode != "") { AkSoundEngine.PostEvent("T_" + enemyPortDatas.portDatas[i].soldierCode + "_Idle", gameObject); }
+        }
         AkSoundEngine.PostEvent("Battle_Start", gameObject);
-        GameManager.Instance.gamePause = false;
-        Time.timeScale = 1;
+        GameManager.Instance.GamePause(false);
     }
 
     public void EndStage()
     {
         GameManager.Instance.gamePause = true;
         AkSoundEngine.PostEvent("Battle_End", gameObject);
-        Time.timeScale = 0;
+        GameManager.Instance.GamePause(true);
         if (enemyPortDatas.spawnSoldierList.Count == 0)//승리
         {
             SetRewardPanel();

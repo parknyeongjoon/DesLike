@@ -1,14 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using System;
 
 public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
 {
     new void Start()
     {
         base.Start();
+        curSoundWeight = basicSoundWeight;
     }
 
     void FixedUpdate()
@@ -22,7 +21,11 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
 
     protected override IEnumerator Idle_Behaviour()
     {
-        AkSoundEngine.PostEvent("skeleton_Move", gameObject);
+        yield return new WaitForFixedUpdate();//delete
+        if (curSoundWeight > Random.Range(0, 100)) { 
+            AkSoundEngine.PostEvent("T_" + heroInfo.castleData.code + "_Idle", gameObject);
+            curSoundWeight = basicSoundWeight;
+        }
         while (heroInfo.state == Soldier_State.Idle)
         {
             heroInfo.state = Soldier_State.Detect;

@@ -1733,7 +1733,7 @@ MonoBehaviour:
       - m_Target: {fileID: 5150403020933606963, guid: 489b59e0e3cca6f4e8a2f8519b0c615a,
           type: 3}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: GamePause
+        m_MethodName: timeScale0
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2291,7 +2291,7 @@ GameObject:
   - component: {fileID: 649190936}
   - component: {fileID: 649190935}
   m_Layer: 5
-  m_Name: "\uC9C0\uC6B0\uAE30(\uC2A4\uD0B5\uBC84\uD2BC)"
+  m_Name: "\uC9C0\uC6B0\uAE30(\uAC1C\uBC1C\uC790\uBC84\uD2BC)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

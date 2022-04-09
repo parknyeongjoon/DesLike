@@ -18,6 +18,9 @@ public class SoldierBasic : MonoBehaviour
 
     protected Coroutine moveCoroutine;
 
+    public const int basicSoundWeight = 10;//사운드 가중치 최소값
+    public int curSoundWeight;//현재 사운드 가중치
+
     protected void Start()
     {
         heroInfo.moveDir = new Vector3(0, 0, 0);
@@ -70,7 +73,8 @@ public class SoldierBasic : MonoBehaviour
 
     protected IEnumerator Move()
     {
-        heroInfo.skeletonAnimation.state.AddAnimation(0, "move", true, 0);//idle
+        if (heroInfo.skeletonAnimation.skeleton != null)
+            heroInfo.skeletonAnimation.state.AddAnimation(0, "move", true, 0);//idle
         heroInfo.action = Soldier_Action.Move;
         while (heroInfo.action == Soldier_Action.Move)
         {
@@ -81,7 +85,8 @@ public class SoldierBasic : MonoBehaviour
 
     protected IEnumerator Move(Vector3 destination)
     {
-        heroInfo.skeletonAnimation.state.AddAnimation(0, "move", true, 0);//idle
+        if (heroInfo.skeletonAnimation.skeleton != null)
+            heroInfo.skeletonAnimation.state.AddAnimation(0, "move", true, 0);//idle
         heroInfo.action = Soldier_Action.Move;
         while (transform.position != destination && heroInfo.action == Soldier_Action.Move)
         {

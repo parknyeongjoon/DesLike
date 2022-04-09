@@ -11,9 +11,9 @@ public class SingleBuffData : ActiveSkillData//퍼센트로 버프 주는 법 생각해내기
 
     public virtual IEnumerator BuffCoroutine(HeroInfo targetInfo)
     {
+        Effect(targetInfo);
         if (targetInfo.gameObject.CompareTag("Player")) { BattleUIManager.Instance.heroPanel.AddBuff(code); }//영웅에게 버프를 줬다면 버프 패널 업데이트
         else if (targetInfo == BattleUIManager.Instance.cur_Soldier) { BattleUIManager.Instance.soldierPanel.AddBuff(code); }//현재 soldierPanel에서 보여주고 있는 병사라면 버프 패널 업데이트
-        Effect(targetInfo);
         yield return new WaitForSeconds(buff_Time);
         if (targetInfo.gameObject.CompareTag("Player")) { BattleUIManager.Instance.heroPanel.RemoveBuff(code); }//영웅에게 버프를 줬다면 버프 패널 업데이트
         else if (targetInfo == BattleUIManager.Instance.cur_Soldier) { BattleUIManager.Instance.soldierPanel.RemoveBuff(code); }//현재 soldierPanel에서 보여주고 있는 병사라면 버프 패널 업데이트

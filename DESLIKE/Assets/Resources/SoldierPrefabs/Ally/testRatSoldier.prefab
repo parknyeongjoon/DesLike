@@ -862,3 +862,19 @@ MonoBehaviour:
   basicAttackData: {fileID: 11400000, guid: d5c8c67150965dc4ba48af27e7cd9d5a, type: 2}
   atkArea: 0
   atkLayer: 0
+--- !u!114 &7855247312883663377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3829864645722707234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c89014b4975f448b068fcb4174dcb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 4f19ae2ca981e31469ac4fb8bba04e2f, type: 2}
+  cur_cooltime: 0
+  atkArea: 0
+  atkLayer: 0

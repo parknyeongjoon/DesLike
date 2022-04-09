@@ -59,6 +59,7 @@ public class SaveManager : MonoBehaviour
         }
         //게임 데이터 불러오기
         LoadPortsDatas();
+        LoadRelicData();
         Debug.Log("데이터불러오기완료");
     }
 
@@ -66,6 +67,7 @@ public class SaveManager : MonoBehaviour
     {
         //게임 데이터 저장
         SavePortDatas();
+        SaveRelicData();
         //게임 데이터를 로컬 파일로 저장
         string toJsonData = JsonUtility.ToJson(gameData);
         string filePath = Application.persistentDataPath + "GameData.json";
@@ -118,6 +120,24 @@ public class SaveManager : MonoBehaviour
         //포트 에너지 저장
         allyPortDatas.maxBarrierStrength = gameData.portSaveDatas.maxBarrierStrength;
         allyPortDatas.curBarrierStrength = gameData.portSaveDatas.curBarrierStrength;
+    }
+
+    public void SaveRelicData()
+    {
+        gameData.relicSaveData.Clear();
+        for(int i = 0; i < RelicManager.Instance.relicList.Count; i++)
+        {
+            gameData.relicSaveData.Add(RelicManager.Instance.relicList[i].relicData.code);
+        }
+    }
+
+    public void LoadRelicData()
+    {
+        RelicManager.Instance.relicList.Clear();
+        for(int i = 0; i < gameData.relicSaveData.Count; i++)
+        {
+            RelicManager.Instance.relicList.Add(dataSheet.relicObjectSheet[gameData.relicSaveData[i]].GetComponent<Relic>());
+        }
     }
 
     MapData mapSaveData;

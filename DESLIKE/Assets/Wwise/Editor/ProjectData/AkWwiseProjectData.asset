@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 3a3054e085388a409cee132f734b55bb
     GuidInternal: 
-    m_lastTime: -8585526476431562557
+    m_lastTime: -8585527802577227620
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,8 +38,45 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: c86f71637841d14eb3f4825e4affab97
     GuidInternal: 
-    m_lastTime: -8585525560761766132
+    m_lastTime: -8585521208951962277
     List:
+    - name: Character Bus
+      guid: b0c26739266b5e47bc1b4c04ed87872c
+      id: 2026837964
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c86f71637841d14eb3f4825e4affab97
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Character Bus
+        ObjectType: 2
+        guid: b0c26739266b5e47bc1b4c04ed87872c
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Character Bus
+    - name: H_Bus
+      guid: c1e7d55ed75eff49b2a444be46255ade
+      id: 1962540672
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c86f71637841d14eb3f4825e4affab97
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Character Bus
+        ObjectType: 2
+        guid: b0c26739266b5e47bc1b4c04ed87872c
+      - ElementName: H_Bus
+        ObjectType: 2
+        guid: c1e7d55ed75eff49b2a444be46255ade
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Character Bus\H_Bus
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -54,9 +91,9 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
-    - name: skeleton_Atk Bus
-      guid: a290f2c2c20a3e4a9c4d415c11ba88d0
-      id: 2491616377
+    - name: Music
+      guid: b0e073f6fdbc9948872f8aa1ef6e7d27
+      id: 3991942870
       PathAndIcons:
       - ElementName: Master-Mixer Hierarchy
         ObjectType: 5
@@ -67,11 +104,76 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
-      - ElementName: skeleton_Atk Bus
+      - ElementName: Music
         ObjectType: 2
-        guid: a290f2c2c20a3e4a9c4d415c11ba88d0
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\skeleton_Atk
-        Bus
+        guid: b0e073f6fdbc9948872f8aa1ef6e7d27
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music
+    - name: TE_Bus
+      guid: bd690c2e64709d408645f0060d730c37
+      id: 986497999
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c86f71637841d14eb3f4825e4affab97
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Character Bus
+        ObjectType: 2
+        guid: b0c26739266b5e47bc1b4c04ed87872c
+      - ElementName: TNE
+        ObjectType: 2
+        guid: 3188c0e423541248adc91c83042bda0c
+      - ElementName: TE_Bus
+        ObjectType: 2
+        guid: bd690c2e64709d408645f0060d730c37
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Character Bus\TNE\TE_Bus
+    - name: TN_Bus
+      guid: 6cdd096db383134bb81e290b57998183
+      id: 208977400
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c86f71637841d14eb3f4825e4affab97
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Character Bus
+        ObjectType: 2
+        guid: b0c26739266b5e47bc1b4c04ed87872c
+      - ElementName: TNE
+        ObjectType: 2
+        guid: 3188c0e423541248adc91c83042bda0c
+      - ElementName: TN_Bus
+        ObjectType: 2
+        guid: 6cdd096db383134bb81e290b57998183
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Character Bus\TNE\TN_Bus
+    - name: TNE
+      guid: 3188c0e423541248adc91c83042bda0c
+      id: 1097649576
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c86f71637841d14eb3f4825e4affab97
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Character Bus
+        ObjectType: 2
+        guid: b0c26739266b5e47bc1b4c04ed87872c
+      - ElementName: TNE
+        ObjectType: 2
+        guid: 3188c0e423541248adc91c83042bda0c
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Character Bus\TNE
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -84,7 +186,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 111a7fbee2e9c647a25420f19d3c634f
     GuidInternal: 
-    m_lastTime: -8585526476431562557
+    m_lastTime: -8585521104631019502
     List:
     - name: main
       guid: 619856fbba3b8a4e81efc0e9b7c68d55
@@ -112,11 +214,11 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 9afb6cf7ad351747ac19859bb342359b
     GuidInternal: 
-    m_lastTime: -8585525560761766132
+    m_lastTime: -8585521104631057506
     List:
-    - name: Dead_or_Alive
-      guid: 87313a9c4a626047b9efe5a40674cac0
-      id: 3575957003
+    - name: Battle_End
+      guid: d4bdce04e310f149bb87327e717a33ee
+      id: 461545889
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -124,16 +226,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
-      - ElementName: Dead_or_Alive
+      - ElementName: Battle_End
         ObjectType: 3
-        guid: 87313a9c4a626047b9efe5a40674cac0
-      Path: Events\Default Work Unit\Dead_or_Alive
+        guid: d4bdce04e310f149bb87327e717a33ee
+      Path: Events\Default Work Unit\Battle_End
       maxAttenuation: 0
-      maxDuration: 1.669334
-      minDuration: 1.082805
-    - name: skeleton_Atk
-      guid: 6c2e3214e85c4544bc7d52e123e55a47
-      id: 180084035
+      maxDuration: 0
+      minDuration: 0
+    - name: Battle_Start
+      guid: 04815eb8e7179d4c8087438df374e492
+      id: 2706291346
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -141,16 +243,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
-      - ElementName: skeleton_Atk
+      - ElementName: Battle_Start
         ObjectType: 3
-        guid: 6c2e3214e85c4544bc7d52e123e55a47
-      Path: Events\Default Work Unit\skeleton_Atk
+        guid: 04815eb8e7179d4c8087438df374e492
+      Path: Events\Default Work Unit\Battle_Start
       maxAttenuation: 0
-      maxDuration: 0.646729
-      minDuration: 0.490129
-    - name: skeleton_Move
-      guid: d3cd99c1df65de459720345f3677245b
-      id: 3933512188
+      maxDuration: 106.33275
+      minDuration: 106.33275
+    - name: Game_Speed_Pause
+      guid: 4023f9d03d3c0342b32c007ab838b295
+      id: 1027347108
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -158,16 +260,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
-      - ElementName: skeleton_Move
+      - ElementName: Game_Speed_Pause
         ObjectType: 3
-        guid: d3cd99c1df65de459720345f3677245b
-      Path: Events\Default Work Unit\skeleton_Move
+        guid: 4023f9d03d3c0342b32c007ab838b295
+      Path: Events\Default Work Unit\Game_Speed_Pause
       maxAttenuation: 0
-      maxDuration: 3.780875
-      minDuration: 2.907045
-    - name: test_Idle
-      guid: 461a51ee7e27f54dbc91175cd4eabde5
-      id: 3563682626
+      maxDuration: 0
+      minDuration: 0
+    - name: Game_Speed_Resume
+      guid: 2754b3ebbfa7b645b86c8aecad48252d
+      id: 2372597559
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -175,16 +277,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
-      - ElementName: test_Idle
+      - ElementName: Game_Speed_Resume
         ObjectType: 3
-        guid: 461a51ee7e27f54dbc91175cd4eabde5
-      Path: Events\Default Work Unit\test_Idle
+        guid: 2754b3ebbfa7b645b86c8aecad48252d
+      Path: Events\Default Work Unit\Game_Speed_Resume
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: test_UI
-      guid: 678b4f8b87e6d54c89dd564e295d8add
-      id: 1896376002
+      maxDuration: 0
+      minDuration: 0
+    - name: H_23101_Die
+      guid: 49f8fd6d5a46904eb3f265878c467ea7
+      id: 3025390842
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -192,13 +294,217 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
-      - ElementName: test_UI
+      - ElementName: H_23101_Die
         ObjectType: 3
-        guid: 678b4f8b87e6d54c89dd564e295d8add
-      Path: Events\Default Work Unit\test_UI
+        guid: 49f8fd6d5a46904eb3f265878c467ea7
+      Path: Events\Default Work Unit\H_23101_Die
       maxAttenuation: 0
-      maxDuration: 3.780875
-      minDuration: 3.780875
+      maxDuration: 4.552415
+      minDuration: 3.940282
+    - name: H_23101_Idle
+      guid: 22a29d89e75a334f9441f90bc7a012a9
+      id: 4029061990
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: H_23101_Idle
+        ObjectType: 3
+        guid: 22a29d89e75a334f9441f90bc7a012a9
+      Path: Events\Default Work Unit\H_23101_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: H_23101_Skill_1
+      guid: b22a2ce51ceba54ca2ea52dc2e7b6b58
+      id: 2377059575
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: H_23101_Skill_1
+        ObjectType: 3
+        guid: b22a2ce51ceba54ca2ea52dc2e7b6b58
+      Path: Events\Default Work Unit\H_23101_Skill_1
+      maxAttenuation: 0
+      maxDuration: 4.084604
+      minDuration: 4.084604
+    - name: H_23101_Skill_2
+      guid: 7ee30739d4f86b468177fe039240d740
+      id: 2377059572
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: H_23101_Skill_2
+        ObjectType: 3
+        guid: 7ee30739d4f86b468177fe039240d740
+      Path: Events\Default Work Unit\H_23101_Skill_2
+      maxAttenuation: 0
+      maxDuration: 3.3165
+      minDuration: 3.3165
+    - name: T_12202_Atk_1
+      guid: 898e20cb489c7c40a8a0ea4576626d11
+      id: 450034178
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: T_12202_Atk_1
+        ObjectType: 3
+        guid: 898e20cb489c7c40a8a0ea4576626d11
+      Path: Events\Default Work Unit\T_12202_Atk_1
+      maxAttenuation: 0
+      maxDuration: 0.257594
+      minDuration: 0.193283
+    - name: T_12202_Idle
+      guid: df8971e92026e74d80df4898bdab9041
+      id: 3619100458
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: T_12202_Idle
+        ObjectType: 3
+        guid: df8971e92026e74d80df4898bdab9041
+      Path: Events\Default Work Unit\T_12202_Idle
+      maxAttenuation: 0
+      maxDuration: 3.814942
+      minDuration: 3.157659
+    - name: T_12202_Skill_1
+      guid: 3309ba547008774a92a25c6ea5dd94a4
+      id: 1526852227
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: T_12202_Skill_1
+        ObjectType: 3
+        guid: 3309ba547008774a92a25c6ea5dd94a4
+      Path: Events\Default Work Unit\T_12202_Skill_1
+      maxAttenuation: 0
+      maxDuration: 2.558542
+      minDuration: 2.558542
+    - name: T_12301_Atk_1
+      guid: 79ff6a69e8c6f04d9e03f9753ddc37f2
+      id: 1080515304
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: T_12301_Atk_1
+        ObjectType: 3
+        guid: 79ff6a69e8c6f04d9e03f9753ddc37f2
+      Path: Events\Default Work Unit\T_12301_Atk_1
+      maxAttenuation: 0
+      maxDuration: 2.558542
+      minDuration: 2.558542
+    - name: T_12301_Idle
+      guid: 581ccdf05b55cd4db1fddec9465d28aa
+      id: 880908724
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: T_12301_Idle
+        ObjectType: 3
+        guid: 581ccdf05b55cd4db1fddec9465d28aa
+      Path: Events\Default Work Unit\T_12301_Idle
+      maxAttenuation: 0
+      maxDuration: 4.914942
+      minDuration: 4.257659
+    - name: T_12302_Atk_1
+      guid: 5880d65ce7b0bb47a47a4f4193f1e7d3
+      id: 2037815843
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: T_12302_Atk_1
+        ObjectType: 3
+        guid: 5880d65ce7b0bb47a47a4f4193f1e7d3
+      Path: Events\Default Work Unit\T_12302_Atk_1
+      maxAttenuation: 0
+      maxDuration: 0.340817
+      minDuration: 0.111592
+    - name: T_12302_Idle
+      guid: b6267fb07a4fb04aa1eaed1f17b955a0
+      id: 270789025
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: T_12302_Idle
+        ObjectType: 3
+        guid: b6267fb07a4fb04aa1eaed1f17b955a0
+      Path: Events\Default Work Unit\T_12302_Idle
+      maxAttenuation: 0
+      maxDuration: 4.914942
+      minDuration: 4.257659
+    - name: T_12305_Idle
+      guid: 6fa76a5b2337744b836cb6e0fbd285aa
+      id: 2413801456
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: T_12305_Idle
+        ObjectType: 3
+        guid: 6fa76a5b2337744b836cb6e0fbd285aa
+      Path: Events\Default Work Unit\T_12305_Idle
+      maxAttenuation: 0
+      maxDuration: 4.914942
+      minDuration: 4.257659
+    - name: T_12305_Skill_1
+      guid: 545bb454ad7d144cb8f12b0e1c5d8173
+      id: 2724418929
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: T_12305_Skill_1
+        ObjectType: 3
+        guid: 545bb454ad7d144cb8f12b0e1c5d8173
+      Path: Events\Default Work Unit\T_12305_Skill_1
+      maxAttenuation: 0
+      maxDuration: 1.683251
+      minDuration: 1.683251
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -211,7 +517,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 66256ddd69eb61449ffee9adf1459c2a
     GuidInternal: 
-    m_lastTime: -8585526476432031339
+    m_lastTime: -8585527802588865945
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -225,11 +531,11 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 447c063f9a794e4384dee4b16a1ebf61
     GuidInternal: 
-    m_lastTime: -8585526476431562557
+    m_lastTime: -8585521598443700670
     List:
-    - name: Dead_or_Alive
-      guid: aefbc2221fc66349ac8aa051dc154fb6
-      id: 3575957003
+    - name: Game_Speed
+      guid: f0821c538962c04d9facfba1dea54b9e
+      id: 3269609307
       PathAndIcons:
       - ElementName: States
         ObjectType: 5
@@ -237,45 +543,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 447c063f9a794e4384dee4b16a1ebf61
-      - ElementName: Dead_or_Alive
+      - ElementName: Game_Speed
         ObjectType: 9
-        guid: aefbc2221fc66349ac8aa051dc154fb6
-      Path: States\Default Work Unit\Dead_or_Alive
+        guid: f0821c538962c04d9facfba1dea54b9e
+      Path: States\Default Work Unit\Game_Speed
       values:
-      - name: Alive
-        guid: 39c49fdc1c63ba4197c87e73edc4e34f
-        id: 655265632
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 447c063f9a794e4384dee4b16a1ebf61
-        - ElementName: Dead_or_Alive
-          ObjectType: 9
-          guid: aefbc2221fc66349ac8aa051dc154fb6
-        - ElementName: Alive
-          ObjectType: 8
-          guid: 39c49fdc1c63ba4197c87e73edc4e34f
-      - name: Dead
-        guid: f69adfe54e85e74681a28a5d1ba3be84
-        id: 2044049779
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 447c063f9a794e4384dee4b16a1ebf61
-        - ElementName: Dead_or_Alive
-          ObjectType: 9
-          guid: aefbc2221fc66349ac8aa051dc154fb6
-        - ElementName: Dead
-          ObjectType: 8
-          guid: f69adfe54e85e74681a28a5d1ba3be84
       - name: None
-        guid: af8228abffc7554e90f0f02c513c7d20
+        guid: f4a1ffb9447ca842b90e8cad8e38cfa7
         id: 748895195
         PathAndIcons:
         - ElementName: States
@@ -284,12 +558,60 @@ MonoBehaviour:
         - ElementName: Default Work Unit
           ObjectType: 12
           guid: 447c063f9a794e4384dee4b16a1ebf61
-        - ElementName: Dead_or_Alive
+        - ElementName: Game_Speed
           ObjectType: 9
-          guid: aefbc2221fc66349ac8aa051dc154fb6
+          guid: f0821c538962c04d9facfba1dea54b9e
         - ElementName: None
           ObjectType: 8
-          guid: af8228abffc7554e90f0f02c513c7d20
+          guid: f4a1ffb9447ca842b90e8cad8e38cfa7
+      - name: X0
+        guid: 0cb3db15cf37414ca9338cd4cb215f7d
+        id: 1500973333
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 447c063f9a794e4384dee4b16a1ebf61
+        - ElementName: Game_Speed
+          ObjectType: 9
+          guid: f0821c538962c04d9facfba1dea54b9e
+        - ElementName: X0
+          ObjectType: 8
+          guid: 0cb3db15cf37414ca9338cd4cb215f7d
+      - name: X1
+        guid: ef9920dce2917c4d89be0277675b2d01
+        id: 1500973332
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 447c063f9a794e4384dee4b16a1ebf61
+        - ElementName: Game_Speed
+          ObjectType: 9
+          guid: f0821c538962c04d9facfba1dea54b9e
+        - ElementName: X1
+          ObjectType: 8
+          guid: ef9920dce2917c4d89be0277675b2d01
+      - name: X2
+        guid: d13639a22fbd6e4a8df516565b571ee3
+        id: 1500973335
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 447c063f9a794e4384dee4b16a1ebf61
+        - ElementName: Game_Speed
+          ObjectType: 9
+          guid: f0821c538962c04d9facfba1dea54b9e
+        - ElementName: X2
+          ObjectType: 8
+          guid: d13639a22fbd6e4a8df516565b571ee3
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
@@ -305,7 +627,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 3577efce741fb946b3097ffdf71f2fa2
     GuidInternal: 
-    m_lastTime: -8585526476431562557
+    m_lastTime: -8585527802578008956
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -319,7 +641,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 0a7647b42d6f7e4688f5c47f0ff78d4a
     GuidInternal: 
-    m_lastTime: -8585526476431562557
+    m_lastTime: -8585527802577610025
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 

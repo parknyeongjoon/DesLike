@@ -1,14 +1,20 @@
 State Group	ID	Name			Wwise Object Path	Notes
-	3575957003	Dead_or_Alive			\Default Work Unit\Dead_or_Alive	
+	3269609307	Game_Speed			\Default Work Unit\Game_Speed	
 
 State	ID	Name	State Group			Notes
-	655265632	Alive	Dead_or_Alive			
-	748895195	None	Dead_or_Alive			
-	2044049779	Dead	Dead_or_Alive			
+	748895195	None	Game_Speed			
+	1500973332	X1	Game_Speed			
+	1500973333	X0	Game_Speed			
+	1500973335	X2	Game_Speed			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	2491616377	skeleton_Atk Bus			\Default Work Unit\Master Audio Bus\skeleton_Atk Bus	
+	208977400	TN_Bus			\Default Work Unit\Master Audio Bus\Character Bus\TNE\TN_Bus	
+	986497999	TE_Bus			\Default Work Unit\Master Audio Bus\Character Bus\TNE\TE_Bus	
+	1097649576	TNE			\Default Work Unit\Master Audio Bus\Character Bus\TNE	
+	1962540672	H_Bus			\Default Work Unit\Master Audio Bus\Character Bus\H_Bus	
+	2026837964	Character Bus			\Default Work Unit\Master Audio Bus\Character Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 
 Effect plug-ins	ID	Name	Type				Notes
 	3970951098	New_Wwise_Peak_Limiter	Wwise Peak Limiter			

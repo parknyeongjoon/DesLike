@@ -91,6 +91,7 @@ public class GameData
     public HeroSaveData heroSaveData = new HeroSaveData();
     public PortSaveDatas portSaveDatas = new PortSaveDatas();
     public GoodsSaveData goodsSaveData = new GoodsSaveData();
+    public List<string> relicSaveData = new List<string>();
     public MapData mapData;
     public RewardData rewardData;
     //mutant, 유물, extraSkills 등 바뀐 애들 저장해야함(continue 누르면 복제하는 식으로 하면 될 듯)

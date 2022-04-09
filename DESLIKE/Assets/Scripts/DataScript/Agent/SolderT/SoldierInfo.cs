@@ -21,9 +21,7 @@ public class SoldierInfo : HeroInfo
     void Dead()
     {
         gameObject.layer = 7;
-        skeletonAnimation.state.SetAnimation(0, "die", false);//idle
         Debug.Log("Dead");
-        AkSoundEngine.PostEvent("skeleton_Dead", gameObject);//사운드도 그럴까?
         allyPortDatas.spawnSoldierList.Remove(this);
         BattleUIManager.Instance.UpdateSoldierRatioBar();
         if (allyPortDatas.spawnSoldierList.Count == 0)

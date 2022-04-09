@@ -13,15 +13,69 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Bus Name="skeleton_Atk Bus" ID="{C2F290A2-0AC2-4A3E-9C4D-415C11BA88D0}">
-							<PropertyList>
-								<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
-								<Property Name="MaxSoundPerInstance" Type="int16">
-									<ValueList>
-										<Value>1</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
+						<Bus Name="Character Bus" ID="{3967C2B0-6B26-475E-BC1B-4C04ED87872C}">
+							<ChildrenList>
+								<Bus Name="H_Bus" ID="{5ED5E7C1-5ED7-49FF-B2A4-44BE46255ADE}">
+									<ObjectLists/>
+									<DuckingList>
+										<DuckItem>
+											<BusRef Name="TNE" ID="{E4C08831-5423-4812-ADC9-1C83042BDA0C}"/>
+											<DuckingParam>
+												<Volume>-2</Volume>
+												<FadeInTime>0.5</FadeInTime>
+												<FadeOutTime>0.5</FadeOutTime>
+												<FadeCurve>FadeLinear</FadeCurve>
+											</DuckingParam>
+										</DuckItem>
+									</DuckingList>
+								</Bus>
+								<Bus Name="TNE" ID="{E4C08831-5423-4812-ADC9-1C83042BDA0C}">
+									<ChildrenList>
+										<Bus Name="TN_Bus" ID="{6D09DD6C-83B3-4B13-B81E-290B57998183}">
+											<ObjectLists/>
+										</Bus>
+										<Bus Name="TE_Bus" ID="{2E0C69BD-7064-409D-8645-F0060D730C37}">
+											<ObjectLists/>
+											<DuckingList>
+												<DuckItem>
+													<BusRef Name="TN_Bus" ID="{6D09DD6C-83B3-4B13-B81E-290B57998183}"/>
+													<DuckingParam>
+														<Volume>-2</Volume>
+														<FadeInTime>0.5</FadeInTime>
+														<FadeOutTime>0.5</FadeOutTime>
+														<FadeCurve>FadeLinear</FadeCurve>
+													</DuckingParam>
+												</DuckItem>
+											</DuckingList>
+										</Bus>
+									</ChildrenList>
+									<ObjectLists/>
+								</Bus>
+							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="Game_Speed" ID="{531C82F0-6289-4DC0-9FAC-FBA1DEA54B9E}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="X2" ID="{A23936D1-BD2F-4A6E-8DF5-16565B571EE3}"/>
+										<CustomState Name="" ID="{6CCE1F59-67AC-4804-AC8C-947B241AA157}" ShortID="780771530"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="X0" ID="{15DBB30C-37CF-4C41-A933-8CD4CB215F7D}"/>
+										<CustomState Name="" ID="{B699BCFC-D4B0-42C9-9006-1EBB18505E73}" ShortID="33610377"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="X1" ID="{DC2099EF-91E2-4D7C-89BE-0277675B2D01}"/>
+										<CustomState Name="" ID="{6E367EE4-D8D3-496E-AF46-0FB65E9AAB85}" ShortID="362849758"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="Music" ID="{F673E0B0-BCFD-4899-872F-8AA1EF6E7D27}">
 							<ObjectLists/>
 						</Bus>
 					</ChildrenList>

@@ -13,6 +13,18 @@ MonoBehaviour:
   m_Name: ratHeroPortOption
   m_EditorClassIdentifier: 
   soldierOption:
+  - soldierData: {fileID: 11400000, guid: eceecd6d3db2957429877d981159387d, type: 2}
+    mutant: {fileID: 0}
+    portNum: 02000000
+  - soldierData: {fileID: 11400000, guid: cfafb7fd4b40a4245acd1d4d0bf6313d, type: 2}
+    mutant: {fileID: 0}
+    portNum: 01000000
+  - soldierData: {fileID: 11400000, guid: e4dc5552129c12f4ab36e7e5e1cb37bc, type: 2}
+    mutant: {fileID: 0}
+    portNum: 07000000
+  - soldierData: {fileID: 11400000, guid: 35146f468df5bbf45a30aef17af25246, type: 2}
+    mutant: {fileID: 0}
+    portNum: 03000000
   - soldierData: {fileID: 11400000, guid: 27be6089e9daeb6499a3dfc2addf52a9, type: 2}
     mutant: {fileID: 0}
-    portNum: 010000000200000003000000
+    portNum: 0000000004000000

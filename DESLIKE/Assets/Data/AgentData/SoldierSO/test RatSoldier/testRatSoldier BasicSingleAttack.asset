@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: testRatSoldier BasicSingleAttack
   m_EditorClassIdentifier: 
   start_Delay: 0.3
-  end_Delay: 0.2
+  end_Delay: 0.3
   range: 1
   atk_Dmg: 1
   atkArea: 256

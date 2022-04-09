@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class HeroBehaviour : SoldierBasic
 {
@@ -16,6 +15,12 @@ public class HeroBehaviour : SoldierBasic
         {
             if (Input.GetMouseButtonDown(1))
             {
+                curSoundWeight += 2;
+                if (curSoundWeight > Random.Range(0, 100))
+                {
+                    AkSoundEngine.PostEvent("H_" + heroInfo.castleData.code + "_Idle", gameObject);
+                    curSoundWeight = 10;
+                }
                 if (moveCoroutine != null) { StopCoroutine(moveCoroutine); }
                 Vector2 mousePos = Input.mousePosition;
                 mousePos = Camera.main.ScreenToWorldPoint(mousePos);

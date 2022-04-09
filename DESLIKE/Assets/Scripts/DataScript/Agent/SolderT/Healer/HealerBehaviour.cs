@@ -80,7 +80,7 @@ public class HealerBehaviour : SoldierBasic
     {
         while(heroInfo.state == Soldier_State.Charge)
         {
-            if (heroInfo.action != Soldier_Action.Move) { StartCoroutine(Move(heroInfo.skillTarget.transform.position - new Vector3(2, 0, 0))); }
+            if (heroInfo.action != Soldier_Action.Move) { StartCoroutine(Move(heroInfo.skillTarget.transform.position + healPos)); }
             if (isSkillActive.Invoke())
             {
                 heroInfo.state = Soldier_State.Idle;

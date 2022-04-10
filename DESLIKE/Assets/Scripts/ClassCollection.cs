@@ -16,7 +16,7 @@ public enum Soldier_Action { Idle, Move, Attack, Skill, End_Delay }
 public enum Soldier_Type { Tanker, Soldier, Healer, Buffer, Debuffer, Ranger, Catapult, Flight, Monster}
 public enum Kingdom { Common, Physic, Spell }
 public enum Tribe { Bear, Kangaroo, Rat, Frog, Undead, Mech, Ghost }
-public enum Rarity { Normal, Rare, Epic }
+public enum Rarity { Normal, Epic, Legendary }
 
 public enum SkillType { TargetSkill, GrenadeSkill, InstanceSkill, PassiveSkill, Etc}
 public enum BuffType { None, Plague }

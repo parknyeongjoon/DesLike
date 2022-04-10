@@ -140,59 +140,52 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    MapData mapSaveData;
-
-    public void SaveMapSaveData()   // 이거 맞아요?
+    BattleNode battleNode; 
+    
+    public void SaveCurBattleNodeData()   
     {
-        gameData.mapData.kingdom = mapSaveData.kingdom;
-        gameData.mapData.curWindow = mapSaveData.curWindow;
-        gameData.mapData.curStage = mapSaveData.curStage;
-        gameData.mapData.curTrack = mapSaveData.curTrack;
-        gameData.mapData.curDay = mapSaveData.curDay;  // 현재 날짜
-        gameData.mapData.curBtn = mapSaveData.curBtn;  // 현재 어떤 버튼을 눌러서 이 곳으로 왔는지
-
-        gameData.mapData.challengeCount = mapSaveData.challengeCount;
-        gameData.mapData.midBossCheck1 = mapSaveData.midBossCheck1;
-        gameData.mapData.midBossCheck2 = mapSaveData.midBossCheck2;
-        gameData.mapData.villageCheck = mapSaveData.villageCheck;
-        gameData.mapData.organCheck = mapSaveData.organCheck;
-        gameData.mapData.newSet = mapSaveData.newSet; // 중간 보스, 마을, 정비, 이미 세팅했는지 여부
-        for (int i = 0; i < 3; i++)
+        for(int btn = 0; btn<3; btn++)    // 버튼 1,2,3
         {
-            gameData.mapData.selEvent[i] = mapSaveData.selEvent[i];
-            gameData.mapData.nextEvent[i] = mapSaveData.nextEvent[i];   // 현재 이벤트(전투) 저장용. 0 : 1트랙, 1 : 2트랙, 2 : 3트랙
-            gameData.mapData.evntList[i] = mapSaveData.evntList[i];    // 이벤트가 어떤 이벤트인지 저장, 0 : 1트랙, 1 : 2트랙, 2 : 3트랙
-            gameData.mapData.isEventSet[i] = mapSaveData.isEventSet[i];
-            gameData.mapData.isRewardSet[i] = mapSaveData.isRewardSet[i];
-            gameData.mapData.isAbleSet[i] = mapSaveData.isAbleSet[i];
-            gameData.mapData.isChallenge[i] = mapSaveData.isChallenge[i];
+            battleNode = (BattleNode)map.selectNode[btn];
+            for(int i = 0; i<battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 저장
+                gameData.curBattleNodeData.ableSoldierIndex[btn,i] = battleNode.ableSoldierRewards[i].code;
+            gameData.mapData.kingdom = battleNode.kingdom;
+
+            for(int i = 0; i<battleNode.reward.soldierReward.Count; i++)
+            {
+                gameData.curBattleNodeData.solRewardIndex[btn, i] = battleNode.reward.soldierReward[i].soldier.code;
+                // mutant 추가 필요
+            }
+            
+            // 유물 저장 필요
         }
     }
-
-    public void LoadMapSaveData()   // ???
+    
+    public void LoadCurBattleNodeData()
     {
-        mapSaveData.kingdom = gameData.mapData.kingdom;
-        mapSaveData.curWindow = gameData.mapData.curWindow;
-        mapSaveData.curStage = gameData.mapData.curStage;
-        mapSaveData.curTrack = gameData.mapData.curTrack;
-        mapSaveData.curDay = gameData.mapData.curDay;  // 현재 날짜
-        mapSaveData.curBtn = gameData.mapData.curBtn;  // 현재 어떤 버튼을 눌러서 이 곳으로 왔는지
-
-        mapSaveData.challengeCount = gameData.mapData.challengeCount;
-        mapSaveData.midBossCheck1 = gameData.mapData.midBossCheck1;
-        mapSaveData.midBossCheck2 = gameData.mapData.midBossCheck2;
-        mapSaveData.villageCheck = gameData.mapData.villageCheck;
-        mapSaveData.organCheck = gameData.mapData.organCheck;
-        mapSaveData.newSet = gameData.mapData.newSet; // 중간 보스, 마을, 정비, 이미 세팅했는지 여부
-        for (int i = 0; i < 3; i++)
+        for (int btn = 0; btn < 3; btn++)    // 버튼 1,2,3
         {
-            mapSaveData.selEvent[i] = gameData.mapData.selEvent[i];
-            mapSaveData.nextEvent[i] = gameData.mapData.nextEvent[i];   // 현재 이벤트(전투) 저장용. 0 : 1트랙, 1 : 2트랙, 2 : 3트랙
-            mapSaveData.evntList[i] = gameData.mapData.evntList[i];    // 이벤트가 어떤 이벤트인지 저장, 0 : 1트랙, 1 : 2트랙, 2 : 3트랙
-            mapSaveData.isEventSet[i] = gameData.mapData.isEventSet[i];
-            mapSaveData.isRewardSet[i] = gameData.mapData.isRewardSet[i];
-            mapSaveData.isAbleSet[i] = gameData.mapData.isAbleSet[i];
-            mapSaveData.isChallenge[i] = gameData.mapData.isChallenge[i];
+            battleNode = (BattleNode)map.selectNode[btn];
+
+            battleNode.ableSoldierRewards.Clear();
+            // battleNode.ableRelicRewards.Clear();
+            battleNode.reward.soldierReward.Clear();
+            battleNode.kingdom = gameData.mapData.kingdom;
+
+            SoldierReward soldierReward = new SoldierReward();
+            SoldierData soldierData = new SoldierData();
+
+            for (int i = 0; i < battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 불러오기
+                battleNode.ableSoldierRewards.Add(dataSheet.soldierDataSheet[gameData.curBattleNodeData.ableSoldierIndex[btn, i]]);
+
+
+            for (int i = 0; i < battleNode.reward.soldierReward.Count; i++)
+            {
+                soldierReward.soldier = dataSheet.soldierDataSheet[gameData.curBattleNodeData.solRewardIndex[btn, i]];
+                // mutant 추가 필요
+
+                battleNode.reward.soldierReward.Add(soldierReward);
+            }
         }
     }
 }

@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu(fileName = "Map", menuName = "ScriptableObject/Map")]
 public class Map : ScriptableObject
 {
-    public MapNode curMapNode;//지우기
+    public MapNode curMapNode;
+    public List<MapNode> selectNode;    // 선택지 3개 저장
+
     public List<SoldierData> physicNorSol;
     public List<SoldierData> physicEpicSol;
 

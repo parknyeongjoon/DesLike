@@ -76,11 +76,17 @@ public class MapData
 }
 
 [System.Serializable]
-public class RewardData
+public class CurBattleNodeData
 {
-    public int[] relicRewardIndex = new int[3];
-    public int[,] soldierRewardIndex = new int[2, 3];
-    }
+    public string[,] ableSoldierIndex;  // [선택지, 순서]
+    public string[,] ableRelicIndex;    // [선택지, 순서]
+
+    public string[,] solRewardIndex;
+    public int[,] relRewardIndex;   // int에서 string 수정 필요
+
+    public int curEnemyPortNum;
+    public int eventSetNum;
+}
 
 [System.Serializable]
 public class GameData
@@ -93,6 +99,6 @@ public class GameData
     public GoodsSaveData goodsSaveData = new GoodsSaveData();
     public List<string> relicSaveData = new List<string>();
     public MapData mapData;
-    public RewardData rewardData;
+    public CurBattleNodeData curBattleNodeData;
     //mutant, 유물, extraSkills 등 바뀐 애들 저장해야함(continue 누르면 복제하는 식으로 하면 될 듯)
 }

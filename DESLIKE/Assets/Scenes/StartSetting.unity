@@ -284,6 +284,8 @@ MonoBehaviour:
   relicObjects:
   - {fileID: 4835315866048107822, guid: bdc55f89b7fc82046a549df921abb5dc, type: 3}
   - {fileID: 4835315866048107822, guid: 28fb182866fc710478c2a803865849ed, type: 3}
+  BattleNodeScript: {fileID: 3963912957987146594, guid: 466e855f347fc934895e18daf1643165,
+    type: 3}
 --- !u!1001 &3976412869853632963
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -13,8 +13,7 @@ public class BattleNode : MapNode
     public bool isChallenge;
     public bool[] isEventSet = new bool[3];
     public bool isRewardSet;
-    public SoldierReward soldierReward = new SoldierReward();
-
+    
     public void Play_BattleNode()
     {
         enemyPortDatas.activeSoldierList.Clear();

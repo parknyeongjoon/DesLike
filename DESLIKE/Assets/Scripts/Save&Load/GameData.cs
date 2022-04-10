@@ -81,7 +81,7 @@ public class CurBattleNodeData
     public string[,] ableSoldierIndex;  // [선택지, 순서]
     public string[,] ableRelicIndex;    // [선택지, 순서]
 
-    public string[,] solRewardIndex;
+    public string[,] solRewardIndex = new string[3,2];
     public int[,] relRewardIndex;   // int에서 string 수정 필요
 
     public int curEnemyPortNum;

@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class Map : ScriptableObject
 {
     public MapNode curMapNode;
-    public List<MapNode> selectNode;    // 선택지 3개 저장
+    const int THREE = 3;
+    public List<MapNode> selectNode = new List<MapNode>(new MapNode[THREE]);    // 선택지 3개 저장
 
     public List<SoldierData> physicNorSol;
     public List<SoldierData> physicEpicSol;

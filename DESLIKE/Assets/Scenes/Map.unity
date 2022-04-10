@@ -12515,6 +12515,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2578643761576669275, guid: 2e09879a1504ebd4f8bf0341040f348e,
         type: 3}
+      propertyPath: mapNode
+      value: 
+      objectReference: {fileID: 11400000, guid: c788c6a689bbe6848892052dc252066a,
+        type: 2}
+    - target: {fileID: 2578643761576669275, guid: 2e09879a1504ebd4f8bf0341040f348e,
+        type: 3}
       propertyPath: InfoTemp
       value: 
       objectReference: {fileID: 1643093304}
@@ -22568,6 +22574,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2578643761576669275, guid: 2e09879a1504ebd4f8bf0341040f348e,
         type: 3}
+      propertyPath: mapNode
+      value: 
+      objectReference: {fileID: 11400000, guid: e402d43d3f082864e91da15c42685c8c,
+        type: 2}
+    - target: {fileID: 2578643761576669275, guid: 2e09879a1504ebd4f8bf0341040f348e,
+        type: 3}
       propertyPath: InfoTemp
       value: 
       objectReference: {fileID: 1643093304}
@@ -23989,6 +24001,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2578643761576669275, guid: 2e09879a1504ebd4f8bf0341040f348e,
+        type: 3}
+      propertyPath: mapNode
+      value: 
+      objectReference: {fileID: 11400000, guid: aa2481306b7ef304e9d74bb980916d7c,
+        type: 2}
     - target: {fileID: 2578643761576669275, guid: 2e09879a1504ebd4f8bf0341040f348e,
         type: 3}
       propertyPath: InfoTemp
@@ -47741,6 +47759,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2578643761576669275, guid: 2e09879a1504ebd4f8bf0341040f348e,
         type: 3}
+      propertyPath: mapNode
+      value: 
+      objectReference: {fileID: 11400000, guid: c788c6a689bbe6848892052dc252066a,
+        type: 2}
+    - target: {fileID: 2578643761576669275, guid: 2e09879a1504ebd4f8bf0341040f348e,
+        type: 3}
       propertyPath: InfoTemp
       value: 
       objectReference: {fileID: 1643093304}
@@ -48604,6 +48628,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2578643761576669275, guid: 2e09879a1504ebd4f8bf0341040f348e,
+        type: 3}
+      propertyPath: mapNode
+      value: 
+      objectReference: {fileID: 11400000, guid: aa2481306b7ef304e9d74bb980916d7c,
+        type: 2}
     - target: {fileID: 2578643761576669275, guid: 2e09879a1504ebd4f8bf0341040f348e,
         type: 3}
       propertyPath: InfoTemp

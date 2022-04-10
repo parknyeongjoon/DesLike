@@ -9,12 +9,12 @@ public class EventNodeScript : NodeScript
     SaveManager saveManager;
     int phyNorSolC, speNorSolC, comNorSolC, phyEpicSolC, speEpicSolC, comEpicSolC,
         phyNorRelC, speNorRelC, comNorRelC, phyEpicRelC, speEpicRelC, comEpicRelC, phyLegendRelC, speLegendRelC, comLegendRelC;
-    int[] nextEvent = new int[3];
+    const int THREE = 3;
+    int[] nextEvent = new int[THREE];
     Map map;
-    public bool[] isEventSet = new bool[3];
-    bool isRewardSet;
+    public bool[] isEventSet = new bool[THREE];
+    bool[] isRewardSet = new bool[THREE];
     Reward reward;
-    SoldierReward soldierReward;
     List<SoldierData> ableSoldierRewards;
     List<GameObject> ableRelicRewards;
     List<Option> option = new List<Option>();
@@ -30,9 +30,11 @@ public class EventNodeScript : NodeScript
     void VarChange()    // 변수 재정의(배틀노드 -> 배틀노드 스크립트)
     {
         for (int i = 0; i < 3; i++)
+        {
             isEventSet[i] = saveManager.gameData.mapData.isEventSet[i];
+            eventNode.isEventSet[i] = isEventSet[i];
+        }
         reward = eventNode.reward;
-        soldierReward = eventNode.soldierReward;
         ableSoldierRewards =eventNode.ableSoldierRewards;
         ableRelicRewards = eventNode.ableRelicRewards;
         map = eventNode.map;
@@ -42,8 +44,8 @@ public class EventNodeScript : NodeScript
     {
         for (int i = 0; i < 3; i++)
         {
-            eventNode.isRewardSet = saveManager.gameData.mapData.isRewardSet[i];   // 배틀 노드 저장
-            isRewardSet = eventNode.isRewardSet;   // 배틀 노드 스크립트용
+            isEventSet[i] = eventNode.isEventSet[i] = saveManager.gameData.mapData.isEventSet[i];
+            isRewardSet[i] = eventNode.isRewardSet[i] = saveManager.gameData.mapData.isRewardSet[i];
         }
 
         phyNorSolC = map.physicNorSol.Count;
@@ -68,25 +70,28 @@ public class EventNodeScript : NodeScript
     {
         SetEventReward1();
         GameManager.DeleteChilds(InfoTemp);
+        map.selectNode[0] = this.eventNode;
     }
 
     public void EventNodeSet2()
     {
         SetEventReward2();
         GameManager.DeleteChilds(InfoTemp);
+        map.selectNode[1] = this.eventNode;
     }
 
     public void EventNodeSet3()
     {
         SetEventReward3();
         GameManager.DeleteChilds(InfoTemp);
+        map.selectNode[2] = this.eventNode;
     }
 
     void SetEventReward1()
     {
         eventNode.SetAbleReward();
-
-        if (isRewardSet == false)
+        isRewardSet[0] = saveManager.gameData.mapData.isRewardSet[0];
+        if (isRewardSet[0] == false)
         {
             NorSolSet(0, 0);
             // EpicSolSet(0,0);
@@ -96,29 +101,16 @@ public class EventNodeScript : NodeScript
             // EpicRelSet(0);
             // LegendRelSet(0);
         }
-        else
-        {
-            /*
-            reward.soldierReward.Clear();
-            for (int i = 0; i < 2; i++)
-            {
-                soldierReward.soldier = saveManager.dataSheet.soldierDataSheet[saveManager.gameData.curBattleNodeData.solRewardIndex[0, i]];
-                reward.soldierReward.Add(soldierReward);   // 병사 선택지 추가
-            }
-            // relicRewardIndex[0] = saveManager.gameData.rewardData.relicRewardIndex[0];
-            // reward.relic = ableRelicRewards[relicRewardIndex[0]];  // 유물 불러오기
-            */
-        }
-
+       
         saveManager.gameData.mapData.isRewardSet[0] = true;
-        isRewardSet = true;
+        isRewardSet[0] = true;
     }
 
     void SetEventReward2()
     {
         eventNode.SetAbleReward();
-
-        if (isRewardSet == false)
+        isRewardSet[1] = saveManager.gameData.mapData.isRewardSet[1];
+        if (isRewardSet[1] == false)
         {
             NorSolSet(0, 1);
             // EpicSolSet(0,1);
@@ -128,29 +120,17 @@ public class EventNodeScript : NodeScript
             // EpicRelSet(1);
             // LegendRelSet(1);
         }
-        else
-        {
-            /*
-            reward.soldierReward.Clear();
-            for (int i = 0; i < 2; i++)
-            {
-                soldierReward.soldier = saveManager.dataSheet.soldierDataSheet[saveManager.gameData.curBattleNodeData.solRewardIndex[1, i]];
-                reward.soldierReward.Add(soldierReward);   // 병사 선택지 추가
-            }
-            // relicRewardIndex[0] = saveManager.gameData.rewardData.relicRewardIndex[1];
-            // reward.relic = ableRelicRewards[relicRewardIndex[1]];  // 유물 불러오기
-            */
-        }
-
+        
         saveManager.gameData.mapData.isRewardSet[1] = true;
-        isRewardSet = true;
+        isRewardSet[1] = true;
     }
 
     void SetEventReward3()
     {
         eventNode.SetAbleReward();
 
-        if (isRewardSet == false)
+        isRewardSet[2] = saveManager.gameData.mapData.isRewardSet[2];
+        if (isRewardSet[2] == false)
         {
             NorSolSet(0, 2);
             // EpicSolSet(0,2);
@@ -160,22 +140,9 @@ public class EventNodeScript : NodeScript
             // EpicRelSet(2);
             // LegendRelSet(2);
         }
-        else
-        {
-            /*
-            reward.soldierReward.Clear();
-            for (int i = 0; i < 2; i++)
-            {
-                soldierReward.soldier = saveManager.dataSheet.soldierDataSheet[saveManager.gameData.curBattleNodeData.solRewardIndex[2, i]];
-                reward.soldierReward.Add(soldierReward);   // 병사 선택지 추가
-            }
-            // relicRewardIndex[0] = saveManager.gameData.rewardData.relicRewardIndex[0];
-            // reward.relic = ableRelicRewards[relicRewardIndex[0]];  // 유물 불러오기
-            */
-        }
-
+       
         saveManager.gameData.mapData.isRewardSet[2] = true;
-        isRewardSet = true;
+        isRewardSet[2] = true;
     }
 
     public void NorSolSet(int num, int button)  // 일반 병사 1마리 추가
@@ -184,18 +151,21 @@ public class EventNodeScript : NodeScript
         if (eventNode.kingdom == Kingdom.Physic) norTotal = phyNorSolC + comNorSolC;  // 무투국 + 공통
         else norTotal = speNorSolC + comNorSolC; // 주술국 + 공통
 
-        // randomInt:
+        randomInt:
         int rand = Random.Range(0, norTotal);   // 일반 범위 내에서 랜덤값 설정
-        // if (num == 1 && (eventNode.ableSoldierRewards[rand].code == saveManager.gameData.curBattleNodeData.solRewardIndex[button, 0]))
-        //    goto randomInt;  // 다른 선택지와 중복이면 다시 뽑기
+        if (num == 1 && (eventNode.ableSoldierRewards[rand].code == saveManager.gameData.curBattleNodeData.solRewardIndex[button, 0]))
+            goto randomInt;  // 다른 선택지와 중복이면 다시 뽑기
 
         if (num == 0) reward.soldierReward.Clear();
+
+        SoldierReward soldierReward = new SoldierReward();
+        soldierReward.soldier = eventNode.ableSoldierRewards[rand];
 
         soldierReward.soldier = eventNode.ableSoldierRewards[rand];
         // soldierReward.mutant = ...; // mutant 추가 필요
         reward.soldierReward.Add(soldierReward);   // 선택지에 병사 추가
 
-        // saveManager.gameData.curBattleNodeData.solRewardIndex[button, num] = eventNode.ableSoldierRewards[rand].code;  // 병사 코드 저장
+        saveManager.gameData.curBattleNodeData.solRewardIndex[button, num] = eventNode.ableSoldierRewards[rand].code;  // 병사 코드 저장
     }
 
     public void EpicSolSet(int num, int button)  // 희귀 병사 1마리 추가, 주석은 NorSolSet 참고
@@ -212,18 +182,19 @@ public class EventNodeScript : NodeScript
             epicTotal = speEpicSolC + comEpicSolC;
         }
 
-        // randomInt:
+        randomInt:
         int rand = norTotal + Random.Range(0, epicTotal);
-        // if (num == 1 && (eventNode.ableSoldierRewards[rand].code == saveManager.gameData.curBattleNodeData.solRewardIndex[button, 0]))
-        //     goto randomInt;  // 다른 선택지와 중복이면 다시 뽑기
+        if (num == 1 && (eventNode.ableSoldierRewards[rand].code == saveManager.gameData.curBattleNodeData.solRewardIndex[button, 0]))
+            goto randomInt;  // 다른 선택지와 중복이면 다시 뽑기
 
         if (num == 0) reward.soldierReward.Clear();
 
+        SoldierReward soldierReward = new SoldierReward();
         soldierReward.soldier = eventNode.ableSoldierRewards[rand];
         // soldierReward.mutant = ...; // mutant 추가 필요
-        reward.soldierReward.Add(soldierReward);   // 선택지에 병사 추가
+        eventNode.reward.soldierReward.Add(soldierReward);   // 선택지에 병사 추가
 
-        // saveManager.gameData.curBattleNodeData.solRewardIndex[button, num] = eventNode.ableSoldierRewards[rand].code;  // 병사 코드 저장
+        saveManager.gameData.curBattleNodeData.solRewardIndex[button, num] = eventNode.ableSoldierRewards[rand].code;  // 병사 코드 저장
     }
 
     public void NorRelSet(int button)   // 일반 유물 설정
@@ -235,7 +206,7 @@ public class EventNodeScript : NodeScript
             norTotal = speNorRelC + comNorRelC;  // 주술국 + 공통
 
         int rand = Random.Range(0, norTotal);   // 일반 범위 내 랜덤값
-        reward.relic = ableRelicRewards[rand];  // 해당 유물을 노드에 저장
+        eventNode.reward.relic = eventNode.ableRelicRewards[rand];  // 해당 유물을 노드에 저장
         // saveManager.gameData.curBattleNodeData.relRewardIndex[button, 0] = rand;    // 유물 번호 게임데이터에 저장
     }
 
@@ -254,7 +225,7 @@ public class EventNodeScript : NodeScript
         }
         int rand = Random.Range(0, epicTotal) + norTotal;
 
-        reward.relic = ableRelicRewards[rand];
+        eventNode.reward.relic = eventNode.ableRelicRewards[rand];
         // saveManager.gameData.rewardData.relicRewardIndex[button] = rand;
     }
 
@@ -272,13 +243,18 @@ public class EventNodeScript : NodeScript
             legendTotal = speLegendRelC + comLegendRelC;
         }
         int rand = Random.Range(0, legendTotal) + neTotal;
-        reward.relic = ableRelicRewards[rand];
+        eventNode.reward.relic = eventNode.ableRelicRewards[rand];
         // saveManager.gameData.rewardData.relicRewardIndex[button] = rand;
     }
 
 
     public void Play_EventNode()
     {
+        for (int i = 0; i < 3; i++)
+        {
+            eventNode.isEventSet[i] = false;
+            eventNode.isRewardSet[i] = false;
+        }
         eventNode.Play_EventNode();
     }
  }

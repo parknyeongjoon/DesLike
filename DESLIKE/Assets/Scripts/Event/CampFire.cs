@@ -11,15 +11,11 @@ public class CampFire : MonoBehaviour
     
     public void CampFireOption1()//피의 20프로 회복, 3일 소모
     {
-        heroInfo = GameObject.Find("Hero").GetComponent<HeroInfo>();
-        heroInfo.OnHealed(heroInfo.castleData.hp * 0.2f);
-        EndEvent();
+         EndEvent();
     }
 
     public void CampFireOption2()//피의 10프로 회복, 2일 소모
     {
-        heroInfo = GameObject.Find("Hero").GetComponent<HeroInfo>();
-        heroInfo.OnHealed(heroInfo.castleData.hp * 0.1f);
         EndEvent();
     }
 

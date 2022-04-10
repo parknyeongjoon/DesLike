@@ -276,6 +276,50 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="T_23101_Idle" ID="{634AE9D8-D2B6-4C3C-A84A-275D101C0232}">
+					<ChildrenList>
+						<Action Name="" ID="{BB8F3655-D842-4AB1-870A-1A46C9FF6913}" ShortID="339649163">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="23101_Idle" ID="{7F96EC15-D814-4421-B6E6-0F410EA60E8A}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="T_23101_Skill_1" ID="{02ACDC90-BB4C-4B7D-85D5-42404F053E72}">
+					<ChildrenList>
+						<Action Name="" ID="{1DEC5C76-3D61-4235-9020-3C37B13D27DF}" ShortID="926752507">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="23101_Skill_1_Print_01" ID="{2367BC5A-4E94-49DB-B3C5-FF2D34F55E3E}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="T_23101_Atk_1" ID="{52567996-B9A5-46F8-8856-4E7456054A10}">
+					<ChildrenList>
+						<Action Name="" ID="{A9454B4C-CB85-4EE2-BB92-E930C9F2CDA7}" ShortID="555509593">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="T_23101_Atk_1_Print_01" ID="{11A731A2-B700-427C-85B0-E70AB0641D50}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="T_23101_Die" ID="{7C257EFF-3381-4AF8-98D5-A51295CDF5D4}">
+					<ChildrenList>
+						<Action Name="" ID="{131C4B55-1FE0-4314-8696-B96ED202BE63}" ShortID="993510443">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="23101_Die_Print_01" ID="{A7775F42-4D82-4C91-8C7C-4BB3A4F25390}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

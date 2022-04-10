@@ -41,7 +41,7 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
     {
         if (Input.GetKeyDown(KeyCode.Z) && skillScripts[0])
         {
-            heroInfo.skeletonAnimation.state.SetAnimation(0, "skill_1", false);//스킬
+            heroInfo.skeletonAnimation.state.SetAnimation(0, "H_23101_Skill_1", false);//스킬
             AkSoundEngine.PostEvent("H_23101_Skill_1", gameObject);
             //SkillFunc(skillScripts[0]);
         }
@@ -51,7 +51,7 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
     {
         if (Input.GetKeyDown(KeyCode.X) && skillScripts[1])
         {
-            heroInfo.skeletonAnimation.state.SetAnimation(0, "skill_2", false);//스킬
+            heroInfo.skeletonAnimation.state.SetAnimation(0, "H_23101_Skill_2", false);//스킬
             AkSoundEngine.PostEvent("H_23101_Skill_2", gameObject);
             //SkillFunc(skillScripts[1]);
         }

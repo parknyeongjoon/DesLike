@@ -30,6 +30,10 @@ namespace AK
         static const AkUniqueID T_12302_IDLE = 270789025U;
         static const AkUniqueID T_12305_IDLE = 2413801456U;
         static const AkUniqueID T_12305_SKILL_1 = 2724418929U;
+        static const AkUniqueID T_23101_ATK_1 = 3073476802U;
+        static const AkUniqueID T_23101_DIE = 617022462U;
+        static const AkUniqueID T_23101_IDLE = 1608577898U;
+        static const AkUniqueID T_23101_SKILL_1 = 2895012419U;
     } // namespace EVENTS
 
     namespace STATES

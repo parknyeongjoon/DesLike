@@ -8,7 +8,7 @@ public class BasicSingleAttack : BasicAttack
     {
         heroInfo.action = Soldier_Action.Attack;
         if (heroInfo.skeletonAnimation.skeleton != null)
-            heroInfo.skeletonAnimation.state.SetAnimation(0, "att_1", false);//스킬
+            heroInfo.skeletonAnimation.state.SetAnimation(0, "H_" + heroInfo.castleData.code + "_Att_1", false);//스킬
         string temp = "T_" + heroInfo.castleData.code + "_atk_1";
         AkSoundEngine.PostEvent(temp, gameObject);
         yield return new WaitForSeconds(((BasicSingleAttackData)basicAttackData).start_Delay);

@@ -74,7 +74,7 @@ public class SoldierBasic : MonoBehaviour
     protected IEnumerator Move()
     {
         if (heroInfo.skeletonAnimation.skeleton != null)
-            heroInfo.skeletonAnimation.state.AddAnimation(0, "move", true, 0);//idle
+            heroInfo.skeletonAnimation.state.AddAnimation(0, "H_" + heroInfo.castleData.code + "_Move", true, 0);//idle
         heroInfo.action = Soldier_Action.Move;
         while (heroInfo.action == Soldier_Action.Move)
         {
@@ -86,7 +86,7 @@ public class SoldierBasic : MonoBehaviour
     protected IEnumerator Move(Vector3 destination)
     {
         if (heroInfo.skeletonAnimation.skeleton != null)
-            heroInfo.skeletonAnimation.state.AddAnimation(0, "move", true, 0);//idle
+            heroInfo.skeletonAnimation.state.AddAnimation(0, "H_" + heroInfo.castleData.code + "_Move", true, 0);//idle
         heroInfo.action = Soldier_Action.Move;
         while (transform.position != destination && heroInfo.action == Soldier_Action.Move)
         {

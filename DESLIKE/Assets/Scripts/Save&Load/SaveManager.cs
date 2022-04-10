@@ -60,6 +60,7 @@ public class SaveManager : MonoBehaviour
         //게임 데이터 불러오기
         LoadPortsDatas();
         LoadRelicData();
+        // LoadCurBattleNodeData();  오류 발생
         Debug.Log("데이터불러오기완료");
     }
 
@@ -68,6 +69,7 @@ public class SaveManager : MonoBehaviour
         //게임 데이터 저장
         SavePortDatas();
         SaveRelicData();
+        // SaveCurBattleNodeData(); 오류 발생
         //게임 데이터를 로컬 파일로 저장
         string toJsonData = JsonUtility.ToJson(gameData);
         string filePath = Application.persistentDataPath + "GameData.json";

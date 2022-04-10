@@ -195,7 +195,7 @@ public class EventNodeScript : NodeScript
         // soldierReward.mutant = ...; // mutant 추가 필요
         reward.soldierReward.Add(soldierReward);   // 선택지에 병사 추가
 
-        saveManager.gameData.curBattleNodeData.solRewardIndex[button, num] = eventNode.ableSoldierRewards[rand].code;  // 병사 코드 저장
+        // saveManager.gameData.curBattleNodeData.solRewardIndex[button, num] = eventNode.ableSoldierRewards[rand].code;  // 병사 코드 저장
     }
 
     public void EpicSolSet(int num, int button)  // 희귀 병사 1마리 추가, 주석은 NorSolSet 참고
@@ -223,7 +223,7 @@ public class EventNodeScript : NodeScript
         // soldierReward.mutant = ...; // mutant 추가 필요
         reward.soldierReward.Add(soldierReward);   // 선택지에 병사 추가
 
-        saveManager.gameData.curBattleNodeData.solRewardIndex[button, num] = eventNode.ableSoldierRewards[rand].code;  // 병사 코드 저장
+        // saveManager.gameData.curBattleNodeData.solRewardIndex[button, num] = eventNode.ableSoldierRewards[rand].code;  // 병사 코드 저장
     }
 
     public void NorRelSet(int button)   // 일반 유물 설정

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6c479d2a70ce7a489dbd8fa79bdab3b, type: 3}
   m_Name: Map
   m_EditorClassIdentifier: 
-  curMapNode: {fileID: 11400000, guid: c8db2db9717415a4e8edb8e1a1a41155, type: 2}
+  curMapNode: {fileID: 0}
   selectNode:
-  - {fileID: 11400000, guid: c8db2db9717415a4e8edb8e1a1a41155, type: 2}
-  - {fileID: 11400000, guid: d3b54c7b4f0cdbf4a934f7b40a3c6bba, type: 2}
+  - {fileID: 11400000, guid: baa3b74e24492b24fa4286e24a36039c, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   physicNorSol:
   - {fileID: 11400000, guid: 14f5dae46fda2f741b6b1c5d2c4fc972, type: 2}

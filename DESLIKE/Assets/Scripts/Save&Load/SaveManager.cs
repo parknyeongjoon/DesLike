@@ -60,7 +60,7 @@ public class SaveManager : MonoBehaviour
         //게임 데이터 불러오기
         LoadPortsDatas();
         LoadRelicData();
-        // LoadCurBattleNodeData();  오류 발생
+        // LoadCurBattleNodeData();  //오류 발생
         Debug.Log("데이터불러오기완료");
     }
 
@@ -69,7 +69,7 @@ public class SaveManager : MonoBehaviour
         //게임 데이터 저장
         SavePortDatas();
         SaveRelicData();
-        // SaveCurBattleNodeData(); 오류 발생
+        // SaveCurBattleNodeData(); //오류 발생
         //게임 데이터를 로컬 파일로 저장
         string toJsonData = JsonUtility.ToJson(gameData);
         string filePath = Application.persistentDataPath + "GameData.json";
@@ -146,20 +146,23 @@ public class SaveManager : MonoBehaviour
     
     public void SaveCurBattleNodeData()   
     {
-        for(int btn = 0; btn<3; btn++)    // 버튼 1,2,3
+        for (int btn = 0; btn < 3; btn++)    // 버튼 1,2,3
         {
-            battleNode = (BattleNode)map.selectNode[btn];
-            for(int i = 0; i<battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 저장
-                gameData.curBattleNodeData.ableSoldierIndex[btn,i] = battleNode.ableSoldierRewards[i].code;
-            gameData.mapData.kingdom = battleNode.kingdom;
-
-            for(int i = 0; i<battleNode.reward.soldierReward.Count; i++)
+            if (map.selectNode[btn] != null)
             {
-                gameData.curBattleNodeData.solRewardIndex[btn, i] = battleNode.reward.soldierReward[i].soldier.code;
-                // mutant 추가 필요
+                battleNode = (BattleNode)map.selectNode[btn];
+                for (int i = 0; i < battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 저장
+                    gameData.curBattleNodeData.ableSoldierIndex[btn, i] = battleNode.ableSoldierRewards[i].code;
+                gameData.mapData.kingdom = battleNode.kingdom;
+
+                for (int i = 0; i < battleNode.reward.soldierReward.Count; i++)
+                {
+                    gameData.curBattleNodeData.solRewardIndex[btn, i] = battleNode.reward.soldierReward[i].soldier.code;
+                    // mutant 추가 필요
+                }
+
+                // 유물 저장 필요
             }
-            
-            // 유물 저장 필요
         }
     }
     
@@ -167,26 +170,29 @@ public class SaveManager : MonoBehaviour
     {
         for (int btn = 0; btn < 3; btn++)    // 버튼 1,2,3
         {
-            battleNode = (BattleNode)map.selectNode[btn];
-
-            battleNode.ableSoldierRewards.Clear();
-            // battleNode.ableRelicRewards.Clear();
-            battleNode.reward.soldierReward.Clear();
-            battleNode.kingdom = gameData.mapData.kingdom;
-
-            SoldierReward soldierReward = new SoldierReward();
-            SoldierData soldierData = new SoldierData();
-
-            for (int i = 0; i < battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 불러오기
-                battleNode.ableSoldierRewards.Add(dataSheet.soldierDataSheet[gameData.curBattleNodeData.ableSoldierIndex[btn, i]]);
-
-
-            for (int i = 0; i < battleNode.reward.soldierReward.Count; i++)
+            if (map.selectNode[btn] != null)
             {
-                soldierReward.soldier = dataSheet.soldierDataSheet[gameData.curBattleNodeData.solRewardIndex[btn, i]];
-                // mutant 추가 필요
+                battleNode = (BattleNode)map.selectNode[btn];
 
-                battleNode.reward.soldierReward.Add(soldierReward);
+                battleNode.ableSoldierRewards.Clear();
+                // battleNode.ableRelicRewards.Clear();
+                battleNode.reward.soldierReward.Clear();
+                battleNode.kingdom = gameData.mapData.kingdom;
+
+                SoldierReward soldierReward = new SoldierReward();
+                SoldierData soldierData = new SoldierData();
+
+                for (int i = 0; i < battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 불러오기
+                    battleNode.ableSoldierRewards.Add(dataSheet.soldierDataSheet[gameData.curBattleNodeData.ableSoldierIndex[btn, i]]);
+
+
+                for (int i = 0; i < battleNode.reward.soldierReward.Count; i++)
+                {
+                    soldierReward.soldier = dataSheet.soldierDataSheet[gameData.curBattleNodeData.solRewardIndex[btn, i]];
+                    // mutant 추가 필요
+
+                    battleNode.reward.soldierReward.Add(soldierReward);
+                }
             }
         }
     }

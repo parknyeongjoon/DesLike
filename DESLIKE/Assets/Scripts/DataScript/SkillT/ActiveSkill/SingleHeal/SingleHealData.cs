@@ -8,10 +8,10 @@ public class SingleHealData : ActiveSkillData
     public GameObject healEffect;
     public float heal_Amount;
 
-    public void Effect(MonoBehaviour caller, HeroInfo targetInfo)
+    public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
         targetInfo.OnHealed(heal_Amount);
-        caller.StartCoroutine(Healing(targetInfo));
+        targetInfo.StartCoroutine(Healing(targetInfo));
     }
 
     IEnumerator Healing(HeroInfo targetInfo)

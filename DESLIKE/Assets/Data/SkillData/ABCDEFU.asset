@@ -32,4 +32,4 @@ MonoBehaviour:
     hp_Re: 0
     def: -100
   debuff_Time: 10
-  max_Stack: 1
+  max_Stack: 5

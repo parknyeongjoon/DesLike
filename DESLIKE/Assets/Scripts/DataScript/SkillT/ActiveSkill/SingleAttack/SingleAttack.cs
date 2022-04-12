@@ -16,7 +16,7 @@ public class SingleAttack : ActiveSkill
             heroInfo.cur_Mp -= ((ActiveSkillData)skillData).mp;
             cur_cooltime = ((ActiveSkillData)skillData).cooltime;
             StartCoroutine(SkillCooltime());
-            ((SingleAttackData)skillData).Effect(targetInfo);
+            ((SingleAttackData)skillData).Effect(heroInfo, targetInfo);
             heroInfo.action = Soldier_Action.End_Delay;
             yield return new WaitForSeconds(((ActiveSkillData)skillData).end_Delay);
         }

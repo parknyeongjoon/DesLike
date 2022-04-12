@@ -9,20 +9,30 @@ public class SingleBuffData : ActiveSkillData//퍼센트로 버프 주는 법 생각해내기
     public float buff_Time;
     public int max_Stack;
 
-    public virtual IEnumerator BuffCoroutine(HeroInfo targetInfo)
+    public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)//이런 식으로 효과는 밖으로 빼기
     {
-        Effect(targetInfo);
+        targetInfo.StartCoroutine(BuffCoroutine(heroInfo, targetInfo));
+    }
+
+    public virtual IEnumerator BuffCoroutine(HeroInfo heroInfo, HeroInfo targetInfo)
+    {
+        if (!targetInfo.buffCoroutine.ContainsKey(code))//딕셔너리에 키가 없다면 코루틴 리스트 추가
+        {
+            targetInfo.buffCoroutine.Add(code, new List<Coroutine>());
+        }
+        if (targetInfo.buffCoroutine[code].Count >= max_Stack)//최대 스택 수 보다 많은 지 검사
+        {
+            targetInfo.StopCoroutine(targetInfo.buffCoroutine[code][0]);//제일 오래된 코루틴 정지시키고 갱신하기
+            Remove_Buff(targetInfo, targetInfo.buffCoroutine[code][0]);//고치기(0번째 인덱스말고 실행된 코루틴을 담을 방법이 없을까?)//효과 제거해주기
+        }
+
+        targetInfo.buff_Stat.Add_Stat(buff_Stat);
         if (targetInfo.gameObject.CompareTag("Player")) { BattleUIManager.Instance.heroPanel.AddBuff(code); }//영웅에게 버프를 줬다면 버프 패널 업데이트
         else if (targetInfo == BattleUIManager.Instance.cur_Soldier) { BattleUIManager.Instance.soldierPanel.AddBuff(code); }//현재 soldierPanel에서 보여주고 있는 병사라면 버프 패널 업데이트
         yield return new WaitForSeconds(buff_Time);
         if (targetInfo.gameObject.CompareTag("Player")) { BattleUIManager.Instance.heroPanel.RemoveBuff(code); }//영웅에게 버프를 줬다면 버프 패널 업데이트
         else if (targetInfo == BattleUIManager.Instance.cur_Soldier) { BattleUIManager.Instance.soldierPanel.RemoveBuff(code); }//현재 soldierPanel에서 보여주고 있는 병사라면 버프 패널 업데이트
         Remove_Buff(targetInfo, targetInfo.buffCoroutine[code][0]);//고치기(0번째 인덱스말고 실행된 코루틴을 담을 방법이 없을까?)
-    }
-
-    protected virtual void Effect(HeroInfo targetInfo)//이런 식으로 효과는 밖으로 빼기
-    {
-        targetInfo.buff_Stat.Add_Stat(buff_Stat);
     }
 
     public virtual void Remove_Buff(HeroInfo targetInfo, Coroutine coroutine)

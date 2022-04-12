@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BasicSingleAttack : BasicAttack
 {
-    protected override IEnumerator Attack(CastleInfo targetInfo)
+    protected override IEnumerator Attack(HeroInfo targetInfo)
     {
         heroInfo.action = Soldier_Action.Attack;
         if (heroInfo.skeletonAnimation.skeleton != null)
@@ -14,7 +14,7 @@ public class BasicSingleAttack : BasicAttack
         yield return new WaitForSeconds(((BasicSingleAttackData)basicAttackData).start_Delay);
         if (targetInfo && targetInfo.gameObject.layer != 7)
         {
-            ((BasicSingleAttackData)basicAttackData).Effect(targetInfo);
+            ((BasicSingleAttackData)basicAttackData).Effect(heroInfo, targetInfo);
             heroInfo.action = Soldier_Action.End_Delay;
             yield return new WaitForSeconds(((BasicSingleAttackData)basicAttackData).end_Delay);
         }

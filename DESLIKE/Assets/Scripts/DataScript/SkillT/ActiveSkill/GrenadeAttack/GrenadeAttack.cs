@@ -15,7 +15,7 @@ public class GrenadeAttack : ActiveSkill
             cur_cooltime = ((ActiveSkillData)skillData).cooltime;
             StartCoroutine(SkillCooltime());
             heroInfo.skeletonAnimation.state.SetAnimation(0, "skill_1", false);//스킬
-            ((GrenadeAttackData)skillData).Effect(targetInfo, heroInfo);
+            ((GrenadeAttackData)skillData).Effect(heroInfo, targetInfo);
             heroInfo.action = Soldier_Action.End_Delay;
             yield return new WaitForSeconds(((GrenadeAttackData)skillData).end_Delay);
         }

@@ -8,17 +8,18 @@ public class BasicGrenadeAttackData : BasicSingleAttackData
     public int max_Target;
     public float extent;
 
-    public void Effect(CastleInfo targetInfo, HeroInfo heroInfo)
+    public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
         CastleInfo[] targetInfos;
-        targetInfos = Get_Targets(targetInfo, heroInfo);
+        targetInfos = Get_Targets(heroInfo, targetInfo);
         for (int i = 0; i < targetInfos.Length; i++)
         {
             targetInfos[i].OnDamaged(atk_Dmg);
+            extraSkillData?.Effect(heroInfo, targetInfo);
         }
     }
 
-    CastleInfo[] Get_Targets(CastleInfo targetInfo, HeroInfo heroInfo)// 다른 곳으로 static으로 옮기기, soldier에서 스킬 사용시 null이면 마우스 위치에 사용될 듯?
+    CastleInfo[] Get_Targets(HeroInfo heroInfo, HeroInfo targetInfo)// 다른 곳으로 static으로 옮기기, soldier에서 스킬 사용시 null이면 마우스 위치에 사용될 듯?
     {
         CastleInfo[] targetInfos = new CastleInfo[max_Target];
         Vector3 skillPos = new Vector3();

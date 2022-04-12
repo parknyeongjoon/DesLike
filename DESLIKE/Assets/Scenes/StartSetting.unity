@@ -279,6 +279,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4f19ae2ca981e31469ac4fb8bba04e2f, type: 2}
   - {fileID: 11400000, guid: 12fcbe2f356e82049a1700df77676afa, type: 2}
   - {fileID: 11400000, guid: 8bef9c019c19992479cf582b38539e40, type: 2}
+  - {fileID: 11400000, guid: 0f54ef65573e17842ae26b13376d8601, type: 2}
+  - {fileID: 11400000, guid: 7fd7b07d638cb3d49a7b1489e06f93d5, type: 2}
   mutantObjects:
   - {fileID: 3340910114177237104, guid: 90e7863938ac48041a9acab8e9974372, type: 3}
   relicObjects:

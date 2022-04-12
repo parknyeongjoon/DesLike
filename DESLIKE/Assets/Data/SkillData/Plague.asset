@@ -9,27 +9,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e37eac7c856100b49b5f3ee0dbc80f3c, type: 3}
-  m_Name: testSingleBuff
+  m_Script: {fileID: 11500000, guid: 4c9d43428ca3e50429544e708523d64a, type: 3}
+  m_Name: Plague
   m_EditorClassIdentifier: 
-  code: 10
-  skill_name: testSingleBuff
+  code: 11
+  skill_name: Plague
   skillType: 0
   skill_Icon: {fileID: 0}
-  cooltime: 7
+  cooltime: 2
   mp: 1
-  range: 3
-  start_Delay: 1
-  end_Delay: 0.5
+  range: 6
+  start_Delay: 0
+  end_Delay: 0
   atkArea: 256
-  buff_Stat:
+  debuff_Stat:
     speed: 0
     mp: 0
     mp_Re: 0
-    atk: 1
+    atk: 0
     atk_Speed: 0
     hp: 0
     hp_Re: 0
     def: 0
-  buff_Time: 10
-  max_Stack: 5
+  debuff_Time: 10
+  max_Stack: 10
+  dotTime: 1.5
+  dotDamage: 1

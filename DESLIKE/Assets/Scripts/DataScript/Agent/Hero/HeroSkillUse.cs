@@ -150,7 +150,7 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
                     if (hit.gameObject.layer == 9)
                     {
                         ActiveSkillFocus(hit.gameObject);
-                        heroInfo.skillTargetInfo = hit.gameObject.GetComponent<CastleInfo>();
+                        heroInfo.skillTargetInfo = hit.gameObject.GetComponent<HeroInfo>();
                         Set_Idle();
                         break;
                     }

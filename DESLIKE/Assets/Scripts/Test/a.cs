@@ -25,7 +25,7 @@ public class a : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-
+            StartCoroutine(testAA());
         }
     }
     protected virtual void testA()
@@ -35,10 +35,18 @@ public class a : MonoBehaviour
 
     public virtual IEnumerator testAA()
     {
-        while (true)
+        float testTime = 0.1f;
+        while (testTime > 0)
         {
+            yield return yieldTest();
             Debug.Log("AA");
+            testTime -= Time.deltaTime;
             yield return null;
         }
+    }
+
+    IEnumerator yieldTest()
+    {
+        yield return new WaitForSeconds(1.0f);
     }
 }

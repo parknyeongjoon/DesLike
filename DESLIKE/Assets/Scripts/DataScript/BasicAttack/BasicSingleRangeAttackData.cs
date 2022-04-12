@@ -8,18 +8,18 @@ public class BasicSingleRangeAttackData : BasicAttackData
     public GameObject arrow;
     public float arrowSpeed;
 
-    public void Effect(MonoBehaviour caller, CastleInfo targetInfo, Transform startTrans)
+    public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
-        caller.StartCoroutine(ShootArrow(targetInfo, startTrans));
+        targetInfo.StartCoroutine(ShootArrow(heroInfo, targetInfo));
     }
 
-    IEnumerator ShootArrow(CastleInfo targetInfo, Transform startTrans)
+    IEnumerator ShootArrow(HeroInfo heroInfo, HeroInfo targetInfo)
     {
         float shotTime = 0.0f;
         GameObject createArrow;
         Transform desTrans = targetInfo.transform;
-        CastleInfo castleInfo = targetInfo;
-        createArrow = Instantiate(arrow, startTrans);
+        HeroInfo castleInfo = targetInfo;
+        createArrow = Instantiate(arrow);
         while (shotTime < arrowSpeed)
         {
             shotTime += Time.deltaTime;

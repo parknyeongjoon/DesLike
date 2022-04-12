@@ -8,7 +8,7 @@ public class GrenadeTauntData : ActiveSkillData
     public int max_Target;
     public float extent, atk_Dmg;
 
-    public void Effect(HeroInfo heroInfo)//heroInfo의 일정 범위 안의 적을 도발
+    public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)//heroInfo의 일정 범위 안의 적을 도발
     {
         HeroInfo[] targetInfos;
         targetInfos = Get_Targets(heroInfo);

@@ -7,12 +7,12 @@ public class HealerBehaviour : SoldierBasic
 {
     Vector3 healPos;
 
-    new void Start()
+    new IEnumerator Start()
     {
-        base.Start();
         heroInfo.healWeight = -1;
-        if(heroInfo.team == Team.Ally) { healPos = new Vector3(-2, 0, 0); }
-        else if(heroInfo.team == Team.Enemy) { healPos = new Vector3(2, 0, 0); }
+        if (heroInfo.team == Team.Ally) { healPos = new Vector3(-2, 0, 0); }
+        else if (heroInfo.team == Team.Enemy) { healPos = new Vector3(2, 0, 0); }
+        yield return base.Start();
     }
 
     void FixedUpdate()

@@ -8,4 +8,9 @@ public class SkillData : ScriptableObject
     public string code, skill_name;
     public SkillType skillType;
     public Sprite skill_Icon;
+
+    public virtual void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
+    {
+
+    }
 }

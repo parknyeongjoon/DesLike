@@ -6,15 +6,16 @@ using Spine.Unity;
 public class HeroInfo : CastleInfo
 {
     public SkeletonAnimation skeletonAnimation;
+    public SoldierBasic soldierBasic;
 
     public Soldier_State state;
     public Soldier_Action action;
     public Team team;
 
-    public GameObject target;
-    public CastleInfo targetInfo;
+    public GameObject target;//target을 하나 더 추가해서 현재 목표중인 오브젝트 넣어주기
+    public HeroInfo targetInfo;
     public GameObject skillTarget;
-    public CastleInfo skillTargetInfo;
+    public HeroInfo skillTargetInfo;
 
     public float cur_Mp;
     public Vector3 moveDir;
@@ -37,10 +38,18 @@ public class HeroInfo : CastleInfo
         allyPortDatas.spawnSoldierList.Add(this);
     }
 
-    public void Stun(float stunTime)
+    public void Stun(float stunTime)//스턴 당하기
     {
         state = Soldier_State.Stun;
-        //StartCoroutine(soldierBehaviour.Stun_Behaviour());
+        soldierBasic.StopAllCoroutines();
+        StartCoroutine(soldierBasic.Stun_Behaviour(stunTime));
+    }
+
+    public void Taunt(HeroInfo _targetInfo, float tauntTime)//도발 당하기
+    {
+        state = Soldier_State.Taunt;
+        soldierBasic.StopAllCoroutines();
+        StartCoroutine(soldierBasic.Taunt_Behaviour(_targetInfo, tauntTime));
     }
 
     protected IEnumerator Hp_Mp_Re()
@@ -63,7 +72,7 @@ public class HeroInfo : CastleInfo
             {
                 cur_Mp += (((HeroData)castleData).mp_Re + buff_Stat.mp_Re);
             }
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(2.0f);
         }
     }
 

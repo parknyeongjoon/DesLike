@@ -8,10 +8,10 @@ public class GrenadeAttackData : ActiveSkillData
     public int max_Target;
     public float extent, atk_Dmg;
 
-    public void Effect(HeroInfo targetInfo, HeroInfo heroInfo)//이런 식으로 효과는 밖으로 빼기
+    public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)//이런 식으로 효과는 밖으로 빼기
     {
         HeroInfo[] targetInfos;
-        targetInfos = Get_Targets(targetInfo, heroInfo);
+        targetInfos = Get_Targets(heroInfo, targetInfo);
         if (targetInfos != null)
         {
             for (int i = 0; i < targetInfos.Length; i++)
@@ -21,7 +21,7 @@ public class GrenadeAttackData : ActiveSkillData
         }
     }
 
-    HeroInfo[] Get_Targets(HeroInfo targetInfo, HeroInfo heroInfo)// 다른 곳으로 static으로 옮기기, soldier에서 스킬 사용시 null이면 마우스 위치에 사용될 듯?
+    HeroInfo[] Get_Targets(HeroInfo heroInfo, HeroInfo targetInfo)// 다른 곳으로 static으로 옮기기, soldier에서 스킬 사용시 null이면 마우스 위치에 사용될 듯?
     {
         HeroInfo[] targetInfos;
         Vector3 skillPos = new Vector3();

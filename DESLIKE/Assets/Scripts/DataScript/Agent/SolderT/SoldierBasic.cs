@@ -7,7 +7,7 @@ public class SoldierBasic : MonoBehaviour
 {
     public HeroInfo heroInfo;
 
-    public Func<CastleInfo, IEnumerator> atkHandler;
+    public Func<HeroInfo, IEnumerator> atkHandler;
     public Action atkDetect;
     public Func<bool> canAtk;
 
@@ -21,9 +21,17 @@ public class SoldierBasic : MonoBehaviour
     public const int basicSoundWeight = 10;//사운드 가중치 최소값
     public int curSoundWeight;//현재 사운드 가중치
 
-    protected void Start()
+    float stunTime = 0;//스턴 지속시간, 새로운 스턴이 들어왔을 때 갱신용
+    Coroutine stunCoroutine;
+    float tauntTime = 0;//도발 지속시간, 갱신용
+    Coroutine tauntCoroutine;
+
+    protected IEnumerator Start()
     {
         heroInfo.moveDir = new Vector3(0, 0, 0);
+        float waitTime = UnityEngine.Random.Range(0.0f, 2.0f);
+        yield return new WaitUntil(() => BattleUIManager.Instance.battleStart == true);//배틀이 시작될 때까지 대기
+        yield return new WaitForSeconds(waitTime);
         StartCoroutine(Idle_Behaviour());
     }
 
@@ -47,20 +55,57 @@ public class SoldierBasic : MonoBehaviour
         yield return new WaitForFixedUpdate();
     }
 
-    protected virtual IEnumerator Stun_Behaviour(float stunTime)
+    public IEnumerator Stun_Behaviour(float _stunTime)//stunTime 밖으로 빼기
     {
+        if(stunTime < _stunTime)
+        {
+            stunTime = _stunTime;
+            StartCoroutine(StunTime());
+        }
         while (heroInfo.state == Soldier_State.Stun)
         {
             Debug.Log("스턴");
-            yield return new WaitForSeconds(stunTime);
+            yield return new WaitForFixedUpdate();
         }
-        heroInfo.state = Soldier_State.Idle;
         StartCoroutine(Idle_Behaviour());
     }
 
-    protected virtual void Dead_Behaviour()
+    public virtual IEnumerator Taunt_Behaviour(HeroInfo _targetInfo, float _tauntTime)//tauntTime 밖으로 빼기
     {
+        if(tauntTime < _tauntTime)
+        {
+            tauntTime = _tauntTime;
+            heroInfo.target = _targetInfo.gameObject;
+            heroInfo.targetInfo = _targetInfo;
+            if(tauntCoroutine == null) { tauntCoroutine = StartCoroutine(TauntTime()); }
+        }
+        while(heroInfo.state == Soldier_State.Taunt)
+        {
+            Debug.Log("도발");
+            yield return new WaitForFixedUpdate();
+        }
+        StartCoroutine(Idle_Behaviour());
+    }
 
+    IEnumerator StunTime()
+    {
+        while(stunTime > 0)
+        {
+            Debug.Log(stunTime);
+            stunTime -= Time.deltaTime;
+            yield return new WaitForFixedUpdate();
+        }
+        heroInfo.state = Soldier_State.Idle;
+    }
+
+    IEnumerator TauntTime()
+    {
+        while(tauntTime > 0)
+        {
+            tauntTime -= Time.deltaTime;
+            yield return new WaitForFixedUpdate();
+        }
+        heroInfo.state = Soldier_State.Idle;
     }
 
     protected void OnMouseEnter()//EnemyResource에만 따로넣기

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
 {
-    new void Start()
+    new IEnumerator Start()
     {
-        base.Start();
         curSoundWeight = basicSoundWeight;
+        yield return base.Start();
     }
 
     void FixedUpdate()
@@ -21,8 +21,7 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
 
     protected override IEnumerator Idle_Behaviour()
     {
-        yield return new WaitForFixedUpdate();//delete
-        if (curSoundWeight > Random.Range(0, 100)) { 
+        if (curSoundWeight > Random.Range(0, 100)) {
             AkSoundEngine.PostEvent("T_" + heroInfo.castleData.code + "_Idle", gameObject);
             curSoundWeight = basicSoundWeight;
         }

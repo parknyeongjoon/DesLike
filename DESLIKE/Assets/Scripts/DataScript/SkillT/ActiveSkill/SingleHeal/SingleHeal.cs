@@ -14,7 +14,7 @@ public class SingleHeal : ActiveSkill
             cur_cooltime = ((ActiveSkillData)skillData).cooltime;
             StartCoroutine(SkillCooltime());
             heroInfo.skeletonAnimation.state.SetAnimation(0, "skill_1", false);//스킬
-            ((SingleHealData)skillData).Effect(this, targetInfo);
+            ((SingleHealData)skillData).Effect(heroInfo, targetInfo);
             heroInfo.action = Soldier_Action.End_Delay;
             yield return new WaitForSeconds(((ActiveSkillData)skillData).end_Delay);
         }

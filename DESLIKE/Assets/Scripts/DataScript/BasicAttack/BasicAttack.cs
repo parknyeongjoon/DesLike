@@ -23,7 +23,7 @@ public class BasicAttack : MonoBehaviour
         soldierBasic.atkHandler = Attack;
     }
 
-    protected void Detect()
+    protected virtual void Detect()
     {
         Collider2D[] targets = Physics2D.OverlapCircleAll(transform.position, 100, atkArea ^ atkLayer);
         if (targets != null)
@@ -32,12 +32,12 @@ public class BasicAttack : MonoBehaviour
             if (heroInfo.TargetCheck(heroInfo.target, basicAttackData.range + 2))
             {
                 heroInfo.state = Soldier_State.Battle;
-                heroInfo.targetInfo = heroInfo.target.GetComponent<CastleInfo>();
+                heroInfo.targetInfo = heroInfo.target.GetComponent<HeroInfo>();
             }
         }
     }
 
-    protected bool CanAttackCheck()
+    protected virtual bool CanAttackCheck()
     {
         if (!heroInfo.targetInfo || heroInfo.target.layer == 7)
         {
@@ -51,7 +51,7 @@ public class BasicAttack : MonoBehaviour
         return false;
     }
 
-    protected virtual IEnumerator Attack(CastleInfo targetInfo)
+    protected virtual IEnumerator Attack(HeroInfo targetInfo)
     {
         yield return null;
     }

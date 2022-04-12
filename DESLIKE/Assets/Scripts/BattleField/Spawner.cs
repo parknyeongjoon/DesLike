@@ -68,7 +68,7 @@ public class Spawner : MonoBehaviour
                 }
                 for (int unitAmount = 0; unitAmount < soldierData.unitAmount - 1; unitAmount++)
                 {
-                    float temp = Random.Range(-1 - soldierData.size, 1 + soldierData.size);
+                    float temp = Random.Range(-2 - soldierData.size, 2 + soldierData.size);
                     Vector3 spawnPos = spawner[portIndex].transform.position + new Vector3(temp, temp);
                     Instantiate(createSoldier, spawnPos, Quaternion.identity);
                 }

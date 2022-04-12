@@ -19,24 +19,18 @@ public class SingleBuff : ActiveSkill//우선 버프 대상 정할 방법 구하기(portDatas
         string temp = "T_" + heroInfo.castleData.code + "_Skill_1";//밖으로 빼기
         AkSoundEngine.PostEvent(temp, gameObject);
         if(heroInfo.skeletonAnimation.skeleton != null)
-            heroInfo.skeletonAnimation.state.SetAnimation(0, "skill_1", false);//스킬
+            heroInfo.skeletonAnimation.state.SetAnimation(0, "H_23101_Skill_1", false);//스킬
         yield return new WaitForSeconds(((ActiveSkillData)skillData).start_Delay);
+
         if (targetInfo && targetInfo.gameObject.layer != 7)
         {
             heroInfo.cur_Mp -= ((ActiveSkillData)skillData).mp;
             cur_cooltime = ((ActiveSkillData)skillData).cooltime;
             StartCoroutine(SkillCooltime());
-            if (!targetInfo.buffCoroutine.ContainsKey(skillData.code))//딕셔너리에 키가 없다면 코루틴 리스트 추가
-            {
-                targetInfo.buffCoroutine.Add(skillData.code, new List<Coroutine>());
-            }
 
-            if (targetInfo.buffCoroutine[skillData.code].Count >= ((SingleBuffData)skillData).max_Stack)//최대 스택 수 보다 많은 지 검사
-            {
-                StopCoroutine(heroInfo.buffCoroutine[skillData.code][0]);//제일 오래된 코루틴 정지시키고 갱신하기
-                ((SingleBuffData)skillData).Remove_Buff(targetInfo, targetInfo.buffCoroutine[skillData.code][0]);//고치기(0번째 인덱스말고 실행된 코루틴을 담을 방법이 없을까?)//효과 제거해주기
-            }
-            targetInfo.buffCoroutine[skillData.code].Add(StartCoroutine(((SingleBuffData)skillData).BuffCoroutine(targetInfo)));//스택이 가능하다면 계속해서 List<Coroutine>에 넣기//버프 실행해주고 heroInfo 버프 딕셔너리에 넣어주기
+            //스택이 가능하다면 계속해서 List<Coroutine>에 넣기//버프 실행해주고 heroInfo 버프 딕셔너리에 넣어주기
+            Coroutine tempCoroutine = targetInfo.StartCoroutine(((SingleBuffData)skillData).BuffCoroutine(heroInfo, targetInfo));
+            targetInfo.buffCoroutine[skillData.code].Add(tempCoroutine);
 
             heroInfo.action = Soldier_Action.End_Delay;
             yield return new WaitForSeconds(((ActiveSkillData)skillData).end_Delay);
@@ -57,7 +51,7 @@ public class SingleBuff : ActiveSkill//우선 버프 대상 정할 방법 구하기(portDatas
             return;
         }
 
-        for (int i = 0; i < soldierList.Count; i++)//Awake에서 적용 군중에 따라 SoldierList 따로따로 적용해주기
+        for (int i = 0; i < soldierList.Count; i++)//Awake에서 적용 군중에 따라 SoldierList 따로따로 적용해주기, 배틀 중일 때만 버프 주기?
         {
             if (soldierList[i] != heroInfo && !(soldierList[i].buffCoroutine.ContainsKey(skillData.code) && soldierList[i].buffCoroutine[skillData.code].Count < ((SingleBuffData)skillData).max_Stack))
             {

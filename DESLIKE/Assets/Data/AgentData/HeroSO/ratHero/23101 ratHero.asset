@@ -23,5 +23,6 @@ MonoBehaviour:
   speed: 2
   mp_Re: 10
   hp_Re: 5
-  tribe: 2
+  kingdom: 2
+  tribe: 3
   extraSkill: []

@@ -21,7 +21,6 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
     void Start()
     {
         mouseManager = MouseManager.Instance;
-        SetSkillHandler();
     }
 
     void Update()
@@ -32,18 +31,11 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
         StopSkillCoroutine();
     }
 
-    void SetSkillHandler()//지우기?
-    {
-        skillScripts = GetComponents<Skill>();
-    }
-
     void Skill1()
     {
         if (Input.GetKeyDown(KeyCode.Z) && skillScripts[0])
         {
-            heroInfo.skeletonAnimation.state.SetAnimation(0, "H_23101_Skill_1", false);//스킬
-            AkSoundEngine.PostEvent("H_23101_Skill_1", gameObject);
-            //SkillFunc(skillScripts[0]);
+            SkillFunc(skillScripts[0]);
         }
     }
 

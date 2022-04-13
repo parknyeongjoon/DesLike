@@ -8,7 +8,7 @@ public class Attack : ActiveSkill
     {
         heroInfo.action = Soldier_Action.Skill;
         if (heroInfo.skeletonAnimation.skeleton != null)//지우기
-            heroInfo.skeletonAnimation.state.SetAnimation(0, "skill_1", false);//스킬
+            heroInfo.skeletonAnimation.state.SetAnimation(0, skillData.code, false);//스킬
         string temp = "T_" + heroInfo.castleData.code + "_Skill_1";
         AkSoundEngine.PostEvent(temp, gameObject);
         yield return new WaitForSeconds(((ActiveSkillData)skillData).start_Delay);

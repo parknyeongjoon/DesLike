@@ -70,7 +70,7 @@ public class Spawner : MonoBehaviour
                 {
                     float temp = Random.Range(-2 - soldierData.size, 2 + soldierData.size);
                     Vector3 spawnPos = spawner[portIndex].transform.position + new Vector3(temp, temp);
-                    Instantiate(createSoldier, spawnPos, Quaternion.identity);
+                    Instantiate(createSoldier, spawnPos, Quaternion.identity,spawner[portIndex].transform);
                 }
             }
         }

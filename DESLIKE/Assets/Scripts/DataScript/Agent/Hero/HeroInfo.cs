@@ -17,9 +17,12 @@ public class HeroInfo : CastleInfo
     public GameObject skillTarget;
     public HeroInfo skillTargetInfo;
 
-    public float cur_Mp;
     public Vector3 moveDir;
+
+    public float cur_Mp;
+    public float barrier;
     public float healWeight = 0;
+
     public bool resurrection;
 
     public Buff_Stat buff_Stat;

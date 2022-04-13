@@ -60,7 +60,7 @@ public class SaveManager : MonoBehaviour
         //게임 데이터 불러오기
         LoadPortsDatas();
         LoadRelicData();
-        // LoadCurBattleNodeData();  //오류 발생
+        LoadCurBattleNodeData();  //오류 발생
         Debug.Log("데이터불러오기완료");
     }
 
@@ -69,7 +69,7 @@ public class SaveManager : MonoBehaviour
         //게임 데이터 저장
         SavePortDatas();
         SaveRelicData();
-        // SaveCurBattleNodeData(); //오류 발생
+        SaveCurBattleNodeData(); //오류 발생
         //게임 데이터를 로컬 파일로 저장
         string toJsonData = JsonUtility.ToJson(gameData);
         string filePath = Application.persistentDataPath + "GameData.json";
@@ -146,9 +146,12 @@ public class SaveManager : MonoBehaviour
     
     public void SaveCurBattleNodeData()   
     {
+        int[] selEvent = new int[3];
+
         for (int btn = 0; btn < 3; btn++)    // 버튼 1,2,3
         {
-            if (map.selectNode[btn] != null)
+            selEvent[btn] = gameData.mapData.selEvent[btn];
+            if ((map.selectNode[btn] != null) && (selEvent[btn] == 0))  // 맵에 저장되어있고, 전투 노드일 경우
             {
                 battleNode = (BattleNode)map.selectNode[btn];
                 for (int i = 0; i < battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 저장
@@ -168,9 +171,11 @@ public class SaveManager : MonoBehaviour
     
     public void LoadCurBattleNodeData()
     {
+        int[] selEvent = new int[3];
         for (int btn = 0; btn < 3; btn++)    // 버튼 1,2,3
         {
-            if (map.selectNode[btn] != null)
+            selEvent[btn] = gameData.mapData.selEvent[btn];
+            if ((map.selectNode[btn] != null) && (selEvent[btn] == 0))
             {
                 battleNode = (BattleNode)map.selectNode[btn];
 

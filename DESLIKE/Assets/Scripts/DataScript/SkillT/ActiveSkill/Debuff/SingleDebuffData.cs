@@ -8,6 +8,14 @@ public class SingleDebuffData : ActiveSkillData
     public Buff_Stat debuff_Stat;
     public float debuff_Time;
     public int max_Stack;
+    public BuffType buffType;
+    protected string buffCode;
+
+    protected void OnEnable()
+    {
+        if(buffType == BuffType.None) { buffCode = code; }
+        else { buffCode = buffType.ToString(); }
+    }
 
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)//이런 식으로 효과는 밖으로 빼기
     {

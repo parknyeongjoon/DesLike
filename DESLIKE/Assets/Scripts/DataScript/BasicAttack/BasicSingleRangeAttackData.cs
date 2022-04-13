@@ -26,7 +26,10 @@ public class BasicSingleRangeAttackData : BasicAttackData
             createArrow.transform.position = Vector2.Lerp(createArrow.transform.position, desTrans.position, shotTime / arrowSpeed);
             yield return null;
         }
-        if (castleInfo) { castleInfo.OnDamaged(atk_Dmg); }
+        if (castleInfo) 
+        {
+            castleInfo.OnDamaged(atk_Dmg); extraSkillData?.Effect(heroInfo, targetInfo);
+        }
         Destroy(createArrow);
     }
 }

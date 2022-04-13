@@ -119,9 +119,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f26b66f7d1b2384c8d4ec388b7e71f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  basicAttackData: {fileID: 11400000, guid: f48a0547cd8510e42b4a2f38321a4e89, type: 2}
+  basicAttackData: {fileID: 11400000, guid: bffcfc6c1909c1e44938e90c7e2bba55, type: 2}
   atkArea: 0
   atkLayer: 0
+  atkCount: 0
 --- !u!114 &9162677153030788185
 MonoBehaviour:
   m_ObjectHideFlags: 0

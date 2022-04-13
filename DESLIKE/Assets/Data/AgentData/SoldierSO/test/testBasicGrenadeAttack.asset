@@ -9,13 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58ff0c33c4c7a074d909e49103c0bf8c, type: 3}
-  m_Name: testRatSoldier BasicSingleAttack
+  m_Script: {fileID: 11500000, guid: 99221fd689b53734da84e83f4e4db642, type: 3}
+  m_Name: testBasicGrenadeAttack
   m_EditorClassIdentifier: 
-  start_Delay: 0.3
-  end_Delay: 0.3
+  start_Delay: 1
+  end_Delay: 5
   range: 1
-  atk_Dmg: 1
+  atk_Dmg: 2
   atkCount: 1
   extraSkillData: {fileID: 0}
   atkArea: 256
+  max_Target: 2
+  extent: 20

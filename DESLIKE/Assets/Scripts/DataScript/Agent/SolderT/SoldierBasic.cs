@@ -64,7 +64,6 @@ public class SoldierBasic : MonoBehaviour
         }
         while (heroInfo.state == Soldier_State.Stun)
         {
-            Debug.Log("스턴");
             yield return new WaitForFixedUpdate();
         }
         StartCoroutine(Idle_Behaviour());
@@ -91,7 +90,6 @@ public class SoldierBasic : MonoBehaviour
     {
         while(stunTime > 0)
         {
-            Debug.Log(stunTime);
             stunTime -= Time.deltaTime;
             yield return new WaitForFixedUpdate();
         }

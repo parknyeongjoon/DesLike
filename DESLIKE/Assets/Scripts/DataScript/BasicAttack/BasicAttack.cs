@@ -8,7 +8,7 @@ public class BasicAttack : MonoBehaviour
     public BasicAttackData basicAttackData;
     protected SoldierBasic soldierBasic;
 
-    public int atkArea, atkLayer;
+    public int atkArea, atkLayer, atkCount;
 
     protected virtual void Start()
     {

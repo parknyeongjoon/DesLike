@@ -160,7 +160,7 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
         }
     }
 
-    IEnumerator MoveToSkill(CastleInfo targetInfo, float range)
+    IEnumerator MoveToSkill(HeroInfo targetInfo, float range)
     {
         Vector3 destination;
         Debug.Log("MoveToSkill");

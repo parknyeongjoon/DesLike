@@ -17,7 +17,7 @@ MonoBehaviour:
   skillType: 0
   skill_Icon: {fileID: 0}
   cooltime: 3
-  mp: 3
+  mp: 6
   range: 2
   start_Delay: 0
   end_Delay: 0

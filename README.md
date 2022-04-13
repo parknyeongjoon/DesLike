@@ -47,5 +47,10 @@ Map)-시후
 1. 적절한 Prefab으로 PrefabVariant 생성
 2. 평타나 스킬 붙여주기
 3. SoldierInfo에 code 설정해주기
-4. 콜라이더 크기 수정해주기(수정하고 soldierData에 PhysicCollider 반지름 size에 넣어주기)
+4. 콜라이더 크기 수정해주기(수정하고 soldierData.size에 PhysicCollider 반지름 size에 넣어주기)
 5. SpriteRenderer에 대표 이미지 설정해주기(선택)
+
+Code 넘버링 하는 법
+1. soldierData => 젤 앞에는 병사 등급 붙이기 영웅은 H, 정예병은 E, 일반 병사는 N 붙여주기(ex.쥐 영웅은 H_23101)
+2. skillData 및 basicAttackData => 1.뒤에다가 추가로 _Skill_n이나 _Att_n 붙여주기 (ex.쥐 영웅의 두 번째 스킬은 H_23101_Skill_2, 일반 캥거루의 평타는 N_12301_Att_1)
+3. 유물 =>

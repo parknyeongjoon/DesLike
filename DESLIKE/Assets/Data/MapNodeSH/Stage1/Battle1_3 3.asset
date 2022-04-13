@@ -13,16 +13,12 @@ MonoBehaviour:
   m_Name: Battle1_3 3
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
-  isNode: 1
+  isNode: 0
   ableSoldierRewards: []
   ableRelicRewards: []
   kingdom: 0
   reward:
-    soldierReward:
-    - soldier: {fileID: 0}
-      mutant: {fileID: 0}
-    - soldier: {fileID: 0}
-      mutant: {fileID: 0}
+    soldierReward: []
     relic: {fileID: 0}
     gold: 0
     magicalStone: 0

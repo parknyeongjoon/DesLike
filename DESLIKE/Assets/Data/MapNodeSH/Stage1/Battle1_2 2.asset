@@ -16,7 +16,7 @@ MonoBehaviour:
   isNode: 0
   ableSoldierRewards: []
   ableRelicRewards: []
-  kingdom: 1
+  kingdom: 0
   reward:
     soldierReward: []
     relic: {fileID: 0}

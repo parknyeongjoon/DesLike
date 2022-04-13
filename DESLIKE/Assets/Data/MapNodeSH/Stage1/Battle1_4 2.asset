@@ -13,29 +13,20 @@ MonoBehaviour:
   m_Name: Battle1_4 2
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
-  isNode: 1
+  isNode: 0
   ableSoldierRewards: []
   ableRelicRewards: []
+  kingdom: 0
   reward:
-    soldierReward:
-      soldier:
-      - {fileID: 0}
-      - {fileID: 0}
-      - {fileID: 0}
-      mutant: {fileID: 0}
-    relic: {fileID: 4835315866048107822, guid: bdc55f89b7fc82046a549df921abb5dc, type: 3}
+    soldierReward: []
+    relic: {fileID: 0}
     gold: 0
     magicalStone: 0
-  x: 0
-  y: 0
-  kingdom: 0
   enemyPortsOptions:
   - {fileID: 11400000, guid: 873738ffde2fb3b44b4660d7cd20a6c7, type: 2}
   - {fileID: 11400000, guid: 8e79fe8a14ef79349ad33bc1738c96f3, type: 2}
   enemyPortOption: {fileID: 0}
-  challengeList:
-  - {fileID: 11400000, guid: b1631dcc2b64c9548b4049199e2900f1, type: 2}
-  - {fileID: 11400000, guid: 55a8da69afcd3ca44aab384d9d983744, type: 2}
   enemyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
   isChallenge: 0
-  saveManager: {fileID: 0}
+  isEventSet: 000000
+  isRewardSet: 000000

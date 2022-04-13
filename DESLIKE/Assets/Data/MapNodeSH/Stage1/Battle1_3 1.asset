@@ -18,11 +18,7 @@ MonoBehaviour:
   ableRelicRewards: []
   kingdom: 0
   reward:
-    soldierReward:
-    - soldier: {fileID: 0}
-      mutant: {fileID: 0}
-    - soldier: {fileID: 0}
-      mutant: {fileID: 0}
+    soldierReward: []
     relic: {fileID: 0}
     gold: 0
     magicalStone: 0

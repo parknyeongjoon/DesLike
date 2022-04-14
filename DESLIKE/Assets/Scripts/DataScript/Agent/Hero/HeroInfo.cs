@@ -87,7 +87,7 @@ public class HeroInfo : CastleInfo
         GameObject target = null;
         foreach (Collider2D collider in targets)
         {
-            float distance = Vector3.Distance(this.transform.position, collider.transform.position);
+            float distance = Vector3.Distance(transform.position, collider.transform.position);
             if (distance < minDistance)
             {
                 minDistance = distance;

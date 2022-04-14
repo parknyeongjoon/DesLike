@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ff0c33c4c7a074d909e49103c0bf8c, type: 3}
   m_Name: testRatSoldier BasicSingleAttack
   m_EditorClassIdentifier: 
-  start_Delay: 0.3
-  end_Delay: 0.3
+  start_Delay: 1
+  end_Delay: 1.5
   range: 1
-  atk_Dmg: 0
+  atk_Dmg: 1
   atkCount: 1
   extraSkillData: {fileID: 11400000, guid: 044c987abeb5582478130c7dc7b532ab, type: 2}
   atkArea: 256

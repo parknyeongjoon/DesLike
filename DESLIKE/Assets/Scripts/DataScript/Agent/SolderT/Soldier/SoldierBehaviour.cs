@@ -62,7 +62,7 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
         {
             if (canSkill != null && canSkill.Invoke())
             {
-                yield return StartCoroutine(skillHandler?.Invoke(heroInfo.skillTargetInfo as HeroInfo));
+                yield return StartCoroutine(skillHandler?.Invoke(heroInfo.skillTargetInfo));
             }
             else if (canAtk != null && canAtk.Invoke())
             {

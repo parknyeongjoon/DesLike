@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Music" ID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Music_Start" ID="{174530CA-7C7E-4C2E-978A-7F178A1EC9A4}">
+					<ChildrenList>
+						<Action Name="" ID="{B581901E-19DF-4D4C-A523-6E10DE9E7E06}" ShortID="971056783">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{65AF8A77-C6D0-484A-9C7C-688ED9FEA841}" WorkUnitID="{0B4C7F08-A208-4C5C-B93D-5F77EAF1FE2D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{130ACE32-EC5B-4EF9-829D-2AA807FFD12A}" ShortID="161517271">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music" ID="{65AF8A77-C6D0-484A-9C7C-688ED9FEA841}" WorkUnitID="{0B4C7F08-A208-4C5C-B93D-5F77EAF1FE2D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9D8FC777-836A-412F-A539-D287C45A7C61}" ShortID="325263881">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Main" ID="{AF2EF22E-FFE3-4885-A2C7-5130DEFCD514}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Music_Map" ID="{DD14FC31-A992-407E-8A3C-1BCA3CBB907A}">
+					<ChildrenList>
+						<Action Name="" ID="{A2FB4D13-DEA2-4328-8A38-61963C60E5BC}" ShortID="1028787260">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Map" ID="{BB573B8F-26A6-4FD5-A568-0E75CD545CBC}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Music_S1_Base_Camp" ID="{8FC8DA82-588D-455D-B2C1-B291DD534940}">
+					<ChildrenList>
+						<Action Name="" ID="{1764D479-66EB-4DBB-9E63-680C2BD5D759}" ShortID="456075287">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Base_Camp" ID="{72D63A16-DB87-464C-BC08-9C3F46B6DA38}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Music_S1_Boss_P2" ID="{F8AB59BB-CC76-4051-A98F-A64F3E793B53}">
+					<ChildrenList>
+						<Action Name="" ID="{E1421636-3D08-4237-B793-B70595BCDF29}" ShortID="113042449">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Boss_P2" ID="{969C96E3-A83D-40DD-A2AA-5ABF7846FBD3}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

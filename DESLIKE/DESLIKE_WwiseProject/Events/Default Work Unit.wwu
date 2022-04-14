@@ -81,9 +81,12 @@
 				<Event Name="Battle_Start" ID="{B85E8104-17E7-4C9D-8087-438DF374E492}">
 					<ChildrenList>
 						<Action Name="" ID="{89D6331C-D47F-45D3-B923-A126C31EA4B3}" ShortID="453803723">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Escaping the Ruins W" ID="{2D2EA309-68E5-4C44-B320-80D3365AE11C}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+									<ObjectRef Name="Battle_Start" ID="{AF2E8545-B115-44E8-9294-610046694FCF}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -93,9 +96,13 @@
 					<ChildrenList>
 						<Action Name="" ID="{7EFBE4C9-9ABB-4DE9-B155-9DA8CCA8FD39}" ShortID="746081918">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="ActionType" Type="int16" Value="2"/>
 							</PropertyList>
-							<ReferenceList/>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Escaping the Ruins W" ID="{2D2EA309-68E5-4C44-B320-80D3365AE11C}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+								</Reference>
+							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>

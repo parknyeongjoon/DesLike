@@ -251,39 +251,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soldierDatas:
   - {fileID: 11400000, guid: 27be6089e9daeb6499a3dfc2addf52a9, type: 2}
-  - {fileID: 11400000, guid: a29c1d8c1343ac342b7934d4fa64b8d3, type: 2}
-  - {fileID: 11400000, guid: 505df875aa52d6c429dc1729c124a209, type: 2}
-  - {fileID: 11400000, guid: 790abeee750e88647a10efc6bb80386d, type: 2}
-  - {fileID: 11400000, guid: af820736225c7c64bacdd0238f6182ab, type: 2}
-  - {fileID: 11400000, guid: ebe56b79ff6403343912e9b69d38602e, type: 2}
-  - {fileID: 11400000, guid: 6e40740d778918e4ba73ef05d5237467, type: 2}
-  - {fileID: 11400000, guid: 8f5bd6d443eb5714780da0f9b57c6d86, type: 2}
-  - {fileID: 11400000, guid: dc098578b6475514e82ce1e5590261c8, type: 2}
-  - {fileID: 11400000, guid: 3e65cdd5953d474479ec0533c1a36487, type: 2}
   - {fileID: 11400000, guid: 35146f468df5bbf45a30aef17af25246, type: 2}
   - {fileID: 11400000, guid: eceecd6d3db2957429877d981159387d, type: 2}
   - {fileID: 11400000, guid: cfafb7fd4b40a4245acd1d4d0bf6313d, type: 2}
   - {fileID: 11400000, guid: e4dc5552129c12f4ab36e7e5e1cb37bc, type: 2}
+  - {fileID: 11400000, guid: cf43bab0e7c1b0647b13055f91296289, type: 2}
   heroDatas:
-  - {fileID: 11400000, guid: 1b52e72375322824688473c0dae745e1, type: 2}
-  - {fileID: 11400000, guid: 0404a1a6770a903418b6b85fc6e22463, type: 2}
   - {fileID: 11400000, guid: 7f528eb015e3d0e40b0f2abb902a89a8, type: 2}
   skillDatas:
-  - {fileID: 11400000, guid: 7665bb0fd1761804cb3ce5489ce62d92, type: 2}
-  - {fileID: 11400000, guid: 5b8c70da27a464e4db6320073b74c184, type: 2}
-  - {fileID: 11400000, guid: 3506caf890a940141adc17abe26b9219, type: 2}
-  - {fileID: 11400000, guid: 5668e2e631ab2fd409ccb798643c9927, type: 2}
-  - {fileID: 11400000, guid: 117efa8e6ed5c2a4d929e16639e71060, type: 2}
-  - {fileID: 11400000, guid: c9ee331d85776ca47ad5de63d042086b, type: 2}
-  - {fileID: 11400000, guid: 011132be2e886994b846d8f747db8166, type: 2}
-  - {fileID: 11400000, guid: 4f19ae2ca981e31469ac4fb8bba04e2f, type: 2}
-  - {fileID: 11400000, guid: 12fcbe2f356e82049a1700df77676afa, type: 2}
-  - {fileID: 11400000, guid: 8bef9c019c19992479cf582b38539e40, type: 2}
+  - {fileID: 11400000, guid: 5e03d7cfebc0f4444b8acb9bde23014d, type: 2}
+  - {fileID: 11400000, guid: 044c987abeb5582478130c7dc7b532ab, type: 2}
   mutantObjects:
   - {fileID: 3340910114177237104, guid: 90e7863938ac48041a9acab8e9974372, type: 3}
   relicObjects:
   - {fileID: 4835315866048107822, guid: bdc55f89b7fc82046a549df921abb5dc, type: 3}
   - {fileID: 4835315866048107822, guid: 28fb182866fc710478c2a803865849ed, type: 3}
+  BattleNodeScript: {fileID: 3963912957987146594, guid: 466e855f347fc934895e18daf1643165,
+    type: 3}
 --- !u!1001 &3976412869853632963
 PrefabInstance:
   m_ObjectHideFlags: 0

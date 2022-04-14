@@ -8,17 +8,10 @@ public class EventNode : MapNode
 {
     [SerializeField] string[] eventNames;
     public string eventName;
-    bool CheckSet= false;
-
-    public void SetEvent()
-    {
-        if (CheckSet == false)
-        {
-            int temp = Random.Range(0, eventNames.Length);
-            eventName = eventNames[temp];
-            CheckSet = true;
-        }
-    }
+    const int THREE = 3;
+    public bool[] isEventSet = new bool[THREE];
+    public bool[] isRewardSet = new bool[THREE];
+    public SoldierReward soldierReward = new SoldierReward();
 
     public void Play_EventNode()
     {

@@ -32,7 +32,7 @@ public class MainTitle : MonoBehaviour
         saveManager.map.isMap = false;
         saveManager.gameData.canContinue = true;
         startHandler?.Invoke();
-        SceneManager.LoadScene("StageSelect");
+        SceneManager.LoadScene("Map");
     }
 
     public void Continue()

@@ -20,7 +20,9 @@ public class EventManager : MonoBehaviour
         EventCanvas.transform.Find(eventNode.eventName).gameObject.SetActive(true);
         curBtn = saveManager.gameData.mapData.curBtn;
         EvntList = saveManager.gameData.mapData.evntList[curBtn];
+        saveManager.gameData.mapData.curWindow = CurWindow.Event;
         EventActive();
+        saveManager.SaveGameData();
     }
 
     void EventActive() 

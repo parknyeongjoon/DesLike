@@ -107,57 +107,49 @@ public class SoldierPanel : MonoBehaviour
         }
     }
 
-    public void AddBuff(string code)
+    public void AddBuff(string code)//얘들도 오브젝트 풀링해도 될 듯
     {
-        if (buffDic.ContainsKey(code))
-        {
-            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.buffCoroutine[code].Count.ToString();
-        }
-        else
+        if (!buffDic.ContainsKey(code))
         {
             buffImg.sprite = SaveManager.Instance.dataSheet.skillDataSheet[code].skill_Icon;
             buffDic.Add(code, Instantiate(buffObject, buffPanel.transform));
-            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.buffCoroutine[code].Count.ToString();
         }
+        buffDic[code].GetComponentInChildren<Text>().text = (soldierInfo.buffCoroutine[code].Count + 1).ToString();
     }
 
     public void AddDebuff(string code)//얘들도 오브젝트 풀링해도 될 듯
     {
-        if (buffDic.ContainsKey(code))
-        {
-            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.debuffCoroutine[code].Count.ToString();
-        }
-        else
+        if (!buffDic.ContainsKey(code))
         {
             debuffImg.sprite = SaveManager.Instance.dataSheet.skillDataSheet[code].skill_Icon;
             buffDic.Add(code, Instantiate(debuffObject, buffPanel.transform));
-            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.debuffCoroutine[code].Count.ToString();
         }
+        buffDic[code].GetComponentInChildren<Text>().text = (soldierInfo.debuffCoroutine[code].Count + 1).ToString();
     }
 
     public void RemoveBuff(string code)
     {
-        if(soldierInfo.buffCoroutine[code].Count == 0)
+        if (soldierInfo.buffCoroutine[code].Count <= 1)
         {
             Destroy(buffDic[code]);
             buffDic.Remove(code);
         }
         else
         {
-            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.buffCoroutine[code].Count.ToString();
+            buffDic[code].GetComponentInChildren<Text>().text = (soldierInfo.buffCoroutine[code].Count - 1).ToString();
         }
     }
 
     public void RemoveDebuff(string code)
     {
-        if (soldierInfo.debuffCoroutine[code].Count == 0)
+        if (soldierInfo.debuffCoroutine[code].Count <= 1)
         {
             Destroy(buffDic[code]);
             buffDic.Remove(code);
         }
         else
         {
-            buffDic[code].GetComponentInChildren<Text>().text = soldierInfo.debuffCoroutine[code].Count.ToString();
+            buffDic[code].GetComponentInChildren<Text>().text = (soldierInfo.debuffCoroutine[code].Count - 1).ToString();
         }
     }
 }

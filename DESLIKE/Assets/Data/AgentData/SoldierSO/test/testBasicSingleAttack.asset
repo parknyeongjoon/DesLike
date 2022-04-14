@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ff0c33c4c7a074d909e49103c0bf8c, type: 3}
   m_Name: testBasicSingleAttack
   m_EditorClassIdentifier: 
-  start_Delay: 0.5
-  end_Delay: 0.5
+  start_Delay: 1
+  end_Delay: 5
   range: 2
   atk_Dmg: 1
+  atkCount: 2
+  extraSkillData: {fileID: 0}
   atkArea: 256

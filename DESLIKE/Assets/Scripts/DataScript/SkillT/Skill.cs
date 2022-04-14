@@ -7,6 +7,7 @@ public class Skill : MonoBehaviour
 {
     protected HeroInfo heroInfo;
     protected SoldierBasic soldierBasic;
+
     public SkillData skillData;
 
     protected virtual void Start()

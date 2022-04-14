@@ -14,14 +14,17 @@ public class SoldierInfo : HeroInfo
         cur_Mp = ((SoldierData)castleData).mp;
         allyPortDatas.spawnSoldierList.Add(this);
         BattleUIManager.Instance.UpdateSoldierRatioBar();
-        afterDeadEvent.AddListener(Dead);//안 죽음
+        afterDeadEvent.AddListener(Dead);
         StartCoroutine(Hp_Mp_Re());
     }
 
     void Dead()
     {
         gameObject.layer = 7;
-        Debug.Log("Dead");
+        transform.position += new Vector3(0, 0, 1);
+        if (skeletonAnimation.skeleton != null)
+            skeletonAnimation.state.SetAnimation(0, "H_23101_Die", false);
+        AkSoundEngine.PostEvent("T_23101_Die", gameObject);
         allyPortDatas.spawnSoldierList.Remove(this);
         BattleUIManager.Instance.UpdateSoldierRatioBar();
         if (allyPortDatas.spawnSoldierList.Count == 0)

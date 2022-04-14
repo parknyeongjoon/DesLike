@@ -2523,7 +2523,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castleData: {fileID: 0}
-  cur_Hp: 0
   allyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
   enemyPortDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
   afterDeadEvent:
@@ -2553,6 +2552,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -3554134871425548847}
+        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
+        m_MethodName: StopAllCoroutines
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   hitEvent:
     m_PersistentCalls:
       m_Calls:
@@ -2568,7 +2579,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  cur_Hp: 0
+  eventParam: 
   skeletonAnimation: {fileID: 8539308402457019598}
+  soldierBasic: {fileID: 7490175790015513115}
   state: 0
   action: 0
   team: 2
@@ -2603,6 +2617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroInfo: {fileID: -3554134871425548847}
+  curSoundWeight: 0
 --- !u!1 &7184772303122657817
 GameObject:
   m_ObjectHideFlags: 0

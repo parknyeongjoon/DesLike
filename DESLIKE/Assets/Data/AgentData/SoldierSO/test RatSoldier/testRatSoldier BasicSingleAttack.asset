@@ -15,5 +15,7 @@ MonoBehaviour:
   start_Delay: 0.3
   end_Delay: 0.3
   range: 1
-  atk_Dmg: 1
+  atk_Dmg: 0
+  atkCount: 1
+  extraSkillData: {fileID: 11400000, guid: 044c987abeb5582478130c7dc7b532ab, type: 2}
   atkArea: 256

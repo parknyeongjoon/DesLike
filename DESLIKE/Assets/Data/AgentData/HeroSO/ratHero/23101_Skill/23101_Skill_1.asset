@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdbd9710b4bbc3a4490cc4cab0104797, type: 3}
+  m_Name: 23101_Skill_1
+  m_EditorClassIdentifier: 
+  code: H_23101_Skill_1
+  skill_name: SpawnZombie
+  skillType: 2
+  skill_Icon: {fileID: 0}
+  cooltime: 10
+  mp: 50
+  range: 0
+  start_Delay: 3
+  end_Delay: 2
+  atkArea: 256
+  spawnPrefab: {fileID: 3829864645722707234, guid: acea979f82ce69e4daf5cd1079ad96a1,
+    type: 3}
+  spawnAmount: 3

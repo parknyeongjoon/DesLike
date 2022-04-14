@@ -60,6 +60,7 @@ public class SaveManager : MonoBehaviour
         //게임 데이터 불러오기
         LoadPortsDatas();
         LoadRelicData();
+        LoadCurBattleNodeData();  //오류 발생
         Debug.Log("데이터불러오기완료");
     }
 
@@ -68,6 +69,7 @@ public class SaveManager : MonoBehaviour
         //게임 데이터 저장
         SavePortDatas();
         SaveRelicData();
+        SaveCurBattleNodeData(); //오류 발생
         //게임 데이터를 로컬 파일로 저장
         string toJsonData = JsonUtility.ToJson(gameData);
         string filePath = Application.persistentDataPath + "GameData.json";
@@ -88,7 +90,7 @@ public class SaveManager : MonoBehaviour
     public void SavePortDatas()
     {
         //각 포트의 값들 저장
-        for(int i = 0; i < allyPortDatas.portDatas.Length; i++)
+        for (int i = 0; i < allyPortDatas.portDatas.Length; i++)
         {
             gameData.portSaveDatas.portSaveList[i].isUnlock = allyPortDatas.portDatas[i].unlock;
             gameData.portSaveDatas.portSaveList[i].soldierCode = allyPortDatas.portDatas[i].soldierCode;
@@ -104,7 +106,7 @@ public class SaveManager : MonoBehaviour
     {
         for (int i = 0; i < gameData.portSaveDatas.portSaveList.Length; i++)
         {
-            if(gameData.portSaveDatas.portSaveList[i] == null) { gameData.portSaveDatas.portSaveList[i] = new PortSaveData(); }
+            if (gameData.portSaveDatas.portSaveList[i] == null) { gameData.portSaveDatas.portSaveList[i] = new PortSaveData(); }
             PortSaveData tempData = gameData.portSaveDatas.portSaveList[i];
             //SoldierData(Clone)을 담아두는 activeSoldierList에 값 불러오기
             if (gameData.portSaveDatas.portSaveList[i].soldierCode != "" && !allyPortDatas.activeSoldierList.ContainsKey(tempData.soldierCode))//중복되는 키가 없다면 리스트에 추가하기
@@ -140,16 +142,63 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    /*
-
-    public void SaveMapSaveData()
+    BattleNode battleNode; 
+    
+    public void SaveCurBattleNodeData()   
     {
-    //시후 작성
-    }
+        int[] selEvent = new int[3];
 
-    public void LoadMapSaveData()
-    {
-    //시후 작성
+        for (int btn = 0; btn < 3; btn++)    // 버튼 1,2,3
+        {
+            selEvent[btn] = gameData.mapData.selEvent[btn];
+            if ((map.selectNode[btn] != null) && (selEvent[btn] == 0))  // 맵에 저장되어있고, 전투 노드일 경우
+            {
+                battleNode = (BattleNode)map.selectNode[btn];
+                for (int i = 0; i < battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 저장
+                    gameData.curBattleNodeData.ableSoldierIndex[btn, i] = battleNode.ableSoldierRewards[i].code;
+                gameData.mapData.kingdom = battleNode.kingdom;
+
+                for (int i = 0; i < battleNode.reward.soldierReward.Count; i++)
+                {
+                    gameData.curBattleNodeData.solRewardIndex[btn, i] = battleNode.reward.soldierReward[i].soldier.code;
+                    // mutant 추가 필요
+                }
+
+                // 유물 저장 필요
+            }
+        }
     }
-    */
+    
+    public void LoadCurBattleNodeData()
+    {
+        int[] selEvent = new int[3];
+        for (int btn = 0; btn < 3; btn++)    // 버튼 1,2,3
+        {
+            selEvent[btn] = gameData.mapData.selEvent[btn];
+            if ((map.selectNode[btn] != null) && (selEvent[btn] == 0))
+            {
+                battleNode = (BattleNode)map.selectNode[btn];
+
+                battleNode.ableSoldierRewards.Clear();
+                // battleNode.ableRelicRewards.Clear();
+                battleNode.reward.soldierReward.Clear();
+                battleNode.kingdom = gameData.mapData.kingdom;
+
+                SoldierReward soldierReward = new SoldierReward();
+                SoldierData soldierData = new SoldierData();
+
+                for (int i = 0; i < battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 불러오기
+                    battleNode.ableSoldierRewards.Add(dataSheet.soldierDataSheet[gameData.curBattleNodeData.ableSoldierIndex[btn, i]]);
+
+
+                for (int i = 0; i < battleNode.reward.soldierReward.Count; i++)
+                {
+                    soldierReward.soldier = dataSheet.soldierDataSheet[gameData.curBattleNodeData.solRewardIndex[btn, i]];
+                    // mutant 추가 필요
+
+                    battleNode.reward.soldierReward.Add(soldierReward);
+                }
+            }
+        }
+    }
 }

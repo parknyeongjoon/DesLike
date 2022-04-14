@@ -21,7 +21,6 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
     void Start()
     {
         mouseManager = MouseManager.Instance;
-        SetSkillHandler();
     }
 
     void Update()
@@ -32,18 +31,11 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
         StopSkillCoroutine();
     }
 
-    void SetSkillHandler()//지우기?
-    {
-        skillScripts = GetComponents<Skill>();
-    }
-
     void Skill1()
     {
         if (Input.GetKeyDown(KeyCode.Z) && skillScripts[0])
         {
-            heroInfo.skeletonAnimation.state.SetAnimation(0, "skill_1", false);//스킬
-            AkSoundEngine.PostEvent("H_23101_Skill_1", gameObject);
-            //SkillFunc(skillScripts[0]);
+            SkillFunc(skillScripts[0]);
         }
     }
 
@@ -51,7 +43,7 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
     {
         if (Input.GetKeyDown(KeyCode.X) && skillScripts[1])
         {
-            heroInfo.skeletonAnimation.state.SetAnimation(0, "skill_2", false);//스킬
+            heroInfo.skeletonAnimation.state.SetAnimation(0, "H_23101_Skill_2", false);//스킬
             AkSoundEngine.PostEvent("H_23101_Skill_2", gameObject);
             //SkillFunc(skillScripts[1]);
         }
@@ -150,7 +142,7 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
                     if (hit.gameObject.layer == 9)
                     {
                         ActiveSkillFocus(hit.gameObject);
-                        heroInfo.skillTargetInfo = hit.gameObject.GetComponent<CastleInfo>();
+                        heroInfo.skillTargetInfo = hit.gameObject.GetComponent<HeroInfo>();
                         Set_Idle();
                         break;
                     }
@@ -160,7 +152,7 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
         }
     }
 
-    IEnumerator MoveToSkill(CastleInfo targetInfo, float range)
+    IEnumerator MoveToSkill(HeroInfo targetInfo, float range)
     {
         Vector3 destination;
         Debug.Log("MoveToSkill");

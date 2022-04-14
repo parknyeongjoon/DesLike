@@ -45,8 +45,8 @@ public class SelectMap : MonoBehaviour
     void Start()
     {
         saveManager = SaveManager.Instance;
-        saveManager.gameData.mapData.curWindow = 0;
-
+        saveManager.gameData.mapData.curWindow = CurWindow.Map;
+        
         ObjectInactive();   // 맵 초기화
         FindData(); // 데이터 찾기
         TrackSetting(); // 트랙 세팅(갈랫길, 버튼, 세부 이벤트 등)
@@ -65,7 +65,9 @@ public class SelectMap : MonoBehaviour
                 TrackNode[i].SetActive(false);  // 길 노드
                 saveManager.gameData.mapData.isEventSet[i] = false;
                 S1T1B1[i].gameObject.SetActive(false);
-            } 
+                map.selectNode[i] = null;
+            }
+
             S1T2B1[i].gameObject.SetActive(false);
             S1T2B2[i].gameObject.SetActive(false);
             S1T3B1[i].gameObject.SetActive(false);
@@ -513,6 +515,5 @@ public class SelectMap : MonoBehaviour
             saveManager.gameData.mapData.isAbleSet[i] = false;
         saveManager.gameData.mapData.newSet = true; // 맵 탈출
         InfoPanelClose();
-        saveManager.SaveGameData(); // 저장
     }
 }

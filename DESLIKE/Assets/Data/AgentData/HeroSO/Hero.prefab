@@ -2630,7 +2630,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6527479380180569571}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 1321472770580833991}
@@ -2760,7 +2760,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   castleData: {fileID: 0}
-  cur_Hp: 0
   allyPortDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
   enemyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
   afterDeadEvent:
@@ -2802,6 +2801,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6527479380180569581}
+        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
+        m_MethodName: StopAllCoroutines
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   hitEvent:
     m_PersistentCalls:
       m_Calls:
@@ -2817,7 +2828,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  cur_Hp: 0
   skeletonAnimation: {fileID: 3659554584969181003}
+  soldierBasic: {fileID: 6527479380180569580}
   state: 0
   action: 0
   team: 1
@@ -2825,8 +2838,9 @@ MonoBehaviour:
   targetInfo: {fileID: 0}
   skillTarget: {fileID: 0}
   skillTargetInfo: {fileID: 0}
-  cur_Mp: 0
   moveDir: {x: 0, y: 0, z: 0}
+  cur_Mp: 0
+  barrier: 0
   healWeight: 0
   resurrection: 0
   buff_Stat:
@@ -2851,6 +2865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroInfo: {fileID: 6527479380180569581}
+  curSoundWeight: 0
 --- !u!114 &574283936
 MonoBehaviour:
   m_ObjectHideFlags: 0

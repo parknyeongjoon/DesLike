@@ -12,7 +12,7 @@ public class Relic : MonoBehaviour
     Text toolTip;
     [SerializeField]
     Image relicImg;
-
+    
     void Start()
     {
         relicImg.sprite = relicData.relicImg;

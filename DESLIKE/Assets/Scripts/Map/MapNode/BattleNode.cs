@@ -10,11 +10,11 @@ public class BattleNode : MapNode
     public List<PortsOption> enemyPortsOptions;
     public PortsOption enemyPortOption;
     public PortDatas enemyPortDatas;
+    const int THREE = 3;
     public bool isChallenge;
-    public bool[] isEventSet = new bool[3];
-    public bool isRewardSet;
-    public SoldierReward soldierReward = new SoldierReward();
-
+    public bool[] isEventSet = new bool[THREE];
+    public bool[] isRewardSet = new bool[THREE];
+    
     public void Play_BattleNode()
     {
         enemyPortDatas.activeSoldierList.Clear();
@@ -24,6 +24,7 @@ public class BattleNode : MapNode
         {
             enemyPortDatas.portDatas[i].soldierCode = "";
         }
+
         for (int i = 0; i < option.Count; i++)
         {
             SoldierData tempSoldier = Instantiate(option[i].soldierData);
@@ -38,6 +39,7 @@ public class BattleNode : MapNode
             }
         }
         map.curMapNode = this;
+        
         SceneManager.LoadScene("Battle Field");
     }
 }

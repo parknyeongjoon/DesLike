@@ -20,10 +20,14 @@ public class BattleUIManager : MonoBehaviour
     public RewardPanel rewardPanel;
     public HeroPanel heroPanel;
 
+    public bool battleStart;
+
     void Awake()
     {
         instance = this;
-        SaveManager saveManager = SaveManager.Instance;//지우기
+        SaveManager.Instance.gameData.mapData.curWindow = CurWindow.Battle;  // 추가 by 시후, 여기 넣는 거 맞나?
+
+        battleStart = false;
 
         SetMidPanel(3);
     }
@@ -91,6 +95,7 @@ public class BattleUIManager : MonoBehaviour
     public void BattleStart()
     {
         start_Btn.gameObject.SetActive(false);
+        battleStart = true;
         for(int i = 0; i < allyPortDatas.portDatas.Length; i++)
         {
             if (allyPortDatas.portDatas[i].soldierCode != "") { AkSoundEngine.PostEvent("T_" + allyPortDatas.portDatas[i].soldierCode + "_Idle", gameObject); }

@@ -27,9 +27,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Organ.unity
     guid: ce6733688fd54e74293a4905565a963d
   - enabled: 1
-    path: Assets/Scenes/StageSelect.unity
-    guid: 995558356ecd91b47b0c43921abd7e69
-  - enabled: 1
     path: Assets/Scenes/Test.unity
     guid: 1cba2e5288daf304cb1bb678a028ba2e
   - enabled: 1

@@ -29,7 +29,7 @@ public class Resurrection : Relic
 
     public bool CheckCondition(SoldierData soldierData)
     {
-        if (soldierData.tribe == Tribe.Undead)
+        if (soldierData.tribe == Tribe.Rat)
         {
             StartCoroutine(ConditionEffect());
             return true;

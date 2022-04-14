@@ -7,7 +7,7 @@ using System;
 public class CastleInfo : MonoBehaviour
 {
     public CastleData castleData;
-    public float cur_Hp;
+
     public PortDatas allyPortDatas;
     public PortDatas enemyPortDatas;
 
@@ -15,10 +15,11 @@ public class CastleInfo : MonoBehaviour
     public UnityEvent afterDeadEvent;//죽고 난 뒤 일어나는 이벤트(시체가 터진다거나)
     public UnityEvent hitEvent;//캐릭터 피격 시 발동하는 이벤트
 
+    public float cur_Hp;
+
     void Start()
     {
         cur_Hp = castleData.hp;
-
     }
 
     public void Die()//DeadBehaviour로 넘겨버리기

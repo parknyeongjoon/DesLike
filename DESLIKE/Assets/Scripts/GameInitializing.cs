@@ -22,7 +22,8 @@ public class GameInitializing : MonoBehaviour
     public SkillData[] skillDatas;
     public GameObject[] mutantObjects;
     public GameObject[] relicObjects;
-
+    public BattleNodeScript BattleNodeScript; 
+    
     IEnumerator SetDataSheet()//Object들도 추가
     {
         for (int i = 0; i < soldierDatas.Length; i++)
@@ -53,4 +54,6 @@ public class GameInitializing : MonoBehaviour
         Debug.Log(SaveManager.Instance.dataSheet.soldierDataSheet.Count);
         yield return null;
     }
+
+
 }

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dcc17f2b5ed0f847bfd133773974d61, type: 3}
+  m_Name: EventNode 1
+  m_EditorClassIdentifier: 
+  map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
+  isNode: 1
+  isPlayable: 0
+  isPath: 000101
+  isVisited: 0
+  rewardSoldierList: []
+  rewardRelicList: []
+  reward:
+    soldierData: {fileID: 0}
+    relic: {fileID: 0}
+  x: 1
+  y: 0
+  eventNames:
+  - Thief
+  - Training
+  - Merchant
+  - Rullet
+  eventName: 

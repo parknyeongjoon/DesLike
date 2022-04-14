@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: a1e99dc4922d4ff4da4679b968609bf5, type: 3}
   code: 23101
-  hp: 20
+  hp: 100
   def: 0
   size: 0.25
   blood: {fileID: 5086979035932333915, guid: 83b2eb89fe46c6a4db5d18712a94a153, type: 3}
@@ -23,9 +23,10 @@ MonoBehaviour:
   speed: 2
   mp_Re: 1
   hp_Re: 1
-  tribe: 2
+  kingdom: 0
+  tribe: 3
   extraSkill: []
-  rarity: 0
+  rarity: 1
   needBarrier: 1
-  unitAmount: 2
+  unitAmount: 1
   soldier_Type: 1

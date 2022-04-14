@@ -244,8 +244,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dictionary_Panel: {fileID: 304436462}
   HeroSelect_Panel: {fileID: 1438492217}
-  hero: {fileID: 0}
-  heroInfo: {fileID: 0}
   continueBtn: {fileID: 262182390}
 --- !u!1 &186210380
 GameObject:

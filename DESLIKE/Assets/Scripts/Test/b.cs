@@ -24,5 +24,9 @@ public class b : a
         Debug.Log("BB内风凭 场");
     }
 
-    
+    public override IEnumerator testAA()
+    {
+        Debug.Log("惑加 内风凭");
+        yield return null;
+    }
 }

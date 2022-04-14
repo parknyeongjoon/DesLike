@@ -23,9 +23,11 @@ MonoBehaviour:
   speed: 2
   mp_Re: 0
   hp_Re: 0
-  tribe: 1
+  kingdom: 0
+  tribe: 2
   extraSkill: []
-  rarity: 0
+  rarity: 1
   needBarrier: 0
-  unitAmount: 3
+  unitAmount: 1
   soldier_Type: 0
+  soldierNumber: 0

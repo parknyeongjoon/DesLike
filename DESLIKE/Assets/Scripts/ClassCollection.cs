@@ -22,6 +22,7 @@ public enum SkillType { TargetSkill, GrenadeSkill, InstanceSkill, PassiveSkill, 
 public enum BuffType { None, Plague }
 
 public enum CurWindow { Map, Event, Battle, Village, Organ, StageSel }
+public enum CurBattle { Normal, MidBoss1, MidBoss2, StageBoss }
 
 [System.Serializable]
 public class Buff_Stat

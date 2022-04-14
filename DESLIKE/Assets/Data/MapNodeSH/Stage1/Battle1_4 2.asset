@@ -23,10 +23,10 @@ MonoBehaviour:
     gold: 0
     magicalStone: 0
   enemyPortsOptions:
-  - {fileID: 11400000, guid: 873738ffde2fb3b44b4660d7cd20a6c7, type: 2}
-  - {fileID: 11400000, guid: 8e79fe8a14ef79349ad33bc1738c96f3, type: 2}
+  - {fileID: 11400000, guid: 273d105a910be3b4eab5801cf2f9bdfa, type: 2}
   enemyPortOption: {fileID: 0}
   enemyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
   isChallenge: 0
   isEventSet: 000000
   isRewardSet: 000000
+  curBattleString: 

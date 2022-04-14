@@ -14,6 +14,7 @@ public class BattleNode : MapNode
     public bool isChallenge;
     public bool[] isEventSet = new bool[THREE];
     public bool[] isRewardSet = new bool[THREE];
+    public string curBattleString;
     
     public void Play_BattleNode()
     {

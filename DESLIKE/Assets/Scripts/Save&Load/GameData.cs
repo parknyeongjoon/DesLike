@@ -60,7 +60,8 @@ public class MapData
 {
     public Kingdom kingdom;
     public CurWindow curWindow;
-    public int curStage = 0;
+    public CurBattle curBattle;
+    public int curStage;
     public int curTrack;
     public int curDay;  // 현재 날짜
     public int[] selEvent = new int[3];

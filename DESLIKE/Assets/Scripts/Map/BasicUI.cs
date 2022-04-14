@@ -10,22 +10,39 @@ public class BasicUI : MonoBehaviour
     int curDay, curGold;
     float curHp;
 
+    static GameObject container;
+    static BasicUI instance;
+
+    public static BasicUI Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                container = new GameObject();
+                container.name = "BasicUI";
+                DontDestroyOnLoad(container);
+                instance = container.AddComponent<BasicUI>();
+            }
+            return instance;
+        }
+    }
+
     void Awake()
     {
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+
         saveManager = SaveManager.Instance;
-        UpdateData();
         UpdateText();
     }
 
-    void UpdateData()
+    public void UpdateText()
     {
         curDay = saveManager.gameData.mapData.curDay;
         curHp = saveManager.gameData.heroSaveData.cur_Hp;
         curGold = saveManager.gameData.goodsSaveData.gold;
-    }
 
-    void UpdateText()
-    {
         GoldText.text = "- °ñµå : " + curGold;
         CurDayText.text = curDay + " / 30";
         HpText.text = curHp + " / 500";

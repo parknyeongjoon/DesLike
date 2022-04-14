@@ -16,6 +16,7 @@ public class MapUIManager : MonoBehaviour
     void Awake()
     {
         saveManager = SaveManager.Instance;
+        AkSoundEngine.PostEvent("Music_Map", gameObject);
     }
 
     void Update()

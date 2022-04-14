@@ -41,7 +41,7 @@ public class SoldierInfo : HeroInfo
             }
             MouseManager.Instance.mouseFocus = transform.Find("mouseFocus").gameObject;
             MouseManager.Instance.mouseFocus.SetActive(true);
-            BattleUIManager.Instance.cur_Soldier = GetComponent<SoldierInfo>();
+            BattleUIManager.Instance.cur_Soldier = this;
             BattleUIManager.Instance.SetMidPanel(0);
         }
     }

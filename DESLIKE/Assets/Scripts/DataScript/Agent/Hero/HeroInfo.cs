@@ -17,7 +17,11 @@ public class HeroInfo : CastleInfo
     public CastleInfo skillTargetInfo;
 
     public float cur_Mp;
+<<<<<<< Updated upstream
     public Vector3 moveDir;
+=======
+    public float shield;
+>>>>>>> Stashed changes
     public float healWeight = 0;
     public bool resurrection;
 

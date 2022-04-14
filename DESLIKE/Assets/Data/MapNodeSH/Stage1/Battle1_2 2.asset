@@ -27,7 +27,7 @@ MonoBehaviour:
     magicalStone: 0
   kingdom: 0
   enemyPortsOptions:
-  - {fileID: 11400000, guid: 273d105a910be3b4eab5801cf2f9bdfa, type: 2}
+  - {fileID: 11400000, guid: 5741d6a9a8c31f447b3f8ab8e389d1a9, type: 2}
   enemyPortOption: {fileID: 0}
   challengeList:
   - {fileID: 11400000, guid: b1631dcc2b64c9548b4049199e2900f1, type: 2}

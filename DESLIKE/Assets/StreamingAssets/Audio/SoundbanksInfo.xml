@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="903408037">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2360284036">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -26,19 +26,16 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3913527328">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3032193597">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<IncludedEvents>
 				<Event Id="461545889" Name="Battle_End" ObjectPath="\Events\Default Work Unit\Battle_End" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="2706291346" Name="Battle_Start" ObjectPath="\Events\Default Work Unit\Battle_Start" DurationType="OneShot" DurationMin="106.332748" DurationMax="106.332748">
-					<IncludedMemoryFiles>
-						<File Id="62381386" Language="SFX">
-							<ShortName>Escaping the Ruins W.wav</ShortName>
-							<Path>SFX/Escaping the Ruins W_95E52E4F.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
+				<Event Id="2706291346" Name="Battle_Start" ObjectPath="\Events\Default Work Unit\Battle_Start" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
+					<ActionSetState>
+						<ActionSetStateEntry Id="2706291346" Name="Battle_Start" ObjectPath="\States\Music\Music_State\Battle_Start"/>
+					</ActionSetState>
 				</Event>
 				<Event Id="1027347108" Name="Game_Speed_Pause" ObjectPath="\Events\Default Work Unit\Game_Speed_Pause" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2372597559" Name="Game_Speed_Resume" ObjectPath="\Events\Default Work Unit\Game_Speed_Resume" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
@@ -59,11 +56,11 @@
 					<IncludedMemoryFiles>
 						<File Id="108942149" Language="SFX">
 							<ShortName>23101_idle_Print_3_01.wav</ShortName>
-							<Path>SFX/23101_idle_Print_3_01_61436F70.wem</Path>
+							<Path>SFX/23101_idle_Print_3_01_74CBAC08.wem</Path>
 						</File>
 						<File Id="797527484" Language="SFX">
 							<ShortName>23101_Skill_1_Print_01.wav</ShortName>
-							<Path>SFX/23101_Skill_1_Print_01_775410F6.wem</Path>
+							<Path>SFX/23101_Skill_1_Print_01_4FDF74D1.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -71,9 +68,88 @@
 					<IncludedMemoryFiles>
 						<File Id="290311062" Language="SFX">
 							<ShortName>23101_Skill_2_Print_01.wav</ShortName>
-							<Path>SFX/23101_Skill_2_Print_01_F25146D2.wem</Path>
+							<Path>SFX/23101_Skill_2_Print_01_1D2B368B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3017247325" Name="Music_Map" ObjectPath="\Events\Music\Music_Map" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
+					<ActionSetState>
+						<ActionSetStateEntry Id="1048449605" Name="Map" ObjectPath="\States\Music\Music_State\Map"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3446471941" Name="Music_S1_Base_Camp" ObjectPath="\Events\Music\Music_S1_Base_Camp" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
+					<ActionSetState>
+						<ActionSetStateEntry Id="1273876958" Name="Base_Camp" ObjectPath="\States\Music\Music_State\Base_Camp"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="1994295204" Name="Music_S1_Boss_P2" ObjectPath="\Events\Music\Music_S1_Boss_P2" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
+					<ActionSetState>
+						<ActionSetStateEntry Id="1393967555" Name="Boss_P2" ObjectPath="\States\Music\Music_State\Boss_P2"/>
+					</ActionSetState>
+				</Event>
+				<Event Id="3725903807" Name="Music_Start" ObjectPath="\Events\Music\Music_Start" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="139809998" Language="SFX">
+							<ShortName>Test_Music-07.wav</ShortName>
+							<Path>SFX/Test_Music-07_D79FB2B7.wem</Path>
+						</File>
+						<File Id="298689337" Language="SFX">
+							<ShortName>Test_Music-01.wav</ShortName>
+							<Path>SFX/Test_Music-01_D79FB2B7.wem</Path>
+						</File>
+						<File Id="676352617" Language="SFX">
+							<ShortName>동양유적지3차.wav</ShortName>
+							<Path>SFX/동양유적지3차_D79FB2B7.wem</Path>
+						</File>
+						<File Id="680368995" Language="SFX">
+							<ShortName>Test_Music-03.wav</ShortName>
+							<Path>SFX/Test_Music-03_D79FB2B7.wem</Path>
+						</File>
+						<File Id="910846878" Language="SFX">
+							<ShortName>Test_Music-05.wav</ShortName>
+							<Path>SFX/Test_Music-05_D79FB2B7.wem</Path>
+						</File>
+						<File Id="959686427" Language="SFX">
+							<ShortName>Test_Music-08.wav</ShortName>
+							<Path>SFX/Test_Music-08_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+					<SwitchContainers>
+						<SwitchContainer SwitchValue="{AF2EF22E-FFE3-4885-A2C7-5130DEFCD514}">
+							<Media>
+								<File Id="298689337"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{BB573B8F-26A6-4FD5-A568-0E75CD545CBC}">
+							<Media>
+								<File Id="680368995"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{72D63A16-DB87-464C-BC08-9C3F46B6DA38}">
+							<Media>
+								<File Id="676352617"/>
+								<File Id="910846878"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{969C96E3-A83D-40DD-A2AA-5ABF7846FBD3}">
+							<Media>
+								<File Id="959686427"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{AF2E8545-B115-44E8-9294-610046694FCF}">
+							<Media>
+								<File Id="139809998"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{C3EAE99F-7CA7-4E61-B8D7-0B46A411A4AC}">
+							<Media>
+								<File Id="298689337"/>
+							</Media>
+						</SwitchContainer>
+					</SwitchContainers>
+					<ActionSetState>
+						<ActionSetStateEntry Id="3161908922" Name="Main" ObjectPath="\States\Music\Music_State\Main"/>
+					</ActionSetState>
 				</Event>
 				<Event Id="450034178" Name="T_12202_Atk_1" ObjectPath="\Events\Default Work Unit\T_12202_Atk_1" DurationType="OneShot" DurationMin="0.193283" DurationMax="0.257594">
 					<IncludedMemoryFiles>
@@ -191,7 +267,7 @@
 					<IncludedMemoryFiles>
 						<File Id="116424717" Language="SFX">
 							<ShortName>12305_Skill_1_Print_01.wav</ShortName>
-							<Path>SFX/12305_Skill_1_Print_01_43DE845D.wem</Path>
+							<Path>SFX/12305_Skill_1_Print_01_A4F9E110.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -199,7 +275,7 @@
 					<IncludedMemoryFiles>
 						<File Id="563299050" Language="SFX">
 							<ShortName>kangaroo test\T_23101_Atk_1_Print_01.wav</ShortName>
-							<Path>SFX/kangaroo test/T_23101_Atk_1_Print_01_5C286891.wem</Path>
+							<Path>SFX/kangaroo test/T_23101_Atk_1_Print_01_3718A6F2.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -215,27 +291,54 @@
 					<IncludedMemoryFiles>
 						<File Id="412747251" Language="SFX">
 							<ShortName>23101_idle_Print_4_01.wav</ShortName>
-							<Path>SFX/23101_idle_Print_4_01_CDF8954B.wem</Path>
+							<Path>SFX/23101_idle_Print_4_01_F900907E.wem</Path>
 						</File>
 						<File Id="620869353" Language="SFX">
 							<ShortName>23101_idle_Print_1_01.wav</ShortName>
-							<Path>SFX/23101_idle_Print_1_01_140F6CB2.wem</Path>
+							<Path>SFX/23101_idle_Print_1_01_B71A5DBB.wem</Path>
 						</File>
 						<File Id="742762331" Language="SFX">
 							<ShortName>23101_idle_Print_2_01.wav</ShortName>
-							<Path>SFX/23101_idle_Print_2_01_C3F155C8.wem</Path>
+							<Path>SFX/23101_idle_Print_2_01_32C92A54.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2895012419" Name="T_23101_Skill_1" ObjectPath="\Events\Default Work Unit\T_23101_Skill_1" DurationType="OneShot" DurationMin="1.277932" DurationMax="1.277932">
+				<Event Id="2895012419" Name="T_23101_Skill_1" ObjectPath="\Events\Default Work Unit\T_23101_Skill_1" MaxAttenuation="100." DurationType="OneShot" DurationMin="1.277932" DurationMax="1.277932">
 					<IncludedMemoryFiles>
 						<File Id="797527484" Language="SFX">
 							<ShortName>23101_Skill_1_Print_01.wav</ShortName>
-							<Path>SFX/23101_Skill_1_Print_01_775410F6.wem</Path>
+							<Path>SFX/23101_Skill_1_Print_01_4FDF74D1.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<StateGroups>
+				<StateGroup Id="1048449605" Name="Map" ObjectPath="\States\Music\Music_State\Map" GUID="{BB573B8F-26A6-4FD5-A568-0E75CD545CBC}">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="1273876958" Name="Base_Camp" ObjectPath="\States\Music\Music_State\Base_Camp" GUID="{72D63A16-DB87-464C-BC08-9C3F46B6DA38}">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="1393967555" Name="Boss_P2" ObjectPath="\States\Music\Music_State\Boss_P2" GUID="{969C96E3-A83D-40DD-A2AA-5ABF7846FBD3}">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="2706291346" Name="Battle_Start" ObjectPath="\States\Music\Music_State\Battle_Start" GUID="{AF2E8545-B115-44E8-9294-610046694FCF}">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="3161908922" Name="Main" ObjectPath="\States\Music\Music_State\Main" GUID="{AF2EF22E-FFE3-4885-A2C7-5130DEFCD514}">
+					<States/>
+				</StateGroup>
+				<StateGroup Id="3826569560" Name="Music_State" ObjectPath="\States\Music\Music_State" GUID="{1AEDC149-829A-4434-B714-68D5B2E68A3B}">
+					<States>
+						<State Id="748895195" Name="None" ObjectPath="\States\Music\Music_State\None" GUID="{C3EAE99F-7CA7-4E61-B8D7-0B46A411A4AC}"/>
+						<State Id="3161908922" Name="Main" ObjectPath="\States\Music\Music_State\Main" GUID="{AF2EF22E-FFE3-4885-A2C7-5130DEFCD514}"/>
+						<State Id="1393967555" Name="Boss_P2" ObjectPath="\States\Music\Music_State\Boss_P2" GUID="{969C96E3-A83D-40DD-A2AA-5ABF7846FBD3}"/>
+						<State Id="1048449605" Name="Map" ObjectPath="\States\Music\Music_State\Map" GUID="{BB573B8F-26A6-4FD5-A568-0E75CD545CBC}"/>
+						<State Id="1273876958" Name="Base_Camp" ObjectPath="\States\Music\Music_State\Base_Camp" GUID="{72D63A16-DB87-464C-BC08-9C3F46B6DA38}"/>
+						<State Id="2706291346" Name="Battle_Start" ObjectPath="\States\Music\Music_State\Battle_Start" GUID="{AF2E8545-B115-44E8-9294-610046694FCF}"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

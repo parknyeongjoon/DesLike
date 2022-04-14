@@ -2615,6 +2615,7 @@ GameObject:
   - component: {fileID: 6527479380180569580}
   - component: {fileID: 574283936}
   - component: {fileID: 1004540405330416364}
+  - component: {fileID: 6037618507864656913}
   m_Layer: 8
   m_Name: Hero
   m_TagString: Player
@@ -2830,7 +2831,6 @@ MonoBehaviour:
         m_CallState: 2
   cur_Hp: 0
   skeletonAnimation: {fileID: 3659554584969181003}
-  soldierBasic: {fileID: 6527479380180569580}
   state: 0
   action: 0
   team: 1
@@ -2840,7 +2840,7 @@ MonoBehaviour:
   skillTargetInfo: {fileID: 0}
   moveDir: {x: 0, y: 0, z: 0}
   cur_Mp: 0
-  barrier: 0
+  shield: 0
   healWeight: 0
   resurrection: 0
   buff_Stat:
@@ -2896,6 +2896,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55b8a7a668018747b5debb1735e1e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6037618507864656913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6527479380180569571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a2d6f2d2e9f8214aab47e306907e03b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &6527479380560275517
 GameObject:
   m_ObjectHideFlags: 0

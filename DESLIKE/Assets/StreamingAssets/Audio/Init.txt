@@ -1,11 +1,18 @@
 State Group	ID	Name			Wwise Object Path	Notes
 	3269609307	Game_Speed			\Default Work Unit\Game_Speed	
+	3826569560	Music_State			\Music\Music_State	
 
 State	ID	Name	State Group			Notes
 	748895195	None	Game_Speed			
 	1500973332	X1	Game_Speed			
 	1500973333	X0	Game_Speed			
 	1500973335	X2	Game_Speed			
+	748895195	None	Music_State			
+	1048449605	Map	Music_State			
+	1273876958	Base_Camp	Music_State			
+	1393967555	Boss_P2	Music_State			
+	2706291346	Battle_Start	Music_State			
+	3161908922	Main	Music_State			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	208977400	TN_Bus			\Default Work Unit\Master Audio Bus\Character Bus\TNE\TN_Bus	

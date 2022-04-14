@@ -21,6 +21,10 @@ namespace AK
         static const AkUniqueID H_23101_IDLE = 4029061990U;
         static const AkUniqueID H_23101_SKILL_1 = 2377059575U;
         static const AkUniqueID H_23101_SKILL_2 = 2377059572U;
+        static const AkUniqueID MUSIC_MAP = 3017247325U;
+        static const AkUniqueID MUSIC_S1_BASE_CAMP = 3446471941U;
+        static const AkUniqueID MUSIC_S1_BOSS_P2 = 1994295204U;
+        static const AkUniqueID MUSIC_START = 3725903807U;
         static const AkUniqueID T_12202_ATK_1 = 450034178U;
         static const AkUniqueID T_12202_IDLE = 3619100458U;
         static const AkUniqueID T_12202_SKILL_1 = 1526852227U;
@@ -51,7 +55,30 @@ namespace AK
             } // namespace STATE
         } // namespace GAME_SPEED
 
+        namespace MUSIC_STATE
+        {
+            static const AkUniqueID GROUP = 3826569560U;
+
+            namespace STATE
+            {
+                static const AkUniqueID BASE_CAMP = 1273876958U;
+                static const AkUniqueID BATTLE_START = 2706291346U;
+                static const AkUniqueID BOSS_P2 = 1393967555U;
+                static const AkUniqueID MAIN = 3161908922U;
+                static const AkUniqueID MAP = 1048449605U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace MUSIC_STATE
+
     } // namespace STATES
+
+    namespace TRIGGERS
+    {
+        static const AkUniqueID BASE_CAMP = 1273876958U;
+        static const AkUniqueID BOSS_P2 = 1393967555U;
+        static const AkUniqueID MAIN = 3161908922U;
+        static const AkUniqueID MAP = 1048449605U;
+    } // namespace TRIGGERS
 
     namespace BANKS
     {

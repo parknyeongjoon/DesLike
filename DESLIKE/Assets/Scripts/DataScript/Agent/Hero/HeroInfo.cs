@@ -6,13 +6,12 @@ using Spine.Unity;
 public class HeroInfo : CastleInfo
 {
     public SkeletonAnimation skeletonAnimation;
-    public SoldierBasic soldierBasic;
 
     public Soldier_State state;
     public Soldier_Action action;
     public Team team;
 
-    public GameObject target;//target을 하나 더 추가해서 현재 목표중인 오브젝트 넣어주기
+    public GameObject target;
     public HeroInfo targetInfo;
     public GameObject skillTarget;
     public HeroInfo skillTargetInfo;
@@ -20,9 +19,8 @@ public class HeroInfo : CastleInfo
     public Vector3 moveDir;
 
     public float cur_Mp;
-    public float barrier;
+    public float shield;
     public float healWeight = 0;
-
     public bool resurrection;
 
     public Buff_Stat buff_Stat;
@@ -41,18 +39,10 @@ public class HeroInfo : CastleInfo
         allyPortDatas.spawnSoldierList.Add(this);
     }
 
-    public void Stun(float stunTime)//스턴 당하기
+    public void Stun(float stunTime)
     {
         state = Soldier_State.Stun;
-        soldierBasic.StopAllCoroutines();
-        StartCoroutine(soldierBasic.Stun_Behaviour(stunTime));
-    }
-
-    public void Taunt(HeroInfo _targetInfo, float tauntTime)//도발 당하기
-    {
-        state = Soldier_State.Taunt;
-        soldierBasic.StopAllCoroutines();
-        StartCoroutine(soldierBasic.Taunt_Behaviour(_targetInfo, tauntTime));
+        //StartCoroutine(soldierBehaviour.Stun_Behaviour());
     }
 
     protected IEnumerator Hp_Mp_Re()
@@ -75,7 +65,7 @@ public class HeroInfo : CastleInfo
             {
                 cur_Mp += (((HeroData)castleData).mp_Re + buff_Stat.mp_Re);
             }
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(1.0f);
         }
     }
 
@@ -97,7 +87,7 @@ public class HeroInfo : CastleInfo
         GameObject target = null;
         foreach (Collider2D collider in targets)
         {
-            float distance = Vector3.Distance(this.transform.position, collider.transform.position);
+            float distance = Vector3.Distance(transform.position, collider.transform.position);
             if (distance < minDistance)
             {
                 minDistance = distance;

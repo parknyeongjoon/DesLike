@@ -24,6 +24,7 @@ public class MainTitle : MonoBehaviour
         {
             continueBtn.interactable = false;
         }
+        AkSoundEngine.PostEvent("Music_Start", gameObject);
     }
 
     public void NewGameStart()

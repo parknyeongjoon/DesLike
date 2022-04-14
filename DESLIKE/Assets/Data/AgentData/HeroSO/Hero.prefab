@@ -2630,7 +2630,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6527479380180569571}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 1321472770580833991}
@@ -2829,7 +2829,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   cur_Hp: 0
-  eventParam: 
   skeletonAnimation: {fileID: 3659554584969181003}
   soldierBasic: {fileID: 6527479380180569580}
   state: 0
@@ -2839,8 +2838,9 @@ MonoBehaviour:
   targetInfo: {fileID: 0}
   skillTarget: {fileID: 0}
   skillTargetInfo: {fileID: 0}
-  cur_Mp: 0
   moveDir: {x: 0, y: 0, z: 0}
+  cur_Mp: 0
+  barrier: 0
   healWeight: 0
   resurrection: 0
   buff_Stat:

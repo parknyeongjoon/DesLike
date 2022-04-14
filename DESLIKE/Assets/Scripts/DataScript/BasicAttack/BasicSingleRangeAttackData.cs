@@ -17,18 +17,19 @@ public class BasicSingleRangeAttackData : BasicAttackData
     {
         float shotTime = 0.0f;
         GameObject createArrow;
-        Transform desTrans = targetInfo.transform;
+        Transform desTrans = targetInfo.transform;//직접 참조 중인지 확인해봐야함
         HeroInfo castleInfo = targetInfo;
-        createArrow = Instantiate(arrow);
+        createArrow = Instantiate(arrow, heroInfo.transform.position, Quaternion.identity);//오브젝트 풀링
         while (shotTime < arrowSpeed)
         {
             shotTime += Time.deltaTime;
-            createArrow.transform.position = Vector2.Lerp(createArrow.transform.position, desTrans.position, shotTime / arrowSpeed);
-            yield return null;
+            createArrow.transform.position = Vector2.Lerp(heroInfo.transform.position, desTrans.position, shotTime / arrowSpeed);
+            yield return new WaitForFixedUpdate();
         }
         if (castleInfo) 
         {
-            castleInfo.OnDamaged(atk_Dmg); extraSkillData?.Effect(heroInfo, targetInfo);
+            castleInfo.OnDamaged(atk_Dmg);
+            extraSkillData?.Effect(heroInfo, targetInfo);
         }
         Destroy(createArrow);
     }

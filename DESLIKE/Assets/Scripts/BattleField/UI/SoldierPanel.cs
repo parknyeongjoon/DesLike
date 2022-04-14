@@ -129,7 +129,7 @@ public class SoldierPanel : MonoBehaviour
 
     public void RemoveBuff(string code)
     {
-        if (soldierInfo.buffCoroutine[code].Count == 1)
+        if (soldierInfo.buffCoroutine[code].Count <= 1)
         {
             Destroy(buffDic[code]);
             buffDic.Remove(code);
@@ -142,14 +142,14 @@ public class SoldierPanel : MonoBehaviour
 
     public void RemoveDebuff(string code)
     {
-        if (soldierInfo.debuffCoroutine[code].Count == 1)
+        if (soldierInfo.debuffCoroutine[code].Count <= 1)
         {
             Destroy(buffDic[code]);
             buffDic.Remove(code);
         }
         else
         {
-            buffDic[code].GetComponentInChildren<Text>().text = (soldierInfo.debuffCoroutine[code].Count -1).ToString();
+            buffDic[code].GetComponentInChildren<Text>().text = (soldierInfo.debuffCoroutine[code].Count - 1).ToString();
         }
     }
 }

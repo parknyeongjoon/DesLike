@@ -17,8 +17,6 @@ public class CastleInfo : MonoBehaviour
 
     public float cur_Hp;
 
-    public string eventParam;
-
     void Start()
     {
         cur_Hp = castleData.hp;

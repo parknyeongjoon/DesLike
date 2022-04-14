@@ -27,10 +27,7 @@ public class Buff : ActiveSkill//우선 버프 대상 정할 방법 구하기(portDatas에서 a
             heroInfo.cur_Mp -= ((ActiveSkillData)skillData).mp;
             cur_cooltime = ((ActiveSkillData)skillData).cooltime;
             StartCoroutine(SkillCooltime());
-
-            //스택이 가능하다면 계속해서 List<Coroutine>에 넣기//버프 실행해주고 heroInfo 버프 딕셔너리에 넣어주기
-            Coroutine tempCoroutine = targetInfo.StartCoroutine(((SingleBuffData)skillData).BuffCoroutine(heroInfo, targetInfo));
-            targetInfo.buffCoroutine[skillData.code].Add(tempCoroutine);
+            skillData.Effect(heroInfo, targetInfo);
 
             heroInfo.action = Soldier_Action.End_Delay;
             yield return new WaitForSeconds(((ActiveSkillData)skillData).end_Delay);

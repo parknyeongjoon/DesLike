@@ -21,10 +21,10 @@ public class SoldierInfo : HeroInfo
     void Dead()
     {
         gameObject.layer = 7;
+        transform.position += new Vector3(0, 0, 1);
         if (skeletonAnimation.skeleton != null)
             skeletonAnimation.state.SetAnimation(0, "H_23101_Die", false);
         AkSoundEngine.PostEvent("T_23101_Die", gameObject);
-        Debug.Log("Dead");
         allyPortDatas.spawnSoldierList.Remove(this);
         BattleUIManager.Instance.UpdateSoldierRatioBar();
         if (allyPortDatas.spawnSoldierList.Count == 0)

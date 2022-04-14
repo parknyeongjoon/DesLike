@@ -8,10 +8,20 @@ public class SingleBuffData : ActiveSkillData//퍼센트로 버프 주는 법 생각해내기
     public Buff_Stat buff_Stat;
     public float buff_Time;
     public int max_Stack;
+    public BuffType buffType;
+    [System.NonSerialized]
+    public string buffCode;
+
+    protected void OnEnable()
+    {
+        if (buffType == BuffType.None) { buffCode = code; }
+        else { buffCode = buffType.ToString(); }
+    }
 
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)//이런 식으로 효과는 밖으로 빼기
     {
-        targetInfo.StartCoroutine(BuffCoroutine(heroInfo, targetInfo));
+        Coroutine tempCoroutine = targetInfo.StartCoroutine(BuffCoroutine(heroInfo, targetInfo));
+        targetInfo.buffCoroutine[code].Add(tempCoroutine);
     }
 
     public virtual IEnumerator BuffCoroutine(HeroInfo heroInfo, HeroInfo targetInfo)

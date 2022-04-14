@@ -116,27 +116,27 @@ public class HeroPanel : MonoBehaviour
 
     public void RemoveBuff(string code)
     {
-        if (heroInfo.buffCoroutine[code].Count == 1)
+        if (heroInfo.buffCoroutine[code].Count <= 0)
         {
             Destroy(buffDic[code]);
             buffDic.Remove(code);
         }
         else
         {
-            buffDic[code].GetComponentInChildren<Text>().text = (heroInfo.buffCoroutine[code].Count -1).ToString();
+            buffDic[code].GetComponentInChildren<Text>().text = (heroInfo.buffCoroutine[code].Count).ToString();
         }
     }
 
     public void RemoveDebuff(string code)
     {
-        if (heroInfo.debuffCoroutine[code].Count == 1)
+        if (heroInfo.debuffCoroutine[code].Count <= 0)
         {
             Destroy(buffDic[code]);
             buffDic.Remove(code);
         }
         else
         {
-            buffDic[code].GetComponentInChildren<Text>().text = (heroInfo.debuffCoroutine[code].Count -1).ToString();
+            buffDic[code].GetComponentInChildren<Text>().text = (heroInfo.debuffCoroutine[code].Count).ToString();
         }
     }
 }

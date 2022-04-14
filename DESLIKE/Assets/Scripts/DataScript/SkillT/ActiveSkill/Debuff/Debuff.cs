@@ -28,9 +28,7 @@ public class Debuff : ActiveSkill
             cur_cooltime = ((ActiveSkillData)skillData).cooltime;
             StartCoroutine(SkillCooltime());
 
-            //스택이 가능하다면 계속해서 List<Coroutine>에 넣기//버프 실행해주고 heroInfo 버프 딕셔너리에 넣어주기
-            Coroutine tempCoroutine = targetInfo.StartCoroutine(((SingleDebuffData)skillData).DebuffCoroutine(heroInfo,targetInfo));
-            targetInfo.debuffCoroutine[skillData.code].Add(tempCoroutine);
+            skillData.Effect(heroInfo, targetInfo);
 
             heroInfo.action = Soldier_Action.End_Delay;
             yield return new WaitForSeconds(((ActiveSkillData)skillData).end_Delay);
@@ -42,7 +40,7 @@ public class Debuff : ActiveSkill
     {
         for (int i = 0; i < soldierList.Count; i++)//Awake에서 적용 군중에 따라 SoldierList 따로따로 적용해주기, 배틀 중일 때만 버프 주기?
         {
-            if (soldierList[i] != heroInfo && !(soldierList[i].debuffCoroutine.ContainsKey(skillData.code) && soldierList[i].debuffCoroutine[skillData.code].Count < ((SingleDebuffData)skillData).max_Stack))
+            if (soldierList[i] != heroInfo && !(soldierList[i].debuffCoroutine.ContainsKey(((SingleDebuffData)skillData).debuffCode) && soldierList[i].debuffCoroutine[((SingleDebuffData)skillData).debuffCode].Count < ((SingleDebuffData)skillData).max_Stack))
             {
                 heroInfo.skillTarget = soldierList[i].gameObject;
                 heroInfo.skillTargetInfo = soldierList[i];

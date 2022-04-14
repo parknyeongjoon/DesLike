@@ -12,7 +12,37 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="None" ID="{C3EAE99F-7CA7-4E61-B8D7-0B46A411A4AC}"/>
+						<CurrentStateRef Name="Main" ID="{AF2EF22E-FFE3-4885-A2C7-5130DEFCD514}"/>
+						<CurrentStateRef Name="None" ID="{B9FFA1F4-7C44-42A8-B90E-8CAD8E38CFA7}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="Music_Test" ID="{CA1D1771-D0F6-4541-AA0A-C8855C01AAF9}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Music_Start" ID="{174530CA-7C7E-4C2E-978A-7F178A1EC9A4}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Battle_Start" ID="{B85E8104-17E7-4C9D-8087-438DF374E492}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Music_Map" ID="{DD14FC31-A992-407E-8A3C-1BCA3CBB907A}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Music_S1_Boss_P2" ID="{F8AB59BB-CC76-4051-A98F-A64F3E793B53}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Music_S1_Base_Camp" ID="{8FC8DA82-588D-455D-B2C1-B291DD534940}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Map" ID="{BB573B8F-26A6-4FD5-A568-0E75CD545CBC}"/>
 						<CurrentStateRef Name="None" ID="{B9FFA1F4-7C44-42A8-B90E-8CAD8E38CFA7}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>

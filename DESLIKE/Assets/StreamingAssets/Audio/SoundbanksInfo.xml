@@ -26,7 +26,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1916872732">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3032193597">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -303,7 +303,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2895012419" Name="T_23101_Skill_1" ObjectPath="\Events\Default Work Unit\T_23101_Skill_1" DurationType="OneShot" DurationMin="1.277932" DurationMax="1.277932">
+				<Event Id="2895012419" Name="T_23101_Skill_1" ObjectPath="\Events\Default Work Unit\T_23101_Skill_1" MaxAttenuation="100." DurationType="OneShot" DurationMin="1.277932" DurationMax="1.277932">
 					<IncludedMemoryFiles>
 						<File Id="797527484" Language="SFX">
 							<ShortName>23101_Skill_1_Print_01.wav</ShortName>

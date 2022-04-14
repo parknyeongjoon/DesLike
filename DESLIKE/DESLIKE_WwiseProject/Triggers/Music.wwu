@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BD582F66-4688-4D31-9CE1-E3456243BE97}" SchemaVersion="103">
+	<Triggers>
+		<WorkUnit Name="Music" ID="{BD582F66-4688-4D31-9CE1-E3456243BE97}" PersistMode="Standalone">
+			<ChildrenList>
+				<Trigger Name="Main" ID="{B913909E-E798-457D-9819-014694B823B2}"/>
+				<Trigger Name="Map" ID="{0CC5A855-064D-4732-9BDF-BE45D940033B}"/>
+				<Trigger Name="Base_Camp" ID="{62C7C64C-2DAF-4F70-9F68-2F9483699AE3}"/>
+				<Trigger Name="Boss_P2" ID="{99C797D5-CD24-499A-A3F9-F6F2AB03F623}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Triggers>
+</WwiseDocument>

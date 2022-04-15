@@ -21,10 +21,10 @@ public class GrenadeAttackData : ActiveSkillData
         }
     }
 
-    HeroInfo[] Get_Targets(HeroInfo heroInfo, HeroInfo targetInfo)// 다른 곳으로 static으로 옮기기, soldier에서 스킬 사용시 null이면 마우스 위치에 사용될 듯?
+    protected HeroInfo[] Get_Targets(HeroInfo heroInfo, HeroInfo targetInfo)// 다른 곳으로 static으로 옮기기, soldier에서 스킬 사용시 null이면 마우스 위치에 사용될 듯?
     {
         HeroInfo[] targetInfos;
-        Vector3 skillPos = new Vector3();
+        Vector3 skillPos;
         if (targetInfo) { skillPos = targetInfo.transform.position; }
         else { skillPos = MouseManager.Instance.skillPos; }
         Collider2D[] targetColliders = Physics2D.OverlapCircleAll(skillPos, extent, ((int)atkArea * (int)heroInfo.team) ^ ((int)atkArea * 7));

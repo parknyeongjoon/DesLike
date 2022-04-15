@@ -19,7 +19,7 @@ public class BasicGrenadeAttackData : BasicSingleAttackData
         }
     }
 
-    List<HeroInfo> Get_Targets(HeroInfo heroInfo, HeroInfo targetInfo)// 다른 곳으로 static으로 옮기기, soldier에서 스킬 사용시 null이면 마우스 위치에 사용될 듯?
+    protected List<HeroInfo> Get_Targets(HeroInfo heroInfo, HeroInfo targetInfo)// 다른 곳으로 static으로 옮기기, soldier에서 스킬 사용시 null이면 마우스 위치에 사용될 듯?
     {
         List<HeroInfo> targetInfos = new List<HeroInfo>();
         Vector3 skillPos = new Vector3();

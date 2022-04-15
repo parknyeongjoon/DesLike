@@ -255,6 +255,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: eceecd6d3db2957429877d981159387d, type: 2}
   - {fileID: 11400000, guid: cfafb7fd4b40a4245acd1d4d0bf6313d, type: 2}
   - {fileID: 11400000, guid: e4dc5552129c12f4ab36e7e5e1cb37bc, type: 2}
+  - {fileID: 11400000, guid: 05e9d3a73ad3ec0448dd01a92269d9d8, type: 2}
+  - {fileID: 11400000, guid: 2511c0f84376d2147b322e30eb68130b, type: 2}
   - {fileID: 11400000, guid: cf43bab0e7c1b0647b13055f91296289, type: 2}
   heroDatas:
   - {fileID: 11400000, guid: 7f528eb015e3d0e40b0f2abb902a89a8, type: 2}

@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "BasicSingleRangeAttack", menuName = "ScriptableObject/BasicAttack/BasicSingleRangeAttack")]
-public class BasicSingleRangeAttackData : BasicAttackData
+[CreateAssetMenu(fileName = "BasicGrenadeRangeAttackData",menuName = "ScriptableObject/BasicAttack/BasicGrenadeRangeAttackData")]
+public class BasicGrenadeRangeAttackData : BasicGrenadeAttackData
 {
     public GameObject arrow;
     public float arrowSpeed;
@@ -26,10 +26,15 @@ public class BasicSingleRangeAttackData : BasicAttackData
             createArrow.transform.position = Vector2.Lerp(heroInfo.transform.position, desTrans.position, shotTime / arrowSpeed);
             yield return new WaitForFixedUpdate();
         }
-        if (castleInfo) 
+        if (castleInfo)
         {
-            castleInfo.OnDamaged(atk_Dmg);
-            extraSkillData?.Effect(heroInfo, targetInfo);
+            List<HeroInfo> targetInfos;
+            targetInfos = Get_Targets(heroInfo, targetInfo);
+            for (int i = 0; i < targetInfos.Count; i++)
+            {
+                targetInfos[i].OnDamaged(atk_Dmg);
+                extraSkillData?.Effect(heroInfo, targetInfo);
+            }
         }
         Destroy(createArrow);
     }

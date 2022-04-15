@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 구현해야함
+public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 구현해야함, 스킬 시전 중 이동하면 스킬 취소되게
 {
     MouseManager mouseManager;
 
@@ -43,8 +43,6 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
     {
         if (Input.GetKeyDown(KeyCode.X) && skillScripts[1])
         {
-            heroInfo.skeletonAnimation.state.SetAnimation(0, "H_23101_Skill_2", false);//스킬
-            AkSoundEngine.PostEvent("H_23101_Skill_2", gameObject);
             //SkillFunc(skillScripts[1]);
         }
     }
@@ -109,7 +107,7 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
             skillRange.transform.localScale = new Vector2(((ActiveSkillData)skillScript.skillData).range, ((ActiveSkillData)skillScript.skillData).range);
             yield return SetTarget();
             yield return MoveToSkill(heroInfo.skillTargetInfo, ((ActiveSkillData)skillScript.skillData).range);
-            yield return skillScript.UseSkill((HeroInfo)heroInfo.skillTargetInfo);
+            yield return skillScript.UseSkill(heroInfo.skillTargetInfo);
         }
     }
 

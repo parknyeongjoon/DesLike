@@ -11,14 +11,14 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Music" ID="{65AF8A77-C6D0-484A-9C7C-688ED9FEA841}" WorkUnitID="{0B4C7F08-A208-4C5C-B93D-5F77EAF1FE2D}"/>
+									<ObjectRef Name="TestSC" ID="{65AF8A77-C6D0-484A-9C7C-688ED9FEA841}" WorkUnitID="{0B4C7F08-A208-4C5C-B93D-5F77EAF1FE2D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{130ACE32-EC5B-4EF9-829D-2AA807FFD12A}" ShortID="161517271">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Music" ID="{65AF8A77-C6D0-484A-9C7C-688ED9FEA841}" WorkUnitID="{0B4C7F08-A208-4C5C-B93D-5F77EAF1FE2D}"/>
+									<ObjectRef Name="TestSC" ID="{65AF8A77-C6D0-484A-9C7C-688ED9FEA841}" WorkUnitID="{0B4C7F08-A208-4C5C-B93D-5F77EAF1FE2D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

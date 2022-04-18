@@ -15,7 +15,7 @@ MonoBehaviour:
   sprite: {fileID: 0}
   code: B2
   hp: 200
-  def: 0
+  def: 22222
   size: 0.2
   blood: {fileID: 5086979035932333915, guid: 83b2eb89fe46c6a4db5d18712a94a153, type: 3}
   soldier_name: B2

@@ -18,41 +18,17 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   physicNorSol:
-  - {fileID: 11400000, guid: 14f5dae46fda2f741b6b1c5d2c4fc972, type: 2}
-  - {fileID: 11400000, guid: e34b33453d8191d49889e0474332ec8b, type: 2}
-  - {fileID: 11400000, guid: 82c78be778566a6469d29ef6183c047b, type: 2}
-  - {fileID: 11400000, guid: 7f280e1321212df43a2d51f8c859c0d0, type: 2}
-  - {fileID: 11400000, guid: 1aaca8d520ee3be43b8e94ef9d8e1348, type: 2}
-  - {fileID: 11400000, guid: 1166ce31f1699dd498227eb5b5b1e8a8, type: 2}
-  - {fileID: 11400000, guid: 221ad2484ae42574da692245af4301dd, type: 2}
-  - {fileID: 11400000, guid: 9ce793339cec5024fa0ee736312a3d52, type: 2}
-  - {fileID: 11400000, guid: 74196df91fafb9849be0c960491a2a79, type: 2}
-  - {fileID: 11400000, guid: e0d1106d9eb2ded49af5e8a8a95b7325, type: 2}
+  - {fileID: 11400000, guid: 63e33c6e044a1e34da48031263c41fac, type: 2}
+  - {fileID: 11400000, guid: cf43bab0e7c1b0647b13055f91296289, type: 2}
   physicEpicSol:
-  - {fileID: 11400000, guid: 8f5a60eb9068baa419dcb0a1b2738e82, type: 2}
-  - {fileID: 11400000, guid: a1fd1964b4c138745921d4878e2d9535, type: 2}
-  - {fileID: 11400000, guid: 9ffcf641a6baf4e4c8a0f2f081be0b9f, type: 2}
-  - {fileID: 11400000, guid: b7e34e1abcb2bc34c96e7f53d80f090f, type: 2}
-  - {fileID: 11400000, guid: 69fd1e15101c0a7438f6d628b81427ab, type: 2}
-  - {fileID: 11400000, guid: 8ac15ce69970b5e418a536861101435a, type: 2}
+  - {fileID: 11400000, guid: abc78992742d4b441bd1c62fdeb5ff34, type: 2}
+  - {fileID: 11400000, guid: 2511c0f84376d2147b322e30eb68130b, type: 2}
   spellNorSol:
-  - {fileID: 11400000, guid: 3857623cf18fe9d488e693106fa19797, type: 2}
-  - {fileID: 11400000, guid: eb5204d80c5ed444499e5c53b2d3fb66, type: 2}
-  - {fileID: 11400000, guid: bf3e6d353c8fb54418de9a08ff9ed30b, type: 2}
-  - {fileID: 11400000, guid: 8c7580d2fb2da334fa97cba878497c25, type: 2}
-  - {fileID: 11400000, guid: 9b61d10843d35d8479a45c4958cf33c8, type: 2}
-  - {fileID: 11400000, guid: a19d44c34c43a0e4da9ad71198fbd6ee, type: 2}
-  - {fileID: 11400000, guid: 255b8e10d02acdb4d938c352854e8fce, type: 2}
-  - {fileID: 11400000, guid: 23570677b4b399e46967362044ceb45b, type: 2}
-  - {fileID: 11400000, guid: 6667404a39cfc1c49a2a37fe159a4ffc, type: 2}
-  - {fileID: 11400000, guid: 31f383d09658c4642a06335cbfb9b55a, type: 2}
+  - {fileID: 11400000, guid: 9c3dc8aa20d72e4419340f0035563443, type: 2}
+  - {fileID: 11400000, guid: 0fc9dab4c7cb2e043839afcc06506b1a, type: 2}
   spellEpicSol:
-  - {fileID: 11400000, guid: 63f25124bdd36364e83661083fa9e78b, type: 2}
-  - {fileID: 11400000, guid: f7ebbfa4770a1d540925d373e08fde86, type: 2}
-  - {fileID: 11400000, guid: 805ebc4bb8ef90244935b48c6a826108, type: 2}
-  - {fileID: 11400000, guid: 1d9a3da770e404847b89330565a0c4aa, type: 2}
-  - {fileID: 11400000, guid: 5dbd07b338d396a4ba11da94de4b7bde, type: 2}
-  - {fileID: 11400000, guid: 5be27e54be0c91d4da4781464bc671df, type: 2}
+  - {fileID: 11400000, guid: 19d290fa2c3c1274096f00b6b3f8e7ef, type: 2}
+  - {fileID: 11400000, guid: 05e9d3a73ad3ec0448dd01a92269d9d8, type: 2}
   commonNorSol: []
   commonEpicSol: []
   physicNorRel:

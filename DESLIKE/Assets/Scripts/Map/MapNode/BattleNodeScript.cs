@@ -70,6 +70,7 @@ public class BattleNodeScript : NodeScript
         SetEnemyPort(0);
         SetBattleReward1();
         map.selectNode[0] = this.battleNode;
+        See_InfoPanel();
     }
 
     public void BattleNodeSet2()
@@ -77,6 +78,7 @@ public class BattleNodeScript : NodeScript
         SetEnemyPort(1);
         SetBattleReward2();
         map.selectNode[1] = this.battleNode;
+        See_InfoPanel();
     }
 
     public void BattleNodeSet3()
@@ -84,6 +86,7 @@ public class BattleNodeScript : NodeScript
         SetEnemyPort(2);
         SetBattleReward3();
         map.selectNode[2] = this.battleNode;
+        See_InfoPanel();
     }
 
     void SetEnemyPort(int i)    // 적 세팅
@@ -91,8 +94,8 @@ public class BattleNodeScript : NodeScript
         SetEnemyPortOption(i);
         battleNode.isEventSet[i] = true;
         battleNode.isRewardSet[i] = true;
+        See_InfoPanel();
     }
-
     
     // -------------
     void SetBattleNodeData()   // 불러오기
@@ -291,7 +294,7 @@ public class BattleNodeScript : NodeScript
         }
     }
 
-    public void See_InfoPanel()
+    void See_InfoPanel()
     {
         option = battleNode.enemyPortOption.soldierOption;
         GameObject createPrefab;

@@ -870,18 +870,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2709389}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &6814787
 GameObject:
   m_ObjectHideFlags: 0
@@ -4426,18 +4414,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 96908928}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &96985767
 GameObject:
   m_ObjectHideFlags: 0
@@ -5176,18 +5152,6 @@ MonoBehaviour:
       - m_Target: {fileID: 114334260}
         m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
         m_MethodName: BattleNodeSet2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 114334260}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7432,18 +7396,6 @@ MonoBehaviour:
       - m_Target: {fileID: 160258043}
         m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
         m_MethodName: BattleNodeSet3
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 160258043}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19305,18 +19257,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 432689235}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &435772610
 GameObject:
   m_ObjectHideFlags: 0
@@ -25656,18 +25596,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 591105217}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &591415507
 GameObject:
   m_ObjectHideFlags: 0
@@ -25985,18 +25913,6 @@ MonoBehaviour:
       - m_Target: {fileID: 591591830}
         m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
         m_MethodName: BattleNodeSet2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 591591830}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26900,18 +26816,6 @@ MonoBehaviour:
       - m_Target: {fileID: 605524092}
         m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
         m_MethodName: BattleNodeSet2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 605524092}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -31986,18 +31890,6 @@ MonoBehaviour:
       - m_Target: {fileID: 749325755}
         m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
         m_MethodName: BattleNodeSet2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 749325755}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -39228,18 +39120,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 918675249}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &920701030
 GameObject:
   m_ObjectHideFlags: 0
@@ -40725,18 +40605,6 @@ MonoBehaviour:
       - m_Target: {fileID: 975425975}
         m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
         m_MethodName: BattleNodeSet2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 975425975}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -43636,18 +43504,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1028572196}
         m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
         m_MethodName: BattleNodeSet2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1028572196}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -46758,18 +46614,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1114352905}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1115337021
 GameObject:
   m_ObjectHideFlags: 0
@@ -48114,18 +47958,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1144848812}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1145023817
 GameObject:
   m_ObjectHideFlags: 0
@@ -48652,18 +48484,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1147656803}
         m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
         m_MethodName: BattleNodeSet1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1147656803}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -52033,18 +51853,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1239005478}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1241457398
 GameObject:
   m_ObjectHideFlags: 0
@@ -52470,18 +52278,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1244104379}
         m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
         m_MethodName: BattleNodeSet1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1244104379}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -53991,18 +53787,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1280379471}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1285927336
 GameObject:
   m_ObjectHideFlags: 0
@@ -54585,18 +54369,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1294498666}
         m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
         m_MethodName: BattleNodeSet1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1294498666}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -58426,18 +58198,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1375702643}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1381653336
 GameObject:
   m_ObjectHideFlags: 0
@@ -59767,18 +59527,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1409546470}
         m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
         m_MethodName: BattleNodeSet2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1409546470}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -67951,18 +67699,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1567084716}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1567756956
 GameObject:
   m_ObjectHideFlags: 0
@@ -69326,18 +69062,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1600020701}
         m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
         m_MethodName: BattleNodeSet1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1600020701}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -70987,18 +70711,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1644464413}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1644705607
 GameObject:
   m_ObjectHideFlags: 0
@@ -71640,18 +71352,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1652554255}
         m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
         m_MethodName: BattleNodeSet1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1652554255}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -73809,18 +73509,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1718898742}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1727745548
 GameObject:
   m_ObjectHideFlags: 0
@@ -75606,18 +75294,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1761616600}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1766216212
 GameObject:
   m_ObjectHideFlags: 0
@@ -76891,18 +76567,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1778652920}
         m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
         m_MethodName: BattleNodeSet3
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1778652920}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -79376,18 +79040,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1857860692}
         m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
         m_MethodName: BattleNodeSet2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1857860692}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -83285,18 +82937,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1932288416}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1935166099
 GameObject:
   m_ObjectHideFlags: 0
@@ -84546,18 +84186,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1977527374}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1979993871
 GameObject:
   m_ObjectHideFlags: 0
@@ -85752,18 +85380,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1995540568}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1995942584
 GameObject:
   m_ObjectHideFlags: 0
@@ -86741,18 +86357,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2037070858}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &2039092800
 GameObject:
   m_ObjectHideFlags: 0
@@ -87157,18 +86761,6 @@ MonoBehaviour:
       - m_Target: {fileID: 2047394739}
         m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
         m_MethodName: BattleNodeSet3
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2047394739}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -91123,18 +90715,6 @@ MonoBehaviour:
       - m_Target: {fileID: 2144676751}
         m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
         m_MethodName: BattleNodeSet2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2144676751}
-        m_TargetAssemblyTypeName: BattleNodeScript, Assembly-CSharp
-        m_MethodName: See_InfoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

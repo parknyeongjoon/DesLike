@@ -68,7 +68,7 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
             {
                 yield return StartCoroutine(atkHandler?.Invoke(heroInfo.targetInfo));
             }
-            else
+            else//idle->detect->battle 루프를 돌아서 메모리 낭비가 심함 해결책 찾기
             {
                 heroInfo.state = Soldier_State.Idle;
             }

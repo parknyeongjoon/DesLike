@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0ea35cdb628ea447a189b34d6514e44, type: 3}
+  m_Name: GrenadeAttackData
+  m_EditorClassIdentifier: 
+  code: 
+  skill_name: 
+  skillType: 3
+  skill_Icon: {fileID: 0}
+  extraSkillData: {fileID: 0}
+  cooltime: 0
+  mp: 0
+  range: 0
+  start_Delay: 0
+  end_Delay: 0
+  atkArea: 0
+  max_Target: 0
+  extent: 0
+  atk_Dmg: 0

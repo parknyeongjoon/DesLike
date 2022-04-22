@@ -9,20 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0ea35cdb628ea447a189b34d6514e44, type: 3}
-  m_Name: GrenadeAttackData
+  m_Script: {fileID: 11500000, guid: 63c4cd173e25a9140a736bd2c2716990, type: 3}
+  m_Name: testDubuffAura
   m_EditorClassIdentifier: 
-  code: 
-  skill_name: 
-  skillType: 3
+  code: testdebuffAura
+  skill_name: testdebuffAura
+  skillType: 4
   skill_Icon: {fileID: 0}
-  extraSkillData: {fileID: 0}
-  cooltime: 0
-  mp: 0
-  range: 0
-  start_Delay: 0
-  end_Delay: 0
-  atkArea: 0
-  max_Target: 0
-  extent: 0
-  atk_Dmg: 0
+  extraSkillData: {fileID: 11400000, guid: 044c987abeb5582478130c7dc7b532ab, type: 2}
+  auraTerm: 5

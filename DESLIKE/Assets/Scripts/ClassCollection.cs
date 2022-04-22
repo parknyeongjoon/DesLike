@@ -18,7 +18,7 @@ public enum Kingdom { Common = 0, Physic = 1, Spell = 2 }
 public enum Tribe { Bear = 1, Kangaroo = 2, Rat = 3, Frog = 4 }
 public enum Rarity { Normal = 1, Epic = 2, Hero = 3 }
 
-public enum SkillType { TargetSkill, GrenadeSkill, InstanceSkill, PassiveSkill, Etc}
+public enum SkillType { TargetSkill, GrenadeSkill, InstanceSkill, PassiveSkill, Aura, Etc}
 public enum BuffType { None, Plague }
 
 public enum CurWindow { Map, Event, Battle, Village, Organ, StageSel }

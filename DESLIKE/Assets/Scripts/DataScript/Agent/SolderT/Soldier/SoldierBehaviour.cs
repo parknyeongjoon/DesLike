@@ -22,7 +22,7 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
     protected override IEnumerator Idle_Behaviour()
     {
         if (curSoundWeight > Random.Range(0, 100)) {
-            AkSoundEngine.PostEvent("T_" + heroInfo.castleData.code + "_Idle", gameObject);
+            //AkSoundEngine.PostEvent("T_" + heroInfo.castleData.code + "_Idle", gameObject);//활성화
             curSoundWeight = basicSoundWeight;
         }
         while (heroInfo.state == Soldier_State.Idle)

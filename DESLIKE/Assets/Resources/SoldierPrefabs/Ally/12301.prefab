@@ -707,35 +707,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7241036854031705836}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &481668317026623442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3336943397944625370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f26b66f7d1b2384c8d4ec388b7e71f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  basicAttackData: {fileID: 11400000, guid: f48a0547cd8510e42b4a2f38321a4e89, type: 2}
-  atkArea: 0
-  atkLayer: 0
-  atkCount: 0
---- !u!114 &6303227263099347637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3336943397944625370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e83e77a24e941e4bb6725a9023175da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillData: {fileID: 11400000, guid: 29e4753a71b3639429b2c7266ba38ecc, type: 2}
 --- !u!58 &8876999261884903641
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -752,3 +723,35 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5
+--- !u!114 &481668317026623442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3336943397944625370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f26b66f7d1b2384c8d4ec388b7e71f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicAttackData: {fileID: 11400000, guid: f48a0547cd8510e42b4a2f38321a4e89, type: 2}
+  atkArea: 0
+  atkLayer: 0
+  atkCount: 0
+--- !u!114 &6332007427254974644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3336943397944625370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c89014b4975f448b068fcb4174dcb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 8bbe6c8824bdbd04b92dcd7890e2b122, type: 2}
+  cur_cooltime: 0
+  atkArea: 0
+  atkLayer: 0

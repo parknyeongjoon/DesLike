@@ -12,8 +12,7 @@ public class BasicAttackScript : BasicAttack
             Debug.Log(i + "attack");
             if (heroInfo.skeletonAnimation.skeleton != null)//스켈레톤 다 할당해주고 지우기
                 heroInfo.skeletonAnimation.state.SetAnimation(0, "H_" + heroInfo.castleData.code + "_Att_1", false);
-            string temp = "T_" + heroInfo.castleData.code + "_atk_1";
-            AkSoundEngine.PostEvent(temp, gameObject);
+            //AkSoundEngine.PostEvent(heroInfo.castleData.code + "_Att_1", gameObject);//활성화
 
             yield return new WaitForSeconds(basicAttackData.start_Delay);
             if (targetInfo && targetInfo.gameObject.layer != 7)

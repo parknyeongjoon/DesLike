@@ -14,6 +14,6 @@ public class SkillData : ScriptableObject
 
     public virtual void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
-
+        extraSkillData.Effect(heroInfo, targetInfo);
     }
 }

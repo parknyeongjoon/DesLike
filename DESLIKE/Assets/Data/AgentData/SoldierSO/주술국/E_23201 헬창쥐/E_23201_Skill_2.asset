@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   code: E_23201_Skill_2
   skill_name: 
-  skillType: 0
+  skillType: 4
   skill_Icon: {fileID: 0}
-  extraSkillData: {fileID: 0}
-  auraTerm: 0
+  extraSkillData: {fileID: 11400000, guid: 044c987abeb5582478130c7dc7b532ab, type: 2}
+  auraTerm: 5

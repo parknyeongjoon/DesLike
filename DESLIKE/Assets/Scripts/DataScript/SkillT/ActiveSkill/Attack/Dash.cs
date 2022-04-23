@@ -7,8 +7,20 @@ public class Dash : GrenadeAttackData
 {
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
+        heroInfo.StartCoroutine(DoDash(heroInfo));
         base.Effect(heroInfo, targetInfo);
-        heroInfo.transform.position += new Vector3(extent, 0);
+    }
+
+    IEnumerator DoDash(HeroInfo heroInfo)
+    {
+        float dashTime = 0.0f;
+        Vector3 dashDes = heroInfo.transform.position + heroInfo.moveDir * extent;
+        while (heroInfo.transform.position != dashDes)
+        {
+            dashTime += Time.deltaTime;
+            heroInfo.transform.position = Vector2.Lerp(heroInfo.transform.position, dashDes, dashTime);//dashTime 대쉬 속도로 나누기
+            yield return new WaitForFixedUpdate();
+        }
     }
 
     protected override HeroInfo[] Get_Targets(HeroInfo heroInfo, HeroInfo targetInfo)
@@ -17,8 +29,7 @@ public class Dash : GrenadeAttackData
         Vector3 skillPos;
         if (targetInfo) { skillPos = targetInfo.transform.position; }
         else { skillPos = MouseManager.Instance.skillPos; }
-        Collider2D[] targetColliders = Physics2D.OverlapAreaAll(skillPos, skillPos + new Vector3(extent, 0), ((int)atkArea * (int)heroInfo.team) ^ ((int)atkArea * 7));
-        Debug.DrawLine(skillPos, skillPos + new Vector3(extent, 0));
+        Collider2D[] targetColliders = Physics2D.OverlapAreaAll(skillPos - new Vector3(0, -2), skillPos + heroInfo.moveDir * extent + new Vector3(0, 2), ((int)atkArea * (int)heroInfo.team) ^ ((int)atkArea * 7));
         if (targetColliders.Length == 0)
         {
             return null;

@@ -17,7 +17,6 @@ public class Attack : ActiveSkill
             cur_cooltime = ((ActiveSkillData)skillData).cooltime;
             StartCoroutine(SkillCooltime());
             skillData.Effect(heroInfo, targetInfo);
-            Debug.Log("유즈 스킬");
             heroInfo.action = Soldier_Action.End_Delay;
             yield return new WaitForSeconds(((ActiveSkillData)skillData).end_Delay);
         }

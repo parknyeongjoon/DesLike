@@ -14,9 +14,6 @@ public class Skill : MonoBehaviour
     {
         heroInfo = GetComponent<HeroInfo>();
         soldierBasic = GetComponent<SoldierBasic>();
-        soldierBasic.skillDetect = Detect;
-        soldierBasic.canSkill = CanSkillCheck;
-        soldierBasic.skillHandler = UseSkill;
     }
 
     public virtual bool CanSkillCheck()

@@ -32,7 +32,6 @@ public class DebuffAura : Skill//공중전 다시 도입되면 trigger if문 다시 만져야함
     {
         while (true)
         {
-            Debug.Log(effectList.Count);
             for (int i = 0; i < effectList.Count; i++)
             {
                 if (effectList[i])

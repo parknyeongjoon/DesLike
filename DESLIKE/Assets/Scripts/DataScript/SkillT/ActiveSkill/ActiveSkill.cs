@@ -10,6 +10,9 @@ public class ActiveSkill : Skill
     protected override void Start()
     {
         base.Start();
+        soldierBasic.skillDetect = Detect;
+        soldierBasic.canSkill = CanSkillCheck;
+        soldierBasic.skillHandler = UseSkill;
         soldierBasic.isSkillActive = IsActive;
         atkArea = (int)heroInfo.team * (int)((ActiveSkillData)skillData).atkArea;
         atkLayer = (int)((ActiveSkillData)skillData).atkArea * 7;

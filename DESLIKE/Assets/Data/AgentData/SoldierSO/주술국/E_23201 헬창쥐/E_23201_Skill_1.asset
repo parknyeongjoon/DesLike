@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03275b98b76528d43b05db2140663763, type: 3}
   m_Name: E_23201_Skill_1
   m_EditorClassIdentifier: 
-  code: 
+  code: E_23201_Skill_1
   skill_name: 
-  skillType: 0
+  skillType: 1
   skill_Icon: {fileID: 0}
   extraSkillData: {fileID: 0}
-  cooltime: 0
-  mp: 0
-  range: 0
-  start_Delay: 0
-  end_Delay: 0
-  atkArea: 0
-  max_Target: 0
-  extent: 0
-  atk_Dmg: 0
+  cooltime: 5
+  mp: 10
+  range: 2
+  start_Delay: 1
+  end_Delay: 1
+  atkArea: 256
+  max_Target: 10
+  extent: 7
+  atk_Dmg: 5

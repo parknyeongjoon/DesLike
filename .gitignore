@@ -60,3 +60,8 @@ sysinfo.txt
 crashlytics-build.properties
 
 .DS_Store
+.wem
+.akd
+.wsetting
+.prof
+.validationcache

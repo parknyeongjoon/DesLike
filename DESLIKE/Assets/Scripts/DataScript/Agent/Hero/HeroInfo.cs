@@ -65,6 +65,7 @@ public class HeroInfo : CastleInfo
             {
                 cur_Mp += (((HeroData)castleData).mp_Re + buff_Stat.mp_Re);
             }
+            healthChangeEvent?.Invoke();
             yield return new WaitForSeconds(1.0f);
         }
     }

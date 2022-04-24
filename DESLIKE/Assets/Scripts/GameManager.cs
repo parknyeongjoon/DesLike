@@ -23,7 +23,7 @@ using UnityEngine.Events;
 * gamePause동안 스킬 못 쓰고 못 움직이게 하기
 * ///atkDetect랑 skillDetect 둘 다 있으면 skillDetect만 사용됨(target 분리해서 해결)
 * CastleInfo랑 HeroInfo, CastleData랑 HeroData 통합하기(아. 아. 아. 언제 함 아.)
-* 캐릭터들 체력바 soldierInfo에 OnDamaged 될 때만 넣어주기, 체젠에도 반영이 돼야 함
+* //캐릭터들 체력바 soldierInfo에 OnDamaged 될 때만 넣어주기, 체젠에도 반영이 돼야 함
 * //도발 기능 만들기(Grenade Debuff로)//보류
 * relic save&load 만들기
 * 죽으면 체마나젠 멈추기, 영웅 조작 막기

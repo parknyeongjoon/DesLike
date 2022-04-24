@@ -2564,7 +2564,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  hitEvent:
+  healthChangeEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8576553565259397100}
@@ -2580,9 +2580,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   cur_Hp: 0
-  eventParam: 
   skeletonAnimation: {fileID: 6994756467532799153}
-  soldierBasic: {fileID: -6394965512445177725}
   state: 0
   action: 0
   team: 2
@@ -2590,8 +2588,9 @@ MonoBehaviour:
   targetInfo: {fileID: 0}
   skillTarget: {fileID: 0}
   skillTargetInfo: {fileID: 0}
-  cur_Mp: 0
   moveDir: {x: 0, y: 0, z: 0}
+  cur_Mp: 0
+  shield: 0
   healWeight: 0
   resurrection: 0
   buff_Stat:

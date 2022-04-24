@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>/Users/joon_0/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/DesLike/DESLIKE/DESLIKE_WwiseProject/</ProjectRoot>
-		<SourceFilesRoot>/Users/joon_0/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/DesLike/DESLIKE/DESLIKE_WwiseProject/.cache/Windows/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/joon_0/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/DesLike/DESLIKE/Assets/StreamingAssets/Audio/</SoundBanksRoot>
+		<ProjectRoot>C:\Users\Administrator\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Administrator\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Administrator\Documents\GitHub\DesLike\DESLIKE\Assets\StreamingAssets\Audio\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/joon_0/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/Documents/GitHub/DesLike/DESLIKE/DESLIKE_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Administrator\Documents\GitHub\DesLike\DESLIKE\DESLIKE_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -26,7 +26,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="650673631">
+		<SoundBank Id="3161908922" Language="SFX" Hash="358044217">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -39,11 +39,11 @@
 					<IncludedMemoryFiles>
 						<File Id="234665702" Language="SFX">
 							<ShortName>23101_Die_Print_01.wav</ShortName>
-							<Path>SFX/23101_Die_Print_01_10C4C929.wem</Path>
+							<Path>SFX\23101_Die_Print_01_10C4C929.wem</Path>
 						</File>
 						<File Id="554435908" Language="SFX">
 							<ShortName>GameOver_Print_01.wav</ShortName>
-							<Path>SFX/GameOver_Print_01_10C4C929.wem</Path>
+							<Path>SFX\GameOver_Print_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -52,11 +52,11 @@
 					<IncludedMemoryFiles>
 						<File Id="108942149" Language="SFX">
 							<ShortName>23101_idle_Print_3_01.wav</ShortName>
-							<Path>SFX/23101_idle_Print_3_01_74CBAC08.wem</Path>
+							<Path>SFX\23101_idle_Print_3_01_74CBAC08.wem</Path>
 						</File>
 						<File Id="797527484" Language="SFX">
 							<ShortName>23101_Skill_1_Print_01.wav</ShortName>
-							<Path>SFX/23101_Skill_1_Print_01_4FDF74D1.wem</Path>
+							<Path>SFX\23101_Skill_1_Print_01_4FDF74D1.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -64,7 +64,7 @@
 					<IncludedMemoryFiles>
 						<File Id="290311062" Language="SFX">
 							<ShortName>23101_Skill_2_Print_01.wav</ShortName>
-							<Path>SFX/23101_Skill_2_Print_01_1D2B368B.wem</Path>
+							<Path>SFX\23101_Skill_2_Print_01_1D2B368B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -82,135 +82,135 @@
 					<IncludedMemoryFiles>
 						<File Id="40268662" Language="SFX">
 							<ShortName>S2_COMBAT_BUILDUP_VIBRAPHONE_95bpm5-8_L7M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_BUILDUP_VIBRAPHONE_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_BUILDUP_VIBRAPHONE_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="43818252" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_A_PERC_95bpm5-8_L16M-P1M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_THEME_A_PERC_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_THEME_A_PERC_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="83213096" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_B_KEYS_95bpm5-8_L16M-P1M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_THEME_B_KEYS_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_THEME_B_KEYS_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="118610959" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_OUTRO_VIBRAPHONE_95bpm5-8_L8M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_THEME_OUTRO_VIBRAPHONE_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_THEME_OUTRO_VIBRAPHONE_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="146142117" Language="SFX">
 							<ShortName>WavConv\Music_Map_TTS.wav</ShortName>
-							<Path>SFX/WavConv/Music_Map_TTS_D79FB2B7.wem</Path>
+							<Path>SFX\WavConv\Music_Map_TTS_D79FB2B7.wem</Path>
 						</File>
 						<File Id="267186529" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_A_STRINGS_95bpm5-8_L16M-P1M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_THEME_A_STRINGS_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_THEME_A_STRINGS_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="315124391" Language="SFX">
 							<ShortName>S2_COMBAT_BUILDUP_PERC_95bpm5-8_L7M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_BUILDUP_PERC_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_BUILDUP_PERC_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="362428066" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_B_PERC_95bpm5-8_L16M-P1M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_THEME_B_PERC_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_THEME_B_PERC_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="410556276" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_A_VIBRAPHONE_95bpm5-8_L16M-P1M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_THEME_A_VIBRAPHONE_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_THEME_A_VIBRAPHONE_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="420784143" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_OUTRO_PERC_95bpm5-8_L8M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_THEME_OUTRO_PERC_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_THEME_OUTRO_PERC_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="462869691" Language="SFX">
 							<ShortName>S2_COMBAT_BUILDUP2_KEYS_95bpm5-8_L7M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_BUILDUP2_KEYS_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_BUILDUP2_KEYS_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="485640620" Language="SFX">
 							<ShortName>S2_COMBAT_BRIDGE_CHOIR_95bpm5-8_L8M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_BRIDGE_CHOIR_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_BRIDGE_CHOIR_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="515244309" Language="SFX">
 							<ShortName>WavConv\Music_Main_TTS-01.wav</ShortName>
-							<Path>SFX/WavConv/Music_Main_TTS-01_D79FB2B7.wem</Path>
+							<Path>SFX\WavConv\Music_Main_TTS-01_D79FB2B7.wem</Path>
 						</File>
 						<File Id="515463694" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_B_WOODWINDS_95bpm5-8_L16M-P1M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_THEME_B_WOODWINDS_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_THEME_B_WOODWINDS_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="541766062" Language="SFX">
 							<ShortName>S2_COMBAT_RHYTHM__PERC_95bpm5-8_L8M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_RHYTHM__PERC_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_RHYTHM__PERC_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="547736093" Language="SFX">
 							<ShortName>S2_COMBAT_RHYTHM__KEYS_95bpm5-8_L8M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_RHYTHM__KEYS_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_RHYTHM__KEYS_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="586464007" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_OUTRO_CHOIR_95bpm5-8_L8M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_THEME_OUTRO_CHOIR_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_THEME_OUTRO_CHOIR_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="645989943" Language="SFX">
 							<ShortName>S2_COMBAT_BUILDUP2_VIBRAPHONE_95bpm5-8_L7M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_BUILDUP2_VIBRAPHONE_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_BUILDUP2_VIBRAPHONE_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="649106687" Language="SFX">
 							<ShortName>S2_COMBAT_BRIDGE_VIBRAPHONE_95bpm5-8_L8M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_BRIDGE_VIBRAPHONE_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_BRIDGE_VIBRAPHONE_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="700465363" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_B_STRINGS_95bpm5-8_L16M-P1M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_THEME_B_STRINGS_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_THEME_B_STRINGS_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="710092501" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_B_VIBRAPHONE_95bpm5-8_L16M-P1M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_THEME_B_VIBRAPHONE_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_THEME_B_VIBRAPHONE_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="713194583" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_OUTRO_WOODWINDS_95bpm5-8_L8M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_THEME_OUTRO_WOODWINDS_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_THEME_OUTRO_WOODWINDS_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="736926230" Language="SFX">
 							<ShortName>S2_COMBAT_RHYTHM2_STRINGS_95bpm5-8_L8M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_RHYTHM2_STRINGS_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_RHYTHM2_STRINGS_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="747821742" Language="SFX">
 							<ShortName>S2_COMBAT_BUILDUP2_PERC_95bpm5-8_L7M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_BUILDUP2_PERC_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_BUILDUP2_PERC_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="809440444" Language="SFX">
 							<ShortName>S2_COMBAT_RHYTHM2_Vibraphone_95bpm5-8_L8M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_RHYTHM2_Vibraphone_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_RHYTHM2_Vibraphone_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="817597221" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_A_KEYS_95bpm5-8_L16M-P1M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_THEME_A_KEYS_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_THEME_A_KEYS_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="846418600" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_OUTRO_KEYS_95bpm5-8_L8M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_THEME_OUTRO_KEYS_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_THEME_OUTRO_KEYS_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="922325130" Language="SFX">
 							<ShortName>S2_COMBAT_BUILDUP_STRINGS_95bpm5-8_L7M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_BUILDUP_STRINGS_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_BUILDUP_STRINGS_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="942330877" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_A_WOODWINDS_95bpm5-8_L16M-P1M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_THEME_A_WOODWINDS_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_THEME_A_WOODWINDS_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="969646254" Language="SFX">
 							<ShortName>S2_COMBAT_RHYTHM2_PERC_95bpm5-8_L8M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_RHYTHM2_PERC_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_RHYTHM2_PERC_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="980647092" Language="SFX">
 							<ShortName>S2_COMBAT_BUILDUP_CHOIR_95bpm5-8_L7M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_BUILDUP_CHOIR_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_BUILDUP_CHOIR_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="1008550453" Language="SFX">
 							<ShortName>S2_COMBAT_BRIDGE_PERC_95bpm5-8_L8M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_BRIDGE_PERC_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_BRIDGE_PERC_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="1060938409" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_OUTRO_STRINGS_95bpm5-8_L8M-P0M.wav</ShortName>
-							<Path>SFX/S2_COMBAT_THEME_OUTRO_STRINGS_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+							<Path>SFX\S2_COMBAT_THEME_OUTRO_STRINGS_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
@@ -268,15 +268,15 @@
 					<IncludedMemoryFiles>
 						<File Id="453919233" Language="SFX">
 							<ShortName>12202_Atk_1_Print_01.wav</ShortName>
-							<Path>SFX/12202_Atk_1_Print_01_45B5A7D8.wem</Path>
+							<Path>SFX\12202_Atk_1_Print_01_45B5A7D8.wem</Path>
 						</File>
 						<File Id="643813455" Language="SFX">
 							<ShortName>12202_Atk_1_Print_01.wav</ShortName>
-							<Path>SFX/12202_Atk_1_Print_01_AE6FD2E3.wem</Path>
+							<Path>SFX\12202_Atk_1_Print_01_AE6FD2E3.wem</Path>
 						</File>
 						<File Id="770202027" Language="SFX">
 							<ShortName>12202_Atk_1_Print_01.wav</ShortName>
-							<Path>SFX/12202_Atk_1_Print_01_14A0B0B2.wem</Path>
+							<Path>SFX\12202_Atk_1_Print_01_14A0B0B2.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -284,15 +284,15 @@
 					<IncludedMemoryFiles>
 						<File Id="586797166" Language="SFX">
 							<ShortName>Test_Idle_1_Print_01.wav</ShortName>
-							<Path>SFX/Test_Idle_1_Print_01_10C4C929.wem</Path>
+							<Path>SFX\Test_Idle_1_Print_01_10C4C929.wem</Path>
 						</File>
 						<File Id="796178526" Language="SFX">
 							<ShortName>Test_Idle_2_Print_01.wav</ShortName>
-							<Path>SFX/Test_Idle_2_Print_01_10C4C929.wem</Path>
+							<Path>SFX\Test_Idle_2_Print_01_10C4C929.wem</Path>
 						</File>
 						<File Id="968516569" Language="SFX">
 							<ShortName>Test_Idle_3_Print_01.wav</ShortName>
-							<Path>SFX/Test_Idle_3_Print_01_10C4C929.wem</Path>
+							<Path>SFX\Test_Idle_3_Print_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -300,7 +300,7 @@
 					<IncludedMemoryFiles>
 						<File Id="460822715" Language="SFX">
 							<ShortName>12202_Skill_1_Print_01.wav</ShortName>
-							<Path>SFX/12202_Skill_1_Print_01_10C4C929.wem</Path>
+							<Path>SFX\12202_Skill_1_Print_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -308,7 +308,7 @@
 					<IncludedMemoryFiles>
 						<File Id="572501093" Language="SFX">
 							<ShortName>12301_Atk_1_Print_01.wav</ShortName>
-							<Path>SFX/12301_Atk_1_Print_01_10C4C929.wem</Path>
+							<Path>SFX\12301_Atk_1_Print_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -316,15 +316,15 @@
 					<IncludedMemoryFiles>
 						<File Id="586797166" Language="SFX">
 							<ShortName>Test_Idle_1_Print_01.wav</ShortName>
-							<Path>SFX/Test_Idle_1_Print_01_10C4C929.wem</Path>
+							<Path>SFX\Test_Idle_1_Print_01_10C4C929.wem</Path>
 						</File>
 						<File Id="796178526" Language="SFX">
 							<ShortName>Test_Idle_2_Print_01.wav</ShortName>
-							<Path>SFX/Test_Idle_2_Print_01_10C4C929.wem</Path>
+							<Path>SFX\Test_Idle_2_Print_01_10C4C929.wem</Path>
 						</File>
 						<File Id="968516569" Language="SFX">
 							<ShortName>Test_Idle_3_Print_01.wav</ShortName>
-							<Path>SFX/Test_Idle_3_Print_01_10C4C929.wem</Path>
+							<Path>SFX\Test_Idle_3_Print_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -332,15 +332,15 @@
 					<IncludedMemoryFiles>
 						<File Id="442996702" Language="SFX">
 							<ShortName>12302_Atk_1_Print_01.wav</ShortName>
-							<Path>SFX/12302_Atk_1_Print_01_2BBD420E.wem</Path>
+							<Path>SFX\12302_Atk_1_Print_01_2BBD420E.wem</Path>
 						</File>
 						<File Id="908949220" Language="SFX">
 							<ShortName>12302_Atk_1_Print_01.wav</ShortName>
-							<Path>SFX/12302_Atk_1_Print_01_D3FAF3C4.wem</Path>
+							<Path>SFX\12302_Atk_1_Print_01_D3FAF3C4.wem</Path>
 						</File>
 						<File Id="1066272607" Language="SFX">
 							<ShortName>12302_Atk_1_Print_01.wav</ShortName>
-							<Path>SFX/12302_Atk_1_Print_01_4724A816.wem</Path>
+							<Path>SFX\12302_Atk_1_Print_01_4724A816.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -348,15 +348,15 @@
 					<IncludedMemoryFiles>
 						<File Id="586797166" Language="SFX">
 							<ShortName>Test_Idle_1_Print_01.wav</ShortName>
-							<Path>SFX/Test_Idle_1_Print_01_10C4C929.wem</Path>
+							<Path>SFX\Test_Idle_1_Print_01_10C4C929.wem</Path>
 						</File>
 						<File Id="796178526" Language="SFX">
 							<ShortName>Test_Idle_2_Print_01.wav</ShortName>
-							<Path>SFX/Test_Idle_2_Print_01_10C4C929.wem</Path>
+							<Path>SFX\Test_Idle_2_Print_01_10C4C929.wem</Path>
 						</File>
 						<File Id="968516569" Language="SFX">
 							<ShortName>Test_Idle_3_Print_01.wav</ShortName>
-							<Path>SFX/Test_Idle_3_Print_01_10C4C929.wem</Path>
+							<Path>SFX\Test_Idle_3_Print_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -364,15 +364,15 @@
 					<IncludedMemoryFiles>
 						<File Id="586797166" Language="SFX">
 							<ShortName>Test_Idle_1_Print_01.wav</ShortName>
-							<Path>SFX/Test_Idle_1_Print_01_10C4C929.wem</Path>
+							<Path>SFX\Test_Idle_1_Print_01_10C4C929.wem</Path>
 						</File>
 						<File Id="796178526" Language="SFX">
 							<ShortName>Test_Idle_2_Print_01.wav</ShortName>
-							<Path>SFX/Test_Idle_2_Print_01_10C4C929.wem</Path>
+							<Path>SFX\Test_Idle_2_Print_01_10C4C929.wem</Path>
 						</File>
 						<File Id="968516569" Language="SFX">
 							<ShortName>Test_Idle_3_Print_01.wav</ShortName>
-							<Path>SFX/Test_Idle_3_Print_01_10C4C929.wem</Path>
+							<Path>SFX\Test_Idle_3_Print_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -380,7 +380,7 @@
 					<IncludedMemoryFiles>
 						<File Id="116424717" Language="SFX">
 							<ShortName>12305_Skill_1_Print_01.wav</ShortName>
-							<Path>SFX/12305_Skill_1_Print_01_A4F9E110.wem</Path>
+							<Path>SFX\12305_Skill_1_Print_01_A4F9E110.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -388,7 +388,7 @@
 					<IncludedMemoryFiles>
 						<File Id="563299050" Language="SFX">
 							<ShortName>kangaroo test\T_23101_Atk_1_Print_01.wav</ShortName>
-							<Path>SFX/kangaroo test/T_23101_Atk_1_Print_01_3718A6F2.wem</Path>
+							<Path>SFX\kangaroo test\T_23101_Atk_1_Print_01_3718A6F2.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -396,7 +396,7 @@
 					<IncludedMemoryFiles>
 						<File Id="234665702" Language="SFX">
 							<ShortName>23101_Die_Print_01.wav</ShortName>
-							<Path>SFX/23101_Die_Print_01_10C4C929.wem</Path>
+							<Path>SFX\23101_Die_Print_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -404,15 +404,15 @@
 					<IncludedMemoryFiles>
 						<File Id="412747251" Language="SFX">
 							<ShortName>23101_idle_Print_4_01.wav</ShortName>
-							<Path>SFX/23101_idle_Print_4_01_F900907E.wem</Path>
+							<Path>SFX\23101_idle_Print_4_01_F900907E.wem</Path>
 						</File>
 						<File Id="620869353" Language="SFX">
 							<ShortName>23101_idle_Print_1_01.wav</ShortName>
-							<Path>SFX/23101_idle_Print_1_01_B71A5DBB.wem</Path>
+							<Path>SFX\23101_idle_Print_1_01_B71A5DBB.wem</Path>
 						</File>
 						<File Id="742762331" Language="SFX">
 							<ShortName>23101_idle_Print_2_01.wav</ShortName>
-							<Path>SFX/23101_idle_Print_2_01_32C92A54.wem</Path>
+							<Path>SFX\23101_idle_Print_2_01_32C92A54.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -420,7 +420,7 @@
 					<IncludedMemoryFiles>
 						<File Id="797527484" Language="SFX">
 							<ShortName>23101_Skill_1_Print_01.wav</ShortName>
-							<Path>SFX/23101_Skill_1_Print_01_4FDF74D1.wem</Path>
+							<Path>SFX\23101_Skill_1_Print_01_4FDF74D1.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

@@ -67,9 +67,6 @@ DESLIKE/Assets/StreamingAssets/Audio/main.bnk.meta
 DESLIKE/Assets/StreamingAssets/Audio/main.txt
 DESLIKE/Assets/StreamingAssets/Audio/main.txt.meta
 *.wem
-*.wsettings
-*.wsettings
-DESLIKE/DESLIKE_WwiseProject/DESLIKE_WwiseProject.crossover.wsettings
 *.akd
 *.wsettings
-DESLIKE/DESLIKE_WwiseProject/DESLIKE_WwiseProject.crossover.wsettings
+*.validationcache

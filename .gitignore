@@ -59,6 +59,7 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+.bnk
 .DS_Store
 .wem
 .akd

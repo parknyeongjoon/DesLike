@@ -7,18 +7,15 @@ State	ID	Name	State Group			Notes
 	1500973332	X1	Game_Speed			
 	1500973333	X0	Game_Speed			
 	1500973335	X2	Game_Speed			
+	382373357	Music_S2_Normal_Battle	Music_State			
 	748895195	None	Music_State			
-	1048449605	Map	Music_State			
-	1273876958	Base_Camp	Music_State			
-	1393967555	Boss_P2	Music_State			
-	2706291346	Battle_Start	Music_State			
-	3161908922	Main	Music_State			
+	1615767906	Music_Main	Music_State			
+	3017247325	Music_Map	Music_State			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	208977400	TN_Bus			\Default Work Unit\Master Audio Bus\Character Bus\TNE\TN_Bus	
 	986497999	TE_Bus			\Default Work Unit\Master Audio Bus\Character Bus\TNE\TE_Bus	
 	1097649576	TNE			\Default Work Unit\Master Audio Bus\Character Bus\TNE	
-	1962540672	H_Bus			\Default Work Unit\Master Audio Bus\Character Bus\H_Bus	
 	2026837964	Character Bus			\Default Work Unit\Master Audio Bus\Character Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	

@@ -12,7 +12,7 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Main" ID="{AF2EF22E-FFE3-4885-A2C7-5130DEFCD514}"/>
+						<CurrentStateRef Name="Music_Main" ID="{AF2EF22E-FFE3-4885-A2C7-5130DEFCD514}"/>
 						<CurrentStateRef Name="None" ID="{B9FFA1F4-7C44-42A8-B90E-8CAD8E38CFA7}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
@@ -32,17 +32,13 @@
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Music_S1_Boss_P2" ID="{F8AB59BB-CC76-4051-A98F-A64F3E793B53}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}"/>
-							<Position X="1" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Music_S1_Base_Camp" ID="{8FC8DA82-588D-455D-B2C1-B291DD534940}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}"/>
+							<ObjectRef Name="Music_S2_Normal_Battle" ID="{8FC8DA82-588D-455D-B2C1-B291DD534940}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Map" ID="{BB573B8F-26A6-4FD5-A568-0E75CD545CBC}"/>
+						<CurrentStateRef Name="Music_S2_Normal_Battle" ID="{459B1E63-D3CB-4F7A-8DA0-29680E28E5C4}"/>
 						<CurrentStateRef Name="None" ID="{B9FFA1F4-7C44-42A8-B90E-8CAD8E38CFA7}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>

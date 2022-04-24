@@ -62,3 +62,12 @@ crashlytics-build.properties
 .DS_Store
 DESLIKE/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
 DESLIKE/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
+DESLIKE/Assets/StreamingAssets/Audio/main.bnk
+DESLIKE/Assets/StreamingAssets/Audio/main.bnk.meta
+DESLIKE/Assets/StreamingAssets/Audio/main.txt
+DESLIKE/Assets/StreamingAssets/Audio/main.txt.meta
+*.wem
+*.wsettings
+*.wsettings
+DESLIKE/DESLIKE_WwiseProject/DESLIKE_WwiseProject.crossover.wsettings
+*.akd

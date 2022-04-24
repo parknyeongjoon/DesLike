@@ -5,11 +5,10 @@
 			<ChildrenList>
 				<SoundBank Name="main" ID="{FB569861-3BBA-4E8A-81EF-C0E9B7C68D55}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Music_S1_Boss_P2" ID="{F8AB59BB-CC76-4051-A98F-A64F3E793B53}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="T_12202_Atk_1" ID="{CB208E89-9C48-407C-A8A0-EA4576626D11}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music_Map" ID="{DD14FC31-A992-407E-8A3C-1BCA3CBB907A}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Game_Speed_Pause" ID="{D0F92340-3C3D-4203-B32C-007AB838B295}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Music_S1_Base_Camp" ID="{8FC8DA82-588D-455D-B2C1-B291DD534940}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music_S2_Normal_Battle" ID="{8FC8DA82-588D-455D-B2C1-B291DD534940}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Game_Speed_Resume" ID="{EBB35427-A7BF-45B6-B86C-8AECAD48252D}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="H_23101_Skill_2" ID="{3907E37E-F8D4-466B-8177-FE039240D740}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="T_23101_Atk_1" ID="{52567996-B9A5-46F8-8856-4E7456054A10}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>

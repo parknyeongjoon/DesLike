@@ -36,7 +36,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="H_Bus" ID="{5ED5E7C1-5ED7-49FF-B2A4-44BE46255ADE}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+									<ObjectRef Name="Character Bus" ID="{3967C2B0-6B26-475E-BC1B-4C04ED87872C}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -75,7 +75,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="H_Bus" ID="{5ED5E7C1-5ED7-49FF-B2A4-44BE46255ADE}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+									<ObjectRef Name="Character Bus" ID="{3967C2B0-6B26-475E-BC1B-4C04ED87872C}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -115,7 +115,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="H_Bus" ID="{5ED5E7C1-5ED7-49FF-B2A4-44BE46255ADE}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+									<ObjectRef Name="Character Bus" ID="{3967C2B0-6B26-475E-BC1B-4C04ED87872C}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -151,7 +151,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="H_Bus" ID="{5ED5E7C1-5ED7-49FF-B2A4-44BE46255ADE}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+									<ObjectRef Name="Character Bus" ID="{3967C2B0-6B26-475E-BC1B-4C04ED87872C}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -268,50 +268,6 @@
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="23101_idle_Print_3_01" ID="{4ABFA898-80D5-464A-B837-ACA39B8B342E}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</Folder>
-				<Folder Name="Music" ID="{2A063AA7-F550-4343-AD87-840A3FCB16A3}" ShortID="56754015">
-					<ChildrenList>
-						<Sound Name="Escaping the Ruins W" ID="{2D2EA309-68E5-4C44-B320-80D3365AE11C}" ShortID="186317680">
-							<PropertyList>
-								<Property Name="Priority" Type="int16">
-									<ValueList>
-										<Value>100</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-24</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Music" ID="{F673E0B0-BCFD-4899-872F-8AA1EF6E7D27}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Escaping the Ruins W" ID="{2EFA791D-7E6D-4C4C-A948-68ECBBDA7F23}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="5.30643274853801"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="33.2672514619883"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Escaping the Ruins W.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="62381386"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="Escaping the Ruins W" ID="{2EFA791D-7E6D-4C4C-A948-68ECBBDA7F23}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

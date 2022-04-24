@@ -15,36 +15,13 @@
 					<ChildrenList>
 						<Bus Name="Character Bus" ID="{3967C2B0-6B26-475E-BC1B-4C04ED87872C}">
 							<ChildrenList>
-								<Bus Name="H_Bus" ID="{5ED5E7C1-5ED7-49FF-B2A4-44BE46255ADE}">
-									<PropertyList>
-										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
-										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
-										<Property Name="MaxSoundPerInstance" Type="int16">
-											<ValueList>
-												<Value>3</Value>
-											</ValueList>
-										</Property>
-										<Property Name="UseMaxSoundPerInstance" Type="bool">
-											<ValueList>
-												<Value>True</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ObjectLists/>
-									<DuckingList>
-										<DuckItem>
-											<BusRef Name="TNE" ID="{E4C08831-5423-4812-ADC9-1C83042BDA0C}"/>
-											<DuckingParam>
-												<Volume>-2</Volume>
-												<FadeInTime>0.5</FadeInTime>
-												<FadeOutTime>0.5</FadeOutTime>
-												<FadeCurve>FadeLinear</FadeCurve>
-											</DuckingParam>
-										</DuckItem>
-									</DuckingList>
-								</Bus>
 								<Bus Name="TNE" ID="{E4C08831-5423-4812-ADC9-1C83042BDA0C}">
 									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>-96</Value>
+											</ValueList>
+										</Property>
 										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
 										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 										<Property Name="MaxSoundPerInstance" Type="int16">

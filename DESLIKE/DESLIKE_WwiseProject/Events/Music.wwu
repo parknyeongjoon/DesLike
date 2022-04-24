@@ -11,14 +11,14 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="TestSC" ID="{65AF8A77-C6D0-484A-9C7C-688ED9FEA841}" WorkUnitID="{0B4C7F08-A208-4C5C-B93D-5F77EAF1FE2D}"/>
+									<ObjectRef Name="DesLikeMusic" ID="{1ADE9D41-828D-4AEE-AF6C-1EC88AEE1F1A}" WorkUnitID="{0B4C7F08-A208-4C5C-B93D-5F77EAF1FE2D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{130ACE32-EC5B-4EF9-829D-2AA807FFD12A}" ShortID="161517271">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="TestSC" ID="{65AF8A77-C6D0-484A-9C7C-688ED9FEA841}" WorkUnitID="{0B4C7F08-A208-4C5C-B93D-5F77EAF1FE2D}"/>
+									<ObjectRef Name="DesLikeMusic" ID="{1ADE9D41-828D-4AEE-AF6C-1EC88AEE1F1A}" WorkUnitID="{0B4C7F08-A208-4C5C-B93D-5F77EAF1FE2D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -28,7 +28,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Main" ID="{AF2EF22E-FFE3-4885-A2C7-5130DEFCD514}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
+									<ObjectRef Name="Music_Main" ID="{AF2EF22E-FFE3-4885-A2C7-5130DEFCD514}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -42,13 +42,13 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Map" ID="{BB573B8F-26A6-4FD5-A568-0E75CD545CBC}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
+									<ObjectRef Name="Music_Map" ID="{BB573B8F-26A6-4FD5-A568-0E75CD545CBC}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Music_S1_Base_Camp" ID="{8FC8DA82-588D-455D-B2C1-B291DD534940}">
+				<Event Name="Music_S2_Normal_Battle" ID="{8FC8DA82-588D-455D-B2C1-B291DD534940}">
 					<ChildrenList>
 						<Action Name="" ID="{1764D479-66EB-4DBB-9E63-680C2BD5D759}" ShortID="456075287">
 							<PropertyList>
@@ -56,21 +56,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Base_Camp" ID="{72D63A16-DB87-464C-BC08-9C3F46B6DA38}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Music_S1_Boss_P2" ID="{F8AB59BB-CC76-4051-A98F-A64F3E793B53}">
-					<ChildrenList>
-						<Action Name="" ID="{E1421636-3D08-4237-B793-B70595BCDF29}" ShortID="113042449">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="22"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Boss_P2" ID="{969C96E3-A83D-40DD-A2AA-5ABF7846FBD3}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
+									<ObjectRef Name="Music_S2_Normal_Battle" ID="{459B1E63-D3CB-4F7A-8DA0-29680E28E5C4}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

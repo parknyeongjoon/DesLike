@@ -5,17 +5,6 @@
 			<ChildrenList>
 				<Event Name="H_23101_Die" ID="{6DFDF849-465A-4E90-B3F2-65878C467EA7}">
 					<ChildrenList>
-						<Action Name="" ID="{7C2DBFAA-D6F3-4F6F-89AD-549817FBF3DE}" ShortID="870113499">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Escaping the Ruins W" ID="{2D2EA309-68E5-4C44-B320-80D3365AE11C}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{FA6080E7-50D6-4B21-93DD-7A51A3127946}" ShortID="466168267">
 							<ReferenceList>
 								<Reference Name="Target">
@@ -78,20 +67,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Battle_Start" ID="{B85E8104-17E7-4C9D-8087-438DF374E492}">
-					<ChildrenList>
-						<Action Name="" ID="{89D6331C-D47F-45D3-B923-A126C31EA4B3}" ShortID="453803723">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="22"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Battle_Start" ID="{AF2E8545-B115-44E8-9294-610046694FCF}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				<Event Name="Battle_Start" ID="{B85E8104-17E7-4C9D-8087-438DF374E492}"/>
 				<Event Name="Battle_End" ID="{04CEBDD4-10E3-49F1-BB87-327E717A33EE}">
 					<ChildrenList>
 						<Action Name="" ID="{7EFBE4C9-9ABB-4DE9-B155-9DA8CCA8FD39}" ShortID="746081918">

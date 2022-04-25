@@ -28,15 +28,62 @@ public class HeroInfo : CastleInfo
     public Dictionary<string, List<Coroutine>> buffCoroutine = new Dictionary<string, List<Coroutine>>();
     public Dictionary<string, List<Coroutine>> debuffCoroutine = new Dictionary<string, List<Coroutine>>();
 
-    void Start()
+    protected virtual IEnumerator Start()
     {
         SaveManager saveManager = SaveManager.Instance;
         healWeight = 0;
         cur_Hp = saveManager.gameData.heroSaveData.cur_Hp;
         cur_Mp = saveManager.gameData.heroSaveData.cur_Mp;
         resurrection = saveManager.gameData.heroSaveData.resurrection;
-        StartCoroutine(Hp_Mp_Re());
         allyPortDatas.spawnSoldierList.Add(this);
+        hitEvent += healthChangeEvent.Invoke;
+        yield return new WaitUntil(() => BattleUIManager.Instance.battleStart);//배틀 스타트 될 때까지 기다리기
+        StartCoroutine(Hp_Mp_Re());
+    }
+
+    public void OnDamaged(HeroInfo atkHeroInfo, float damage)//피격 이벤트 일어남
+    {
+        if (atkHeroInfo) { hitEvent?.Invoke(atkHeroInfo); }//atkHeroInfo가 null이 아니라면 피격 이벤트 발동
+        cur_Hp -= (damage - castleData.def);//버프 스탯 넣기, 수식 설정하기
+        if (castleData.blood != null)
+        {
+            StartCoroutine(Bleeding());
+        }
+        if (cur_Hp <= 0)
+        {
+            Debug.Log("사망");
+            Die();
+        }
+        healWeight += 1;//수식 만들기
+    }
+
+    public void OnDamaged(float damage)//피격 이벤트가 안 일어남
+    {
+        cur_Hp -= (damage - castleData.def);//버프 스탯 넣기, 수식 설정하기
+        if (castleData.blood != null)
+        {
+            StartCoroutine(Bleeding());
+        }
+        if (cur_Hp <= 0)
+        {
+            Debug.Log("사망");
+            Die();
+        }
+        healWeight += 1;//수식 만들기
+    }
+
+    public virtual void OnHealed(float heal)
+    {
+        if (cur_Hp + heal >= castleData.hp)
+        {
+            cur_Hp = castleData.hp;
+        }
+        else
+        {
+            cur_Hp += heal;
+        }
+        healWeight -= 1;//수식 만들기
+        healthChangeEvent.Invoke(null);
     }
 
     public void Stun(float stunTime)
@@ -65,7 +112,7 @@ public class HeroInfo : CastleInfo
             {
                 cur_Mp += (((HeroData)castleData).mp_Re + buff_Stat.mp_Re);
             }
-            healthChangeEvent?.Invoke();
+            healthChangeEvent?.Invoke(null);
             yield return new WaitForSeconds(1.0f);
         }
     }
@@ -98,15 +145,12 @@ public class HeroInfo : CastleInfo
         return target;
     }
 
-    public override void OnDamaged(float damage)
+    //피격 유혈 효과 지우기
+    IEnumerator Bleeding()
     {
-        base.OnDamaged(damage);
-        healWeight += 1;//계산식 만들어서 변경
-    }
-
-    public override void OnHealed(float heal)
-    {
-        base.OnHealed(heal);
-        healWeight -= 1;//계산식 만들어서 변경
+        GameObject createBlood;
+        createBlood = Instantiate(castleData.blood, transform);
+        yield return new WaitForSeconds(0.8f);
+        Destroy(createBlood);
     }
 }

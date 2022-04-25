@@ -707,22 +707,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7241036854031705836}
   m_PrefabAsset: {fileID: 0}
---- !u!58 &8876999261884903641
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3336943397944625370}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 5
 --- !u!114 &481668317026623442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -739,7 +723,7 @@ MonoBehaviour:
   atkArea: 0
   atkLayer: 0
   atkCount: 0
---- !u!114 &6332007427254974644
+--- !u!114 &5322901442188727855
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -748,23 +732,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3336943397944625370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74c89014b4975f448b068fcb4174dcb4, type: 3}
+  m_Script: {fileID: 11500000, guid: a4b9162f8d69c0a439e9f9ccdef5ba06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillData: {fileID: 11400000, guid: 8bbe6c8824bdbd04b92dcd7890e2b122, type: 2}
-  cur_cooltime: 0
-  atkArea: 0
-  atkLayer: 0
---- !u!114 &8010895481119427854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3336943397944625370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e83e77a24e941e4bb6725a9023175da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillData: {fileID: 11400000, guid: 97e9b806865f2d44db98635704af7066, type: 2}
+  skillData: {fileID: 11400000, guid: a920bdecf22c07f4db7b8ab8ed5b9899, type: 2}

@@ -6,9 +6,9 @@ public class Buff : ActiveSkill//우선 버프 대상 정할 방법 구하기(portDatas에서 a
 {
     List<HeroInfo> soldierList;
 
-    protected override void Start()
+    protected override void Awake()
     {
-        base.Start();
+        base.Awake();
         soldierList = heroInfo.allyPortDatas.spawnSoldierList;
     }
 

@@ -16,7 +16,7 @@ public class GrenadeAttackData : ActiveSkillData
         {
             for (int i = 0; i < targetInfos.Length; i++)
             {
-                targetInfos[i].OnDamaged(atk_Dmg);
+                targetInfos[i].OnDamaged(heroInfo, atk_Dmg);
             }
         }
     }

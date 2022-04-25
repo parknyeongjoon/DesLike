@@ -10,7 +10,7 @@ public class Skill : MonoBehaviour
 
     public SkillData skillData;
 
-    protected virtual void Start()
+    protected virtual void Awake()
     {
         heroInfo = GetComponent<HeroInfo>();
         soldierBasic = GetComponent<SoldierBasic>();

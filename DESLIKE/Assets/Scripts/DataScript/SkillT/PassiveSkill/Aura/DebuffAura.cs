@@ -6,9 +6,9 @@ public class DebuffAura : Skill//공중전 다시 도입되면 trigger if문 다시 만져야함
 {
     List<HeroInfo> effectList = new List<HeroInfo>();
 
-    protected override void Start()
+    protected override void Awake()
     {
-        base.Start();
+        base.Awake();
         StartCoroutine(UseSkill(null));
     }
 
@@ -30,6 +30,7 @@ public class DebuffAura : Skill//공중전 다시 도입되면 trigger if문 다시 만져야함
 
     public override IEnumerator UseSkill(HeroInfo targetInfo)
     {
+        yield return new WaitUntil(() => BattleUIManager.Instance.battleStart);
         while (true)
         {
             for (int i = 0; i < effectList.Count; i++)

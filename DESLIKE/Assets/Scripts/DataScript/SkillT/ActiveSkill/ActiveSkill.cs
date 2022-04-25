@@ -7,9 +7,9 @@ public class ActiveSkill : Skill
     public float cur_cooltime;
     public int atkArea, atkLayer;
 
-    protected override void Start()
+    protected override void Awake()
     {
-        base.Start();
+        base.Awake();
         soldierBasic.skillDetect = Detect;
         soldierBasic.canSkill = CanSkillCheck;
         soldierBasic.skillHandler = UseSkill;

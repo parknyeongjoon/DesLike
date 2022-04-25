@@ -28,7 +28,7 @@ public class BasicSingleRangeAttackData : BasicAttackData
         }
         if (castleInfo) 
         {
-            castleInfo.OnDamaged(atk_Dmg);
+            castleInfo.OnDamaged(heroInfo, atk_Dmg);
             extraSkillData?.Effect(heroInfo, targetInfo);
         }
         Destroy(createArrow);

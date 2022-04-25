@@ -8,6 +8,6 @@ public class SingleAttackData : ActiveSkillData
 
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)//이런 식으로 효과는 밖으로 빼기
     {
-        targetInfo.OnDamaged(atk_Dmg);
+        targetInfo.OnDamaged(heroInfo, atk_Dmg);
     }
 }

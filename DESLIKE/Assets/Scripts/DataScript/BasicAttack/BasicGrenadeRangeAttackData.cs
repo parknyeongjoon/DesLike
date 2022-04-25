@@ -32,7 +32,7 @@ public class BasicGrenadeRangeAttackData : BasicGrenadeAttackData
             targetInfos = Get_Targets(heroInfo, targetInfo);
             for (int i = 0; i < targetInfos.Count; i++)
             {
-                targetInfos[i].OnDamaged(atk_Dmg);
+                targetInfos[i].OnDamaged(heroInfo, atk_Dmg);
                 extraSkillData?.Effect(heroInfo, targetInfo);
             }
         }

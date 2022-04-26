@@ -32,6 +32,7 @@ public class HeroInfo : CastleInfo
 
     protected virtual IEnumerator Start()
     {
+        Debug.Log("영웅");
         SaveManager saveManager = SaveManager.Instance;
         healWeight = 0;
         cur_Hp = saveManager.gameData.heroSaveData.cur_Hp;

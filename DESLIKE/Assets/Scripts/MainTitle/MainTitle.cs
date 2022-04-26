@@ -70,11 +70,48 @@ public class MainTitle : MonoBehaviour
     {
         SceneManager.LoadScene("BaseCamp");
     }
+    //이 밑으로 지우기
+    [SerializeField] PortDatas allyPortDatas, enemyPortDatas;
+    [SerializeField] PortsOption allyOption, enemyOption, sandbagOption;
+    [SerializeField] GameObject heroPrefab;
 
-    public void Test()//지우기
+    public void TestSH()
     {
-        SceneManager.LoadScene("Test");
+        SaveManager.Instance.heroPrefab = heroPrefab;
+        saveManager.gameData.heroSaveData.cur_Hp = 100;
+        saveManager.gameData.heroSaveData.cur_Mp = 100;
+        Set_PortsOption(allyOption, allyPortDatas);
+        Set_PortsOption(enemyOption, enemyPortDatas);
+        SceneManager.LoadScene("Battle Field");
     }
 
+    public void TestJY()
+    {
+        SaveManager.Instance.heroPrefab = heroPrefab;
+        saveManager.gameData.heroSaveData.cur_Hp = 100;
+        saveManager.gameData.heroSaveData.cur_Mp = 100;
+        Set_PortsOption(allyOption, allyPortDatas);
+        Set_PortsOption(sandbagOption, enemyPortDatas);
+        SceneManager.LoadScene("Battle Field");
+    }
 
+    void Set_PortsOption(PortsOption portsOption, PortDatas portDatas)
+    {
+        List<Option> option = portsOption.soldierOption;
+        for (int i = 0; i < portDatas.portDatas.Length; i++)
+        {
+            portDatas.portDatas[i].soldierCode = "";
+            portDatas.portDatas[i].mutantCode = "";
+            portDatas.portDatas[i].unlock = false;
+        }
+        portDatas.activeSoldierList.Clear();
+        for (int i = 0; i < option.Count; i++)
+        {
+            portDatas.activeSoldierList.Add(option[i].soldierData.code, Instantiate(option[i].soldierData));
+            for (int j = 0; j < option[i].portNum.Length; j++)
+            {
+                portDatas.portDatas[option[i].portNum[j]].soldierCode = option[i].soldierData.code;
+            }
+        }
+    }
 }

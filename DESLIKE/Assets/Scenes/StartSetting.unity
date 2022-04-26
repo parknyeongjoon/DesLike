@@ -258,6 +258,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 05e9d3a73ad3ec0448dd01a92269d9d8, type: 2}
   - {fileID: 11400000, guid: 2511c0f84376d2147b322e30eb68130b, type: 2}
   - {fileID: 11400000, guid: cf43bab0e7c1b0647b13055f91296289, type: 2}
+  - {fileID: 11400000, guid: 8061f0b131955b945b79c315c40239c5, type: 2}
   heroDatas:
   - {fileID: 11400000, guid: 7f528eb015e3d0e40b0f2abb902a89a8, type: 2}
   skillDatas:

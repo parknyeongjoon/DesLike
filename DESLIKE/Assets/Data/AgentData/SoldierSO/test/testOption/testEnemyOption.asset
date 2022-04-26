@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63c4cd173e25a9140a736bd2c2716990, type: 3}
-  m_Name: testDubuffAura
+  m_Script: {fileID: 11500000, guid: 42d2d310121892549905c5bfe8a1c6e6, type: 3}
+  m_Name: testEnemyOption
   m_EditorClassIdentifier: 
-  code: testdebuffAura
-  skill_name: testdebuffAura
-  skillType: 4
-  skill_Icon: {fileID: 0}
-  extraSkillData: {fileID: 11400000, guid: 044c987abeb5582478130c7dc7b532ab, type: 2}
-  auraTerm: 5
+  soldierOption:
+  - soldierData: {fileID: 11400000, guid: 8061f0b131955b945b79c315c40239c5, type: 2}
+    mutant: {fileID: 0}
+    portNum: 0000000001000000020000000300000004000000

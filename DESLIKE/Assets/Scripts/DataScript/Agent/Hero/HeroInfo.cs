@@ -21,6 +21,8 @@ public class HeroInfo : CastleInfo
     public float cur_Mp;
     public float shield;
     public float healWeight = 0;
+
+    public bool grit;
     public bool resurrection;
 
     public Buff_Stat buff_Stat;
@@ -43,8 +45,8 @@ public class HeroInfo : CastleInfo
 
     public void OnDamaged(HeroInfo atkHeroInfo, float damage)//피격 이벤트 일어남
     {
-        if (atkHeroInfo) { hitEvent?.Invoke(atkHeroInfo); }//atkHeroInfo가 null이 아니라면 피격 이벤트 발동
         cur_Hp -= (damage - castleData.def);//버프 스탯 넣기, 수식 설정하기
+        if (atkHeroInfo) { hitEvent?.Invoke(this, atkHeroInfo); }//atkHeroInfo가 null이 아니라면 피격 이벤트 발동
         if (castleData.blood != null)
         {
             StartCoroutine(Bleeding());
@@ -60,6 +62,7 @@ public class HeroInfo : CastleInfo
     public void OnDamaged(float damage)//피격 이벤트가 안 일어남
     {
         cur_Hp -= (damage - castleData.def);//버프 스탯 넣기, 수식 설정하기
+        healthChangeEvent?.Invoke(this, null);
         if (castleData.blood != null)
         {
             StartCoroutine(Bleeding());
@@ -83,7 +86,7 @@ public class HeroInfo : CastleInfo
             cur_Hp += heal;
         }
         healWeight -= 1;//수식 만들기
-        healthChangeEvent.Invoke(null);
+        healthChangeEvent.Invoke(this, null);
     }
 
     public void Stun(float stunTime)
@@ -112,7 +115,7 @@ public class HeroInfo : CastleInfo
             {
                 cur_Mp += (((HeroData)castleData).mp_Re + buff_Stat.mp_Re);
             }
-            healthChangeEvent?.Invoke(null);
+            healthChangeEvent?.Invoke(this, null);
             yield return new WaitForSeconds(1.0f);
         }
     }

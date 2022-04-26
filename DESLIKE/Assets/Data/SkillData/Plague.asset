@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   code: Plague
   skill_name: Plague
-  skillType: 4
+  skillType: 0
   skill_Icon: {fileID: 0}
   extraSkillData: {fileID: 0}
   cooltime: 0
@@ -34,6 +34,5 @@ MonoBehaviour:
     def: 0
   debuff_Time: 20
   max_Stack: 10
-  buffType: 1
   dotTime: 1.5
   dotDamage: 1

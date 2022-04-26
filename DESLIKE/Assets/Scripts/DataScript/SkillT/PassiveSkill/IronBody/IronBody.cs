@@ -12,7 +12,7 @@ public class IronBody : SkillData
         heroInfo.hitEvent += IronBodyEffect;
     }
 
-    void IronBodyEffect(HeroInfo targetInfo)
+    void IronBodyEffect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
         targetInfo.OnDamaged(reflectDmg);
         Debug.Log("นÝป็");

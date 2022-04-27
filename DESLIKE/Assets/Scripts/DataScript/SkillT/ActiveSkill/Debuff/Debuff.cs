@@ -39,7 +39,7 @@ public class Debuff : ActiveSkill
     {
         for (int i = 0; i < soldierList.Count; i++)//Awake에서 적용 군중에 따라 SoldierList 따로따로 적용해주기, 배틀 중일 때만 버프 주기?
         {
-            if (soldierList[i] != heroInfo && !(soldierList[i].debuffCoroutine.ContainsKey(skillData.code) && soldierList[i].debuffCoroutine[skillData.code].Count < ((SingleDebuffData)skillData).max_Stack))
+            if (soldierList[i] != heroInfo && !(soldierList[i].debuffCoroutine.ContainsKey(skillData.code) && soldierList[i].debuffCoroutine[skillData.code].Count < ((DebuffData)skillData).max_Stack))
             {
                 heroInfo.skillTarget = soldierList[i].gameObject;
                 heroInfo.skillTargetInfo = soldierList[i];

@@ -49,7 +49,7 @@ public class Buff : ActiveSkill//우선 버프 대상 정할 방법 구하기(portDatas에서 a
 
         for (int i = 0; i < soldierList.Count; i++)//Awake에서 적용 군중에 따라 SoldierList 따로따로 적용해주기, 배틀 중일 때만 버프 주기?
         {
-            if (soldierList[i] != heroInfo && !(soldierList[i].buffCoroutine.ContainsKey(skillData.code) && soldierList[i].buffCoroutine[skillData.code].Count < ((SingleBuffData)skillData).max_Stack))
+            if (soldierList[i] != heroInfo && !(soldierList[i].buffCoroutine.ContainsKey(skillData.code) && soldierList[i].buffCoroutine[skillData.code].Count < ((BuffData)skillData).max_Stack))
             {
                 heroInfo.skillTarget = soldierList[i].gameObject;
                 heroInfo.skillTargetInfo = soldierList[i];

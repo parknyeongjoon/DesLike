@@ -16,7 +16,8 @@ public class GrenadeAttackData : ActiveSkillData
         {
             for (int i = 0; i < targetInfos.Length; i++)
             {
-                targetInfos[i].OnDamaged(heroInfo, atk_Dmg);
+                targetInfos[i].OnDamaged(atk_Dmg);//grenade는 hitEvent를 안 받게
+                extraSkillData.Effect(heroInfo, targetInfo);
             }
         }
     }

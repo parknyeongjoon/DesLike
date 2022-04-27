@@ -46,9 +46,24 @@ public class HeroInfo : CastleInfo
 
     public void OnDamaged(HeroInfo atkHeroInfo, float damage)//피격 이벤트 일어남
     {
-        cur_Hp -= (damage - castleData.def);//버프 스탯 넣기, 수식 설정하기
+        if(shield > damage)
+        {
+            shield -= damage;
+        }
+        else if(shield > 0)
+        {
+            damage -= shield;
+            shield = 0;
+            cur_Hp -= (damage - castleData.def);//버프 스탯 넣기, 수식 설정하기
+        }
+        else if(shield <= 0)
+        {
+            cur_Hp -= (damage - castleData.def);//버프 스탯 넣기, 수식 설정하기
+        }
+
         if (atkHeroInfo) { hitEvent?.Invoke(this, atkHeroInfo); }//atkHeroInfo가 null이 아니라면 피격 이벤트 발동
-        if (castleData.blood != null)
+
+        if (castleData.blood != null)//지우기
         {
             StartCoroutine(Bleeding());
         }
@@ -62,9 +77,24 @@ public class HeroInfo : CastleInfo
 
     public void OnDamaged(float damage)//피격 이벤트가 안 일어남
     {
-        cur_Hp -= (damage - castleData.def);//버프 스탯 넣기, 수식 설정하기
+        if (shield > damage)
+        {
+            shield -= damage;
+        }
+        else if (shield > 0)
+        {
+            damage -= shield;
+            shield = 0;
+            cur_Hp -= (damage - castleData.def);//버프 스탯 넣기, 수식 설정하기
+        }
+        else if (shield <= 0)
+        {
+            cur_Hp -= (damage - castleData.def);//버프 스탯 넣기, 수식 설정하기
+        }
+
         healthChangeEvent?.Invoke(this, null);
-        if (castleData.blood != null)
+
+        if (castleData.blood != null)//지우기
         {
             StartCoroutine(Bleeding());
         }

@@ -9,20 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03275b98b76528d43b05db2140663763, type: 3}
-  m_Name: E_23201_Skill_1
+  m_Script: {fileID: 11500000, guid: 58ff0c33c4c7a074d909e49103c0bf8c, type: 3}
+  m_Name: N_11302_Att_1
   m_EditorClassIdentifier: 
-  code: E_23201_Skill_1
-  skill_name: E_23201_Skill_1
-  skillType: 1
-  skill_Icon: {fileID: 0}
-  extraSkillData: {fileID: 0}
-  cooltime: 5
-  mp: 10
-  range: 2
   start_Delay: 1
   end_Delay: 1
+  range: 1
+  atk_Dmg: 1
+  atkCount: 1
+  extraSkillData: {fileID: 0}
   atkArea: 256
-  max_Target: 10
-  extent: 7
-  atk_Dmg: 5

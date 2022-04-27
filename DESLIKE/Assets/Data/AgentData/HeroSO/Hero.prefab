@@ -2814,7 +2814,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  hitEvent:
+  healthChangeEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6527479380180569570}
@@ -2842,6 +2842,7 @@ MonoBehaviour:
   cur_Mp: 0
   shield: 0
   healWeight: 0
+  grit: 0
   resurrection: 0
   buff_Stat:
     speed: 0

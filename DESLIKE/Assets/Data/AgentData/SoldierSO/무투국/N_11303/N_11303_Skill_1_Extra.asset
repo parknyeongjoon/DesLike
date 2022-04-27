@@ -9,20 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03275b98b76528d43b05db2140663763, type: 3}
-  m_Name: E_23201_Skill_1
+  m_Script: {fileID: 11500000, guid: fbe06370b2cff2b4eb40e24602b8c811, type: 3}
+  m_Name: N_11303_Skill_1_Extra
   m_EditorClassIdentifier: 
-  code: E_23201_Skill_1
-  skill_name: E_23201_Skill_1
-  skillType: 1
+  code: KnockBack
+  skill_name: KnockBack
+  skillType: 0
   skill_Icon: {fileID: 0}
   extraSkillData: {fileID: 0}
-  cooltime: 5
-  mp: 10
-  range: 2
-  start_Delay: 1
-  end_Delay: 1
-  atkArea: 256
-  max_Target: 10
-  extent: 7
-  atk_Dmg: 5

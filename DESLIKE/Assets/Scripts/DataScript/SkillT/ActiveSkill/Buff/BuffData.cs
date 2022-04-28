@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "BuffData", menuName = "ScriptableObject/extraSkill/BuffData")]
-public class BuffData : ActiveSkillData//퍼센트로 버프 주는 법 생각해내기
+[CreateAssetMenu(fileName = "BuffData", menuName = "ScriptableObject/ExtraSkill/BuffData")]
+public class BuffData : SkillData//퍼센트로 버프 주는 법 생각해내기
 {
     public Buff_Stat buff_Stat;
     public float buff_Time;

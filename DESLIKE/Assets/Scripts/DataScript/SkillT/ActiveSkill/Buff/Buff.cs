@@ -12,28 +12,6 @@ public class Buff : ActiveSkill//우선 버프 대상 정할 방법 구하기(portDatas에서 a
         soldierList = heroInfo.allyPortDatas.spawnSoldierList;
     }
 
-    //singleBuff는 타켓에 이미 버프가 걸려있다면 다른 대상 찾기
-    public override IEnumerator UseSkill(HeroInfo targetInfo)//코루틴은 monoBehaviour로 가져가기
-    {
-        heroInfo.action = Soldier_Action.Skill;
-        //AkSoundEngine.PostEvent(skillData.code, gameObject);활성화
-        if(heroInfo.skeletonAnimation.skeleton != null)
-            heroInfo.skeletonAnimation.state.SetAnimation(0, "H_23101_Skill_1", false);//스킬
-        yield return new WaitForSeconds(((ActiveSkillData)skillData).start_Delay);
-
-        if (targetInfo && targetInfo.gameObject.layer != 7)
-        {
-            heroInfo.cur_Mp -= ((ActiveSkillData)skillData).mp;
-            cur_cooltime = ((ActiveSkillData)skillData).cooltime;
-            StartCoroutine(SkillCooltime());
-            skillData.Effect(heroInfo, targetInfo);
-
-            heroInfo.action = Soldier_Action.End_Delay;
-            yield return new WaitForSeconds(((ActiveSkillData)skillData).end_Delay);
-        }
-        heroInfo.action = Soldier_Action.Idle;
-    }
-
     public override void Detect()
     {
         if (skillData.skillType == SkillType.InstanceSkill)//instance 스킬 병사한테 넣어줄 방법 생각하기

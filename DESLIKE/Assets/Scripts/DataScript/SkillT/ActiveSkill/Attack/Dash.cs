@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName ="Dash",menuName ="ScriptableObject/SkillT/Dash")]
-public class Dash : GrenadeAttackData
+public class Dash : GrenadeSkill
 {
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {

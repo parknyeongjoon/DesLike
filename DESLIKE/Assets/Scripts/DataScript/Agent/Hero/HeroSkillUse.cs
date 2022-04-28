@@ -102,7 +102,7 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
             else if (skillScript.skillData.skillType == SkillType.GrenadeSkill)
             {
                 mouseManager.mouseState = Mouse_State.Grenade;
-                mouseManager.grenadeExtent.transform.localScale = new Vector2(((GrenadeAttackData)skillScript.skillData).extent, ((GrenadeAttackData)skillScript.skillData).extent);
+                mouseManager.grenadeExtent.transform.localScale = new Vector2(((GrenadeSkill)skillScript.skillData).extent, ((GrenadeSkill)skillScript.skillData).extent);
             }
             skillRange.transform.localScale = new Vector2(((ActiveSkillData)skillScript.skillData).range, ((ActiveSkillData)skillScript.skillData).range);
             yield return SetTarget();

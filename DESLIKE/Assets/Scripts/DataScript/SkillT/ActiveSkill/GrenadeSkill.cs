@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "GrenadeAttackData", menuName = "ScriptableObject/SkillT/GrenadeAttackData")]
-public class GrenadeAttackData : ActiveSkillData
+[CreateAssetMenu(fileName = "GrenadeSkill", menuName = "ScriptableObject/SkillT/GrenadeSkill")]
+public class GrenadeSkill : ActiveSkillData
 {
     public int max_Target;
     public float extent, atk_Dmg;

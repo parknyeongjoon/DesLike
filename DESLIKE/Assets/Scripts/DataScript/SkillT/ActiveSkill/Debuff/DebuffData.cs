@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "DebuffData", menuName = "ScriptableObject/extraSkill/DebuffData")]
+[CreateAssetMenu(fileName = "DebuffData", menuName = "ScriptableObject/ExtraSkill/DebuffData")]
 public class DebuffData : SkillData
 {
     public Buff_Stat debuff_Stat;

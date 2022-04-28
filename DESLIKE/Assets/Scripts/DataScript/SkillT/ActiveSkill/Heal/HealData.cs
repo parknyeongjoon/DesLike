@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SingleHealData",menuName ="ScriptableObject/SkillT/SingleHealData")]
-public class SingleHealData : ActiveSkillData
+[CreateAssetMenu(fileName = "HealData",menuName ="ScriptableObject/ExtraSkill/HealData")]
+public class HealData : SkillData
 {
     public GameObject healEffect;
     public float heal_Amount;
@@ -11,6 +11,7 @@ public class SingleHealData : ActiveSkillData
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
         targetInfo.OnHealed(heal_Amount);
+        extraSkillData.Effect(heroInfo, targetInfo);
         targetInfo.StartCoroutine(Healing(targetInfo));
     }
 

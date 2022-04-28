@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c6519c2d951c654bab0617c459d13ea, type: 3}
-  m_Name: N_11301_Skill_1
+  m_Name: E_11201_Skill_1
   m_EditorClassIdentifier: 
-  code: N_11301_Skill_1
-  skill_name: N_11301_Skill_1
+  code: E_11201_Skill_1
+  skill_name: E_11201_Skill_1
   skillType: 1
   skill_Icon: {fileID: 0}
-  extraSkillData: {fileID: 11400000, guid: 287e45d47eabed443b7f641a3ee44e07, type: 2}
+  extraSkillData: {fileID: 0}
   cooltime: 2
   mp: 2
-  range: 3
+  range: 2
   start_Delay: 1
   end_Delay: 1
   atkArea: 256
   max_Target: 3
   extent: 3
-  atk_Dmg: 1
+  atk_Dmg: 3

@@ -7,7 +7,9 @@ public class EventManager : MonoBehaviour
 {
     Map map;
     [SerializeField] Canvas EventCanvas;
-    [SerializeField] GameObject Thief, Training, Merchant, Rullet, CampFire, Infection;
+    [SerializeField] GameObject Rullet, CampFire, Infection;
+    [SerializeField] GameObject RelicEvent, HealEvent, AreaEvent;
+
     EventNode eventNode;
     int curBtn, EvntList;
     SaveManager saveManager;
@@ -27,32 +29,23 @@ public class EventManager : MonoBehaviour
 
     void EventActive() 
     {
-        Thief.SetActive(false);
-        Training.SetActive(false);
-        Merchant.SetActive(false);
         Rullet.SetActive(false);
         CampFire.SetActive(false);
         Infection.SetActive(false);
+        RelicEvent.SetActive(false);
+        HealEvent.SetActive(false);
+        AreaEvent.SetActive(false);
         
         switch (EvntList)
         {
             case 0:
-                Thief.SetActive(true);
+                RelicEvent.SetActive(true);
                 break;
             case 1:
-                Training.SetActive(true);
+                HealEvent.SetActive(true);
                 break;
             case 2:
-                Merchant.SetActive(true);
-                break;
-            case 3:
-                Rullet.SetActive(true);
-                break;
-               case 4:
-                CampFire.SetActive(true);
-                break;
-            case 5:
-                Infection.SetActive(true);
+                AreaEvent.SetActive(true);
                 break;
             default: break;
         }

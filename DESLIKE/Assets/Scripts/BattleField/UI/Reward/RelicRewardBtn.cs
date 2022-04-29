@@ -16,6 +16,7 @@ public class RelicRewardBtn : MonoBehaviour
 
     void Start()
     {
+
         relicScript = SaveManager.Instance.map.curMapNode.reward.relic.GetComponent<Relic>();
         relicData = relicScript.relicData;
         //toolTipPanel.SetActive(false);

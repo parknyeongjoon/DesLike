@@ -96,7 +96,7 @@ public class Rullet : MonoBehaviour
                 break;
             case 6:
                 Debug.Log("6, 마석");
-                SaveManager.Instance.gameData.goodsSaveData.magicalStone += (int)(1 + map.level * 0.5f);
+                // SaveManager.Instance.gameData.goodsSaveData.magicalStone += (int)(1 + map.level * 0.5f);
                 break;
             case 7:
                 Debug.Log("7, 버프");

@@ -16,7 +16,7 @@ public class EventNodeScript : NodeScript
     bool[] isRewardSet = new bool[THREE];
     Reward reward;
     List<SoldierData> ableSoldierRewards;
-    List<GameObject> ableRelicRewards;
+    List<Relic> ableRelicRewards;
     List<Option> option = new List<Option>();
 
     void Start()

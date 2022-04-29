@@ -8,7 +8,7 @@ public class MapNode : ScriptableObject
     public Map map;
     public bool isNode = false;
     public List<SoldierData> ableSoldierRewards = new List<SoldierData>();    // 위 3개를 조합해서 나오는 리워드 리스트
-    public List<GameObject> ableRelicRewards = new List<GameObject>();
+    public List<Relic> ableRelicRewards = new List<Relic>();
     public Kingdom kingdom;
     public Reward reward;
     
@@ -63,7 +63,7 @@ public class MapNode : ScriptableObject
             }
         }
 
-        ableRelicRewards = new List<GameObject>(1);
+        ableRelicRewards = new List<Relic>(1);
         if (kingdom == Kingdom.Physic)  // ableRelicReward 세팅
         {
             kingdomNorRelC = map.physicNorRel.Count;

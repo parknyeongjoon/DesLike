@@ -18,7 +18,7 @@ public class BattleNodeScript : NodeScript
     bool[] isRewardSet = new bool[THREE];
     Reward reward;
     List<SoldierData> ableSoldierRewards;
-    List<GameObject> ableRelicRewards;
+    List<Relic> ableRelicRewards;
     List<PortsOption> enemyPortsOptions;
     PortsOption enemyPortOption;
     PortDatas enemyPortDatas;

@@ -37,7 +37,7 @@ public class PortSaveDatas
 public class GoodsSaveData
 {
     public int gold = 0;
-    public int magicalStone = 0;
+    public int areaGold = 0;
 }
 
 [System.Serializable]

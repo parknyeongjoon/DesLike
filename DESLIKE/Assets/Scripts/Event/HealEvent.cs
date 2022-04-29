@@ -5,15 +5,12 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class RelicEvent : EventBasic
+public class HealEvent : EventBasic
 {
     int temp_Max_HP = 500;
-    RelicManager relicManager;
-
     void OnEnable()
     {
         SetOption();
-        relicManager = RelicManager.Instance;
         isEventSet = true;
     }
 
@@ -31,6 +28,31 @@ public class RelicEvent : EventBasic
                         goto Reroll;  // 같은 값인지 체크
                     if ((i == 2) && ((optionNum[0] == optionNum[2]) || (optionNum[1] == optionNum[2]))) // 1,2 선택지와 3 선택지가 같은지 체크
                         goto Reroll;  // 같은 값인지 체크
+                                      // 순서 정렬
+
+                    int temp, j = i;
+                    switch (j)
+                    {
+                        case 2:
+                            if(optionNum[2] < optionNum[1])
+                            {
+                                temp = optionNum[2];
+                                optionNum[2] = optionNum[1];
+                                optionNum[1] = temp;
+                            }
+                            j--;
+                            continue;
+                        case 1:
+                            if (optionNum[1] < optionNum[0])
+                            {
+                                temp = optionNum[1];
+                                optionNum[1] = optionNum[0];
+                                optionNum[0] = temp;
+                            }
+                            break;
+                        case 0:
+                            break;
+                    }
                 }
             }
             else  // 데이터 가져오기
@@ -70,36 +92,36 @@ public class RelicEvent : EventBasic
 
     void EventOption1(int optionNum)    // 1번 보기
     {
-        OptionText[optionNum].text = "1일 소모, 유물 획득X";
+        OptionText[optionNum].text = "1일 소모, 회복X";
     }
 
     void EventOption2(int optionNum)    // 2번 보기
     {
-        OptionText[optionNum].text = "2일 소모, 일반 유물 획득";
+        OptionText[optionNum].text = "1일 소모, n골드 소비, 체력 10% 회복";
     }
 
     void EventOption3(int optionNum)    // 3번 보기
     {
-        OptionText[optionNum].text = "2일 소모, n골드 잃고 희귀 유물 획득";
-        // 가진 골드가 n골드보다 작다면 버튼 비활성화
-        if (curGold < 50) Buttons[optionNum].interactable = false;
+        OptionText[optionNum].text = "2일 소모, 체력 10% 회복";
     }
 
     void EventOption4(int optionNum)    // 4번 보기
     {
-        OptionText[optionNum].text = "2일 소모, 최대 체력의 n% 잃고 희귀 유물 획득";
-    }
-
-    void EventOption5(int optionNum)    // 5번 보기
-    {
-        OptionText[optionNum].text = "3일 소모, 최대 체력의 n% + n골드 잃고 전설 유물 획득";
+        OptionText[optionNum].text = "2일 소모, n골드 소비, 체력 20% 회복";
         // 가진 골드가 n골드보다 작다면 버튼 비활성화
         if (curGold < 50) Buttons[optionNum].interactable = false;
     }
 
+    void EventOption5(int optionNum)    // 5번 보기
+    {
+        OptionText[optionNum].text = "3일 소모, 체력 20% 회복";
+    }
+
     void EventOption6(int optionNum)    // 6번 보기
     {
-        OptionText[optionNum].text = "1일 소모, 골드를 모두 잃고 희귀 유물 획득";
+        OptionText[optionNum].text = "3일 소모, n골드 소비, 체력 30% 회복";
+        // 가진 골드가 n골드보다 작다면 버튼 비활성화
+        if (curGold < 50) Buttons[optionNum].interactable = false;
     }
 
     void ButtonsOff()
@@ -109,59 +131,56 @@ public class RelicEvent : EventBasic
         EndButton.gameObject.SetActive(true);
     }
 
-    void ActiveEvent1() //"1일 소모, 유물 획득X"
+    void ActiveEvent1() //"1일 소모, 회복X"
     {
-        curDay += 1;
+        saveManager.gameData.mapData.curDay += 1;
         ButtonsOff();
     }
 
-    void ActiveEvent2() //"2일 소모, 일반 유물 획득"
+    void ActiveEvent2() //"1일 소모, n골드 소비, 체력 10% 회복"
     {
-        curDay += 2;
-        relicManager.relicList.Add(eventNode.reward.relic);
-        // 일반 유물 획득 함수 (변경 필요)
+        saveManager.gameData.mapData.curDay += 1;
+        curGold -= 50;        // n골드 손실 함수
+        cur_HP = cur_HP / 9 * 10;   // 회복 함수
+        if (cur_HP > temp_Max_HP) cur_HP = temp_Max_HP; // 최대체력 초과 시 최대체력 표시 
+        // heroData 해결되면 temp_Max_HP를 heroData.hp로 수정
         ButtonsOff();
     }
 
-    void ActiveEvent3() //"2일 소모, n골드 잃고 희귀 유물 획득"
+    void ActiveEvent3() //"2일 소모, 체력 10% 회복"
     {
-        curDay += 2;
-        curGold -= 50; // 골드 손실 함수
-        relicManager.relicList.Add(eventNode.reward.relic);
-        // 희귀 유물 획득 함수(변경 필요)
+        saveManager.gameData.mapData.curDay += 2;
+        cur_HP = cur_HP / 9 * 10;   // 회복 함수
+        if (cur_HP > temp_Max_HP) cur_HP = temp_Max_HP; // 최대체력 초과 시 최대체력 표시
+
         ButtonsOff();
     }
 
-    void ActiveEvent4() //"2일 소모, 최대 체력의 n% 잃고 희귀 유물 획득"
+    void ActiveEvent4() //"2일 소모, n골드 소비, 체력 20% 회복"
     {
-        curDay += 2;
-
-        cur_HP -= temp_Max_HP / 10; // 10% 임의 설정
-        if (cur_HP < 1) cur_HP = 1;
-        // 최대체력의 n% 잃는 함수, 만약 현재 체력이 n%보다 작다면 현재 체력을 1로 만듦
-        relicManager.relicList.Add(eventNode.reward.relic);
-        // 희귀 유물 획득 함수
+        saveManager.gameData.mapData.curDay += 2;
+        curGold -= 50;        // n골드 손실 함수
+        cur_HP = cur_HP / 4 * 5;    // 회복 함수
+        if (cur_HP > temp_Max_HP) cur_HP = temp_Max_HP; // 최대체력 초과 시 최대체력 표시
         ButtonsOff();
     }
 
-    void ActiveEvent5() //"3일 소모, 최대 체력의 n% + n골드 잃고 전설 유물 획득"
+    void ActiveEvent5() //"3일 소모, 체력 20% 회복"
     {
-        curDay += 3;
-        cur_HP -= temp_Max_HP / 10;
-        if (cur_HP < 1) cur_HP = 1;
-        // 최대체력의 n% 잃는 함수, 만약 현재 체력이 n%보다 작다면 현재 체력을 1로 만듦
-        curGold -= 50; // 골드 손실 함수
-        relicManager.relicList.Add(eventNode.reward.relic);
-        // 전설 유물 획득 함수
+        saveManager.gameData.mapData.curDay += 3;
+        cur_HP = cur_HP / 4 * 5;    // 회복 함수
+        if (cur_HP > temp_Max_HP) cur_HP = temp_Max_HP; // 최대체력 초과 시 최대체력 표시
+                                                        
         ButtonsOff();
     }
 
-    void ActiveEvent6() //"1일 소모, 골드를 모두 잃고 희귀 유물 획득"
+    void ActiveEvent6() //"3일 소모, n골드 소비, 체력 30% 회복"
     {
-        curDay += 1;
-        curGold = 0; // 골드 손실 함수
-        relicManager.relicList.Add(eventNode.reward.relic);
-        // 희귀 유물 획득 함수
+        saveManager.gameData.mapData.curDay += 3;
+        curGold -= 50;        // n골드 손실 함수
+        cur_HP = cur_HP / 7 * 10;
+        if (cur_HP > temp_Max_HP) cur_HP = temp_Max_HP; // 최대체력 초과 시 최대체력 표시
+
         ButtonsOff();
     }
 
@@ -215,6 +234,7 @@ public class RelicEvent : EventBasic
                 ActiveEvent6();
                 break;
         }
+
     }
 
     public void Button3()

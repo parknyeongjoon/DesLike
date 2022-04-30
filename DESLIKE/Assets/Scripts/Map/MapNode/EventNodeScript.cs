@@ -208,6 +208,7 @@ public class EventNodeScript : NodeScript
         int rand = Random.Range(0, norTotal);   // 일반 범위 내 랜덤값
         eventNode.reward.relic = eventNode.ableRelicRewards[rand];  // 해당 유물을 노드에 저장
         // saveManager.gameData.curBattleNodeData.relRewardIndex[button, 0] = rand;    // 유물 번호 게임데이터에 저장
+        // 중복 유물인지 확인해야함
     }
 
     public void EpicRelSet(int button)  // 희귀 유물 설정, 주석은 NorRelSet 참고
@@ -227,6 +228,7 @@ public class EventNodeScript : NodeScript
 
         eventNode.reward.relic = eventNode.ableRelicRewards[rand];
         // saveManager.gameData.rewardData.relicRewardIndex[button] = rand;
+        // 중복 유물인지 확인해야함
     }
 
     public void LegendRelSet(int button)  // 전설 유물 설정, 주석은 NorRelSet 참고
@@ -245,6 +247,7 @@ public class EventNodeScript : NodeScript
         int rand = Random.Range(0, legendTotal) + neTotal;
         eventNode.reward.relic = eventNode.ableRelicRewards[rand];
         // saveManager.gameData.rewardData.relicRewardIndex[button] = rand;
+        // 중복 유물인지 확인해야함
     }
 
 

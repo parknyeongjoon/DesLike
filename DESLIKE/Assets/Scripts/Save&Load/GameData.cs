@@ -82,6 +82,7 @@ public class EventData
     public bool isEventSet;
     public int[] optionNum = new int[3];
     public bool isAlreadySelect;    // 이미 이벤트가 선택되었는지 확인
+    public int ranPenalty;
 }
 
 

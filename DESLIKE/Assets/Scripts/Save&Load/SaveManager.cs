@@ -153,17 +153,19 @@ public class SaveManager : MonoBehaviour
             selEvent[btn] = gameData.mapData.selEvent[btn];
             if ((map.selectNode[btn] != null) && (selEvent[btn] == 0))  // 맵에 저장되어있고, 전투 노드일 경우
             {
-                battleNode = (BattleNode)map.selectNode[btn];
-                for (int i = 0; i < battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 저장
-                    gameData.curBattleNodeData.ableSoldierIndex[btn, i] = battleNode.ableSoldierRewards[i].code;
-                gameData.mapData.kingdom = battleNode.kingdom;
-
-                for (int i = 0; i < battleNode.reward.soldierReward.Count; i++)
+                if (gameData.mapData.curWindow == CurWindow.Battle)
                 {
-                    gameData.curBattleNodeData.solRewardIndex[btn, i] = battleNode.reward.soldierReward[i].soldier.code;
-                    // mutant 추가 필요
-                }
+                    battleNode = (BattleNode)map.selectNode[btn];
+                    for (int i = 0; i < battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 저장
+                        gameData.curBattleNodeData.ableSoldierIndex[btn, i] = battleNode.ableSoldierRewards[i].code;
+                    gameData.mapData.kingdom = battleNode.kingdom;
 
+                    for (int i = 0; i < battleNode.reward.soldierReward.Count; i++)
+                    {
+                        gameData.curBattleNodeData.solRewardIndex[btn, i] = battleNode.reward.soldierReward[i].soldier.code;
+                        // mutant 추가 필요
+                    }
+                }
                 // 유물 저장 필요
             }
         }
@@ -177,26 +179,29 @@ public class SaveManager : MonoBehaviour
             selEvent[btn] = gameData.mapData.selEvent[btn];
             if ((map.selectNode[btn] != null) && (selEvent[btn] == 0))
             {
-                battleNode = (BattleNode)map.selectNode[btn];
-
-                battleNode.ableSoldierRewards.Clear();
-                // battleNode.ableRelicRewards.Clear();
-                battleNode.reward.soldierReward.Clear();
-                battleNode.kingdom = gameData.mapData.kingdom;
-
-                SoldierReward soldierReward = new SoldierReward();
-                SoldierData soldierData = new SoldierData();
-
-                for (int i = 0; i < battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 불러오기
-                    battleNode.ableSoldierRewards.Add(dataSheet.soldierDataSheet[gameData.curBattleNodeData.ableSoldierIndex[btn, i]]);
-
-
-                for (int i = 0; i < battleNode.reward.soldierReward.Count; i++)
+                if (gameData.mapData.curWindow == CurWindow.Battle)
                 {
-                    soldierReward.soldier = dataSheet.soldierDataSheet[gameData.curBattleNodeData.solRewardIndex[btn, i]];
-                    // mutant 추가 필요
+                    battleNode = (BattleNode)map.selectNode[btn];
 
-                    battleNode.reward.soldierReward.Add(soldierReward);
+                    battleNode.ableSoldierRewards.Clear();
+                    // battleNode.ableRelicRewards.Clear();
+                    battleNode.reward.soldierReward.Clear();
+                    battleNode.kingdom = gameData.mapData.kingdom;
+
+                    SoldierReward soldierReward = new SoldierReward();
+                    SoldierData soldierData = new SoldierData();
+
+                    for (int i = 0; i < battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 불러오기
+                        battleNode.ableSoldierRewards.Add(dataSheet.soldierDataSheet[gameData.curBattleNodeData.ableSoldierIndex[btn, i]]);
+
+
+                    for (int i = 0; i < battleNode.reward.soldierReward.Count; i++)
+                    {
+                        soldierReward.soldier = dataSheet.soldierDataSheet[gameData.curBattleNodeData.solRewardIndex[btn, i]];
+                        // mutant 추가 필요
+
+                        battleNode.reward.soldierReward.Add(soldierReward);
+                    }
                 }
             }
         }

@@ -421,7 +421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &56284648
 RectTransform:
   m_ObjectHideFlags: 0
@@ -457,10 +457,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 56284647}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd4b294a074a454b837327596fc5648, type: 3}
+  m_Script: {fileID: 11500000, guid: fd4c4c0d387acdf43be156448be1e759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map: {fileID: 0}
+  map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
   eventNode: {fileID: 0}
   isEventSet: 0
   saveManager: {fileID: 0}
@@ -469,10 +469,11 @@ MonoBehaviour:
     isEventSet: 0
     optionNum: 000000000000000000000000
     isAlreadySelect: 0
+    ranPenalty: 0
   OptionText:
-  - {fileID: 196280386}
-  - {fileID: 307407791}
-  - {fileID: 1381274072}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Buttons:
   - {fileID: 131806369}
   - {fileID: 448115408}
@@ -586,6 +587,7 @@ MonoBehaviour:
     isEventSet: 0
     optionNum: 000000000000000000000000
     isAlreadySelect: 0
+    ranPenalty: 0
   OptionText:
   - {fileID: 1438981561}
   - {fileID: 1543537724}
@@ -1260,9 +1262,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Thief, Assembly-CSharp
-        m_MethodName: ThiefOption1
+      - m_Target: {fileID: 56284649}
+        m_TargetAssemblyTypeName: PenaltyEvent, Assembly-CSharp
+        m_MethodName: Button1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2322,7 +2324,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC120\uD0DD\uC9C01\\"
+  m_text: "\uC120\uD0DD\uC9C01"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 776f6aeba7170de4caba68dd5341e226, type: 2}
   m_sharedMaterial: {fileID: 6978375971435076902, guid: 776f6aeba7170de4caba68dd5341e226,
@@ -2688,7 +2690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &253311067
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2736,6 +2738,7 @@ MonoBehaviour:
     isEventSet: 0
     optionNum: 000000000000000000000000
     isAlreadySelect: 0
+    ranPenalty: 0
   OptionText:
   - {fileID: 688991762}
   - {fileID: 762116938}
@@ -2853,6 +2856,7 @@ MonoBehaviour:
     isEventSet: 0
     optionNum: 000000000000000000000000
     isAlreadySelect: 0
+    ranPenalty: 0
   OptionText:
   - {fileID: 229973200}
   - {fileID: 1890306411}
@@ -3980,9 +3984,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Thief, Assembly-CSharp
-        m_MethodName: ThiefOption2
+      - m_Target: {fileID: 56284649}
+        m_TargetAssemblyTypeName: PenaltyEvent, Assembly-CSharp
+        m_MethodName: Button2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5844,9 +5848,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Thief, Assembly-CSharp
-        m_MethodName: ThiefOption3
+      - m_Target: {fileID: 56284649}
+        m_TargetAssemblyTypeName: PenaltyEvent, Assembly-CSharp
+        m_MethodName: Button3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7532,6 +7536,7 @@ MonoBehaviour:
     isEventSet: 0
     optionNum: 000000000000000000000000
     isAlreadySelect: 0
+    ranPenalty: 0
   OptionText:
   - {fileID: 356198197}
   - {fileID: 1902217066}
@@ -12066,9 +12071,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
-        m_TargetAssemblyTypeName: Map, Assembly-CSharp
-        m_MethodName: EndMapNode
+      - m_Target: {fileID: 56284649}
+        m_TargetAssemblyTypeName: EventBasic, Assembly-CSharp
+        m_MethodName: EndEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

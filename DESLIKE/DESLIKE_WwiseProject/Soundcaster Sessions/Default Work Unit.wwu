@@ -28,7 +28,7 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Music_S2_Normal_Battle" ID="{459B1E63-D3CB-4F7A-8DA0-29680E28E5C4}"/>
+						<CurrentStateRef Name="Music_S2_Boss_Battle" ID="{729323AF-59F8-4C4C-AA17-5B880341A81C}"/>
 						<CurrentStateRef Name="None" ID="{B9FFA1F4-7C44-42A8-B90E-8CAD8E38CFA7}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>

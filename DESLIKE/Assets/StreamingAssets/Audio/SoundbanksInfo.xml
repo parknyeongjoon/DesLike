@@ -26,7 +26,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1762985596">
+		<SoundBank Id="3161908922" Language="SFX" Hash="4222639724">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -74,6 +74,14 @@
 				</Event>
 				<Event Id="3725903807" Name="Music_Start" ObjectPath="\Events\Music\Music_Start" DurationType="Infinite">
 					<IncludedMemoryFiles>
+						<File Id="6240651" Language="SFX">
+							<ShortName>S2_Boss\C3\S2_Boss_C3_Koto_80bpm4-4_L16M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C3/S2_Boss_C3_Koto_80bpm4-4_L16M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="24694041" Language="SFX">
+							<ShortName>S2_Boss\C2\S2_Boss_C2_Strings_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C2/S2_Boss_C2_Strings_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
 						<File Id="40268662" Language="SFX">
 							<ShortName>S2_COMBAT_BUILDUP_VIBRAPHONE_95bpm5-8_L7M-P0M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_BUILDUP_VIBRAPHONE_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
@@ -82,21 +90,97 @@
 							<ShortName>S2_COMBAT_THEME_A_PERC_95bpm5-8_L16M-P1M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_THEME_A_PERC_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
 						</File>
+						<File Id="57125666" Language="SFX">
+							<ShortName>S2_Boss\C1\S2_Boss_C1_Drums_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C1/S2_Boss_C1_Drums_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="74683610" Language="SFX">
+							<ShortName>S2_Boss\C2\S2_Boss_C2_Shakuhachi_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C2/S2_Boss_C2_Shakuhachi_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
 						<File Id="83213096" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_B_KEYS_95bpm5-8_L16M-P1M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_THEME_B_KEYS_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="87499183" Language="SFX">
+							<ShortName>S2_Boss\C3\S2_Boss_C3_Strings_80bpm4-4_L16M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C3/S2_Boss_C3_Strings_80bpm4-4_L16M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="108497594" Language="SFX">
+							<ShortName>S2_Boss\D\S2_Boss_D_Strings_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/D/S2_Boss_D_Strings_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="116944001" Language="SFX">
+							<ShortName>S2_Boss\B2\S2_Boss_B2_Drums_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B2/S2_Boss_B2_Drums_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="118610959" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_OUTRO_VIBRAPHONE_95bpm5-8_L8M-P0M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_THEME_OUTRO_VIBRAPHONE_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
+						<File Id="134356197" Language="SFX">
+							<ShortName>S2_Boss\D\S2_Boss_D_Koto_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/D/S2_Boss_D_Koto_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
 						<File Id="146142117" Language="SFX">
 							<ShortName>WavConv\Music_Map_TTS.wav</ShortName>
 							<Path>SFX/WavConv/Music_Map_TTS_D79FB2B7.wem</Path>
 						</File>
+						<File Id="146460236" Language="SFX">
+							<ShortName>S2_Boss\Outro\S2_Boss_Outro_G.Piano_80bpm4-4_L4M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/Outro/S2_Boss_Outro_G.Piano_80bpm4-4_L4M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="165519568" Language="SFX">
+							<ShortName>S2_Boss\B1\S2_Boss_B1_Brasses_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B1/S2_Boss_B1_Brasses_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="165695530" Language="SFX">
+							<ShortName>S2_Boss\D\S2_Boss_D_Brasses_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/D/S2_Boss_D_Brasses_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="168392530" Language="SFX">
+							<ShortName>S2_Boss\C3\S2_Boss_C3_Drums_80bpm4-4_L16M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C3/S2_Boss_C3_Drums_80bpm4-4_L16M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="177824071" Language="SFX">
+							<ShortName>S2_Boss\C1\S2_Boss_C1_Shakuhachi_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C1/S2_Boss_C1_Shakuhachi_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="205432399" Language="SFX">
+							<ShortName>S2_Boss\C1\S2_Boss_C1_Strings_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C1/S2_Boss_C1_Strings_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="223185327" Language="SFX">
+							<ShortName>S2_Boss\B1\S2_Boss_B1_G.Piano_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B1/S2_Boss_B1_G.Piano_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
 						<File Id="267186529" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_A_STRINGS_95bpm5-8_L16M-P1M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_THEME_A_STRINGS_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="272898759" Language="SFX">
+							<ShortName>S2_Boss\D\S2_Boss_D_Shakuhachi_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/D/S2_Boss_D_Shakuhachi_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="278291708" Language="SFX">
+							<ShortName>S2_Boss\B1\S2_Boss_B1_Koto_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B1/S2_Boss_B1_Koto_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="285603477" Language="SFX">
+							<ShortName>S2_Boss\C3\S2_Boss_C3_G.Piano_80bpm4-4_L16M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C3/S2_Boss_C3_G.Piano_80bpm4-4_L16M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="289541460" Language="SFX">
+							<ShortName>S2_Boss\B1\S2_Boss_B1_Drums_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B1/S2_Boss_B1_Drums_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="294869383" Language="SFX">
+							<ShortName>S2_Boss\B3\S2_Boss_B3_Brasses_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B3/S2_Boss_B3_Brasses_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="312040944" Language="SFX">
+							<ShortName>S2_Boss\B3\S2_Boss_B3_G.Piano_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B3/S2_Boss_B3_G.Piano_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="315124391" Language="SFX">
 							<ShortName>S2_COMBAT_BUILDUP_PERC_95bpm5-8_L7M-P0M.wav</ShortName>
@@ -106,9 +190,21 @@
 							<ShortName>S2_COMBAT_THEME_B_PERC_95bpm5-8_L16M-P1M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_THEME_B_PERC_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
 						</File>
+						<File Id="366968200" Language="SFX">
+							<ShortName>S2_Boss\C2\S2_Boss_C2_Koto_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C2/S2_Boss_C2_Koto_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="385714398" Language="SFX">
+							<ShortName>S2_Boss\B2\S2_Boss_B2_Koto_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B2/S2_Boss_B2_Koto_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
 						<File Id="410556276" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_A_VIBRAPHONE_95bpm5-8_L16M-P1M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_THEME_A_VIBRAPHONE_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="417187753" Language="SFX">
+							<ShortName>S2_Boss\C2\S2_Boss_C2_Bells_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C2/S2_Boss_C2_Bells_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="420784143" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_OUTRO_PERC_95bpm5-8_L8M-P0M.wav</ShortName>
@@ -118,9 +214,29 @@
 							<ShortName>S2_COMBAT_BUILDUP2_KEYS_95bpm5-8_L7M-P0M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_BUILDUP2_KEYS_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
 						</File>
+						<File Id="466547941" Language="SFX">
+							<ShortName>S2_Boss\D\S2_Boss_D_M.Choirs_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/D/S2_Boss_D_M.Choirs_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="473701196" Language="SFX">
+							<ShortName>S2_Boss\B1\S2_Boss_B1_Shakuhachi_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B1/S2_Boss_B1_Shakuhachi_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
 						<File Id="485640620" Language="SFX">
 							<ShortName>S2_COMBAT_BRIDGE_CHOIR_95bpm5-8_L8M-P0M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_BRIDGE_CHOIR_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="491575285" Language="SFX">
+							<ShortName>S2_Boss\B2\S2_Boss_B2_B.Choirs_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B2/S2_Boss_B2_B.Choirs_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="497398020" Language="SFX">
+							<ShortName>S2_Boss\C1\S2_Boss_C1_Koto_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C1/S2_Boss_C1_Koto_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="498439905" Language="SFX">
+							<ShortName>S2_Boss\B3\S2_Boss_B3_B.Choirs_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B3/S2_Boss_B3_B.Choirs_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="515244309" Language="SFX">
 							<ShortName>WavConv\Music_Main_TTS-01.wav</ShortName>
@@ -130,13 +246,29 @@
 							<ShortName>S2_COMBAT_THEME_B_WOODWINDS_95bpm5-8_L16M-P1M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_THEME_B_WOODWINDS_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
 						</File>
+						<File Id="527349538" Language="SFX">
+							<ShortName>S2_Boss\A\S2_Boss_A_G.Piano_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/A/S2_Boss_A_G.Piano_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="541402666" Language="SFX">
+							<ShortName>S2_Boss\B2\S2_Boss_B2_Bells_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B2/S2_Boss_B2_Bells_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
 						<File Id="541766062" Language="SFX">
 							<ShortName>S2_COMBAT_RHYTHM__PERC_95bpm5-8_L8M-P0M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_RHYTHM__PERC_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
+						<File Id="547124148" Language="SFX">
+							<ShortName>S2_Boss\B1\S2_Boss_B1_Bells_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B1/S2_Boss_B1_Bells_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
 						<File Id="547736093" Language="SFX">
 							<ShortName>S2_COMBAT_RHYTHM__KEYS_95bpm5-8_L8M-P0M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_RHYTHM__KEYS_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="556015589" Language="SFX">
+							<ShortName>S2_Boss\B3\S2_Boss_B3_Koto_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B3/S2_Boss_B3_Koto_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="586464007" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_OUTRO_CHOIR_95bpm5-8_L8M-P0M.wav</ShortName>
@@ -150,61 +282,197 @@
 							<ShortName>S2_COMBAT_BRIDGE_VIBRAPHONE_95bpm5-8_L8M-P0M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_BRIDGE_VIBRAPHONE_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
+						<File Id="666124762" Language="SFX">
+							<ShortName>S2_Boss\B2\S2_Boss_B2_Strings_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B2/S2_Boss_B2_Strings_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="669563909" Language="SFX">
+							<ShortName>S2_Boss\D\S2_Boss_D_Bells_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/D/S2_Boss_D_Bells_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="671488941" Language="SFX">
+							<ShortName>S2_Boss\C2\S2_Boss_C2_B.Choirs_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C2/S2_Boss_C2_B.Choirs_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="677078096" Language="SFX">
+							<ShortName>S2_Boss\C3\S2_Boss_C3_B.Choirs_80bpm4-4_L16M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C3/S2_Boss_C3_B.Choirs_80bpm4-4_L16M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="690438538" Language="SFX">
+							<ShortName>S2_Boss\Outro\S2_Boss_Outro_Drums_80bpm4-4_L4M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/Outro/S2_Boss_Outro_Drums_80bpm4-4_L4M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="699096087" Language="SFX">
+							<ShortName>S2_Boss\D\S2_Boss_D_Cymbals_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/D/S2_Boss_D_Cymbals_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
 						<File Id="700465363" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_B_STRINGS_95bpm5-8_L16M-P1M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_THEME_B_STRINGS_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="706667325" Language="SFX">
+							<ShortName>S2_Boss\Outro\S2_Boss_Outro_Cymbals_80bpm4-4_L4M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/Outro/S2_Boss_Outro_Cymbals_80bpm4-4_L4M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="710092501" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_B_VIBRAPHONE_95bpm5-8_L16M-P1M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_THEME_B_VIBRAPHONE_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
 						</File>
+						<File Id="711483019" Language="SFX">
+							<ShortName>S2_Boss\C1\S2_Boss_C1_Bells_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C1/S2_Boss_C1_Bells_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
 						<File Id="713194583" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_OUTRO_WOODWINDS_95bpm5-8_L8M-P0M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_THEME_OUTRO_WOODWINDS_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="728915627" Language="SFX">
+							<ShortName>S2_Boss\D\S2_Boss_D_G.Piano_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/D/S2_Boss_D_G.Piano_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="735161777" Language="SFX">
+							<ShortName>S2_Boss\A\S2_Boss_A_Brasses_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/A/S2_Boss_A_Brasses_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="736926230" Language="SFX">
 							<ShortName>S2_COMBAT_RHYTHM2_STRINGS_95bpm5-8_L8M-P0M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_RHYTHM2_STRINGS_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
+						<File Id="742399091" Language="SFX">
+							<ShortName>S2_Boss\A\S2_Boss_A_Bells_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/A/S2_Boss_A_Bells_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
 						<File Id="747821742" Language="SFX">
 							<ShortName>S2_COMBAT_BUILDUP2_PERC_95bpm5-8_L7M-P0M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_BUILDUP2_PERC_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="758188426" Language="SFX">
+							<ShortName>S2_Boss\B3\S2_Boss_B3_Bells_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B3/S2_Boss_B3_Bells_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="793834268" Language="SFX">
+							<ShortName>S2_Boss\C3\S2_Boss_C3_Bells_80bpm4-4_L16M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C3/S2_Boss_C3_Bells_80bpm4-4_L16M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="801901048" Language="SFX">
+							<ShortName>S2_Boss\B3\S2_Boss_B3_Shakuhachi_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B3/S2_Boss_B3_Shakuhachi_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="803341586" Language="SFX">
+							<ShortName>S2_Boss\B2\S2_Boss_B2_G.Piano_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B2/S2_Boss_B2_G.Piano_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="809440444" Language="SFX">
 							<ShortName>S2_COMBAT_RHYTHM2_Vibraphone_95bpm5-8_L8M-P0M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_RHYTHM2_Vibraphone_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
+						<File Id="815159283" Language="SFX">
+							<ShortName>S2_Boss\C2\S2_Boss_C2_Cymbals_80bpm4-4_L8M-P1M.wav</ShortName>
+							<Path>SFX/S2_Boss/C2/S2_Boss_C2_Cymbals_80bpm4-4_L8M-P1M_D79FB2B7.wem</Path>
+						</File>
 						<File Id="817597221" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_A_KEYS_95bpm5-8_L16M-P1M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_THEME_A_KEYS_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="820242133" Language="SFX">
+							<ShortName>S2_Boss\B3\S2_Boss_B3_Drums_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B3/S2_Boss_B3_Drums_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="846418600" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_OUTRO_KEYS_95bpm5-8_L8M-P0M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_THEME_OUTRO_KEYS_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
+						<File Id="862123506" Language="SFX">
+							<ShortName>S2_Boss\C3\S2_Boss_C3_Shakuhachi_80bpm4-4_L16M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C3/S2_Boss_C3_Shakuhachi_80bpm4-4_L16M-P0M_D79FB2B7.wem</Path>
+						</File>
 						<File Id="922325130" Language="SFX">
 							<ShortName>S2_COMBAT_BUILDUP_STRINGS_95bpm5-8_L7M-P0M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_BUILDUP_STRINGS_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="929130371" Language="SFX">
+							<ShortName>S2_Boss\C3\S2_Boss_C3_M.Choir_80bpm4-4_L16M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C3/S2_Boss_C3_M.Choir_80bpm4-4_L16M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="940550834" Language="SFX">
+							<ShortName>S2_Boss\Intro\S2_Boss_Intro_String_80bpm4-4_L2M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/Intro/S2_Boss_Intro_String_80bpm4-4_L2M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="942330877" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_A_WOODWINDS_95bpm5-8_L16M-P1M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_THEME_A_WOODWINDS_95bpm5-8_L16M-P1M_D79FB2B7.wem</Path>
 						</File>
+						<File Id="968241272" Language="SFX">
+							<ShortName>S2_Boss\A\S2_Boss_A_Drums_80bpm4-4_L8M-P1M.wav</ShortName>
+							<Path>SFX/S2_Boss/A/S2_Boss_A_Drums_80bpm4-4_L8M-P1M_D79FB2B7.wem</Path>
+						</File>
 						<File Id="969646254" Language="SFX">
 							<ShortName>S2_COMBAT_RHYTHM2_PERC_95bpm5-8_L8M-P0M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_RHYTHM2_PERC_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="969904515" Language="SFX">
+							<ShortName>S2_Boss\D\S2_Boss_D_B.Choirs_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/D/S2_Boss_D_B.Choirs_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="971942406" Language="SFX">
+							<ShortName>S2_Boss\C2\S2_Boss_C2_Drums_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C2/S2_Boss_C2_Drums_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
 						<File Id="980647092" Language="SFX">
 							<ShortName>S2_COMBAT_BUILDUP_CHOIR_95bpm5-8_L7M-P0M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_BUILDUP_CHOIR_95bpm5-8_L7M-P0M_D79FB2B7.wem</Path>
 						</File>
+						<File Id="990867547" Language="SFX">
+							<ShortName>S2_Boss\B3\S2_Boss_B3_Strings_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B3/S2_Boss_B3_Strings_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
 						<File Id="1008550453" Language="SFX">
 							<ShortName>S2_COMBAT_BRIDGE_PERC_95bpm5-8_L8M-P0M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_BRIDGE_PERC_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
 						</File>
+						<File Id="1013273724" Language="SFX">
+							<ShortName>S2_Boss\C2\S2_Boss_C2_G.Piano_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C2/S2_Boss_C2_G.Piano_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1017435493" Language="SFX">
+							<ShortName>S2_Boss\C1\S2_Boss_C1_G.Piano_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/C1/S2_Boss_C1_G.Piano_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1024475996" Language="SFX">
+							<ShortName>S2_Boss\C3\S2_Boss_C3_Cymbals_80bpm4-4_L16M-P1M.wav</ShortName>
+							<Path>SFX/S2_Boss/C3/S2_Boss_C3_Cymbals_80bpm4-4_L16M-P1M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1027002188" Language="SFX">
+							<ShortName>S2_Boss\B1\S2_Boss_B1_Strings_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B1/S2_Boss_B1_Strings_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1033139949" Language="SFX">
+							<ShortName>S2_Boss\Outro\S2_Boss_Outro_B.Choirs_80bpm4-4_L4M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/Outro/S2_Boss_Outro_B.Choirs_80bpm4-4_L4M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1040476646" Language="SFX">
+							<ShortName>S2_Boss\B2\S2_Boss_B2_Brasses_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B2/S2_Boss_B2_Brasses_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1057485896" Language="SFX">
+							<ShortName>S2_Boss\D\S2_Boss_D_Drums_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/D/S2_Boss_D_Drums_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1060218010" Language="SFX">
+							<ShortName>S2_Boss\B2\S2_Boss_B2_Shakuhachi_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/B2/S2_Boss_B2_Shakuhachi_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
 						<File Id="1060938409" Language="SFX">
 							<ShortName>S2_COMBAT_THEME_OUTRO_STRINGS_95bpm5-8_L8M-P0M.wav</ShortName>
 							<Path>SFX/S2_COMBAT_THEME_OUTRO_STRINGS_95bpm5-8_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1065611118" Language="SFX">
+							<ShortName>S2_Boss\A\S2_Boss_A_Strings_80bpm4-4_L8M-P0M.wav</ShortName>
+							<Path>SFX/S2_Boss/A/S2_Boss_A_Strings_80bpm4-4_L8M-P0M_D79FB2B7.wem</Path>
+						</File>
+						<File Id="1071032144" Language="SFX">
+							<ShortName>S2_Boss\C1\S2_Boss_C1_Cymbals_80bpm4-4_L8M-P1M.wav</ShortName>
+							<Path>SFX/S2_Boss/C1/S2_Boss_C1_Cymbals_80bpm4-4_L8M-P1M_D79FB2B7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
@@ -251,6 +519,77 @@
 						<SwitchContainer SwitchValue="{BB573B8F-26A6-4FD5-A568-0E75CD545CBC}">
 							<Media>
 								<File Id="146142117"/>
+							</Media>
+						</SwitchContainer>
+						<SwitchContainer SwitchValue="{729323AF-59F8-4C4C-AA17-5B880341A81C}">
+							<Media>
+								<File Id="6240651"/>
+								<File Id="24694041"/>
+								<File Id="57125666"/>
+								<File Id="74683610"/>
+								<File Id="87499183"/>
+								<File Id="108497594"/>
+								<File Id="116944001"/>
+								<File Id="134356197"/>
+								<File Id="146460236"/>
+								<File Id="165519568"/>
+								<File Id="165695530"/>
+								<File Id="168392530"/>
+								<File Id="177824071"/>
+								<File Id="205432399"/>
+								<File Id="223185327"/>
+								<File Id="272898759"/>
+								<File Id="278291708"/>
+								<File Id="285603477"/>
+								<File Id="289541460"/>
+								<File Id="294869383"/>
+								<File Id="312040944"/>
+								<File Id="366968200"/>
+								<File Id="385714398"/>
+								<File Id="417187753"/>
+								<File Id="466547941"/>
+								<File Id="473701196"/>
+								<File Id="491575285"/>
+								<File Id="497398020"/>
+								<File Id="498439905"/>
+								<File Id="527349538"/>
+								<File Id="541402666"/>
+								<File Id="547124148"/>
+								<File Id="556015589"/>
+								<File Id="666124762"/>
+								<File Id="669563909"/>
+								<File Id="671488941"/>
+								<File Id="677078096"/>
+								<File Id="690438538"/>
+								<File Id="699096087"/>
+								<File Id="706667325"/>
+								<File Id="711483019"/>
+								<File Id="728915627"/>
+								<File Id="735161777"/>
+								<File Id="742399091"/>
+								<File Id="758188426"/>
+								<File Id="793834268"/>
+								<File Id="801901048"/>
+								<File Id="803341586"/>
+								<File Id="815159283"/>
+								<File Id="820242133"/>
+								<File Id="862123506"/>
+								<File Id="929130371"/>
+								<File Id="940550834"/>
+								<File Id="968241272"/>
+								<File Id="969904515"/>
+								<File Id="971942406"/>
+								<File Id="990867547"/>
+								<File Id="1013273724"/>
+								<File Id="1017435493"/>
+								<File Id="1024475996"/>
+								<File Id="1027002188"/>
+								<File Id="1033139949"/>
+								<File Id="1040476646"/>
+								<File Id="1057485896"/>
+								<File Id="1060218010"/>
+								<File Id="1065611118"/>
+								<File Id="1071032144"/>
 							</Media>
 						</SwitchContainer>
 					</SwitchContainers>
@@ -312,6 +651,7 @@
 						<State Id="1615767906" Name="Music_Main" ObjectPath="\States\Music\Music_State\Music_Main" GUID="{AF2EF22E-FFE3-4885-A2C7-5130DEFCD514}"/>
 						<State Id="3017247325" Name="Music_Map" ObjectPath="\States\Music\Music_State\Music_Map" GUID="{BB573B8F-26A6-4FD5-A568-0E75CD545CBC}"/>
 						<State Id="382373357" Name="Music_S2_Normal_Battle" ObjectPath="\States\Music\Music_State\Music_S2_Normal_Battle" GUID="{459B1E63-D3CB-4F7A-8DA0-29680E28E5C4}"/>
+						<State Id="91695603" Name="Music_S2_Boss_Battle" ObjectPath="\States\Music\Music_State\Music_S2_Boss_Battle" GUID="{729323AF-59F8-4C4C-AA17-5B880341A81C}"/>
 					</States>
 				</StateGroup>
 			</StateGroups>

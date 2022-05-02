@@ -9,6 +9,7 @@
 						<State Name="Music_Main" ID="{AF2EF22E-FFE3-4885-A2C7-5130DEFCD514}"/>
 						<State Name="Music_Map" ID="{BB573B8F-26A6-4FD5-A568-0E75CD545CBC}"/>
 						<State Name="Music_S2_Normal_Battle" ID="{459B1E63-D3CB-4F7A-8DA0-29680E28E5C4}"/>
+						<State Name="Music_S2_Boss_Battle" ID="{729323AF-59F8-4C4C-AA17-5B880341A81C}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

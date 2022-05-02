@@ -51,6 +51,7 @@ namespace AK
             {
                 static const AkUniqueID MUSIC_MAIN = 1615767906U;
                 static const AkUniqueID MUSIC_MAP = 3017247325U;
+                static const AkUniqueID MUSIC_S2_BOSS_BATTLE = 91695603U;
                 static const AkUniqueID MUSIC_S2_NORMAL_BATTLE = 382373357U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE

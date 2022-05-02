@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName = "SingleAttackData",menuName = "ScriptableObject/SkillT/SingleAttackData")]
-public class SingleAttackData : ActiveSkillData
+[CreateAssetMenu(fileName = "SingleSkill",menuName = "ScriptableObject/SkillT/SingleSkill")]
+public class SingleSkill : ActiveSkillData
 {
     public float atk_Dmg;
 

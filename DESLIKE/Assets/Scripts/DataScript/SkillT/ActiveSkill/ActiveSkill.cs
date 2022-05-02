@@ -19,6 +19,25 @@ public class ActiveSkill : Skill
         cur_cooltime = 0;
     }
 
+    public override IEnumerator UseSkill(HeroInfo targetInfo)
+    {
+        heroInfo.action = Soldier_Action.Skill;
+        if (heroInfo.skeletonAnimation.skeleton != null)//지우기
+            heroInfo.skeletonAnimation.state.SetAnimation(0, skillData.code, false);//스킬
+        //AkSoundEngine.PostEvent(skillData.code, gameObject);활성화
+        yield return new WaitForSeconds(((ActiveSkillData)skillData).start_Delay);
+        if (targetInfo && targetInfo.gameObject.layer != 7)
+        {
+            heroInfo.cur_Mp -= ((ActiveSkillData)skillData).mp;
+            cur_cooltime = ((ActiveSkillData)skillData).cooltime;
+            StartCoroutine(SkillCooltime());
+            skillData.Effect(heroInfo, targetInfo);
+            heroInfo.action = Soldier_Action.End_Delay;
+            yield return new WaitForSeconds(((ActiveSkillData)skillData).end_Delay);
+        }
+        heroInfo.action = Soldier_Action.Idle;
+    }
+
     public bool IsActive()
     {
         if (cur_cooltime <= 0 && heroInfo.cur_Mp >= ((ActiveSkillData)skillData).mp)
@@ -63,10 +82,5 @@ public class ActiveSkill : Skill
                 heroInfo.skillTargetInfo = heroInfo.skillTarget.GetComponent<HeroInfo>();
             }
         }
-    }
-
-    public override IEnumerator UseSkill(HeroInfo targetInfo)
-    {
-        yield return null;
     }
 }

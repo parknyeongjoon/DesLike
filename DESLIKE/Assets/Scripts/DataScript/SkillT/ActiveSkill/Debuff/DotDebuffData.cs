@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "DotDebuffData", menuName = "ScriptableObject/extraSkill/DotDebuffData")]
+[CreateAssetMenu(fileName = "DotDebuffData", menuName = "ScriptableObject/ExtraSkill/DotDebuffData")]
 public class DotDebuffData : DebuffData
 {
     public float dotTime;
     public float dotDamage;
+
+    public SkillData stackOverflowEffect;
 
     public override IEnumerator DebuffCoroutine(HeroInfo heroInfo, HeroInfo targetInfo)
     {
@@ -16,6 +18,7 @@ public class DotDebuffData : DebuffData
         }
         if (targetInfo.debuffCoroutine[code].Count >= max_Stack)//최대 스택 수 보다 많은 지 검사
         {
+            stackOverflowEffect.Effect(heroInfo, targetInfo);
             targetInfo.StopCoroutine(targetInfo.debuffCoroutine[code][0]);//제일 오래된 코루틴 정지시키고 갱신하기, 버그 일어남
             Remove_Debuff(targetInfo, targetInfo.debuffCoroutine[code][0]);//고치기(0번째 인덱스말고 실행된 코루틴을 담을 방법이 없을까?)//효과 제거해주기
         }

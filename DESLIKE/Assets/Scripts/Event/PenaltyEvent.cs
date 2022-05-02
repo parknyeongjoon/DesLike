@@ -27,7 +27,6 @@ public class PenaltyEvent : EventBasic
             else
                 ranPenalty = saveManager.gameData.eventData.ranPenalty;
 
-
             switch (ranPenalty)
             {
                 case 0: // Ã¼·Â

@@ -85,6 +85,15 @@ public class EventData
     public int ranPenalty;
 }
 
+[System.Serializable]
+public class VillageData
+{
+    public int[] randRelic = new int[6];   // 목록별 랜덤넘버
+    public int[] relicPrice = new int[6];  // 목록별 가격
+    public bool[] isSoldOut = new bool[6];
+    public bool isNewSet;
+}
+
 
 [System.Serializable]
 public class CurBattleNodeData
@@ -111,6 +120,7 @@ public class GameData
     public List<string> relicSaveData = new List<string>();
     public EventData eventData = new EventData();
     public MapData mapData = new MapData();
+    public VillageData villageData = new VillageData();
     public CurBattleNodeData curBattleNodeData = new CurBattleNodeData();
     //mutant, 유물, extraSkills 등 바뀐 애들 저장해야함(continue 누르면 복제하는 식으로 하면 될 듯)
 }

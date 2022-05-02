@@ -421,7 +421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &56284648
 RectTransform:
   m_ObjectHideFlags: 0
@@ -471,9 +471,9 @@ MonoBehaviour:
     isAlreadySelect: 0
     ranPenalty: 0
   OptionText:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 196280386}
+  - {fileID: 307407791}
+  - {fileID: 1381274072}
   Buttons:
   - {fileID: 131806369}
   - {fileID: 448115408}
@@ -689,6 +689,7 @@ MonoBehaviour:
   RelicEvent: {fileID: 60949765}
   HealEvent: {fileID: 253311066}
   AreaEvent: {fileID: 1046773560}
+  PenaltyEvent: {fileID: 0}
 --- !u!1 &94130575
 GameObject:
   m_ObjectHideFlags: 0

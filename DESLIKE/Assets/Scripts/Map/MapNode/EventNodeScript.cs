@@ -206,7 +206,7 @@ public class EventNodeScript : NodeScript
             norTotal = speNorRelC + comNorRelC;  // 주술국 + 공통
 
         int rand = Random.Range(0, norTotal);   // 일반 범위 내 랜덤값
-        eventNode.reward.relic = eventNode.ableRelicRewards[rand];  // 해당 유물을 노드에 저장
+        eventNode.reward.relic.Add(eventNode.ableRelicRewards[rand]);  // 해당 유물을 노드에 저장
         // saveManager.gameData.curBattleNodeData.relRewardIndex[button, 0] = rand;    // 유물 번호 게임데이터에 저장
         // 중복 유물인지 확인해야함
     }
@@ -226,7 +226,7 @@ public class EventNodeScript : NodeScript
         }
         int rand = Random.Range(0, epicTotal) + norTotal;
 
-        eventNode.reward.relic = eventNode.ableRelicRewards[rand];
+        eventNode.reward.relic.Add(eventNode.ableRelicRewards[rand]);
         // saveManager.gameData.rewardData.relicRewardIndex[button] = rand;
         // 중복 유물인지 확인해야함
     }
@@ -245,7 +245,7 @@ public class EventNodeScript : NodeScript
             legendTotal = speLegendRelC + comLegendRelC;
         }
         int rand = Random.Range(0, legendTotal) + neTotal;
-        eventNode.reward.relic = eventNode.ableRelicRewards[rand];
+        eventNode.reward.relic.Add(eventNode.ableRelicRewards[rand]);
         // saveManager.gameData.rewardData.relicRewardIndex[button] = rand;
         // 중복 유물인지 확인해야함
     }

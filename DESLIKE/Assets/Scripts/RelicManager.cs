@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class RelicManager : MonoBehaviour
 {
-    static RelicManager instance;
+    public static RelicManager instance;
 
     public List<Relic> relicList = new List<Relic>();
 
@@ -25,6 +25,8 @@ public class RelicManager : MonoBehaviour
             return instance;
         }
     }
+
+    // relic instantiate ÇØ¾ßÇÔ
 
     void Awake()
     {

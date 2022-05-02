@@ -11,7 +11,8 @@ public class MapNode : ScriptableObject
     public List<Relic> ableRelicRewards = new List<Relic>();
     public Kingdom kingdom;
     public Reward reward;
-    
+    public int[] relicLevelCount = new int[3];
+
     public void SetAbleReward()
     {
         kingdom = Kingdom.Physic;   // 수정 필요
@@ -63,7 +64,7 @@ public class MapNode : ScriptableObject
             }
         }
 
-        ableRelicRewards = new List<Relic>(1);
+        ableRelicRewards = new List<Relic>();
         if (kingdom == Kingdom.Physic)  // ableRelicReward 세팅
         {
             kingdomNorRelC = map.physicNorRel.Count;
@@ -76,6 +77,10 @@ public class MapNode : ScriptableObject
             sum4 = sum3 + kingdomLegendRelC;
             sum5 = sum4 + comLegendRelC;
 
+            relicLevelCount[0] = kingdomNorRelC + comNorRelC;
+            relicLevelCount[1] = kingdomEpicRelC + comEpicRelC;
+            relicLevelCount[2] = kingdomLegendRelC + comLegendRelC;
+            
             if (ableRelicRewards.Count < sum3)
             {
                 for (int i = 0; i < kingdomNorRelC; i++)
@@ -87,9 +92,9 @@ public class MapNode : ScriptableObject
                 for (int i = sum2; i < sum3; i++)
                     ableRelicRewards.Add(map.commonEpicRel[i - sum2]);    // 공통 희귀 유물 추가
                 for (int i = sum3; i < sum4; i++)
-                    ableRelicRewards.Add(map.physicLegendRel[i - sum3]);    // 공통 희귀 유물 추가
+                    ableRelicRewards.Add(map.physicLegendRel[i - sum3]);    // 공통 전설 유물 추가
                 for (int i = sum4; i < sum5; i++)
-                    ableRelicRewards.Add(map.commonLegendRel[i - sum4]);    // 공통 희귀 유물 추가
+                    ableRelicRewards.Add(map.commonLegendRel[i - sum4]);    // 공통 전설 유물 추가
             }
         }
         else if (kingdom == Kingdom.Spell)
@@ -103,6 +108,11 @@ public class MapNode : ScriptableObject
             sum3 = sum2 + comEpicRelC;
             sum4 = sum3 + kingdomLegendRelC;
             sum5 = sum4 + comLegendRelC;
+
+            relicLevelCount[0] = kingdomNorRelC + comNorRelC;
+            relicLevelCount[1] = kingdomEpicRelC + comEpicRelC;
+            relicLevelCount[2] = kingdomLegendRelC + comLegendRelC;
+
             if (ableRelicRewards.Count < sum3)
             {
 

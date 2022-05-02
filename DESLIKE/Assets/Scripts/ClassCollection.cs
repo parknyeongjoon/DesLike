@@ -91,7 +91,7 @@ public class Buff_Stat
 public class Reward
 {
     public List<SoldierReward> soldierReward;
-    public Relic relic;
+    public List<Relic> relic;
     public int gold;//골드
     public int magicalStone;//진영화폐
 }

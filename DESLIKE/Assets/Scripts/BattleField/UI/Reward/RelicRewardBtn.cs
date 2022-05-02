@@ -17,7 +17,7 @@ public class RelicRewardBtn : MonoBehaviour
     void Start()
     {
 
-        relicScript = SaveManager.Instance.map.curMapNode.reward.relic.GetComponent<Relic>();
+        relicScript = SaveManager.Instance.map.curMapNode.reward.relic[0].GetComponent<Relic>();
         relicData = relicScript.relicData;
         //toolTipPanel.SetActive(false);
         transform.GetChild(0).GetComponent<TMP_Text>().text = relicData.relicName.ToString();
@@ -27,7 +27,7 @@ public class RelicRewardBtn : MonoBehaviour
     public void GetReward()
     {
         RelicManager.Instance.relicList.Add(relicScript);
-        Instantiate(SaveManager.Instance.map.curMapNode.reward.relic, RelicManager.Instance.relicCanvas.transform.GetChild(0).transform);
+        Instantiate(SaveManager.Instance.map.curMapNode.reward.relic[0], RelicManager.Instance.relicCanvas.transform.GetChild(0).transform);
         Destroy(gameObject);
     }
 

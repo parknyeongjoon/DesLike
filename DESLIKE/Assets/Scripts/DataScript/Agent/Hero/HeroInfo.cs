@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Spine.Unity;
 
 public class HeroInfo : CastleInfo
 {
     public SkeletonAnimation skeletonAnimation;
+    public UnityEvent<float> stunEvent;
+    public UnityEvent<float> tauntEvent;
 
     public Soldier_State state;
     public Soldier_Action action;
@@ -32,7 +35,6 @@ public class HeroInfo : CastleInfo
 
     protected virtual IEnumerator Start()
     {
-        Debug.Log("영웅");
         SaveManager saveManager = SaveManager.Instance;
         healWeight = 0;
         cur_Hp = saveManager.gameData.heroSaveData.cur_Hp;
@@ -122,8 +124,9 @@ public class HeroInfo : CastleInfo
 
     public void Stun(float stunTime)
     {
+        
         state = Soldier_State.Stun;
-        //StartCoroutine(soldierBehaviour.Stun_Behaviour());
+        stunEvent?.Invoke(stunTime);
     }
 
     protected IEnumerator Hp_Mp_Re()

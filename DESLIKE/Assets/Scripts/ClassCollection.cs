@@ -5,10 +5,10 @@ using UnityEngine;
 public enum Mouse_State { Idle, Target, Grenade }
 public enum Port_State { Idle, SetSoldier, SetMutant, Drag, Sell }
 
-public enum Team { Ally = 1, Enemy = 2, Neutral = 4 }
-public enum AttackArea { None = 0, Ground = 1 << 8, Sky = 1 << 11, Dual = AttackArea.Ground + AttackArea.Sky }//공격 범위
+public enum Team { Ally = 1, Enemy = 1 << 1, Neutral = 1 << 2 }
+public enum AttackArea { None = 0, Ground = 1 << 8, Sky = 1 << 11, Dual = Ground + Sky }//공격 범위
 public enum BodyArea { Ground = 1 << 8, Sky = 1 << 11 }
-public enum Soldier_State { Idle, Detect, Stun, Battle, Charge, Taunt, Dead }//유닛들 상태
+public enum Soldier_State { Idle, Detect, Battle, Charge, Stun, Taunt, Dead }//유닛들 상태, Stun 뒤로는 조작 불가능한 상태
 public enum AnimState { Idle, Move, Atk }
 public enum Soldier_Action { Idle, Move, Attack, Skill, End_Delay }
 

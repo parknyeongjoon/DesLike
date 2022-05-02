@@ -62,6 +62,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Music_S2_Boss_Battle" ID="{18BCD6F2-0F94-466D-B683-61CBAE91D663}">
+					<ChildrenList>
+						<Action Name="" ID="{00670AD3-1221-40D7-836E-E9E4047F9C28}" ShortID="802344500">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_S2_Boss_Battle" ID="{729323AF-59F8-4C4C-AA17-5B880341A81C}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

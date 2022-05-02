@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID H_23101_SKILL_1 = 2377059575U;
         static const AkUniqueID H_23101_SKILL_2 = 2377059572U;
         static const AkUniqueID MUSIC_MAP = 3017247325U;
+        static const AkUniqueID MUSIC_S2_BOSS_BATTLE = 91695603U;
         static const AkUniqueID MUSIC_S2_NORMAL_BATTLE = 382373357U;
         static const AkUniqueID MUSIC_START = 3725903807U;
         static const AkUniqueID N_11303_ATT_1 = 377015314U;

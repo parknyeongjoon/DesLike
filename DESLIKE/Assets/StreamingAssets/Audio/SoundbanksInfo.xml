@@ -26,7 +26,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="4222639724">
+		<SoundBank Id="3161908922" Language="SFX" Hash="231587565">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -597,7 +597,7 @@
 						<ActionSetStateEntry Id="1615767906" Name="Music_Main" ObjectPath="\States\Music\Music_State\Music_Main"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="1947476378" Name="N_11303_Att" ObjectPath="\Events\Default Work Unit\N\N_11303_Att" DurationType="OneShot" DurationMin="2.022438" DurationMax="2.022438">
+				<Event Id="377015314" Name="N_11303_Att_1" ObjectPath="\Events\Default Work Unit\N\N_11303_Att_1" DurationType="OneShot" DurationMin="2.022438" DurationMax="2.022438">
 					<IncludedMemoryFiles>
 						<File Id="174369190" Language="SFX">
 							<ShortName>11303_Att_Hit_1_Print_01.wav</ShortName>

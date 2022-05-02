@@ -129,7 +129,7 @@
 				</Folder>
 				<Folder Name="N" ID="{9D2D75A4-54E1-42EB-9ADD-0059789CEA6B}" ShortID="991195935">
 					<ChildrenList>
-						<Event Name="N_11303_Att" ID="{C509C309-7E89-4130-9545-D61BB533108B}">
+						<Event Name="N_11303_Att_1" ID="{C509C309-7E89-4130-9545-D61BB533108B}">
 							<ChildrenList>
 								<Action Name="" ID="{03F05676-D9C7-43A8-B894-8EB9CB382168}" ShortID="13446915">
 									<ReferenceList>

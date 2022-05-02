@@ -13,10 +13,18 @@ State	ID	Name	State Group			Notes
 	3017247325	Music_Map	Music_State			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	208977400	TN_Bus			\Default Work Unit\Master Audio Bus\Character Bus\TNE\TN_Bus	
-	986497999	TE_Bus			\Default Work Unit\Master Audio Bus\Character Bus\TNE\TE_Bus	
-	1097649576	TNE			\Default Work Unit\Master Audio Bus\Character Bus\TNE	
+	843762955	h_die_Bus			\Default Work Unit\Master Audio Bus\Character Bus\H_Bus\h_die_Bus	
+	1194134643	H_idle_bus			\Default Work Unit\Master Audio Bus\Character Bus\H_Bus\H_idle_bus	
+	1311555690	N_idle			\Default Work Unit\Master Audio Bus\Character Bus\N_Bus\N_idle	
+	1798247302	N_Bus			\Default Work Unit\Master Audio Bus\Character Bus\N_Bus	
+	1962540672	H_Bus			\Default Work Unit\Master Audio Bus\Character Bus\H_Bus	
 	2026837964	Character Bus			\Default Work Unit\Master Audio Bus\Character Bus	
+	2065703678	N_Die			\Default Work Unit\Master Audio Bus\Character Bus\N_Bus\N_Die	
+	2083319893	N_Att			\Default Work Unit\Master Audio Bus\Character Bus\N_Bus\N_Att	
+	2870636867	N_Skill_1			\Default Work Unit\Master Audio Bus\Character Bus\N_Bus\N_Skill_1	
+	3269956185	H_Skill_1			\Default Work Unit\Master Audio Bus\Character Bus\H_Bus\H_Skill_1	
+	3269956186	H_Skill_2			\Default Work Unit\Master Audio Bus\Character Bus\H_Bus\H_Skill_2	
+	3269956187	H_Skill_3			\Default Work Unit\Master Audio Bus\Character Bus\H_Bus\H_Skill_3	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 

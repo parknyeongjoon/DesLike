@@ -4,12 +4,6 @@
 		<WorkUnit Name="Default Work Unit" ID="{58F1C3E4-6730-4823-B094-BB4F82EF3D8C}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundcasterSession Name="Pause_Test" ID="{A090452F-9719-4C96-B713-6DB6026A9DE8}">
-					<ModuleList>
-						<Module>
-							<ObjectRef Name="Battle_Start" ID="{B85E8104-17E7-4C9D-8087-438DF374E492}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}"/>
-							<Position X="2" Y="0"/>
-						</Module>
-					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="Music_Main" ID="{AF2EF22E-FFE3-4885-A2C7-5130DEFCD514}"/>
@@ -24,10 +18,6 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Battle_Start" ID="{B85E8104-17E7-4C9D-8087-438DF374E492}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}"/>
-							<Position X="0" Y="1"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Music_Map" ID="{DD14FC31-A992-407E-8A3C-1BCA3CBB907A}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -38,7 +28,7 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Music_Main" ID="{AF2EF22E-FFE3-4885-A2C7-5130DEFCD514}"/>
+						<CurrentStateRef Name="Music_S2_Normal_Battle" ID="{459B1E63-D3CB-4F7A-8DA0-29680E28E5C4}"/>
 						<CurrentStateRef Name="None" ID="{B9FFA1F4-7C44-42A8-B90E-8CAD8E38CFA7}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>

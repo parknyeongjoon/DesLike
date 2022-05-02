@@ -15,73 +15,39 @@
 					<ChildrenList>
 						<Bus Name="Character Bus" ID="{3967C2B0-6B26-475E-BC1B-4C04ED87872C}">
 							<ChildrenList>
-								<Bus Name="TNE" ID="{E4C08831-5423-4812-ADC9-1C83042BDA0C}">
-									<PropertyList>
-										<Property Name="BusVolume" Type="Real64">
-											<ValueList>
-												<Value>-96</Value>
-											</ValueList>
-										</Property>
-										<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
-										<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
-										<Property Name="MaxSoundPerInstance" Type="int16">
-											<ValueList>
-												<Value>30</Value>
-											</ValueList>
-										</Property>
-										<Property Name="UseMaxSoundPerInstance" Type="bool">
-											<ValueList>
-												<Value>True</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
+								<Bus Name="H_Bus" ID="{7AC31E02-6073-41C9-BD0E-98351CCABA8A}">
 									<ChildrenList>
-										<Bus Name="TN_Bus" ID="{6D09DD6C-83B3-4B13-B81E-290B57998183}">
-											<PropertyList>
-												<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
-												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
-												<Property Name="MaxSoundPerInstance" Type="int16">
-													<ValueList>
-														<Value>30</Value>
-													</ValueList>
-												</Property>
-												<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
-												<Property Name="UseMaxSoundPerInstance" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
+										<Bus Name="H_idle_bus" ID="{52E038CB-709C-4C7D-A03B-CB904DF3855C}">
 											<ObjectLists/>
 										</Bus>
-										<Bus Name="TE_Bus" ID="{2E0C69BD-7064-409D-8645-F0060D730C37}">
-											<PropertyList>
-												<Property Name="IgnoreParentMaxSoundInstance" Type="bool" Value="True"/>
-												<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
-												<Property Name="MaxSoundPerInstance" Type="int16">
-													<ValueList>
-														<Value>30</Value>
-													</ValueList>
-												</Property>
-												<Property Name="OverLimitBehavior" Type="int16" Value="1"/>
-												<Property Name="UseMaxSoundPerInstance" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
+										<Bus Name="h_die_Bus" ID="{40C0733F-9753-40D9-8AFC-F0F5D63C8B88}">
 											<ObjectLists/>
-											<DuckingList>
-												<DuckItem>
-													<BusRef Name="TN_Bus" ID="{6D09DD6C-83B3-4B13-B81E-290B57998183}"/>
-													<DuckingParam>
-														<Volume>-2</Volume>
-														<FadeInTime>0.5</FadeInTime>
-														<FadeOutTime>0.5</FadeOutTime>
-														<FadeCurve>FadeLinear</FadeCurve>
-													</DuckingParam>
-												</DuckItem>
-											</DuckingList>
+										</Bus>
+										<Bus Name="H_Skill_1" ID="{524EA092-65E9-4ADB-A0C8-138967B2ED39}">
+											<ObjectLists/>
+										</Bus>
+										<Bus Name="H_Skill_2" ID="{C5D67A75-DF1C-408E-BC69-7B72B63FB315}">
+											<ObjectLists/>
+										</Bus>
+										<Bus Name="H_Skill_3" ID="{5B6C1D2B-C243-46C8-B555-3A51B3312D69}">
+											<ObjectLists/>
+										</Bus>
+									</ChildrenList>
+									<ObjectLists/>
+								</Bus>
+								<Bus Name="N_Bus" ID="{AEBECFE6-74ED-44F2-AF0A-6735ED7678CE}">
+									<ChildrenList>
+										<Bus Name="N_Att" ID="{67CE6987-3938-4612-AF51-C0AD83A2A74D}">
+											<ObjectLists/>
+										</Bus>
+										<Bus Name="N_idle" ID="{28C74C80-5408-4EAA-9BC5-9430D07F7742}">
+											<ObjectLists/>
+										</Bus>
+										<Bus Name="N_Die" ID="{2BDBCC38-7764-4458-9491-C886F52832F1}">
+											<ObjectLists/>
+										</Bus>
+										<Bus Name="N_Skill_1" ID="{FEEE3398-6002-4C0E-B1A5-D7605F5F253D}">
+											<ObjectLists/>
 										</Bus>
 									</ChildrenList>
 									<ObjectLists/>

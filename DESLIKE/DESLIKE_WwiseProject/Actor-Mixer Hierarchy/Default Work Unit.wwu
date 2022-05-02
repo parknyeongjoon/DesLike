@@ -3,329 +3,20 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}" PersistMode="Standalone">
 			<ChildrenList>
-				<Folder Name="H_23101" ID="{08224B00-796B-4814-960E-24817DCC2BAF}" ShortID="366793336">
+				<Folder Name="H" ID="{044550DA-DCFD-4E3B-A1C3-770806865C6A}" ShortID="507515047">
 					<ChildrenList>
-						<Sound Name="23101_Die_Print_01" ID="{A7775F42-4D82-4C91-8C7C-4BB3A4F25390}" ShortID="748351894">
-							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{83C9E541-0F25-48AD-AAD8-D1F06B087FA1}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="100"/>
-													<Property Name="Min" Type="Real64" Value="-150"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="Priority" Type="int16">
-									<ValueList>
-										<Value>100</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>10</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Character Bus" ID="{3967C2B0-6B26-475E-BC1B-4C04ED87872C}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-								</Reference>
-							</ReferenceList>
+						<Folder Name="H_23101" ID="{08224B00-796B-4814-960E-24817DCC2BAF}" ShortID="366793336">
 							<ChildrenList>
-								<AudioFileSource Name="23101_Die_Print_01" ID="{6BE451C8-8790-4CD3-886B-11BD772A63F7}">
-									<Language>SFX</Language>
-									<AudioFile>23101_Die_Print_01.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="234665702"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="23101_Die_Print_01" ID="{6BE451C8-8790-4CD3-886B-11BD772A63F7}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="23101_Skill_1_Print_01" ID="{2367BC5A-4E94-49DB-B3C5-FF2D34F55E3E}" ShortID="65090543">
-							<PropertyList>
-								<Property Name="3DSpatialization" Type="int16" Value="2"/>
-								<Property Name="Priority" Type="int16">
-									<ValueList>
-										<Value>100</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>10</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Attenuation">
-									<ObjectRef Name="Obj_Attenuation" ID="{3A32A20C-5CAF-43EF-A1B5-D23B6709EB94}" WorkUnitID="{D1693E2D-D473-4C45-B3FF-C96532F1B0E7}"/>
-								</Reference>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Character Bus" ID="{3967C2B0-6B26-475E-BC1B-4C04ED87872C}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="23101_Skill_1_Print_01" ID="{9FF358F4-02B3-4B26-9198-64CDF45C13FE}">
+								<Sound Name="23101_Die_Print_01" ID="{A7775F42-4D82-4C91-8C7C-4BB3A4F25390}" ShortID="748351894">
 									<PropertyList>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0358298611111112"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="1.27793171296296"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>23101_Skill_1_Print_01.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="797527484"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="23101_Skill_1_Print_01" ID="{9FF358F4-02B3-4B26-9198-64CDF45C13FE}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="23101_Skill_2_Print_01" ID="{8A50DA9E-C9EC-43EB-AB2D-2AC32A3EFF3D}" ShortID="1017111076">
-							<PropertyList>
-								<Property Name="Priority" Type="int16">
-									<ValueList>
-										<Value>100</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>6</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Character Bus" ID="{3967C2B0-6B26-475E-BC1B-4C04ED87872C}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="23101_Skill_2_Print_01" ID="{0196DF49-AAB4-4E31-A989-6408D47E4BBF}">
-									<PropertyList>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.014546052631579"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="1.23156578947368"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>23101_Skill_2_Print_01.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="290311062"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="23101_Skill_2_Print_01" ID="{0196DF49-AAB4-4E31-A989-6408D47E4BBF}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<RandomSequenceContainer Name="23101_Idle" ID="{7F96EC15-D814-4421-B6E6-0F410EA60E8A}" ShortID="159118328">
-							<PropertyList>
-								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-3</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Character Bus" ID="{3967C2B0-6B26-475E-BC1B-4C04ED87872C}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="23101_idle_Print_1_01" ID="{5D4F2B59-8089-4C43-88D4-1C64D5911DFA}" ShortID="134544261">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="23101_idle_Print_1_01" ID="{8BE2C2B8-E2C9-418D-A797-2E429A946015}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0136098927875244"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.319832480506822"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>23101_idle_Print_1_01.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="620869353"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="23101_idle_Print_1_01" ID="{8BE2C2B8-E2C9-418D-A797-2E429A946015}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="23101_idle_Print_2_01" ID="{AE54D111-BA73-4455-A200-1765108D7339}" ShortID="575534906">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="23101_idle_Print_2_01" ID="{5F24310B-C71F-41E6-A743-A31AECE2143A}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0119086561890838"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.413400493421053"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>23101_idle_Print_2_01.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="742762331"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="23101_idle_Print_2_01" ID="{5F24310B-C71F-41E6-A743-A31AECE2143A}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="23101_idle_Print_4_01" ID="{2AC568F9-EBFC-4689-BA22-173E6571CA68}" ShortID="792475188">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="23101_idle_Print_4_01" ID="{82863BF6-AFAE-4E8A-847F-5FA45AA5F1E9}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0136098927875244"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.279002802144249"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>23101_idle_Print_4_01.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="412747251"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="23101_idle_Print_4_01" ID="{82863BF6-AFAE-4E8A-847F-5FA45AA5F1E9}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-							<ObjectLists/>
-						</RandomSequenceContainer>
-						<Sound Name="23101_Skill_1_Voice" ID="{A8A41E60-C744-4FBD-A2A4-9BD0E36EF5F3}" ShortID="827648124">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="23101_idle_Print_3_01" ID="{4ABFA898-80D5-464A-B837-ACA39B8B342E}">
-									<PropertyList>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0136098927875243"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.658378563596491"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>23101_idle_Print_3_01.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="108942149"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="23101_idle_Print_3_01" ID="{4ABFA898-80D5-464A-B837-ACA39B8B342E}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</Folder>
-				<Folder Name="Game Event Sound" ID="{EA84D176-EC02-4D4F-8A6F-FE03697FB1F9}" ShortID="510585739">
-					<ChildrenList>
-						<Sound Name="GameOver_Print_01" ID="{0E86918E-1B7B-4BC2-84EB-82284A9314E4}" ShortID="710348234">
-							<PropertyList>
-								<Property Name="Priority" Type="int16">
-									<ValueList>
-										<Value>100</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-3</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="GameOver_Print_01" ID="{8BD50901-B82E-46F4-BB8F-D07BEAF8D7B7}">
-									<Language>SFX</Language>
-									<AudioFile>GameOver_Print_01.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="554435908"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="GameOver_Print_01" ID="{8BD50901-B82E-46F4-BB8F-D07BEAF8D7B7}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</Folder>
-				<Folder Name="T" ID="{69950ACD-23C3-42E2-9B98-D3EAE5D6DC31}" ShortID="128205163">
-					<ChildrenList>
-						<Folder Name="TN" ID="{8089F0CF-C382-4DE8-B629-7DAD76BD2896}" ShortID="453752312">
-							<ChildrenList>
-								<RandomSequenceContainer Name="12302_Atk_1_Random" ID="{90B4572E-FD84-4A98-9496-01EA7FB4F34A}" ShortID="504207213">
-									<PropertyList>
-										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
-													<Modifier Name="" ID="{B10AD5C8-B123-4049-9D94-4B93470A626E}">
+													<Modifier Name="" ID="{83C9E541-0F25-48AD-AAD8-D1F06B087FA1}">
 														<PropertyList>
 															<Property Name="Enabled" Type="bool" Value="True"/>
 															<Property Name="Max" Type="Real64" Value="100"/>
-															<Property Name="Min" Type="Real64" Value="-100"/>
+															<Property Name="Min" Type="Real64" Value="-150"/>
 														</PropertyList>
 													</Modifier>
 												</ModifierInfo>
@@ -333,12 +24,12 @@
 										</Property>
 										<Property Name="Priority" Type="int16">
 											<ValueList>
-												<Value>60</Value>
+												<Value>100</Value>
 											</ValueList>
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>10</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -347,465 +38,421 @@
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="TN_Bus" ID="{6D09DD6C-83B3-4B13-B81E-290B57998183}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+											<ObjectRef Name="h_die_Bus" ID="{40C0733F-9753-40D9-8AFC-F0F5D63C8B88}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="12302_Atk_1_Print_01" ID="{7B52C8D9-55EE-4D5C-829F-5E38C4D455AF}" ShortID="547200652">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="12302_Atk_1_Print_01" ID="{9ADF0DB2-CF3F-449E-A73D-2C1ADC48FDF0}">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.0486272538986355"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.28802296539961"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>12302_Atk_1_Print_01.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="442996702"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists/>
-											<ActiveSourceList>
-												<ActiveSource Name="12302_Atk_1_Print_01" ID="{9ADF0DB2-CF3F-449E-A73D-2C1ADC48FDF0}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="12302_Atk_1_Print_02" ID="{C99E54EA-EAF2-4633-AA23-BB487C74D952}" ShortID="644502568">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="12302_Atk_1_Print_01" ID="{FAA22BB5-2DCE-4B6A-9348-646AA40C801C}">
-													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0112216739766082"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.0673300438596491"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="0.624673184697856"/>
-														<Property Name="TrimEnd" Type="Real64" Value="0.94636117202729"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>12302_Atk_1_Print_01.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="908949220"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists/>
-											<ActiveSourceList>
-												<ActiveSource Name="12302_Atk_1_Print_01" ID="{FAA22BB5-2DCE-4B6A-9348-646AA40C801C}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="12302_Atk_1_Print_03" ID="{B0642300-D394-4CDD-9A88-838C51900971}" ShortID="254305736">
-											<PropertyList>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-2</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="12302_Atk_1_Print_01" ID="{9E666298-9B64-423C-9FFA-367169E7B8F7}">
-													<PropertyList>
-														<Property Name="FadeInDuration" Type="Real64" Value="0.0224433479532165"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.0286045692419656"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimBegin" Type="Real64" Value="1.2343841374269"/>
-														<Property Name="TrimEnd" Type="Real64" Value="1.352611732646"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>12302_Atk_1_Print_01.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="1066272607"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ObjectLists/>
-											<ActiveSourceList>
-												<ActiveSource Name="12302_Atk_1_Print_01" ID="{9E666298-9B64-423C-9FFA-367169E7B8F7}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-									<ObjectLists/>
-								</RandomSequenceContainer>
-								<Sound Name="12301_Atk_1_Print_01" ID="{EE54388E-3FC9-4D28-B297-09EE9BC0FD18}" ShortID="57521381">
-									<PropertyList>
-										<Property Name="Highpass" Type="int16">
-											<ValueList>
-												<Value>25</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Priority" Type="int16">
-											<ValueList>
-												<Value>60</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-8</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="TN_Bus" ID="{6D09DD6C-83B3-4B13-B81E-290B57998183}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="12301_Atk_1_Print_01" ID="{F58FFAE8-80F0-4F76-BF57-26454712AC42}">
+										<AudioFileSource Name="23101_Die_Print_01" ID="{6BE451C8-8790-4CD3-886B-11BD772A63F7}">
 											<Language>SFX</Language>
-											<AudioFile>12301_Atk_1_Print_01.wav</AudioFile>
+											<AudioFile>23101_Die_Print_01.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="572501093"/>
+												<MediaID ID="234665702"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ObjectLists/>
 									<ActiveSourceList>
-										<ActiveSource Name="12301_Atk_1_Print_01" ID="{F58FFAE8-80F0-4F76-BF57-26454712AC42}" Platform="Linked"/>
+										<ActiveSource Name="23101_Die_Print_01" ID="{6BE451C8-8790-4CD3-886B-11BD772A63F7}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Folder Name="12202" ID="{91EC7250-1E27-43FE-B0B7-F42D11F1CE18}" ShortID="662920619">
+								<RandomSequenceContainer Name="23101_Idle" ID="{7F96EC15-D814-4421-B6E6-0F410EA60E8A}" ShortID="159118328">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="H_idle_bus" ID="{52E038CB-709C-4C7D-A03B-CB904DF3855C}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+										</Reference>
+									</ReferenceList>
 									<ChildrenList>
-										<RandomSequenceContainer Name="12202_Atk_1_Random" ID="{E9D5B2D0-8126-4A83-AD39-C03365E5BD87}" ShortID="191711924">
-											<PropertyList>
-												<Property Name="Highpass" Type="int16">
-													<ValueList>
-														<Value>40</Value>
-													</ValueList>
-												</Property>
-												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-												<Property Name="Pitch" Type="int32">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{517125F9-C1ED-4B85-B675-E0008D717D68}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="200"/>
-																	<Property Name="Min" Type="Real64" Value="-100"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-												<Property Name="Priority" Type="int16">
-													<ValueList>
-														<Value>60</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-4</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
+										<Sound Name="23101_idle_Print_1_01" ID="{5D4F2B59-8089-4C43-88D4-1C64D5911DFA}" ShortID="134544261">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="TN_Bus" ID="{6D09DD6C-83B3-4B13-B81E-290B57998183}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="12202_Atk_1_Print_01" ID="{CA47D435-0A81-43B5-82E6-5C6341FE3214}" ShortID="253382507">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="12202_Atk_1_Print_01" ID="{7E399D66-A79F-4148-AABF-6A5B6C6CFEBC}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.0336650219298246"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.0336650219298246"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimEnd" Type="Real64" Value="0.231914595516569"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>12202_Atk_1_Print_01.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="453919233"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ObjectLists/>
-													<ActiveSourceList>
-														<ActiveSource Name="12202_Atk_1_Print_01" ID="{7E399D66-A79F-4148-AABF-6A5B6C6CFEBC}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="12202_Atk_1_Print_02" ID="{AA30D22E-ED6B-407E-9A4C-D8B8E4B583A5}" ShortID="794896906">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="12202_Atk_1_Print_01" ID="{594037C6-177A-4840-8ED4-A5223C830081}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.0374055799220273"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.0486272538986355"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.201990131578948"/>
-																<Property Name="TrimEnd" Type="Real64" Value="0.445126401072125"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>12202_Atk_1_Print_01.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="770202027"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ObjectLists/>
-													<ActiveSourceList>
-														<ActiveSource Name="12202_Atk_1_Print_01" ID="{594037C6-177A-4840-8ED4-A5223C830081}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="12202_Atk_1_Print_03" ID="{EB108559-D0D3-4538-9368-E83209273D27}" ShortID="1019557575">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="12202_Atk_1_Print_01" ID="{57EFC491-70A7-4D7F-B8B5-E25B6CD223F5}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.0299244639376218"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.0374055799220273"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.415201937134503"/>
-																<Property Name="TrimEnd" Type="Real64" Value="0.632154300682261"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>12202_Atk_1_Print_01.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="643813455"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ObjectLists/>
-													<ActiveSourceList>
-														<ActiveSource Name="12202_Atk_1_Print_01" ID="{57EFC491-70A7-4D7F-B8B5-E25B6CD223F5}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-											<ObjectLists/>
-										</RandomSequenceContainer>
-										<Sound Name="12202_Skill_1_Print_01" ID="{67ED1A40-F841-4BB8-B6AF-FB8DEBEC9DF6}" ShortID="733326373">
-											<PropertyList>
-												<Property Name="Priority" Type="int16">
-													<ValueList>
-														<Value>60</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Volume" Type="Real64">
-													<ValueList>
-														<Value>-12</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="TN_Bus" ID="{6D09DD6C-83B3-4B13-B81E-290B57998183}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="12202_Skill_1_Print_01" ID="{BFFE1B41-A523-42F8-988A-DF3A88302A0B}">
+												<AudioFileSource Name="23101_idle_Print_1_01" ID="{8BE2C2B8-E2C9-418D-A797-2E429A946015}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0136098927875244"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.319832480506822"/>
+													</PropertyList>
 													<Language>SFX</Language>
-													<AudioFile>12202_Skill_1_Print_01.wav</AudioFile>
+													<AudioFile>23101_idle_Print_1_01.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="460822715"/>
+														<MediaID ID="620869353"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ObjectLists/>
 											<ActiveSourceList>
-												<ActiveSource Name="12202_Skill_1_Print_01" ID="{BFFE1B41-A523-42F8-988A-DF3A88302A0B}" Platform="Linked"/>
+												<ActiveSource Name="23101_idle_Print_1_01" ID="{8BE2C2B8-E2C9-418D-A797-2E429A946015}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="23101_idle_Print_2_01" ID="{AE54D111-BA73-4455-A200-1765108D7339}" ShortID="575534906">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="23101_idle_Print_2_01" ID="{5F24310B-C71F-41E6-A743-A31AECE2143A}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0119086561890838"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.413400493421053"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>23101_idle_Print_2_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="742762331"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="23101_idle_Print_2_01" ID="{5F24310B-C71F-41E6-A743-A31AECE2143A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="23101_idle_Print_4_01" ID="{2AC568F9-EBFC-4689-BA22-173E6571CA68}" ShortID="792475188">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="23101_idle_Print_4_01" ID="{82863BF6-AFAE-4E8A-847F-5FA45AA5F1E9}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0136098927875244"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.279002802144249"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>23101_idle_Print_4_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="412747251"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="23101_idle_Print_4_01" ID="{82863BF6-AFAE-4E8A-847F-5FA45AA5F1E9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</RandomSequenceContainer>
+								<Folder Name="H_23101_Skill" ID="{253FD49B-6E74-4A58-9E69-1ED3F3026E67}" ShortID="918108867">
+									<ChildrenList>
+										<Sound Name="23101_Skill_1_Print_01" ID="{2367BC5A-4E94-49DB-B3C5-FF2D34F55E3E}" ShortID="65090543">
+											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="Priority" Type="int16">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>10</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Attenuation">
+													<ObjectRef Name="Obj_Attenuation" ID="{3A32A20C-5CAF-43EF-A1B5-D23B6709EB94}" WorkUnitID="{D1693E2D-D473-4C45-B3FF-C96532F1B0E7}"/>
+												</Reference>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="H_Skill_1" ID="{524EA092-65E9-4ADB-A0C8-138967B2ED39}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="23101_Skill_1_Print_01" ID="{9FF358F4-02B3-4B26-9198-64CDF45C13FE}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0358298611111112"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.27793171296296"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>23101_Skill_1_Print_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="797527484"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="23101_Skill_1_Print_01" ID="{9FF358F4-02B3-4B26-9198-64CDF45C13FE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="23101_Skill_1_Voice" ID="{A8A41E60-C744-4FBD-A2A4-9BD0E36EF5F3}" ShortID="827648124">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="H_Skill_1" ID="{524EA092-65E9-4ADB-A0C8-138967B2ED39}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="23101_idle_Print_3_01" ID="{4ABFA898-80D5-464A-B837-ACA39B8B342E}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0136098927875243"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.658378563596491"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>23101_idle_Print_3_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="108942149"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="23101_idle_Print_3_01" ID="{4ABFA898-80D5-464A-B837-ACA39B8B342E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="23101_Skill_2_Print_01" ID="{8A50DA9E-C9EC-43EB-AB2D-2AC32A3EFF3D}" ShortID="1017111076">
+											<PropertyList>
+												<Property Name="Priority" Type="int16">
+													<ValueList>
+														<Value>100</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="H_Skill_2" ID="{C5D67A75-DF1C-408E-BC69-7B72B63FB315}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="23101_Skill_2_Print_01" ID="{0196DF49-AAB4-4E31-A989-6408D47E4BBF}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.014546052631579"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.23156578947368"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>23101_Skill_2_Print_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="290311062"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="23101_Skill_2_Print_01" ID="{0196DF49-AAB4-4E31-A989-6408D47E4BBF}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
 								</Folder>
-								<RandomSequenceContainer Name="T_Idle" ID="{E875BE77-B8DA-4F5F-B8F9-F63ED199864D}" ShortID="890533856">
-									<PropertyList>
-										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{6AEE7A2B-439A-4867-8B7D-05A34338629F}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="100"/>
-															<Property Name="Min" Type="Real64" Value="-100"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Priority" Type="int16">
-											<ValueList>
-												<Value>60</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="N" ID="{E308F189-02B6-4A8D-A6D7-3B8C4708F93B}" ShortID="894488254">
+					<ChildrenList>
+						<Folder Name="N_11303" ID="{3F9B7066-CBE3-433D-92B0-85CF8FD84EB5}" ShortID="325491834">
+							<ChildrenList>
+								<Sound Name="11303_Att_Woosh_Print_01" ID="{D41E8008-B7FD-46B2-9864-310AA3FA81F7}" ShortID="121372131">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="TN_Bus" ID="{6D09DD6C-83B3-4B13-B81E-290B57998183}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+											<ObjectRef Name="N_Att" ID="{67CE6987-3938-4612-AF51-C0AD83A2A74D}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Test_Idle_1_Print_01" ID="{85B31B1C-2BBC-4A44-A4FF-B17089D2187E}" ShortID="891380958">
-											<PropertyList>
-												<Property Name="Highpass" Type="int16">
-													<ValueList>
-														<Value>17</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Pitch" Type="int32">
-													<ValueList>
-														<Value>500</Value>
-													</ValueList>
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{1CFDA34F-E615-4D0B-BB4C-A0D6479006E9}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="150"/>
-																	<Property Name="Min" Type="Real64" Value="-50"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-											</PropertyList>
+										<AudioFileSource Name="11303_Att_Woosh_Print_01" ID="{0CB75EF5-A348-4D57-866D-2BEE502DD13C}">
+											<Language>SFX</Language>
+											<AudioFile>11303_Att_Woosh_Print_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="371792751"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="11303_Att_Woosh_Print_01" ID="{0CB75EF5-A348-4D57-866D-2BEE502DD13C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="11303_Die_Print_01" ID="{F9EAF312-2372-4B33-8B65-6AF8BF8236B7}" ShortID="455686517">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="N_Die" ID="{2BDBCC38-7764-4458-9491-C886F52832F1}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="11303_Die_Print_01" ID="{3C115B98-C3A0-4B20-8CC2-916CBF86B557}">
+											<Language>SFX</Language>
+											<AudioFile>11303_Die_Print_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="140826495"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="11303_Die_Print_01" ID="{3C115B98-C3A0-4B20-8CC2-916CBF86B557}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="11303_Skill_1_Voice_Print_01" ID="{2DEF9FD5-11C9-4488-A74A-55ABCA0E803F}" ShortID="871229123">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="N_Skill_1" ID="{FEEE3398-6002-4C0E-B1A5-D7605F5F253D}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="11303_Skill_1_Voice_Print_01" ID="{5801D4B2-3568-4C82-9111-66377EEE2290}">
+											<Language>SFX</Language>
+											<AudioFile>11303_Skill_1_Voice_Print_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="350264250"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="11303_Skill_1_Voice_Print_01" ID="{5801D4B2-3568-4C82-9111-66377EEE2290}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<RandomSequenceContainer Name="N_11303_Att" ID="{1194EB1B-8947-4BE5-9D87-9EBB66A56113}" ShortID="1011030188">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="11303_Att_Hit_1_Print_01" ID="{C49DFB29-3D42-4763-8938-03338429F49B}" ShortID="133557800">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="TN_Bus" ID="{6D09DD6C-83B3-4B13-B81E-290B57998183}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+													<ObjectRef Name="N_Att" ID="{67CE6987-3938-4612-AF51-C0AD83A2A74D}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Test_Idle_1_Print_01" ID="{1F654624-BDFB-45F3-96F0-9EAEB33B1662}">
+												<AudioFileSource Name="11303_Att_Hit_1_Print_01" ID="{FB2B052B-C6FA-4974-87F5-5DC6A93293CA}">
 													<Language>SFX</Language>
-													<AudioFile>Test_Idle_1_Print_01.wav</AudioFile>
+													<AudioFile>11303_Att_Hit_1_Print_01.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="586797166"/>
+														<MediaID ID="174369190"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ObjectLists/>
 											<ActiveSourceList>
-												<ActiveSource Name="Test_Idle_1_Print_01" ID="{1F654624-BDFB-45F3-96F0-9EAEB33B1662}" Platform="Linked"/>
+												<ActiveSource Name="11303_Att_Hit_1_Print_01" ID="{FB2B052B-C6FA-4974-87F5-5DC6A93293CA}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Test_Idle_2_Print_01" ID="{5BBFA5BE-71A5-4AA7-A297-15B89D28CACB}" ShortID="302135267">
-											<PropertyList>
-												<Property Name="Highpass" Type="int16">
-													<ValueList>
-														<Value>9</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Pitch" Type="int32">
-													<ValueList>
-														<Value>100</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
+										<Sound Name="11303_Att_Hit_2_Print_01" ID="{C489769C-649A-4814-8E36-A21FC3C35226}" ShortID="500975569">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="TN_Bus" ID="{6D09DD6C-83B3-4B13-B81E-290B57998183}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+													<ObjectRef Name="N_Att" ID="{67CE6987-3938-4612-AF51-C0AD83A2A74D}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Test_Idle_2_Print_01" ID="{CE3B4BA7-81FD-41B8-9591-AE587B8AB263}">
+												<AudioFileSource Name="11303_Att_Hit_2_Print_01" ID="{E25734AF-9837-4ADD-9597-D4CF5FC20BE2}">
 													<Language>SFX</Language>
-													<AudioFile>Test_Idle_2_Print_01.wav</AudioFile>
+													<AudioFile>11303_Att_Hit_2_Print_01.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="796178526"/>
+														<MediaID ID="380848979"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ObjectLists/>
 											<ActiveSourceList>
-												<ActiveSource Name="Test_Idle_2_Print_01" ID="{CE3B4BA7-81FD-41B8-9591-AE587B8AB263}" Platform="Linked"/>
+												<ActiveSource Name="11303_Att_Hit_2_Print_01" ID="{E25734AF-9837-4ADD-9597-D4CF5FC20BE2}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Test_Idle_3_Print_01" ID="{46A1E5E5-0218-4040-88FF-AAE82D8A9270}" ShortID="165185133">
-											<PropertyList>
-												<Property Name="Highpass" Type="int16">
-													<ValueList>
-														<Value>15</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Pitch" Type="int32">
-													<ValueList>
-														<Value>100</Value>
-													</ValueList>
-												</Property>
-											</PropertyList>
+										<Sound Name="11303_Att_Hit_3_Print_01" ID="{DC54D506-DED6-4261-926F-63EF853462F2}" ShortID="347016291">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="TN_Bus" ID="{6D09DD6C-83B3-4B13-B81E-290B57998183}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+													<ObjectRef Name="N_Att" ID="{67CE6987-3938-4612-AF51-C0AD83A2A74D}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Test_Idle_3_Print_01" ID="{C3EEF40C-BB7F-44AE-B966-D87143A3478E}">
+												<AudioFileSource Name="11303_Att_Hit_3_Print_01" ID="{9FA3B2E0-82C0-4933-A11A-5C189F090031}">
 													<Language>SFX</Language>
-													<AudioFile>Test_Idle_3_Print_01.wav</AudioFile>
+													<AudioFile>11303_Att_Hit_3_Print_01.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="968516569"/>
+														<MediaID ID="772756270"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ObjectLists/>
 											<ActiveSourceList>
-												<ActiveSource Name="Test_Idle_3_Print_01" ID="{C3EEF40C-BB7F-44AE-B966-D87143A3478E}" Platform="Linked"/>
+												<ActiveSource Name="11303_Att_Hit_3_Print_01" ID="{9FA3B2E0-82C0-4933-A11A-5C189F090031}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="11303_Att_Hit_4_Print_01" ID="{932163FF-4A8D-4487-83E8-DB0200DB0ACA}" ShortID="820643686">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="N_Att" ID="{67CE6987-3938-4612-AF51-C0AD83A2A74D}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="11303_Att_Hit_4_Print_01" ID="{DFBE9C09-834B-4A68-B6A7-58FCEE1270FE}">
+													<Language>SFX</Language>
+													<AudioFile>11303_Att_Hit_4_Print_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="698690166"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="11303_Att_Hit_4_Print_01" ID="{DFBE9C09-834B-4A68-B6A7-58FCEE1270FE}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -813,117 +460,6 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
-						<Folder Name="TE" ID="{C827B11F-32D0-4263-B3D8-162990358641}" ShortID="35098852">
-							<ChildrenList>
-								<Sound Name="12305_Skill_1_Print_01" ID="{8F9A9089-2202-4A9B-AB88-D72F8CDD5342}" ShortID="675866808">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{EF38AE9B-7B14-44F8-99D8-3F179350E13F}">
-														<PropertyList>
-															<Property Name="Max" Type="Real64" Value="100"/>
-															<Property Name="Min" Type="Real64" Value="-100"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="Priority" Type="int16">
-											<ValueList>
-												<Value>80</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-14</Value>
-											</ValueList>
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{290D5D4B-5440-41D1-951D-1B203B4CEFF6}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Min" Type="Real64" Value="-2"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="TE_Bus" ID="{2E0C69BD-7064-409D-8645-F0060D730C37}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="12305_Skill_1_Print_01" ID="{3EE09C92-FF88-4A7D-9DF5-9403577D705D}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.130919529727095"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.800479410331385"/>
-											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>12305_Skill_1_Print_01.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="116424717"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ObjectLists/>
-									<ActiveSourceList>
-										<ActiveSource Name="12305_Skill_1_Print_01" ID="{3EE09C92-FF88-4A7D-9DF5-9403577D705D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</Folder>
-						<Sound Name="T_23101_Atk_1_Print_01" ID="{11A731A2-B700-427C-85B0-E70AB0641D50}" ShortID="504179502">
-							<PropertyList>
-								<Property Name="Lowpass" Type="int16">
-									<ValueList>
-										<Value>7</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Priority" Type="int16">
-									<ValueList>
-										<Value>60</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-96</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="TN_Bus" ID="{6D09DD6C-83B3-4B13-B81E-290B57998183}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="T_23101_Atk_1_Print_01" ID="{0279B240-D474-4A5E-B70C-D2F70ED46F66}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.161197886208577"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.0563410087719298"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>kangaroo test\T_23101_Atk_1_Print_01.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="563299050"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists/>
-							<ActiveSourceList>
-								<ActiveSource Name="T_23101_Atk_1_Print_01" ID="{0279B240-D474-4A5E-B70C-D2F70ED46F66}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

@@ -43,7 +43,7 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
     {
         if (Input.GetKeyDown(KeyCode.X) && skillScripts[1])
         {
-            //SkillFunc(skillScripts[1]);
+            SkillFunc(skillScripts[1]);
         }
     }
 
@@ -51,7 +51,7 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
     {
         if (Input.GetKeyDown(KeyCode.C) && skillScripts[2])
         {
-            //SkillFunc(skillScripts[2]);
+            SkillFunc(skillScripts[2]);
         }
     }
 

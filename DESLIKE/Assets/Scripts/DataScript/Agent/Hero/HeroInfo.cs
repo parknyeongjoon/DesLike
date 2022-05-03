@@ -142,14 +142,6 @@ public class HeroInfo : CastleInfo
             {
                 cur_Hp += (((HeroData)castleData).hp_Re + buff_Stat.hp_Re);
             }
-            if (cur_Mp + (((HeroData)castleData).mp_Re + buff_Stat.mp_Re) >= ((HeroData)castleData).mp)
-            {
-                cur_Mp = ((HeroData)castleData).mp;
-            }
-            else
-            {
-                cur_Mp += (((HeroData)castleData).mp_Re + buff_Stat.mp_Re);
-            }
             healthChangeEvent?.Invoke(this, null);
             yield return new WaitForSeconds(1.0f);
         }

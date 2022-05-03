@@ -30,6 +30,7 @@ public class BasicGrenadeRangeAttackData : BasicGrenadeAttackData
         {
             List<HeroInfo> targetInfos;
             targetInfos = Get_Targets(heroInfo, targetInfo);
+            ChargeMP(heroInfo);
             for (int i = 0; i < targetInfos.Count; i++)
             {
                 targetInfos[i].OnDamaged(heroInfo, atk_Dmg);

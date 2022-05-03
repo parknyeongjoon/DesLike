@@ -11,7 +11,7 @@ public class SoldierInfo : HeroInfo
     {
         castleData = allyPortDatas.activeSoldierList[soldierCode];
         cur_Hp = castleData.hp;
-        cur_Mp = ((SoldierData)castleData).mp;
+        cur_Mp = 0;
         allyPortDatas.spawnSoldierList.Add(this);
         BattleUIManager.Instance.UpdateSoldierRatioBar();
         afterDeadEvent.AddListener(Dead);

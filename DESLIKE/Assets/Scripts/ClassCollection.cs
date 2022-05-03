@@ -78,7 +78,6 @@ public class Buff_Stat
     {
         this.speed *= heroData.speed;
         this.mp *= heroData.mp;
-        this.mp_Re *= heroData.mp_Re;
         //this.atk *= heroData.atk;
         //this.atk_Speed *= heroData.atk_Speed;
         this.hp *= heroData.hp;

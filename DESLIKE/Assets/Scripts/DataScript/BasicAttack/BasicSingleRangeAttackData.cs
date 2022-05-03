@@ -28,6 +28,7 @@ public class BasicSingleRangeAttackData : BasicAttackData
         }
         if (castleInfo) 
         {
+            ChargeMP(heroInfo);
             castleInfo.OnDamaged(heroInfo, atk_Dmg);
             extraSkillData?.Effect(heroInfo, targetInfo);
         }

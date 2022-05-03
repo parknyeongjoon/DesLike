@@ -16,10 +16,10 @@ MonoBehaviour:
   code: N_11303
   hp: 50
   def: 1
-  size: 1
+  size: 0.7
   blood: {fileID: 0}
   soldier_name: N_11303
-  mp: 0
+  mp: 9
   speed: 2
   mp_Re: 0
   hp_Re: 0

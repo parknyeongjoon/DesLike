@@ -16,7 +16,7 @@ MonoBehaviour:
   skill_name: N_11303_Skill_1
   skillType: 0
   skill_Icon: {fileID: 0}
-  extraSkillData: {fileID: 0}
+  extraSkillData: {fileID: 11400000, guid: 60212125c690621409d3ee4311143169, type: 2}
   cooltime: 3
   mp: 3
   range: 3

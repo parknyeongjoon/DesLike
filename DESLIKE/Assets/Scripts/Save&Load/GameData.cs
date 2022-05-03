@@ -92,6 +92,7 @@ public class VillageData
     public int[] relicPrice = new int[6];  // 목록별 가격
     public bool[] isSoldOut = new bool[6];
     public bool isNewSet;
+    public int healCount;
 }
 
 

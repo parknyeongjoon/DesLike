@@ -59,10 +59,16 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-*.bnk
-*.DS_Store
+.DS_Store
+DESLIKE/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
+DESLIKE/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
+DESLIKE/Assets/StreamingAssets/Audio/main.bnk
+DESLIKE/Assets/StreamingAssets/Audio/main.bnk.meta
+DESLIKE/Assets/StreamingAssets/Audio/main.txt
+DESLIKE/Assets/StreamingAssets/Audio/main.txt.meta
 *.wem
 *.akd
-*.wsetting
-*.prof
+*.wsettings
 *.validationcache
+DesLike/DESLIKE/DESLIKE_WwiseProject/.cache
+DESLIKE/Assets/StreamingAssets/Audio/SoundbanksInfo.xml

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: testEnemyOption
   m_EditorClassIdentifier: 
   soldierOption:
-  - soldierData: {fileID: 11400000, guid: 8061f0b131955b945b79c315c40239c5, type: 2}
+  - soldierData: {fileID: 11400000, guid: 28db2665da4d7d94eaf8f993e2914190, type: 2}
     mutant: {fileID: 0}
-    portNum: 0000000001000000020000000300000004000000
+    portNum: 010000000200000003000000

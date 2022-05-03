@@ -544,6 +544,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7116624685446316876, guid: 98c43156be998d34d833a7bf183e4fd5,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7116624685446316912, guid: 98c43156be998d34d833a7bf183e4fd5,
         type: 3}
       propertyPath: m_RootOrder
@@ -842,3 +847,4 @@ MonoBehaviour:
   basicAttackData: {fileID: 11400000, guid: d5c8c67150965dc4ba48af27e7cd9d5a, type: 2}
   atkArea: 0
   atkLayer: 0
+  atkCount: 0

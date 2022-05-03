@@ -15,7 +15,7 @@ public class SoldierInfo : HeroInfo
         allyPortDatas.spawnSoldierList.Add(this);
         BattleUIManager.Instance.UpdateSoldierRatioBar();
         afterDeadEvent.AddListener(Dead);
-        hitEvent += healthChangeEvent.Invoke;
+        afterHitEvent += healthChangeEvent.Invoke;
         yield return new WaitUntil(() => BattleUIManager.Instance.battleStart);//배틀 스타트 될 때까지 기다리기
         StartCoroutine(Hp_Mp_Re());
     }

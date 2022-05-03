@@ -9,7 +9,7 @@ public class IronBody : SkillData
 
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
-        heroInfo.hitEvent += IronBodyEffect;
+        heroInfo.afterHitEvent += IronBodyEffect;
     }
 
     void IronBodyEffect(HeroInfo heroInfo, HeroInfo targetInfo)

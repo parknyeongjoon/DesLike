@@ -41,13 +41,14 @@ public class HeroInfo : CastleInfo
         cur_Mp = saveManager.gameData.heroSaveData.cur_Mp;
         resurrection = saveManager.gameData.heroSaveData.resurrection;
         allyPortDatas.spawnSoldierList.Add(this);
-        hitEvent += healthChangeEvent.Invoke;
+        afterHitEvent += healthChangeEvent.Invoke;
         yield return new WaitUntil(() => BattleUIManager.Instance.battleStart);//배틀 스타트 될 때까지 기다리기
         StartCoroutine(Hp_Mp_Re());
     }
 
     public void OnDamaged(HeroInfo atkHeroInfo, float damage)//피격 이벤트 일어남
     {
+        beforeHitEvent?.Invoke(this, atkHeroInfo);
         if(shield > damage)
         {
             shield -= damage;
@@ -63,7 +64,7 @@ public class HeroInfo : CastleInfo
             cur_Hp -= (damage - castleData.def);//버프 스탯 넣기, 수식 설정하기
         }
 
-        if (atkHeroInfo) { hitEvent?.Invoke(this, atkHeroInfo); }//atkHeroInfo가 null이 아니라면 피격 이벤트 발동
+        if (atkHeroInfo) { afterHitEvent?.Invoke(this, atkHeroInfo); }//atkHeroInfo가 null이 아니라면 피격 이벤트 발동
 
         if (castleData.blood != null)//지우기
         {

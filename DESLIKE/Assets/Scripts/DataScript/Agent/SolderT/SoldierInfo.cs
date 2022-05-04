@@ -11,11 +11,11 @@ public class SoldierInfo : HeroInfo
     {
         castleData = allyPortDatas.activeSoldierList[soldierCode];
         cur_Hp = castleData.hp;
-        cur_Mp = ((SoldierData)castleData).mp;
+        cur_Mp = 0;
         allyPortDatas.spawnSoldierList.Add(this);
         BattleUIManager.Instance.UpdateSoldierRatioBar();
         afterDeadEvent.AddListener(Dead);
-        hitEvent += healthChangeEvent.Invoke;
+        afterHitEvent += healthChangeEvent.Invoke;
         yield return new WaitUntil(() => BattleUIManager.Instance.battleStart);//배틀 스타트 될 때까지 기다리기
         StartCoroutine(Hp_Mp_Re());
     }

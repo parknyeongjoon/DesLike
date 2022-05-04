@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Spine.Unity;
 
 public class HeroInfo : CastleInfo
 {
     public SkeletonAnimation skeletonAnimation;
+    public UnityEvent<float> stunEvent;
+    public UnityEvent<float> tauntEvent;
 
     public Soldier_State state;
     public Soldier_Action action;
@@ -32,20 +35,20 @@ public class HeroInfo : CastleInfo
 
     protected virtual IEnumerator Start()
     {
-        Debug.Log("영웅");
         SaveManager saveManager = SaveManager.Instance;
         healWeight = 0;
         cur_Hp = saveManager.gameData.heroSaveData.cur_Hp;
         cur_Mp = saveManager.gameData.heroSaveData.cur_Mp;
         resurrection = saveManager.gameData.heroSaveData.resurrection;
         allyPortDatas.spawnSoldierList.Add(this);
-        hitEvent += healthChangeEvent.Invoke;
+        afterHitEvent += healthChangeEvent.Invoke;
         yield return new WaitUntil(() => BattleUIManager.Instance.battleStart);//배틀 스타트 될 때까지 기다리기
         StartCoroutine(Hp_Mp_Re());
     }
 
     public void OnDamaged(HeroInfo atkHeroInfo, float damage)//피격 이벤트 일어남
     {
+        beforeHitEvent?.Invoke(this, atkHeroInfo);
         if(shield > damage)
         {
             shield -= damage;
@@ -61,7 +64,7 @@ public class HeroInfo : CastleInfo
             cur_Hp -= (damage - castleData.def);//버프 스탯 넣기, 수식 설정하기
         }
 
-        if (atkHeroInfo) { hitEvent?.Invoke(this, atkHeroInfo); }//atkHeroInfo가 null이 아니라면 피격 이벤트 발동
+        if (atkHeroInfo) { afterHitEvent?.Invoke(this, atkHeroInfo); }//atkHeroInfo가 null이 아니라면 피격 이벤트 발동
 
         if (castleData.blood != null)//지우기
         {
@@ -122,8 +125,9 @@ public class HeroInfo : CastleInfo
 
     public void Stun(float stunTime)
     {
+        
         state = Soldier_State.Stun;
-        //StartCoroutine(soldierBehaviour.Stun_Behaviour());
+        stunEvent?.Invoke(stunTime);
     }
 
     protected IEnumerator Hp_Mp_Re()
@@ -137,14 +141,6 @@ public class HeroInfo : CastleInfo
             else
             {
                 cur_Hp += (((HeroData)castleData).hp_Re + buff_Stat.hp_Re);
-            }
-            if (cur_Mp + (((HeroData)castleData).mp_Re + buff_Stat.mp_Re) >= ((HeroData)castleData).mp)
-            {
-                cur_Mp = ((HeroData)castleData).mp;
-            }
-            else
-            {
-                cur_Mp += (((HeroData)castleData).mp_Re + buff_Stat.mp_Re);
             }
             healthChangeEvent?.Invoke(this, null);
             yield return new WaitForSeconds(1.0f);

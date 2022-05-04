@@ -7,6 +7,7 @@ public class BasicSingleAttackData : BasicAttackData
 {
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
+        ChargeMP(heroInfo);
         targetInfo.OnDamaged(heroInfo, atk_Dmg);
         extraSkillData?.Effect(heroInfo, targetInfo);
     }

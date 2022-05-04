@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d2d310121892549905c5bfe8a1c6e6, type: 3}
-  m_Name: testAllyOption
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: cutting_800img_Atlas
   m_EditorClassIdentifier: 
-  soldierOption:
-  - soldierData: {fileID: 11400000, guid: 28db2665da4d7d94eaf8f993e2914190, type: 2}
-    mutant: {fileID: 0}
-    portNum: 010000000200000003000000
+  atlasFile: {fileID: 4900000, guid: f838ccbab2287cc4193f911d3305f42c, type: 3}
+  materials:
+  - {fileID: 2100000, guid: b1b92d8b88e9b2840ad540ce29b1b73e, type: 2}

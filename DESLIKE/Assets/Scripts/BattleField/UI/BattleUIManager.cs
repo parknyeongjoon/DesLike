@@ -114,6 +114,9 @@ public class BattleUIManager : MonoBehaviour
         if (enemyPortDatas.spawnSoldierList.Count == 0)//승리
         {
             SetRewardPanel();
+            //영웅 체력 gameData에 저장
+            HeroInfo heroInfo = GameObject.Find(SaveManager.Instance.heroPrefab.name + "(Clone)").GetComponent<HeroInfo>();
+            SaveManager.Instance.SaveHeroData(heroInfo);
         }
         else if(allyPortDatas.spawnSoldierList.Count == 0)//패배
         {

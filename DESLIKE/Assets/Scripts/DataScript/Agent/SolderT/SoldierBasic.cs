@@ -16,23 +16,25 @@ public class SoldierBasic : MonoBehaviour
     public Func<bool> isSkillActive;
     public Func<bool> canSkill;
 
-    protected Coroutine moveCoroutine;
-
     public const int basicSoundWeight = 10;//사운드 가중치 최소값
     public int curSoundWeight;//현재 사운드 가중치
 
     float stunTime = 0;//스턴 지속시간, 새로운 스턴이 들어왔을 때 갱신용
-    Coroutine stunCoroutine;
     float tauntTime = 0;//도발 지속시간, 갱신용
-    Coroutine tauntCoroutine;
 
     protected IEnumerator Start()
     {
+        heroInfo.stunEvent.AddListener(Stun);
         heroInfo.moveDir = new Vector3(0, 0, 0);
         float waitTime = UnityEngine.Random.Range(0.0f, 2.0f);
         yield return new WaitUntil(() => BattleUIManager.Instance.battleStart == true);//배틀이 시작될 때까지 대기
         yield return new WaitForSeconds(waitTime);
         StartCoroutine(Idle_Behaviour());
+    }
+
+    public void Stun(float stunTime)
+    {
+        StartCoroutine(Stun_Behaviour(stunTime));
     }
 
     protected virtual IEnumerator Idle_Behaviour()
@@ -64,6 +66,7 @@ public class SoldierBasic : MonoBehaviour
         }
         while (heroInfo.state == Soldier_State.Stun)
         {
+            Debug.Log("스턴");
             yield return new WaitForFixedUpdate();
         }
         StartCoroutine(Idle_Behaviour());
@@ -76,7 +79,6 @@ public class SoldierBasic : MonoBehaviour
             tauntTime = _tauntTime;
             heroInfo.target = _targetInfo.gameObject;
             heroInfo.targetInfo = _targetInfo;
-            if(tauntCoroutine == null) { tauntCoroutine = StartCoroutine(TauntTime()); }
         }
         while(heroInfo.state == Soldier_State.Taunt)
         {
@@ -117,7 +119,7 @@ public class SoldierBasic : MonoBehaviour
     protected IEnumerator Move()
     {
         if (heroInfo.skeletonAnimation.skeleton != null)
-            heroInfo.skeletonAnimation.state.AddAnimation(0, "H_" + heroInfo.castleData.code + "_Move", true, 0);//idle
+            heroInfo.skeletonAnimation.state.AddAnimation(0, heroInfo.castleData.code + "_Move", true, 0);//idle
         heroInfo.action = Soldier_Action.Move;
         while (heroInfo.action == Soldier_Action.Move)
         {
@@ -129,7 +131,7 @@ public class SoldierBasic : MonoBehaviour
     protected IEnumerator Move(Vector3 destination)
     {
         if (heroInfo.skeletonAnimation.skeleton != null)
-            heroInfo.skeletonAnimation.state.AddAnimation(0, "H_" + heroInfo.castleData.code + "_Move", true, 0);//idle
+            heroInfo.skeletonAnimation.state.AddAnimation(0,heroInfo.castleData.code + "_Move", true, 0);//idle
         heroInfo.action = Soldier_Action.Move;
         while (transform.position != destination && heroInfo.action == Soldier_Action.Move)
         {

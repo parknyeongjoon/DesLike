@@ -9,10 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d2d310121892549905c5bfe8a1c6e6, type: 3}
-  m_Name: testAllyOption
+  m_Script: {fileID: 11500000, guid: 58ff0c33c4c7a074d909e49103c0bf8c, type: 3}
+  m_Name: H_23101_Att_1
   m_EditorClassIdentifier: 
-  soldierOption:
-  - soldierData: {fileID: 11400000, guid: 28db2665da4d7d94eaf8f993e2914190, type: 2}
-    mutant: {fileID: 0}
-    portNum: 010000000200000003000000
+  start_Delay: 1
+  end_Delay: 1
+  range: 3
+  atk_Dmg: 2
+  atkCount: 1
+  extraSkillData: {fileID: 0}
+  atkArea: 256

@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SpawnSkillData",menuName ="ScriptableObject/SkillT/SpawnSkillData")]
-public class SpawnSkillData : ActiveSkillData
+[CreateAssetMenu(fileName = "Spawn",menuName ="ScriptableObject/ExtraSkill/Spawn")]
+public class Spawn : ActiveSkillData
 {
     public GameObject spawnPrefab;
     public int spawnAmount;

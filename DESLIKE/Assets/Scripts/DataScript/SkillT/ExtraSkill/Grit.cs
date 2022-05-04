@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Grit",menuName ="ScriptableObject/SkillT/Grit")]
+[CreateAssetMenu(fileName = "Grit",menuName ="ScriptableObject/ExtraSkill/Grit")]
 public class Grit : SkillData
 {
     public float activeHealthP;
@@ -14,7 +14,7 @@ public class Grit : SkillData
         heroInfo.healthChangeEvent.AddListener(GritEffect);
     }
 
-    void GritEffect(HeroInfo heroInfo, HeroInfo targetInfo)
+    void GritEffect(HeroInfo heroInfo)
     {
         if(heroInfo.cur_Hp <= heroInfo.castleData.hp * activeHealthP)
         {

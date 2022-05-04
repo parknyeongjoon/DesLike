@@ -18,6 +18,16 @@ PrefabInstance:
       propertyPath: soldierCode
       value: N_11303
       objectReference: {fileID: 0}
+    - target: {fileID: 66509000012849947, guid: 98c43156be998d34d833a7bf183e4fd5,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 498290218020815704, guid: 98c43156be998d34d833a7bf183e4fd5,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 980699410962448892, guid: 98c43156be998d34d833a7bf183e4fd5,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -417,6 +427,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609925943104429868, guid: 98c43156be998d34d833a7bf183e4fd5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5917864379738029282, guid: 98c43156be998d34d833a7bf183e4fd5,
         type: 3}

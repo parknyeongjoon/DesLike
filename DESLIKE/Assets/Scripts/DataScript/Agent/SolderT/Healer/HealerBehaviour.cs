@@ -63,7 +63,7 @@ public class HealerBehaviour : SoldierBasic
         {
             if (canSkill != null && canSkill.Invoke())
             {
-                yield return StartCoroutine(skillHandler?.Invoke(heroInfo.skillTargetInfo as HeroInfo));
+                yield return skillHandler?.Invoke(heroInfo.skillTargetInfo);
                 heroInfo.state = Soldier_State.Charge;
             }
             else

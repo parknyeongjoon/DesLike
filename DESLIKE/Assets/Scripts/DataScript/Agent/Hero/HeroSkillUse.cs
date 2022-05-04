@@ -57,7 +57,7 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
 
     void SkillFunc(Skill skillScript)
     {
-        if (CheckMpNCool(skillScript) && heroInfo.action != Soldier_Action.End_Delay)
+        if (CheckMpNCool(skillScript) && heroInfo.state <= Soldier_State.Stun && heroInfo.action != Soldier_Action.End_Delay)
         {
             if (skillCoroutine != null) { StopCoroutine(skillCoroutine); }
             skillCoroutine = StartCoroutine(UseSkill(skillScript));

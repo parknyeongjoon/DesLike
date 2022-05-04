@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Stun", menuName = "ScriptableObject/SkillT/Stun")]
+[CreateAssetMenu(fileName = "Stun", menuName = "ScriptableObject/ExtraSkill/Stun")]
 public class Stun : SkillData
 {
     public float stun_Time;

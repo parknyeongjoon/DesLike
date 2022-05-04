@@ -39,8 +39,6 @@ public class Buff_Stat
         this.def = 0;
     }
 
-    bool isPercent;
-
     public float speed;
     public float mp;
     public float mp_Re;

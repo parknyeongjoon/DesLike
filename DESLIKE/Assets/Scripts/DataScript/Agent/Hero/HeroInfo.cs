@@ -24,6 +24,7 @@ public class HeroInfo : CastleInfo
     public float cur_Mp;
     public float shield;
     public float healWeight = 0;
+    public int frogShield;
 
     public bool grit;
     public bool resurrection;

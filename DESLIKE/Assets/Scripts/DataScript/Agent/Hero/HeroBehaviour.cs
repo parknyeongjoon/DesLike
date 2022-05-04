@@ -22,11 +22,11 @@ public class HeroBehaviour : SoldierBasic
         }
         else if (heroInfo.state < Soldier_State.Stun && heroInfo.action == Soldier_Action.End_Delay)//조작 가능한 end_Delay시에는 선입력
         {
-            StartCoroutine(InputBuffer());
+            //StartCoroutine(InputBuffer());
         }
     }
 
-    IEnumerator InputBuffer()
+    IEnumerator InputBuffer()//선입력 받아주는 코루틴
     {
         BufferedInput bufferedInput = null;
         while(heroInfo.action == Soldier_Action.End_Delay)

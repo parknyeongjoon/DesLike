@@ -689,7 +689,7 @@ MonoBehaviour:
   RelicEvent: {fileID: 60949765}
   HealEvent: {fileID: 253311066}
   AreaEvent: {fileID: 1046773560}
-  PenaltyEvent: {fileID: 0}
+  PenaltyEvent: {fileID: 56284647}
 --- !u!1 &94130575
 GameObject:
   m_ObjectHideFlags: 0

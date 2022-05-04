@@ -32,6 +32,7 @@ public class MainTitle : MonoBehaviour
         saveManager.map.isMap = false;
         saveManager.gameData.canContinue = true;
         startHandler?.Invoke();
+        RelicManager.Instance.relicList = new List<Relic>();
         SceneManager.LoadScene("Map");
     }
 

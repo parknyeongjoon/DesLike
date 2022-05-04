@@ -12,7 +12,7 @@ public class EventNode : MapNode
     public bool[] isEventSet = new bool[THREE];
     public bool[] isRewardSet = new bool[THREE];
     public SoldierReward soldierReward = new SoldierReward();
-
+    
     public void Play_EventNode()
     {
         map.curMapNode = this;

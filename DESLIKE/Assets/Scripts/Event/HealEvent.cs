@@ -8,10 +8,12 @@ using TMPro;
 public class HealEvent : EventBasic
 {
     int temp_Max_HP = 500;
+
     void OnEnable()
     {
         SetOption();
         isEventSet = true;
+        
     }
 
     void SetOption()
@@ -133,13 +135,13 @@ public class HealEvent : EventBasic
 
     void ActiveEvent1() //"1일 소모, 회복X"
     {
-        saveManager.gameData.mapData.curDay += 1;
+        curDay += 1;
         ButtonsOff();
     }
 
     void ActiveEvent2() //"1일 소모, n골드 소비, 체력 10% 회복"
     {
-        saveManager.gameData.mapData.curDay += 1;
+        curDay += 1;
         curGold -= 50;        // n골드 손실 함수
         cur_HP = cur_HP / 9 * 10;   // 회복 함수
         if (cur_HP > temp_Max_HP) cur_HP = temp_Max_HP; // 최대체력 초과 시 최대체력 표시 
@@ -149,7 +151,7 @@ public class HealEvent : EventBasic
 
     void ActiveEvent3() //"2일 소모, 체력 10% 회복"
     {
-        saveManager.gameData.mapData.curDay += 2;
+        curDay += 2;
         cur_HP = cur_HP / 9 * 10;   // 회복 함수
         if (cur_HP > temp_Max_HP) cur_HP = temp_Max_HP; // 최대체력 초과 시 최대체력 표시
 
@@ -158,7 +160,7 @@ public class HealEvent : EventBasic
 
     void ActiveEvent4() //"2일 소모, n골드 소비, 체력 20% 회복"
     {
-        saveManager.gameData.mapData.curDay += 2;
+        curDay += 2;
         curGold -= 50;        // n골드 손실 함수
         cur_HP = cur_HP / 4 * 5;    // 회복 함수
         if (cur_HP > temp_Max_HP) cur_HP = temp_Max_HP; // 최대체력 초과 시 최대체력 표시
@@ -167,7 +169,7 @@ public class HealEvent : EventBasic
 
     void ActiveEvent5() //"3일 소모, 체력 20% 회복"
     {
-        saveManager.gameData.mapData.curDay += 3;
+        curDay += 3;
         cur_HP = cur_HP / 4 * 5;    // 회복 함수
         if (cur_HP > temp_Max_HP) cur_HP = temp_Max_HP; // 최대체력 초과 시 최대체력 표시
                                                         
@@ -176,14 +178,13 @@ public class HealEvent : EventBasic
 
     void ActiveEvent6() //"3일 소모, n골드 소비, 체력 30% 회복"
     {
-        saveManager.gameData.mapData.curDay += 3;
+        curDay += 3;
         curGold -= 50;        // n골드 손실 함수
         cur_HP = cur_HP / 7 * 10;
         if (cur_HP > temp_Max_HP) cur_HP = temp_Max_HP; // 최대체력 초과 시 최대체력 표시
 
         ButtonsOff();
     }
-
 
     // 버튼용 함수
     public void Button1()

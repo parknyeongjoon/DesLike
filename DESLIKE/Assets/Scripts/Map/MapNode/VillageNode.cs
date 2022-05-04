@@ -8,6 +8,7 @@ public class VillageNode : MapNode
 {
     void OnEnable()
     {
+        map = SaveManager.Instance.map;
         SetAbleReward();
     }
 

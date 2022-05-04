@@ -6,6 +6,7 @@ using TMPro;
 
 public class BattleNodeScript : NodeScript
 {
+    Map map;
     BattleNode battleNode;
     [SerializeField] GameObject InfoTemp, InfoPrefab, MoreInfoPanel, MoreTemp, MorePrefab, ChallengeO;
     SaveManager saveManager;
@@ -13,7 +14,6 @@ public class BattleNodeScript : NodeScript
     int phyNorSolC, speNorSolC, comNorSolC, phyEpicSolC, speEpicSolC, comEpicSolC,
         phyNorRelC, speNorRelC, comNorRelC, phyEpicRelC, speEpicRelC, comEpicRelC, phyLegendRelC, speLegendRelC, comLegendRelC;
     int[] nextEvent = new int[THREE];
-    Map map;
     public bool[] isEventSet = new bool[THREE];
     bool[] isRewardSet = new bool[THREE];
     Reward reward;
@@ -106,7 +106,8 @@ public class BattleNodeScript : NodeScript
             battleNode.isRewardSet[i] = saveManager.gameData.mapData.isRewardSet[i];   // 배틀 노드 저장
         }
         isRewardSet = battleNode.isRewardSet;   // 배틀 노드 스크립트용
-        
+
+        Debug.Log("m.p.c : " + map.physicNorSol.Count);
         phyNorSolC = map.physicNorSol.Count;
         speNorSolC = map.spellNorSol.Count;
         comNorSolC = map.commonNorSol.Count;

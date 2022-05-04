@@ -1121,8 +1121,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 636997666}
-        m_TargetAssemblyTypeName: Arena, Assembly-CSharp
-        m_MethodName: CloseBtn
+        m_TargetAssemblyTypeName: VilPortCenter, Assembly-CSharp
+        m_MethodName: ClosePortCenter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1253,9 +1253,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 636997666}
-        m_TargetAssemblyTypeName: Arena, Assembly-CSharp
-        m_MethodName: CloseBtn
+      - m_Target: {fileID: 487899393}
+        m_TargetAssemblyTypeName: VilCasino, Assembly-CSharp
+        m_MethodName: CloseCasinoPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2256,8 +2256,8 @@ GameObject:
   - component: {fileID: 487899392}
   - component: {fileID: 487899396}
   - component: {fileID: 487899395}
-  - component: {fileID: 487899394}
   - component: {fileID: 487899393}
+  - component: {fileID: 487899394}
   m_Layer: 5
   m_Name: Casino
   m_TagString: Untagged
@@ -2294,27 +2294,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 487899391}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eee786e17752e5c4caac73b5d0d5395a, type: 3}
+  m_Script: {fileID: 11500000, guid: d4eb3a455dece2946a9196f91742099a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShopPanel: {fileID: 0}
-  CheckPanel: {fileID: 0}
-  ErrorPanel: {fileID: 0}
-  SoldOutPanel:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  vilShopNode: {fileID: 0}
-  Prices:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  CasinoPanel: {fileID: 2053564805}
 --- !u!114 &487899394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2360,8 +2343,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 487899393}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: OpenBtn
+        m_TargetAssemblyTypeName: VilCasino, Assembly-CSharp
+        m_MethodName: OpenCasinioPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2827,8 +2810,8 @@ GameObject:
   - component: {fileID: 636997662}
   - component: {fileID: 636997665}
   - component: {fileID: 636997664}
-  - component: {fileID: 636997663}
   - component: {fileID: 636997666}
+  - component: {fileID: 636997663}
   m_Layer: 5
   m_Name: PortCenter
   m_TagString: Untagged
@@ -2901,8 +2884,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 636997666}
-        m_TargetAssemblyTypeName: Arena, Assembly-CSharp
-        m_MethodName: OpenBtn
+        m_TargetAssemblyTypeName: VilPortCenter, Assembly-CSharp
+        m_MethodName: OpenPortCenter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2959,9 +2942,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 636997661}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a655aeb205aec6408a9616e53d7d971, type: 3}
+  m_Script: {fileID: 11500000, guid: 028589c3a72470e44a8841e0c5a35503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PortCenterPanel: {fileID: 1880785780}
 --- !u!1 &704184820
 GameObject:
   m_ObjectHideFlags: 0
@@ -4998,8 +4982,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1098929357}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: OpenBtn
+        m_TargetAssemblyTypeName: VilShop, Assembly-CSharp
+        m_MethodName: PanelOpenBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7029,7 +7013,7 @@ MonoBehaviour:
   HealPanel: {fileID: 1801197176}
   CheckPanel: {fileID: 53393832}
   ErrorPanel: {fileID: 1659344234}
-  InformText: {fileID: 18951927}
+  InformText: {fileID: 704184822}
   CheckText: {fileID: 2038456374}
   Cur_HPText: {fileID: 1726931456}
 --- !u!114 &1626097533
@@ -7137,8 +7121,8 @@ GameObject:
   - component: {fileID: 1630480149}
   - component: {fileID: 1630480153}
   - component: {fileID: 1630480152}
-  - component: {fileID: 1630480151}
   - component: {fileID: 1630480150}
+  - component: {fileID: 1630480151}
   m_Layer: 5
   m_Name: TrainingCenter
   m_TagString: Untagged
@@ -7175,27 +7159,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1630480148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eee786e17752e5c4caac73b5d0d5395a, type: 3}
+  m_Script: {fileID: 11500000, guid: cbb48f31d52a9f44882725acec51f6d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShopPanel: {fileID: 0}
-  CheckPanel: {fileID: 0}
-  ErrorPanel: {fileID: 0}
-  SoldOutPanel:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  vilShopNode: {fileID: 0}
-  Prices:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  TrainingPanel: {fileID: 176957904}
 --- !u!114 &1630480151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7241,8 +7208,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1630480150}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: OpenBtn
+        m_TargetAssemblyTypeName: VilTraining, Assembly-CSharp
+        m_MethodName: OpenTrainingPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8276,9 +8243,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 636997666}
-        m_TargetAssemblyTypeName: Arena, Assembly-CSharp
-        m_MethodName: CloseBtn
+      - m_Target: {fileID: 1630480150}
+        m_TargetAssemblyTypeName: VilTraining, Assembly-CSharp
+        m_MethodName: CloseTrainingPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

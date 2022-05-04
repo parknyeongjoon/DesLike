@@ -14,18 +14,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
   isNode: 0
-  ableSoldierRewards: []
-  ableRelicRewards: []
-  kingdom: 0
+  ableSoldierRewards:
+  - {fileID: 11400000, guid: 63e33c6e044a1e34da48031263c41fac, type: 2}
+  - {fileID: 11400000, guid: cf43bab0e7c1b0647b13055f91296289, type: 2}
+  - {fileID: 11400000, guid: abc78992742d4b441bd1c62fdeb5ff34, type: 2}
+  - {fileID: 11400000, guid: 2511c0f84376d2147b322e30eb68130b, type: 2}
+  ableRelicRewards:
+  - {fileID: -512087590680084207, guid: 826616231cc31534c801e5c282e62386, type: 3}
+  - {fileID: -512087590680084207, guid: e15febb05d554834ba4867deb98fa867, type: 3}
+  - {fileID: -512087590680084207, guid: d3293a91bfe3625468b45b2a57a15849, type: 3}
+  - {fileID: -512087590680084207, guid: 7ba5e7edc5a619e45b89825f185c73dc, type: 3}
+  - {fileID: -512087590680084207, guid: ed7d96131367e544c85604c24726c6e9, type: 3}
+  - {fileID: -512087590680084207, guid: d1d54443a5a065041894b66ee9159621, type: 3}
+  - {fileID: -512087590680084207, guid: 426a584971c2d3342b36a5316a741b1f, type: 3}
+  - {fileID: -512087590680084207, guid: 0a18ab768ccd6074ba47caca9915f98d, type: 3}
+  - {fileID: -512087590680084207, guid: 4259b3543732b374da3a29bafe50fe65, type: 3}
+  - {fileID: -512087590680084207, guid: b1afaae7e4b8365488f2dc77169ffbd8, type: 3}
+  - {fileID: -512087590680084207, guid: 4a85ade60bce7d244b0fbca4b8d843a8, type: 3}
+  - {fileID: -512087590680084207, guid: 435b71361fcce3747b3d0658cfb48729, type: 3}
+  kingdom: 1
   reward:
-    soldierReward: []
-    relic: {fileID: 0}
+    soldierReward:
+    - soldier: {fileID: 11400000, guid: cf43bab0e7c1b0647b13055f91296289, type: 2}
+      mutant: {fileID: 0}
+    - soldier: {fileID: 11400000, guid: 63e33c6e044a1e34da48031263c41fac, type: 2}
+      mutant: {fileID: 0}
+    relic:
+    - {fileID: 0}
+    - {fileID: -512087590680084207, guid: e15febb05d554834ba4867deb98fa867, type: 3}
+    - {fileID: -512087590680084207, guid: 7ba5e7edc5a619e45b89825f185c73dc, type: 3}
     gold: 0
     magicalStone: 0
+  relicLevelCount: 040000000400000004000000
   enemyPortsOptions:
   - {fileID: 11400000, guid: 5741d6a9a8c31f447b3f8ab8e389d1a9, type: 2}
-  enemyPortOption: {fileID: 0}
+  enemyPortOption: {fileID: 11400000, guid: 5741d6a9a8c31f447b3f8ab8e389d1a9, type: 2}
   enemyPortDatas: {fileID: 11400000, guid: ce42c4ca4fe690f479731c7498fc2d18, type: 2}
   isChallenge: 0
-  isEventSet: 000000
-  isRewardSet: 000000
+  isEventSet: 010000
+  isRewardSet: 010000
+  curBattleString: 

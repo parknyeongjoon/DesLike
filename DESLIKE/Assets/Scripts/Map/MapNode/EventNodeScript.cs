@@ -93,17 +93,16 @@ public class EventNodeScript : NodeScript
         isRewardSet[0] = saveManager.gameData.mapData.isRewardSet[0];
         if (isRewardSet[0] == false)
         {
+            eventNode.reward.relic.Clear();
             NorSolSet(0, 0);
             // EpicSolSet(0,0);
             NorSolSet(1, 0);
             // EpicSolSet(1,0)
             NorRelSet(0);
-            // EpicRelSet(0);
-            // LegendRelSet(0);
+            EpicRelSet(0);
+            LegendRelSet(0);
         }
-       
-        saveManager.gameData.mapData.isRewardSet[0] = true;
-        isRewardSet[0] = true;
+        isRewardSet[0] = saveManager.gameData.mapData.isRewardSet[0] = true;
     }
 
     void SetEventReward2()
@@ -112,17 +111,17 @@ public class EventNodeScript : NodeScript
         isRewardSet[1] = saveManager.gameData.mapData.isRewardSet[1];
         if (isRewardSet[1] == false)
         {
+            eventNode.reward.relic.Clear();
             NorSolSet(0, 1);
             // EpicSolSet(0,1);
             NorSolSet(1, 1);
             // EpicSolSet(1,1)
             NorRelSet(1);
-            // EpicRelSet(1);
-            // LegendRelSet(1);
+            EpicRelSet(1);
+            LegendRelSet(1);
         }
+        isRewardSet[1] = saveManager.gameData.mapData.isRewardSet[1] = true;
         
-        saveManager.gameData.mapData.isRewardSet[1] = true;
-        isRewardSet[1] = true;
     }
 
     void SetEventReward3()
@@ -132,17 +131,17 @@ public class EventNodeScript : NodeScript
         isRewardSet[2] = saveManager.gameData.mapData.isRewardSet[2];
         if (isRewardSet[2] == false)
         {
+            eventNode.reward.relic.Clear();
             NorSolSet(0, 2);
             // EpicSolSet(0,2);
             NorSolSet(1, 2);
             // EpicSolSet(1,2)
             NorRelSet(2);
-            // EpicRelSet(2);
-            // LegendRelSet(2);
+            EpicRelSet(2);
+            LegendRelSet(2);
         }
-       
-        saveManager.gameData.mapData.isRewardSet[2] = true;
-        isRewardSet[2] = true;
+
+        isRewardSet[2] = saveManager.gameData.mapData.isRewardSet[2] = true;
     }
 
     public void NorSolSet(int num, int button)  // 일반 병사 1마리 추가
@@ -255,9 +254,10 @@ public class EventNodeScript : NodeScript
     {
         for (int i = 0; i < 3; i++)
         {
-            eventNode.isEventSet[i] = false;
-            eventNode.isRewardSet[i] = false;
+            saveManager.gameData.mapData.isEventSet[i] = false;
+            saveManager.gameData.mapData.isRewardSet[i] = false;
         }
+
         eventNode.Play_EventNode();
     }
  }

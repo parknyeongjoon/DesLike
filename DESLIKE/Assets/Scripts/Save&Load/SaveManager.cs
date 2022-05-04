@@ -127,9 +127,12 @@ public class SaveManager : MonoBehaviour
     public void SaveRelicData()
     {
         gameData.relicSaveData.Clear();
-        for(int i = 0; i < RelicManager.Instance.relicList.Count; i++)
+        if (RelicManager.Instance.relicList != null)
         {
-            gameData.relicSaveData.Add(RelicManager.Instance.relicList[i].relicData.code);
+            for (int i = 0; i < RelicManager.Instance.relicList.Count; i++)
+            {
+                gameData.relicSaveData.Add(RelicManager.Instance.relicList[i].relicData.code);
+            }
         }
     }
 

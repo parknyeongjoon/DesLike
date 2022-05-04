@@ -12,12 +12,17 @@ public class MapNode : ScriptableObject
     public Kingdom kingdom;
     public Reward reward;
     public int[] relicLevelCount = new int[3];
-
+    
     public void SetAbleReward()
     {
         kingdom = Kingdom.Physic;   // 수정 필요
-        int comNorSolC = map.commonNorSol.Count;
-        int comEpicSolC = map.commonEpicSol.Count;
+        int comNorSolC, comEpicSolC;
+
+        if (map.commonNorSol != null) comNorSolC = 0;
+        else comNorSolC = map.commonNorSol.Count;
+        if (map.commonEpicSol == null) comEpicSolC = 0;
+        else comEpicSolC = map.commonEpicSol.Count;
+
         int comNorRelC = map.commonNorRel.Count;
         int comEpicRelC = map.commonEpicRel.Count;
         int comLegendRelC = map.commonLegendRel.Count;

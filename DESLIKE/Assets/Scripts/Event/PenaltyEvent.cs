@@ -25,7 +25,7 @@ public class PenaltyEvent : EventBasic
                 ranPenalty = Random.Range(0, 4);
             }
             else
-                ranPenalty = saveManager.gameData.eventData.ranPenalty;
+                ranPenalty = SaveManager.Instance.gameData.eventData.ranPenalty;
 
             switch (ranPenalty)
             {

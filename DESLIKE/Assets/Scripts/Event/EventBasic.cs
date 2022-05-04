@@ -12,7 +12,7 @@ public class EventBasic : MonoBehaviour
     public Map map;
     public EventNode eventNode;
     public bool isEventSet;
-    public SaveManager saveManager;
+    SaveManager saveManager;
     public int[] optionNum = new int[3];
     public EventData eventData = new EventData();
     public TMP_Text[] OptionText = new TMP_Text[3];
@@ -21,8 +21,8 @@ public class EventBasic : MonoBehaviour
     public int curDay, curGold;
     public bool isAlreadySelect; // 이미 이벤트 선택했는지 함수
     public float cur_HP;
- 
-    void OnEnable()
+    
+    void Awake()
     {
         saveManager = SaveManager.Instance;
         DataLoad();
@@ -61,6 +61,7 @@ public class EventBasic : MonoBehaviour
     public void EndEvent()
     {
         isEventSet = false;
+        saveManager.gameData.mapData.curDay = curDay;
         SceneManager.LoadScene("Map");
     }
 }

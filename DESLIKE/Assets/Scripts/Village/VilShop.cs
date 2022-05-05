@@ -5,6 +5,7 @@ using TMPro;
 
 public class VilShop : MonoBehaviour
 {
+    public Map map;
     public GameObject ShopPanel, CheckPanel, ErrorPanel;
     public GameObject[] SoldOutPanel = new GameObject[6];
     public VilShopNode vilShopNode;
@@ -30,7 +31,7 @@ public class VilShop : MonoBehaviour
     void DataUpdate()
     {
         relicList = new List<Relic>();
-        villageNode = villagemanager.villageNode;
+        villageNode = (VillageNode)map.curMapNode;
         relicLevelCount[0] = villageNode.relicLevelCount[0];
         relicLevelCount[1] = relicLevelCount[0] + villageNode.relicLevelCount[1];
         relicLevelCount[2] = relicLevelCount[1] + villageNode.relicLevelCount[2];

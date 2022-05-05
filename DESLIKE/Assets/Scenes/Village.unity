@@ -5043,6 +5043,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee786e17752e5c4caac73b5d0d5395a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
   ShopPanel: {fileID: 870829843}
   CheckPanel: {fileID: 1087163052}
   ErrorPanel: {fileID: 2018066256}

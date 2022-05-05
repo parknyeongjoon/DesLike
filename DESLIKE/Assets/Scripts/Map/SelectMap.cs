@@ -173,7 +173,7 @@ public class SelectMap : MonoBehaviour
                 saveManager.gameData.mapData.selEvent[i] = nxtEvnt[i];  // 데이터 저장
 
                 if (nxtEvnt[i] == 1) // 이벤트라면
-                    saveManager.gameData.mapData.evntList[i] = Random.Range(0, 3);  // 이벤트 리스트에 따라서 다름; 세부 확률 조정 필요
+                    saveManager.gameData.mapData.evntList[i] = Random.Range(0, 6);  // 이벤트 리스트에 따라서 다름; 세부 확률 조정 필요
                 else saveManager.gameData.mapData.evntList[i] = 0;  // 전투면 0 표시
 
                 // 도전모드 관련 코드

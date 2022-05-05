@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a2f8e6047f9bb2409087e23686177a5, type: 3}
   m_Name: VilShopNode
   m_EditorClassIdentifier: 
+  curRelic: {fileID: -512087590680084207, guid: 0a18ab768ccd6074ba47caca9915f98d,
+    type: 3}
+  curNumber: 0

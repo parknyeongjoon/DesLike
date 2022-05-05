@@ -231,8 +231,8 @@ MonoBehaviour:
         guid: d4bdce04e310f149bb87327e717a33ee
       Path: Events\Default Work Unit\Battle_End
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Battle_Start
       guid: 04815eb8e7179d4c8087438df374e492
       id: 2706291346
@@ -248,8 +248,8 @@ MonoBehaviour:
         guid: 04815eb8e7179d4c8087438df374e492
       Path: Events\Default Work Unit\Battle_Start
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Game_Speed_Pause
       guid: 4023f9d03d3c0342b32c007ab838b295
       id: 1027347108
@@ -265,8 +265,8 @@ MonoBehaviour:
         guid: 4023f9d03d3c0342b32c007ab838b295
       Path: Events\Default Work Unit\Game_Speed_Pause
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Game_Speed_Resume
       guid: 2754b3ebbfa7b645b86c8aecad48252d
       id: 2372597559
@@ -282,8 +282,8 @@ MonoBehaviour:
         guid: 2754b3ebbfa7b645b86c8aecad48252d
       Path: Events\Default Work Unit\Game_Speed_Resume
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: H_23101_Die
       guid: 49f8fd6d5a46904eb3f265878c467ea7
       id: 3025390842
@@ -299,8 +299,8 @@ MonoBehaviour:
         guid: 49f8fd6d5a46904eb3f265878c467ea7
       Path: Events\Default Work Unit\H_23101_Die
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4.552415
+      minDuration: 3.940282
     - name: H_23101_Idle
       guid: 22a29d89e75a334f9441f90bc7a012a9
       id: 4029061990
@@ -316,8 +316,8 @@ MonoBehaviour:
         guid: 22a29d89e75a334f9441f90bc7a012a9
       Path: Events\Default Work Unit\H_23101_Idle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: H_23101_Skill_1
       guid: b22a2ce51ceba54ca2ea52dc2e7b6b58
       id: 2377059575
@@ -333,8 +333,8 @@ MonoBehaviour:
         guid: b22a2ce51ceba54ca2ea52dc2e7b6b58
       Path: Events\Default Work Unit\H_23101_Skill_1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.358379
+      minDuration: 1.358379
     - name: H_23101_Skill_2
       guid: 7ee30739d4f86b468177fe039240d740
       id: 2377059572
@@ -350,8 +350,8 @@ MonoBehaviour:
         guid: 7ee30739d4f86b468177fe039240d740
       Path: Events\Default Work Unit\H_23101_Skill_2
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.231566
+      minDuration: 1.231566
     - name: T_12202_Atk_1
       guid: 898e20cb489c7c40a8a0ea4576626d11
       id: 450034178
@@ -367,8 +367,8 @@ MonoBehaviour:
         guid: 898e20cb489c7c40a8a0ea4576626d11
       Path: Events\Default Work Unit\T_12202_Atk_1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.257594
+      minDuration: 0.193283
     - name: T_12202_Idle
       guid: df8971e92026e74d80df4898bdab9041
       id: 3619100458
@@ -384,8 +384,8 @@ MonoBehaviour:
         guid: df8971e92026e74d80df4898bdab9041
       Path: Events\Default Work Unit\T_12202_Idle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.958542
+      minDuration: 3.059009
     - name: T_12202_Skill_1
       guid: 3309ba547008774a92a25c6ea5dd94a4
       id: 1526852227
@@ -401,8 +401,8 @@ MonoBehaviour:
         guid: 3309ba547008774a92a25c6ea5dd94a4
       Path: Events\Default Work Unit\T_12202_Skill_1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.558542
+      minDuration: 2.558542
     - name: T_12301_Atk_1
       guid: 79ff6a69e8c6f04d9e03f9753ddc37f2
       id: 1080515304
@@ -418,8 +418,8 @@ MonoBehaviour:
         guid: 79ff6a69e8c6f04d9e03f9753ddc37f2
       Path: Events\Default Work Unit\T_12301_Atk_1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.558542
+      minDuration: 2.558542
     - name: T_12301_Idle
       guid: 581ccdf05b55cd4db1fddec9465d28aa
       id: 880908724
@@ -435,8 +435,8 @@ MonoBehaviour:
         guid: 581ccdf05b55cd4db1fddec9465d28aa
       Path: Events\Default Work Unit\T_12301_Idle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 5.058542
+      minDuration: 4.159009
     - name: T_12302_Atk_1
       guid: 5880d65ce7b0bb47a47a4f4193f1e7d3
       id: 2037815843
@@ -452,8 +452,8 @@ MonoBehaviour:
         guid: 5880d65ce7b0bb47a47a4f4193f1e7d3
       Path: Events\Default Work Unit\T_12302_Atk_1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.340817
+      minDuration: 0.111592
     - name: T_12302_Idle
       guid: b6267fb07a4fb04aa1eaed1f17b955a0
       id: 270789025
@@ -469,8 +469,8 @@ MonoBehaviour:
         guid: b6267fb07a4fb04aa1eaed1f17b955a0
       Path: Events\Default Work Unit\T_12302_Idle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 5.058542
+      minDuration: 4.159009
     - name: T_12305_Idle
       guid: 6fa76a5b2337744b836cb6e0fbd285aa
       id: 2413801456
@@ -486,8 +486,8 @@ MonoBehaviour:
         guid: 6fa76a5b2337744b836cb6e0fbd285aa
       Path: Events\Default Work Unit\T_12305_Idle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 5.058542
+      minDuration: 4.159009
     - name: T_12305_Skill_1
       guid: 545bb454ad7d144cb8f12b0e1c5d8173
       id: 2724418929
@@ -503,8 +503,8 @@ MonoBehaviour:
         guid: 545bb454ad7d144cb8f12b0e1c5d8173
       Path: Events\Default Work Unit\T_12305_Skill_1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.800479
+      minDuration: 0.800479
     - name: T_23101_Atk_1
       guid: 96795652a5b9f84688564e7456054a10
       id: 3073476802
@@ -520,8 +520,8 @@ MonoBehaviour:
         guid: 96795652a5b9f84688564e7456054a10
       Path: Events\Default Work Unit\T_23101_Atk_1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.014138
+      minDuration: 1.014138
     - name: T_23101_Die
       guid: ff7e257c8133f84a98d5a51295cdf5d4
       id: 617022462
@@ -537,8 +537,8 @@ MonoBehaviour:
         guid: ff7e257c8133f84a98d5a51295cdf5d4
       Path: Events\Default Work Unit\T_23101_Die
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4.552415
+      minDuration: 3.940282
     - name: T_23101_Idle
       guid: d8e94a63b6d23c4ca84a275d101c0232
       id: 1608577898
@@ -554,8 +554,8 @@ MonoBehaviour:
         guid: d8e94a63b6d23c4ca84a275d101c0232
       Path: Events\Default Work Unit\T_23101_Idle
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.413401
+      minDuration: 0.279003
     - name: T_23101_Skill_1
       guid: 90dcac024cbb7d4b85d542404f053e72
       id: 2895012419
@@ -570,9 +570,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 90dcac024cbb7d4b85d542404f053e72
       Path: Events\Default Work Unit\T_23101_Skill_1
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxAttenuation: 100
+      maxDuration: 1.277932
+      minDuration: 1.277932
   - PhysicalPath: Events\Music.wwu
     PathAndIcons:
     - ElementName: Events
@@ -601,8 +601,8 @@ MonoBehaviour:
         guid: 31fc14dd92a97e408a3c1bca3cbb907a
       Path: Events\Music\Music_Map
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Music_S1_Base_Camp
       guid: 82dac88f8d585d45b2c1b291dd534940
       id: 3446471941
@@ -618,8 +618,8 @@ MonoBehaviour:
         guid: 82dac88f8d585d45b2c1b291dd534940
       Path: Events\Music\Music_S1_Base_Camp
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Music_S1_Boss_P2
       guid: bb59abf876cc5140a98fa64f3e793b53
       id: 1994295204
@@ -635,8 +635,8 @@ MonoBehaviour:
         guid: bb59abf876cc5140a98fa64f3e793b53
       Path: Events\Music\Music_S1_Boss_P2
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Music_Start
       guid: ca3045177e7c2e4c978a7f178a1ec9a4
       id: 3725903807

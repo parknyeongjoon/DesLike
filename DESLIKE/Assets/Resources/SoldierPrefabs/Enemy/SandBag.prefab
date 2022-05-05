@@ -1,5 +1,68 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2939942023333805156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8492592070707429665}
+  - component: {fileID: 4763489973888050160}
+  - component: {fileID: 7124244549123824852}
+  m_Layer: 0
+  m_Name: AuraCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8492592070707429665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2939942023333805156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4628089453687605310}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &4763489973888050160
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2939942023333805156}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3
+--- !u!114 &7124244549123824852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2939942023333805156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e83e77a24e941e4bb6725a9023175da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillData: {fileID: 11400000, guid: 41bc28c32a0ef8741adba64f0b0abf57, type: 2}
+  atkArea: 0
+  atkLayer: 0
 --- !u!1001 &2520065963215670094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -227,6 +290,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4448198707694892068, guid: 0b6bd3a120c34ad418493097c3298e3c,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4611070685677008555, guid: 0b6bd3a120c34ad418493097c3298e3c,
         type: 3}
@@ -485,6 +553,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7116624685446316876, guid: 0b6bd3a120c34ad418493097c3298e3c,
         type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7116624685446316876, guid: 0b6bd3a120c34ad418493097c3298e3c,
+        type: 3}
       propertyPath: m_Size.x
       value: 1.46
       objectReference: {fileID: 0}
@@ -726,3 +799,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b6bd3a120c34ad418493097c3298e3c, type: 3}
+--- !u!4 &4628089453687605310 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7116624685446316912, guid: 0b6bd3a120c34ad418493097c3298e3c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2520065963215670094}
+  m_PrefabAsset: {fileID: 0}

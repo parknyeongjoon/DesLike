@@ -256,8 +256,11 @@ MonoBehaviour:
   heroDatas:
   - {fileID: 11400000, guid: 7f528eb015e3d0e40b0f2abb902a89a8, type: 2}
   skillDatas:
-  - {fileID: 11400000, guid: 5e03d7cfebc0f4444b8acb9bde23014d, type: 2}
+  - {fileID: 11400000, guid: 98f82980703fa0e4ba3f1f9603f10358, type: 2}
+  - {fileID: 11400000, guid: a920bdecf22c07f4db7b8ab8ed5b9899, type: 2}
+  - {fileID: 11400000, guid: d63c23ddfe5e66f4a8d0377072c01783, type: 2}
   - {fileID: 11400000, guid: 044c987abeb5582478130c7dc7b532ab, type: 2}
+  - {fileID: 11400000, guid: 1240e355522460b4ba7bd6fea5dc84d8, type: 2}
   mutantObjects:
   - {fileID: 3340910114177237104, guid: 90e7863938ac48041a9acab8e9974372, type: 3}
   relicObjects:

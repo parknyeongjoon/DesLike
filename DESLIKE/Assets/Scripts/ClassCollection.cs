@@ -13,12 +13,12 @@ public enum AnimState { Idle, Move, Atk }
 public enum Soldier_Action { Idle, Move, Attack, Skill, End_Delay }
 
 
-public enum Soldier_Type { Tanker, Soldier, Healer, Buffer, Debuffer, Ranger, Catapult, Flight, Monster}
+public enum Soldier_Type { Tanker, Soldier, Healer, Buffer, Debuffer, Ranger, Magician, Catapult, Flight, Monster}
 public enum Kingdom { Common = 0, Physic = 1, Spell = 2 }
 public enum Tribe { Bear = 1, Kangaroo = 2, Rat = 3, Frog = 4 }
 public enum Rarity { Normal = 1, Epic = 2, Hero = 3 }
 
-public enum SkillType { TargetSkill, GrenadeSkill, InstanceSkill, PassiveSkill, Aura, Buff, Debuff, Etc}
+public enum SkillType { TargetSkill, GrenadeSkill, InstanceSkill, Installation, PassiveSkill, Aura, Buff, Debuff, Etc}
 public enum BuffType { None, Plague }
 
 public enum CurWindow { Map, Event, Battle, Village, Organ, StageSel }
@@ -38,8 +38,6 @@ public class Buff_Stat
         this.hp_Re = 0;
         this.def = 0;
     }
-
-    bool isPercent;
 
     public float speed;
     public float mp;

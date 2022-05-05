@@ -6,4 +6,9 @@ using UnityEngine;
 public class AuraData : SkillData
 {
     public float auraTerm;
+
+    public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
+    {
+        extraSkillData.Effect(heroInfo, targetInfo);
+    }
 }

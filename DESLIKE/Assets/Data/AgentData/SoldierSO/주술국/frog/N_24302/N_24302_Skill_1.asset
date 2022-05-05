@@ -18,7 +18,7 @@ MonoBehaviour:
   skill_Icon: {fileID: 0}
   extraSkillData: {fileID: 11400000, guid: d63c23ddfe5e66f4a8d0377072c01783, type: 2}
   cooltime: 3
-  mp: 0
+  mp: 1
   range: 0
   start_Delay: 1
   end_Delay: 0

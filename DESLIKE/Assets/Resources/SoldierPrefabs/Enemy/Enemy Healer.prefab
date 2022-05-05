@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 8459052577237034029}
   - component: {fileID: 5077092287344344137}
   - component: {fileID: 8539308402457019598}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Anim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -928,7 +928,7 @@ MonoBehaviour:
   cur_Mp: 0
   shield: 0
   healWeight: 0
-  frogShield: 0
+  mucus: 0
   grit: 0
   resurrection: 0
   buff_Stat:

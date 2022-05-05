@@ -10,24 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ec170fb41403794194fcac022439d2a, type: 3}
-  m_Name: 12301
+  m_Name: N_24201
   m_EditorClassIdentifier: 
-  sprite: {fileID: 21300000, guid: 895bb1509bfee2545895c500d8fefe76, type: 3}
-  code: 12301
-  hp: 15
-  def: 1
+  sprite: {fileID: 0}
+  code: N_24201
+  hp: 20
+  def: 2
   size: 0.5
-  blood: {fileID: 5086979035932333915, guid: 83b2eb89fe46c6a4db5d18712a94a153, type: 3}
-  soldier_name: 12301
-  mp: 10
+  blood: {fileID: 0}
+  soldier_name: N_24201
+  mp: 3
   speed: 2
-  mp_Re: 0
   hp_Re: 0
-  kingdom: 0
-  tribe: 2
+  kingdom: 2
+  tribe: 4
   extraSkill: []
-  rarity: 1
-  needBarrier: 0
-  unitAmount: 1
-  soldier_Type: 0
-  soldierNumber: 0
+  rarity: 2
+  needBarrier: 3
+  unitAmount: 0
+  soldier_Type: 6

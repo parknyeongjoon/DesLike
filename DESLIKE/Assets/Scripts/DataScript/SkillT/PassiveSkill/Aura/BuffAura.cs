@@ -5,16 +5,17 @@ using UnityEngine;
 public class BuffAura : Skill//공중전 다시 도입되면 trigger if문 다시 만져야함
 {
     List<HeroInfo> effectList = new List<HeroInfo>();
+    public int atkArea, atkLayer;
 
     protected override void Awake()
     {
-        base.Awake();
         StartCoroutine(UseSkill(null));
+        atkArea = transform.parent.gameObject.layer;
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == heroInfo.gameObject.layer)
+        if ((collision.CompareTag("Soldier") || collision.CompareTag("Player")) && collision.gameObject.layer == atkArea)
         {
             effectList.Add(collision.GetComponent<HeroInfo>());
         }
@@ -22,7 +23,7 @@ public class BuffAura : Skill//공중전 다시 도입되면 trigger if문 다시 만져야함
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == heroInfo.gameObject.layer)
+        if ((collision.CompareTag("Soldier") || collision.CompareTag("Player")) && collision.gameObject.layer == atkArea)
         {
             effectList.Remove(collision.GetComponent<HeroInfo>());
         }
@@ -35,9 +36,9 @@ public class BuffAura : Skill//공중전 다시 도입되면 trigger if문 다시 만져야함
         {
             for (int i = 0; i < effectList.Count; i++)
             {
-                if (effectList[i])
+                if (effectList[i] && effectList[i].gameObject.layer != 7)
                 {
-                    skillData.Effect(heroInfo, effectList[i]);
+                    skillData.Effect(null, effectList[i]);
                 }
                 else
                 {

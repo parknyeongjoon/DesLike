@@ -10,14 +10,14 @@ public class Spawn : ActiveSkillData
 
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
-        heroInfo.StartCoroutine(SpawnPrefab(heroInfo));
+        heroInfo.StartCoroutine(SpawnPrefab(heroInfo, targetInfo));
     }
 
-    IEnumerator SpawnPrefab(HeroInfo heroInfo)
+    IEnumerator SpawnPrefab(HeroInfo heroInfo, HeroInfo targetInfo)
     {
         for (int i = 0; i < spawnAmount; i++)
         {
-            Instantiate(spawnPrefab, heroInfo.transform.position + new Vector3(2, 0, spawnAmount - 2 * i), Quaternion.identity);
+            Instantiate(spawnPrefab, targetInfo.transform.position + new Vector3(2, 0, spawnAmount - 2 * i), Quaternion.identity);
             yield return new WaitForSeconds(0.5f);
         }
     }

@@ -829,7 +829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74c89014b4975f448b068fcb4174dcb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillData: {fileID: 11400000, guid: 98e2cb6ae42786b4fa196e29fe4daa1f, type: 2}
+  skillData: {fileID: 11400000, guid: dd706b4f14e783a42a48ad44bde79150, type: 2}
   cur_cooltime: 0
   atkArea: 0
   atkLayer: 0

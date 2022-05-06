@@ -8,16 +8,17 @@ public class EventShop : EventBasic
     public GameObject CheckPanel, ErrorPanel;
     public GameObject[] SoldOutPanel = new GameObject[6];
     public VilShopNode vilShopNode;
-    EventManager eventManager;
     public List<Relic> relicList;
+    EventManager eventManager;
     SaveManager saveManager;
     public TMP_Text[] Prices = new TMP_Text[6];
+
     int[] relicLevelCount = new int[3];
     int[] randRelic = new int[6];   // 목록별 랜덤넘버
     int[] relicPrice = new int[6];  // 목록별 가격
-    bool[] isSoldOut = new bool[6];
     bool isNewSet;
-
+    bool[] isSoldOut = new bool[6];
+    
     void OnEnable()
     {
         saveManager = SaveManager.Instance;

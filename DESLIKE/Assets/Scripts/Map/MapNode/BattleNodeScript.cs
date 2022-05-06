@@ -238,7 +238,13 @@ public class BattleNodeScript : NodeScript
             norTotal = phyNorRelC + comNorRelC; // 무투국 + 공통
         else norTotal = speNorRelC + comNorRelC;  // 주술국 + 공통
 
+        reroll:
         int rand = Random.Range(0, norTotal);   // 일반 범위 내 랜덤값
+        for (int i = 0; i < RelicManager.instance.relicList.Count; i++)
+        {
+            if (battleNode.ableRelicRewards[rand].relicData.code == RelicManager.instance.relicList[i].relicData.code)
+                goto reroll;
+        }   // 기존 가지고 있는 유물이면
         battleNode.reward.relic.Add(battleNode.ableRelicRewards[rand]);  // 해당 유물을 노드에 저장
         // saveManager.gameData.curBattleNodeData.relRewardIndex[button, 0] = rand;    // 유물 번호 게임데이터에 저장
     }
@@ -256,8 +262,13 @@ public class BattleNodeScript : NodeScript
             norTotal = speNorRelC + comNorRelC;
             epicTotal = speEpicRelC + comEpicRelC;
         }
+        reroll:
         int rand = Random.Range(0, epicTotal) + norTotal;
-
+        for(int i = 0; i<RelicManager.instance.relicList.Count; i++)
+        {
+            if (battleNode.ableRelicRewards[rand].relicData.code == RelicManager.instance.relicList[i].relicData.code)
+                goto reroll;
+        }   // 기존 가지고 있는 유물이면 리롤
         battleNode.reward.relic.Add(battleNode.ableRelicRewards[rand]);
         // saveManager.gameData.rewardData.relicRewardIndex[button] = rand;
     }
@@ -275,8 +286,15 @@ public class BattleNodeScript : NodeScript
             neTotal = speNorRelC + comNorRelC + speEpicRelC + comEpicRelC;
             legendTotal = speLegendRelC + comLegendRelC;
         }
+        reroll:
         int rand = Random.Range(0, legendTotal) + neTotal;
+        for (int i = 0; i < RelicManager.instance.relicList.Count; i++)
+        {
+            if (battleNode.ableRelicRewards[rand].relicData.code == RelicManager.instance.relicList[i].relicData.code)
+                goto reroll;
+        }   // 기존 가지고 있는 유물이면 리롤
         battleNode.reward.relic.Add(battleNode.ableRelicRewards[rand]);
+        
         // saveManager.gameData.rewardData.relicRewardIndex[button] = rand;
     }
 

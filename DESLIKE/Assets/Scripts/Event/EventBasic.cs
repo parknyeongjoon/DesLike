@@ -11,17 +11,18 @@ public class EventBasic : MonoBehaviour
     // public HeroData heroData;
     public Map map;
     public EventNode eventNode;
-    public bool isEventSet;
-    SaveManager saveManager;
-    public int[] optionNum = new int[3];
-    public EventData eventData = new EventData();
-    public TMP_Text[] OptionText = new TMP_Text[3];
-    public Button[] Buttons = new Button[3];
     public Button EndButton;
-    public int curDay, curGold;
-    public bool isAlreadySelect; // 이미 이벤트 선택했는지 함수
+    public Button[] Buttons = new Button[3];
+    public TMP_Text[] OptionText = new TMP_Text[3];
+    public EventData eventData = new EventData();
+
+    public int curDay, curGold, curStage;
+    public int[] optionNum = new int[3];
     public float cur_HP;
-    
+    public bool isEventSet;
+    public bool isAlreadySelect; // 이미 이벤트 선택했는지 함수
+    SaveManager saveManager;
+
     void Awake()
     {
         saveManager = SaveManager.Instance;
@@ -34,6 +35,7 @@ public class EventBasic : MonoBehaviour
         isEventSet = eventData.isEventSet;
         eventData = saveManager.gameData.eventData;
         curDay = saveManager.gameData.mapData.curDay;
+        curStage = saveManager.gameData.mapData.curStage;
         isAlreadySelect = eventData.isAlreadySelect;
         // heroData = (HeroData)heroInfo.castleData;
         curGold = saveManager.gameData.goodsSaveData.gold;
@@ -56,6 +58,11 @@ public class EventBasic : MonoBehaviour
                 Buttons[i].gameObject.SetActive(false);
             EndButton.gameObject.SetActive(true);
         }
+    }
+
+    public void CurDaySave()
+    {
+        saveManager.gameData.mapData.curDay = curDay;
     }
 
     public void EndEvent()

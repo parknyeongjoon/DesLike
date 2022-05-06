@@ -8,7 +8,7 @@ public class EventManager : MonoBehaviour
     Map map;
     [SerializeField] Canvas EventCanvas;
     [SerializeField] GameObject Rullet, CampFire, Infection;
-    [SerializeField] GameObject RelicEvent, HealEvent, AreaEvent, PenaltyEvent, ShopEvent, GambleEvent;
+    [SerializeField] GameObject RelicEvent, HealEvent, AreaEvent, PenaltyEvent, ShopEvent, GambleEvent, FightEvent;
 
     public EventNode eventNode;
     int curBtn, EvntList;
@@ -35,6 +35,7 @@ public class EventManager : MonoBehaviour
         PenaltyEvent.SetActive(false);
         ShopEvent.SetActive(false);
         GambleEvent.SetActive(false);
+        FightEvent.SetActive(false);
         
         switch (EvntList)
         {
@@ -55,6 +56,9 @@ public class EventManager : MonoBehaviour
                 break;
             case 5:
                 GambleEvent.SetActive(true);
+                break;
+            case 6:
+                FightEvent.SetActive(true);
                 break;
             default: break;
         }

@@ -107,7 +107,6 @@ public class BattleNodeScript : NodeScript
         }
         isRewardSet = battleNode.isRewardSet;   // 배틀 노드 스크립트용
 
-        Debug.Log("m.p.c : " + map.physicNorSol.Count);
         phyNorSolC = map.physicNorSol.Count;
         speNorSolC = map.spellNorSol.Count;
         comNorSolC = map.commonNorSol.Count;

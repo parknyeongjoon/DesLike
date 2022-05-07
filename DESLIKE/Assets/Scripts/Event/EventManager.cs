@@ -27,7 +27,7 @@ public class EventManager : MonoBehaviour
         saveManager.SaveGameData();
     }
 
-    void EventActive() 
+    void EventActive()
     {
         RelicEvent.SetActive(false);
         HealEvent.SetActive(false);

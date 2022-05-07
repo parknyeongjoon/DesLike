@@ -651,7 +651,7 @@ RectTransform:
   - {fileID: 740256361}
   - {fileID: 2067697189}
   m_Father: {fileID: 1286001777}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -682,10 +682,16 @@ MonoBehaviour:
   - {fileID: 307407791}
   - {fileID: 1381274072}
   eventData:
-    isEventSet: 0
-    optionNum: 000000000000000000000000
-    isAlreadySelect: 0
     ranPenalty: 0
+    rewardNum: 0
+    comBox: 0
+    isEventSet: 0
+    isAlreadySelect: 0
+    optionNum: 000000000000000000000000
+    areaGold: 000000000000000000000000
+    choiNum: 000000000000000000000000
+    stepCheck: 0000000000
+  eventEnd: 0
   curDay: 0
   curGold: 0
   curStage: 0
@@ -693,6 +699,19 @@ MonoBehaviour:
   cur_HP: 0
   isEventSet: 0
   isAlreadySelect: 0
+  areaGolds: 000000000000000000000000
+  areaGold: 0
+  ranPenalty: 0
+  relicLevelCount: 000000000000000000000000
+  randRelic: 000000000000000000000000000000000000000000000000
+  relicPrice: 000000000000000000000000000000000000000000000000
+  isNewSet: 0
+  isSoldOut: 000000000000
+  gold: 0
+  stepCheck: 0000000000
+  choiNum: 000000000000000000000000
+  rewardNum: 0
+  comBox: 0
 --- !u!114 &56284650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -800,10 +819,16 @@ MonoBehaviour:
   - {fileID: 1543537724}
   - {fileID: 101504606}
   eventData:
-    isEventSet: 0
-    optionNum: 000000000000000000000000
-    isAlreadySelect: 0
     ranPenalty: 0
+    rewardNum: 0
+    comBox: 0
+    isEventSet: 0
+    isAlreadySelect: 0
+    optionNum: 000000000000000000000000
+    areaGold: 000000000000000000000000
+    choiNum: 000000000000000000000000
+    stepCheck: 0000000000
+  eventEnd: 0
   curDay: 0
   curGold: 0
   curStage: 0
@@ -811,6 +836,19 @@ MonoBehaviour:
   cur_HP: 0
   isEventSet: 0
   isAlreadySelect: 0
+  areaGolds: 000000000000000000000000
+  areaGold: 0
+  ranPenalty: 0
+  relicLevelCount: 000000000000000000000000
+  randRelic: 000000000000000000000000000000000000000000000000
+  relicPrice: 000000000000000000000000000000000000000000000000
+  isNewSet: 0
+  isSoldOut: 000000000000
+  gold: 0
+  stepCheck: 0000000000
+  choiNum: 000000000000000000000000
+  rewardNum: 0
+  comBox: 0
 --- !u!114 &60949768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1529,36 +1567,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113467809}
   m_CullTransparentMesh: 1
---- !u!1 &126297186
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 126297187}
-  m_Layer: 0
-  m_Name: SaveManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &126297187
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126297186}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &131806367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,7 +1764,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1046773562}
-        m_TargetAssemblyTypeName: HealEvent, Assembly-CSharp
+        m_TargetAssemblyTypeName: AreaEvent, Assembly-CSharp
         m_MethodName: Button2
         m_Mode: 1
         m_Arguments:
@@ -1889,7 +1897,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1046773562}
-        m_TargetAssemblyTypeName: HealEvent, Assembly-CSharp
+        m_TargetAssemblyTypeName: AreaEvent, Assembly-CSharp
         m_MethodName: Button1
         m_Mode: 1
         m_Arguments:
@@ -2387,9 +2395,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
-        m_TargetAssemblyTypeName: Map, Assembly-CSharp
-        m_MethodName: EndMapNode
+      - m_Target: {fileID: 295011116}
+        m_TargetAssemblyTypeName: EventBasic, Assembly-CSharp
+        m_MethodName: EndEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2737,6 +2745,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: d9b7a72073616d148bdd9c299dda1e72, type: 2}
+        m_TargetAssemblyTypeName: FightEvent, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3524,10 +3544,16 @@ MonoBehaviour:
   - {fileID: 762116938}
   - {fileID: 437894321}
   eventData:
-    isEventSet: 0
-    optionNum: 000000000000000000000000
-    isAlreadySelect: 0
     ranPenalty: 0
+    rewardNum: 0
+    comBox: 0
+    isEventSet: 0
+    isAlreadySelect: 0
+    optionNum: 000000000000000000000000
+    areaGold: 000000000000000000000000
+    choiNum: 000000000000000000000000
+    stepCheck: 0000000000
+  eventEnd: 0
   curDay: 0
   curGold: 0
   curStage: 0
@@ -3535,6 +3561,19 @@ MonoBehaviour:
   cur_HP: 0
   isEventSet: 0
   isAlreadySelect: 0
+  areaGolds: 000000000000000000000000
+  areaGold: 0
+  ranPenalty: 0
+  relicLevelCount: 000000000000000000000000
+  randRelic: 000000000000000000000000000000000000000000000000
+  relicPrice: 000000000000000000000000000000000000000000000000
+  isNewSet: 0
+  isSoldOut: 000000000000
+  gold: 0
+  stepCheck: 0000000000
+  choiNum: 000000000000000000000000
+  rewardNum: 0
+  comBox: 0
 --- !u!114 &253311069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3611,7 +3650,7 @@ RectTransform:
   - {fileID: 1535874902}
   - {fileID: 177860112}
   m_Father: {fileID: 1286001777}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3632,7 +3671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
   eventNode: {fileID: 0}
-  EndButton: {fileID: 0}
+  EndButton: {fileID: 177860113}
   Buttons:
   - {fileID: 982922014}
   - {fileID: 1455626125}
@@ -3642,10 +3681,16 @@ MonoBehaviour:
   - {fileID: 1890306411}
   - {fileID: 241254877}
   eventData:
-    isEventSet: 0
-    optionNum: 000000000000000000000000
-    isAlreadySelect: 0
     ranPenalty: 0
+    rewardNum: 0
+    comBox: 0
+    isEventSet: 0
+    isAlreadySelect: 0
+    optionNum: 000000000000000000000000
+    areaGold: 000000000000000000000000
+    choiNum: 000000000000000000000000
+    stepCheck: 0000000000
+  eventEnd: 0
   curDay: 0
   curGold: 0
   curStage: 0
@@ -3653,6 +3698,19 @@ MonoBehaviour:
   cur_HP: 0
   isEventSet: 0
   isAlreadySelect: 0
+  areaGolds: 000000000000000000000000
+  areaGold: 0
+  ranPenalty: 0
+  relicLevelCount: 000000000000000000000000
+  randRelic: 000000000000000000000000000000000000000000000000
+  relicPrice: 000000000000000000000000000000000000000000000000
+  isNewSet: 0
+  isSoldOut: 000000000000
+  gold: 0
+  stepCheck: 00000000
+  choiNum: 000000000000000000000000
+  rewardNum: 0
+  comBox: 0
   InformText: {fileID: 1730777937}
 --- !u!114 &295011117
 MonoBehaviour:
@@ -4816,36 +4874,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366344499}
   m_CullTransparentMesh: 1
---- !u!1 &367352081
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 367352082}
-  m_Layer: 0
-  m_Name: SaveManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &367352082
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 367352081}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &427943776
 GameObject:
   m_ObjectHideFlags: 0
@@ -5382,7 +5410,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449017064}
   m_CullTransparentMesh: 1
---- !u!1 &459737640
+--- !u!1 &462958407
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5390,28 +5418,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 459737641}
+  - component: {fileID: 462958408}
+  - component: {fileID: 462958409}
   m_Layer: 0
-  m_Name: SaveManager
+  m_Name: BattleNodeScript
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &459737641
+--- !u!4 &462958408
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459737640}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 462958407}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 72.70146, y: -44.5128, z: -25.398727}
+  m_LocalScale: {x: 0.41666666, y: 0.41666666, z: 0.41666666}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1955528450}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &462958409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462958407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43f4d9d39b39e84f9be9c0a1c563b1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapNode: {fileID: 0}
+  InfoTemp: {fileID: 0}
+  InfoPrefab: {fileID: 0}
+  MoreInfoPanel: {fileID: 0}
+  MoreTemp: {fileID: 0}
+  MorePrefab: {fileID: 0}
+  ChallengeO: {fileID: 0}
+  isEventSet: 000000
 --- !u!1 &473756101
 GameObject:
   m_ObjectHideFlags: 0
@@ -6119,36 +6168,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567119520}
   m_CullTransparentMesh: 1
---- !u!1 &575169804
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 575169805}
-  m_Layer: 0
-  m_Name: SaveManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &575169805
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575169804}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &575406957
 GameObject:
   m_ObjectHideFlags: 0
@@ -7305,36 +7324,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 634085207}
   m_CullTransparentMesh: 1
---- !u!1 &643623512
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 643623513}
-  m_Layer: 0
-  m_Name: SaveManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &643623513
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 643623512}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &667779594
 GameObject:
   m_ObjectHideFlags: 0
@@ -7813,36 +7802,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740256360}
   m_CullTransparentMesh: 1
---- !u!1 &740281827
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 740281828}
-  m_Layer: 0
-  m_Name: SaveManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &740281828
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 740281827}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &741483218
 GameObject:
   m_ObjectHideFlags: 0
@@ -7926,36 +7885,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741483218}
   m_CullTransparentMesh: 1
---- !u!1 &756403318
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 756403319}
-  m_Layer: 0
-  m_Name: SaveManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &756403319
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 756403318}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &762116936
 GameObject:
   m_ObjectHideFlags: 0
@@ -10609,7 +10538,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1046773560}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dd4b294a074a454b837327596fc5648, type: 3}
+  m_Script: {fileID: 11500000, guid: 8bd2dc09f8f4a5249b5501de668defa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
@@ -10624,10 +10553,16 @@ MonoBehaviour:
   - {fileID: 1902217066}
   - {fileID: 1561961622}
   eventData:
-    isEventSet: 0
-    optionNum: 000000000000000000000000
-    isAlreadySelect: 0
     ranPenalty: 0
+    rewardNum: 0
+    comBox: 0
+    isEventSet: 0
+    isAlreadySelect: 0
+    optionNum: 000000000000000000000000
+    areaGold: 000000000000000000000000
+    choiNum: 000000000000000000000000
+    stepCheck: 0000000000
+  eventEnd: 0
   curDay: 0
   curGold: 0
   curStage: 0
@@ -10635,6 +10570,19 @@ MonoBehaviour:
   cur_HP: 0
   isEventSet: 0
   isAlreadySelect: 0
+  areaGolds: 000000000000000000000000
+  areaGold: 0
+  ranPenalty: 0
+  relicLevelCount: 000000000000000000000000
+  randRelic: 000000000000000000000000000000000000000000000000
+  relicPrice: 000000000000000000000000000000000000000000000000
+  isNewSet: 0
+  isSoldOut: 000000000000
+  gold: 0
+  stepCheck: 0000000000
+  choiNum: 000000000000000000000000
+  rewardNum: 0
+  comBox: 0
 --- !u!114 &1046773563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11130,7 +11078,7 @@ RectTransform:
   - {fileID: 1933577346}
   - {fileID: 2115548689}
   m_Father: {fileID: 1286001777}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -11199,10 +11147,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   eventData:
-    isEventSet: 0
-    optionNum: 000000000000000000000000
-    isAlreadySelect: 0
     ranPenalty: 0
+    rewardNum: 0
+    comBox: 0
+    isEventSet: 0
+    isAlreadySelect: 0
+    optionNum: 000000000000000000000000
+    areaGold: 000000000000000000000000
+    choiNum: 000000000000000000000000
+    stepCheck: 0000000000
+  eventEnd: 0
   curDay: 0
   curGold: 0
   curStage: 0
@@ -11210,6 +11164,19 @@ MonoBehaviour:
   cur_HP: 0
   isEventSet: 0
   isAlreadySelect: 0
+  areaGolds: 000000000000000000000000
+  areaGold: 0
+  ranPenalty: 0
+  relicLevelCount: 000000000000000000000000
+  randRelic: 000000000000000000000000000000000000000000000000
+  relicPrice: 000000000000000000000000000000000000000000000000
+  isNewSet: 0
+  isSoldOut: 000000000000
+  gold: 0
+  stepCheck: 0000000000
+  choiNum: 000000000000000000000000
+  rewardNum: 0
+  comBox: 0
   CheckPanel: {fileID: 2115548688}
   ErrorPanel: {fileID: 1646568621}
   SoldOutPanel:
@@ -12234,9 +12201,9 @@ RectTransform:
   - {fileID: 60949766}
   - {fileID: 253311067}
   - {fileID: 1046773561}
-  - {fileID: 295011115}
   - {fileID: 56284648}
   - {fileID: 1148008268}
+  - {fileID: 295011115}
   - {fileID: 1955528450}
   - {fileID: 1451983102}
   - {fileID: 1586150908}
@@ -12849,7 +12816,7 @@ RectTransform:
   m_Children:
   - {fileID: 427943777}
   m_Father: {fileID: 1955528450}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13861,36 +13828,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490947307}
   m_CullTransparentMesh: 1
---- !u!1 &1511467904
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1511467905}
-  m_Layer: 0
-  m_Name: SaveManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1511467905
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1511467904}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1535874901
 GameObject:
   m_ObjectHideFlags: 0
@@ -14024,6 +13961,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535874901}
   m_CullTransparentMesh: 1
+--- !u!1 &1538182667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1538182668}
+  m_Layer: 0
+  m_Name: SaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1538182668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538182667}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1543537722
 GameObject:
   m_ObjectHideFlags: 0
@@ -16258,7 +16225,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1046773562}
-        m_TargetAssemblyTypeName: HealEvent, Assembly-CSharp
+        m_TargetAssemblyTypeName: AreaEvent, Assembly-CSharp
         m_MethodName: Button3
         m_Mode: 1
         m_Arguments:
@@ -16661,9 +16628,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
-        m_TargetAssemblyTypeName: Map, Assembly-CSharp
-        m_MethodName: EndMapNode
+      - m_Target: {fileID: 1046773562}
+        m_TargetAssemblyTypeName: EventBasic, Assembly-CSharp
+        m_MethodName: EndEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17335,8 +17302,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1148008271}
-        m_TargetAssemblyTypeName: EventBasic, Assembly-CSharp
-        m_MethodName: EndEvent
+        m_TargetAssemblyTypeName: EventShop, Assembly-CSharp
+        m_MethodName: EndShop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17485,6 +17452,7 @@ RectTransform:
   - {fileID: 1803235331}
   - {fileID: 191190251}
   - {fileID: 1302678268}
+  - {fileID: 462958408}
   - {fileID: 1380792732}
   m_Father: {fileID: 1286001777}
   m_RootOrder: 6
@@ -17556,10 +17524,16 @@ MonoBehaviour:
   - {fileID: 947855695}
   - {fileID: 0}
   eventData:
-    isEventSet: 0
-    optionNum: 000000000000000000000000
-    isAlreadySelect: 0
     ranPenalty: 0
+    rewardNum: 0
+    comBox: 0
+    isEventSet: 0
+    isAlreadySelect: 0
+    optionNum: 000000000000000000000000
+    areaGold: 000000000000000000000000
+    choiNum: 000000000000000000000000
+    stepCheck: 0000000000
+  eventEnd: 0
   curDay: 0
   curGold: 0
   curStage: 0
@@ -17567,6 +17541,19 @@ MonoBehaviour:
   cur_HP: 0
   isEventSet: 0
   isAlreadySelect: 0
+  areaGolds: 000000000000000000000000
+  areaGold: 0
+  ranPenalty: 0
+  relicLevelCount: 000000000000000000000000
+  randRelic: 000000000000000000000000000000000000000000000000
+  relicPrice: 000000000000000000000000000000000000000000000000
+  isNewSet: 0
+  isSoldOut: 000000000000
+  gold: 0
+  stepCheck: 0000000000
+  choiNum: 000000000000000000000000
+  rewardNum: 0
+  comBox: 0
   battleNode: {fileID: 11400000, guid: d9b7a72073616d148bdd9c299dda1e72, type: 2}
 --- !u!1 &1956937390
 GameObject:

@@ -13,11 +13,13 @@ public class HealEvent : EventBasic
     {
         SetOption();
         isEventSet = true;
-        
+        eventEnd = false;
+        SaveData();
     }
 
     void SetOption()
     {
+        Debug.Log("optionNum" + optionNum[0]);
         if (isAlreadySelect == false)   // 이미 선택되지 않았을 때만 세팅
         {
             if (isEventSet == false)    // 처음이라면 새로 설정
@@ -33,7 +35,7 @@ public class HealEvent : EventBasic
                                       // 순서 정렬
 
                     int temp, j = i;
-                    switch (j)
+                    switch (j)  // 정렬
                     {
                         case 2:
                             if(optionNum[2] < optionNum[1])
@@ -57,13 +59,7 @@ public class HealEvent : EventBasic
                     }
                 }
             }
-            else  // 데이터 가져오기
-            {
-                for (int i = 0; i < 3; i++)
-                {
-                    optionNum[i] = eventData.optionNum[i];
-                }
-            }
+            // 아니면 이미 가지고 온 데이터를 사용
 
             for (int i = 0; i < 3; i++)    // 텍스트 변경용
             {
@@ -89,6 +85,10 @@ public class HealEvent : EventBasic
                         break;
                 }
             }
+        }
+        else
+        {
+            ButtonsOff();
         }
     }
 
@@ -172,7 +172,6 @@ public class HealEvent : EventBasic
         curDay += 3;
         cur_HP = cur_HP / 4 * 5;    // 회복 함수
         if (cur_HP > temp_Max_HP) cur_HP = temp_Max_HP; // 최대체력 초과 시 최대체력 표시
-                                                        
         ButtonsOff();
     }
 
@@ -210,6 +209,8 @@ public class HealEvent : EventBasic
                 ActiveEvent6();
                 break;
         }
+        isAlreadySelect = true;
+        SaveData();
     }
 
     public void Button2()
@@ -235,7 +236,8 @@ public class HealEvent : EventBasic
                 ActiveEvent6();
                 break;
         }
-
+        isAlreadySelect = true;
+        SaveData();
     }
 
     public void Button3()
@@ -261,5 +263,7 @@ public class HealEvent : EventBasic
                 ActiveEvent6();
                 break;
         }
+        isAlreadySelect = true;
+        SaveData();
     }
 }

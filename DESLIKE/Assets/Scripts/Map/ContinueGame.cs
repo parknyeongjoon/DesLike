@@ -33,6 +33,9 @@ public class ContinueGame : MonoBehaviour
         saveManager = SaveManager.Instance;
         saveManager.gameData.mapData = new MapData();
         saveManager.gameData.mapData.newSet = true;
+        saveManager.gameData.mapData.eventEnd = true;
+
         saveManager.gameData.curBattleNodeData = new CurBattleNodeData();
+        saveManager.gameData.eventData = new EventData();
     }
 }

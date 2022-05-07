@@ -257,7 +257,7 @@ public class EventNodeScript : NodeScript
             saveManager.gameData.mapData.isEventSet[i] = false;
             saveManager.gameData.mapData.isRewardSet[i] = false;
         }
-
+        saveManager.gameData.mapData.eventEnd = true;
         eventNode.Play_EventNode();
     }
  }

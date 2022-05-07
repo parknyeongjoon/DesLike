@@ -15,11 +15,13 @@ public class RelicEvent : EventBasic
         SetOption();
         relicManager = RelicManager.Instance;
         isEventSet = true;
+        eventEnd = false;
+        SaveData();
     }
 
     void SetOption()
     {
-        if (isAlreadySelect == false)   // 이미 선택되지 않았을 때만 세팅
+        if (isAlreadySelect == false)   // 이미 선택되지 않았을 때(이벤트 종료맵이 아닐 때)만 세팅
         {
             if (isEventSet == false)    // 처음이라면 새로 설정
             {
@@ -65,6 +67,10 @@ public class RelicEvent : EventBasic
                         break;
                 }
             }
+        }
+        else
+        {
+            ButtonsOff();
         }
     }
 
@@ -191,6 +197,9 @@ public class RelicEvent : EventBasic
                 ActiveEvent6();
                 break;
         }
+        isAlreadySelect = true;
+        isEventSet = false;
+        SaveData();
     }
 
     public void Button2()
@@ -216,6 +225,9 @@ public class RelicEvent : EventBasic
                 ActiveEvent6();
                 break;
         }
+        isAlreadySelect = true;
+        isEventSet = false;
+        SaveData();
     }
 
     public void Button3()
@@ -241,5 +253,8 @@ public class RelicEvent : EventBasic
                 ActiveEvent6();
                 break;
         }
+        isAlreadySelect = true;
+        isEventSet = false;
+        SaveData();
     }
 }

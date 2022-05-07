@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curMapNode: {fileID: 11400000, guid: aa2481306b7ef304e9d74bb980916d7c, type: 2}
   selectNode:
-  - {fileID: 0}
-  - {fileID: 11400000, guid: aa2481306b7ef304e9d74bb980916d7c, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 7444f7a6f48adb949af04b63b47ec137, type: 2}
+  - {fileID: 11400000, guid: 7444f7a6f48adb949af04b63b47ec137, type: 2}
+  - {fileID: 11400000, guid: 7444f7a6f48adb949af04b63b47ec137, type: 2}
   physicNorSol:
   - {fileID: 11400000, guid: 63e33c6e044a1e34da48031263c41fac, type: 2}
   - {fileID: 11400000, guid: cf43bab0e7c1b0647b13055f91296289, type: 2}

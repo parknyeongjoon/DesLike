@@ -73,16 +73,18 @@ public class MapData
     public bool[] isAbleSet = new bool[3];
     public bool[] isChallenge = new bool[3];
     public int challengeCount = 0;
-    public bool midBossCheck1, midBossCheck2, villageCheck, organCheck, newSet; // 중간 보스, 마을, 정비, 이미 세팅했는지 여부
+    public bool midBossCheck1, midBossCheck2, villageCheck, organCheck, newSet, eventEnd; // 중간 보스, 마을, 정비, 이미 세팅했는지 여부
 }
 
 [System.Serializable]
 public class EventData
 {
-    public bool isEventSet;
+    public int ranPenalty, rewardNum, comBox;
+    public bool isEventSet, isAlreadySelect;
     public int[] optionNum = new int[3];
-    public bool isAlreadySelect;    // 이미 이벤트가 선택되었는지 확인
-    public int ranPenalty;
+    public int[] areaGold = new int[3];
+    public int[] choiNum = new int[3];    // 0 : 1번째 선택지(골드, 체력, X), 1 : 2번째 선택지(액수), 2 : 도박 선택
+    public bool[] stepCheck = new bool[5];
 }
 
 [System.Serializable]

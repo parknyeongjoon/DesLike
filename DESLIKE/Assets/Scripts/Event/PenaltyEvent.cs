@@ -6,13 +6,14 @@ public class PenaltyEvent : EventBasic
 {
     int temp_Max_HP = 500;
     RelicManager relicManager;
-    int ranPenalty;  // 0 : 체력, 1 : 포트, 2 : 특화 손실, 3, 골드 손실
-
+    
     void OnEnable()
     {
         SetOption();
         relicManager = RelicManager.Instance;
         isEventSet = true;
+        eventEnd = false;
+        SaveData();
     }
 
     void SetOption()
@@ -21,11 +22,9 @@ public class PenaltyEvent : EventBasic
         {
             if (isEventSet == false)
             {
-
                 ranPenalty = Random.Range(0, 4);
             }
-            else
-                ranPenalty = SaveManager.Instance.gameData.eventData.ranPenalty;
+            // 아니라면 기존 저장되어있는 데이터로 실행
 
             switch (ranPenalty)
             {
@@ -59,6 +58,10 @@ public class PenaltyEvent : EventBasic
                     OptionText[2].text = "김시후";
                     break;
             }
+        }
+        else
+        {
+            ButtonsOff();
         }
     }
     
@@ -96,7 +99,7 @@ public class PenaltyEvent : EventBasic
                 // portRand 이용해서 포트 패널티
                 break;
 
-            case 2:
+            case 2:// 포트 패널티 X
                 break;
 
             default:
@@ -118,7 +121,7 @@ public class PenaltyEvent : EventBasic
                 // 50% 확률로 특화패널티
                 break;
 
-            case 2:
+            case 2:// 패널티X
                 break;
 
             default:
@@ -180,6 +183,8 @@ public class PenaltyEvent : EventBasic
                 break;
         }
         ButtonsOff();
+        isAlreadySelect = true;
+        SaveData();
     }
 
     public void Button2()
@@ -203,6 +208,8 @@ public class PenaltyEvent : EventBasic
                 break;
         }
         ButtonsOff();
+        isAlreadySelect = true;
+        SaveData();
     }
 
     public void Button3()
@@ -226,5 +233,7 @@ public class PenaltyEvent : EventBasic
                 break;
         }
         ButtonsOff();
+        isAlreadySelect = true;
+        SaveData();
     }
 }

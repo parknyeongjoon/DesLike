@@ -37,9 +37,9 @@ public class GambleEvent : EventBasic
             Buttons[i].gameObject.SetActive(true);
         }
         InformText.text = "확률은 3분의 1, 보상은 3배! 게임 한 번 해보시지 않겠습니까?";
-        OptionText[0].text = "골드를 건다.(보상 : 건 골드 3배)";
-        OptionText[1].text = "체력을 건다.(보상 : 건 체력의 3배만큼 회복)";
-        OptionText[2].text = "도박을 하지 않는다.(이벤트 종료)";
+        OptionText[0].text = "골드를 건다.(보상 : 건 골드 3배, 3일 소모)";
+        OptionText[1].text = "체력을 건다.(보상 : 건 체력의 3배만큼 회복, 3일 소모)";
+        OptionText[2].text = "도박을 하지 않는다.(이벤트 종료, 1일 소모)";
     }
 
     void FirstSelect(int button)  // 골드를 건다, 체력을 건다, 도박 안한다
@@ -50,6 +50,7 @@ public class GambleEvent : EventBasic
             switch (button)
             {
                 case 0:
+                    curDay += 3;
                     InformText.text = "오호, 골드를 고르셨군요. 얼마를 거시겠습니까?";
                     OptionText[0].text = "30골드 (보상 : 90골드)";
                     OptionText[1].text = "50골드 (보상 : 150골드)";
@@ -63,6 +64,7 @@ public class GambleEvent : EventBasic
                     }
                     break;
                 case 1:
+                    curDay += 3;
                     InformText.text = "오호, 체력을 고르셨군요. 얼마나 거시겠습니까?";
                     OptionText[0].text = "30골드 (보상 : HP 90 회복)";
                     OptionText[1].text = "50골드 (보상 : HP 150 회복)";
@@ -76,9 +78,11 @@ public class GambleEvent : EventBasic
                     }
                     break;
                 case 2:
+                    curDay += 1;
                     InformText.text = "칫, 재미없군요.얼른 가세요.";
-                    ToOneButton();
-                    OptionText[2].text = "돌아간다.";
+                    for(int i = 0; i<3; i++)
+                        Buttons[i].gameObject.SetActive(false);
+                    EndButton.gameObject.SetActive(true);
                     break;
                 default:
                     InformText.text = "오류임. 일하셈";
@@ -174,7 +178,7 @@ public class GambleEvent : EventBasic
     {
         if (comBox == choiNum[1])
         {
-            InformText.text = "정답은 " + comBox + "번째 상자입니다! 정답을 맞췄으니 보상을 드리겠습니다.";
+            InformText.text = "정답은 " + (comBox+1) + "번째 상자입니다! 정답을 맞췄으니 보상을 드리겠습니다.";
             if (stepCheck[3] == true)
             {
                 if (choiNum[0] == 0)
@@ -182,7 +186,7 @@ public class GambleEvent : EventBasic
                 else cur_HP += rewardNum * 3;
             }
         }
-        else InformText.text = "정답은 " + comBox + "번째 상자입니다! 아쉽게도 틀리셨군요. 보상은 없습니다.";
+        else InformText.text = "정답은 " + (comBox+1) + "번째 상자입니다! 아쉽게도 틀리셨군요. 보상은 없습니다.";
 
         for (int i = 0; i < 3; i++)
             Buttons[i].gameObject.SetActive(false);
@@ -220,7 +224,13 @@ public class GambleEvent : EventBasic
     public void Button3()
     {
         if (stepCheck[0] == true && choiNum[0] == 2)  // 바로 돌아간다.
-            EndEvent();
+        {
+            for(int i = 0; i<3; i++)
+            {
+                Buttons[i].gameObject.SetActive(false);
+            }
+            EndButton.gameObject.SetActive(true);
+        }
 
         if (stepCheck[0] == false)
             FirstSelect(2);

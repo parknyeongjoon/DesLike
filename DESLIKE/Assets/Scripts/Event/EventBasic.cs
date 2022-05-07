@@ -90,7 +90,6 @@ public class EventBasic : MonoBehaviour
     public void SaveStepCheck(int i)
     {
         saveManager.gameData.eventData.stepCheck[i] = stepCheck[i];
-        saveManager.SaveGameData();
     }
 
     public void SaveData()

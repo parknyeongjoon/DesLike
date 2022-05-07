@@ -8,8 +8,17 @@ public class Installation : SkillData
     [SerializeField] GameObject installPrefab;
     public float installTime;
 
+    Skill skill;
+
+    void OnEnable()
+    {
+        skill = installPrefab.GetComponent<Skill>();
+    }
+
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
-        Destroy(Instantiate(installPrefab, targetInfo.transform.position, Quaternion.identity, heroInfo.transform),installTime);
+        GameObject tempObject = Instantiate(installPrefab, targetInfo.transform.position, Quaternion.identity);
+        tempObject.layer = heroInfo.gameObject.layer;
+        Destroy(tempObject, installTime);
     }
 }

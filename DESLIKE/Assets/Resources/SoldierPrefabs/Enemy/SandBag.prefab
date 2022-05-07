@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8492592070707429665}
   - component: {fileID: 4763489973888050160}
   - component: {fileID: 7124244549123824852}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AuraCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillData: {fileID: 11400000, guid: 41bc28c32a0ef8741adba64f0b0abf57, type: 2}
   atkArea: 0
-  atkLayer: 0
 --- !u!1001 &2520065963215670094
 PrefabInstance:
   m_ObjectHideFlags: 0

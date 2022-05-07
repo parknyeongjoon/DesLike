@@ -15,6 +15,7 @@ public class KnockBack : SkillData
 
     IEnumerator KnockBackEffect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
+        targetInfo.Stun(knockBackTime);
         float time = 0;
         Vector3 startPos = targetInfo.transform.position;
         while(time <= knockBackTime)

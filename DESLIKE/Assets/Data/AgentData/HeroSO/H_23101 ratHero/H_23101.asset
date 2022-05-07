@@ -16,7 +16,7 @@ MonoBehaviour:
   code: H_23101
   hp: 100
   def: 3
-  size: 0.375
+  size: 0.7
   blood: {fileID: 0}
   soldier_name: ratHero
   mp: 200

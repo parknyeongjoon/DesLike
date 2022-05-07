@@ -5,12 +5,12 @@ using UnityEngine;
 public class BuffAura : Skill//공중전 다시 도입되면 trigger if문 다시 만져야함
 {
     List<HeroInfo> effectList = new List<HeroInfo>();
-    public int atkArea, atkLayer;
+    public int atkArea;
 
     protected override void Awake()
     {
         StartCoroutine(UseSkill(null));
-        atkArea = transform.parent.gameObject.layer;
+        atkArea = gameObject.layer;
     }
 
     void OnTriggerEnter2D(Collider2D collision)

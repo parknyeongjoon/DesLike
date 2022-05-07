@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start_Delay: 1
   end_Delay: 1
-  range: 1
+  range: 10
   atk_Dmg: 1
+  charge_MP: 0
   atkCount: 1
   extraSkillData: {fileID: 0}
   atkArea: 256
-  arrow: {fileID: 0}
+  arrow: {fileID: 5718541635727260301, guid: a18178bae98610b4cb2297329b910fa7, type: 3}
   arrowSpeed: 1

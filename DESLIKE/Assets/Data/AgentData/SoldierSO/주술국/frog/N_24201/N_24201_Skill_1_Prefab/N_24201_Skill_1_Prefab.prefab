@@ -115,4 +115,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillData: {fileID: 11400000, guid: 41bc28c32a0ef8741adba64f0b0abf57, type: 2}
   atkArea: 0
-  atkLayer: 0

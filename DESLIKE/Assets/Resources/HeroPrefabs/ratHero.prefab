@@ -346,17 +346,17 @@ PrefabInstance:
     - target: {fileID: 3342412681122196993, guid: 0f95ca2c810e0eb4da249c707d046b8b,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.8
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3342412681122196993, guid: 0f95ca2c810e0eb4da249c707d046b8b,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.1
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 3342412681122196993, guid: 0f95ca2c810e0eb4da249c707d046b8b,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.5
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 3426800146471488827, guid: 0f95ca2c810e0eb4da249c707d046b8b,
         type: 3}
@@ -777,6 +777,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6740098125957529886, guid: 0f95ca2c810e0eb4da249c707d046b8b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6740098125957529886, guid: 0f95ca2c810e0eb4da249c707d046b8b,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7354456333470513629, guid: 0f95ca2c810e0eb4da249c707d046b8b,
         type: 3}

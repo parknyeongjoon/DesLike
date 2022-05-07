@@ -12,10 +12,25 @@ PrefabInstance:
       propertyPath: soldierCode
       value: N_12303
       objectReference: {fileID: 0}
+    - target: {fileID: 852807739320361642, guid: a389e075072991a45bce11914791a9ec,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 852807739320361642, guid: a389e075072991a45bce11914791a9ec,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4451532210398620187, guid: a389e075072991a45bce11914791a9ec,
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4618823270637902937, guid: a389e075072991a45bce11914791a9ec,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 5346442293094215222, guid: a389e075072991a45bce11914791a9ec,
         type: 3}
@@ -86,7 +101,7 @@ PrefabInstance:
         type: 3}
       propertyPath: skeletonDataAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 437dcfc0f2d8a66499a05eacd8abe281,
+      objectReference: {fileID: 11400000, guid: d29fca4605da74440b2e9efc1b229e7f,
         type: 2}
     - target: {fileID: 6199940814571043003, guid: a389e075072991a45bce11914791a9ec,
         type: 3}
@@ -117,7 +132,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8d7beddedaf41d74394f419dc165c31f, type: 2}
+      objectReference: {fileID: 2100000, guid: 6ad4e6d0a747a1b449db33138e46b119, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a389e075072991a45bce11914791a9ec, type: 3}
 --- !u!1 &7383042432655554387 stripped

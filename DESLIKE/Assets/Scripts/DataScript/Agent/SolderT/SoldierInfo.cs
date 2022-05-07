@@ -19,6 +19,28 @@ public class SoldierInfo : HeroInfo
         StartCoroutine(Hp_Mp_Re());
     }
 
+    void AddInfoList()
+    {
+        switch (((SoldierData)castleData).soldier_Type)
+        {
+            case Soldier_Type.Tanker:
+            case Soldier_Type.Soldier:
+            case Soldier_Type.Monster:
+                allyPortDatas.meleeSoldierList.Add(this);
+                break;
+            case Soldier_Type.Ranger:
+            case Soldier_Type.Magician:
+            case Soldier_Type.Healer:
+            case Soldier_Type.Buffer:
+            case Soldier_Type.Debuffer:
+                allyPortDatas.rangerSoldierList.Add(this);
+                break;
+            case Soldier_Type.Catapult:
+                allyPortDatas.catapultSoldierList.Add(this);
+                break;
+        }
+    }
+
     void Dead()
     {
         gameObject.layer = 7;

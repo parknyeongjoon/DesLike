@@ -17,4 +17,4 @@ MonoBehaviour:
   skillType: 0
   skill_Icon: {fileID: 0}
   extraSkillData: {fileID: 0}
-  damage: 1
+  damage: 2

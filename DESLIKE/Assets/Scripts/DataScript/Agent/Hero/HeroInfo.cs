@@ -133,7 +133,7 @@ public class HeroInfo : CastleInfo
 
     public void Stun(float stunTime)
     {
-        
+        skeletonAnimation.state.SetAnimation(0, castleData.code + "_Stun", false);
         state = Soldier_State.Stun;
         stunEvent?.Invoke(stunTime);
     }

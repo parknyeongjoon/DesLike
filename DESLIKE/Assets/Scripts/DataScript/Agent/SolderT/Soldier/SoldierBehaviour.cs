@@ -15,6 +15,14 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
         if (heroInfo.target)
         {
             heroInfo.moveDir = (heroInfo.target.transform.position - transform.position).normalized;
+            if (heroInfo.moveDir.x > 0 && !heroInfo.skeletonAnimation.skeleton.FlipX)//유닛이 오른쪽으로 이동중이면서 유닛이 왼쪽을 보고 있다면
+            {
+                heroInfo.skeletonAnimation.skeleton.FlipX = true;
+            }
+            else if(heroInfo.moveDir.x < 0 && heroInfo.skeletonAnimation.skeleton.FlipX)//유닛이 왼쪽으로 이동중이면서 유닛이 오른쪽을 보고 있다면
+            {
+                heroInfo.skeletonAnimation.skeleton.FlipX = false;
+            }
         }
         else { heroInfo.moveDir = new Vector3(0, 0, 0); }
     }

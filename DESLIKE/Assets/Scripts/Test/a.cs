@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class a : MonoBehaviour
 {
@@ -16,18 +17,36 @@ public class a : MonoBehaviour
     [SerializeField]
     testSO testSO;
 
+    public UnityEvent<float> testUnityEvent;
+
     void Start()
     {
-        Debug.Log(testSO.testString);
+        testUnityEvent.AddListener(PrintA);
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            StartCoroutine(testAA());
+            testUnityEvent?.Invoke(5.0f);
         }
     }
+
+    public void PrintA(float a)
+    {
+        Debug.Log(a);
+    }
+
+    public void PrintB()
+    {
+        Debug.Log("B");
+    }
+
+    public void PrintC()
+    {
+        Debug.Log("C");
+    }
+
     protected virtual void testA()
     {
         Debug.Log("A");

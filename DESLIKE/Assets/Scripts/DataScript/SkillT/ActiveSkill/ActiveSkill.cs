@@ -7,9 +7,9 @@ public class ActiveSkill : Skill
     public float cur_cooltime;
     public int atkArea, atkLayer;
 
-    protected override void Start()
+    protected override void Awake()
     {
-        base.Start();
+        base.Awake();
         soldierBasic.skillDetect = Detect;
         soldierBasic.canSkill = CanSkillCheck;
         soldierBasic.skillHandler = UseSkill;
@@ -17,6 +17,24 @@ public class ActiveSkill : Skill
         atkArea = (int)heroInfo.team * (int)((ActiveSkillData)skillData).atkArea;
         atkLayer = (int)((ActiveSkillData)skillData).atkArea * 7;
         cur_cooltime = 0;
+    }
+
+    public override IEnumerator UseSkill(HeroInfo targetInfo)
+    {
+        heroInfo.action = Soldier_Action.Skill;
+        //heroInfo.skeletonAnimation.state.SetAnimation(0, skillData.code, false);//스킬
+        //AkSoundEngine.PostEvent(skillData.code, gameObject);활성화
+        yield return new WaitForSeconds(((ActiveSkillData)skillData).start_Delay);
+        if (targetInfo && targetInfo.gameObject.layer != 7)
+        {
+            heroInfo.cur_Mp -= ((ActiveSkillData)skillData).mp;
+            cur_cooltime = ((ActiveSkillData)skillData).cooltime;
+            StartCoroutine(SkillCooltime());
+            skillData.Effect(heroInfo, targetInfo);
+            heroInfo.action = Soldier_Action.End_Delay;
+            yield return new WaitForSeconds(((ActiveSkillData)skillData).end_Delay);
+        }
+        heroInfo.action = Soldier_Action.Idle;
     }
 
     public bool IsActive()
@@ -63,10 +81,5 @@ public class ActiveSkill : Skill
                 heroInfo.skillTargetInfo = heroInfo.skillTarget.GetComponent<HeroInfo>();
             }
         }
-    }
-
-    public override IEnumerator UseSkill(HeroInfo targetInfo)
-    {
-        yield return null;
     }
 }

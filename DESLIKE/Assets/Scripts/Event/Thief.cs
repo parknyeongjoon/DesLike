@@ -33,7 +33,7 @@ public class Thief : MonoBehaviour
     public void ThiefOption2()//피 깍이기
     {
         EndEvent();
-        GameObject.Find("Hero").GetComponent<HeroInfo>().OnDamaged(15 + level * 0.5f);
+        GameObject.Find("Hero").GetComponent<HeroInfo>().OnDamaged(null, 15 + level * 0.5f);//바꿔야함, gameData에 heroSaveData에서 까야할 듯
         // 피 깍이는 이펙트
     }
 

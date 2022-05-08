@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName ="ActiveSkillData",menuName ="ScriptableObject/SkillT/ActiveSkillData")]
 public class ActiveSkillData : SkillData
 {
     public float cooltime, mp, range, start_Delay, end_Delay;

@@ -42,6 +42,7 @@ public class BasicAttack : MonoBehaviour
         if (!heroInfo.targetInfo || heroInfo.target.layer == 7)
         {
             heroInfo.state = Soldier_State.Idle;
+            heroInfo.action = Soldier_Action.Idle;
             return false;
         }
         if (heroInfo.TargetCheck(heroInfo.target, basicAttackData.range + heroInfo.targetInfo.castleData.size))

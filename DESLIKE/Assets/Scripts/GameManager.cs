@@ -9,11 +9,11 @@ using UnityEngine.Events;
 * setPort에서 데이터 표시
 * 게임 클리어 만들기
 * ///영웅 프리팹을 하나하나 만드는 거 고려해봐야할 듯
-* Time Scale 건드리기
+* //Time Scale 건드리기
 * //relic 중복해서 안 나오게 만들기
 * 노드 한 번 선택하면 되돌리지는 못하게 하기
 * GameData 추가 해야함
-* 객체 풀링 공부하기(필수)
+* 객체 풀링 공부하기(투사체, 이펙트)
 * //continue할 때 gameData에 activeSoldierList에 있는 soldierData들은 값들 allSoldierList에 값 옮기기
 * //reward에 병사 누르면 여러 개 중 선택권 주기
 * //relic이나 mutant 등 없어질 때 disable로 효과 제거해주기
@@ -23,7 +23,7 @@ using UnityEngine.Events;
 * gamePause동안 스킬 못 쓰고 못 움직이게 하기
 * ///atkDetect랑 skillDetect 둘 다 있으면 skillDetect만 사용됨(target 분리해서 해결)
 * CastleInfo랑 HeroInfo, CastleData랑 HeroData 통합하기(아. 아. 아. 언제 함 아.)
-* 캐릭터들 체력바 soldierInfo에 OnDamaged 될 때만 넣어주기, 체젠에도 반영이 돼야 함
+* //캐릭터들 체력바 soldierInfo에 OnDamaged 될 때만 넣어주기, 체젠에도 반영이 돼야 함
 * //도발 기능 만들기(Grenade Debuff로)//보류
 * relic save&load 만들기
 * 죽으면 체마나젠 멈추기, 영웅 조작 막기
@@ -33,11 +33,18 @@ using UnityEngine.Events;
 * 영웅 세이브 데이터 이어지나 체크해보기
 * 스턴 - 디버프 패널 아이콘 설정
 * 영웅 스턴 중에 못 움직이게
-* 스킬 스크립트들 더 합치기
+* //스킬 스크립트들 더 합치기
 * 베지어 곡선 공부
 * 투사체 끝까지 날아가면서 null 코루틴 안 뜨게 하기
 * wwise T 들어간 이벤트 지우기
 * 투사체 위치 조절 더 정확히 하기
+* 공격하면 마나가 차고 마나가 다 차면 스킬을 사용하는 식으로
+* 피격 블러드 지우기(최종 단계 - 피격 확인하기 위해서)
+* 스턴 시 패널에 스턴 아이콘 띄우기
+* 쉴드 보충(먼저 생긴 쉴드가 먼저 없어지는 식으로 시간 지나면 사라져야하나?)
+* 영웅 선입력 만들기
+* yield return new 다 할당하고 실행하기
+* soldierInfo 국가별로 구별하기
 * ///////////////////////////////////////////////////////////////////////////////////////////////컨텐츠 기획
 * 방어력 수식 만들기
 * 배틀 중간중간에도 이벤트 나오게 하기(배틀이 한 라운드로 바뀌면서 취소)

@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: TestPortsOption
   m_EditorClassIdentifier: 
   soldierOption:
-  - soldierData: {fileID: 11400000, guid: 27be6089e9daeb6499a3dfc2addf52a9, type: 2}
+  - soldierData: {fileID: 11400000, guid: 28db2665da4d7d94eaf8f993e2914190, type: 2}
     mutant: {fileID: 0}
     portNum: 000000000200000004000000
-  - soldierData: {fileID: 11400000, guid: cf43bab0e7c1b0647b13055f91296289, type: 2}
-    mutant: {fileID: 0}
-    portNum: 0100000003000000

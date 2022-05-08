@@ -124,6 +124,13 @@ public class SaveManager : MonoBehaviour
         allyPortDatas.curBarrierStrength = gameData.portSaveDatas.curBarrierStrength;
     }
 
+    public void SaveHeroData(HeroInfo heroInfo)
+    {
+        gameData.heroSaveData.cur_Hp = heroInfo.cur_Hp;
+        gameData.heroSaveData.cur_Mp = heroInfo.cur_Mp;
+        gameData.heroSaveData.resurrection = heroInfo.resurrection;
+    }
+
     public void SaveRelicData()
     {
         gameData.relicSaveData.Clear();

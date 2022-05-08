@@ -5,16 +5,17 @@ using UnityEngine;
 public class DebuffAura : Skill//공중전 다시 도입되면 trigger if문 다시 만져야함
 {
     List<HeroInfo> effectList = new List<HeroInfo>();
+    public int atkArea;
 
-    protected override void Start()
+    protected override void Awake()
     {
-        base.Start();
+        atkArea = gameObject.layer;//다르게 할당해 줄 방법 찾기
         StartCoroutine(UseSkill(null));
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer != heroInfo.gameObject.layer)
+        if ((collision.CompareTag("Soldier") || collision.CompareTag("Player")) && collision.gameObject.layer != atkArea)
         {
             effectList.Add(collision.GetComponent<HeroInfo>());
         }
@@ -22,7 +23,7 @@ public class DebuffAura : Skill//공중전 다시 도입되면 trigger if문 다시 만져야함
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.layer != heroInfo.gameObject.layer)
+        if ((collision.CompareTag("Soldier") || collision.CompareTag("Player")) && collision.gameObject.layer != atkArea)
         {
             effectList.Remove(collision.GetComponent<HeroInfo>());
         }
@@ -30,13 +31,14 @@ public class DebuffAura : Skill//공중전 다시 도입되면 trigger if문 다시 만져야함
 
     public override IEnumerator UseSkill(HeroInfo targetInfo)
     {
+        yield return new WaitUntil(() => BattleUIManager.Instance.battleStart);
         while (true)
         {
             for (int i = 0; i < effectList.Count; i++)
             {
-                if (effectList[i])
+                if (effectList[i] && effectList[i].gameObject.layer != 7)
                 {
-                    skillData.Effect(heroInfo, effectList[i]);
+                    skillData.Effect(null, effectList[i]);
                 }
                 else
                 {

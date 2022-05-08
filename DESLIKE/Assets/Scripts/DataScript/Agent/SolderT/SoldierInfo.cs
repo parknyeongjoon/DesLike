@@ -7,15 +7,38 @@ public class SoldierInfo : HeroInfo
 {
     public string soldierCode;
 
-    void Start()
+    protected override IEnumerator Start()
     {
         castleData = allyPortDatas.activeSoldierList[soldierCode];
         cur_Hp = castleData.hp;
-        cur_Mp = ((SoldierData)castleData).mp;
+        cur_Mp = 0;
         allyPortDatas.spawnSoldierList.Add(this);
         BattleUIManager.Instance.UpdateSoldierRatioBar();
         afterDeadEvent.AddListener(Dead);
+        yield return new WaitUntil(() => BattleUIManager.Instance.battleStart);//배틀 스타트 될 때까지 기다리기
         StartCoroutine(Hp_Mp_Re());
+    }
+
+    void AddInfoList()
+    {
+        switch (((SoldierData)castleData).soldier_Type)
+        {
+            case Soldier_Type.Tanker:
+            case Soldier_Type.Soldier:
+            case Soldier_Type.Monster:
+                allyPortDatas.meleeSoldierList.Add(this);
+                break;
+            case Soldier_Type.Ranger:
+            case Soldier_Type.Magician:
+            case Soldier_Type.Healer:
+            case Soldier_Type.Buffer:
+            case Soldier_Type.Debuffer:
+                allyPortDatas.rangerSoldierList.Add(this);
+                break;
+            case Soldier_Type.Catapult:
+                allyPortDatas.catapultSoldierList.Add(this);
+                break;
+        }
     }
 
     void Dead()

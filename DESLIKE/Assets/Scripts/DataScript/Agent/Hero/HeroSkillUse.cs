@@ -43,7 +43,7 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
     {
         if (Input.GetKeyDown(KeyCode.X) && skillScripts[1])
         {
-            //SkillFunc(skillScripts[1]);
+            SkillFunc(skillScripts[1]);
         }
     }
 
@@ -51,13 +51,13 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
     {
         if (Input.GetKeyDown(KeyCode.C) && skillScripts[2])
         {
-            //SkillFunc(skillScripts[2]);
+            SkillFunc(skillScripts[2]);
         }
     }
 
     void SkillFunc(Skill skillScript)
     {
-        if (CheckMpNCool(skillScript) && heroInfo.action != Soldier_Action.End_Delay)
+        if (CheckMpNCool(skillScript) && heroInfo.state <= Soldier_State.Stun && heroInfo.action != Soldier_Action.End_Delay)
         {
             if (skillCoroutine != null) { StopCoroutine(skillCoroutine); }
             skillCoroutine = StartCoroutine(UseSkill(skillScript));
@@ -102,7 +102,7 @@ public class HeroSkillUse: MonoBehaviour//버프같은 아군 선택 스킬들 �
             else if (skillScript.skillData.skillType == SkillType.GrenadeSkill)
             {
                 mouseManager.mouseState = Mouse_State.Grenade;
-                mouseManager.grenadeExtent.transform.localScale = new Vector2(((GrenadeAttackData)skillScript.skillData).extent, ((GrenadeAttackData)skillScript.skillData).extent);
+                mouseManager.grenadeExtent.transform.localScale = new Vector2(((GrenadeSkill)skillScript.skillData).extent, ((GrenadeSkill)skillScript.skillData).extent);
             }
             skillRange.transform.localScale = new Vector2(((ActiveSkillData)skillScript.skillData).range, ((ActiveSkillData)skillScript.skillData).range);
             yield return SetTarget();

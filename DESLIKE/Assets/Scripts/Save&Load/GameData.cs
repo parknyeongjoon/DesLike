@@ -37,7 +37,7 @@ public class PortSaveDatas
 public class GoodsSaveData
 {
     public int gold = 0;
-    public int magicalStone = 0;
+    public int areaGold = 0;
 }
 
 [System.Serializable]
@@ -73,8 +73,30 @@ public class MapData
     public bool[] isAbleSet = new bool[3];
     public bool[] isChallenge = new bool[3];
     public int challengeCount = 0;
-    public bool midBossCheck1, midBossCheck2, villageCheck, organCheck, newSet; // 중간 보스, 마을, 정비, 이미 세팅했는지 여부
+    public bool midBossCheck1, midBossCheck2, villageCheck, organCheck, newSet, eventEnd; // 중간 보스, 마을, 정비, 이미 세팅했는지 여부
 }
+
+[System.Serializable]
+public class EventData
+{
+    public int ranPenalty, rewardNum, comBox;
+    public bool isEventSet, isAlreadySelect;
+    public int[] optionNum = new int[3];
+    public int[] areaGold = new int[3];
+    public int[] choiNum = new int[3];    // 0 : 1번째 선택지(골드, 체력, X), 1 : 2번째 선택지(액수), 2 : 도박 선택
+    public bool[] stepCheck = new bool[5];
+}
+
+[System.Serializable]
+public class VillageData
+{
+    public int[] randRelic = new int[6];   // 목록별 랜덤넘버
+    public int[] relicPrice = new int[6];  // 목록별 가격
+    public bool[] isSoldOut = new bool[6];
+    public bool isNewSet;
+    public int healCount;
+}
+
 
 [System.Serializable]
 public class CurBattleNodeData
@@ -99,7 +121,9 @@ public class GameData
     public PortSaveDatas portSaveDatas = new PortSaveDatas();
     public GoodsSaveData goodsSaveData = new GoodsSaveData();
     public List<string> relicSaveData = new List<string>();
+    public EventData eventData = new EventData();
     public MapData mapData = new MapData();
+    public VillageData villageData = new VillageData();
     public CurBattleNodeData curBattleNodeData = new CurBattleNodeData();
     //mutant, 유물, extraSkills 등 바뀐 애들 저장해야함(continue 누르면 복제하는 식으로 하면 될 듯)
 }

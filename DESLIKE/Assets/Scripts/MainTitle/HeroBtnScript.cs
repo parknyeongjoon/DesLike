@@ -78,7 +78,7 @@ public class HeroBtnScript : MonoBehaviour
    void Set_GoodsCollection()
     {
         SaveManager.Instance.gameData.goodsSaveData.gold = heroSelectGoodsCollection.goodsSaveData.gold;
-        SaveManager.Instance.gameData.goodsSaveData.magicalStone = heroSelectGoodsCollection.goodsSaveData.magicalStone;
+        SaveManager.Instance.gameData.goodsSaveData.areaGold = heroSelectGoodsCollection.goodsSaveData.areaGold;
     }
 
     void SetCampRelic()

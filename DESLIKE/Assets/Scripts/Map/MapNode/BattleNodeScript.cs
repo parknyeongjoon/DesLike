@@ -6,6 +6,7 @@ using TMPro;
 
 public class BattleNodeScript : NodeScript
 {
+    Map map;
     BattleNode battleNode;
     [SerializeField] GameObject InfoTemp, InfoPrefab, MoreInfoPanel, MoreTemp, MorePrefab, ChallengeO;
     SaveManager saveManager;
@@ -13,12 +14,11 @@ public class BattleNodeScript : NodeScript
     int phyNorSolC, speNorSolC, comNorSolC, phyEpicSolC, speEpicSolC, comEpicSolC,
         phyNorRelC, speNorRelC, comNorRelC, phyEpicRelC, speEpicRelC, comEpicRelC, phyLegendRelC, speLegendRelC, comLegendRelC;
     int[] nextEvent = new int[THREE];
-    Map map;
     public bool[] isEventSet = new bool[THREE];
     bool[] isRewardSet = new bool[THREE];
     Reward reward;
     List<SoldierData> ableSoldierRewards;
-    List<GameObject> ableRelicRewards;
+    List<Relic> ableRelicRewards;
     List<PortsOption> enemyPortsOptions;
     PortsOption enemyPortOption;
     PortDatas enemyPortDatas;
@@ -106,7 +106,7 @@ public class BattleNodeScript : NodeScript
             battleNode.isRewardSet[i] = saveManager.gameData.mapData.isRewardSet[i];   // 배틀 노드 저장
         }
         isRewardSet = battleNode.isRewardSet;   // 배틀 노드 스크립트용
-        
+
         phyNorSolC = map.physicNorSol.Count;
         speNorSolC = map.spellNorSol.Count;
         comNorSolC = map.commonNorSol.Count;
@@ -237,8 +237,14 @@ public class BattleNodeScript : NodeScript
             norTotal = phyNorRelC + comNorRelC; // 무투국 + 공통
         else norTotal = speNorRelC + comNorRelC;  // 주술국 + 공통
 
+        reroll:
         int rand = Random.Range(0, norTotal);   // 일반 범위 내 랜덤값
-        battleNode.reward.relic = battleNode.ableRelicRewards[rand];  // 해당 유물을 노드에 저장
+        for (int i = 0; i < RelicManager.instance.relicList.Count; i++)
+        {
+            if (battleNode.ableRelicRewards[rand].relicData.code == RelicManager.instance.relicList[i].relicData.code)
+                goto reroll;
+        }   // 기존 가지고 있는 유물이면
+        battleNode.reward.relic.Add(battleNode.ableRelicRewards[rand]);  // 해당 유물을 노드에 저장
         // saveManager.gameData.curBattleNodeData.relRewardIndex[button, 0] = rand;    // 유물 번호 게임데이터에 저장
     }
 
@@ -255,9 +261,14 @@ public class BattleNodeScript : NodeScript
             norTotal = speNorRelC + comNorRelC;
             epicTotal = speEpicRelC + comEpicRelC;
         }
+        reroll:
         int rand = Random.Range(0, epicTotal) + norTotal;
-
-        battleNode.reward.relic = battleNode.ableRelicRewards[rand];
+        for(int i = 0; i<RelicManager.instance.relicList.Count; i++)
+        {
+            if (battleNode.ableRelicRewards[rand].relicData.code == RelicManager.instance.relicList[i].relicData.code)
+                goto reroll;
+        }   // 기존 가지고 있는 유물이면 리롤
+        battleNode.reward.relic.Add(battleNode.ableRelicRewards[rand]);
         // saveManager.gameData.rewardData.relicRewardIndex[button] = rand;
     }
 
@@ -274,8 +285,15 @@ public class BattleNodeScript : NodeScript
             neTotal = speNorRelC + comNorRelC + speEpicRelC + comEpicRelC;
             legendTotal = speLegendRelC + comLegendRelC;
         }
+        reroll:
         int rand = Random.Range(0, legendTotal) + neTotal;
-        battleNode.reward.relic = battleNode.ableRelicRewards[rand];
+        for (int i = 0; i < RelicManager.instance.relicList.Count; i++)
+        {
+            if (battleNode.ableRelicRewards[rand].relicData.code == RelicManager.instance.relicList[i].relicData.code)
+                goto reroll;
+        }   // 기존 가지고 있는 유물이면 리롤
+        battleNode.reward.relic.Add(battleNode.ableRelicRewards[rand]);
+        
         // saveManager.gameData.rewardData.relicRewardIndex[button] = rand;
     }
 

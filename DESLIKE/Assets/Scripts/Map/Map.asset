@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6c479d2a70ce7a489dbd8fa79bdab3b, type: 3}
   m_Name: Map
   m_EditorClassIdentifier: 
-  curMapNode: {fileID: 0}
+  curMapNode: {fileID: 11400000, guid: aa2481306b7ef304e9d74bb980916d7c, type: 2}
   selectNode:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 7444f7a6f48adb949af04b63b47ec137, type: 2}
+  - {fileID: 11400000, guid: 7444f7a6f48adb949af04b63b47ec137, type: 2}
+  - {fileID: 11400000, guid: 7444f7a6f48adb949af04b63b47ec137, type: 2}
   physicNorSol:
   - {fileID: 11400000, guid: 63e33c6e044a1e34da48031263c41fac, type: 2}
   - {fileID: 11400000, guid: cf43bab0e7c1b0647b13055f91296289, type: 2}
@@ -32,32 +32,32 @@ MonoBehaviour:
   commonNorSol: []
   commonEpicSol: []
   physicNorRel:
-  - {fileID: 4835315866048107822, guid: a2a4895075d4bae4fab94d06af5f6102, type: 3}
-  - {fileID: 4835315866048107822, guid: bab1c3b4ea968194ba769df36c83f7f6, type: 3}
+  - {fileID: -512087590680084207, guid: 826616231cc31534c801e5c282e62386, type: 3}
+  - {fileID: -512087590680084207, guid: e15febb05d554834ba4867deb98fa867, type: 3}
   physicEpicRel:
-  - {fileID: 4835315866048107822, guid: 6aa07b9d6db7eed44bcd9fe4b49d5fe4, type: 3}
-  - {fileID: 4835315866048107822, guid: c84f84e144709fc4dba1a51874eb5e70, type: 3}
+  - {fileID: -512087590680084207, guid: ed7d96131367e544c85604c24726c6e9, type: 3}
+  - {fileID: -512087590680084207, guid: d1d54443a5a065041894b66ee9159621, type: 3}
   physicLegendRel:
-  - {fileID: 4835315866048107822, guid: 19f858c2e012ff14fbaf251130c27e91, type: 3}
-  - {fileID: 4835315866048107822, guid: 717ad9e692db14343a36a69e7ae957b2, type: 3}
+  - {fileID: -512087590680084207, guid: 4259b3543732b374da3a29bafe50fe65, type: 3}
+  - {fileID: -512087590680084207, guid: b1afaae7e4b8365488f2dc77169ffbd8, type: 3}
   spellNorRel:
-  - {fileID: 4835315866048107822, guid: 4b3489b0b92e8ff44a88b2de5dd9966b, type: 3}
-  - {fileID: 4835315866048107822, guid: ff22f5d41d3c49144855806db5180c33, type: 3}
+  - {fileID: -512087590680084207, guid: a8b94c95e58f9c141a594da0a182c92e, type: 3}
+  - {fileID: -512087590680084207, guid: 6634085920921f849bc6ded847a49248, type: 3}
   spellEpicRel:
-  - {fileID: 4835315866048107822, guid: 4238c5f5bc1b19446a50487368abe8c7, type: 3}
-  - {fileID: 4835315866048107822, guid: 2fafeb5d05d936c4381240bc6698c7da, type: 3}
+  - {fileID: -512087590680084207, guid: dadfdae9bc4df97459542e38b014b072, type: 3}
+  - {fileID: -512087590680084207, guid: 36e0217e3710d0c4488df83be9cb1a6f, type: 3}
   spellLegendRel:
-  - {fileID: 4835315866048107822, guid: 1e554090c276258469a9d79506e8ac9a, type: 3}
-  - {fileID: 4835315866048107822, guid: 3ae3b72cec6dcd3428756d6a6e0dcc9d, type: 3}
+  - {fileID: -512087590680084207, guid: 545b627ed3eec734a827f235f1fff896, type: 3}
+  - {fileID: -512087590680084207, guid: a136eec0dc24d434ab0a03c52abb44ee, type: 3}
   commonNorRel:
-  - {fileID: 4835315866048107822, guid: f9516c03915799f4d9420c053d457c29, type: 3}
-  - {fileID: 4835315866048107822, guid: 995ea8cf016b6b24b806b3a8fc5e3b91, type: 3}
+  - {fileID: -512087590680084207, guid: d3293a91bfe3625468b45b2a57a15849, type: 3}
+  - {fileID: -512087590680084207, guid: 7ba5e7edc5a619e45b89825f185c73dc, type: 3}
   commonEpicRel:
-  - {fileID: 4835315866048107822, guid: bf6f51f4cebaf7b42beb40660adbc9dd, type: 3}
-  - {fileID: 4835315866048107822, guid: 49be580c4be9d754484afd988dd79773, type: 3}
+  - {fileID: -512087590680084207, guid: 426a584971c2d3342b36a5316a741b1f, type: 3}
+  - {fileID: -512087590680084207, guid: 0a18ab768ccd6074ba47caca9915f98d, type: 3}
   commonLegendRel:
-  - {fileID: 4835315866048107822, guid: 99980c64839d6204d91a2725414728c6, type: 3}
-  - {fileID: 4835315866048107822, guid: ee1045f0a4403834eaeb87f0e27b7742, type: 3}
+  - {fileID: -512087590680084207, guid: 4a85ade60bce7d244b0fbca4b8d843a8, type: 3}
+  - {fileID: -512087590680084207, guid: 435b71361fcce3747b3d0658cfb48729, type: 3}
   isMap: 0
   playerX: 0
   playerY: 0

@@ -7,8 +7,10 @@ public class EventManager : MonoBehaviour
 {
     Map map;
     [SerializeField] Canvas EventCanvas;
-    [SerializeField] GameObject Thief, Training, Merchant, Rullet, CampFire, Infection;
-    EventNode eventNode;
+    [SerializeField] GameObject Rullet, CampFire, Infection;
+    [SerializeField] GameObject RelicEvent, HealEvent, AreaEvent, PenaltyEvent, ShopEvent, GambleEvent, FightEvent;
+
+    public EventNode eventNode;
     int curBtn, EvntList;
     SaveManager saveManager;
 
@@ -25,34 +27,38 @@ public class EventManager : MonoBehaviour
         saveManager.SaveGameData();
     }
 
-    void EventActive() 
+    void EventActive()
     {
-        Thief.SetActive(false);
-        Training.SetActive(false);
-        Merchant.SetActive(false);
-        Rullet.SetActive(false);
-        CampFire.SetActive(false);
-        Infection.SetActive(false);
+        RelicEvent.SetActive(false);
+        HealEvent.SetActive(false);
+        AreaEvent.SetActive(false);
+        PenaltyEvent.SetActive(false);
+        ShopEvent.SetActive(false);
+        GambleEvent.SetActive(false);
+        FightEvent.SetActive(false);
         
         switch (EvntList)
         {
             case 0:
-                Thief.SetActive(true);
+                RelicEvent.SetActive(true);
                 break;
             case 1:
-                Training.SetActive(true);
+                HealEvent.SetActive(true);
                 break;
             case 2:
-                Merchant.SetActive(true);
+                AreaEvent.SetActive(true);
                 break;
             case 3:
-                Rullet.SetActive(true);
+                PenaltyEvent.SetActive(true);
                 break;
-               case 4:
-                CampFire.SetActive(true);
+            case 4:
+                ShopEvent.SetActive(true);
                 break;
             case 5:
-                Infection.SetActive(true);
+                GambleEvent.SetActive(true);
+                break;
+            case 6:
+                FightEvent.SetActive(true);
                 break;
             default: break;
         }

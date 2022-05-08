@@ -12,17 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d48cd933b65bf0748a03fac0cbfc4f80, type: 3}
   m_Name: VillageNode
   m_EditorClassIdentifier: 
-  map: {fileID: 0}
+  map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
   isNode: 0
-  rewardSoldierList: []
-  rewardRelicList: []
+  ableSoldierRewards: []
+  ableRelicRewards: []
+  kingdom: 1
   reward:
     soldierReward:
-      soldier: []
+    - soldier: {fileID: 0}
       mutant: {fileID: 0}
-    relic: {fileID: 0}
+    - soldier: {fileID: 0}
+      mutant: {fileID: 0}
+    relic:
+    - {fileID: 0}
     gold: 0
-    scrap: 0
     magicalStone: 0
-  x: 0
-  y: 0
+  relicLevelCount: 000000000000000000000000

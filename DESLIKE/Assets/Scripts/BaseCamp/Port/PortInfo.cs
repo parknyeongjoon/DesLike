@@ -53,7 +53,11 @@ public class PortInfo : MonoBehaviour
         }
         else if(PortManager.Instance.portState == Port_State.Idle)//idle 상태일 때
         {
-            if(!portData.unlock)//포트가 잠겨있다면 포트를 언락하기
+
+        }
+        else if(PortManager.Instance.portState == Port_State.Unlock)//포트 unlock을 해제하는 상황일때
+        {
+            if (!portData.unlock)//포트가 잠겨있다면 포트를 언락하기
             {
                 PortManager.Instance.ControllActiveBtn(UnlockBtn);
                 //unlockPrice.text = 설정.ToString();

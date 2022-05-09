@@ -18,17 +18,37 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Music_S1_Boss_Battle" ID="{77985FC0-B2B9-4B04-8A4B-85FA6F0F4E71}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Music_S2_Boss_Battle" ID="{18BCD6F2-0F94-466D-B683-61CBAE91D663}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Music_S3_Normal_Battle" ID="{CA6D3D84-9F42-42B6-81F9-E618187F7A19}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Music_Map" ID="{DD14FC31-A992-407E-8A3C-1BCA3CBB907A}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Music_S1_Normal_Battle" ID="{ABFC2381-FE5E-4BB4-942A-6D0183B1F327}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Music_S2_Normal_Battle" ID="{8FC8DA82-588D-455D-B2C1-B291DD534940}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}"/>
-							<Position X="2" Y="0"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Music_S3_Boss_Battle" ID="{303D385E-F1E5-4D85-A684-6B055AE5CF0C}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}"/>
+							<Position X="1" Y="3"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Music_S2_Boss_Battle" ID="{729323AF-59F8-4C4C-AA17-5B880341A81C}"/>
+						<CurrentStateRef Name="Music_S3_Boss_Battle" ID="{466485FA-C839-4355-B011-0BCA4557E365}"/>
 						<CurrentStateRef Name="None" ID="{B9FFA1F4-7C44-42A8-B90E-8CAD8E38CFA7}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>

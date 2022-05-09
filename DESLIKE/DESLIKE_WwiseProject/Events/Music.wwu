@@ -76,6 +76,61 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Music_S1_Normal_Battle" ID="{ABFC2381-FE5E-4BB4-942A-6D0183B1F327}">
+					<ChildrenList>
+						<Action Name="" ID="{851D200E-281D-4FC9-93A2-C74B54BBB00C}" ShortID="935574866">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_S1_Normal_Battle" ID="{AAD12C65-AF1C-4F8F-A622-9C5F640BB1CE}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Music_S1_Boss_Battle" ID="{77985FC0-B2B9-4B04-8A4B-85FA6F0F4E71}">
+					<ChildrenList>
+						<Action Name="" ID="{5168A003-3D21-4464-90A1-30C8CA1F49EA}" ShortID="96392407">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_S1_Boss_Battle" ID="{146AD136-71D2-4CB2-B20A-29AFEEFE6445}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Music_S3_Boss_Battle" ID="{303D385E-F1E5-4D85-A684-6B055AE5CF0C}">
+					<ChildrenList>
+						<Action Name="" ID="{72837B71-1EF6-48F1-83CE-F862BDD87336}" ShortID="498390619">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_S3_Boss_Battle" ID="{466485FA-C839-4355-B011-0BCA4557E365}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Music_S3_Normal_Battle" ID="{CA6D3D84-9F42-42B6-81F9-E618187F7A19}">
+					<ChildrenList>
+						<Action Name="" ID="{AF8DA2D0-9B6C-4E17-AA7A-ACEADB9C909F}" ShortID="126306126">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_S3_Normal_Battle" ID="{5F8F877A-4E87-4599-B88E-A3ADB45D65B7}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

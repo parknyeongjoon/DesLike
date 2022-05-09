@@ -13,6 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BATTLE_END = 461545889U;
+        static const AkUniqueID BATTLE_START = 2706291346U;
         static const AkUniqueID GAME_SPEED_PAUSE = 1027347108U;
         static const AkUniqueID GAME_SPEED_RESUME = 2372597559U;
         static const AkUniqueID H_23101_DIE = 3025390842U;
@@ -20,8 +22,12 @@ namespace AK
         static const AkUniqueID H_23101_SKILL_1 = 2377059575U;
         static const AkUniqueID H_23101_SKILL_2 = 2377059572U;
         static const AkUniqueID MUSIC_MAP = 3017247325U;
+        static const AkUniqueID MUSIC_S1_BOSS_BATTLE = 1418049784U;
+        static const AkUniqueID MUSIC_S1_NORMAL_BATTLE = 2414432898U;
         static const AkUniqueID MUSIC_S2_BOSS_BATTLE = 91695603U;
         static const AkUniqueID MUSIC_S2_NORMAL_BATTLE = 382373357U;
+        static const AkUniqueID MUSIC_S3_BOSS_BATTLE = 1260272950U;
+        static const AkUniqueID MUSIC_S3_NORMAL_BATTLE = 935777564U;
         static const AkUniqueID MUSIC_START = 3725903807U;
         static const AkUniqueID N_11303_ATT_1 = 377015314U;
         static const AkUniqueID N_11303_DIE = 1562429897U;
@@ -52,8 +58,12 @@ namespace AK
             {
                 static const AkUniqueID MUSIC_MAIN = 1615767906U;
                 static const AkUniqueID MUSIC_MAP = 3017247325U;
+                static const AkUniqueID MUSIC_S1_BOSS_BATTLE = 1418049784U;
+                static const AkUniqueID MUSIC_S1_NORMAL_BATTLE = 2414432898U;
                 static const AkUniqueID MUSIC_S2_BOSS_BATTLE = 91695603U;
                 static const AkUniqueID MUSIC_S2_NORMAL_BATTLE = 382373357U;
+                static const AkUniqueID MUSIC_S3_BOSS_BATTLE = 1260272950U;
+                static const AkUniqueID MUSIC_S3_NORMAL_BATTLE = 935777564U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace MUSIC_STATE

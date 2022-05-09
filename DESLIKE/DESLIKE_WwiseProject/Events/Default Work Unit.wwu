@@ -165,6 +165,8 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Battle_Start" ID="{E0E43444-BD96-4FF6-BDD7-67A9A0547301}"/>
+				<Event Name="Battle_End" ID="{7A784D78-D0C9-452E-850A-672AFAEF9650}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

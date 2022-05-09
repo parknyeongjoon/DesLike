@@ -25,6 +25,12 @@
 				</Effect>
 				<Effect Name="New_Wwise_Time_Stretch_01" ID="{1EE4ABB5-5DCE-404D-A422-D22EA377F7C0}" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3"/>
 				<Effect Name="New_Wwise_Time_Stretch_02" ID="{04B946FE-8F78-400E-A9EF-3E070C876FEC}" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3"/>
+				<Effect Name="New_Wwise_Peak_Limiter_01" ID="{38D78085-CDE0-46D5-BA1D-2366DB8A169C}" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+					<PropertyList>
+						<Property Name="OutputGain" Type="Real32" Value="14"/>
+						<Property Name="Ratio" Type="Real32" Value="8.2"/>
+					</PropertyList>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

@@ -96,6 +96,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="22"/>
 							</PropertyList>
+							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Music_S1_Boss_Battle" ID="{146AD136-71D2-4CB2-B20A-29AFEEFE6445}" WorkUnitID="{89B26F43-8CFF-49A8-8364-E5725E8BB1D0}"/>
 								</Reference>

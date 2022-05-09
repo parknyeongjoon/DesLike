@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1010c2eedcfaff4f92b1c920e008c25, type: 3}
+  m_Name: E_11203_Att_1
+  m_EditorClassIdentifier: 
+  start_Delay: 5
+  end_Delay: 5
+  range: 30
+  atk_Dmg: 5
+  charge_MP: 1
+  atkCount: 1
+  extraSkillData: {fileID: 11400000, guid: 1240e355522460b4ba7bd6fea5dc84d8, type: 2}
+  atkArea: 256
+  max_Target: 5
+  extent: 10
+  arrow: {fileID: 0}
+  arrowSpeed: 3

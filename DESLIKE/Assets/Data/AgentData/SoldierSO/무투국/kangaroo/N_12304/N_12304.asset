@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ec170fb41403794194fcac022439d2a, type: 3}
-  m_Name: N_12303 5
+  m_Name: N_12304
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  code: N_12303
+  code: N_12304
   hp: 30
   def: 0
   size: 0.6
   blood: {fileID: 0}
-  soldier_name: N_12303
+  soldier_name: N_12304
   mp: 5
   speed: 2
   hp_Re: 0

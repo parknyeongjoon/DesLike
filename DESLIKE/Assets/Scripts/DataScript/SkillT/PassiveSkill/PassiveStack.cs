@@ -7,6 +7,7 @@ public class PassiveStack : Skill
     BasicAttackScript basicAttackScript;
 
     int stack;
+    public int activeStack;
 
     void Start()
     {
@@ -17,15 +18,13 @@ public class PassiveStack : Skill
     void AfterAtkEffect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
         stack++;
-        if((stack % ((StackData)skillData).activeStack) == 0)
+        if(stack % activeStack == 0)
         {
             basicAttackScript.atkCount += 1;
         }
-        else if(stack != 1 && (stack % ((StackData)skillData).activeStack) == 1)
+        else if(stack != 1 && stack % activeStack == 1)
         {
             basicAttackScript.atkCount -= 1;
         }
-        Debug.Log("stack : " + stack);
-        Debug.Log("actkCount : " + basicAttackScript.atkCount);
     }
 }

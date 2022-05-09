@@ -9,14 +9,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63cb65f955a1d2941a3b0860478bfdee, type: 3}
-  m_Name: N_24201_Skill_1_Extra
+  m_Script: {fileID: 11500000, guid: 75e94c4ce1caf6346834f52d699948fe, type: 3}
+  m_Name: E_11202_Skill_1_Extra
   m_EditorClassIdentifier: 
-  code: N_24201_Skill_1_Extra
-  skill_name: N_24201_Skill_1_Extra
-  skillType: 3
+  code: E_11202_Skill_1_Extra
+  skill_name: E_11202_Skill_1_Extra
+  skillType: 0
   skill_Icon: {fileID: 0}
   extraSkillData: {fileID: 0}
-  installPrefab: {fileID: 5882010034809217539, guid: 3920c80c12a77ec45ad1d6f41178536e,
-    type: 3}
-  installTime: 2
+  buff_Stat:
+    speed: 0
+    mp: 0
+    mp_Re: 0
+    atk: 10
+    atk_Speed: 10
+    hp: 0
+    hp_Re: 0
+    def: 0
+  buff_Time: 1
+  max_Stack: 0
+  buffType: 0

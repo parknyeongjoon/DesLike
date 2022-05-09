@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6519c2d951c654bab0617c459d13ea, type: 3}
+  m_Name: E_24202_Skill_1
+  m_EditorClassIdentifier: 
+  code: E_24202_Skill_1
+  skill_name: E_24202_Skill_1
+  skillType: 1
+  skill_Icon: {fileID: 0}
+  extraSkillData: {fileID: 11400000, guid: d63c23ddfe5e66f4a8d0377072c01783, type: 2}
+  cooltime: 5
+  mp: 3
+  range: 10
+  start_Delay: 0
+  end_Delay: 0
+  atkArea: 256
+  max_Target: 5
+  extent: 20
+  atk_Dmg: 0

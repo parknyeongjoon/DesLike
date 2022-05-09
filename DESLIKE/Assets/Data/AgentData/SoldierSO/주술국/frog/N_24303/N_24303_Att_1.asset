@@ -9,12 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6678d3c041020b6459f205cab992b9d7, type: 3}
-  m_Name: E_12202_Skill_1_Extra
+  m_Script: {fileID: 11500000, guid: 58ff0c33c4c7a074d909e49103c0bf8c, type: 3}
+  m_Name: N_24303_Att_1
   m_EditorClassIdentifier: 
-  code: E_12202_Skill_1_Extra
-  skill_name: E_12202_Skill_1_Extra
-  skillType: 4
-  skill_Icon: {fileID: 0}
+  start_Delay: 1
+  end_Delay: 1
+  range: 1
+  atk_Dmg: 1
+  charge_MP: 1
+  atkCount: 1
   extraSkillData: {fileID: 0}
-  activeStack: 3
+  atkArea: 256

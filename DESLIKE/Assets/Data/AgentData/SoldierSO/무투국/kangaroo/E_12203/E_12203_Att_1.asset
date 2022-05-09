@@ -9,14 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58ff0c33c4c7a074d909e49103c0bf8c, type: 3}
-  m_Name: E_11201_Att_1
+  m_Script: {fileID: 11500000, guid: 382025cc8f88af74f863592f72c1d7b9, type: 3}
+  m_Name: E_12203_Att_1
   m_EditorClassIdentifier: 
   start_Delay: 1
   end_Delay: 1
-  range: 1
-  atk_Dmg: 1
-  charge_MP: 0
+  range: 10
+  atk_Dmg: 3
+  charge_MP: 1
   atkCount: 1
-  extraSkillData: {fileID: 11400000, guid: 1240e355522460b4ba7bd6fea5dc84d8, type: 2}
+  extraSkillData: {fileID: 0}
   atkArea: 256
+  arrow: {fileID: 5718541635727260301, guid: a18178bae98610b4cb2297329b910fa7, type: 3}
+  arrowSpeed: 2
+  bounceCount: 5
+  bounceArea: 10

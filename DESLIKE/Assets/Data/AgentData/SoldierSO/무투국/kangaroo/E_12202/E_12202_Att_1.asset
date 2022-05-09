@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58ff0c33c4c7a074d909e49103c0bf8c, type: 3}
-  m_Name: E_11201_Att_1
+  m_Name: E_12202_Att_1
   m_EditorClassIdentifier: 
   start_Delay: 1
   end_Delay: 1
   range: 1
   atk_Dmg: 1
-  charge_MP: 0
+  charge_MP: 1
   atkCount: 1
   extraSkillData: {fileID: 11400000, guid: 1240e355522460b4ba7bd6fea5dc84d8, type: 2}
   atkArea: 256

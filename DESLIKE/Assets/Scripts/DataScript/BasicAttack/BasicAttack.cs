@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class BasicAttack : MonoBehaviour
 {
@@ -8,7 +9,10 @@ public class BasicAttack : MonoBehaviour
     public BasicAttackData basicAttackData;
     protected SoldierBasic soldierBasic;
 
-    public int atkArea, atkLayer, atkCount;
+    public Action<HeroInfo, HeroInfo> beforeAtkEvent;
+    public Action<HeroInfo, HeroInfo> afterAtkEvent;
+
+    public int atkArea, atkLayer, atkCount, atkStack;
 
     protected virtual void Start()
     {

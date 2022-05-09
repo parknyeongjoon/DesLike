@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Jump", menuName = "ScriptableObject/ExtraSkill/Jump")]
 public class Jump : SkillData
 {
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)

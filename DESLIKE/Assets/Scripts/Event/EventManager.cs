@@ -20,11 +20,12 @@ public class EventManager : MonoBehaviour
         eventNode = (EventNode)map.curMapNode; 
         curBtn = saveManager.gameData.mapData.curBtn;
         evntList = saveManager.gameData.mapData.evntList[curBtn];
+        EventsInactive();
         EventActive();
         saveManager.SaveGameData();
     }
 
-    void EventActive()
+    void EventsInactive()
     {
         RelicEvent.SetActive(false);
         HealEvent.SetActive(false);
@@ -33,7 +34,10 @@ public class EventManager : MonoBehaviour
         ShopEvent.SetActive(false);
         GambleEvent.SetActive(false);
         FightEvent.SetActive(false);
-        
+    }
+
+    void EventActive()
+    {
         switch (evntList)
         {
             case 0:
@@ -62,6 +66,8 @@ public class EventManager : MonoBehaviour
                 break;
         }
     }
+
+  
 
     public void AddCurDay1()
     {

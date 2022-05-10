@@ -140,6 +140,7 @@ public class SaveManager : MonoBehaviour
         {
             for (int i = 0; i < relicManager.relicList.Count; i++)
             {
+                InfiniteLoopDetector.Run();
                 gameData.relicSaveData.Add(relicManager.relicList[i].relicData.code);
             }
         }
@@ -150,6 +151,7 @@ public class SaveManager : MonoBehaviour
         RelicManager.Instance.relicList.Clear();
         for(int i = 0; i < gameData.relicSaveData.Count; i++)
         {
+            InfiniteLoopDetector.Run();
             RelicManager.Instance.relicList.Add(dataSheet.relicObjectSheet[gameData.relicSaveData[i]].GetComponent<Relic>());
         }
     }
@@ -169,11 +171,15 @@ public class SaveManager : MonoBehaviour
                 {
                     battleNode = (BattleNode)map.selectNode[btn];
                     for (int i = 0; i < battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 저장
+                    {
+                        InfiniteLoopDetector.Run();
                         gameData.curBattleNodeData.ableSoldierIndex[btn, i] = battleNode.ableSoldierRewards[i].code;
+                    }
                     gameData.mapData.kingdom = battleNode.kingdom;
 
                     for (int i = 0; i < battleNode.reward.soldierReward.Count; i++)
                     {
+                        InfiniteLoopDetector.Run();
                         gameData.curBattleNodeData.solRewardIndex[btn, i] = battleNode.reward.soldierReward[i].soldier.code;
                         // mutant 추가 필요
                     }
@@ -204,19 +210,20 @@ public class SaveManager : MonoBehaviour
                     SoldierData soldierData = new SoldierData();
 
                     for (int i = 0; i < battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 불러오기
+                    {
+                        InfiniteLoopDetector.Run();
                         battleNode.ableSoldierRewards.Add(dataSheet.soldierDataSheet[gameData.curBattleNodeData.ableSoldierIndex[btn, i]]);
-
+                    }
 
                     for (int i = 0; i < battleNode.reward.soldierReward.Count; i++)
                     {
+                        InfiniteLoopDetector.Run();
                         soldierReward.soldier = dataSheet.soldierDataSheet[gameData.curBattleNodeData.solRewardIndex[btn, i]];
                         // mutant 추가 필요
-
                         battleNode.reward.soldierReward.Add(soldierReward);
                     }
                 }
             }
         }
     }
-   
 }

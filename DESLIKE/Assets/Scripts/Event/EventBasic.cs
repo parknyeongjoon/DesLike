@@ -122,7 +122,6 @@ public class EventBasic : MonoBehaviour
             saveManager.gameData.villageData.relicPrice[i] = relicPrice[i];
             saveManager.gameData.villageData.isSoldOut[i] = isSoldOut[i];
         }
-
         saveManager.SaveGameData();
     }
 

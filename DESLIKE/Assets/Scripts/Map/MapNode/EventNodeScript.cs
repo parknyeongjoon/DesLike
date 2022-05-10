@@ -152,6 +152,7 @@ public class EventNodeScript : NodeScript
         else norTotal = speNorSolC + comNorSolC; // 주술국 + 공통
 
         randomInt:
+        InfiniteLoopDetector.Run();
         int rand = Random.Range(0, norTotal);   // 일반 범위 내에서 랜덤값 설정
         if (num == 1 && (eventNode.ableSoldierRewards[rand].code == saveManager.gameData.curBattleNodeData.solRewardIndex[button, 0]))
             goto randomInt;  // 다른 선택지와 중복이면 다시 뽑기
@@ -183,6 +184,7 @@ public class EventNodeScript : NodeScript
         }
 
         randomInt:
+        InfiniteLoopDetector.Run();
         int rand = norTotal + Random.Range(0, epicTotal);
         if (num == 1 && (eventNode.ableSoldierRewards[rand].code == saveManager.gameData.curBattleNodeData.solRewardIndex[button, 0]))
             goto randomInt;  // 다른 선택지와 중복이면 다시 뽑기
@@ -262,9 +264,6 @@ public class EventNodeScript : NodeScript
         saveManager.gameData.mapData.eventEnd = true;
         saveManager.SaveGameData();
 
-        map.curMapNode = eventNode;
-        SceneManager.LoadScene("Event");
-
-        // eventNode.Play_EventNode();
+        eventNode.Play_EventNode();
     }
 }

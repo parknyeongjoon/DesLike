@@ -10,7 +10,7 @@ public class Relic : MonoBehaviour
     [SerializeField]
     GameObject toolTipPanel;
     [SerializeField]
-    TMP_Text toolTip;
+    Text toolTip;
     [SerializeField]
     Image relicImg;
     

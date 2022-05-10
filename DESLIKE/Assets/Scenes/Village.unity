@@ -3398,6 +3398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0900142db94e603488bf25e94ee1507c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
   villageNode: {fileID: 0}
 --- !u!4 &821738281
 Transform:

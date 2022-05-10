@@ -2,29 +2,11 @@ using UnityEngine;
 using System;
 
 /// <summary> 무한 루프 검사 및 방지(에디터 전용) </summary>
-public class InfiniteLoopDetector : MonoBehaviour
- {
-    static InfiniteLoopDetector instance;
-    static GameObject container;
-
+public static class InfiniteLoopDetector
+{
     private static string prevPoint = "";
     private static int detectionCount = 0;
     private const int DetectionThreshold = 100000;
-
-    public static InfiniteLoopDetector Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                container = new GameObject();
-                container.name = "SaveManager";
-                DontDestroyOnLoad(container);
-                instance = container.AddComponent<InfiniteLoopDetector>();
-            }
-            return instance;
-        }
-    }
 
     [System.Diagnostics.Conditional("UNITY_EDITOR")]
     public static void Run(

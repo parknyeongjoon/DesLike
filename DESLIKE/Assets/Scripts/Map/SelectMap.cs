@@ -191,7 +191,7 @@ public class SelectMap : MonoBehaviour
                 if (curDay == 0)
                     nxtEvnt[i] = 0;
                 else nxtEvnt[i] = Random.Range(0, 2);    // 전투(0) or 이벤트(1)
-                
+
                 if (nxtEvnt[i] == 1) // 이벤트라면
                     eventList[i] = Random.Range(0, 7);  // 이벤트 리스트에 따라서 다름; 세부 확률 조정 필요
                 else eventList[i] = 0;  // 전투면 0 표시

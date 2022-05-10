@@ -9,14 +9,13 @@ public class RelicRewardBtn : MonoBehaviour
     [SerializeField]
     GameObject toolTipPanel;
     [SerializeField]
-    Text toolTip;
+    TMP_Text toolTip;
 
     RelicData relicData;
     Relic relicScript;
 
     void Start()
     {
-
         relicScript = SaveManager.Instance.map.curMapNode.reward.relic[0].GetComponent<Relic>();
         relicData = relicScript.relicData;
         //toolTipPanel.SetActive(false);

@@ -9,7 +9,9 @@ public class RelicEvent : EventBasic
 {
     int temp_Max_HP = 500;
     RelicManager relicManager;
-
+    RelicData relicData;
+    Relic relicScript;
+   
     void OnEnable()
     {
         SetOption();
@@ -126,6 +128,14 @@ public class RelicEvent : EventBasic
         curDay += 2;
         relicManager.relicList.Add(eventNode.reward.relic[0]);
         // RelicPanel¿¡´Ù°¡ instantiate
+
+        relicScript = eventNode.reward.relic[0].GetComponent<Relic>();
+        relicData = relicScript.relicData;
+        transform.GetChild(0).GetComponent<TMP_Text>().text = relicData.relicName.ToString();
+        transform.GetChild(1).GetComponent<Image>().sprite = relicData.relicImg;
+        Instantiate(eventNode.reward.relic[0], RelicManager.Instance.relicCanvas.transform.GetChild(0).transform);
+        
+
         // ÀÏ¹Ý À¯¹° È¹µæ ÇÔ¼ö (º¯°æ ÇÊ¿ä)
         ButtonsOff();
     }
@@ -136,6 +146,12 @@ public class RelicEvent : EventBasic
         curGold -= 50; // °ñµå ¼Õ½Ç ÇÔ¼ö
         relicManager.relicList.Add(eventNode.reward.relic[1]);
         // Èñ±Í À¯¹° È¹µæ ÇÔ¼ö(º¯°æ ÇÊ¿ä)
+        relicScript = eventNode.reward.relic[1].GetComponent<Relic>();
+        relicData = relicScript.relicData;
+        transform.GetChild(0).GetComponent<TMP_Text>().text = relicData.relicName.ToString();
+        transform.GetChild(1).GetComponent<Image>().sprite = relicData.relicImg;
+        Instantiate(eventNode.reward.relic[1], RelicManager.Instance.relicCanvas.transform.GetChild(0).transform);
+
         ButtonsOff();
     }
 
@@ -148,6 +164,13 @@ public class RelicEvent : EventBasic
         // ÃÖ´ëÃ¼·ÂÀÇ n% ÀÒ´Â ÇÔ¼ö, ¸¸¾à ÇöÀç Ã¼·ÂÀÌ n%º¸´Ù ÀÛ´Ù¸é ÇöÀç Ã¼·ÂÀ» 1·Î ¸¸µê
         relicManager.relicList.Add(eventNode.reward.relic[1]);
         // Èñ±Í À¯¹° È¹µæ ÇÔ¼ö
+        relicScript = eventNode.reward.relic[1].GetComponent<Relic>();
+        relicData = relicScript.relicData;
+        transform.GetChild(0).GetComponent<TMP_Text>().text = relicData.relicName.ToString();
+        transform.GetChild(1).GetComponent<Image>().sprite = relicData.relicImg;
+        Instantiate(eventNode.reward.relic[1], RelicManager.Instance.relicCanvas.transform.GetChild(0).transform);
+
+
         ButtonsOff();
     }
 
@@ -160,6 +183,13 @@ public class RelicEvent : EventBasic
         curGold -= 50; // °ñµå ¼Õ½Ç ÇÔ¼ö
         relicManager.relicList.Add(eventNode.reward.relic[2]);
         // Àü¼³ À¯¹° È¹µæ ÇÔ¼ö
+
+        relicScript = eventNode.reward.relic[2].GetComponent<Relic>();
+        relicData = relicScript.relicData;
+        transform.GetChild(0).GetComponent<TMP_Text>().text = relicData.relicName.ToString();
+        transform.GetChild(1).GetComponent<Image>().sprite = relicData.relicImg;
+        Instantiate(eventNode.reward.relic[2], RelicManager.Instance.relicCanvas.transform.GetChild(0).transform);
+
         ButtonsOff();
     }
 
@@ -169,6 +199,13 @@ public class RelicEvent : EventBasic
         curGold = 0; // °ñµå ¼Õ½Ç ÇÔ¼ö
         relicManager.relicList.Add(eventNode.reward.relic[1]);
         // Èñ±Í À¯¹° È¹µæ ÇÔ¼ö
+
+        relicScript = eventNode.reward.relic[1].GetComponent<Relic>();
+        relicData = relicScript.relicData;
+        transform.GetChild(0).GetComponent<TMP_Text>().text = relicData.relicName.ToString();
+        transform.GetChild(1).GetComponent<Image>().sprite = relicData.relicImg;
+        Instantiate(eventNode.reward.relic[1], RelicManager.Instance.relicCanvas.transform.GetChild(0).transform);
+
         ButtonsOff();
     }
 

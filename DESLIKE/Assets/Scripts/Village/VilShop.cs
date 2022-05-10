@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class VilShop : MonoBehaviour
 {
     public Map map;
     public GameObject ShopPanel, CheckPanel, ErrorPanel;
+    public Image[] RelicImage = new Image[6];
     public GameObject[] SoldOutPanel = new GameObject[6];
     public VilShopNode vilShopNode;
     VillageManager villagemanager;
@@ -26,6 +28,8 @@ public class VilShop : MonoBehaviour
         DataUpdate();
         ShopSetting();
         isNewSet = false;
+        for (int i = 0; i < 6; i++)
+            RelicImage[i] = GetComponent<Image>();
     }
 
     void DataUpdate()
@@ -71,6 +75,7 @@ public class VilShop : MonoBehaviour
             // 획득 유물 갯수가 한정되어있어서 모든 유물을 가진 경우의 수는 제외함
         }
         relicList.Add(villageNode.ableRelicRewards[randRelic[0]]);
+        RelicImage[0].sprite = relicList[0].relicData.relicImg;
         relicPrice[0] = Random.Range(90, 21);   // 90~110G
         
         // 2. 일반 유물 90G~110G
@@ -84,6 +89,7 @@ public class VilShop : MonoBehaviour
             // 획득 유물 갯수가 한정되어있어서 모든 유물을 가진 경우의 수는 제외함
         }
         relicList.Add(villageNode.ableRelicRewards[randRelic[1]]);
+        RelicImage[1].sprite = relicList[1].relicData.relicImg;
         relicPrice[1] = Random.Range(90, 21);   // 90~110G
         
         // 3. 일반 유물 90G~110G
@@ -97,6 +103,7 @@ public class VilShop : MonoBehaviour
             // 획득 유물 갯수가 한정되어있어서 모든 유물을 가진 경우의 수는 제외함
         }
         relicList.Add(villageNode.ableRelicRewards[randRelic[2]]);
+        RelicImage[2].sprite = relicList[2].relicData.relicImg;
         relicPrice[2] = Random.Range(90, 21);   // 90~110G
 
         // 4. 일반 유물 90G~110G
@@ -110,6 +117,7 @@ public class VilShop : MonoBehaviour
             // 획득 유물 갯수가 한정되어있어서 모든 유물을 가진 경우의 수는 제외함
         }
         relicList.Add(villageNode.ableRelicRewards[randRelic[3]]);
+        RelicImage[3].sprite = relicList[3].relicData.relicImg;
         relicPrice[3] = Random.Range(90, 21);   // 90~110G
 
         // 5. 희귀 유물 160G~180G
@@ -123,6 +131,7 @@ public class VilShop : MonoBehaviour
             // 획득 유물 갯수가 한정되어있어서 모든 유물을 가진 경우의 수는 제외함
         }
         relicList.Add(villageNode.ableRelicRewards[randRelic[4]]);
+        RelicImage[4].sprite = relicList[4].relicData.relicImg;
         relicPrice[4] = Random.Range(160, 21);   // 160~180G
 
         // 6. 희귀 유물 160G~180G
@@ -136,6 +145,7 @@ public class VilShop : MonoBehaviour
             // 획득 유물 갯수가 한정되어있어서 모든 유물을 가진 경우의 수는 제외함
         }
         relicList.Add(villageNode.ableRelicRewards[randRelic[5]]);
+        RelicImage[5].sprite = relicList[5].relicData.relicImg;
         relicPrice[5] = Random.Range(160, 21);   // 160~180G
 
         for(int i = 0; i<6; i++)

@@ -35,20 +35,17 @@ MonoBehaviour:
   kingdom: 1
   reward:
     soldierReward:
-    - soldier: {fileID: 11400000, guid: 63e33c6e044a1e34da48031263c41fac, type: 2}
-      mutant: {fileID: 0}
     - soldier: {fileID: 11400000, guid: cf43bab0e7c1b0647b13055f91296289, type: 2}
       mutant: {fileID: 0}
-    relic: []
+    - soldier: {fileID: 11400000, guid: 63e33c6e044a1e34da48031263c41fac, type: 2}
+      mutant: {fileID: 0}
+    relic:
+    - {fileID: -512087590680084207, guid: 7ba5e7edc5a619e45b89825f185c73dc, type: 3}
+    - {fileID: -512087590680084207, guid: 426a584971c2d3342b36a5316a741b1f, type: 3}
+    - {fileID: -512087590680084207, guid: 435b71361fcce3747b3d0658cfb48729, type: 3}
     gold: 0
     magicalStone: 0
   relicLevelCount: 040000000400000004000000
-  eventNames:
-  - Thief
-  - Training
-  - Merchant
-  - Rullet
-  eventName: 
   isEventSet: 000000
   isRewardSet: 000000
   soldierReward:

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Relic : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Relic : MonoBehaviour
     [SerializeField]
     GameObject toolTipPanel;
     [SerializeField]
-    Text toolTip;
+    TMP_Text toolTip;
     [SerializeField]
     Image relicImg;
     

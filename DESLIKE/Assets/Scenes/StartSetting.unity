@@ -268,6 +268,18 @@ MonoBehaviour:
   - {fileID: 4835315866048107822, guid: 28fb182866fc710478c2a803865849ed, type: 3}
   BattleNodeScript: {fileID: 3963912957987146594, guid: 466e855f347fc934895e18daf1643165,
     type: 3}
+--- !u!114 &2130432439 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1264349190392627091, guid: 7a1015bdaea90d5409258cec535882c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 7346757463994477873}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0fd3e986558ac0468a460d2d612844a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3976412869853632963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -336,6 +348,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014,
         type: 2}
+    - target: {fileID: 3976412869529563661, guid: e9d00c61469d46c449d81c4e380dc386,
+        type: 3}
+      propertyPath: relicManager
+      value: 
+      objectReference: {fileID: 2130432439}
     - target: {fileID: 3976412869529563661, guid: e9d00c61469d46c449d81c4e380dc386,
         type: 3}
       propertyPath: allyPortDatas
@@ -434,6 +451,11 @@ PrefabInstance:
     - target: {fileID: 1264349190392627090, guid: 7a1015bdaea90d5409258cec535882c6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264349190392627091, guid: 7a1015bdaea90d5409258cec535882c6,
+        type: 3}
+      propertyPath: relicList.Array.size
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:

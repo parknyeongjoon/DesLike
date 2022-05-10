@@ -5,24 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class EventManager : MonoBehaviour
 {
-    Map map;
+    public Map map;
     [SerializeField] Canvas EventCanvas;
-    [SerializeField] GameObject Rullet, CampFire, Infection;
     [SerializeField] GameObject RelicEvent, HealEvent, AreaEvent, PenaltyEvent, ShopEvent, GambleEvent, FightEvent;
 
     public EventNode eventNode;
-    int curBtn, EvntList;
+    int curBtn, evntList;
     SaveManager saveManager;
 
     void OnEnable()
     {
         saveManager = SaveManager.Instance;
-        map = saveManager.map;
-        eventNode = (EventNode)map.curMapNode;
-        EventCanvas.transform.Find(eventNode.eventName).gameObject.SetActive(true);
-        curBtn = saveManager.gameData.mapData.curBtn;
-        EvntList = saveManager.gameData.mapData.evntList[curBtn];
         saveManager.gameData.mapData.curWindow = CurWindow.Event;
+        eventNode = (EventNode)map.curMapNode; 
+        curBtn = saveManager.gameData.mapData.curBtn;
+        evntList = saveManager.gameData.mapData.evntList[curBtn];
         EventActive();
         saveManager.SaveGameData();
     }
@@ -37,7 +34,7 @@ public class EventManager : MonoBehaviour
         GambleEvent.SetActive(false);
         FightEvent.SetActive(false);
         
-        switch (EvntList)
+        switch (evntList)
         {
             case 0:
                 RelicEvent.SetActive(true);
@@ -60,7 +57,9 @@ public class EventManager : MonoBehaviour
             case 6:
                 FightEvent.SetActive(true);
                 break;
-            default: break;
+            default:
+                Debug.Log("¿À·ù");
+                break;
         }
     }
 

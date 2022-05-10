@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EventNodeScript : NodeScript
 {
@@ -11,13 +12,13 @@ public class EventNodeScript : NodeScript
         phyNorRelC, speNorRelC, comNorRelC, phyEpicRelC, speEpicRelC, comEpicRelC, phyLegendRelC, speLegendRelC, comLegendRelC;
     const int THREE = 3;
     int[] nextEvent = new int[THREE];
-    Map map;
     public bool[] isEventSet = new bool[THREE];
     bool[] isRewardSet = new bool[THREE];
     Reward reward;
     List<SoldierData> ableSoldierRewards;
     List<Relic> ableRelicRewards;
     List<Option> option = new List<Option>();
+    Map map;
 
     void Start()
     {
@@ -248,16 +249,22 @@ public class EventNodeScript : NodeScript
         // saveManager.gameData.rewardData.relicRewardIndex[button] = rand;
         // 중복 유물인지 확인해야함
     }
-
-
+    
     public void Play_EventNode()
     {
+  
         for (int i = 0; i < 3; i++)
         {
             saveManager.gameData.mapData.isEventSet[i] = false;
             saveManager.gameData.mapData.isRewardSet[i] = false;
         }
+
         saveManager.gameData.mapData.eventEnd = true;
-        eventNode.Play_EventNode();
+        saveManager.SaveGameData();
+
+        map.curMapNode = eventNode;
+        SceneManager.LoadScene("Event");
+
+        // eventNode.Play_EventNode();
     }
- }
+}

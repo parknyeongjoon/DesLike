@@ -49,17 +49,18 @@ public class EventBasic : MonoBehaviour
     {
         saveManager = SaveManager.Instance;
         DataLoad();
+        SaveData();
     }
 
     void DataLoad()
     {
+        eventNode = (EventNode)map.curMapNode;
         cur_HP = saveManager.gameData.heroSaveData.cur_Hp;
         curDay = saveManager.gameData.mapData.curDay;
         curStage = saveManager.gameData.mapData.curStage;
         gold = saveManager.gameData.goodsSaveData.gold;
         eventEnd = saveManager.gameData.mapData.eventEnd;
-        eventNode = (EventNode)map.curMapNode;
-
+        
         if (eventEnd == false)
         {
             // heroData = (HeroData)heroInfo.castleData;

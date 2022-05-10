@@ -1099,6 +1099,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PortCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5528462980001158603, guid: cf0edc957ec184b47bb29b88a26c77c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7162251743786750951, guid: cf0edc957ec184b47bb29b88a26c77c5,
         type: 3}
       propertyPath: m_AnchorMax.y

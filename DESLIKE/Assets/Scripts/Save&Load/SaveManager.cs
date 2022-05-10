@@ -131,14 +131,16 @@ public class SaveManager : MonoBehaviour
         gameData.heroSaveData.resurrection = heroInfo.resurrection;
     }
 
+
+    public RelicManager relicManager;
     public void SaveRelicData()
     {
         gameData.relicSaveData.Clear();
-        if (RelicManager.Instance.relicList != null)
+        if (!(relicManager.relicList == null))
         {
-            for (int i = 0; i < RelicManager.Instance.relicList.Count; i++)
+            for (int i = 0; i < relicManager.relicList.Count; i++)
             {
-                gameData.relicSaveData.Add(RelicManager.Instance.relicList[i].relicData.code);
+                gameData.relicSaveData.Add(relicManager.relicList[i].relicData.code);
             }
         }
     }
@@ -161,7 +163,7 @@ public class SaveManager : MonoBehaviour
         for (int btn = 0; btn < 3; btn++)    // 버튼 1,2,3
         {
             selEvent[btn] = gameData.mapData.selEvent[btn];
-            if ((map.selectNode[btn] != null) && (selEvent[btn] == 0))  // 맵에 저장되어있고, 전투 노드일 경우
+            if (!(map.selectNode[btn] == null) && (selEvent[btn] == 0))  // 맵에 저장되어있고, 전투 노드일 경우
             {
                 if (gameData.mapData.curWindow == CurWindow.Battle)
                 {

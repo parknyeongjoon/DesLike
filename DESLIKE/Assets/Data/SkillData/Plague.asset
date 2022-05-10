@@ -17,12 +17,6 @@ MonoBehaviour:
   skillType: 0
   skill_Icon: {fileID: 0}
   extraSkillData: {fileID: 0}
-  cooltime: 0
-  mp: 0
-  range: 0
-  start_Delay: 0
-  end_Delay: 0
-  atkArea: 256
   debuff_Stat:
     speed: 0
     mp: 0
@@ -32,7 +26,8 @@ MonoBehaviour:
     hp: 0
     hp_Re: 0
     def: 0
-  debuff_Time: 20
+  debuff_Time: 10
   max_Stack: 10
   dotTime: 1.5
   dotDamage: 1
+  stackOverflowEffect: {fileID: 0}

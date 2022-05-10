@@ -23,7 +23,7 @@ public class Resurrection : Relic
     {
         if (CheckCondition(soldierData))
         {
-            soldierData.extraSkill.Add(resurrectionEffect);
+            //soldierData.extraSkills.Add(resurrectionEffect);
         }
     }
 

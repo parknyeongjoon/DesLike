@@ -449,7 +449,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!58 &852807739320361642
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -569,6 +569,7 @@ MonoBehaviour:
         m_CallState: 2
   cur_Hp: 0
   skeletonAnimation: {fileID: 6138720843230423119}
+  soldierBasic: {fileID: 8297324965424468538}
   stunEvent:
     m_PersistentCalls:
       m_Calls:
@@ -624,6 +625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroInfo: {fileID: -6878065226668501377}
+  rigidbody: {fileID: -1573145474374502888}
   curSoundWeight: 0
 --- !u!1 &5608902559179262225
 GameObject:

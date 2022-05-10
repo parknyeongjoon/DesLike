@@ -818,6 +818,7 @@ MonoBehaviour:
         m_CallState: 2
   cur_Hp: 0
   skeletonAnimation: {fileID: 3659554584969181003}
+  soldierBasic: {fileID: 6527479380180569580}
   stunEvent:
     m_PersistentCalls:
       m_Calls:

@@ -15,7 +15,7 @@ public class BonusSupply : Relic
         BonusSupplyEffect();
     }
 
-    void BonusSupplyEffect()//3의 배수에서 스테이지 끝나면 흭득하고 추가 돈 받음
+    void BonusSupplyEffect()
     {
         if(CheckCondition())
         {

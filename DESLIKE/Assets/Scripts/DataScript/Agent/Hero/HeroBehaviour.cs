@@ -5,7 +5,6 @@ using UnityEngine;
 public class HeroBehaviour : SoldierBasic
 {
     Coroutine atkCoroutine;
-    Coroutine moveCoroutine;
 
     delegate void BufferedInput();
 

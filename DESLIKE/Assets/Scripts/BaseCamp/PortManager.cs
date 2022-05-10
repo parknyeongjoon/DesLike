@@ -24,7 +24,7 @@ public class PortManager : MonoBehaviour
     [SerializeField] TMP_Text barrierStrength;
     public GameObject rewardSoldierPanel, rewardMutantPanel, mutantOKBtn, activeBtn;
 
-    public Port_State portState;
+    public Port_State portState = Port_State.Idle;
 
     public SoldierReward soldierReward;
     public string rewardMutantCode;

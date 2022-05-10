@@ -17,5 +17,5 @@ MonoBehaviour:
   skillType: 0
   skill_Icon: {fileID: 0}
   extraSkillData: {fileID: 0}
-  knockBackDis: 5
-  knockBackTime: 0.3
+  knockBackDis: 3
+  knockBackTime: 0.1

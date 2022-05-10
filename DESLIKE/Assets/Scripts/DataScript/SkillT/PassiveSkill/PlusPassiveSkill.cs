@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlusPassiveSkill : Skill
 {
-    void Start()
+    protected virtual void Start()
     {
         skillData.Effect(heroInfo, null);
     }

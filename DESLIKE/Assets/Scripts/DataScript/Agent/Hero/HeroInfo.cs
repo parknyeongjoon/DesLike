@@ -7,6 +7,8 @@ using Spine.Unity;
 public class HeroInfo : CastleInfo
 {
     public SkeletonAnimation skeletonAnimation;
+    public SoldierBasic soldierBasic;
+
     public UnityEvent<float> stunEvent;
     public UnityEvent<float> tauntEvent;
 
@@ -50,7 +52,7 @@ public class HeroInfo : CastleInfo
     {
         beforeHitEvent?.Invoke(this, atkHeroInfo, damage);
 
-        if (mucus > 0)//frogShield가 있을 시
+        if (mucus > 0 && damage > 0)//frogShield가 있을 시
         {
             mucus -= 1;
             damage = 0;

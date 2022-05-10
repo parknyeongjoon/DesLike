@@ -16,6 +16,7 @@ MonoBehaviour:
   end_Delay: 1
   range: 1
   atk_Dmg: 1
+  charge_MP: 0
   atkCount: 1
-  extraSkillData: {fileID: 0}
+  extraSkillData: {fileID: 11400000, guid: 1240e355522460b4ba7bd6fea5dc84d8, type: 2}
   atkArea: 256

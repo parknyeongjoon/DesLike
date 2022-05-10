@@ -29,6 +29,7 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
 
     protected override IEnumerator Idle_Behaviour()
     {
+        //rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
         if (curSoundWeight > Random.Range(0, 100)) {
             //AkSoundEngine.PostEvent("T_" + heroInfo.castleData.code + "_Idle", gameObject);//활성화
             curSoundWeight = basicSoundWeight;
@@ -47,7 +48,6 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
         if (heroInfo.action != Soldier_Action.Move) { StartCoroutine(Move()); }
         while (heroInfo.state == Soldier_State.Detect)
         {
-
             yield return new WaitForFixedUpdate();
         }
         StopCoroutine(detectCoroutine);
@@ -66,6 +66,7 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
 
     protected override IEnumerator Battle_Behaviour()
     {
+        //rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
         while (heroInfo.state == Soldier_State.Battle)
         {
             if (canSkill != null && canSkill.Invoke())
@@ -76,7 +77,7 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
             {
                 yield return StartCoroutine(atkHandler?.Invoke(heroInfo.targetInfo));
             }
-            else//idle->detect->battle 루프를 돌아서 메모리 낭비가 심함 해결책 찾기
+            else//idle->detect->battle->idle 루프를 돌아서 메모리 낭비가 심함 해결책 찾기
             {
                 heroInfo.state = Soldier_State.Idle;
             }

@@ -13,7 +13,7 @@ public class BasicSingleRangeAttackData : BasicAttackData
         BattleUIManager.Instance.StartCoroutine(ShootArrow(heroInfo, targetInfo));
     }
 
-    IEnumerator ShootArrow(HeroInfo heroInfo, HeroInfo targetInfo)
+    protected virtual IEnumerator ShootArrow(HeroInfo heroInfo, HeroInfo targetInfo)
     {
         float shotTime = 0.0f;
         GameObject createArrow;

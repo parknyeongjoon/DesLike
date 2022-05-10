@@ -59,13 +59,6 @@ public class Spawner : MonoBehaviour
                     GameObject tempMutant = SaveManager.Instance.dataSheet.mutantObjectSheet[portDatas.portDatas[portIndex].mutantCode];
                     Instantiate(tempMutant, createSoldier.transform);
                 }
-                if (soldierData.extraSkill != null)
-                {
-                    for (int extraSkillIndex = 0; extraSkillIndex < soldierData.extraSkill.Count; extraSkillIndex++)
-                    {
-                        Instantiate(soldierData.extraSkill[extraSkillIndex], createSoldier.transform);
-                    }
-                }
                 for (int unitAmount = 0; unitAmount < soldierData.unitAmount - 1; unitAmount++)
                 {
                     float temp = Random.Range(-2 - soldierData.size, 2 + soldierData.size);

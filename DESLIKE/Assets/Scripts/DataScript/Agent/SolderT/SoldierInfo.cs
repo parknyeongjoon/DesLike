@@ -9,10 +9,14 @@ public class SoldierInfo : HeroInfo
 
     protected override IEnumerator Start()
     {
-        castleData = allyPortDatas.activeSoldierList[soldierCode];
+        if (team == Team.Ally) { castleData = allyPortDatas.activeSoldierList[soldierCode]; }
+        else if(team == Team.Enemy) { castleData = enemyPortDatas.activeSoldierList[soldierCode]; }
+        else if(team == Team.Neutral) {  }
         cur_Hp = castleData.hp;
         cur_Mp = 0;
         allyPortDatas.spawnSoldierList.Add(this);
+        AddInfoList();
+        castleData.extraSkills?.Invoke(this);
         BattleUIManager.Instance.UpdateSoldierRatioBar();
         afterDeadEvent.AddListener(Dead);
         yield return new WaitUntil(() => BattleUIManager.Instance.battleStart);//배틀 스타트 될 때까지 기다리기

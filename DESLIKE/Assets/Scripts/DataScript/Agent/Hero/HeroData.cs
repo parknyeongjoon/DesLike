@@ -11,5 +11,4 @@ public class HeroData : CastleData
     public float mp, speed, hp_Re;
     public Kingdom kingdom; // 추가 by 시후, 배틀노드 reward 시 필요
     public Tribe tribe;
-    public List<Action<HeroInfo>> extraSkills;
 }

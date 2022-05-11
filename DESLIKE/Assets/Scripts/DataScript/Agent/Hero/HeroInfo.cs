@@ -39,9 +39,9 @@ public class HeroInfo : CastleInfo
     protected virtual IEnumerator Start()
     {
         SaveManager saveManager = SaveManager.Instance;
-        healWeight = 0;
         cur_Hp = saveManager.gameData.heroSaveData.cur_Hp;
         cur_Mp = saveManager.gameData.heroSaveData.cur_Mp;
+        castleData.extraSkills?.Invoke(this);
         resurrection = saveManager.gameData.heroSaveData.resurrection;
         allyPortDatas.spawnSoldierList.Add(this);
         yield return new WaitUntil(() => BattleUIManager.Instance.battleStart);//배틀 스타트 될 때까지 기다리기

@@ -10,6 +10,5 @@ public class Mucus : SkillData
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
         targetInfo.mucus += mucusAmount;
-        Debug.Log("개구리실드 :" + targetInfo.mucus);
     }
 }

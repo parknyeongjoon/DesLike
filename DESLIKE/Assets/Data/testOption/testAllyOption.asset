@@ -15,4 +15,4 @@ MonoBehaviour:
   soldierOption:
   - soldierData: {fileID: 11400000, guid: 570f7ad51bb2e8247aa6d7bb2dc662fe, type: 2}
     mutant: {fileID: 0}
-    portNum: 02000000
+    portNum: 000000000100000002000000

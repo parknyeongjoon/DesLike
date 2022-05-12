@@ -230,6 +230,21 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="N_11304" ID="{01C27A8B-B2DC-4DD5-8F93-BA1C2C479BC4}" ShortID="62165477">
+							<ChildrenList>
+								<Event Name="N_11304_Att_1" ID="{40EBFDC1-AEE6-4365-9A7A-AA2A2B6E7009}">
+									<ChildrenList>
+										<Action Name="" ID="{A9CB253E-5499-4F8E-ACFA-B62DD17FDBB4}" ShortID="881238783">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Print_11304_Att_1_01" ID="{0E2850EB-061F-48D4-9F75-D5521854D86F}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Event Name="Battle_Start" ID="{E0E43444-BD96-4FF6-BDD7-67A9A0547301}"/>

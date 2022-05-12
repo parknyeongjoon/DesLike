@@ -7,9 +7,14 @@ State	ID	Name	State Group			Notes
 	1500973332	X1	Game_Speed			
 	1500973333	X0	Game_Speed			
 	1500973335	X2	Game_Speed			
+	91695603	Music_S2_Boss_Battle	Music_State			
 	382373357	Music_S2_Normal_Battle	Music_State			
 	748895195	None	Music_State			
+	935777564	Music_S3_Normal_Battle	Music_State			
+	1260272950	Music_S3_Boss_Battle	Music_State			
+	1418049784	Music_S1_Boss_Battle	Music_State			
 	1615767906	Music_Main	Music_State			
+	2414432898	Music_S1_Normal_Battle	Music_State			
 	3017247325	Music_Map	Music_State			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes

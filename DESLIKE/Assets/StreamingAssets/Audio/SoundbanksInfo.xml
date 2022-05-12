@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2430562969">
+		<SoundBank Id="1355168291" Language="SFX" Hash="52638332">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -26,7 +26,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="103487739">
+		<SoundBank Id="3161908922" Language="SFX" Hash="3265921186">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -855,7 +855,32 @@
 						<ActionSetStateEntry Id="1615767906" Name="Music_Main" ObjectPath="\States\Music\Music_State\Music_Main"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="377015314" Name="N_11303_Att_1" ObjectPath="\Events\Default Work Unit\N\N_11303_Att_1" DurationType="OneShot" DurationMin="2.022438" DurationMax="2.022438">
+				<Event Id="809365176" Name="N_11301_Att_1" ObjectPath="\Events\Default Work Unit\N\N_11301\N_11301_Att_1" DurationType="OneShot" DurationMin="2.144271" DurationMax="2.194391">
+					<IncludedMemoryFiles>
+						<File Id="397602418" Language="SFX">
+							<ShortName>11301_Att_Light_Print_01.wav</ShortName>
+							<Path>SFX/11301_Att_Light_Print_01_10C4C929.wem</Path>
+						</File>
+						<File Id="486103402" Language="SFX">
+							<ShortName>11301_Att_Heavey_Print_01.wav</ShortName>
+							<Path>SFX/11301_Att_Heavey_Print_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="23113443" Name="N_11301_Die" ObjectPath="\Events\Default Work Unit\N\N_11301\N_11301_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3164085490" Name="N_11301_Skill_1" ObjectPath="\Events\Default Work Unit\N\N_11301\N_11301_Skill_1" DurationType="OneShot" DurationMin="2.644271" DurationMax="2.644271">
+					<IncludedMemoryFiles>
+						<File Id="514384517" Language="SFX">
+							<ShortName>11301_Die_Print_01.wav</ShortName>
+							<Path>SFX/11301_Die_Print_01_10C4C929.wem</Path>
+						</File>
+						<File Id="812042008" Language="SFX">
+							<ShortName>11301_Skill_1_Print_01.wav</ShortName>
+							<Path>SFX/11301_Skill_1_Print_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="377015314" Name="N_11303_Att_1" ObjectPath="\Events\Default Work Unit\N\N_11303\N_11303_Att_1" DurationType="OneShot" DurationMin="2.022438" DurationMax="2.022438">
 					<IncludedMemoryFiles>
 						<File Id="174369190" Language="SFX">
 							<ShortName>11303_Att_Hit_1_Print_01.wav</ShortName>
@@ -875,7 +900,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1562429897" Name="N_11303_Die" ObjectPath="\Events\Default Work Unit\N\N_11303_Die" DurationType="OneShot" DurationMin="2.022438" DurationMax="2.022438">
+				<Event Id="1562429897" Name="N_11303_Die" ObjectPath="\Events\Default Work Unit\N\N_11303\N_11303_Die" DurationType="OneShot" DurationMin="2.022438" DurationMax="2.022438">
 					<IncludedMemoryFiles>
 						<File Id="140826495" Language="SFX">
 							<ShortName>11303_Die_Print_01.wav</ShortName>
@@ -883,8 +908,8 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4143119307" Name="N_11303_Idle" ObjectPath="\Events\Default Work Unit\N\N_11303_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="2196727988" Name="N_11303_Skill_1" ObjectPath="\Events\Default Work Unit\N\N_11303_Skill_1" DurationType="OneShot" DurationMin="2.022438" DurationMax="2.022438">
+				<Event Id="4143119307" Name="N_11303_Idle" ObjectPath="\Events\Default Work Unit\N\N_11303\N_11303_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2196727988" Name="N_11303_Skill_1" ObjectPath="\Events\Default Work Unit\N\N_11303\N_11303_Skill_1" DurationType="OneShot" DurationMin="2.022438" DurationMax="2.022438">
 					<IncludedMemoryFiles>
 						<File Id="350264250" Language="SFX">
 							<ShortName>11303_Skill_1_Voice_Print_01.wav</ShortName>

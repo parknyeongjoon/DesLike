@@ -29,6 +29,9 @@ namespace AK
         static const AkUniqueID MUSIC_S3_BOSS_BATTLE = 1260272950U;
         static const AkUniqueID MUSIC_S3_NORMAL_BATTLE = 935777564U;
         static const AkUniqueID MUSIC_START = 3725903807U;
+        static const AkUniqueID N_11301_ATT_1 = 809365176U;
+        static const AkUniqueID N_11301_DIE = 23113443U;
+        static const AkUniqueID N_11301_SKILL_1 = 3164085490U;
         static const AkUniqueID N_11303_ATT_1 = 377015314U;
         static const AkUniqueID N_11303_DIE = 1562429897U;
         static const AkUniqueID N_11303_IDLE = 4143119307U;

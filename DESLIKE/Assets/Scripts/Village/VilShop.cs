@@ -19,6 +19,7 @@ public class VilShop : MonoBehaviour
     int[] relicLevelCount = new int[3];
     int[] randRelic = new int[6];   // 목록별 랜덤넘버
     int[] relicPrice = new int[6];  // 목록별 가격
+    int gold;
     bool[] isSoldOut = new bool[6];
     bool isNewSet;
 
@@ -30,6 +31,7 @@ public class VilShop : MonoBehaviour
         isNewSet = false;
         for (int i = 0; i < 6; i++)
             RelicImage[i] = GetComponent<Image>();
+        DataSave();
     }
 
     void DataUpdate()
@@ -40,6 +42,7 @@ public class VilShop : MonoBehaviour
         relicLevelCount[1] = relicLevelCount[0] + villageNode.relicLevelCount[1];
         relicLevelCount[2] = relicLevelCount[1] + villageNode.relicLevelCount[2];
         isNewSet = saveManager.gameData.villageData.isNewSet;
+        gold = saveManager.gameData.goodsSaveData.gold;
         if (isNewSet == false)
         {
             for (int i = 0; i < 6; i++)
@@ -49,6 +52,20 @@ public class VilShop : MonoBehaviour
                 isSoldOut[i] = saveManager.gameData.villageData.isSoldOut[i];
             }
         }
+    }
+
+    void DataSave()
+    {
+        saveManager.gameData.villageData.isNewSet = isNewSet;
+        saveManager.gameData.goodsSaveData.gold = gold;
+
+        for (int i = 0; i < 6; i++)
+        {
+            saveManager.gameData.villageData.randRelic[i] = randRelic[i];
+            saveManager.gameData.villageData.relicPrice[i] = relicPrice[i];
+            saveManager.gameData.villageData.isSoldOut[i] = isSoldOut[i];
+        }
+        saveManager.SaveGameData();
     }
 
     void ShopSetting()
@@ -214,8 +231,9 @@ public class VilShop : MonoBehaviour
         else
         {
             vilShopNode.GetRelic();
-            saveManager.gameData.goodsSaveData.gold -= relicPrice[vilShopNode.curNumber];
+            gold -= relicPrice[vilShopNode.curNumber];
             SoldOutPanel[vilShopNode.curNumber].SetActive(true);    // 매진 표시
+            DataSave();
         }
     }
 

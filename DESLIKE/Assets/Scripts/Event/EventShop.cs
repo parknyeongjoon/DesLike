@@ -14,13 +14,15 @@ public class EventShop : EventBasic
     public GameObject RelicSpawner;
     public GameObject RelicPrefab;
     public Canvas RelicCanvas;
+    List<Relic> RelicsInShop;
 
     GameObject[] RelicsInstant;
     EventManager eventManager;
     public TMP_Text[] Prices = new TMP_Text[6];
     Dictionary<string, GameObject> RelicDic = new Dictionary<string, GameObject>();
     RelicData relicData;
-    Relic[] relicScript = new Relic[6];
+    // Relic[] relicScript = new Relic[6];
+    Relic checkRelic;
 
 
 
@@ -37,8 +39,8 @@ public class EventShop : EventBasic
     void DataUpdate()
     {
         relicLevelCount[0] = eventNode.relicLevelCount[0];
-        relicLevelCount[1] = relicLevelCount[0] + eventNode.relicLevelCount[1];
-        relicLevelCount[2] = relicLevelCount[1] + eventNode.relicLevelCount[2];
+        relicLevelCount[1] = eventNode.relicLevelCount[1];
+        relicLevelCount[2] = eventNode.relicLevelCount[2];
         relicList = RelicManager.instance.relicList;
     }
 
@@ -56,31 +58,36 @@ public class EventShop : EventBasic
     void ShopSetting()
     {
         // randRelic[i] = Random.Range(0, relicLevelCount[0]); 일반용
-        // randRelic[i] = Random.Range(relicLevelCount[0], relicLevelCount[1]); 희귀용
-        // randRelic[i] = Random.Range(relicLevelCount[1], relicLevelCount[2]); 전설용
+        // randRelic[i] = relicLevelCount[0] + Random.Range(0, relicLevelCount[1]); 희귀용
+        // randRelic[i] = relicLevelCount[0] + relicLevelCount[1] + Random.Range(0, relicLevelCount[2]); 전설용
 
         if (isEventSet == false)
         {
             for (int i = 0; i < 6; i++)
             {
-                if (i < 4)
+                Debug.Log("for : " + i);
+            RelicReroll:
+                InfiniteLoopDetector.Run();
+                if (i < 4)  // 일반 유물
                 {
+                    Debug.Log("1 : " + i);
                     relicPrice[i] = 90 + Random.Range(0, 21);   // 90~110G
                     randRelic[i] = Random.Range(0, relicLevelCount[0]); // 일반
                 }
-                else
+                else // 희귀 유물
                 {
                     relicPrice[i] = 160 + Random.Range(0, 21); // 160~180G
-                    randRelic[i] = Random.Range(relicLevelCount[0], relicLevelCount[1]); // 희귀
+                    randRelic[i] = relicLevelCount[0] + Random.Range(0, relicLevelCount[1]); // 희귀
                 }
+                Debug.Log("2 : " + i);
 
-            RelicReroll:
-                InfiniteLoopDetector.Run();
                 for (int j = 0; j < i - 1; j++)
                 {
-                    if (relicList[i].relicData.code == relicList[j].relicData.code)
+                    if (randRelic[i] == randRelic[j])
                         goto RelicReroll;
                 }
+
+                Debug.Log("3 : " + i);
 
                 for (int j = 0; j < relicList.Count; j++)
                 {
@@ -89,36 +96,35 @@ public class EventShop : EventBasic
                         goto RelicReroll;
                     // 획득 유물 갯수가 한정되어있어서 모든 유물을 가진 경우의 수는 제외함
                 }
-                
-                relicScript[i] = eventNode.ableRelicRewards[randRelic[i]].GetComponent<Relic>();
-                relicData = relicScript[i].relicData;
-                relicScript[i].transform.GetChild(0).transform.GetChild(0).GetComponent<TMP_Text>().text = relicData.relicName.ToString();
-                relicScript[i].transform.GetComponent<Image>().sprite = relicData.relicImg;
-                
-                Instantiate(relicScript[i], RelicCanvas.transform.GetChild(i).transform);
+                Debug.Log(i + " : " + randRelic[i]);
+
+                RelicsInShop.Add(eventNode.ableRelicRewards[randRelic[i]]);
+                Instantiate(RelicsInShop[i], RelicCanvas.transform.GetChild(i).transform);
 
                 switch (i)  // instantiate한 object에 button추가하는 법 알아보기
                 {
                     case 1:
-                        relicScript[i].GetComponent<Button>().onClick.AddListener(delegate { OpenCheck1(); });
+                        RelicsInShop[i].GetComponent<Button>().onClick.AddListener(delegate { OpenCheck1(); });
                         break;
                     case 2:
-                        relicScript[i].GetComponent<Button>().onClick.AddListener(delegate { OpenCheck2(); });
+                        RelicsInShop[i].GetComponent<Button>().onClick.AddListener(delegate { OpenCheck2(); });
                         break;
                     case 3:
-                        relicScript[i].GetComponent<Button>().onClick.AddListener(delegate { OpenCheck3(); });
+                        RelicsInShop[i].GetComponent<Button>().onClick.AddListener(delegate { OpenCheck3(); });
                         break;
                     case 4:
-                        relicScript[i].GetComponent<Button>().onClick.AddListener(delegate { OpenCheck4(); });
+                        RelicsInShop[i].GetComponent<Button>().onClick.AddListener(delegate { OpenCheck4(); });
                         break;
                     case 5:
-                        relicScript[i].GetComponent<Button>().onClick.AddListener(delegate { OpenCheck5(); });
+                        RelicsInShop[i].GetComponent<Button>().onClick.AddListener(delegate { OpenCheck5(); });
                         break;
                     case 6:
-                        relicScript[i].GetComponent<Button>().onClick.AddListener(delegate { OpenCheck6(); });
+                        RelicsInShop[i].GetComponent<Button>().onClick.AddListener(delegate { OpenCheck6(); });
                         break;
                 }
                 Prices[i].text = relicPrice[i] + "골드";
+                Debug.Log("for end : " + i);
+
             }
         }
     }
@@ -153,6 +159,9 @@ public class EventShop : EventBasic
         Debug.Log("OpenCheck1");
         vilShopNode.curRelic = relicList[0];
         // relic instantiate 후 보여주기
+        Destroy(CheckPanel.transform.GetChild(0).transform.GetChild(0));
+        Instantiate(RelicsInShop[0], CheckPanel.transform.GetChild(0).transform);
+
         CheckPanel.SetActive(true);
     }
 
@@ -161,6 +170,9 @@ public class EventShop : EventBasic
         Debug.Log("OpenCheck2");
         vilShopNode.curRelic = relicList[1];
         // relic instantiate 후 보여주기
+        Destroy(CheckPanel.transform.GetChild(0).transform.GetChild(0));
+        Instantiate(RelicsInShop[1], CheckPanel.transform.GetChild(0).transform);
+
         CheckPanel.SetActive(true);
     }
 
@@ -169,8 +181,10 @@ public class EventShop : EventBasic
         Debug.Log("OpenCheck3");
         vilShopNode.curRelic = relicList[2];
         // relic instantiate 후 보여주기
-        CheckPanel.SetActive(true);
+        Destroy(CheckPanel.transform.GetChild(0).transform.GetChild(0));
+        Instantiate(RelicsInShop[2], CheckPanel.transform.GetChild(0).transform);
 
+        CheckPanel.SetActive(true);
     }
 
     public void OpenCheck4()
@@ -178,6 +192,8 @@ public class EventShop : EventBasic
         Debug.Log("OpenCheck4");
         vilShopNode.curRelic = relicList[3];
         // relic instantiate 후 보여주기
+        Destroy(CheckPanel.transform.GetChild(0).transform.GetChild(0));
+        Instantiate(RelicsInShop[3], CheckPanel.transform.GetChild(0).transform);
         CheckPanel.SetActive(true);
     }
 
@@ -186,6 +202,8 @@ public class EventShop : EventBasic
         Debug.Log("OpenCheck5");
         vilShopNode.curRelic = relicList[4];
         // relic instantiate 후 보여주기
+        Destroy(CheckPanel.transform.GetChild(0).transform.GetChild(0));
+        Instantiate(RelicsInShop[4], CheckPanel.transform.GetChild(0).transform);
         CheckPanel.SetActive(true);
 
     }
@@ -195,6 +213,9 @@ public class EventShop : EventBasic
         Debug.Log("OpenCheck6");
         vilShopNode.curRelic = relicList[5];
         // relic instantiate 후 보여주기
+        Destroy(CheckPanel.transform.GetChild(0).transform.GetChild(0));
+        Instantiate(RelicsInShop[5], CheckPanel.transform.GetChild(0).transform);
+
         CheckPanel.SetActive(true);
     }
 

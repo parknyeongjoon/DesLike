@@ -62,6 +62,7 @@ public class SelectMap : MonoBehaviour
 
     void FindData() // 외부 데이터 가져오기
     {
+        curTrack = saveManager.gameData.mapData.curTrack;
         newSet = saveManager.gameData.mapData.newSet;
         curDay = saveManager.gameData.mapData.curDay;
         curStage = saveManager.gameData.mapData.curStage;

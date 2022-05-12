@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class RelicRewardBtn : MonoBehaviour
 {
@@ -27,6 +25,7 @@ public class RelicRewardBtn : MonoBehaviour
     {
         RelicManager.Instance.relicList.Add(relicScript);
         Instantiate(SaveManager.Instance.map.curMapNode.reward.relic[0], RelicManager.Instance.relicCanvas.transform.GetChild(0).transform);
+        RelicManager.Instance.AddRelicInPanel();
         Destroy(gameObject);
     }
 

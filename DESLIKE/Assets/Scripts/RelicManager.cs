@@ -6,11 +6,8 @@ using UnityEngine.SceneManagement;
 public class RelicManager : MonoBehaviour
 {
     public static RelicManager instance;
-
     public List<Relic> relicList = new List<Relic>();
-
     public Canvas relicCanvas;
-
     public delegate void SoldierConditionHandler(SoldierData soldierData);
     public SoldierConditionHandler soldierConditionHandler;
 
@@ -27,6 +24,11 @@ public class RelicManager : MonoBehaviour
     }
 
     // relic instantiate ÇØ¾ßÇÔ
+    public void AddRelicInCanvas()
+    {
+        Instantiate(relicList[relicList.Count-1], relicCanvas.transform.GetChild(0).transform);
+    }
+
 
     void Awake()
     {

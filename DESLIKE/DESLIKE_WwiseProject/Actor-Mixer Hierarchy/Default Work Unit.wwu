@@ -637,6 +637,13 @@
 						<Folder Name="N_11304" ID="{54E7E66B-A912-41E3-9478-4BD6ABC409DC}" ShortID="728261758">
 							<ChildrenList>
 								<Sound Name="Print_11304_Att_1_01" ID="{0E2850EB-061F-48D4-9F75-D5521854D86F}" ShortID="69936035">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
@@ -657,6 +664,56 @@
 									<ObjectLists/>
 									<ActiveSourceList>
 										<ActiveSource Name="Print_11304_Att_1_01" ID="{9DA3C4E7-1303-4F8A-B164-9DDC980D52AB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="N_12303" ID="{95ECF937-C353-4F3A-AC98-D6E8DDDB0F65}" ShortID="554830570">
+							<ChildrenList>
+								<Sound Name="Print_12303_Att_1_01" ID="{6155C5D9-9AF2-48D0-A44C-20CF1F52A1B9}" ShortID="726620401">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="N_Att" ID="{67CE6987-3938-4612-AF51-C0AD83A2A74D}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Print_12303_Att_1_01" ID="{F07D14BC-14FC-42B1-A0A9-FE28FA8AEAB7}">
+											<Language>SFX</Language>
+											<AudioFile>Print_12303_Att_1_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="595114047"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Print_12303_Att_1_01" ID="{F07D14BC-14FC-42B1-A0A9-FE28FA8AEAB7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Print_12303_Die_01" ID="{E70659E9-BA10-43EF-95C3-C707E8C4A0AD}" ShortID="149698521">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1E3D18D-0E18-456C-890B-A85BC786E723}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="N_Die" ID="{2BDBCC38-7764-4458-9491-C886F52832F1}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Print_12303_Die_01" ID="{68B5BA2A-13ED-4092-B671-CCB126E476F6}">
+											<Language>SFX</Language>
+											<AudioFile>Print_12303_Die_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="420026847"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Print_12303_Die_01" ID="{68B5BA2A-13ED-4092-B671-CCB126E476F6}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

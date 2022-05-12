@@ -10,6 +10,7 @@
 						<ObjectRef Name="Game_Speed_Pause" ID="{D0F92340-3C3D-4203-B32C-007AB838B295}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="N_11301_Die" ID="{87588145-3973-423B-B17A-DE649CBE079A}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music_S3_Normal_Battle" ID="{CA6D3D84-9F42-42B6-81F9-E618187F7A19}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="N_11304_Att_1" ID="{40EBFDC1-AEE6-4365-9A7A-AA2A2B6E7009}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="N_11301_Skill_1" ID="{B54EEBE1-875A-4411-B843-2F2995C767F8}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Battle_End" ID="{7A784D78-D0C9-452E-850A-672AFAEF9650}" WorkUnitID="{F76CFB9A-35AD-4717-AC19-859BB342359B}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Music_S2_Normal_Battle" ID="{8FC8DA82-588D-455D-B2C1-B291DD534940}" WorkUnitID="{7F740CF1-CB87-4FAE-8406-83AEDB57B957}" Origin="Manual" Filter="7"/>

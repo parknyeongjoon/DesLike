@@ -245,6 +245,32 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Folder Name="N_12303" ID="{8A1EFAFF-70A2-48AA-81AA-9165D3293F81}" ShortID="397119092">
+							<ChildrenList>
+								<Event Name="N_12303_Att_1" ID="{58A0B878-5F53-4975-885A-B3E5A137E834}">
+									<ChildrenList>
+										<Action Name="" ID="{F6E78262-B07E-45ED-9C3C-AF2A41CFE362}" ShortID="748735478">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Print_12303_Att_1_01" ID="{6155C5D9-9AF2-48D0-A44C-20CF1F52A1B9}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="N_12303_Die" ID="{428EB5F4-3D79-4AA6-AFF3-665677035235}">
+									<ChildrenList>
+										<Action Name="" ID="{3528E616-8102-42EC-AB75-5871A3B1D4F7}" ShortID="623432908">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Print_12303_Die_01" ID="{E70659E9-BA10-43EF-95C3-C707E8C4A0AD}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Event Name="Battle_Start" ID="{E0E43444-BD96-4FF6-BDD7-67A9A0547301}"/>

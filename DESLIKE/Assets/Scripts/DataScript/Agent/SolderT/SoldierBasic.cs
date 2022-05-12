@@ -6,6 +6,7 @@ using System;
 public class SoldierBasic : MonoBehaviour
 {
     public HeroInfo heroInfo;
+    [SerializeField] protected Rigidbody2D rigidbody;
 
     public Func<HeroInfo, IEnumerator> atkHandler;
     public Action atkDetect;
@@ -15,6 +16,8 @@ public class SoldierBasic : MonoBehaviour
     public Action skillDetect;
     public Func<bool> isSkillActive;
     public Func<bool> canSkill;
+
+    public Coroutine moveCoroutine;
 
     public const int basicSoundWeight = 10;//사운드 가중치 최소값
     public int curSoundWeight;//현재 사운드 가중치
@@ -69,6 +72,7 @@ public class SoldierBasic : MonoBehaviour
             Debug.Log("스턴");
             yield return new WaitForFixedUpdate();
         }
+        heroInfo.skeletonAnimation.state.SetAnimation(0, heroInfo.castleData.code + "_Move", true);
         StartCoroutine(Idle_Behaviour());
     }
 
@@ -96,6 +100,7 @@ public class SoldierBasic : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
         heroInfo.state = Soldier_State.Idle;
+        heroInfo.action = Soldier_Action.Idle;
     }
 
     IEnumerator TauntTime()

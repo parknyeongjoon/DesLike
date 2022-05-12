@@ -16,4 +16,6 @@ MonoBehaviour:
   code: 0
   relicName: BonusIncome
   toopTip: "3\uD134\uB9C8\uB2E4 1.5\uBC30\uC758 \uBCF4\uAE09\uC744 \uC9C0\uC6D0\uBC1B\uC74C"
-  rarity: 0
+  kingdom: 0
+  rarity: 1
+  continueReuse: 0

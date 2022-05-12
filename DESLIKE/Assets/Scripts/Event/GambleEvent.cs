@@ -66,9 +66,9 @@ public class GambleEvent : EventBasic
                 case 1:
                     curDay += 3;
                     InformText.text = "오호, 체력을 고르셨군요. 얼마나 거시겠습니까?";
-                    OptionText[0].text = "30골드 (보상 : HP 90 회복)";
-                    OptionText[1].text = "50골드 (보상 : HP 150 회복)";
-                    OptionText[2].text = "100골드 (보상 : HP 100 회복)";
+                    OptionText[0].text = "30HP (보상 : HP 90 회복)";
+                    OptionText[1].text = "50HP (보상 : HP 150 회복)";
+                    OptionText[2].text = "100HP (보상 : HP 100 회복)";
                     if (cur_HP < 30)   // 30HP보다 적으면 체력 1남기고 전부
                         OptionText[0].text = (cur_HP - 1) + "HP (보상 : HP " + ((cur_HP - 1) * 3) + " 회복)";
                     if (cur_HP < 100)
@@ -117,7 +117,7 @@ public class GambleEvent : EventBasic
                         if (cur_HP <= 30) rewardNum = ((int)cur_HP - 1);
                         else rewardNum = 30;    // 30
 
-                        InformText.text = "오호, " + rewardNum + "HP를 고르셨군요. 얼마를 거시겠습니까?";
+                        InformText.text = "오호, " + rewardNum + "HP를 고르셨군요. 몇 번째 상자를 거시겠습니까?";
                     }
                     break;
                 case 1:
@@ -129,7 +129,7 @@ public class GambleEvent : EventBasic
                     else
                     {
                         rewardNum = 50;
-                        InformText.text = "오호, " + rewardNum + "HP를 고르셨군요. 얼마를 거시겠습니까?";
+                        InformText.text = "오호, " + rewardNum + "HP를 고르셨군요. 몇 번째 상자를 거시겠습니까?";
                     }
                     break;
                 case 2:
@@ -141,7 +141,7 @@ public class GambleEvent : EventBasic
                     else
                     {
                         rewardNum = 100;
-                        InformText.text = "오호, " + rewardNum + "HP를 고르셨군요. 얼마를 거시겠습니까?";
+                        InformText.text = "오호, " + rewardNum + "HP를 고르셨군요. 몇 번째 상자를 거시겠습니까?";
                     }
                     break;
                 default:
@@ -168,7 +168,7 @@ public class GambleEvent : EventBasic
             else cur_HP = rewardNum;
         }
         ToOneButton();
-        InformText.text = button + "번째 상자를 고르셨군요. 이제 결과를 공개합니다!";
+        InformText.text = (button + 1) + "번째 상자를 고르셨군요. 이제 결과를 공개합니다!";
         OptionText[2].text = "과연..?";
         stepCheck[2] = true;
         SaveStepCheck(2);

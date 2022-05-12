@@ -19,6 +19,7 @@ public class SoldierSpriteManager : MonoBehaviour
     {
         yield return new WaitUntil(() => heroData == null);
         heroData = (HeroData)heroInfo.castleData;
+        if(heroInfo.team == Team.Enemy) { heroInfo.skeletonAnimation.skeleton.SetColor(new Color(0.6f, 0.6f, 0.6f)); }
         SetHpMpBar();
     }
 

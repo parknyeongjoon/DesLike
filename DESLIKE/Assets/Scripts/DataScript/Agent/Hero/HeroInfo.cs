@@ -7,6 +7,8 @@ using Spine.Unity;
 public class HeroInfo : CastleInfo
 {
     public SkeletonAnimation skeletonAnimation;
+    public SoldierBasic soldierBasic;
+
     public UnityEvent<float> stunEvent;
     public UnityEvent<float> tauntEvent;
 
@@ -37,9 +39,9 @@ public class HeroInfo : CastleInfo
     protected virtual IEnumerator Start()
     {
         SaveManager saveManager = SaveManager.Instance;
-        healWeight = 0;
         cur_Hp = saveManager.gameData.heroSaveData.cur_Hp;
         cur_Mp = saveManager.gameData.heroSaveData.cur_Mp;
+        castleData.extraSkills?.Invoke(this);
         resurrection = saveManager.gameData.heroSaveData.resurrection;
         allyPortDatas.spawnSoldierList.Add(this);
         yield return new WaitUntil(() => BattleUIManager.Instance.battleStart);//배틀 스타트 될 때까지 기다리기
@@ -50,7 +52,7 @@ public class HeroInfo : CastleInfo
     {
         beforeHitEvent?.Invoke(this, atkHeroInfo, damage);
 
-        if (mucus > 0)//frogShield가 있을 시
+        if (mucus > 0 && damage > 0)//frogShield가 있을 시
         {
             mucus -= 1;
             damage = 0;

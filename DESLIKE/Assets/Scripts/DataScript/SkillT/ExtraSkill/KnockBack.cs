@@ -9,13 +9,11 @@ public class KnockBack : SkillData
 
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
-        Debug.Log("³Ë¹é");
-        targetInfo.StartCoroutine(KnockBackEffect(heroInfo, targetInfo));
+        targetInfo.soldierBasic.StartCoroutine(KnockBackEffect(heroInfo, targetInfo));
     }
 
     IEnumerator KnockBackEffect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
-        targetInfo.Stun(knockBackTime);
         float time = 0;
         Vector3 startPos = targetInfo.transform.position;
         while(time <= knockBackTime)
@@ -23,6 +21,8 @@ public class KnockBack : SkillData
             time += Time.deltaTime;
             targetInfo.transform.position = Vector3.Lerp(startPos, startPos + (heroInfo.moveDir * knockBackDis), time / knockBackTime);
             yield return new WaitForFixedUpdate();
+            Debug.Log("³Ë¹éÁß");
         }
+        targetInfo.Stun(knockBackTime);
     }
 }

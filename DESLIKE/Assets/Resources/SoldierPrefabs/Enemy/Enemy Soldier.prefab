@@ -651,6 +651,7 @@ GameObject:
   - component: {fileID: 8576553565259397100}
   - component: {fileID: -3554134871425548847}
   - component: {fileID: -6394965512445177725}
+  - component: {fileID: 737334623645301845}
   m_Layer: 9
   m_Name: Enemy Soldier
   m_TagString: Soldier
@@ -748,7 +749,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!58 &2674797898864205555
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -868,6 +869,7 @@ MonoBehaviour:
         m_CallState: 2
   cur_Hp: 0
   skeletonAnimation: {fileID: 6994756467532799153}
+  soldierBasic: {fileID: -6394965512445177725}
   stunEvent:
     m_PersistentCalls:
       m_Calls:
@@ -923,7 +925,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroInfo: {fileID: -3554134871425548847}
+  rigidbody: {fileID: 4448198707694892068}
   curSoundWeight: 0
+--- !u!114 &737334623645301845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7116624685446316913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8649ff8f7959f9943940a94fd400f303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basicAttackData: {fileID: 0}
+  extraSkills: []
+  atkArea: 0
+  atkLayer: 0
+  atkCount: 0
 --- !u!1 &8906623540148596293
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,12 @@ PrefabInstance:
       propertyPath: soldierCode
       value: N_11304
       objectReference: {fileID: 0}
+    - target: {fileID: -6169959335075015726, guid: a389e075072991a45bce11914791a9ec,
+        type: 3}
+      propertyPath: basicAttackData
+      value: 
+      objectReference: {fileID: 11400000, guid: 44a6219328e83cc41b74702181a957c5,
+        type: 2}
     - target: {fileID: 852807739320361642, guid: a389e075072991a45bce11914791a9ec,
         type: 3}
       propertyPath: m_Radius
@@ -140,25 +146,3 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ac2c90731cbe89e4eb00cca306d3190a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a389e075072991a45bce11914791a9ec, type: 3}
---- !u!1 &3640426924902849711 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5346442293094215222, guid: a389e075072991a45bce11914791a9ec,
-    type: 3}
-  m_PrefabInstance: {fileID: 8698427734807507609}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4992120632782651945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3640426924902849711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f26b66f7d1b2384c8d4ec388b7e71f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  basicAttackData: {fileID: 11400000, guid: 44a6219328e83cc41b74702181a957c5, type: 2}
-  atkArea: 0
-  atkLayer: 0
-  atkCount: 0

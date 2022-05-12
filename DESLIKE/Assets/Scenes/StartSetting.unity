@@ -256,11 +256,11 @@ MonoBehaviour:
   heroDatas:
   - {fileID: 11400000, guid: 7f528eb015e3d0e40b0f2abb902a89a8, type: 2}
   skillDatas:
-  - {fileID: 11400000, guid: 98f82980703fa0e4ba3f1f9603f10358, type: 2}
-  - {fileID: 11400000, guid: a920bdecf22c07f4db7b8ab8ed5b9899, type: 2}
-  - {fileID: 11400000, guid: d63c23ddfe5e66f4a8d0377072c01783, type: 2}
-  - {fileID: 11400000, guid: 044c987abeb5582478130c7dc7b532ab, type: 2}
-  - {fileID: 11400000, guid: 1240e355522460b4ba7bd6fea5dc84d8, type: 2}
+  - {fileID: 11400000, guid: c1a1603848787fa4a8c9617388a574d1, type: 2}
+  - {fileID: 11400000, guid: 452986aa41cf35b4f9e7d10f15c1eeac, type: 2}
+  - {fileID: 11400000, guid: 271baaba43950214997458282c1bc85d, type: 2}
+  - {fileID: 11400000, guid: e58bf58c79a45e24ebf8df62cddeb15b, type: 2}
+  - {fileID: 11400000, guid: 20faa7cf16f947e44ae2c22b3b31454c, type: 2}
   mutantObjects:
   - {fileID: 3340910114177237104, guid: 90e7863938ac48041a9acab8e9974372, type: 3}
   relicObjects:

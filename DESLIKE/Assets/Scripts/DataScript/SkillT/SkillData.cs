@@ -10,10 +10,18 @@ public class SkillData : ScriptableObject
     public string code, skill_name, toolTip;
     public SkillType skillType;
     public Sprite skill_Icon;
-    public SkillData extraSkillData;
+    public List<SkillData> extraSkillDatas;
 
     public virtual void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
-        extraSkillData.Effect(heroInfo, targetInfo);
+
+    }
+
+    public void excuteExtraSkill(HeroInfo heroInfo, HeroInfo targetInfo)
+    {
+        for(int i = 0; i < extraSkillDatas.Count; i++)
+        {
+            extraSkillDatas[i].Effect(heroInfo, targetInfo);
+        }
     }
 }

@@ -9,6 +9,6 @@ public class SingleSkill : ActiveSkillData
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)//이런 식으로 효과는 밖으로 빼기
     {
         targetInfo.OnDamaged(heroInfo, atk_Dmg);
-        extraSkillData?.Effect(heroInfo, targetInfo);
+        excuteExtraSkill(heroInfo, targetInfo);
     }
 }

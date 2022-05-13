@@ -10,8 +10,6 @@ public class SoldierInfo : HeroInfo
     protected override IEnumerator Start()
     {
         if (team == Team.Ally) { castleData = allyPortDatas.activeSoldierList[soldierCode]; }
-        else if(team == Team.Enemy) { castleData = enemyPortDatas.activeSoldierList[soldierCode]; }
-        else if(team == Team.Neutral) {  }
         cur_Hp = castleData.hp;
         cur_Mp = 0;
         allyPortDatas.spawnSoldierList.Add(this);

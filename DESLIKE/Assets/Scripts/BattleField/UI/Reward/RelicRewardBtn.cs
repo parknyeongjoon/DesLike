@@ -24,8 +24,7 @@ public class RelicRewardBtn : MonoBehaviour
     public void GetReward()
     {
         RelicManager.Instance.relicList.Add(relicScript);
-        Instantiate(SaveManager.Instance.map.curMapNode.reward.relic[0], RelicManager.Instance.relicCanvas.transform.GetChild(0).transform);
-        RelicManager.Instance.AddRelicInPanel();
+        RelicManager.Instance.AddRelicInCanvas();
         Destroy(gameObject);
     }
 

@@ -398,6 +398,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RelicManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1264349190392627088, guid: 7a1015bdaea90d5409258cec535882c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1264349190392627090, guid: 7a1015bdaea90d5409258cec535882c6,
         type: 3}
       propertyPath: m_RootOrder

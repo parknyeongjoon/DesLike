@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PassiveStack : Skill
 {
-    BasicAttackScript basicAttackScript;
+    BasicAttack basicAttack;
 
     int stack;
     public int activeStack;
 
     void Start()
     {
-        basicAttackScript = GetComponent<BasicAttackScript>();
-        basicAttackScript.afterAtkEvent += AfterAtkEffect;
+        basicAttack = GetComponent<BasicAttack>();
+        basicAttack.afterAtkEvent += AfterAtkEffect;
     }
 
     void AfterAtkEffect(HeroInfo heroInfo, HeroInfo targetInfo)
@@ -20,11 +20,11 @@ public class PassiveStack : Skill
         stack++;
         if(stack % activeStack == 0)
         {
-            basicAttackScript.atkCount += 1;
+            basicAttack.atkCount += 1;
         }
         else if(stack != 1 && stack % activeStack == 1)
         {
-            basicAttackScript.atkCount -= 1;
+            basicAttack.atkCount -= 1;
         }
     }
 }

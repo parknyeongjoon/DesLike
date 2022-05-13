@@ -18,6 +18,12 @@ PrefabInstance:
       propertyPath: soldierCode
       value: N_11303
       objectReference: {fileID: 0}
+    - target: {fileID: -6169959335075015726, guid: a389e075072991a45bce11914791a9ec,
+        type: 3}
+      propertyPath: basicAttackData
+      value: 
+      objectReference: {fileID: 11400000, guid: f00f0aa8e991b3b44be006494ab2c7b1,
+        type: 2}
     - target: {fileID: 680331318789377319, guid: a389e075072991a45bce11914791a9ec,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -843,20 +849,3 @@ MonoBehaviour:
   cur_cooltime: 0
   atkArea: 0
   atkLayer: 0
---- !u!114 &2960443374390302875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8341766734628542440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f26b66f7d1b2384c8d4ec388b7e71f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  basicAttackData: {fileID: 11400000, guid: f00f0aa8e991b3b44be006494ab2c7b1, type: 2}
-  atkArea: 0
-  atkLayer: 0
-  atkCount: 0
-  atkStack: 0

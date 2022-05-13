@@ -17,6 +17,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 737334623645301845, guid: 98c43156be998d34d833a7bf183e4fd5,
+        type: 3}
+      propertyPath: basicAttackData
+      value: 
+      objectReference: {fileID: 11400000, guid: f580cda31af8b204ebe44b6decb1ce87,
+        type: 2}
     - target: {fileID: 1884837567986761582, guid: 98c43156be998d34d833a7bf183e4fd5,
         type: 3}
       propertyPath: m_Mesh
@@ -154,19 +160,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillData: {fileID: 11400000, guid: 98f82980703fa0e4ba3f1f9603f10358, type: 2}
---- !u!114 &6549763447393520276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2742338748952635124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f26b66f7d1b2384c8d4ec388b7e71f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  basicAttackData: {fileID: 11400000, guid: f580cda31af8b204ebe44b6decb1ce87, type: 2}
-  atkArea: 0
-  atkLayer: 0
-  atkCount: 0

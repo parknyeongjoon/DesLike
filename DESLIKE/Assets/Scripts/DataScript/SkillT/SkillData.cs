@@ -12,7 +12,7 @@ public class SkillData : ScriptableObject
     public Sprite skill_Icon;
     public List<SkillData> extraSkillDatas;
 
-    public virtual void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
+    public virtual void Effect(HeroInfo heroInfo, HeroInfo targetInfo)//(시전자, 대상자)
     {
 
     }

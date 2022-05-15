@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8ca23b838522bae4eaa49cd044959809
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - relicData: {fileID: 11400000, guid: b0d453a794b7dd84f89ee3a2983fd355, type: 2}
+  - allyPortDatas: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae, type: 2}
+  - goodsCollection: {fileID: 11400000, guid: c1fb10b23ada60941ac4f645d98621af, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -9,6 +9,6 @@ public class AuraData : SkillData
 
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
-        excuteExtraSkill(heroInfo, targetInfo);
+        extraSkillData.Effect(heroInfo, targetInfo);
     }
 }

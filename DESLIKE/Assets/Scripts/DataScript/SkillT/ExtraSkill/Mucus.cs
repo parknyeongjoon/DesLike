@@ -9,7 +9,6 @@ public class Mucus : SkillData
 
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
-        excuteExtraSkill(heroInfo, targetInfo);
         targetInfo.mucus += mucusAmount;
     }
 }

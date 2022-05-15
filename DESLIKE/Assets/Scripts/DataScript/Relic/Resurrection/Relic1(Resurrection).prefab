@@ -87,10 +87,10 @@ GameObject:
   - component: {fileID: 4950314987519934621}
   - component: {fileID: 4976696596237523014}
   - component: {fileID: 1812651292192227566}
-  - component: {fileID: 2995862979264440761}
+  - component: {fileID: 8451776797663424498}
   - component: {fileID: 8265342763431998545}
   m_Layer: 5
-  m_Name: InstanceRelicPrefab
+  m_Name: Relic1(Resurrection)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2995862979264440761
+--- !u!114 &8451776797663424498
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,13 +163,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4835315866048107822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 670b1393408726044884128e8ca97ed2, type: 3}
+  m_Script: {fileID: 11500000, guid: e78412b034716244a8b49fe68adddf08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relicData: {fileID: 0}
+  relicData: {fileID: 11400000, guid: 9e3408289f5d590419f34b699dc06adb, type: 2}
   toolTipPanel: {fileID: 1758714778193348354}
   toolTip: {fileID: 3873153188755163169}
   relicImg: {fileID: 1812651292192227566}
+  resurrectionEffect: {fileID: 5988368205268330919, guid: 2e72547bfbc97db408a2469af5f05cae,
+    type: 3}
 --- !u!114 &8265342763431998545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,7 +189,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2995862979264440761}
+        - m_Target: {fileID: 8451776797663424498}
           m_TargetAssemblyTypeName: Relic, Assembly-CSharp
           m_MethodName: SetToolTip
           m_Mode: 1
@@ -203,7 +205,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2995862979264440761}
+        - m_Target: {fileID: 8451776797663424498}
           m_TargetAssemblyTypeName: Relic, Assembly-CSharp
           m_MethodName: CloseToolTip
           m_Mode: 1

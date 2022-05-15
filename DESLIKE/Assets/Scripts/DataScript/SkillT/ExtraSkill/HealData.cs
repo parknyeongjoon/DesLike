@@ -11,7 +11,7 @@ public class HealData : SkillData
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
         targetInfo.OnHealed(heal_Amount);
-        excuteExtraSkill(heroInfo, targetInfo);
+        extraSkillData.Effect(heroInfo, targetInfo);
         targetInfo.StartCoroutine(Healing(targetInfo));
     }
 

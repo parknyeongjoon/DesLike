@@ -4,17 +4,21 @@ using TMPro;
 
 public class SelectMap : MonoBehaviour
 {
-    public GameObject[] Track = new GameObject[3];
-    [SerializeField] TMP_Text[] SelText = new TMP_Text[6]; // 각 선택지별 텍스트 - 0 : 1_1 / 1,2 : 2_1, 2 / 3, 4, 5 = 3_1, 2, 3 
-
-    int curDay = 0, curStage; // 현재 날짜
-    bool midBossCheck1, midBossCheck2, villageCheck, organCheck, isContinue; // 중간 보스, 마을, 정비, 이어하기 여부
+    
+    int curDay = 0, curStage, nodeNum, curTrack = 0, curBtn = 0, challengeCount, selectNum = 0;
     int[] nxtEvnt = new int[3];
     int[] eventList = new int[3];
-    int nodeNum;   // 노드 지정용(nxtEvnt[nodeNum]용)
-    int curTrack = 0;
-    int curBtn = 0, challengeCount;
-    bool newSet;
+    int[] nextEvent = new int[3];   // [0~2] : Btn1~3, int : 0~2 => 랜덤값 배정(전투 배정)
+    bool midBossCheck1, midBossCheck2, villageCheck, organCheck, isContinue, newSet; // 중간 보스, 마을, 정비, 이어하기 여부
+    bool[] isChallenge = new bool[3];
+    bool[] isAbleSet = new bool[3];
+
+    CurBattle curBattle;
+
+    SaveManager saveManager;
+
+    [SerializeField] Map map;
+    [SerializeField] PortDatas portDatas;
 
     [SerializeField] GameObject MyTeamPanel, MorePanel;
     [SerializeField] GameObject InfoPanel;
@@ -27,6 +31,9 @@ public class SelectMap : MonoBehaviour
     [SerializeField] GameObject[] Button3_3;    // 6개
     [SerializeField] GameObject[] EventButton;  // 0~4 : 2_1 ~ 3_3
     [SerializeField] GameObject[] Title;    // 0 전투 / 1 이벤트
+    [SerializeField] GameObject[] Track = new GameObject[3];
+    [SerializeField] GameObject[] EventNode = new GameObject[7]; // 0~4 : 2_1 ~ 3_3; 5 : 마을, 6 : 정비
+    [SerializeField] TMP_Text[] SelText = new TMP_Text[6]; // 각 선택지별 텍스트 - 0 : 1_1 / 1,2 : 2_1, 2 / 3, 4, 5 = 3_1, 2, 3 
 
     [SerializeField] BattleNodeScript[] T1B1; // Stage1, Track1, Button1
     [SerializeField] BattleNodeScript[] T2B1; // Stage1, Track2, Button1
@@ -34,19 +41,8 @@ public class SelectMap : MonoBehaviour
     [SerializeField] BattleNodeScript[] T3B1; // Stage1, Track3, Button1
     [SerializeField] BattleNodeScript[] T3B2; // Stage1, Track3, Button2
     [SerializeField] BattleNodeScript[] T3B3; // Stage1, Track3, Button3
-    [SerializeField] GameObject[] EventNode = new GameObject[7]; // 0~4 : 2_1 ~ 3_3; 5 : 마을, 6 : 정비
-    CurBattle curBattle;
-    int[] nextEvent = new int[3];   // [0~2] : Btn1~3, int : 0~2 => 랜덤값 배정(전투 배정)
-    bool[] isChallenge = new bool[3];
-    bool[] isAbleSet = new bool[3];
-
-
-    public Map map;
-    SaveManager saveManager;
-
-    [SerializeField] PortDatas portDatas;
-    int selectNum = 0;
-
+   
+    
     void Start()
     {
         saveManager = SaveManager.Instance;
@@ -194,7 +190,7 @@ public class SelectMap : MonoBehaviour
                 else nxtEvnt[i] = Random.Range(0, 2);    // 전투(0) or 이벤트(1)
 
                 if (nxtEvnt[i] == 1) // 이벤트라면
-                    eventList[i] = 4; // Random.Range(0, 7);  // 이벤트 리스트에 따라서 다름; 세부 확률 조정 필요
+                    eventList[i] = 5; // Random.Range(0, 7);  // 이벤트 리스트에 따라서 다름; 세부 확률 조정 필요
                 else eventList[i] = 0;  // 전투면 0 표시
 
                 // 도전모드 관련 코드

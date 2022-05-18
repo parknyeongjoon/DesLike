@@ -66,9 +66,7 @@ public class EventManager : MonoBehaviour
                 break;
         }
     }
-
-  
-
+    
     public void AddCurDay1()
     {
         saveManager.gameData.mapData.curDay += 1;

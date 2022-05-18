@@ -7,18 +7,63 @@ using TMPro;
 
 public class RelicEvent : EventBasic
 {
-    float max_HP;
+    int curGold;
+    int[] optionNum = new int[3];
+    float cur_HP, max_HP;
+    bool isEventSet, isAlreadySelect;
+
     RelicManager relicManager;
-    RelicData relicData;
-    Relic relicScript;
-   
+ 
+    [SerializeField] Button[] Buttons = new Button[3];
+    [SerializeField] TMP_Text[] OptionText = new TMP_Text[3];
+    
     void OnEnable()
     {
-        SetOption();
         relicManager = RelicManager.Instance;
+
+        LoadData();
+        SetOption();
+        // 세팅 다 했다고 표시
         isEventSet = true;
         eventEnd = false;
+
         SaveData();
+    }
+
+    void SaveData()
+    {
+        SaveRelEData();
+        SaveComData();
+        saveManager.SaveGameData();
+    }
+
+    void SaveRelEData()
+    {
+        saveManager.gameData.heroSaveData.cur_Hp = cur_HP;
+        saveManager.gameData.goodsSaveData.gold = curGold;
+        saveManager.gameData.eventData.isEventSet = isEventSet;
+        saveManager.gameData.eventData.isAlreadySelect = isAlreadySelect;
+
+        for (int i = 0; i < 3; i++)
+            saveManager.gameData.eventData.optionNum[i] = optionNum[i];
+    }
+
+    void LoadData()
+    {
+        LoadRelEData();
+        LoadComData();
+    }
+
+    void LoadRelEData()
+    {
+        cur_HP = saveManager.gameData.heroSaveData.cur_Hp;
+        max_HP = saveManager.dataSheet.heroDataSheet[saveManager.gameData.heroSaveData.heroCode].hp;
+        curGold = saveManager.gameData.goodsSaveData.gold;
+        isEventSet = saveManager.gameData.eventData.isEventSet;
+        isAlreadySelect = saveManager.gameData.eventData.isAlreadySelect;
+
+        for (int i = 0; i < 3; i++)
+            optionNum[i] = saveManager.gameData.eventData.optionNum[i];
     }
 
     void SetOption()
@@ -37,14 +82,7 @@ public class RelicEvent : EventBasic
                         goto Reroll;  // 같은 값인지 체크
                 }
             }
-            else  // 데이터 가져오기
-            {
-                for (int i = 0; i < 3; i++)
-                {
-                    optionNum[i] = eventData.optionNum[i];
-                }
-            }
-
+          
             for (int i = 0; i < 3; i++)    // 텍스트 변경용
             {
                 switch (optionNum[i] + 1)
@@ -214,7 +252,7 @@ public class RelicEvent : EventBasic
         }
         isAlreadySelect = true;
         isEventSet = false;
-        SaveData();
+        SaveComData();
     }
 
     public void Button2()

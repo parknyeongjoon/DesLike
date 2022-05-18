@@ -1,16 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class FightEvent : EventBasic
 {
-    public BattleNode battleNode;
-    int enPortLevel;
+    int enPortLevel, curStage;
     int phyNorRelC, speNorRelC, comNorRelC, phyEpicRelC, speEpicRelC, comEpicRelC;
+    bool isAlreadySelect;
+
+    [SerializeField] Button[] Buttons = new Button[2];
+    [SerializeField] TMP_Text[] OptionText = new TMP_Text[2];
+    [SerializeField] BattleNode battleNode;
 
     void OnEnable()
     {
+        LoadData();
+
         if (isAlreadySelect == true)
         {
             for (int i = 0; i < 2; i++)
@@ -21,6 +28,31 @@ public class FightEvent : EventBasic
             EBattleSet();
 
         SaveData();
+    }
+
+    void SaveData()
+    {
+        SaveFightEData();
+        SaveComData();
+        saveManager.SaveGameData();
+    }
+
+    void SaveFightEData()
+    {
+        saveManager.gameData.mapData.curStage = curStage;
+        saveManager.gameData.eventData.isAlreadySelect = isAlreadySelect;
+    }
+
+    void LoadData()
+    {
+        LoadFightEData();
+        LoadComData();
+    }
+
+    void LoadFightEData()
+    {
+        curStage = saveManager.gameData.mapData.curStage;
+        isAlreadySelect = saveManager.gameData.eventData.isAlreadySelect;
     }
 
     void EBattleSet()
@@ -113,7 +145,6 @@ public class FightEvent : EventBasic
     public void BattleBtn() // 3일 소모, 전투 시작
     {
         curDay += 3;
-        isEventSet = false;
         isAlreadySelect = false;
         SaveData();
 

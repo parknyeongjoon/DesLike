@@ -6,31 +6,71 @@ using TMPro;
 
 public class EventShop : EventBasic
 {
-    public GameObject CheckPanel, ErrorPanel;
-    public GameObject[] SoldOutPanel = new GameObject[6];
-    public VilShopNode vilShopNode;
-    public GameObject RelicSpawner;
-    public GameObject RelicPrefab;
-    public Canvas RelicCanvas;
-    List<Relic> relicList;
-   
-    GameObject[] RelicsInstant;
-    EventManager eventManager;
-    public TMP_Text[] Prices = new TMP_Text[6];
-    Dictionary<string, GameObject> RelicDic = new Dictionary<string, GameObject>();
-    RelicData relicData;
-    // Relic[] relicScript = new Relic[6];
-    Relic checkRelic;
+    int curGold;
+    int[] relicLevelCount = new int[3];
+    int[] randRelic = new int[6];   // 목록별 랜덤넘버
+    int[] relicPrice = new int[6];  // 목록별 가격
+    bool isNewSet, isEventSet;
+    bool[] isSoldOut = new bool[6];
 
+    List<Relic> relicList;
+
+    [SerializeField] GameObject CheckPanel, ErrorPanel;
+    [SerializeField] GameObject[] SoldOutPanel = new GameObject[6];
+    [SerializeField] VilShopNode vilShopNode;
+    [SerializeField] GameObject RelicSpawner;
+    [SerializeField] GameObject RelicPrefab;
+    [SerializeField] Canvas RelicCanvas;
+    [SerializeField] TMP_Text[] Prices = new TMP_Text[6];
     
     void OnEnable()
     {
+        LoadData();
         DataUpdate();
         ShopSetting();
         SoldOutPanelUpdate();
         isNewSet = false;
         eventEnd = false;
         SaveData();
+    }
+
+    void SaveData()
+    {
+        SaveShopEData();
+        SaveComData();
+        saveManager.SaveGameData();
+    }
+
+    void SaveShopEData()
+    {
+        saveManager.gameData.goodsSaveData.gold = curGold;
+        saveManager.gameData.eventData.isEventSet = isEventSet;
+
+        for (int i = 0; i < 3; i++)
+        {
+            saveManager.gameData.villageData.randRelic[i] = randRelic[i];
+            saveManager.gameData.villageData.relicPrice[i] = relicPrice[i];
+            saveManager.gameData.villageData.isSoldOut[i] = isSoldOut[i];
+        }
+    }
+
+    void LoadData()
+    {
+        LoadShopEData();
+        LoadComData();
+    }
+
+    void LoadShopEData()
+    {
+        curGold = saveManager.gameData.goodsSaveData.gold;
+        isEventSet = saveManager.gameData.eventData.isEventSet;
+      
+        for (int i = 0; i < 3; i++)
+        {
+            randRelic[i] = saveManager.gameData.villageData.randRelic[i];
+            relicPrice[i] = saveManager.gameData.villageData.relicPrice[i];
+            isSoldOut[i] = saveManager.gameData.villageData.isSoldOut[i];
+        }
     }
 
     void DataUpdate()
@@ -197,7 +237,7 @@ public class EventShop : EventBasic
 
     public void BuyRelic()
     {
-        if (gold < relicPrice[vilShopNode.curNumber])
+        if (curGold < relicPrice[vilShopNode.curNumber])
         {
             Debug.Log("골드가 부족합니다.");
             ErrorPanel.SetActive(true); // 골드가 부족하다는 표시 후 클릭하면 없어지게끔
@@ -205,7 +245,7 @@ public class EventShop : EventBasic
         else
         {
             vilShopNode.GetRelic();
-            gold -= relicPrice[vilShopNode.curNumber];
+            curGold -= relicPrice[vilShopNode.curNumber];
             isSoldOut[vilShopNode.curNumber] = true;
             SoldOutPanel[vilShopNode.curNumber].SetActive(true);    // 매진 표시
             SoldOutPanelUpdate();

@@ -336,7 +336,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 16869537}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -678,7 +678,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 55434124}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -791,7 +791,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
   eventNode: {fileID: 0}
+  saveManager: {fileID: 0}
   EndButton: {fileID: 2067697190}
+  curDay: 0
+  eventEnd: 0
   Buttons:
   - {fileID: 131806369}
   - {fileID: 448115408}
@@ -800,38 +803,6 @@ MonoBehaviour:
   - {fileID: 196280386}
   - {fileID: 307407791}
   - {fileID: 1381274072}
-  eventData:
-    ranPenalty: 0
-    rewardNum: 0
-    comBox: 0
-    isEventSet: 0
-    isAlreadySelect: 0
-    optionNum: 000000000000000000000000
-    areaGold: 000000000000000000000000
-    choiNum: 000000000000000000000000
-    stepCheck: 0000000000
-  saveManager: {fileID: 0}
-  eventEnd: 0
-  curDay: 0
-  curGold: 0
-  curStage: 0
-  optionNum: 000000000000000000000000
-  cur_HP: 0
-  isEventSet: 0
-  isAlreadySelect: 0
-  areaGolds: 000000000000000000000000
-  areaGold: 0
-  ranPenalty: 0
-  relicLevelCount: 000000000000000000000000
-  randRelic: 000000000000000000000000000000000000000000000000
-  relicPrice: 000000000000000000000000000000000000000000000000
-  isNewSet: 0
-  isSoldOut: 000000000000
-  gold: 0
-  stepCheck: 0000000000
-  choiNum: 000000000000000000000000
-  rewardNum: 0
-  comBox: 0
 --- !u!114 &56284650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,7 +900,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
   eventNode: {fileID: 0}
+  saveManager: {fileID: 0}
   EndButton: {fileID: 1369423575}
+  curDay: 0
+  eventEnd: 0
   Buttons:
   - {fileID: 1213544467}
   - {fileID: 1014742172}
@@ -938,38 +912,6 @@ MonoBehaviour:
   - {fileID: 1438981561}
   - {fileID: 1543537724}
   - {fileID: 101504606}
-  eventData:
-    ranPenalty: 0
-    rewardNum: 0
-    comBox: 0
-    isEventSet: 0
-    isAlreadySelect: 0
-    optionNum: 000000000000000000000000
-    areaGold: 000000000000000000000000
-    choiNum: 000000000000000000000000
-    stepCheck: 0000000000
-  saveManager: {fileID: 0}
-  eventEnd: 0
-  curDay: 0
-  curGold: 0
-  curStage: 0
-  optionNum: 000000000000000000000000
-  cur_HP: 0
-  isEventSet: 0
-  isAlreadySelect: 0
-  areaGolds: 000000000000000000000000
-  areaGold: 0
-  ranPenalty: 0
-  relicLevelCount: 000000000000000000000000
-  randRelic: 000000000000000000000000000000000000000000000000
-  relicPrice: 000000000000000000000000000000000000000000000000
-  isNewSet: 0
-  isSoldOut: 000000000000
-  gold: 0
-  stepCheck: 0000000000
-  choiNum: 000000000000000000000000
-  rewardNum: 0
-  comBox: 0
 --- !u!114 &60949768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3062,7 +3004,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
   eventNode: {fileID: 0}
+  saveManager: {fileID: 0}
   EndButton: {fileID: 1259632970}
+  curDay: 0
+  eventEnd: 0
   Buttons:
   - {fileID: 597761474}
   - {fileID: 2095475371}
@@ -3071,38 +3016,6 @@ MonoBehaviour:
   - {fileID: 688991762}
   - {fileID: 762116938}
   - {fileID: 437894321}
-  eventData:
-    ranPenalty: 0
-    rewardNum: 0
-    comBox: 0
-    isEventSet: 0
-    isAlreadySelect: 0
-    optionNum: 000000000000000000000000
-    areaGold: 000000000000000000000000
-    choiNum: 000000000000000000000000
-    stepCheck: 0000000000
-  saveManager: {fileID: 0}
-  eventEnd: 0
-  curDay: 0
-  curGold: 0
-  curStage: 0
-  optionNum: 000000000000000000000000
-  cur_HP: 0
-  isEventSet: 0
-  isAlreadySelect: 0
-  areaGolds: 000000000000000000000000
-  areaGold: 0
-  ranPenalty: 0
-  relicLevelCount: 000000000000000000000000
-  randRelic: 000000000000000000000000000000000000000000000000
-  relicPrice: 000000000000000000000000000000000000000000000000
-  isNewSet: 0
-  isSoldOut: 000000000000
-  gold: 0
-  stepCheck: 0000000000
-  choiNum: 000000000000000000000000
-  rewardNum: 0
-  comBox: 0
 --- !u!114 &253311069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3200,7 +3113,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
   eventNode: {fileID: 0}
+  saveManager: {fileID: 0}
   EndButton: {fileID: 177860113}
+  curDay: 0
+  eventEnd: 0
+  InformText: {fileID: 1730777937}
   Buttons:
   - {fileID: 982922014}
   - {fileID: 1455626125}
@@ -3209,39 +3126,6 @@ MonoBehaviour:
   - {fileID: 229973200}
   - {fileID: 1890306411}
   - {fileID: 241254877}
-  eventData:
-    ranPenalty: 0
-    rewardNum: 0
-    comBox: 0
-    isEventSet: 0
-    isAlreadySelect: 0
-    optionNum: 000000000000000000000000
-    areaGold: 000000000000000000000000
-    choiNum: 000000000000000000000000
-    stepCheck: 0000000000
-  saveManager: {fileID: 0}
-  eventEnd: 0
-  curDay: 0
-  curGold: 0
-  curStage: 0
-  optionNum: 000000000000000000000000
-  cur_HP: 0
-  isEventSet: 0
-  isAlreadySelect: 0
-  areaGolds: 000000000000000000000000
-  areaGold: 0
-  ranPenalty: 0
-  relicLevelCount: 000000000000000000000000
-  randRelic: 000000000000000000000000000000000000000000000000
-  relicPrice: 000000000000000000000000000000000000000000000000
-  isNewSet: 0
-  isSoldOut: 000000000000
-  gold: 0
-  stepCheck: 00000000
-  choiNum: 000000000000000000000000
-  rewardNum: 0
-  comBox: 0
-  InformText: {fileID: 1730777937}
 --- !u!114 &295011117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5752,7 +5636,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 729288865}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -6286,7 +6170,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 797287056}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -7886,7 +7770,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
   eventNode: {fileID: 0}
+  saveManager: {fileID: 0}
   EndButton: {fileID: 1817538413}
+  curDay: 0
+  eventEnd: 0
   Buttons:
   - {fileID: 141462037}
   - {fileID: 133152166}
@@ -7895,38 +7782,6 @@ MonoBehaviour:
   - {fileID: 356198197}
   - {fileID: 1902217066}
   - {fileID: 1561961622}
-  eventData:
-    ranPenalty: 0
-    rewardNum: 0
-    comBox: 0
-    isEventSet: 0
-    isAlreadySelect: 0
-    optionNum: 000000000000000000000000
-    areaGold: 000000000000000000000000
-    choiNum: 000000000000000000000000
-    stepCheck: 0000000000
-  saveManager: {fileID: 0}
-  eventEnd: 0
-  curDay: 0
-  curGold: 0
-  curStage: 0
-  optionNum: 000000000000000000000000
-  cur_HP: 0
-  isEventSet: 0
-  isAlreadySelect: 0
-  areaGolds: 000000000000000000000000
-  areaGold: 0
-  ranPenalty: 0
-  relicLevelCount: 000000000000000000000000
-  randRelic: 000000000000000000000000000000000000000000000000
-  relicPrice: 000000000000000000000000000000000000000000000000
-  isNewSet: 0
-  isSoldOut: 000000000000
-  gold: 0
-  stepCheck: 0000000000
-  choiNum: 000000000000000000000000
-  rewardNum: 0
-  comBox: 0
 --- !u!114 &1046773563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8234,7 +8089,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1148008268
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8313,47 +8168,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
   eventNode: {fileID: 0}
-  EndButton: {fileID: 1933577347}
-  Buttons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  OptionText:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  eventData:
-    ranPenalty: 0
-    rewardNum: 0
-    comBox: 0
-    isEventSet: 0
-    isAlreadySelect: 0
-    optionNum: 000000000000000000000000
-    areaGold: 000000000000000000000000
-    choiNum: 000000000000000000000000
-    stepCheck: 0000000000
   saveManager: {fileID: 0}
-  eventEnd: 0
+  EndButton: {fileID: 1933577347}
   curDay: 0
-  curGold: 0
-  curStage: 0
-  optionNum: 000000000000000000000000
-  cur_HP: 0
-  isEventSet: 0
-  isAlreadySelect: 0
-  areaGolds: 000000000000000000000000
-  areaGold: 0
-  ranPenalty: 0
-  relicLevelCount: 000000000000000000000000
-  randRelic: 000000000000000000000000000000000000000000000000
-  relicPrice: 000000000000000000000000000000000000000000000000
-  isNewSet: 0
-  isSoldOut: 000000000000
-  gold: 0
-  stepCheck: 0000000000
-  choiNum: 000000000000000000000000
-  rewardNum: 0
-  comBox: 0
+  eventEnd: 0
   CheckPanel: {fileID: 2115548688}
   ErrorPanel: {fileID: 1646568621}
   SoldOutPanel:
@@ -8364,13 +8182,6 @@ MonoBehaviour:
   - {fileID: 2135454190}
   - {fileID: 1752267756}
   vilShopNode: {fileID: 11400000, guid: 01003d7f4af6cb0458952232b1eeaa83, type: 2}
-  relicList:
-  - {fileID: -512087590680084207, guid: 0a18ab768ccd6074ba47caca9915f98d, type: 3}
-  - {fileID: -512087590680084207, guid: 4a85ade60bce7d244b0fbca4b8d843a8, type: 3}
-  - {fileID: -512087590680084207, guid: 826616231cc31534c801e5c282e62386, type: 3}
-  - {fileID: -512087590680084207, guid: a8b94c95e58f9c141a594da0a182c92e, type: 3}
-  - {fileID: -512087590680084207, guid: a8b94c95e58f9c141a594da0a182c92e, type: 3}
-  - {fileID: -512087590680084207, guid: d3293a91bfe3625468b45b2a57a15849, type: 3}
   RelicSpawner: {fileID: 0}
   RelicPrefab: {fileID: 4835315866048107822, guid: 26511a2a77c3b6741b52f9737c2e7c83,
     type: 3}
@@ -9976,7 +9787,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1389255175}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -13331,47 +13142,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
   eventNode: {fileID: 0}
+  saveManager: {fileID: 0}
   EndButton: {fileID: 1380792729}
+  curDay: 0
+  eventEnd: 0
   Buttons:
   - {fileID: 191190252}
   - {fileID: 1302678269}
-  - {fileID: 0}
   OptionText:
   - {fileID: 1806847783}
   - {fileID: 947855695}
-  - {fileID: 0}
-  eventData:
-    ranPenalty: 0
-    rewardNum: 0
-    comBox: 0
-    isEventSet: 0
-    isAlreadySelect: 0
-    optionNum: 000000000000000000000000
-    areaGold: 000000000000000000000000
-    choiNum: 000000000000000000000000
-    stepCheck: 0000000000
-  saveManager: {fileID: 0}
-  eventEnd: 0
-  curDay: 0
-  curGold: 0
-  curStage: 0
-  optionNum: 000000000000000000000000
-  cur_HP: 0
-  isEventSet: 0
-  isAlreadySelect: 0
-  areaGolds: 000000000000000000000000
-  areaGold: 0
-  ranPenalty: 0
-  relicLevelCount: 000000000000000000000000
-  randRelic: 000000000000000000000000000000000000000000000000
-  relicPrice: 000000000000000000000000000000000000000000000000
-  isNewSet: 0
-  isSoldOut: 000000000000
-  gold: 0
-  stepCheck: 0000000000
-  choiNum: 000000000000000000000000
-  rewardNum: 0
-  comBox: 0
   battleNode: {fileID: 11400000, guid: d9b7a72073616d148bdd9c299dda1e72, type: 2}
 --- !u!1 &1956937390
 GameObject:

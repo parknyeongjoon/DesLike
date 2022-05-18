@@ -33,4 +33,9 @@ public class RelicManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(this.gameObject);
     }
+
+    public void AddRelicInCanvas()
+    {
+        Instantiate(relicList[relicList.Count - 1], relicCanvas.transform.GetChild(0).transform);
+    }
 }

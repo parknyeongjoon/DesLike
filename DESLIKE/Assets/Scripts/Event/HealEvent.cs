@@ -7,10 +7,11 @@ using TMPro;
 
 public class HealEvent : EventBasic
 {
-    int temp_Max_HP = 500;
+    float max_HP;
 
     void OnEnable()
     {
+        max_HP = saveManager.dataSheet.heroDataSheet[saveManager.gameData.heroSaveData.heroCode].hp;
         SetOption();
         isEventSet = true;
         eventEnd = false;
@@ -144,7 +145,7 @@ public class HealEvent : EventBasic
         curDay += 1;
         curGold -= 50;        // n골드 손실 함수
         cur_HP = cur_HP / 9 * 10;   // 회복 함수
-        if (cur_HP > temp_Max_HP) cur_HP = temp_Max_HP; // 최대체력 초과 시 최대체력 표시 
+        if (cur_HP > max_HP) cur_HP = max_HP; // 최대체력 초과 시 최대체력 표시 
         // heroData 해결되면 temp_Max_HP를 heroData.hp로 수정
         ButtonsOff();
     }
@@ -153,7 +154,7 @@ public class HealEvent : EventBasic
     {
         curDay += 2;
         cur_HP = cur_HP / 9 * 10;   // 회복 함수
-        if (cur_HP > temp_Max_HP) cur_HP = temp_Max_HP; // 최대체력 초과 시 최대체력 표시
+        if (cur_HP > max_HP) cur_HP = max_HP; // 최대체력 초과 시 최대체력 표시
 
         ButtonsOff();
     }
@@ -163,7 +164,7 @@ public class HealEvent : EventBasic
         curDay += 2;
         curGold -= 50;        // n골드 손실 함수
         cur_HP = cur_HP / 4 * 5;    // 회복 함수
-        if (cur_HP > temp_Max_HP) cur_HP = temp_Max_HP; // 최대체력 초과 시 최대체력 표시
+        if (cur_HP > max_HP) cur_HP = max_HP; // 최대체력 초과 시 최대체력 표시
         ButtonsOff();
     }
 
@@ -171,7 +172,7 @@ public class HealEvent : EventBasic
     {
         curDay += 3;
         cur_HP = cur_HP / 4 * 5;    // 회복 함수
-        if (cur_HP > temp_Max_HP) cur_HP = temp_Max_HP; // 최대체력 초과 시 최대체력 표시
+        if (cur_HP > max_HP) cur_HP = max_HP; // 최대체력 초과 시 최대체력 표시
         ButtonsOff();
     }
 
@@ -180,7 +181,7 @@ public class HealEvent : EventBasic
         curDay += 3;
         curGold -= 50;        // n골드 손실 함수
         cur_HP = cur_HP / 7 * 10;
-        if (cur_HP > temp_Max_HP) cur_HP = temp_Max_HP; // 최대체력 초과 시 최대체력 표시
+        if (cur_HP > max_HP) cur_HP = max_HP; // 최대체력 초과 시 최대체력 표시
 
         ButtonsOff();
     }

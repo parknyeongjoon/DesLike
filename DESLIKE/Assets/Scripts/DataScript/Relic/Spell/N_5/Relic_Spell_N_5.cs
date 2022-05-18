@@ -11,9 +11,10 @@ public class Relic_Spell_N_5 : Relic//점액질 피부의 내구도가 n 증가합니다.
     {
 
     }
-
-    public override void Effect()
-    {
-        mucusData.mucusAmount += addAmount;
-    }
+    /*
+        public override void Effect()
+        {
+            mucusData.mucusAmount += addAmount;
+        }
+    */
 }

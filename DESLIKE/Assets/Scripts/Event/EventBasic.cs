@@ -15,7 +15,7 @@ public class EventBasic : MonoBehaviour
     public Button[] Buttons = new Button[3];
     public TMP_Text[] OptionText = new TMP_Text[3];
     public EventData eventData;
-    SaveManager saveManager;
+    public SaveManager saveManager;
 
     public bool eventEnd;
     public int curDay, curGold, curStage;

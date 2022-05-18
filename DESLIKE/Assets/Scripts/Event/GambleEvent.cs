@@ -5,12 +5,13 @@ using TMPro;
 
 public class GambleEvent : EventBasic
 {
-    int temp_Max_HP = 500;
+    float max_HP;
     public TMP_Text InformText;
     
     void OnEnable()
     {
         SetOption();
+        max_HP = saveManager.dataSheet.heroDataSheet[saveManager.gameData.heroSaveData.heroCode].hp;
         isEventSet = true;
         eventEnd = false;
         SaveData();
@@ -183,7 +184,11 @@ public class GambleEvent : EventBasic
             {
                 if (choiNum[0] == 0)
                     curGold += rewardNum * 3;
-                else cur_HP += rewardNum * 3;
+                else
+                {
+                    cur_HP += rewardNum * 3;
+                    if (cur_HP > max_HP) cur_HP = max_HP;
+                }
             }
         }
         else InformText.text = "정답은 " + (comBox+1) + "번째 상자입니다! 아쉽게도 틀리셨군요. 보상은 없습니다.";

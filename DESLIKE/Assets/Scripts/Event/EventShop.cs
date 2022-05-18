@@ -124,7 +124,6 @@ public class EventShop : EventBasic
                 }
                 Prices[i].text = relicPrice[i] + "°ñµå";
                 Debug.Log("for end : " + i);
-
             }
         }
     }

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PenaltyEvent : EventBasic
 {
-    int temp_Max_HP = 500;
     RelicManager relicManager;
     
     void OnEnable()

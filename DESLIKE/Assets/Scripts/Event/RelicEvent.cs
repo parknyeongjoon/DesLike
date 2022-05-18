@@ -7,7 +7,7 @@ using TMPro;
 
 public class RelicEvent : EventBasic
 {
-    int temp_Max_HP = 500;
+    float max_HP;
     RelicManager relicManager;
     RelicData relicData;
     Relic relicScript;
@@ -150,7 +150,7 @@ public class RelicEvent : EventBasic
     {
         curDay += 2;
 
-        cur_HP -= temp_Max_HP / 10; // 10% 임의 설정
+        cur_HP -= max_HP / 10; // 10% 임의 설정
         if (cur_HP < 1) cur_HP = 1;
         // 최대체력의 n% 잃는 함수, 만약 현재 체력이 n%보다 작다면 현재 체력을 1로 만듦
         relicManager.relicList.Add(eventNode.reward.relic[1]);
@@ -163,7 +163,7 @@ public class RelicEvent : EventBasic
     void ActiveEvent5() //"3일 소모, 최대 체력의 n% + n골드 잃고 전설 유물 획득"
     {
         curDay += 3;
-        cur_HP -= temp_Max_HP / 10;
+        cur_HP -= max_HP / 10;
         if (cur_HP < 1) cur_HP = 1;
         // 최대체력의 n% 잃는 함수, 만약 현재 체력이 n%보다 작다면 현재 체력을 1로 만듦
         curGold -= 50; // 골드 손실 함수

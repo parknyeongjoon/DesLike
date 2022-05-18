@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "RelicData", menuName = "ScriptableObject/RelicData")]
 public class RelicData : ScriptableObject
 {
     public Sprite relicImg;

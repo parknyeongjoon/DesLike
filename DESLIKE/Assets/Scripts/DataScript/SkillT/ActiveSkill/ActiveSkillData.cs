@@ -10,6 +10,6 @@ public class ActiveSkillData : SkillData
 
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
-        extraSkillData.Effect(heroInfo, targetInfo);
+        excuteExtraSkill(heroInfo, targetInfo);
     }
 }

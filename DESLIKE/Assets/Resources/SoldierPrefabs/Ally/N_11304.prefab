@@ -9,6 +9,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6878065226668501377, guid: a389e075072991a45bce11914791a9ec,
         type: 3}
+      propertyPath: castleData
+      value: 
+      objectReference: {fileID: 11400000, guid: 570f7ad51bb2e8247aa6d7bb2dc662fe,
+        type: 2}
+    - target: {fileID: -6878065226668501377, guid: a389e075072991a45bce11914791a9ec,
+        type: 3}
       propertyPath: soldierCode
       value: N_11304
       objectReference: {fileID: 0}

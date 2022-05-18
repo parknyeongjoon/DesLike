@@ -2,70 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System;
 
 public class a : MonoBehaviour
 {
-    public delegate void TestHandler();
-    public TestHandler testHandler;
-
-    IEnumerator testCoroutineA;
-    Coroutine testCoroutine;
-
-    [SerializeField]
-    List<Coroutine> coroutines = new List<Coroutine>();
-
-    [SerializeField]
-    testSO testSO;
-
-    public UnityEvent<float> testUnityEvent;
+    Action<float> testAction;
 
     void Start()
     {
-        testUnityEvent.AddListener(PrintA);
+        testAction += floatTest;
+        PrintFloat(2.0f);
     }
 
-    void Update()
+    void PrintFloat(float printFloat)
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            testUnityEvent?.Invoke(5.0f);
-        }
+        Debug.Log(printFloat);
+        testAction?.Invoke(printFloat);
+        Debug.Log(printFloat);
     }
 
-    public void PrintA(float a)
+    void floatTest(float testFloat)
     {
-        Debug.Log(a);
-    }
-
-    public void PrintB()
-    {
-        Debug.Log("B");
-    }
-
-    public void PrintC()
-    {
-        Debug.Log("C");
-    }
-
-    protected virtual void testA()
-    {
-        Debug.Log("A");
-    }
-
-    public virtual IEnumerator testAA()
-    {
-        float testTime = 0.1f;
-        while (testTime > 0)
-        {
-            yield return yieldTest();
-            Debug.Log("AA");
-            testTime -= Time.deltaTime;
-            yield return null;
-        }
-    }
-
-    IEnumerator yieldTest()
-    {
-        yield return new WaitForSeconds(1.0f);
+        Debug.Log("µ¡¼À");
+        testFloat++;
     }
 }

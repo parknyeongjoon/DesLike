@@ -18,6 +18,12 @@ public class SoldierPanel : MonoBehaviour
     GameObject buffObject, debuffObject;
     [SerializeField]
     Image buffImg, debuffImg;
+    [SerializeField] Button killBtn;//지우기
+
+    public void Kill()
+    {
+        BattleUIManager.Instance.cur_Soldier.OnDamaged(100000);
+    }
 
     SoldierInfo soldierInfo;
     SoldierData soldierData;

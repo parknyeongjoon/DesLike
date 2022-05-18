@@ -70,7 +70,7 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="None" ID="{C3EAE99F-7CA7-4E61-B8D7-0B46A411A4AC}"/>
+						<CurrentStateRef Name="Music_S1_Boss_Battle" ID="{146AD136-71D2-4CB2-B20A-29AFEEFE6445}"/>
 						<CurrentStateRef Name="None" ID="{B9FFA1F4-7C44-42A8-B90E-8CAD8E38CFA7}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>

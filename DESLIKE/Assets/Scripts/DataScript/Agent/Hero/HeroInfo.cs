@@ -157,6 +157,20 @@ public class HeroInfo : CastleInfo
         }
     }
 
+    public void Die()//DeadBehaviour로 넘겨버리기
+    {
+        if (beforeDeadEvent != null)
+        {
+            Debug.Log("사망 전 이벤트");
+            beforeDeadEvent?.Invoke();
+        }
+        else
+        {
+            Debug.Log("사망 후 이벤트");
+            afterDeadEvent?.Invoke(this);
+        }
+    }
+
     public bool TargetCheck(GameObject target, float range)
     {
         if (target != null && target.layer != 7)

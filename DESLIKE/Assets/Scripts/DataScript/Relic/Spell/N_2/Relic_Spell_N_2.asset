@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23ce076e1c8d06c46888060b465b1a6b, type: 3}
-  m_Name: Relic_Spell_N_5 1
+  m_Script: {fileID: 11500000, guid: 5cf4a6d5c7dd63e44be15ad9a91b89d6, type: 3}
+  m_Name: Relic_Spell_N_2
   m_EditorClassIdentifier: 
   relicImg: {fileID: 0}
-  code: Relic_Spell_N_5
-  relicName: Relic_Spell_N_5
-  toopTip: "\uC810\uC561\uC9C8 \uD53C\uBD80\uC758 \uB0B4\uAD6C\uB3C4\uAC00 n \uC0C1\uC2B9\uD569\uB2C8\uB2E4"
+  code: Relic_Spell_N_2
+  relicName: Relic_Spell_N_2
+  toopTip: "\uD68C\uD53C\uC758 \uD655\uB960\uC774 10\uD504\uB85C \uC62C\uB77C\uAC11\uB2C8\uB2E4"
   kingdom: 2
   rarity: 1
   continueReuse: 1
-  mucusData: {fileID: 11400000, guid: 271baaba43950214997458282c1bc85d, type: 2}
-  addAmount: 2
+  dodge: {fileID: 0}
+  addP: 0.1

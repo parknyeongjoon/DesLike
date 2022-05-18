@@ -13,7 +13,9 @@ public class CastleInfo : MonoBehaviour
 
     public Action beforeDeadEvent;//죽기 전에 발동하는 이벤트(부활)
     public UnityEvent afterDeadEvent;//죽고 난 뒤 일어나는 이벤트(시체가 터진다거나)
-    public Action<HeroInfo, HeroInfo, float> beforeHitEvent;//캐릭터 피격 전 발동하는 이벤트,<본인, 때린유닛, 데미지>
+
+    public delegate void BeforeHitAction(HeroInfo heroInfo, HeroInfo targetInfo, ref float damage);
+    public BeforeHitAction beforeHitEvent;//캐릭터 피격 전 발동하는 이벤트,<본인, 때린 유닛, 데미지>
     public Action<HeroInfo, HeroInfo, float> afterHitEvent;//캐릭터 피격 후 발동하는 이벤트, <본인, 때린 유닛, 데미지>
     public UnityEvent<HeroInfo> healthChangeEvent;//피가 변할 때 일어나는 이벤트
 

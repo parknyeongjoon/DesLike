@@ -50,7 +50,7 @@ public class HeroInfo : CastleInfo
 
     public void OnDamaged(HeroInfo atkHeroInfo, float damage)//피격 이벤트 일어남
     {
-        beforeHitEvent?.Invoke(this, atkHeroInfo, damage);
+        beforeHitEvent?.Invoke(this, atkHeroInfo, ref damage);
 
         if (mucus > 0 && damage > 0)//frogShield가 있을 시
         {
@@ -92,7 +92,7 @@ public class HeroInfo : CastleInfo
 
     public void OnDamaged(float damage)//피격 이벤트가 안 일어남
     {
-        beforeHitEvent?.Invoke(this, null, damage);
+        beforeHitEvent?.Invoke(this, null, ref damage);
 
         if (shield > damage)
         {

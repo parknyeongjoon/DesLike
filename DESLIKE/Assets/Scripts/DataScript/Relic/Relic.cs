@@ -16,15 +16,6 @@ public class Relic : MonoBehaviour
         toolTip.text = relicData.toopTip;
     }
 
-    public void Effect(HeroData heroData)
-    {
-        if (relicData.ConditionCheck(heroData))
-        {
-            relicData.Effect(heroData);
-            StartCoroutine(ConditionEffect());
-        }
-    }
-
     public void CloseToolTip()
     {
         toolTipPanel.SetActive(false);

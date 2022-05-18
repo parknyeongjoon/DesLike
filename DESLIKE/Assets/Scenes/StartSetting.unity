@@ -263,9 +263,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 20faa7cf16f947e44ae2c22b3b31454c, type: 2}
   mutantObjects:
   - {fileID: 3340910114177237104, guid: 90e7863938ac48041a9acab8e9974372, type: 3}
-  relicObjects:
-  - {fileID: 4835315866048107822, guid: bdc55f89b7fc82046a549df921abb5dc, type: 3}
-  - {fileID: 4835315866048107822, guid: 28fb182866fc710478c2a803865849ed, type: 3}
+  relicObjects: []
   BattleNodeScript: {fileID: 3963912957987146594, guid: 466e855f347fc934895e18daf1643165,
     type: 3}
 --- !u!1001 &3976412869853632963

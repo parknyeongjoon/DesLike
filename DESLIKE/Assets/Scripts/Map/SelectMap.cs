@@ -432,7 +432,7 @@ public class SelectMap : MonoBehaviour
         {
             if (curDay == 0 || nxtEvnt[1] == 0)
             {
-                if (isChallenge[1] == true) Button3_2[curDay / 5 + 3].SetActive(true);
+                if (isChallenge[1] == true) Button3_2[curDay / 5 + 1].SetActive(true);
                 else Button3_2[curDay / 5].SetActive(true);
                 Title[0].SetActive(true);
                 
@@ -452,7 +452,7 @@ public class SelectMap : MonoBehaviour
         InfoPanel.SetActive(true);
         if (curDay == 0 || nxtEvnt[2] == 0)
         {
-            if (isChallenge[2] == true) Button3_3[curDay / 5 + 3].SetActive(true);
+            if (isChallenge[2] == true) Button3_3[curDay / 5 + 1].SetActive(true);
             else Button3_3[curDay / 5].SetActive(true);
             Title[0].SetActive(true);
         }

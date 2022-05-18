@@ -7,15 +7,13 @@ using TMPro;
 public class EventShop : EventBasic
 {
     public GameObject CheckPanel, ErrorPanel;
-    public Image[] RelicImage = new Image[6];
     public GameObject[] SoldOutPanel = new GameObject[6];
     public VilShopNode vilShopNode;
-    public List<Relic> relicList;
     public GameObject RelicSpawner;
     public GameObject RelicPrefab;
     public Canvas RelicCanvas;
-    List<Relic> RelicsInShop;
-
+    List<Relic> relicList;
+   
     GameObject[] RelicsInstant;
     EventManager eventManager;
     public TMP_Text[] Prices = new TMP_Text[6];
@@ -24,8 +22,7 @@ public class EventShop : EventBasic
     // Relic[] relicScript = new Relic[6];
     Relic checkRelic;
 
-
-
+    
     void OnEnable()
     {
         DataUpdate();
@@ -60,12 +57,13 @@ public class EventShop : EventBasic
         // randRelic[i] = Random.Range(0, relicLevelCount[0]); 일반용
         // randRelic[i] = relicLevelCount[0] + Random.Range(0, relicLevelCount[1]); 희귀용
         // randRelic[i] = relicLevelCount[0] + relicLevelCount[1] + Random.Range(0, relicLevelCount[2]); 전설용
+        InfiniteLoopDetector.Run();
 
         if (isEventSet == false)
         {
+            relicList = new List<Relic>(6);
             for (int i = 0; i < 6; i++)
             {
-                Debug.Log("for : " + i);
             RelicReroll:
                 InfiniteLoopDetector.Run();
                 if (i < 4)  // 일반 유물
@@ -79,52 +77,29 @@ public class EventShop : EventBasic
                     relicPrice[i] = 160 + Random.Range(0, 21); // 160~180G
                     randRelic[i] = relicLevelCount[0] + Random.Range(0, relicLevelCount[1]); // 희귀
                 }
-                Debug.Log("2 : " + i);
-
-                for (int j = 0; j < i - 1; j++)
+            
+                for (int j = 0; j < i - 1; j++) // 이전 랜덤값과 같다면 재시도
                 {
                     if (randRelic[i] == randRelic[j])
                         goto RelicReroll;
                 }
 
-                Debug.Log("3 : " + i);
-
-                for (int j = 0; j < relicList.Count; j++)
+                for (int j = 0; j < i - 1; j++)
                 {
+                    InfiniteLoopDetector.Run();
                     // 이미 가지고 있는 유물이라면 다시 랜덤값
                     if (relicList[j].relicData.code == eventNode.ableRelicRewards[randRelic[i]].relicData.code)
                         goto RelicReroll;
                     // 획득 유물 갯수가 한정되어있어서 모든 유물을 가진 경우의 수는 제외함
                 }
-                Debug.Log(i + " : " + randRelic[i]);
-
-                RelicsInShop.Add(eventNode.ableRelicRewards[randRelic[i]]);
-                Instantiate(RelicsInShop[i], RelicCanvas.transform.GetChild(i).transform);
-
-                switch (i)  // instantiate한 object에 button추가하는 법 알아보기
-                {
-                    case 1:
-                        RelicsInShop[i].GetComponent<Button>().onClick.AddListener(delegate { OpenCheck1(); });
-                        break;
-                    case 2:
-                        RelicsInShop[i].GetComponent<Button>().onClick.AddListener(delegate { OpenCheck2(); });
-                        break;
-                    case 3:
-                        RelicsInShop[i].GetComponent<Button>().onClick.AddListener(delegate { OpenCheck3(); });
-                        break;
-                    case 4:
-                        RelicsInShop[i].GetComponent<Button>().onClick.AddListener(delegate { OpenCheck4(); });
-                        break;
-                    case 5:
-                        RelicsInShop[i].GetComponent<Button>().onClick.AddListener(delegate { OpenCheck5(); });
-                        break;
-                    case 6:
-                        RelicsInShop[i].GetComponent<Button>().onClick.AddListener(delegate { OpenCheck6(); });
-                        break;
-                }
+                
+                relicList.Add(eventNode.ableRelicRewards[randRelic[i]]);
+          
                 Prices[i].text = relicPrice[i] + "골드";
                 Debug.Log("for end : " + i);
             }
+            for (int i = 0; i < 6; i++)
+                Instantiate(eventNode.ableRelicRewards[randRelic[i]], RelicCanvas.transform.GetChild(i).transform);
         }
     }
 
@@ -157,11 +132,9 @@ public class EventShop : EventBasic
     {
         Debug.Log("OpenCheck1");
         vilShopNode.curRelic = relicList[0];
-        // relic instantiate 후 보여주기
-        Destroy(CheckPanel.transform.GetChild(0).transform.GetChild(0));
-        Instantiate(RelicsInShop[0], CheckPanel.transform.GetChild(0).transform);
-
+        
         CheckPanel.SetActive(true);
+        Instantiate(relicList[0], CheckPanel.transform.GetChild(0).transform);
     }
 
     public void OpenCheck2()
@@ -169,9 +142,7 @@ public class EventShop : EventBasic
         Debug.Log("OpenCheck2");
         vilShopNode.curRelic = relicList[1];
         // relic instantiate 후 보여주기
-        Destroy(CheckPanel.transform.GetChild(0).transform.GetChild(0));
-        Instantiate(RelicsInShop[1], CheckPanel.transform.GetChild(0).transform);
-
+        Instantiate(relicList[1], CheckPanel.transform.GetChild(0).transform);
         CheckPanel.SetActive(true);
     }
 
@@ -180,8 +151,7 @@ public class EventShop : EventBasic
         Debug.Log("OpenCheck3");
         vilShopNode.curRelic = relicList[2];
         // relic instantiate 후 보여주기
-        Destroy(CheckPanel.transform.GetChild(0).transform.GetChild(0));
-        Instantiate(RelicsInShop[2], CheckPanel.transform.GetChild(0).transform);
+        Instantiate(relicList[2], CheckPanel.transform.GetChild(0).transform);
 
         CheckPanel.SetActive(true);
     }
@@ -191,8 +161,7 @@ public class EventShop : EventBasic
         Debug.Log("OpenCheck4");
         vilShopNode.curRelic = relicList[3];
         // relic instantiate 후 보여주기
-        Destroy(CheckPanel.transform.GetChild(0).transform.GetChild(0));
-        Instantiate(RelicsInShop[3], CheckPanel.transform.GetChild(0).transform);
+        Instantiate(relicList[3], CheckPanel.transform.GetChild(0).transform);
         CheckPanel.SetActive(true);
     }
 
@@ -201,8 +170,7 @@ public class EventShop : EventBasic
         Debug.Log("OpenCheck5");
         vilShopNode.curRelic = relicList[4];
         // relic instantiate 후 보여주기
-        Destroy(CheckPanel.transform.GetChild(0).transform.GetChild(0));
-        Instantiate(RelicsInShop[4], CheckPanel.transform.GetChild(0).transform);
+        Instantiate(relicList[4], CheckPanel.transform.GetChild(0).transform);
         CheckPanel.SetActive(true);
 
     }
@@ -212,14 +180,18 @@ public class EventShop : EventBasic
         Debug.Log("OpenCheck6");
         vilShopNode.curRelic = relicList[5];
         // relic instantiate 후 보여주기
-        Destroy(CheckPanel.transform.GetChild(0).transform.GetChild(0));
-        Instantiate(RelicsInShop[5], CheckPanel.transform.GetChild(0).transform);
+        Instantiate(relicList[5], CheckPanel.transform.GetChild(0).transform);
 
         CheckPanel.SetActive(true);
     }
 
     public void CloseCheckPanel()
     {
+        Debug.Log(vilShopNode.curRelic.relicData.relicName);
+        Transform cloneTransform = CheckPanel.transform.GetChild(0).transform.Find(vilShopNode.curRelic.relicData.relicName + "(Clone)");
+        if (cloneTransform != null)
+            Destroy(cloneTransform.gameObject);
+        else Debug.Log("파괴할 오브젝트가 없습니다.");
         CheckPanel.SetActive(false);
     }
 

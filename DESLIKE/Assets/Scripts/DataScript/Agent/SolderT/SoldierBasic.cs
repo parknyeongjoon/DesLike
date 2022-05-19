@@ -6,7 +6,6 @@ using System;
 public class SoldierBasic : MonoBehaviour
 {
     public HeroInfo heroInfo;
-    [SerializeField] protected Rigidbody2D rigidbody;
 
     public Func<HeroInfo, IEnumerator> atkHandler;
     public Action atkDetect;

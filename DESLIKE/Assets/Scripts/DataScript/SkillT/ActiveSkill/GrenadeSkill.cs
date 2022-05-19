@@ -51,7 +51,7 @@ public class GrenadeSkill : ActiveSkillData
                 targetInfos[i] = targetColliders[i].GetComponent<HeroInfo>();
                 if (targetInfos[i] == targetInfo) { isTarget = true; }
             }
-            if (isTarget) { targetColliders[max_Target - 1].GetComponent<HeroInfo>(); }
+            if (isTarget || heroInfo == targetInfo) { targetColliders[max_Target - 1].GetComponent<HeroInfo>(); }
             else { targetInfos[max_Target - 1] = targetInfo; }
             return targetInfos;
         }

@@ -50,7 +50,7 @@ public class HeroInfo : CastleInfo
 
     public void OnDamaged(HeroInfo atkHeroInfo, float damage)//피격 이벤트 일어남
     {
-        beforeHitEvent?.Invoke(this, atkHeroInfo, damage);
+        beforeHitEvent?.Invoke(this, atkHeroInfo, ref damage);
 
         if (mucus > 0 && damage > 0)//frogShield가 있을 시
         {
@@ -92,7 +92,7 @@ public class HeroInfo : CastleInfo
 
     public void OnDamaged(float damage)//피격 이벤트가 안 일어남
     {
-        beforeHitEvent?.Invoke(this, null, damage);
+        beforeHitEvent?.Invoke(this, null, ref damage);
 
         if (shield > damage)
         {
@@ -154,6 +154,20 @@ public class HeroInfo : CastleInfo
             }
             healthChangeEvent?.Invoke(this);
             yield return new WaitForSeconds(1.0f);
+        }
+    }
+
+    public void Die()//DeadBehaviour로 넘겨버리기
+    {
+        if (beforeDeadEvent != null)
+        {
+            Debug.Log("사망 전 이벤트");
+            beforeDeadEvent?.Invoke();
+        }
+        else
+        {
+            Debug.Log("사망 후 이벤트");
+            afterDeadEvent?.Invoke(this);
         }
     }
 

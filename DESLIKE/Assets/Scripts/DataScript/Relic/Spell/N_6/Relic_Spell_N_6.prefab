@@ -7,10 +7,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2995862979264440761, guid: 11e3c9d49659d304483ba9a178f8582f,
+        type: 3}
+      propertyPath: relicData
+      value: 
+      objectReference: {fileID: 11400000, guid: f0f116bc330f9a746a14e05a71b06d0d,
+        type: 2}
     - target: {fileID: 4835315866048107822, guid: 11e3c9d49659d304483ba9a178f8582f,
         type: 3}
       propertyPath: m_Name
-      value: InstanceRelicPrefab
+      value: Relic_Spell_N_6
       objectReference: {fileID: 0}
     - target: {fileID: 4950314987519934621, guid: 11e3c9d49659d304483ba9a178f8582f,
         type: 3}

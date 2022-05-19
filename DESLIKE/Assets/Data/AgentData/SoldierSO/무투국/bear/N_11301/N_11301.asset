@@ -19,13 +19,11 @@ MonoBehaviour:
   size: 1
   blood: {fileID: 0}
   soldier_name: N_11301
-  mp: 0
+  mp: 5
   speed: 2
-  mp_Re: 0
   hp_Re: 0
   kingdom: 1
   tribe: 1
-  extraSkill: []
   rarity: 1
   needBarrier: 1
   unitAmount: 2

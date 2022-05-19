@@ -11,14 +11,4 @@ public class RelicData : ScriptableObject
     public Kingdom kingdom; // 추가 by 시후, savemanager 시 필요
     public Rarity rarity;
     public bool continueReuse;
-
-    public virtual void Effect(HeroData heroData)
-    {
-
-    }
-
-    public virtual bool ConditionCheck(HeroData heroData)
-    {
-        return false;
-    }
 }

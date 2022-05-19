@@ -26,7 +26,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1896902216">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1205173300">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -938,6 +938,22 @@
 						<File Id="897182115" Language="SFX">
 							<ShortName>Print_12302_Die_01.wav</ShortName>
 							<Path>SFX/Print_12302_Die_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2172972263" Name="N_12303_Att_1" ObjectPath="\Events\Default Work Unit\N\N_12303\N_12303_Att_1" DurationType="OneShot" DurationMin="1.381229" DurationMax="1.381229">
+					<IncludedMemoryFiles>
+						<File Id="595114047" Language="SFX">
+							<ShortName>Print_12303_Att_1_01.wav</ShortName>
+							<Path>SFX/Print_12303_Att_1_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1660103536" Name="N_12303_Die" ObjectPath="\Events\Default Work Unit\N\N_12303\N_12303_Die" DurationType="OneShot" DurationMin="1.381229" DurationMax="1.381229">
+					<IncludedMemoryFiles>
+						<File Id="420026847" Language="SFX">
+							<ShortName>Print_12303_Die_01.wav</ShortName>
+							<Path>SFX/Print_12303_Die_01_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

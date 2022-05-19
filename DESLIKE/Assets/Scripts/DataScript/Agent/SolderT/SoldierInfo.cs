@@ -43,7 +43,7 @@ public class SoldierInfo : HeroInfo
         }
     }
 
-    void Dead()
+    void Dead(HeroInfo heroInfo)
     {
         gameObject.layer = 7;
         transform.position += new Vector3(0, 0, 1);

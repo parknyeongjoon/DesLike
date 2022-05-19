@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   code: N_11301_Skill_1
   skill_name: N_11301_Skill_1
+  toolTip: 
   skillType: 1
   skill_Icon: {fileID: 0}
-  extraSkillData: {fileID: 11400000, guid: 287e45d47eabed443b7f641a3ee44e07, type: 2}
+  extraSkillDatas:
+  - {fileID: 11400000, guid: 287e45d47eabed443b7f641a3ee44e07, type: 2}
   cooltime: 2
-  mp: 2
+  mp: 5
   range: 3
   start_Delay: 1
   end_Delay: 1

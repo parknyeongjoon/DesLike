@@ -19,5 +19,5 @@ MonoBehaviour:
   kingdom: 2
   rarity: 1
   continueReuse: 1
-  dodge: {fileID: 0}
+  dodge: {fileID: 11400000, guid: a10fd137a8b20f040a484212f49cb907, type: 2}
   addP: 0.1

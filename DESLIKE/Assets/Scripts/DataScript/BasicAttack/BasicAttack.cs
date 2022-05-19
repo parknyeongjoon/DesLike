@@ -7,7 +7,6 @@ public class BasicAttack : MonoBehaviour
 {
     protected HeroInfo heroInfo;
     public BasicAttackData basicAttackData;
-    public SkillData extraSkill;
     protected SoldierBasic soldierBasic;
 
     public Action<HeroInfo, HeroInfo> beforeAtkEvent;
@@ -19,12 +18,6 @@ public class BasicAttack : MonoBehaviour
     {
         heroInfo = GetComponent<HeroInfo>();
         soldierBasic = GetComponent<SoldierBasic>();
-
-        if(extraSkill != null)//extraSkill이 존재하면 클론을 만들고 할당해주기
-        {
-            basicAttackData = Instantiate(basicAttackData);
-            basicAttackData.extraSkillData = extraSkill;
-        }
 
         atkArea = (int)heroInfo.team * (int)basicAttackData.atkArea;
         atkLayer = (int)basicAttackData.atkArea * 7;

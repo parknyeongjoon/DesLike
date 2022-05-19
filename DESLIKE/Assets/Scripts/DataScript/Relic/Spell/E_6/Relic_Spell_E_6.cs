@@ -13,7 +13,7 @@ public class Relic_Spell_E_6 : HeroDataRelicData
         heroInfo.healthChangeEvent.AddListener(extraEffect);
     }
 
-    public override void extraEffect(HeroInfo heroInfo)
+    public void extraEffect(HeroInfo heroInfo)
     {
         if(heroInfo.cur_Hp <= heroInfo.castleData.hp * activeP)
         {

@@ -4,5 +4,11 @@ using UnityEngine;
 
 public class c : b
 {
-
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            StartCoroutine(GameObject.Find("B").GetComponent<b>().testAA());
+        }
+    }
 }

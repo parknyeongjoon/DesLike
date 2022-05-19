@@ -10,7 +10,7 @@ public class BuffData : SkillData//퍼센트로 버프 주는 법 생각해내기
     public int max_Stack;
     public BuffType buffType;
     [System.NonSerialized]
-    public string buffCode;//지우기
+    public string buffCode;
 
     protected void OnEnable()
     {
@@ -26,19 +26,6 @@ public class BuffData : SkillData//퍼센트로 버프 주는 법 생각해내기
 
     public virtual IEnumerator BuffCoroutine(HeroInfo heroInfo, HeroInfo targetInfo)
     {
-        CheckCoroutineList(targetInfo);
-
-        targetInfo.buff_Stat.Add_Stat(buff_Stat);
-        AddBuffPanel(targetInfo);
-
-        yield return new WaitForSeconds(buff_Time);
-
-        Remove_Buff(targetInfo, targetInfo.buffCoroutine[code][0]);//고치기(0번째 인덱스말고 실행된 코루틴을 담을 방법이 없을까?)
-        RemoveBuffPanel(targetInfo);
-    }
-
-    void CheckCoroutineList(HeroInfo targetInfo)
-    {
         if (!targetInfo.buffCoroutine.ContainsKey(code))//딕셔너리에 키가 없다면 코루틴 리스트 추가
         {
             targetInfo.buffCoroutine.Add(code, new List<Coroutine>());
@@ -48,18 +35,14 @@ public class BuffData : SkillData//퍼센트로 버프 주는 법 생각해내기
             targetInfo.StopCoroutine(targetInfo.buffCoroutine[code][0]);//제일 오래된 코루틴 정지시키고 갱신하기
             Remove_Buff(targetInfo, targetInfo.buffCoroutine[code][0]);//고치기(0번째 인덱스말고 실행된 코루틴을 담을 방법이 없을까?)//효과 제거해주기
         }
-    }
 
-    void AddBuffPanel(HeroInfo targetInfo)
-    {
+        targetInfo.buff_Stat.Add_Stat(buff_Stat);
         if (targetInfo.gameObject.CompareTag("Player")) { BattleUIManager.Instance.heroPanel.AddBuff(code); }//영웅에게 버프를 줬다면 버프 패널 업데이트
         else if (targetInfo == BattleUIManager.Instance.cur_Soldier) { BattleUIManager.Instance.soldierPanel.AddBuff(code); }//현재 soldierPanel에서 보여주고 있는 병사라면 버프 패널 업데이트
-    }
-
-    void RemoveBuffPanel(HeroInfo targetInfo)
-    {
+        yield return new WaitForSeconds(buff_Time);
         if (targetInfo.gameObject.CompareTag("Player")) { BattleUIManager.Instance.heroPanel.RemoveBuff(code); }//영웅에게 버프를 줬다면 버프 패널 업데이트
         else if (targetInfo == BattleUIManager.Instance.cur_Soldier) { BattleUIManager.Instance.soldierPanel.RemoveBuff(code); }//현재 soldierPanel에서 보여주고 있는 병사라면 버프 패널 업데이트
+        Remove_Buff(targetInfo, targetInfo.buffCoroutine[code][0]);//고치기(0번째 인덱스말고 실행된 코루틴을 담을 방법이 없을까?)
     }
 
     public virtual void Remove_Buff(HeroInfo targetInfo, Coroutine coroutine)

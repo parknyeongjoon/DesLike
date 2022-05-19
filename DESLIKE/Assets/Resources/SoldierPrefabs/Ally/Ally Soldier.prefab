@@ -604,14 +604,14 @@ MonoBehaviour:
   grit: 0
   resurrection: 0
   buff_Stat:
-    speed: 1
-    mp: 1
-    mp_Re: 1
-    atk: 1
-    atk_Speed: 1
-    hp: 1
-    hp_Re: 1
-    def: 1
+    speed: 0
+    mp: 0
+    mp_Re: 0
+    atk: 0
+    atk_Speed: 0
+    hp: 0
+    hp_Re: 0
+    def: 0
   soldierCode: 
 --- !u!114 &8297324965424468538
 MonoBehaviour:
@@ -641,7 +641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basicAttackData: {fileID: 0}
-  extraSkill: {fileID: 0}
+  extraSkills: []
   atkArea: 0
   atkLayer: 0
   atkCount: 0

@@ -22,7 +22,7 @@ public class ActiveSkill : Skill
     public override IEnumerator UseSkill(HeroInfo targetInfo)
     {
         heroInfo.action = Soldier_Action.Skill;
-        heroInfo.skeletonAnimation.state.SetAnimation(0, skillData.code, false);
+        //heroInfo.skeletonAnimation.state.SetAnimation(0, skillData.code, false);//스킬
         //AkSoundEngine.PostEvent(skillData.code, gameObject);활성화
         yield return new WaitForSeconds(((ActiveSkillData)skillData).start_Delay);
         if (targetInfo && targetInfo.gameObject.layer != 7)

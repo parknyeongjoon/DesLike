@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.SceneManagement;
 
 public class RelicManager : MonoBehaviour
 {
@@ -11,7 +11,8 @@ public class RelicManager : MonoBehaviour
 
     public Canvas relicCanvas;
 
-    public Action<HeroData> soldierConditionCheck;
+    public delegate void SoldierConditionHandler(SoldierData soldierData);
+    public SoldierConditionHandler soldierConditionHandler;
 
     public static RelicManager Instance
     {
@@ -32,5 +33,10 @@ public class RelicManager : MonoBehaviour
         //ΩÃ±€≈Ê ∆–≈œ
         instance = this;
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    public void CheckRelicCondition(SoldierData soldierData)
+    {
+        soldierConditionHandler(soldierData);
     }
 }

@@ -6,19 +6,20 @@ using TMPro;
 
 public class EventShop : EventBasic
 {
-    int curGold;
+    int curGold, curRelicCount;
     int[] relicLevelCount = new int[3];
     int[] randRelic = new int[6];   // 목록별 랜덤넘버
     int[] relicPrice = new int[6];  // 목록별 가격
     bool isNewSet, isEventSet;
     bool[] isSoldOut = new bool[6];
 
+
     List<Relic> relicList;
+    List<Relic> curRelicList;
 
     [SerializeField] GameObject CheckPanel, ErrorPanel;
     [SerializeField] GameObject[] SoldOutPanel = new GameObject[6];
     [SerializeField] VilShopNode vilShopNode;
-    [SerializeField] GameObject RelicSpawner;
     [SerializeField] GameObject RelicPrefab;
     [SerializeField] Canvas RelicCanvas;
     [SerializeField] TMP_Text[] Prices = new TMP_Text[6];
@@ -63,14 +64,18 @@ public class EventShop : EventBasic
     void LoadShopEData()
     {
         curGold = saveManager.gameData.goodsSaveData.gold;
+        curRelicCount = RelicManager.instance.relicList.Count;
         isEventSet = saveManager.gameData.eventData.isEventSet;
-      
+        
         for (int i = 0; i < 3; i++)
         {
             randRelic[i] = saveManager.gameData.villageData.randRelic[i];
             relicPrice[i] = saveManager.gameData.villageData.relicPrice[i];
             isSoldOut[i] = saveManager.gameData.villageData.isSoldOut[i];
         }
+        curRelicList = new List<Relic>();
+        for (int i = 0; i < curRelicCount; i++)
+            curRelicList.Add(RelicManager.instance.relicList[i]);
     }
 
     void DataUpdate()
@@ -122,24 +127,30 @@ public class EventShop : EventBasic
                 {
                     if (randRelic[i] == randRelic[j])
                         goto RelicReroll;
-                }
-
-                for (int j = 0; j < i - 1; j++)
+                 }
+                for (int j = 0; j < curRelicCount; j++)
                 {
                     InfiniteLoopDetector.Run();
-                    // 이미 가지고 있는 유물이라면 다시 랜덤값
-                    if (relicList[j].relicData.code == eventNode.ableRelicRewards[randRelic[i]].relicData.code)
+                    if (curRelicList[j].relicData.code == eventNode.ableRelicRewards[randRelic[i]].relicData.code)
                         goto RelicReroll;
-                    // 획득 유물 갯수가 한정되어있어서 모든 유물을 가진 경우의 수는 제외함
                 }
-                
+
                 relicList.Add(eventNode.ableRelicRewards[randRelic[i]]);
           
                 Prices[i].text = relicPrice[i] + "골드";
+                Instantiate(eventNode.ableRelicRewards[randRelic[i]], RelicCanvas.transform.GetChild(i).transform);
+
                 Debug.Log("for end : " + i);
             }
-            for (int i = 0; i < 6; i++)
+        }
+        else
+        {
+            for(int i = 0; i<6; i++)
+            {
+                relicList.Add(eventNode.ableRelicRewards[randRelic[i]]);
+                Prices[i].text = relicPrice[i] + "골드";
                 Instantiate(eventNode.ableRelicRewards[randRelic[i]], RelicCanvas.transform.GetChild(i).transform);
+            }
         }
     }
 
@@ -170,58 +181,49 @@ public class EventShop : EventBasic
 
     public void OpenCheck1()
     {
-        Debug.Log("OpenCheck1");
         vilShopNode.curRelic = relicList[0];
-        
+        vilShopNode.curNumber = 0;
         CheckPanel.SetActive(true);
         Instantiate(relicList[0], CheckPanel.transform.GetChild(0).transform);
     }
 
     public void OpenCheck2()
     {
-        Debug.Log("OpenCheck2");
         vilShopNode.curRelic = relicList[1];
-        // relic instantiate 후 보여주기
+        vilShopNode.curNumber = 1;
         Instantiate(relicList[1], CheckPanel.transform.GetChild(0).transform);
         CheckPanel.SetActive(true);
     }
 
     public void OpenCheck3()
     {
-        Debug.Log("OpenCheck3");
         vilShopNode.curRelic = relicList[2];
-        // relic instantiate 후 보여주기
+        vilShopNode.curNumber = 2;
         Instantiate(relicList[2], CheckPanel.transform.GetChild(0).transform);
-
         CheckPanel.SetActive(true);
     }
 
     public void OpenCheck4()
     {
-        Debug.Log("OpenCheck4");
         vilShopNode.curRelic = relicList[3];
-        // relic instantiate 후 보여주기
+        vilShopNode.curNumber = 3;
         Instantiate(relicList[3], CheckPanel.transform.GetChild(0).transform);
         CheckPanel.SetActive(true);
     }
 
     public void OpenCheck5()
     {
-        Debug.Log("OpenCheck5");
         vilShopNode.curRelic = relicList[4];
-        // relic instantiate 후 보여주기
+        vilShopNode.curNumber = 4;
         Instantiate(relicList[4], CheckPanel.transform.GetChild(0).transform);
         CheckPanel.SetActive(true);
-
     }
 
     public void OpenCheck6()
     {
-        Debug.Log("OpenCheck6");
         vilShopNode.curRelic = relicList[5];
-        // relic instantiate 후 보여주기
+        vilShopNode.curNumber = 5;
         Instantiate(relicList[5], CheckPanel.transform.GetChild(0).transform);
-
         CheckPanel.SetActive(true);
     }
 
@@ -239,7 +241,6 @@ public class EventShop : EventBasic
     {
         if (curGold < relicPrice[vilShopNode.curNumber])
         {
-            Debug.Log("골드가 부족합니다.");
             ErrorPanel.SetActive(true); // 골드가 부족하다는 표시 후 클릭하면 없어지게끔
         }
         else
@@ -262,6 +263,8 @@ public class EventShop : EventBasic
     {
         for (int i = 0; i < 6; i++)
             isSoldOut[i] = false;
+        curDay += 2;
+        SaveData();
         EndEvent();
     }
 }

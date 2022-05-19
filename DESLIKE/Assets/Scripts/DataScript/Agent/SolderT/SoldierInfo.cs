@@ -49,7 +49,7 @@ public class SoldierInfo : HeroInfo
         transform.position += new Vector3(0, 0, 1);
         if (skeletonAnimation.skeleton != null)
             skeletonAnimation.state.SetAnimation(0, soldierCode + "_Die", false);
-        //AkSoundEngine.PostEvent(soldierCode + "_Die", gameObject);활성화
+        AkSoundEngine.PostEvent(soldierCode + "_Die", gameObject);
         allyPortDatas.spawnSoldierList.Remove(this);
         BattleUIManager.Instance.UpdateSoldierRatioBar();
         if (allyPortDatas.spawnSoldierList.Count == 0)

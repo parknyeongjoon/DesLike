@@ -10,7 +10,7 @@ public class BuffData : SkillData//퍼센트로 버프 주는 법 생각해내기
     public int max_Stack;
     public BuffType buffType;
     [System.NonSerialized]
-    public string buffCode;
+    public string buffCode;//지우기
 
     protected void OnEnable()
     {

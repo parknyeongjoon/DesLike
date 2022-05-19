@@ -29,7 +29,6 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
 
     protected override IEnumerator Idle_Behaviour()
     {
-        //rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
         if (curSoundWeight > Random.Range(0, 100)) {
             //AkSoundEngine.PostEvent("T_" + heroInfo.castleData.code + "_Idle", gameObject);//활성화
             curSoundWeight = basicSoundWeight;
@@ -66,7 +65,6 @@ public class SoldierBehaviour : SoldierBasic//detect 함수 손보기
 
     protected override IEnumerator Battle_Behaviour()
     {
-        //rigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
         while (heroInfo.state == Soldier_State.Battle)
         {
             if (canSkill != null && canSkill.Invoke())

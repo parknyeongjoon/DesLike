@@ -152,7 +152,7 @@ public class SaveManager : MonoBehaviour
         for(int i = 0; i < gameData.relicSaveData.Count; i++)
         {
             InfiniteLoopDetector.Run();
-            RelicManager.Instance.relicList.Add(dataSheet.relicObjectSheet[gameData.relicSaveData[i]].GetComponent<Relic>());
+            RelicManager.Instance.relicList.Add(dataSheet.relicObjectSheet[gameData.relicSaveData[i]].GetComponent<RelicData>());
         }
     }
 

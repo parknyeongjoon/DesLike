@@ -115,11 +115,11 @@ public class FightEvent : EventBasic
         {
             for (int i = 0; i < RelicManager.instance.relicList.Count; i++)
             {
-                if (battleNode.ableRelicRewards[rand].relicData.code == RelicManager.instance.relicList[i].relicData.code)
+                if (RelicManager.instance.relicList.ContainsKey(battleNode.ableRelicRewards[rand].relicData.code))
                     goto reroll;
             }   // 기존 가지고 있는 유물이면 리롤
         }
-        battleNode.reward.relic.Add(battleNode.ableRelicRewards[rand]);
+        battleNode.reward.relicReward.Add(battleNode.ableRelicRewards[rand]);
     }
 
     void Set_PortsOption(PortsOption portsOption, PortDatas portDatas)

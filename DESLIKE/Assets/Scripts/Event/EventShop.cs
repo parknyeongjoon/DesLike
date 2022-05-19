@@ -13,10 +13,9 @@ public class EventShop : EventBasic
     bool isNewSet, isEventSet;
     bool[] isSoldOut = new bool[6];
 
-
-    List<Relic> relicList;
-    List<Relic> curRelicList;
-
+    Dictionary<string, RelicData> relicList;
+    Dictionary<string, RelicData> curRelicList;
+    
     [SerializeField] GameObject CheckPanel, ErrorPanel;
     [SerializeField] GameObject[] SoldOutPanel = new GameObject[6];
     [SerializeField] VilShopNode vilShopNode;
@@ -73,7 +72,7 @@ public class EventShop : EventBasic
             relicPrice[i] = saveManager.gameData.villageData.relicPrice[i];
             isSoldOut[i] = saveManager.gameData.villageData.isSoldOut[i];
         }
-        curRelicList = new List<Relic>();
+        curRelicList = new Dictionary<string, RelicData>();
         for (int i = 0; i < curRelicCount; i++)
             curRelicList.Add(RelicManager.instance.relicList[i]);
     }
@@ -106,7 +105,7 @@ public class EventShop : EventBasic
 
         if (isEventSet == false)
         {
-            relicList = new List<Relic>(6);
+            relicList = new Dictionary<string, RelicData>();
             for (int i = 0; i < 6; i++)
             {
             RelicReroll:

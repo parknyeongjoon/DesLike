@@ -19,16 +19,16 @@ public class Map : ScriptableObject
     public List<SoldierData> commonNorSol;
     public List<SoldierData> commonEpicSol;
 
-    public List<Relic> physicNorRel;
-    public List<Relic> physicEpicRel;
-    public List<Relic> physicLegendRel;
+    public Dictionary<string, RelicData> physicNorRel;
+    public Dictionary<string, RelicData> physicEpicRel;
+    public Dictionary<string, RelicData> physicLegendRel;
 
-    public List<Relic> spellNorRel;
-    public List<Relic> spellEpicRel;
-    public List<Relic> spellLegendRel;
-    public List<Relic> commonNorRel;
-    public List<Relic> commonEpicRel;
-    public List<Relic> commonLegendRel;
+    public Dictionary<string, RelicData> spellNorRel;
+    public Dictionary<string, RelicData> spellEpicRel;
+    public Dictionary<string, RelicData> spellLegendRel;
+    public Dictionary<string, RelicData> commonNorRel;
+    public Dictionary<string, RelicData> commonEpicRel;
+    public Dictionary<string, RelicData> commonLegendRel;
     
     public bool isMap = false;//지우기
     public int playerX= -1, playerY;//지우기

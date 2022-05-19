@@ -16,7 +16,7 @@ public class EventNodeScript : NodeScript
     bool[] isRewardSet = new bool[THREE];
     Reward reward;
     List<SoldierData> ableSoldierRewards;
-    List<Relic> ableRelicRewards;
+    Dictionary<string, RelicData> ableRelicRewards;
     List<Option> option = new List<Option>();
     Map map;
 
@@ -94,7 +94,7 @@ public class EventNodeScript : NodeScript
         isRewardSet[0] = saveManager.gameData.mapData.isRewardSet[0];
         if (isRewardSet[0] == false)
         {
-            eventNode.reward.relic.Clear();
+            eventNode.reward.relicReward.Clear();
             NorSolSet(0, 0);
             // EpicSolSet(0,0);
             NorSolSet(1, 0);
@@ -112,7 +112,7 @@ public class EventNodeScript : NodeScript
         isRewardSet[1] = saveManager.gameData.mapData.isRewardSet[1];
         if (isRewardSet[1] == false)
         {
-            eventNode.reward.relic.Clear();
+            eventNode.reward.relicReward.Clear();
             NorSolSet(0, 1);
             // EpicSolSet(0,1);
             NorSolSet(1, 1);
@@ -132,7 +132,7 @@ public class EventNodeScript : NodeScript
         isRewardSet[2] = saveManager.gameData.mapData.isRewardSet[2];
         if (isRewardSet[2] == false)
         {
-            eventNode.reward.relic.Clear();
+            eventNode.reward.relicReward.Clear();
             NorSolSet(0, 2);
             // EpicSolSet(0,2);
             NorSolSet(1, 2);
@@ -208,7 +208,7 @@ public class EventNodeScript : NodeScript
             norTotal = speNorRelC + comNorRelC;  // 주술국 + 공통
 
         int rand = Random.Range(0, norTotal);   // 일반 범위 내 랜덤값
-        eventNode.reward.relic.Add(eventNode.ableRelicRewards[rand]);  // 해당 유물을 노드에 저장
+        eventNode.reward.relicReward.Add(eventNode.ableRelicRewards[rand]);  // 해당 유물을 노드에 저장
         // saveManager.gameData.curBattleNodeData.relRewardIndex[button, 0] = rand;    // 유물 번호 게임데이터에 저장
         // 중복 유물인지 확인해야함
     }
@@ -228,7 +228,7 @@ public class EventNodeScript : NodeScript
         }
         int rand = Random.Range(0, epicTotal) + norTotal;
 
-        eventNode.reward.relic.Add(eventNode.ableRelicRewards[rand]);
+        eventNode.reward.relicReward.Add(eventNode.ableRelicRewards[rand]);
         // saveManager.gameData.rewardData.relicRewardIndex[button] = rand;
         // 중복 유물인지 확인해야함
     }
@@ -247,7 +247,7 @@ public class EventNodeScript : NodeScript
             legendTotal = speLegendRelC + comLegendRelC;
         }
         int rand = Random.Range(0, legendTotal) + neTotal;
-        eventNode.reward.relic.Add(eventNode.ableRelicRewards[rand]);
+        eventNode.reward.relicReward.Add(eventNode.ableRelicRewards[rand]);
         // saveManager.gameData.rewardData.relicRewardIndex[button] = rand;
         // 중복 유물인지 확인해야함
     }

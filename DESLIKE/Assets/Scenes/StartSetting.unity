@@ -262,7 +262,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e58bf58c79a45e24ebf8df62cddeb15b, type: 2}
   - {fileID: 11400000, guid: 20faa7cf16f947e44ae2c22b3b31454c, type: 2}
   mutantObjects: []
-  relicObjects: []
+  relicObjects:
+  - {fileID: 4021191973779267206, guid: 4c140e9ea1618184bac43b127e397e23, type: 3}
+  - {fileID: 3085665646497418710, guid: 48dca7ea8ba19fe4ea6ed7c26b17c256, type: 3}
+  - {fileID: 2151022113915362719, guid: 48a2e13a04a16ce4cbe09b1ba6209f77, type: 3}
   BattleNodeScript: {fileID: 3963912957987146594, guid: 466e855f347fc934895e18daf1643165,
     type: 3}
 --- !u!114 &2130432439 stripped

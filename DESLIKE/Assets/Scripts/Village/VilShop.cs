@@ -13,8 +13,8 @@ public class VilShop : MonoBehaviour
     bool isNewSet, isEventSet;
     bool[] isSoldOut = new bool[6];
 
-    List<Relic> curRelicList;
-    List<Relic> relicList;
+    Dictionary<string, RelicData> curRelicList;
+    Dictionary<string, RelicData> relicList;
     SaveManager saveManager;
 
     [SerializeField] Map map;
@@ -66,7 +66,7 @@ public class VilShop : MonoBehaviour
             relicPrice[i] = saveManager.gameData.villageData.relicPrice[i];
             isSoldOut[i] = saveManager.gameData.villageData.isSoldOut[i];
         }
-        curRelicList = new List<Relic>();
+        curRelicList = new Dictionary<string, RelicData>();
         for (int i = 0; i < curRelicCount; i++)
             curRelicList.Add(RelicManager.instance.relicList[i]);
     }
@@ -99,7 +99,7 @@ public class VilShop : MonoBehaviour
         
         if (isEventSet == false)
         {
-            relicList = new List<Relic>();
+            relicList = new Dictionary<string, RelicData>();
 
             for (int i = 0; i < 6; i++)
             {

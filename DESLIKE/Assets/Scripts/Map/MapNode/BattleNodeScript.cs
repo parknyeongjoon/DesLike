@@ -18,7 +18,7 @@ public class BattleNodeScript : NodeScript
     bool[] isRewardSet = new bool[THREE];
     Reward reward;
     List<SoldierData> ableSoldierRewards;
-    List<Relic> ableRelicRewards;
+    Dictionary<string, RelicData> ableRelicRewards;
     List<PortsOption> enemyPortsOptions;
     PortsOption enemyPortOption;
     PortDatas enemyPortDatas;
@@ -246,9 +246,9 @@ public class BattleNodeScript : NodeScript
         if (num == 1 && (battleNode.ableSoldierRewards[rand].code == saveManager.gameData.curBattleNodeData.solRewardIndex[button, 0]))
             goto reroll;  // 다른 선택지와 중복이면 다시 뽑기
 
-        if (num == 0) reward.relic.Clear();
+        if (num == 0) reward.relicReward.Clear();
 
-        battleNode.reward.relic.Add(battleNode.ableRelicRewards[rand]);  // 해당 유물을 노드에 저장
+        battleNode.reward.relicReward.Add(battleNode.ableRelicRewards[rand]);  // 해당 유물을 노드에 저장
         // saveManager.gameData.curBattleNodeData.relRewardIndex[button, 0] = rand;    // 유물 번호 게임데이터에 저장
     }
 
@@ -277,10 +277,10 @@ public class BattleNodeScript : NodeScript
         if (num == 1 && (battleNode.ableSoldierRewards[rand].code == saveManager.gameData.curBattleNodeData.solRewardIndex[button, 0]))
             goto reroll;  // 다른 선택지와 중복이면 다시 뽑기
 
-        if (num == 0) reward.relic.Clear();
+        if (num == 0) reward.relicReward.Clear();
 
 
-        battleNode.reward.relic.Add(battleNode.ableRelicRewards[rand]);
+        battleNode.reward.relicReward.Add(battleNode.ableRelicRewards[rand]);
         // saveManager.gameData.rewardData.relicRewardIndex[button] = rand;
     }
 
@@ -308,9 +308,9 @@ public class BattleNodeScript : NodeScript
         if (num == 1 && (battleNode.ableSoldierRewards[rand].code == saveManager.gameData.curBattleNodeData.solRewardIndex[button, 0]))
             goto reroll;  // 다른 선택지와 중복이면 다시 뽑기
 
-        if (num == 0) reward.relic.Clear();
+        if (num == 0) reward.relicReward.Clear();
 
-        battleNode.reward.relic.Add(battleNode.ableRelicRewards[rand]);
+        battleNode.reward.relicReward.Add(battleNode.ableRelicRewards[rand]);
     }
 
     public void SetEnemyPortOption(int i)

@@ -7,7 +7,7 @@ public class RelicManager : MonoBehaviour
 {
     public static RelicManager instance;
 
-    public List<Relic> relicList = new List<Relic>();
+    public Dictionary<string, RelicData> relicList;
 
     public Canvas relicCanvas;
 
@@ -36,6 +36,7 @@ public class RelicManager : MonoBehaviour
 
     public void AddRelicInCanvas()
     {
-        Instantiate(relicList[relicList.Count - 1], relicCanvas.transform.GetChild(0).transform);
+        // relicList.ContainsKey()
+        // Instantiate(relicList[relicList.Count - 1], relicCanvas.transform.GetChild(0).transform);
     }
 }

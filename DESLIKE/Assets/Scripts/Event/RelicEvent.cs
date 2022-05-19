@@ -164,7 +164,7 @@ public class RelicEvent : EventBasic
     void ActiveEvent2() //"2일 소모, 일반 유물 획득"
     {
         curDay += 2;
-        relicManager.relicList.Add(eventNode.reward.relic[0]);
+        relicManager.relicList.Add(eventNode.reward.relicReward[0]);
         // RelicPanel에다가 instantiate
 
         RelicManager.instance.AddRelicInCanvas();
@@ -177,7 +177,7 @@ public class RelicEvent : EventBasic
     {
         curDay += 2;
         curGold -= 50; // 골드 손실 함수
-        relicManager.relicList.Add(eventNode.reward.relic[1]);
+        relicManager.relicList.Add(eventNode.reward.relicReward[1]);
         // 희귀 유물 획득 함수(변경 필요)
         RelicManager.instance.AddRelicInCanvas();
 
@@ -191,7 +191,7 @@ public class RelicEvent : EventBasic
         cur_HP -= max_HP / 10; // 10% 임의 설정
         if (cur_HP < 1) cur_HP = 1;
         // 최대체력의 n% 잃는 함수, 만약 현재 체력이 n%보다 작다면 현재 체력을 1로 만듦
-        relicManager.relicList.Add(eventNode.reward.relic[1]);
+        relicManager.relicList.Add(eventNode.reward.relicReward[1]);
         // 희귀 유물 획득 함수
         RelicManager.instance.AddRelicInCanvas();
 
@@ -205,7 +205,7 @@ public class RelicEvent : EventBasic
         if (cur_HP < 1) cur_HP = 1;
         // 최대체력의 n% 잃는 함수, 만약 현재 체력이 n%보다 작다면 현재 체력을 1로 만듦
         curGold -= 50; // 골드 손실 함수
-        relicManager.relicList.Add(eventNode.reward.relic[2]);
+        relicManager.relicList.Add(eventNode.reward.relicReward[2]);
         // 전설 유물 획득 함수
 
         RelicManager.instance.AddRelicInCanvas();
@@ -217,7 +217,7 @@ public class RelicEvent : EventBasic
     {
         curDay += 1;
         curGold = 0; // 골드 손실 함수
-        relicManager.relicList.Add(eventNode.reward.relic[1]);
+        relicManager.relicList.Add(eventNode.reward.relicReward[1]);
         // 희귀 유물 획득 함수
 
         RelicManager.instance.AddRelicInCanvas();

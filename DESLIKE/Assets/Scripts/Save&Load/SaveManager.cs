@@ -131,14 +131,17 @@ public class SaveManager : MonoBehaviour
         gameData.heroSaveData.resurrection = heroInfo.resurrection;
     }
 
+
+    public RelicManager relicManager;
     public void SaveRelicData()
     {
         gameData.relicSaveData.Clear();
-        if (RelicManager.Instance.relicList != null)
+        if (!(relicManager.relicList == null))
         {
-            for (int i = 0; i < RelicManager.Instance.relicList.Count; i++)
+            for (int i = 0; i < relicManager.relicList.Count; i++)
             {
-                gameData.relicSaveData.Add(RelicManager.Instance.relicList[i].relicData.code);
+                InfiniteLoopDetector.Run();
+                gameData.relicSaveData.Add(relicManager.relicList[i].relicData.code);
             }
         }
     }
@@ -148,6 +151,7 @@ public class SaveManager : MonoBehaviour
         RelicManager.Instance.relicList.Clear();
         for(int i = 0; i < gameData.relicSaveData.Count; i++)
         {
+            InfiniteLoopDetector.Run();
             RelicManager.Instance.relicList.Add(dataSheet.relicObjectSheet[gameData.relicSaveData[i]].GetComponent<Relic>());
         }
     }
@@ -161,17 +165,21 @@ public class SaveManager : MonoBehaviour
         for (int btn = 0; btn < 3; btn++)    // 버튼 1,2,3
         {
             selEvent[btn] = gameData.mapData.selEvent[btn];
-            if ((map.selectNode[btn] != null) && (selEvent[btn] == 0))  // 맵에 저장되어있고, 전투 노드일 경우
+            if (!(map.selectNode[btn] == null) && (selEvent[btn] == 0))  // 맵에 저장되어있고, 전투 노드일 경우
             {
                 if (gameData.mapData.curWindow == CurWindow.Battle)
                 {
                     battleNode = (BattleNode)map.selectNode[btn];
                     for (int i = 0; i < battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 저장
+                    {
+                        InfiniteLoopDetector.Run();
                         gameData.curBattleNodeData.ableSoldierIndex[btn, i] = battleNode.ableSoldierRewards[i].code;
+                    }
                     gameData.mapData.kingdom = battleNode.kingdom;
 
                     for (int i = 0; i < battleNode.reward.soldierReward.Count; i++)
                     {
+                        InfiniteLoopDetector.Run();
                         gameData.curBattleNodeData.solRewardIndex[btn, i] = battleNode.reward.soldierReward[i].soldier.code;
                         // mutant 추가 필요
                     }
@@ -202,19 +210,20 @@ public class SaveManager : MonoBehaviour
                     SoldierData soldierData = new SoldierData();
 
                     for (int i = 0; i < battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 불러오기
+                    {
+                        InfiniteLoopDetector.Run();
                         battleNode.ableSoldierRewards.Add(dataSheet.soldierDataSheet[gameData.curBattleNodeData.ableSoldierIndex[btn, i]]);
-
+                    }
 
                     for (int i = 0; i < battleNode.reward.soldierReward.Count; i++)
                     {
+                        InfiniteLoopDetector.Run();
                         soldierReward.soldier = dataSheet.soldierDataSheet[gameData.curBattleNodeData.solRewardIndex[btn, i]];
                         // mutant 추가 필요
-
                         battleNode.reward.soldierReward.Add(soldierReward);
                     }
                 }
             }
         }
     }
-   
 }

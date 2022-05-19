@@ -9,7 +9,7 @@ public class VilHealing : MonoBehaviour
     public TMP_Text InformText, CheckText, Cur_HPText;
     SaveManager saveManager;
     int healCount;
-    int temp_Max_HP = 500;
+    float max_HP;
     float cur_HP;
     int curGold;
 
@@ -26,13 +26,14 @@ public class VilHealing : MonoBehaviour
         healCount = saveManager.gameData.villageData.healCount;
         cur_HP = saveManager.gameData.heroSaveData.cur_Hp;
         curGold = saveManager.gameData.goodsSaveData.gold;
+        max_HP = saveManager.dataSheet.heroDataSheet[saveManager.gameData.heroSaveData.heroCode].hp;
     }
 
     void PriceUpdate()
     {
         if (healCount == 0) InformText.text = "휴식하기\n(1회 무료)";
         else InformText.text = "휴식하기\n(" + healCount * 50 + "골드 소모)";
-        Cur_HPText.text = "현재 체력 : " + cur_HP + " / " + temp_Max_HP;
+        Cur_HPText.text = "현재 체력 : " + cur_HP + " / " + max_HP;
     }
 
     public void HealPanelOpen()
@@ -72,9 +73,9 @@ public class VilHealing : MonoBehaviour
 
     void Heal_HP()
     {
-        cur_HP += temp_Max_HP / 10;
-        if (cur_HP >= temp_Max_HP)
-            cur_HP = temp_Max_HP;
+        cur_HP += max_HP / 10;
+        if (cur_HP >= max_HP)
+            cur_HP = max_HP;
     }
 
     public void ErrorPanelClose()

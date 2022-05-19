@@ -2,13 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Relic : MonoBehaviour
 {
     public RelicData relicData;
-    [SerializeField] GameObject toolTipPanel;
-    [SerializeField] Text toolTip;
-    [SerializeField] Image relicImg;
+    [SerializeField]
+    GameObject toolTipPanel;
+    [SerializeField]
+    TMP_Text toolTip;
+    [SerializeField]
+    Image relicImg;
+    
+    void Start()
+    {
+        relicImg.sprite = relicData.relicImg;
+    }
 
     public void SetToolTip()
     {

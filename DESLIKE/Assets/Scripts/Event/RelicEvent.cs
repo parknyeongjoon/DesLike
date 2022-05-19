@@ -7,16 +7,63 @@ using TMPro;
 
 public class RelicEvent : EventBasic
 {
-    int temp_Max_HP = 500;
-    RelicManager relicManager;
+    int curGold;
+    int[] optionNum = new int[3];
+    float cur_HP, max_HP;
+    bool isEventSet, isAlreadySelect;
 
+    RelicManager relicManager;
+ 
+    [SerializeField] Button[] Buttons = new Button[3];
+    [SerializeField] TMP_Text[] OptionText = new TMP_Text[3];
+    
     void OnEnable()
     {
-        SetOption();
         relicManager = RelicManager.Instance;
+
+        LoadData();
+        SetOption();
+        // 세팅 다 했다고 표시
         isEventSet = true;
         eventEnd = false;
+
         SaveData();
+    }
+
+    void SaveData()
+    {
+        SaveRelEData();
+        SaveComData();
+        saveManager.SaveGameData();
+    }
+
+    void SaveRelEData()
+    {
+        saveManager.gameData.heroSaveData.cur_Hp = cur_HP;
+        saveManager.gameData.goodsSaveData.gold = curGold;
+        saveManager.gameData.eventData.isEventSet = isEventSet;
+        saveManager.gameData.eventData.isAlreadySelect = isAlreadySelect;
+
+        for (int i = 0; i < 3; i++)
+            saveManager.gameData.eventData.optionNum[i] = optionNum[i];
+    }
+
+    void LoadData()
+    {
+        LoadRelEData();
+        LoadComData();
+    }
+
+    void LoadRelEData()
+    {
+        cur_HP = saveManager.gameData.heroSaveData.cur_Hp;
+        max_HP = saveManager.dataSheet.heroDataSheet[saveManager.gameData.heroSaveData.heroCode].hp;
+        curGold = saveManager.gameData.goodsSaveData.gold;
+        isEventSet = saveManager.gameData.eventData.isEventSet;
+        isAlreadySelect = saveManager.gameData.eventData.isAlreadySelect;
+
+        for (int i = 0; i < 3; i++)
+            optionNum[i] = saveManager.gameData.eventData.optionNum[i];
     }
 
     void SetOption()
@@ -35,14 +82,7 @@ public class RelicEvent : EventBasic
                         goto Reroll;  // 같은 값인지 체크
                 }
             }
-            else  // 데이터 가져오기
-            {
-                for (int i = 0; i < 3; i++)
-                {
-                    optionNum[i] = eventData.optionNum[i];
-                }
-            }
-
+          
             for (int i = 0; i < 3; i++)    // 텍스트 변경용
             {
                 switch (optionNum[i] + 1)
@@ -126,6 +166,9 @@ public class RelicEvent : EventBasic
         curDay += 2;
         relicManager.relicList.Add(eventNode.reward.relic[0]);
         // RelicPanel에다가 instantiate
+
+        RelicManager.instance.AddRelicInCanvas();
+
         // 일반 유물 획득 함수 (변경 필요)
         ButtonsOff();
     }
@@ -136,6 +179,8 @@ public class RelicEvent : EventBasic
         curGold -= 50; // 골드 손실 함수
         relicManager.relicList.Add(eventNode.reward.relic[1]);
         // 희귀 유물 획득 함수(변경 필요)
+        RelicManager.instance.AddRelicInCanvas();
+
         ButtonsOff();
     }
 
@@ -143,23 +188,28 @@ public class RelicEvent : EventBasic
     {
         curDay += 2;
 
-        cur_HP -= temp_Max_HP / 10; // 10% 임의 설정
+        cur_HP -= max_HP / 10; // 10% 임의 설정
         if (cur_HP < 1) cur_HP = 1;
         // 최대체력의 n% 잃는 함수, 만약 현재 체력이 n%보다 작다면 현재 체력을 1로 만듦
         relicManager.relicList.Add(eventNode.reward.relic[1]);
         // 희귀 유물 획득 함수
+        RelicManager.instance.AddRelicInCanvas();
+
         ButtonsOff();
     }
 
     void ActiveEvent5() //"3일 소모, 최대 체력의 n% + n골드 잃고 전설 유물 획득"
     {
         curDay += 3;
-        cur_HP -= temp_Max_HP / 10;
+        cur_HP -= max_HP / 10;
         if (cur_HP < 1) cur_HP = 1;
         // 최대체력의 n% 잃는 함수, 만약 현재 체력이 n%보다 작다면 현재 체력을 1로 만듦
         curGold -= 50; // 골드 손실 함수
         relicManager.relicList.Add(eventNode.reward.relic[2]);
         // 전설 유물 획득 함수
+
+        RelicManager.instance.AddRelicInCanvas();
+
         ButtonsOff();
     }
 
@@ -169,6 +219,9 @@ public class RelicEvent : EventBasic
         curGold = 0; // 골드 손실 함수
         relicManager.relicList.Add(eventNode.reward.relic[1]);
         // 희귀 유물 획득 함수
+
+        RelicManager.instance.AddRelicInCanvas();
+
         ButtonsOff();
     }
 
@@ -199,7 +252,7 @@ public class RelicEvent : EventBasic
         }
         isAlreadySelect = true;
         isEventSet = false;
-        SaveData();
+        SaveComData();
     }
 
     public void Button2()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EventNodeScript : NodeScript
 {
@@ -11,13 +12,13 @@ public class EventNodeScript : NodeScript
         phyNorRelC, speNorRelC, comNorRelC, phyEpicRelC, speEpicRelC, comEpicRelC, phyLegendRelC, speLegendRelC, comLegendRelC;
     const int THREE = 3;
     int[] nextEvent = new int[THREE];
-    Map map;
     public bool[] isEventSet = new bool[THREE];
     bool[] isRewardSet = new bool[THREE];
     Reward reward;
     List<SoldierData> ableSoldierRewards;
     List<Relic> ableRelicRewards;
     List<Option> option = new List<Option>();
+    Map map;
 
     void Start()
     {
@@ -151,6 +152,7 @@ public class EventNodeScript : NodeScript
         else norTotal = speNorSolC + comNorSolC; // 주술국 + 공통
 
         randomInt:
+        InfiniteLoopDetector.Run();
         int rand = Random.Range(0, norTotal);   // 일반 범위 내에서 랜덤값 설정
         if (num == 1 && (eventNode.ableSoldierRewards[rand].code == saveManager.gameData.curBattleNodeData.solRewardIndex[button, 0]))
             goto randomInt;  // 다른 선택지와 중복이면 다시 뽑기
@@ -182,6 +184,7 @@ public class EventNodeScript : NodeScript
         }
 
         randomInt:
+        InfiniteLoopDetector.Run();
         int rand = norTotal + Random.Range(0, epicTotal);
         if (num == 1 && (eventNode.ableSoldierRewards[rand].code == saveManager.gameData.curBattleNodeData.solRewardIndex[button, 0]))
             goto randomInt;  // 다른 선택지와 중복이면 다시 뽑기
@@ -248,16 +251,19 @@ public class EventNodeScript : NodeScript
         // saveManager.gameData.rewardData.relicRewardIndex[button] = rand;
         // 중복 유물인지 확인해야함
     }
-
-
+    
     public void Play_EventNode()
     {
+  
         for (int i = 0; i < 3; i++)
         {
             saveManager.gameData.mapData.isEventSet[i] = false;
             saveManager.gameData.mapData.isRewardSet[i] = false;
         }
+
         saveManager.gameData.mapData.eventEnd = true;
+        saveManager.SaveGameData();
+
         eventNode.Play_EventNode();
     }
- }
+}

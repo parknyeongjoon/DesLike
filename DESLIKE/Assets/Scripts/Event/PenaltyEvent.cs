@@ -1,19 +1,62 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PenaltyEvent : EventBasic
 {
-    int temp_Max_HP = 500;
-    RelicManager relicManager;
+    int curGold, ranPenalty;  
+    // ranPenalty => 0 : 체력, 1 : 포트, 2 : 특화 손실, 3, 골드 손실
+    float cur_HP;
+    bool isEventSet, isAlreadySelect;
     
+    RelicManager relicManager;
+
+    [SerializeField] Button[] Buttons = new Button[3];
+    [SerializeField] TMP_Text[] OptionText = new TMP_Text[3];
+
+
     void OnEnable()
     {
-        SetOption();
         relicManager = RelicManager.Instance;
+
+        LoadData();
+        SetOption();
         isEventSet = true;
         eventEnd = false;
         SaveData();
+    }
+
+    void SaveData()
+    {
+        SavePenEData();
+        SaveComData();
+        saveManager.SaveGameData();
+    }
+
+    void SavePenEData()
+    {
+        saveManager.gameData.goodsSaveData.gold = curGold;
+        saveManager.gameData.eventData.ranPenalty = ranPenalty;
+        saveManager.gameData.heroSaveData.cur_Hp = cur_HP;
+        saveManager.gameData.eventData.isEventSet = isEventSet;
+        saveManager.gameData.eventData.isAlreadySelect = isAlreadySelect;
+    }
+
+    void LoadData()
+    {
+        LoadPenEData();
+        LoadComData();
+    }
+
+    void LoadPenEData()
+    {
+        curGold = saveManager.gameData.goodsSaveData.gold;
+        ranPenalty = saveManager.gameData.eventData.ranPenalty;
+        cur_HP = saveManager.gameData.heroSaveData.cur_Hp;
+        isEventSet = saveManager.gameData.eventData.isEventSet;
+        isAlreadySelect = saveManager.gameData.eventData.isAlreadySelect;
     }
 
     void SetOption()

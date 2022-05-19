@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class VillageManager : MonoBehaviour
 {
+    public Map map;
     public VillageNode villageNode;
     SaveManager saveManager;
     
@@ -16,7 +17,7 @@ public class VillageManager : MonoBehaviour
 
     void dataUpdate()
     {
-        villageNode = (VillageNode)saveManager.map.curMapNode;   
+        villageNode = (VillageNode)map.curMapNode;   
     }
 
     public void EndVillage()

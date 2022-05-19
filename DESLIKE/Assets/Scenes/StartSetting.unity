@@ -265,6 +265,18 @@ MonoBehaviour:
   relicObjects: []
   BattleNodeScript: {fileID: 3963912957987146594, guid: 466e855f347fc934895e18daf1643165,
     type: 3}
+--- !u!114 &2130432439 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1264349190392627091, guid: 7a1015bdaea90d5409258cec535882c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 7346757463994477873}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0fd3e986558ac0468a460d2d612844a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3976412869853632963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -335,6 +347,11 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 3976412869529563661, guid: e9d00c61469d46c449d81c4e380dc386,
         type: 3}
+      propertyPath: relicManager
+      value: 
+      objectReference: {fileID: 2130432439}
+    - target: {fileID: 3976412869529563661, guid: e9d00c61469d46c449d81c4e380dc386,
+        type: 3}
       propertyPath: allyPortDatas
       value: 
       objectReference: {fileID: 11400000, guid: 460c4d2e6453e3548bcaffa623f420ae,
@@ -377,6 +394,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RelicManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264349190392627088, guid: 7a1015bdaea90d5409258cec535882c6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1264349190392627090, guid: 7a1015bdaea90d5409258cec535882c6,
         type: 3}
@@ -433,6 +455,76 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1264349190392627091, guid: 7a1015bdaea90d5409258cec535882c6,
+        type: 3}
+      propertyPath: relicList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264349190914521145, guid: 7a1015bdaea90d5409258cec535882c6,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264349190914521145, guid: 7a1015bdaea90d5409258cec535882c6,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264349190914521145, guid: 7a1015bdaea90d5409258cec535882c6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264349190914521145, guid: 7a1015bdaea90d5409258cec535882c6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264349190914521145, guid: 7a1015bdaea90d5409258cec535882c6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264349190914521145, guid: 7a1015bdaea90d5409258cec535882c6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1264349190914521146, guid: 7a1015bdaea90d5409258cec535882c6,
+        type: 3}
+      propertyPath: m_Spacing.x
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1264349190914521149, guid: 7a1015bdaea90d5409258cec535882c6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a1015bdaea90d5409258cec535882c6, type: 3}
+--- !u!1 &7346757463994477874 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1264349190971659568, guid: 7a1015bdaea90d5409258cec535882c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 7346757463994477873}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7346757463994477875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7346757463994477874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2

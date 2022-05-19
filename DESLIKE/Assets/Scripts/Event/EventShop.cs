@@ -1,20 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class EventShop : EventBasic
 {
-    public GameObject CheckPanel, ErrorPanel;
-    public GameObject[] SoldOutPanel = new GameObject[6];
-    public VilShopNode vilShopNode;
-    public List<Relic> relicList;
-    EventManager eventManager;
-    public TMP_Text[] Prices = new TMP_Text[6];
+    int curGold, curRelicCount;
+    int[] relicLevelCount = new int[3];
+    int[] randRelic = new int[6];   // 목록별 랜덤넘버
+    int[] relicPrice = new int[6];  // 목록별 가격
+    bool isNewSet, isEventSet;
+    bool[] isSoldOut = new bool[6];
 
+
+    List<Relic> relicList;
+    List<Relic> curRelicList;
+
+    [SerializeField] GameObject CheckPanel, ErrorPanel;
+    [SerializeField] GameObject[] SoldOutPanel = new GameObject[6];
+    [SerializeField] VilShopNode vilShopNode;
+    [SerializeField] GameObject RelicPrefab;
+    [SerializeField] Canvas RelicCanvas;
+    [SerializeField] TMP_Text[] Prices = new TMP_Text[6];
     
     void OnEnable()
     {
+        LoadData();
         DataUpdate();
         ShopSetting();
         SoldOutPanelUpdate();
@@ -23,12 +35,55 @@ public class EventShop : EventBasic
         SaveData();
     }
 
+    void SaveData()
+    {
+        SaveShopEData();
+        SaveComData();
+        saveManager.SaveGameData();
+    }
+
+    void SaveShopEData()
+    {
+        saveManager.gameData.goodsSaveData.gold = curGold;
+        saveManager.gameData.eventData.isEventSet = isEventSet;
+
+        for (int i = 0; i < 3; i++)
+        {
+            saveManager.gameData.villageData.randRelic[i] = randRelic[i];
+            saveManager.gameData.villageData.relicPrice[i] = relicPrice[i];
+            saveManager.gameData.villageData.isSoldOut[i] = isSoldOut[i];
+        }
+    }
+
+    void LoadData()
+    {
+        LoadShopEData();
+        LoadComData();
+    }
+
+    void LoadShopEData()
+    {
+        curGold = saveManager.gameData.goodsSaveData.gold;
+        curRelicCount = RelicManager.instance.relicList.Count;
+        isEventSet = saveManager.gameData.eventData.isEventSet;
+        
+        for (int i = 0; i < 3; i++)
+        {
+            randRelic[i] = saveManager.gameData.villageData.randRelic[i];
+            relicPrice[i] = saveManager.gameData.villageData.relicPrice[i];
+            isSoldOut[i] = saveManager.gameData.villageData.isSoldOut[i];
+        }
+        curRelicList = new List<Relic>();
+        for (int i = 0; i < curRelicCount; i++)
+            curRelicList.Add(RelicManager.instance.relicList[i]);
+    }
+
     void DataUpdate()
     {
-        relicList = new List<Relic>();
         relicLevelCount[0] = eventNode.relicLevelCount[0];
-        relicLevelCount[1] = relicLevelCount[0] + eventNode.relicLevelCount[1];
-        relicLevelCount[2] = relicLevelCount[1] + eventNode.relicLevelCount[2];
+        relicLevelCount[1] = eventNode.relicLevelCount[1];
+        relicLevelCount[2] = eventNode.relicLevelCount[2];
+        relicList = RelicManager.instance.relicList;
     }
 
     void SoldOutPanelUpdate()
@@ -44,172 +99,155 @@ public class EventShop : EventBasic
 
     void ShopSetting()
     {
-    // randRelic[i] = Random.Range(0, relicLevelCount[0]); 일반용
-    // randRelic[i] = Random.Range(relicLevelCount[0], relicLevelCount[1]); 희귀용
-    // randRelic[i] = Random.Range(relicLevelCount[1], relicLevelCount[2]); 전설용
+        // randRelic[i] = Random.Range(0, relicLevelCount[0]); 일반용
+        // randRelic[i] = relicLevelCount[0] + Random.Range(0, relicLevelCount[1]); 희귀용
+        // randRelic[i] = relicLevelCount[0] + relicLevelCount[1] + Random.Range(0, relicLevelCount[2]); 전설용
+        InfiniteLoopDetector.Run();
 
-    // 1. 일반 유물 90G~110G
-    firstRelic:
         if (isEventSet == false)
         {
-            randRelic[0] = Random.Range(0, relicLevelCount[0]);
-            for (int i = 0; i < relicList.Count; i++)
+            relicList = new List<Relic>(6);
+            for (int i = 0; i < 6; i++)
             {
-                // 이미 가지고 있는 유물이라면 다시 랜덤값
-                if (relicList[i].relicData.code == eventNode.ableRelicRewards[randRelic[0]].relicData.code)
-                    goto firstRelic;
-                // 획득 유물 갯수가 한정되어있어서 모든 유물을 가진 경우의 수는 제외함
-            }
-            relicPrice[0] = Random.Range(90, 21);   // 90~110G
-        }
-        relicList.Add(eventNode.ableRelicRewards[randRelic[0]]);
+            RelicReroll:
+                InfiniteLoopDetector.Run();
+                if (i < 4)  // 일반 유물
+                {
+                    Debug.Log("1 : " + i);
+                    relicPrice[i] = 90 + Random.Range(0, 21);   // 90~110G
+                    randRelic[i] = Random.Range(0, relicLevelCount[0]); // 일반
+                }
+                else // 희귀 유물
+                {
+                    relicPrice[i] = 160 + Random.Range(0, 21); // 160~180G
+                    randRelic[i] = relicLevelCount[0] + Random.Range(0, relicLevelCount[1]); // 희귀
+                }
+            
+                for (int j = 0; j < i - 1; j++) // 이전 랜덤값과 같다면 재시도
+                {
+                    if (randRelic[i] == randRelic[j])
+                        goto RelicReroll;
+                }
+                /*
+                for (int j = 0; j < curRelicCount; j++)
+                {
+                    InfiniteLoopDetector.Run();
+                    if (curRelicList[j].relicData.code == eventNode.ableRelicRewards[randRelic[i]].relicData.code)
+                        goto RelicReroll;
+                }
+                */
+                relicList.Add(eventNode.ableRelicRewards[randRelic[i]]);
+          
+                Prices[i].text = relicPrice[i] + "골드";
+                Instantiate(eventNode.ableRelicRewards[randRelic[i]], RelicCanvas.transform.GetChild(i).transform);
 
-    // 2. 일반 유물 90G~110G
-    secondRelic:
-        if (isEventSet == false)
+                Debug.Log("for end : " + i);
+            }
+        }
+        else
         {
-            randRelic[1] = Random.Range(0, relicLevelCount[0]);
-            for (int i = 0; i < relicList.Count; i++)
+            for(int i = 0; i<6; i++)
             {
-                // 이미 가지고 있는 유물이라면 다시 랜덤값
-                if (relicList[i].relicData.code == eventNode.ableRelicRewards[randRelic[1]].relicData.code)
-                    goto secondRelic;
-                // 획득 유물 갯수가 한정되어있어서 모든 유물을 가진 경우의 수는 제외함
+                relicList.Add(eventNode.ableRelicRewards[randRelic[i]]);
+                Prices[i].text = relicPrice[i] + "골드";
+                Instantiate(eventNode.ableRelicRewards[randRelic[i]], RelicCanvas.transform.GetChild(i).transform);
             }
-            relicPrice[1] = Random.Range(90, 21);   // 90~110G
         }
-        relicList.Add(eventNode.ableRelicRewards[randRelic[1]]);
+    }
 
-    // 3. 일반 유물 90G~110G
-    thirdRelic:
-        if (isEventSet == false)
+    public void OpenCheck(int i)
+    {
+        switch(i)
         {
-            randRelic[2] = Random.Range(0, relicLevelCount[0]);
-            for (int i = 0; i < relicList.Count; i++)
-            {
-                // 이미 가지고 있는 유물이라면 다시 랜덤값
-                if (relicList[i].relicData.code == eventNode.ableRelicRewards[randRelic[2]].relicData.code)
-                    goto thirdRelic;
-                // 획득 유물 갯수가 한정되어있어서 모든 유물을 가진 경우의 수는 제외함
-            }
-            relicPrice[2] = Random.Range(90, 21);   // 90~110G
-        }
-        relicList.Add(eventNode.ableRelicRewards[randRelic[2]]);
-
-    // 4. 일반 유물 90G~110G
-    fourthRelic:
-        if (isEventSet == false)
-        {
-            randRelic[3] = Random.Range(0, relicLevelCount[0]);
-            for (int i = 0; i < relicList.Count; i++)
-            {
-                // 이미 가지고 있는 유물이라면 다시 랜덤값
-                if (relicList[i].relicData.code == eventNode.ableRelicRewards[randRelic[3]].relicData.code)
-                    goto fourthRelic;
-                // 획득 유물 갯수가 한정되어있어서 모든 유물을 가진 경우의 수는 제외함
-            }
-            relicPrice[3] = Random.Range(90, 21);   // 90~110G
-        }
-        relicList.Add(eventNode.ableRelicRewards[randRelic[3]]);
-
-    // 5. 희귀 유물 160G~180G
-    fifthRelic:
-        if (isEventSet == false)
-        {
-            randRelic[4] = Random.Range(relicLevelCount[0], relicLevelCount[1]);
-            for (int i = 0; i < relicList.Count; i++)
-            {
-                // 이미 가지고 있는 유물이라면 다시 랜덤값
-                if (relicList[i].relicData.code == eventNode.ableRelicRewards[randRelic[4]].relicData.code)
-                    goto fifthRelic;
-                // 획득 유물 갯수가 한정되어있어서 모든 유물을 가진 경우의 수는 제외함
-            }
-            relicPrice[4] = Random.Range(160, 21);   // 160~180G
-        }
-        relicList.Add(eventNode.ableRelicRewards[randRelic[4]]);
-
-    // 6. 희귀 유물 160G~180G
-    sixthRelic:
-        if (isEventSet == false)
-        {
-            randRelic[5] = Random.Range(relicLevelCount[0], relicLevelCount[1]);
-            for (int i = 0; i < relicList.Count; i++)
-            {
-                // 이미 가지고 있는 유물이라면 다시 랜덤값
-                if (relicList[i].relicData.code == eventNode.ableRelicRewards[randRelic[5]].relicData.code)
-                    goto sixthRelic;
-                // 획득 유물 갯수가 한정되어있어서 모든 유물을 가진 경우의 수는 제외함
-            }
-            relicPrice[5] = Random.Range(160, 21);   // 160~180G
-        }
-        relicList.Add(eventNode.ableRelicRewards[randRelic[5]]);
-
-        for (int i = 0; i < 6; i++)
-        {
-            Prices[i].text = relicPrice[i] + "골드";
+            case 1:
+                OpenCheck1();
+                break;
+            case 2:
+                OpenCheck2();
+                break;
+            case 3:
+                OpenCheck3();
+                break;
+            case 4:
+                OpenCheck4();
+                break;
+            case 5:
+                OpenCheck5();
+                break;
+            case 6:
+                OpenCheck6();
+                break;
         }
     }
 
     public void OpenCheck1()
     {
         vilShopNode.curRelic = relicList[0];
-        // relic instantiate 후 보여주기
+        vilShopNode.curNumber = 0;
         CheckPanel.SetActive(true);
+        Instantiate(relicList[0], CheckPanel.transform.GetChild(0).transform);
     }
 
     public void OpenCheck2()
     {
         vilShopNode.curRelic = relicList[1];
-        // relic instantiate 후 보여주기
+        vilShopNode.curNumber = 1;
+        Instantiate(relicList[1], CheckPanel.transform.GetChild(0).transform);
         CheckPanel.SetActive(true);
     }
 
     public void OpenCheck3()
     {
         vilShopNode.curRelic = relicList[2];
-        // relic instantiate 후 보여주기
+        vilShopNode.curNumber = 2;
+        Instantiate(relicList[2], CheckPanel.transform.GetChild(0).transform);
         CheckPanel.SetActive(true);
-
     }
 
     public void OpenCheck4()
     {
         vilShopNode.curRelic = relicList[3];
-        // relic instantiate 후 보여주기
+        vilShopNode.curNumber = 3;
+        Instantiate(relicList[3], CheckPanel.transform.GetChild(0).transform);
         CheckPanel.SetActive(true);
     }
 
     public void OpenCheck5()
     {
         vilShopNode.curRelic = relicList[4];
-        // relic instantiate 후 보여주기
+        vilShopNode.curNumber = 4;
+        Instantiate(relicList[4], CheckPanel.transform.GetChild(0).transform);
         CheckPanel.SetActive(true);
-
     }
 
     public void OpenCheck6()
     {
         vilShopNode.curRelic = relicList[5];
-        // relic instantiate 후 보여주기
+        vilShopNode.curNumber = 5;
+        Instantiate(relicList[5], CheckPanel.transform.GetChild(0).transform);
         CheckPanel.SetActive(true);
     }
 
     public void CloseCheckPanel()
     {
+        Debug.Log(vilShopNode.curRelic.relicData.relicName);
+        Transform cloneTransform = CheckPanel.transform.GetChild(0).transform.Find(vilShopNode.curRelic.relicData.relicName + "(Clone)");
+        if (cloneTransform != null)
+            Destroy(cloneTransform.gameObject);
+        else Debug.Log("파괴할 오브젝트가 없습니다.");
         CheckPanel.SetActive(false);
     }
 
     public void BuyRelic()
     {
-        if (gold < relicPrice[vilShopNode.curNumber])
+        if (curGold < relicPrice[vilShopNode.curNumber])
         {
-            Debug.Log("골드가 부족합니다.");
             ErrorPanel.SetActive(true); // 골드가 부족하다는 표시 후 클릭하면 없어지게끔
         }
         else
         {
             vilShopNode.GetRelic();
-            gold -= relicPrice[vilShopNode.curNumber];
+            curGold -= relicPrice[vilShopNode.curNumber];
             isSoldOut[vilShopNode.curNumber] = true;
             SoldOutPanel[vilShopNode.curNumber].SetActive(true);    // 매진 표시
             SoldOutPanelUpdate();
@@ -226,6 +264,8 @@ public class EventShop : EventBasic
     {
         for (int i = 0; i < 6; i++)
             isSoldOut[i] = false;
+        curDay += 2;
+        SaveData();
         EndEvent();
     }
 }

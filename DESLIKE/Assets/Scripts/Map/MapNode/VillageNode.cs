@@ -13,6 +13,7 @@ public class VillageNode : MapNode
 
     public void Play_VillageNode()
     {
+        map.curMapNode = this;
         SceneManager.LoadScene("Village");
     }
 

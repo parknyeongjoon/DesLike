@@ -16,19 +16,9 @@ public class Relic : MonoBehaviour
         toolTip.text = relicData.toopTip;
     }
 
-    public virtual void Effect()
-    {
-
-    }
-
     public void CloseToolTip()
     {
         toolTipPanel.SetActive(false);
-    }
-
-    public virtual bool ConditionCheck()
-    {
-        return false;
     }
 
     public IEnumerator ConditionEffect()//Relic이 발동될 조건이면 아이콘 깜빡거리게

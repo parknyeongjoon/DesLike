@@ -23,7 +23,7 @@ public class ActiveSkill : Skill
     {
         heroInfo.action = Soldier_Action.Skill;
         heroInfo.skeletonAnimation.state.SetAnimation(0, skillData.code, false);
-        //AkSoundEngine.PostEvent(skillData.code, gameObject);활성화
+        AkSoundEngine.PostEvent(skillData.code, gameObject);
         yield return new WaitForSeconds(((ActiveSkillData)skillData).start_Delay);
         if (targetInfo && targetInfo.gameObject.layer != 7)
         {

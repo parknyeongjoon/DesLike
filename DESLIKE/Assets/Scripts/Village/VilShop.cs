@@ -123,12 +123,14 @@ public class VilShop : MonoBehaviour
                         goto RelicReroll;
 
                 }
+                /*
                 for (int j = 0; j < curRelicCount; j++)
                 {
                     InfiniteLoopDetector.Run();
                     if (curRelicList[j].relicData.code == villageNode.ableRelicRewards[randRelic[i]].relicData.code)
                         goto RelicReroll;
                 }
+                */
                 relicList.Add(villageNode.ableRelicRewards[randRelic[i]]);
                 Prices[i].text = relicPrice[i] + "°ñµå";
                 Instantiate(villageNode.ableRelicRewards[randRelic[i]], RelicCanvas.transform.GetChild(i).transform);

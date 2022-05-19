@@ -127,14 +127,15 @@ public class EventShop : EventBasic
                 {
                     if (randRelic[i] == randRelic[j])
                         goto RelicReroll;
-                 }
+                }
+                /*
                 for (int j = 0; j < curRelicCount; j++)
                 {
                     InfiniteLoopDetector.Run();
                     if (curRelicList[j].relicData.code == eventNode.ableRelicRewards[randRelic[i]].relicData.code)
                         goto RelicReroll;
                 }
-
+                */
                 relicList.Add(eventNode.ableRelicRewards[randRelic[i]]);
           
                 Prices[i].text = relicPrice[i] + "°ñµå";

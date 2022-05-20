@@ -8,8 +8,7 @@ public class EventNodeScript : NodeScript
     EventNode eventNode;
     [SerializeField] GameObject InfoTemp;
     SaveManager saveManager;
-    int phyNorSolC, speNorSolC, comNorSolC, phyEpicSolC, speEpicSolC, comEpicSolC,
-        phyNorRelC, speNorRelC, comNorRelC, phyEpicRelC, speEpicRelC, comEpicRelC, phyLegendRelC, speLegendRelC, comLegendRelC;
+    int phyNorSolC, speNorSolC, phyEpicSolC, speEpicSolC;
     const int THREE = 3;
     int[] nextEvent = new int[THREE];
     public bool[] isEventSet = new bool[THREE];
@@ -49,20 +48,8 @@ public class EventNodeScript : NodeScript
 
         phyNorSolC = map.physicNorSol.Count;
         speNorSolC = map.spellNorSol.Count;
-        comNorSolC = map.commonNorSol.Count;
         phyEpicSolC = map.physicEpicSol.Count;
         speEpicSolC = map.spellEpicSol.Count;
-        comEpicSolC = map.commonEpicSol.Count;
-
-        phyNorRelC = map.physicNorRel.Count;
-        speNorRelC = map.spellNorRel.Count;
-        comNorRelC = map.commonNorRel.Count;
-        phyEpicRelC = map.physicEpicRel.Count;
-        speEpicRelC = map.spellEpicRel.Count;
-        comEpicRelC = map.commonEpicRel.Count;
-        phyLegendRelC = map.physicLegendRel.Count;
-        speLegendRelC = map.spellLegendRel.Count;
-        comLegendRelC = map.commonLegendRel.Count;
     }
 
     public void EventNodeSet1()
@@ -140,8 +127,8 @@ public class EventNodeScript : NodeScript
     public void NorSolSet(int num, int button)  // 일반 병사 1마리 추가
     {
         int norTotal;
-        if (eventNode.kingdom == Kingdom.Physic) norTotal = phyNorSolC + comNorSolC;  // 무투국 + 공통
-        else norTotal = speNorSolC + comNorSolC; // 주술국 + 공통
+        if (eventNode.kingdom == Kingdom.Physic) norTotal = phyNorSolC;  // 무투국 + 공통
+        else norTotal = speNorSolC; // 주술국 + 공통
 
         randomInt:
         InfiniteLoopDetector.Run();
@@ -166,13 +153,13 @@ public class EventNodeScript : NodeScript
         int norTotal, epicTotal;
         if (eventNode.kingdom == Kingdom.Physic)
         {
-            norTotal = phyNorSolC + comNorSolC;
-            epicTotal = phyEpicSolC + comEpicSolC;
+            norTotal = phyNorSolC;
+            epicTotal = phyEpicSolC;
         }
         else
         {
-            norTotal = speNorSolC + comNorSolC;
-            epicTotal = speEpicSolC + comEpicSolC;
+            norTotal = speNorSolC;
+            epicTotal = speEpicSolC;
         }
 
         randomInt:

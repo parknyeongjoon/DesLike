@@ -17,9 +17,6 @@ public class Map : ScriptableObject
     public List<SoldierData> spellNorSol;
     public List<SoldierData> spellEpicSol;
 
-    public List<SoldierData> commonNorSol;
-    public List<SoldierData> commonEpicSol;
-
     public Dictionary<string, Relic> physicNorRel;
     public Dictionary<string, Relic> physicEpicRel;
     public Dictionary<string, Relic> physicLegendRel;

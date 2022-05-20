@@ -11,8 +11,7 @@ public class BattleNodeScript : NodeScript
     [SerializeField] GameObject InfoTemp, InfoPrefab, MoreInfoPanel, MoreTemp, MorePrefab, ChallengeO;
     SaveManager saveManager;
     const int THREE = 3;
-    int phyNorSolC, speNorSolC, comNorSolC, phyEpicSolC, speEpicSolC, comEpicSolC,
-        phyNorRelC, speNorRelC, comNorRelC, phyEpicRelC, speEpicRelC, comEpicRelC, phyLegendRelC, speLegendRelC, comLegendRelC;
+    int phyNorSolC, speNorSolC, phyEpicSolC, speEpicSolC;
     int[] nextEvent = new int[THREE];
     public bool[] isEventSet = new bool[THREE];
     bool[] isRewardSet = new bool[THREE];
@@ -107,20 +106,8 @@ public class BattleNodeScript : NodeScript
 
         phyNorSolC = map.physicNorSol.Count;
         speNorSolC = map.spellNorSol.Count;
-        comNorSolC = map.commonNorSol.Count;
         phyEpicSolC = map.physicEpicSol.Count;
         speEpicSolC = map.spellEpicSol.Count;
-        comEpicSolC = map.commonEpicSol.Count;
-
-        phyNorRelC = map.physicNorRel.Count;
-        speNorRelC = map.spellNorRel.Count;
-        comNorRelC = map.commonNorRel.Count;
-        phyEpicRelC = map.physicEpicRel.Count;
-        speEpicRelC = map.spellEpicRel.Count;
-        comEpicRelC = map.commonEpicRel.Count;
-        phyLegendRelC = map.physicLegendRel.Count;
-        speLegendRelC = map.spellLegendRel.Count;
-        comLegendRelC = map.commonLegendRel.Count;
     }
 
     public void SetBattleReward1()
@@ -171,8 +158,8 @@ public class BattleNodeScript : NodeScript
     public void NorSolSet(int num, int button)  // 일반 병사 1마리 추가
     {
         int norTotal;
-        if (battleNode.kingdom == Kingdom.Physic) norTotal = phyNorSolC + comNorSolC;  // 무투국 + 공통
-        else norTotal = speNorSolC + comNorSolC; // 주술국 + 공통
+        if (battleNode.kingdom == Kingdom.Physic) norTotal = phyNorSolC;  // 무투국 + 공통
+        else norTotal = speNorSolC; // 주술국 + 공통
 
         randomInt:
         int rand = Random.Range(0, norTotal);   // 일반 범위 내에서 랜덤값 설정
@@ -195,13 +182,13 @@ public class BattleNodeScript : NodeScript
         int norTotal, epicTotal;
         if (battleNode.kingdom == Kingdom.Physic)
         {
-            norTotal = phyNorSolC + comNorSolC;
-            epicTotal = phyEpicSolC + comEpicSolC;
+            norTotal = phyNorSolC;
+            epicTotal = phyEpicSolC;
         }
         else
         {
-            norTotal = speNorSolC + comNorSolC;
-            epicTotal = speEpicSolC + comEpicSolC;
+            norTotal = speNorSolC;
+            epicTotal = speEpicSolC;
         }
 
         randomInt:

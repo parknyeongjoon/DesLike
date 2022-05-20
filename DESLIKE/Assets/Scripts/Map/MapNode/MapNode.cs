@@ -18,55 +18,34 @@ public class MapNode : ScriptableObject
     {
         kingdom = map.kingdom;
         int comNorSolC, comEpicSolC;
-
-        if (map.commonNorSol != null) comNorSolC = 0;
-        else comNorSolC = map.commonNorSol.Count;
-        if (map.commonEpicSol == null) comEpicSolC = 0;
-        else comEpicSolC = map.commonEpicSol.Count;
-
-        int comNorRelC = map.commonNorRel.Count;
-        int comEpicRelC = map.commonEpicRel.Count;
-        int comLegendRelC = map.commonLegendRel.Count;
-
+        
         int kingdomNorSolC, kingdomEpicSolC;
-        int sum1, sum2, sum3;
+        int sum;
 
         if (kingdom == Kingdom.Physic)  // ableSoldierReward 세팅
         {
             kingdomNorSolC = map.physicNorSol.Count;
             kingdomEpicSolC = map.physicEpicSol.Count;
-            sum1 = kingdomNorSolC + comNorSolC;
-            sum2 = sum1 + kingdomEpicSolC;
-            sum3 = sum2 + comEpicSolC;
-            if (ableSoldierRewards.Count < sum3)
+            sum = kingdomNorSolC + kingdomEpicSolC;
+            if (ableSoldierRewards.Count < sum)
             {
                 for (int i = 0; i < kingdomNorSolC; i++)
                     ableSoldierRewards.Add(map.physicNorSol[i]);    // 국가별 일반 유닛 추가
-                for (int i = kingdomNorSolC; i < sum1; i++)
-                    ableSoldierRewards.Add(map.commonNorSol[i - kingdomNorSolC]); // 공통 일반 유닛 추가
-                for (int i = sum1; i < sum2; i++)
-                    ableSoldierRewards.Add(map.physicEpicSol[i - sum1]);    // 국가별 희귀 유닛 추가
-                for (int i = sum2; i < sum3; i++)
-                    ableSoldierRewards.Add(map.commonEpicSol[i - sum2]);    // 공통 희귀 유닛 추가
+                for (int i = kingdomNorSolC; i < sum; i++)
+                    ableSoldierRewards.Add(map.physicEpicSol[i - kingdomNorSolC]);    // 국가별 희귀 유닛 추가
             }
         }
         else if (kingdom == Kingdom.Spell)
         {
             kingdomNorSolC = map.spellNorSol.Count;
             kingdomEpicSolC = map.spellEpicSol.Count;
-            sum1 = kingdomNorSolC + comNorSolC;
-            sum2 = sum1 + kingdomEpicSolC;
-            sum3 = sum2 + comEpicSolC;
-            if (ableSoldierRewards.Count < sum3)
+            sum = kingdomNorSolC + kingdomEpicSolC;
+            if (ableSoldierRewards.Count < sum)
             {
                 for (int i = 0; i < kingdomNorSolC; i++)
                     ableSoldierRewards.Add(map.spellNorSol[i]);    // 국가별 일반 유닛 추가
-                for (int i = kingdomNorSolC; i < sum1; i++)
-                    ableSoldierRewards.Add(map.commonNorSol[i - kingdomNorSolC]); // 공통 일반 유닛 추가
-                for (int i = sum1; i < sum2; i++)
-                    ableSoldierRewards.Add(map.spellEpicSol[i - sum1]);    // 국가별 희귀 유닛 추가
-                for (int i = sum2; i < sum3; i++)
-                    ableSoldierRewards.Add(map.commonEpicSol[i - sum2]);    // 공통 희귀 유닛 추가
+                for (int i = kingdomNorSolC; i < sum; i++)
+                    ableSoldierRewards.Add(map.spellEpicSol[i - kingdomNorSolC]);    // 국가별 희귀 유닛 추가
             }
         }
     }

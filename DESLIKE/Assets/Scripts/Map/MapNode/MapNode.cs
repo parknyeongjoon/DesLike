@@ -70,22 +70,22 @@ public class MapNode : ScriptableObject
             if(rand < map.physicNorRel.Count)   // 국가 유물이라면
             {
                 rand = Random.Range(0, map.physicNorRel.Count); // 국가 유물 내 랜덤값
-                if (reward.relicReward.ContainsKey("PNR" + rand))   // 가지고 있는 유물인지
+                if (reward.relicReward.ContainsKey("Relic_Physic_N_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
                 }
-                return ("PNR" + rand);
+                return ("Relic_Physic_N_" + rand);
             }
             else // 일반 유물
             {
                 rand = Random.Range(0, map.commonNorRel.Count);
-                if (reward.relicReward.ContainsKey("CNR" + rand))   // 가지고 있는 유물인지
+                if (reward.relicReward.ContainsKey("Relic_Common_N_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
                 }
-                return ("CNR" + rand);
+                return ("Relic_Common_N_" + rand);
             }
         }
         else
@@ -97,22 +97,22 @@ public class MapNode : ScriptableObject
             if (rand < map.spellNorRel.Count)   // 국가 유물이라면
             {
                 rand = Random.Range(0, map.spellNorRel.Count);  // 국가 유물 내 랜덤값
-                if (reward.relicReward.ContainsKey("SNR" + rand))   // 가지고 있는 유물인지
+                if (reward.relicReward.ContainsKey("Relic_Spell_N_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
                 }
-                return ("SNR" + rand);
+                return ("Relic_Spell_N_" + rand);
             }
             else // 일반 유물
             {
                 rand = Random.Range(0, map.commonNorRel.Count);
-                if (reward.relicReward.ContainsKey("CNR" + rand))   // 가지고 있는 유물인지
+                if (reward.relicReward.ContainsKey("Relic_Common_N_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
                 }
-                return ("CNR" + rand);
+                return ("Relic_Common_N_" + rand);
             }
         }
     }
@@ -131,22 +131,22 @@ public class MapNode : ScriptableObject
             if (rand < map.physicNorRel.Count)   // 국가 유물이라면
             {
                 rand = Random.Range(0, map.physicEpicRel.Count); // 국가 유물 내 랜덤값
-                if (reward.relicReward.ContainsKey("PER" + rand))   // 가지고 있는 유물인지
+                if (reward.relicReward.ContainsKey("Relic_Physic_E_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
                 }
-                return ("PER" + rand);
+                return ("Relic_Physic_E_" + rand);
             }
             else // 일반 유물
             {
                 rand = Random.Range(0, map.commonEpicRel.Count);
-                if (reward.relicReward.ContainsKey("CER" + rand))   // 가지고 있는 유물인지
+                if (reward.relicReward.ContainsKey("Relic_Common_E_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
                 }
-                return ("CER" + rand);
+                return ("Relic_Common_E_" + rand);
             }
         }
         else
@@ -158,22 +158,22 @@ public class MapNode : ScriptableObject
             if (rand < map.spellNorRel.Count)   // 국가 유물이라면
             {
                 rand = Random.Range(0, map.spellEpicRel.Count);  // 국가 유물 내 랜덤값
-                if (reward.relicReward.ContainsKey("SER" + rand))   // 가지고 있는 유물인지
+                if (reward.relicReward.ContainsKey("Relic_Spell_E_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
                 }
-                return ("SER" + rand);
+                return ("Relic_Spell_E_" + rand);
             }
             else // 일반 유물
             {
                 rand = Random.Range(0, map.commonEpicRel.Count);
-                if (reward.relicReward.ContainsKey("CER" + rand))   // 가지고 있는 유물인지
+                if (reward.relicReward.ContainsKey("Relic_Common_E_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
                 }
-                return ("CER" + rand);
+                return ("Relic_Common_E_" + rand);
             }
         }
     }
@@ -192,22 +192,22 @@ public class MapNode : ScriptableObject
             if (rand < map.physicNorRel.Count)   // 국가 유물이라면
             {
                 rand = Random.Range(0, map.physicLegendRel.Count); // 국가 유물 내 랜덤값
-                if (reward.relicReward.ContainsKey("PLR" + rand))   // 가지고 있는 유물인지
+                if (reward.relicReward.ContainsKey("Relic_Physic_L_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
                 }
-                return ("PLR" + rand);
+                return ("Relic_Physic_L_" + rand);
             }
             else // 일반 유물
             {
                 rand = Random.Range(0, map.commonEpicRel.Count);
-                if (reward.relicReward.ContainsKey("CLR" + rand))   // 가지고 있는 유물인지
+                if (reward.relicReward.ContainsKey("Relic_Common_L_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
                 }
-                return ("CLR" + rand);
+                return ("Relic_Common_L_" + rand);
             }
         }
         else
@@ -219,22 +219,22 @@ public class MapNode : ScriptableObject
             if (rand < map.spellNorRel.Count)   // 국가 유물이라면
             {
                 rand = Random.Range(0, map.spellEpicRel.Count);  // 국가 유물 내 랜덤값
-                if (reward.relicReward.ContainsKey("SLR" + rand))   // 가지고 있는 유물인지
+                if (reward.relicReward.ContainsKey("Relic_Spell_L_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
                 }
-                return ("SLR" + rand);
+                return ("Relic_Spell_L_" + rand);
             }
             else // 일반 유물
             {
                 rand = Random.Range(0, map.commonLegendRel.Count);
-                if (reward.relicReward.ContainsKey("CLR" + rand))   // 가지고 있는 유물인지
+                if (reward.relicReward.ContainsKey("Relic_Common_L_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
                 }
-                return ("CLR" + rand);
+                return ("Relic_Common_L_" + rand);
             }
         }
     }

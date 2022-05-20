@@ -7,7 +7,7 @@ public class RelicManager : MonoBehaviour
 {
     public static RelicManager instance;
 
-    public List<Relic> relicList = new List<Relic>();
+    public Dictionary<string, Relic> relicList = new Dictionary<string, Relic>();
 
     public Canvas relicCanvas;
 
@@ -25,8 +25,6 @@ public class RelicManager : MonoBehaviour
         }
     }
 
-    // relic instantiate 해야함
-
     void Awake()
     {
         //싱글톤 패턴
@@ -34,8 +32,18 @@ public class RelicManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public void AddRelicInCanvas()
+    public void GetRelic(string relicKey)//relicKey에 해당하는 유물을 흭득하는 함수
     {
-        Instantiate(relicList[relicList.Count - 1], relicCanvas.transform.GetChild(0).transform);
+        if (SaveManager.Instance.dataSheet.relicDataSheet[relicKey])
+        {
+            GameObject relicObject = SaveManager.Instance.dataSheet.relicObjectSheet[relicKey];
+            relicList.Add(relicKey, relicObject.GetComponent<Relic>());
+            Instantiate(relicObject, relicCanvas.transform.GetChild(0).transform);
+            relicList[relicKey].DoEffect();
+        }
+        else
+        {
+            Debug.Log("유물 키 없음");
+        }
     }
 }

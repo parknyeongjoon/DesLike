@@ -7,16 +7,13 @@ using TMPro;
 public class Relic : MonoBehaviour
 {
     public RelicData relicData;
-    [SerializeField]
-    GameObject toolTipPanel;
-    [SerializeField]
-    TMP_Text toolTip;
-    [SerializeField]
-    Image relicImg;
-    
-    void Start()
+    [SerializeField] GameObject toolTipPanel;
+    [SerializeField] TMP_Text toolTip;
+    [SerializeField] Image relicImg;
+
+    public virtual void DoEffect()
     {
-        relicImg.sprite = relicData.relicImg;
+
     }
 
     public void SetToolTip()

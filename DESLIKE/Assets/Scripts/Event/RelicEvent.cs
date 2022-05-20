@@ -167,7 +167,7 @@ public class RelicEvent : EventBasic
         relicManager.relicList.Add(eventNode.reward.relic[0]);
         // RelicPanel¿¡´Ù°¡ instantiate
 
-        RelicManager.instance.AddRelicInCanvas();
+        RelicManager.instance.GetRelic();
 
         // ÀÏ¹Ý À¯¹° È¹µæ ÇÔ¼ö (º¯°æ ÇÊ¿ä)
         ButtonsOff();
@@ -179,7 +179,7 @@ public class RelicEvent : EventBasic
         curGold -= 50; // °ñµå ¼Õ½Ç ÇÔ¼ö
         relicManager.relicList.Add(eventNode.reward.relic[1]);
         // Èñ±Í À¯¹° È¹µæ ÇÔ¼ö(º¯°æ ÇÊ¿ä)
-        RelicManager.instance.AddRelicInCanvas();
+        RelicManager.instance.GetRelic();
 
         ButtonsOff();
     }
@@ -193,7 +193,7 @@ public class RelicEvent : EventBasic
         // ÃÖ´ëÃ¼·ÂÀÇ n% ÀÒ´Â ÇÔ¼ö, ¸¸¾à ÇöÀç Ã¼·ÂÀÌ n%º¸´Ù ÀÛ´Ù¸é ÇöÀç Ã¼·ÂÀ» 1·Î ¸¸µê
         relicManager.relicList.Add(eventNode.reward.relic[1]);
         // Èñ±Í À¯¹° È¹µæ ÇÔ¼ö
-        RelicManager.instance.AddRelicInCanvas();
+        RelicManager.instance.GetRelic();
 
         ButtonsOff();
     }
@@ -208,7 +208,7 @@ public class RelicEvent : EventBasic
         relicManager.relicList.Add(eventNode.reward.relic[2]);
         // Àü¼³ À¯¹° È¹µæ ÇÔ¼ö
 
-        RelicManager.instance.AddRelicInCanvas();
+        RelicManager.instance.GetRelic();
 
         ButtonsOff();
     }
@@ -220,7 +220,7 @@ public class RelicEvent : EventBasic
         relicManager.relicList.Add(eventNode.reward.relic[1]);
         // Èñ±Í À¯¹° È¹µæ ÇÔ¼ö
 
-        RelicManager.instance.AddRelicInCanvas();
+        RelicManager.instance.GetRelic();
 
         ButtonsOff();
     }

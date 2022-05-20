@@ -17,14 +17,13 @@ public class RelicRewardBtn : MonoBehaviour
         relicScript = SaveManager.Instance.map.curMapNode.reward.relic[0].GetComponent<Relic>();
         relicData = relicScript.relicData;
         //toolTipPanel.SetActive(false);
-        transform.GetChild(0).GetComponent<TMP_Text>().text = relicData.relicName.ToString();
+        transform.GetChild(0).GetComponent<TMP_Text>().text = relicData.relicName;
         transform.GetChild(1).GetComponent<Image>().sprite = relicData.relicImg;
     }
 
     public void GetReward()
     {
-        RelicManager.Instance.relicList.Add(relicScript);
-        RelicManager.Instance.AddRelicInCanvas();
+        RelicManager.Instance.GetRelic(relicData.code);
         Destroy(gameObject);
     }
 

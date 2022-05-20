@@ -17,8 +17,6 @@ public class MapNode : ScriptableObject
     public void SetAbleReward() // 병사만 설정
     {
         kingdom = map.kingdom;
-        int comNorSolC, comEpicSolC;
-        
         int kingdomNorSolC, kingdomEpicSolC;
         int sum;
 

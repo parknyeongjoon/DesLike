@@ -83,8 +83,8 @@ public class SaveManager : MonoBehaviour
         Application.Quit();
     }
 
-    public PortDatas allyPortDatas;//아군이 사용할 PortDatas
     public Map map;//맵 스크립터블 오브젝트
+    public PortDatas allyPortDatas;//아군이 사용할 PortDatas
     public GameObject heroPrefab;//현재 사용 중인 영웅 프리팹
 
     public void SavePortDatas()//포트 데이터들을 저장하는 함수

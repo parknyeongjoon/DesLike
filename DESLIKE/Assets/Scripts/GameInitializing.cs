@@ -13,10 +13,12 @@ public class GameInitializing : MonoBehaviour
     IEnumerator Start()
     {
         yield return SetDataSheet();
+        yield return divideMapRel();
         SaveManager.Instance.gameData = SaveManager.Instance.GameData;
         SceneManager.LoadScene("MainTitle");
     }
 
+    public Map map;
     public SoldierData[] soldierDatas;
     public HeroData[] heroDatas;
     public SkillData[] skillDatas;
@@ -55,5 +57,74 @@ public class GameInitializing : MonoBehaviour
         yield return null;
     }
 
-
+    IEnumerator divideMapRel()
+    {
+        /*
+        map.commonNorRel.Clear();
+        map.commonEpicRel.Clear();
+        map.commonLegendRel.Clear();
+        map.physicNorRel.Clear();
+        map.physicEpicRel.Clear();
+        map.physicLegendRel.Clear();
+        map.spellNorRel.Clear();
+        map.spellEpicRel.Clear();
+        map.spellLegendRel.Clear();
+        */
+        for (int i = 0; i < relicObjects.Length; i++)
+        {
+            Relic tempRelic = relicObjects[i].GetComponent<Relic>();
+            switch (tempRelic.relicData.kingdom)
+            {
+                case Kingdom.Common:
+                    {
+                        switch (tempRelic.relicData.rarity)
+                        {
+                            case Rarity.Normal:
+                                map.commonNorRel.Add(tempRelic.relicData.code, tempRelic);
+                                break;
+                            case Rarity.Epic:
+                                map.commonEpicRel.Add(tempRelic.relicData.code, tempRelic);
+                                break;
+                            case Rarity.Hero:
+                                map.commonLegendRel.Add(tempRelic.relicData.code, tempRelic);
+                                break;
+                        }
+                    }
+                        break;
+                case Kingdom.Physic:
+                    {
+                        switch (tempRelic.relicData.rarity)
+                        {
+                            case Rarity.Normal:
+                                map.physicNorRel.Add(tempRelic.relicData.code, tempRelic);
+                                break;
+                            case Rarity.Epic:
+                                map.physicEpicRel.Add(tempRelic.relicData.code, tempRelic);
+                                break;
+                            case Rarity.Hero:
+                                map.physicLegendRel.Add(tempRelic.relicData.code, tempRelic);
+                                break;
+                        }
+                    }
+                    break;
+                case Kingdom.Spell:
+                    {
+                        switch (tempRelic.relicData.rarity)
+                        {
+                            case Rarity.Normal:
+                                map.spellNorRel.Add(tempRelic.relicData.code, tempRelic);
+                                break;
+                            case Rarity.Epic:
+                                map.spellEpicRel.Add(tempRelic.relicData.code, tempRelic);
+                                break;
+                            case Rarity.Hero:
+                                map.spellLegendRel.Add(tempRelic.relicData.code, tempRelic);
+                                break;
+                        }
+                    }
+                    break;
+            }
+        }
+        yield return null;
+    }
 }

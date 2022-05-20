@@ -249,6 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b71111f89adc85e438163907c1be2931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
   soldierDatas:
   - {fileID: 11400000, guid: 8061f0b131955b945b79c315c40239c5, type: 2}
   - {fileID: 11400000, guid: 28db2665da4d7d94eaf8f993e2914190, type: 2}

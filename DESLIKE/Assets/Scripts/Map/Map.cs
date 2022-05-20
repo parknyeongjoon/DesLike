@@ -17,22 +17,22 @@ public class Map : ScriptableObject
     public List<SoldierData> spellNorSol;
     public List<SoldierData> spellEpicSol;
 
-    public Dictionary<string, Relic> physicNorRel;
-    public Dictionary<string, Relic> physicEpicRel;
-    public Dictionary<string, Relic> physicLegendRel;
+    public Dictionary<string, Relic> physicNorRel = new Dictionary<string, Relic>();
+    public Dictionary<string, Relic> physicEpicRel = new Dictionary<string, Relic>();
+    public Dictionary<string, Relic> physicLegendRel = new Dictionary<string, Relic>();
 
-    public Dictionary<string, Relic> spellNorRel;
-    public Dictionary<string, Relic> spellEpicRel;
-    public Dictionary<string, Relic> spellLegendRel;
+    public Dictionary<string, Relic> spellNorRel = new Dictionary<string, Relic>();
+    public Dictionary<string, Relic> spellEpicRel = new Dictionary<string, Relic>();
+    public Dictionary<string, Relic> spellLegendRel = new Dictionary<string, Relic>();
 
-    public Dictionary<string, Relic> commonNorRel;
-    public Dictionary<string, Relic> commonEpicRel;
-    public Dictionary<string, Relic> commonLegendRel;
+    public Dictionary<string, Relic> commonNorRel = new Dictionary<string, Relic>();
+    public Dictionary<string, Relic> commonEpicRel = new Dictionary<string, Relic>();
+    public Dictionary<string, Relic> commonLegendRel = new Dictionary<string, Relic>();
     
     public bool isMap = false;//지우기
     public int playerX= -1, playerY;//지우기
     public int level;//지우기
-
+    
     public void EndMapNode()
     {
         SceneManager.LoadScene("Map");

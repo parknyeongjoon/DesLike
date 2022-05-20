@@ -55,226 +55,370 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Folder Name="H" ID="{C4CBDE63-05CB-4EAB-B770-04AA514AC47C}" ShortID="878269907">
-					<ChildrenList>
-						<Event Name="H_23101_Die" ID="{6DFDF849-465A-4E90-B3F2-65878C467EA7}">
-							<ChildrenList>
-								<Action Name="" ID="{FA6080E7-50D6-4B21-93DD-7A51A3127946}" ShortID="466168267">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="23101_Die_Print_01" ID="{A7775F42-4D82-4C91-8C7C-4BB3A4F25390}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{EF312915-A462-4E39-88BA-D9BF4B42F1D5}" ShortID="595932760">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="H_Bus" ID="{7AC31E02-6073-41C9-BD0E-98351CCABA8A}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="H_23101_Idle" ID="{899DA222-5AE7-4F33-9441-F90BC7A012A9}">
-							<ChildrenList>
-								<Action Name="" ID="{ABC94BC4-E443-4FE7-AF03-830CADD0F94C}" ShortID="442041341">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="4"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="23101_Idle" ID="{7F96EC15-D814-4421-B6E6-0F410EA60E8A}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="H_23101_Skill_1" ID="{E52C2AB2-EB1C-4CA5-A2EA-52DC2E7B6B58}">
-							<ChildrenList>
-								<Action Name="" ID="{7DAB055C-CB7A-4570-9ECC-8AFC2772304E}" ShortID="748128606">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="23101_Skill_1_Print_01" ID="{2367BC5A-4E94-49DB-B3C5-FF2D34F55E3E}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-								<Action Name="" ID="{E3B1EBA5-CAE0-49D2-8949-5AF62BCE1D48}" ShortID="752654459">
-									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.7"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="23101_Skill_1_Voice" ID="{A8A41E60-C744-4FBD-A2A4-9BD0E36EF5F3}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="H_23101_Skill_2" ID="{3907E37E-F8D4-466B-8177-FE039240D740}">
-							<ChildrenList>
-								<Action Name="" ID="{4ED2B936-07AA-4E5D-93E4-0E899A856644}" ShortID="109970972">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="23101_Skill_2_Print_01" ID="{8A50DA9E-C9EC-43EB-AB2D-2AC32A3EFF3D}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-					</ChildrenList>
-				</Folder>
-				<Folder Name="N" ID="{9D2D75A4-54E1-42EB-9ADD-0059789CEA6B}" ShortID="991195935">
-					<ChildrenList>
-						<Folder Name="N_11303" ID="{BCA36CCC-6361-43D9-BC29-D806B27DBE85}" ShortID="933915122">
-							<ChildrenList>
-								<Event Name="N_11303_Att_1" ID="{C509C309-7E89-4130-9545-D61BB533108B}">
-									<ChildrenList>
-										<Action Name="" ID="{03F05676-D9C7-43A8-B894-8EB9CB382168}" ShortID="13446915">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="N_11303_Att" ID="{1194EB1B-8947-4BE5-9D87-9EBB66A56113}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-								<Event Name="N_11303_Die" ID="{05857BEE-D219-4BEE-98BC-65BE05A6883D}">
-									<ChildrenList>
-										<Action Name="" ID="{42CC393D-98D7-4E96-8BE1-FA017368AE59}" ShortID="98217584">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="11303_Die_Print_01" ID="{F9EAF312-2372-4B33-8B65-6AF8BF8236B7}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-								<Event Name="N_11303_Idle" ID="{8823C170-2C88-4687-AF4E-9B1F7FD542DB}"/>
-								<Event Name="N_11303_Skill_1" ID="{045E770B-F78E-4CF6-9063-6FC185995C1D}">
-									<ChildrenList>
-										<Action Name="" ID="{538E9AC9-CBE8-4530-B923-2A718362F14E}" ShortID="398547096">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="11303_Skill_1_Voice_Print_01" ID="{2DEF9FD5-11C9-4488-A74A-55ABCA0E803F}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-							</ChildrenList>
-						</Folder>
-						<Folder Name="N_11301" ID="{5A1EBFEA-705F-4874-84C5-58172A818ACC}" ShortID="934275932">
-							<ChildrenList>
-								<Event Name="N_11301_Att_1" ID="{1A70A74F-6ED0-466D-B4C0-261A7DD70F5F}">
-									<ChildrenList>
-										<Action Name="" ID="{EB18792D-F870-4E09-B5A8-4CEE2AD488E4}" ShortID="991103463">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="11301_Att_1_RandomC" ID="{EAB2ED9D-2900-4520-BDD0-A964474DAAA1}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-								<Event Name="N_11301_Die" ID="{87588145-3973-423B-B17A-DE649CBE079A}"/>
-								<Event Name="N_11301_Skill_1" ID="{B54EEBE1-875A-4411-B843-2F2995C767F8}">
-									<ChildrenList>
-										<Action Name="" ID="{BF966794-7363-4785-B599-1D96A1F8A3C1}" ShortID="724502717">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="11301_Skill_1_Print_01" ID="{ED960330-E268-423F-91E0-1E01AEB0D0F5}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-										<Action Name="" ID="{608E9262-39C5-48C4-9F06-C30B4692864F}" ShortID="891478825">
-											<PropertyList>
-												<Property Name="Delay" Type="Real64" Value="0.5"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="11301_Die_Print_01" ID="{F9777C47-18EB-4889-8EFE-33CBC73D33A5}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-							</ChildrenList>
-						</Folder>
-						<Folder Name="N_12302" ID="{F772AB12-FA73-4CDA-B74C-761F2797AFF7}" ShortID="587845762">
-							<ChildrenList>
-								<Event Name="N_12302_Att_1" ID="{D2C9DC6F-C414-4AF5-9578-456ACF5D9DDF}">
-									<ChildrenList>
-										<Action Name="" ID="{613CDB17-7BD5-4621-87B9-EEAAAA3B258F}" ShortID="122540926">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Print_12302_Att_1_01" ID="{13F047C7-5417-4C78-8AC9-CB525BEB8008}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-								<Event Name="N_12302_Die" ID="{F0D7FDE0-2F8B-46E2-90EA-68AB0DB5BA1E}">
-									<ChildrenList>
-										<Action Name="" ID="{3C09E55C-2087-4364-B466-08883B99EB36}" ShortID="1037308587">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Print_12302_Die_01" ID="{70DB9FF0-A975-469B-A312-A89788F35DC4}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-							</ChildrenList>
-						</Folder>
-						<Folder Name="N_11304" ID="{01C27A8B-B2DC-4DD5-8F93-BA1C2C479BC4}" ShortID="62165477">
-							<ChildrenList>
-								<Event Name="N_11304_Att_1" ID="{40EBFDC1-AEE6-4365-9A7A-AA2A2B6E7009}">
-									<ChildrenList>
-										<Action Name="" ID="{A9CB253E-5499-4F8E-ACFA-B62DD17FDBB4}" ShortID="881238783">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Print_11304_Att_1_01" ID="{0E2850EB-061F-48D4-9F75-D5521854D86F}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-							</ChildrenList>
-						</Folder>
-						<Folder Name="N_12303" ID="{8A1EFAFF-70A2-48AA-81AA-9165D3293F81}" ShortID="397119092">
-							<ChildrenList>
-								<Event Name="N_12303_Att_1" ID="{58A0B878-5F53-4975-885A-B3E5A137E834}">
-									<ChildrenList>
-										<Action Name="" ID="{F6E78262-B07E-45ED-9C3C-AF2A41CFE362}" ShortID="748735478">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Print_12303_Att_1_01" ID="{6155C5D9-9AF2-48D0-A44C-20CF1F52A1B9}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-								<Event Name="N_12303_Die" ID="{428EB5F4-3D79-4AA6-AFF3-665677035235}">
-									<ChildrenList>
-										<Action Name="" ID="{3528E616-8102-42EC-AB75-5871A3B1D4F7}" ShortID="623432908">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Print_12303_Die_01" ID="{E70659E9-BA10-43EF-95C3-C707E8C4A0AD}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-							</ChildrenList>
-						</Folder>
-					</ChildrenList>
-				</Folder>
 				<Event Name="Battle_Start" ID="{E0E43444-BD96-4FF6-BDD7-67A9A0547301}"/>
 				<Event Name="Battle_End" ID="{7A784D78-D0C9-452E-850A-672AFAEF9650}"/>
+				<Folder Name="11000" ID="{56E09F53-DC7D-44ED-9574-D055D9F970DC}" ShortID="207696936">
+					<ChildrenList>
+						<Folder Name="N" ID="{9D2D75A4-54E1-42EB-9ADD-0059789CEA6B}" ShortID="991195935">
+							<ChildrenList>
+								<Folder Name="N_11303" ID="{BCA36CCC-6361-43D9-BC29-D806B27DBE85}" ShortID="933915122">
+									<ChildrenList>
+										<Event Name="N_11303_Att_1" ID="{C509C309-7E89-4130-9545-D61BB533108B}">
+											<ChildrenList>
+												<Action Name="" ID="{03F05676-D9C7-43A8-B894-8EB9CB382168}" ShortID="13446915">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="N_11303_Att" ID="{1194EB1B-8947-4BE5-9D87-9EBB66A56113}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="N_11303_Die" ID="{05857BEE-D219-4BEE-98BC-65BE05A6883D}">
+											<ChildrenList>
+												<Action Name="" ID="{42CC393D-98D7-4E96-8BE1-FA017368AE59}" ShortID="98217584">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="11303_Die_Print_01" ID="{F9EAF312-2372-4B33-8B65-6AF8BF8236B7}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="N_11303_Idle" ID="{8823C170-2C88-4687-AF4E-9B1F7FD542DB}"/>
+										<Event Name="N_11303_Skill_1" ID="{045E770B-F78E-4CF6-9063-6FC185995C1D}">
+											<ChildrenList>
+												<Action Name="" ID="{538E9AC9-CBE8-4530-B923-2A718362F14E}" ShortID="398547096">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="11303_Skill_1_Voice_Print_01" ID="{2DEF9FD5-11C9-4488-A74A-55ABCA0E803F}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="N_11301" ID="{5A1EBFEA-705F-4874-84C5-58172A818ACC}" ShortID="934275932">
+									<ChildrenList>
+										<Event Name="N_11301_Att_1" ID="{1A70A74F-6ED0-466D-B4C0-261A7DD70F5F}">
+											<ChildrenList>
+												<Action Name="" ID="{EB18792D-F870-4E09-B5A8-4CEE2AD488E4}" ShortID="991103463">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="11301_Att_1_RandomC" ID="{EAB2ED9D-2900-4520-BDD0-A964474DAAA1}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="N_11301_Die" ID="{87588145-3973-423B-B17A-DE649CBE079A}"/>
+										<Event Name="N_11301_Skill_1" ID="{B54EEBE1-875A-4411-B843-2F2995C767F8}">
+											<ChildrenList>
+												<Action Name="" ID="{BF966794-7363-4785-B599-1D96A1F8A3C1}" ShortID="724502717">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="11301_Skill_1_Print_01" ID="{ED960330-E268-423F-91E0-1E01AEB0D0F5}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+												<Action Name="" ID="{608E9262-39C5-48C4-9F06-C30B4692864F}" ShortID="891478825">
+													<PropertyList>
+														<Property Name="Delay" Type="Real64" Value="0.5"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="11301_Die_Print_01" ID="{F9777C47-18EB-4889-8EFE-33CBC73D33A5}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="N_11301_Idle" ID="{9C4D26FD-CE05-4C27-AC01-F4A7DE60A16C}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="N_11304" ID="{01C27A8B-B2DC-4DD5-8F93-BA1C2C479BC4}" ShortID="62165477">
+									<ChildrenList>
+										<Event Name="N_11304_Att_1" ID="{40EBFDC1-AEE6-4365-9A7A-AA2A2B6E7009}">
+											<ChildrenList>
+												<Action Name="" ID="{A9CB253E-5499-4F8E-ACFA-B62DD17FDBB4}" ShortID="881238783">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Print_11304_Att_1_01" ID="{0E2850EB-061F-48D4-9F75-D5521854D86F}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="N_11304_Idle" ID="{B19E6BA9-1A71-4D9B-B817-1118FC27D0B1}"/>
+										<Event Name="N_11304_Die" ID="{F80A98BB-E21D-45DA-B4B5-09C795D64F3F}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="N_11302" ID="{37FE5793-9FB8-4DBD-8ECD-C713BF665727}" ShortID="1063167337">
+									<ChildrenList>
+										<Event Name="N_11302_Idle" ID="{C21030C2-D6AF-4023-9039-0270D20628AD}"/>
+										<Event Name="N_11302_Att_1" ID="{44BF7AFF-492B-48D6-9B3D-E1B61C91B188}"/>
+										<Event Name="N_11302_Die" ID="{29B3467E-5BAB-4B5C-8C88-1C43E6B49084}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="N_11305" ID="{586BD3C0-E310-46F4-96DB-F8E235D25C5E}" ShortID="1060963371">
+									<ChildrenList>
+										<Event Name="N_11305_Idle" ID="{2DA10E93-6211-4E84-9E0F-DA97A033BDA9}"/>
+										<Event Name="N_11305_Skill_1" ID="{EA85DD0E-D6F5-4642-B9C6-A0E9644DF789}"/>
+										<Event Name="N_11305_Die" ID="{91343B69-AB60-460B-9F90-4FDBA17D1320}"/>
+									</ChildrenList>
+								</Folder>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="E" ID="{7FB034AA-8046-4B0B-B49C-B27842324601}" ShortID="1017258889">
+							<ChildrenList>
+								<Folder Name="11201" ID="{A4A95754-ACAE-4C94-8B2A-C931918157AD}" ShortID="166701095">
+									<ChildrenList>
+										<Event Name="E_11201_Idle" ID="{67EBE980-7A2E-4359-9171-B6DEA636B3A4}"/>
+										<Event Name="E_11201_Att_1" ID="{36A8BCE2-48AE-4EA7-A823-4055C0CF7CC3}"/>
+										<Event Name="E_11201_Skill_1" ID="{C796EC9A-6465-4921-BFDC-71CEB3E4AE75}"/>
+										<Event Name="E_11201_Die" ID="{D48AF428-4405-46D5-83AF-87BA7845448E}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="11202" ID="{10BAFC46-FC78-4AF6-90BE-BBE491F2CC81}" ShortID="637480616">
+									<ChildrenList>
+										<Event Name="E_11202_Idle" ID="{25EA514E-EC56-4434-8BC2-EC62EAA2BA0C}"/>
+										<Event Name="E_11202_Skill_1" ID="{66C5D6C9-CBA3-448D-AA65-50CC23166F86}"/>
+										<Event Name="E_11202_Die" ID="{9104D6C9-D8A3-4534-826E-BAAB52181C9A}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="11203" ID="{176D3E09-4658-46DD-8A53-00A353445375}" ShortID="431639557">
+									<ChildrenList>
+										<Event Name="E_11203_Idle" ID="{41391D9F-0C88-48AC-8E9D-334DB416EFB0}"/>
+										<Event Name="E_11203_Att_1" ID="{52D8DBEE-3695-4E9C-AEAF-9965E32A66C0}"/>
+										<Event Name="E_11203_Die" ID="{4A1055D0-F05A-454E-A14E-3D97CDD496FC}"/>
+									</ChildrenList>
+								</Folder>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="H" ID="{C4CBDE63-05CB-4EAB-B770-04AA514AC47C}" ShortID="878269907">
+							<ChildrenList>
+								<Folder Name="11101" ID="{E5F5E0E5-9E51-46CA-BA64-EC1034895C0D}" ShortID="324075894">
+									<ChildrenList>
+										<Event Name="H_11101_Idle" ID="{C49E5D90-C475-4C46-9013-2C8B7E777ACC}"/>
+										<Event Name="H_11101_Att_1" ID="{FC19F5CD-1C22-483E-B979-9110EBEFC449}"/>
+										<Event Name="H_11101_Skill_1" ID="{46740F80-093E-4E3B-8914-5FBAA46CB8B1}"/>
+										<Event Name="H_11101_Skill_2" ID="{2FB90BF5-3E2E-4AAD-951D-235E750ACF77}"/>
+										<Event Name="H_11101_Skill_3" ID="{6CF2E241-D601-42D8-8DB7-925A1FD6DD1C}"/>
+										<Event Name="H_11101_Die" ID="{65898806-A309-45A1-A24B-8DA6D61A7B31}"/>
+									</ChildrenList>
+								</Folder>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="12000" ID="{53851113-FA52-4337-9F40-AB88CEAB36DB}" ShortID="871153665">
+					<ChildrenList>
+						<Folder Name="H" ID="{9D737088-5669-46C1-B250-4C38D547A458}" ShortID="594745692">
+							<ChildrenList>
+								<Folder Name="12101" ID="{06C079AE-7C2C-4941-BE98-DAFB790C1DD3}" ShortID="831254811">
+									<ChildrenList>
+										<Event Name="H_12101_Idle" ID="{1A67C6D2-3593-4232-9A9E-2D710ECDB716}"/>
+										<Event Name="H_12101_Att_1" ID="{E6493EA0-C9BD-4705-A19B-CF00D1DD45EF}"/>
+										<Event Name="H_12101_Skill_1" ID="{63DBCFB2-C6B9-4104-8A0C-090182588DC0}"/>
+										<Event Name="H_12101_Skill_2" ID="{E6DA6F65-C8E5-48F2-998F-17893D9105A6}"/>
+										<Event Name="H_12101_Skill_3" ID="{9FEAF3C3-1313-42AD-BD53-949B016B95EC}"/>
+										<Event Name="H_12101_Die" ID="{CFC065F9-9C43-4CD1-810E-474D97D9B186}"/>
+									</ChildrenList>
+								</Folder>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="E" ID="{DE176323-3460-4938-8FF9-9D162269D99E}" ShortID="401500389">
+							<ChildrenList>
+								<Folder Name="12201" ID="{E325AAB9-E764-427A-8369-2227BB49D9C6}" ShortID="726321264">
+									<ChildrenList>
+										<Event Name="E_12201_Idle" ID="{2C8A1F6B-E163-4248-B1C4-F15D0BE0D83F}"/>
+										<Event Name="E_12201_Att_1" ID="{614B9149-5ED6-40FD-82E4-03AFF8A11FAB}"/>
+										<Event Name="E_12201_Skill_1" ID="{D8F6BCCF-2660-424A-A282-5D54E7DC28BA}"/>
+										<Event Name="E_12201_Die" ID="{F0AED0EF-15CF-478D-A20A-8C1D38BBF931}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="12203" ID="{4E01536F-29C8-4773-884F-1AD4EB296C0A}" ShortID="989284876">
+									<ChildrenList>
+										<Event Name="E_12203_Idle" ID="{D7195878-8387-42B8-A0B9-A390628FC079}"/>
+										<Event Name="E_12203_Att_1" ID="{D9F74FB9-6949-4A8D-9EE2-E10786805D11}"/>
+										<Event Name="E_12203_Die" ID="{FF6675E7-758D-413E-819A-07F96653318B}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="E_12202" ID="{070C8933-6A98-4B97-A5A0-7D17C8B1B97B}" ShortID="329587757">
+									<ChildrenList>
+										<Event Name="E_12202_Idle" ID="{A269FEB0-D68A-4A7B-983C-FBD303BCD89A}"/>
+										<Event Name="E_12202_Att_1" ID="{E958E32F-0EBA-443F-81EF-AE7EB2CF4BF0}"/>
+										<Event Name="E_12202_Die" ID="{89D8FAD7-6108-4C07-B9EE-5B29BECBC7D0}"/>
+									</ChildrenList>
+								</Folder>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="N" ID="{D144C871-6D44-4317-A62E-0E6A4D7A443D}" ShortID="489779014">
+							<ChildrenList>
+								<Folder Name="N_12302" ID="{F772AB12-FA73-4CDA-B74C-761F2797AFF7}" ShortID="587845762">
+									<ChildrenList>
+										<Event Name="N_12302_Att_1" ID="{D2C9DC6F-C414-4AF5-9578-456ACF5D9DDF}">
+											<ChildrenList>
+												<Action Name="" ID="{613CDB17-7BD5-4621-87B9-EEAAAA3B258F}" ShortID="122540926">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Print_12302_Att_1_01" ID="{13F047C7-5417-4C78-8AC9-CB525BEB8008}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="N_12302_Die" ID="{F0D7FDE0-2F8B-46E2-90EA-68AB0DB5BA1E}">
+											<ChildrenList>
+												<Action Name="" ID="{3C09E55C-2087-4364-B466-08883B99EB36}" ShortID="1037308587">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Print_12302_Die_01" ID="{70DB9FF0-A975-469B-A312-A89788F35DC4}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="N_12302_Idle" ID="{459CE31A-9DE2-4E9B-AE91-2A26E8873699}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="N_12303" ID="{8A1EFAFF-70A2-48AA-81AA-9165D3293F81}" ShortID="397119092">
+									<ChildrenList>
+										<Event Name="N_12303_Att_1" ID="{58A0B878-5F53-4975-885A-B3E5A137E834}">
+											<ChildrenList>
+												<Action Name="" ID="{F6E78262-B07E-45ED-9C3C-AF2A41CFE362}" ShortID="748735478">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Print_12303_Att_1_01" ID="{6155C5D9-9AF2-48D0-A44C-20CF1F52A1B9}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="N_12303_Die" ID="{428EB5F4-3D79-4AA6-AFF3-665677035235}">
+											<ChildrenList>
+												<Action Name="" ID="{3528E616-8102-42EC-AB75-5871A3B1D4F7}" ShortID="623432908">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="Print_12303_Die_01" ID="{E70659E9-BA10-43EF-95C3-C707E8C4A0AD}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="N_12303_Idle" ID="{34FCF7AF-88C1-405E-B56B-4DC0658A60E6}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="N_12301" ID="{B88D762A-995E-4D21-ACBA-793BD17DEC0C}" ShortID="827965458">
+									<ChildrenList>
+										<Event Name="N_12301_Idle" ID="{63B822FB-7AD1-4B9F-A9E3-A0689518CD47}"/>
+										<Event Name="N_12301_Att_1" ID="{D380811C-EA5E-4D03-A761-8997974209F7}"/>
+										<Event Name="N_12301_Die" ID="{562ABBB2-D3BD-45F2-ABE4-082F4EB091DA}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="N_12304" ID="{78FB95CD-CB94-4D63-AEB2-3F39A6E3002A}" ShortID="519165792">
+									<ChildrenList>
+										<Event Name="N_12304_Idle" ID="{8DBF1F00-D7D8-41B1-992F-7F6575DE428B}"/>
+										<Event Name="N_12304_Att_1" ID="{44BF4672-7235-4DEC-BAE9-3C311969456A}"/>
+										<Event Name="N_12304_Die" ID="{1EEBB9AB-4158-4BD4-8914-56425A4118B9}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="N_12305" ID="{B5F15159-EEF7-4757-8BA8-AE495777F51F}" ShortID="485324041">
+									<ChildrenList>
+										<Event Name="N_12305_Idle" ID="{E13E42DA-F51B-4DE1-8C5C-C8C8C45F82EB}"/>
+										<Event Name="N_12305_Skill_1" ID="{C5B86AF9-B20B-4730-9189-04913B8D2C58}"/>
+										<Event Name="N_12305_Die" ID="{6E346807-577F-44C0-AB62-7D74144F8A45}"/>
+									</ChildrenList>
+								</Folder>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="23000" ID="{5FEFA8D8-88B0-43A0-896A-3E3700FF1CA9}" ShortID="365496358">
+					<ChildrenList>
+						<Folder Name="E" ID="{639F4A7C-78FE-4AD1-9DA9-AB4DBA4586B5}" ShortID="786351872"/>
+						<Folder Name="H" ID="{75926D35-C9B3-4A4F-AC57-B0D816099171}" ShortID="801017218">
+							<ChildrenList>
+								<Folder Name="23101" ID="{23B39D0C-CAA2-4285-94E2-18B931BD0123}" ShortID="252813982">
+									<ChildrenList>
+										<Event Name="H_23101_Die" ID="{6DFDF849-465A-4E90-B3F2-65878C467EA7}">
+											<ChildrenList>
+												<Action Name="" ID="{FA6080E7-50D6-4B21-93DD-7A51A3127946}" ShortID="466168267">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="23101_Die_Print_01" ID="{A7775F42-4D82-4C91-8C7C-4BB3A4F25390}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+												<Action Name="" ID="{EF312915-A462-4E39-88BA-D9BF4B42F1D5}" ShortID="595932760">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="2"/>
+														<Property Name="FadeTime" Type="Real64" Value="2"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="H_Bus" ID="{7AC31E02-6073-41C9-BD0E-98351CCABA8A}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="H_23101_Idle" ID="{899DA222-5AE7-4F33-9441-F90BC7A012A9}">
+											<ChildrenList>
+												<Action Name="" ID="{ABC94BC4-E443-4FE7-AF03-830CADD0F94C}" ShortID="442041341">
+													<PropertyList>
+														<Property Name="ActionType" Type="int16" Value="4"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="23101_Idle" ID="{7F96EC15-D814-4421-B6E6-0F410EA60E8A}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="H_23101_Skill_1" ID="{E52C2AB2-EB1C-4CA5-A2EA-52DC2E7B6B58}">
+											<ChildrenList>
+												<Action Name="" ID="{7DAB055C-CB7A-4570-9ECC-8AFC2772304E}" ShortID="748128606">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="23101_Skill_1_Print_01" ID="{2367BC5A-4E94-49DB-B3C5-FF2D34F55E3E}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+												<Action Name="" ID="{E3B1EBA5-CAE0-49D2-8949-5AF62BCE1D48}" ShortID="752654459">
+													<PropertyList>
+														<Property Name="Delay" Type="Real64" Value="0.7"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="23101_Skill_1_Voice" ID="{A8A41E60-C744-4FBD-A2A4-9BD0E36EF5F3}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="H_23101_Skill_2" ID="{3907E37E-F8D4-466B-8177-FE039240D740}">
+											<ChildrenList>
+												<Action Name="" ID="{4ED2B936-07AA-4E5D-93E4-0E899A856644}" ShortID="109970972">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="23101_Skill_2_Print_01" ID="{8A50DA9E-C9EC-43EB-AB2D-2AC32A3EFF3D}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="H_23101_Att_1" ID="{43925F3A-44E6-4DE4-A02A-09F3B6A64CF0}"/>
+										<Event Name="H_23101_Skill_3" ID="{7C118665-2870-4546-A30F-788B01E9D0AC}"/>
+									</ChildrenList>
+								</Folder>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="N" ID="{5B120F24-3029-48EE-AAE9-1AB2A5A95F98}" ShortID="1044899431"/>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

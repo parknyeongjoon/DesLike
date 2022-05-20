@@ -347,7 +347,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: 111a7fbee2e9c647a25420f19d3c634f
     GuidInternal: 
-    m_lastTime: -8585486486764775808
+    m_lastTime: -8585485523874775808
     List:
     - name: main
       guid: 619856fbba3b8a4e81efc0e9b7c68d55
@@ -375,8 +375,243 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 9afb6cf7ad351747ac19859bb342359b
     GuidInternal: 
-    m_lastTime: -8585486486884775808
+    m_lastTime: -8585485525024775808
     List:
+    - name: 11000
+      guid: 539fe0567ddced449574d055d9f970dc
+      id: 630905625
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      Path: Events/Default Work Unit/11000
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: 11101
+      guid: e5e0f5e5519eca46ba64ec1034895c0d
+      id: 530092817
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: H
+        ObjectType: 4
+        guid: 63decbc4cb05ab4eb77004aa514ac47c
+      - ElementName: 11101
+        ObjectType: 4
+        guid: e5e0f5e5519eca46ba64ec1034895c0d
+      Path: Events/Default Work Unit/11000/H/11101
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: 11201
+      guid: 5457a9a4aeac944c8b2ac931918157ad
+      id: 2980066442
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: E
+        ObjectType: 4
+        guid: aa34b07f46800b4bb49cb27842324601
+      - ElementName: 11201
+        ObjectType: 4
+        guid: 5457a9a4aeac944c8b2ac931918157ad
+      Path: Events/Default Work Unit/11000/E/11201
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: 11202
+      guid: 46fcba1078fcf64a90bebbe491f2cc81
+      id: 2980066441
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: E
+        ObjectType: 4
+        guid: aa34b07f46800b4bb49cb27842324601
+      - ElementName: 11202
+        ObjectType: 4
+        guid: 46fcba1078fcf64a90bebbe491f2cc81
+      Path: Events/Default Work Unit/11000/E/11202
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: 11203
+      guid: 093e6d175846dd468a5300a353445375
+      id: 2980066440
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: E
+        ObjectType: 4
+        guid: aa34b07f46800b4bb49cb27842324601
+      - ElementName: 11203
+        ObjectType: 4
+        guid: 093e6d175846dd468a5300a353445375
+      Path: Events/Default Work Unit/11000/E/11203
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: 12000
+      guid: 1311855352fa37439f40ab88ceab36db
+      id: 1759953272
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      Path: Events/Default Work Unit/12000
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: 12101
+      guid: ae79c0062c7c4149be98dafb790c1dd3
+      id: 1860766048
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: H
+        ObjectType: 4
+        guid: 8870739d6956c146b2504c38d547a458
+      - ElementName: 12101
+        ObjectType: 4
+        guid: ae79c0062c7c4149be98dafb790c1dd3
+      Path: Events/Default Work Unit/12000/H/12101
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: 12201
+      guid: b9aa25e364e77a4283692227bb49d9c6
+      id: 4109114091
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: E
+        ObjectType: 4
+        guid: 236317de603438498ff99d162269d99e
+      - ElementName: 12201
+        ObjectType: 4
+        guid: b9aa25e364e77a4283692227bb49d9c6
+      Path: Events/Default Work Unit/12000/E/12201
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: 12203
+      guid: 6f53014ec8297347884f1ad4eb296c0a
+      id: 4109114089
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: E
+        ObjectType: 4
+        guid: 236317de603438498ff99d162269d99e
+      - ElementName: 12203
+        ObjectType: 4
+        guid: 6f53014ec8297347884f1ad4eb296c0a
+      Path: Events/Default Work Unit/12000/E/12203
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: 23000
+      guid: d8a8ef5fb088a043896a3e3700ff1ca9
+      id: 1443614812
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 23000
+        ObjectType: 4
+        guid: d8a8ef5fb088a043896a3e3700ff1ca9
+      Path: Events/Default Work Unit/23000
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: 23101
+      guid: 0c9db323a2ca854294e218b931bd0123
+      id: 1544427588
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 23000
+        ObjectType: 4
+        guid: d8a8ef5fb088a043896a3e3700ff1ca9
+      - ElementName: H
+        ObjectType: 4
+        guid: 356d9275b3c94f4aac57b0d816099171
+      - ElementName: 23101
+        ObjectType: 4
+        guid: 0c9db323a2ca854294e218b931bd0123
+      Path: Events/Default Work Unit/23000/H/23101
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Battle_End
       guid: 784d787ac9d02e45850a672afaef9650
       id: 461545889
@@ -408,6 +643,609 @@ MonoBehaviour:
         ObjectType: 3
         guid: 4434e4e096bdf64fbdd767a9a0547301
       Path: Events/Default Work Unit/Battle_Start
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E
+      guid: 7c4a9f63fe78d14a9da9ab4dba4586b5
+      id: 84696442
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 23000
+        ObjectType: 4
+        guid: d8a8ef5fb088a043896a3e3700ff1ca9
+      - ElementName: E
+        ObjectType: 4
+        guid: 7c4a9f63fe78d14a9da9ab4dba4586b5
+      Path: Events/Default Work Unit/23000/E
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: E
+      guid: 236317de603438498ff99d162269d99e
+      id: 84696442
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: E
+        ObjectType: 4
+        guid: 236317de603438498ff99d162269d99e
+      Path: Events/Default Work Unit/12000/E
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: E
+      guid: aa34b07f46800b4bb49cb27842324601
+      id: 84696442
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: E
+        ObjectType: 4
+        guid: aa34b07f46800b4bb49cb27842324601
+      Path: Events/Default Work Unit/11000/E
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: E_11201_Att_1
+      guid: e2bca836ae48a74ea8234055c0cf7cc3
+      id: 1002629054
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: E
+        ObjectType: 4
+        guid: aa34b07f46800b4bb49cb27842324601
+      - ElementName: 11201
+        ObjectType: 4
+        guid: 5457a9a4aeac944c8b2ac931918157ad
+      - ElementName: E_11201_Att_1
+        ObjectType: 3
+        guid: e2bca836ae48a74ea8234055c0cf7cc3
+      Path: Events/Default Work Unit/11000/E/11201/E_11201_Att_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_11201_Die
+      guid: 28f48ad40544d54683af87ba7845448e
+      id: 4070038893
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: E
+        ObjectType: 4
+        guid: aa34b07f46800b4bb49cb27842324601
+      - ElementName: 11201
+        ObjectType: 4
+        guid: 5457a9a4aeac944c8b2ac931918157ad
+      - ElementName: E_11201_Die
+        ObjectType: 3
+        guid: 28f48ad40544d54683af87ba7845448e
+      Path: Events/Default Work Unit/11000/E/11201/E_11201_Die
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_11201_Idle
+      guid: 80e9eb672e7a59439171b6dea636b3a4
+      id: 736760783
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: E
+        ObjectType: 4
+        guid: aa34b07f46800b4bb49cb27842324601
+      - ElementName: 11201
+        ObjectType: 4
+        guid: 5457a9a4aeac944c8b2ac931918157ad
+      - ElementName: E_11201_Idle
+        ObjectType: 3
+        guid: 80e9eb672e7a59439171b6dea636b3a4
+      Path: Events/Default Work Unit/11000/E/11201/E_11201_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_11201_Skill_1
+      guid: 9aec96c765642149bfdc71ceb3e4ae75
+      id: 1934062128
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: E
+        ObjectType: 4
+        guid: aa34b07f46800b4bb49cb27842324601
+      - ElementName: 11201
+        ObjectType: 4
+        guid: 5457a9a4aeac944c8b2ac931918157ad
+      - ElementName: E_11201_Skill_1
+        ObjectType: 3
+        guid: 9aec96c765642149bfdc71ceb3e4ae75
+      Path: Events/Default Work Unit/11000/E/11201/E_11201_Skill_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_11202_Die
+      guid: c9d60491a3d83445826ebaab52181c9a
+      id: 3172557730
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: E
+        ObjectType: 4
+        guid: aa34b07f46800b4bb49cb27842324601
+      - ElementName: 11202
+        ObjectType: 4
+        guid: 46fcba1078fcf64a90bebbe491f2cc81
+      - ElementName: E_11202_Die
+        ObjectType: 3
+        guid: c9d60491a3d83445826ebaab52181c9a
+      Path: Events/Default Work Unit/11000/E/11202/E_11202_Die
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_11202_Idle
+      guid: 4e51ea2556ec34448bc2ec62eaa2ba0c
+      id: 2797876430
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: E
+        ObjectType: 4
+        guid: aa34b07f46800b4bb49cb27842324601
+      - ElementName: 11202
+        ObjectType: 4
+        guid: 46fcba1078fcf64a90bebbe491f2cc81
+      - ElementName: E_11202_Idle
+        ObjectType: 3
+        guid: 4e51ea2556ec34448bc2ec62eaa2ba0c
+      Path: Events/Default Work Unit/11000/E/11202/E_11202_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_11202_Skill_1
+      guid: c9d6c566a3cb8d44aa6550cc23166f86
+      id: 985093471
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: E
+        ObjectType: 4
+        guid: aa34b07f46800b4bb49cb27842324601
+      - ElementName: 11202
+        ObjectType: 4
+        guid: 46fcba1078fcf64a90bebbe491f2cc81
+      - ElementName: E_11202_Skill_1
+        ObjectType: 3
+        guid: c9d6c566a3cb8d44aa6550cc23166f86
+      Path: Events/Default Work Unit/11000/E/11202/E_11202_Skill_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_11203_Att_1
+      guid: eedbd85295369c4eaeaf9965e32a66c0
+      id: 365726612
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: E
+        ObjectType: 4
+        guid: aa34b07f46800b4bb49cb27842324601
+      - ElementName: 11203
+        ObjectType: 4
+        guid: 093e6d175846dd468a5300a353445375
+      - ElementName: E_11203_Att_1
+        ObjectType: 3
+        guid: eedbd85295369c4eaeaf9965e32a66c0
+      Path: Events/Default Work Unit/11000/E/11203/E_11203_Att_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_11203_Die
+      guid: d055104a5af04e45a14e3d97cdd496fc
+      id: 824892519
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: E
+        ObjectType: 4
+        guid: aa34b07f46800b4bb49cb27842324601
+      - ElementName: 11203
+        ObjectType: 4
+        guid: 093e6d175846dd468a5300a353445375
+      - ElementName: E_11203_Die
+        ObjectType: 3
+        guid: d055104a5af04e45a14e3d97cdd496fc
+      Path: Events/Default Work Unit/11000/E/11203/E_11203_Die
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_11203_Idle
+      guid: 9f1d3941880cac488e9d334db416efb0
+      id: 948573677
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: E
+        ObjectType: 4
+        guid: aa34b07f46800b4bb49cb27842324601
+      - ElementName: 11203
+        ObjectType: 4
+        guid: 093e6d175846dd468a5300a353445375
+      - ElementName: E_11203_Idle
+        ObjectType: 3
+        guid: 9f1d3941880cac488e9d334db416efb0
+      Path: Events/Default Work Unit/11000/E/11203/E_11203_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_12201_Att_1
+      guid: 49914b61d65efd4082e403aff8a11fab
+      id: 3155306831
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: E
+        ObjectType: 4
+        guid: 236317de603438498ff99d162269d99e
+      - ElementName: 12201
+        ObjectType: 4
+        guid: b9aa25e364e77a4283692227bb49d9c6
+      - ElementName: E_12201_Att_1
+        ObjectType: 3
+        guid: 49914b61d65efd4082e403aff8a11fab
+      Path: Events/Default Work Unit/12000/E/12201/E_12201_Att_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_12201_Die
+      guid: efd0aef0cf158d47a20a8c1d38bbf931
+      id: 3972125528
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: E
+        ObjectType: 4
+        guid: 236317de603438498ff99d162269d99e
+      - ElementName: 12201
+        ObjectType: 4
+        guid: b9aa25e364e77a4283692227bb49d9c6
+      - ElementName: E_12201_Die
+        ObjectType: 3
+        guid: efd0aef0cf158d47a20a8c1d38bbf931
+      Path: Events/Default Work Unit/12000/E/12201/E_12201_Die
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_12201_Idle
+      guid: 6b1f8a2c63e14842b1c4f15d0be0d83f
+      id: 2413454704
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: E
+        ObjectType: 4
+        guid: 236317de603438498ff99d162269d99e
+      - ElementName: 12201
+        ObjectType: 4
+        guid: b9aa25e364e77a4283692227bb49d9c6
+      - ElementName: E_12201_Idle
+        ObjectType: 3
+        guid: 6b1f8a2c63e14842b1c4f15d0be0d83f
+      Path: Events/Default Work Unit/12000/E/12201/E_12201_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_12201_Skill_1
+      guid: cfbcf6d860264a42a2825d54e7dc28ba
+      id: 4273930737
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: E
+        ObjectType: 4
+        guid: 236317de603438498ff99d162269d99e
+      - ElementName: 12201
+        ObjectType: 4
+        guid: b9aa25e364e77a4283692227bb49d9c6
+      - ElementName: E_12201_Skill_1
+        ObjectType: 3
+        guid: cfbcf6d860264a42a2825d54e7dc28ba
+      Path: Events/Default Work Unit/12000/E/12201/E_12201_Skill_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_12202
+      guid: 33890c07986a974ba5a07d17c8b1b97b
+      id: 1645083372
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: E
+        ObjectType: 4
+        guid: 236317de603438498ff99d162269d99e
+      - ElementName: E_12202
+        ObjectType: 4
+        guid: 33890c07986a974ba5a07d17c8b1b97b
+      Path: Events/Default Work Unit/12000/E/E_12202
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: E_12202_Att_1
+      guid: 2fe358e9ba0e3f4481efae7eb2cf4bf0
+      id: 1939316212
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: E
+        ObjectType: 4
+        guid: 236317de603438498ff99d162269d99e
+      - ElementName: E_12202
+        ObjectType: 4
+        guid: 33890c07986a974ba5a07d17c8b1b97b
+      - ElementName: E_12202_Att_1
+        ObjectType: 3
+        guid: 2fe358e9ba0e3f4481efae7eb2cf4bf0
+      Path: Events/Default Work Unit/12000/E/E_12202/E_12202_Att_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_12202_Die
+      guid: d7fad8890861074cb9ee5b29becbc7d0
+      id: 593456263
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: E
+        ObjectType: 4
+        guid: 236317de603438498ff99d162269d99e
+      - ElementName: E_12202
+        ObjectType: 4
+        guid: 33890c07986a974ba5a07d17c8b1b97b
+      - ElementName: E_12202_Die
+        ObjectType: 3
+        guid: d7fad8890861074cb9ee5b29becbc7d0
+      Path: Events/Default Work Unit/12000/E/E_12202/E_12202_Die
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_12202_Idle
+      guid: b0fe69a28ad67b4a983cfbd303bcd89a
+      id: 2664440205
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: E
+        ObjectType: 4
+        guid: 236317de603438498ff99d162269d99e
+      - ElementName: E_12202
+        ObjectType: 4
+        guid: 33890c07986a974ba5a07d17c8b1b97b
+      - ElementName: E_12202_Idle
+        ObjectType: 3
+        guid: b0fe69a28ad67b4a983cfbd303bcd89a
+      Path: Events/Default Work Unit/12000/E/E_12202/E_12202_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_12203_Att_1
+      guid: b94ff7d949698d4a9ee2e10786805d11
+      id: 3297995789
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: E
+        ObjectType: 4
+        guid: 236317de603438498ff99d162269d99e
+      - ElementName: 12203
+        ObjectType: 4
+        guid: 6f53014ec8297347884f1ad4eb296c0a
+      - ElementName: E_12203_Att_1
+        ObjectType: 3
+        guid: b94ff7d949698d4a9ee2e10786805d11
+      Path: Events/Default Work Unit/12000/E/12203/E_12203_Att_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_12203_Die
+      guid: e77566ff8d753e41819a07f96653318b
+      id: 2941018562
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: E
+        ObjectType: 4
+        guid: 236317de603438498ff99d162269d99e
+      - ElementName: 12203
+        ObjectType: 4
+        guid: 6f53014ec8297347884f1ad4eb296c0a
+      - ElementName: E_12203_Die
+        ObjectType: 3
+        guid: e77566ff8d753e41819a07f96653318b
+      Path: Events/Default Work Unit/12000/E/12203/E_12203_Die
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: E_12203_Idle
+      guid: 785819d78783b842a0b9a390628fc079
+      id: 260352622
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: E
+        ObjectType: 4
+        guid: 236317de603438498ff99d162269d99e
+      - ElementName: 12203
+        ObjectType: 4
+        guid: 6f53014ec8297347884f1ad4eb296c0a
+      - ElementName: E_12203_Idle
+        ObjectType: 3
+        guid: 785819d78783b842a0b9a390628fc079
+      Path: Events/Default Work Unit/12000/E/12203/E_12203_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -455,13 +1293,394 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
       - ElementName: H
         ObjectType: 4
         guid: 63decbc4cb05ab4eb77004aa514ac47c
-      Path: Events/Default Work Unit/H
+      Path: Events/Default Work Unit/11000/H
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: H
+      guid: 356d9275b3c94f4aac57b0d816099171
+      id: 84696439
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 23000
+        ObjectType: 4
+        guid: d8a8ef5fb088a043896a3e3700ff1ca9
+      - ElementName: H
+        ObjectType: 4
+        guid: 356d9275b3c94f4aac57b0d816099171
+      Path: Events/Default Work Unit/23000/H
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: H
+      guid: 8870739d6956c146b2504c38d547a458
+      id: 84696439
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: H
+        ObjectType: 4
+        guid: 8870739d6956c146b2504c38d547a458
+      Path: Events/Default Work Unit/12000/H
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: H_11101_Att_1
+      guid: cdf519fc221c3e48b9799110ebefc449
+      id: 740967588
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: H
+        ObjectType: 4
+        guid: 63decbc4cb05ab4eb77004aa514ac47c
+      - ElementName: 11101
+        ObjectType: 4
+        guid: e5e0f5e5519eca46ba64ec1034895c0d
+      - ElementName: H_11101_Att_1
+        ObjectType: 3
+        guid: cdf519fc221c3e48b9799110ebefc449
+      Path: Events/Default Work Unit/11000/H/11101/H_11101_Att_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: H_11101_Die
+      guid: 0688896509a3a145a24b8da6d61a7b31
+      id: 173632119
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: H
+        ObjectType: 4
+        guid: 63decbc4cb05ab4eb77004aa514ac47c
+      - ElementName: 11101
+        ObjectType: 4
+        guid: e5e0f5e5519eca46ba64ec1034895c0d
+      - ElementName: H_11101_Die
+        ObjectType: 3
+        guid: 0688896509a3a145a24b8da6d61a7b31
+      Path: Events/Default Work Unit/11000/H/11101/H_11101_Die
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: H_11101_Idle
+      guid: 905d9ec475c4464c90132c8b7e777acc
+      id: 3931695773
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: H
+        ObjectType: 4
+        guid: 63decbc4cb05ab4eb77004aa514ac47c
+      - ElementName: 11101
+        ObjectType: 4
+        guid: e5e0f5e5519eca46ba64ec1034895c0d
+      - ElementName: H_11101_Idle
+        ObjectType: 3
+        guid: 905d9ec475c4464c90132c8b7e777acc
+      Path: Events/Default Work Unit/11000/H/11101/H_11101_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: H_11101_Skill_1
+      guid: 800f74463e093b4e89145fbaa46cb8b1
+      id: 2322589246
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: H
+        ObjectType: 4
+        guid: 63decbc4cb05ab4eb77004aa514ac47c
+      - ElementName: 11101
+        ObjectType: 4
+        guid: e5e0f5e5519eca46ba64ec1034895c0d
+      - ElementName: H_11101_Skill_1
+        ObjectType: 3
+        guid: 800f74463e093b4e89145fbaa46cb8b1
+      Path: Events/Default Work Unit/11000/H/11101/H_11101_Skill_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: H_11101_Skill_2
+      guid: f50bb92f2e3ead4a951d235e750acf77
+      id: 2322589245
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: H
+        ObjectType: 4
+        guid: 63decbc4cb05ab4eb77004aa514ac47c
+      - ElementName: 11101
+        ObjectType: 4
+        guid: e5e0f5e5519eca46ba64ec1034895c0d
+      - ElementName: H_11101_Skill_2
+        ObjectType: 3
+        guid: f50bb92f2e3ead4a951d235e750acf77
+      Path: Events/Default Work Unit/11000/H/11101/H_11101_Skill_2
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: H_11101_Skill_3
+      guid: 41e2f26c01d6d8428db7925a1fd6dd1c
+      id: 2322589244
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: H
+        ObjectType: 4
+        guid: 63decbc4cb05ab4eb77004aa514ac47c
+      - ElementName: 11101
+        ObjectType: 4
+        guid: e5e0f5e5519eca46ba64ec1034895c0d
+      - ElementName: H_11101_Skill_3
+        ObjectType: 3
+        guid: 41e2f26c01d6d8428db7925a1fd6dd1c
+      Path: Events/Default Work Unit/11000/H/11101/H_11101_Skill_3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: H_12101_Att_1
+      guid: a03e49e6bdc90547a19bcf00d1dd45ef
+      id: 2860009837
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: H
+        ObjectType: 4
+        guid: 8870739d6956c146b2504c38d547a458
+      - ElementName: 12101
+        ObjectType: 4
+        guid: ae79c0062c7c4149be98dafb790c1dd3
+      - ElementName: H_12101_Att_1
+        ObjectType: 3
+        guid: a03e49e6bdc90547a19bcf00d1dd45ef
+      Path: Events/Default Work Unit/12000/H/12101/H_12101_Att_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: H_12101_Die
+      guid: f965c0cf439cd14c810e474d97d9b186
+      id: 3087384418
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: H
+        ObjectType: 4
+        guid: 8870739d6956c146b2504c38d547a458
+      - ElementName: 12101
+        ObjectType: 4
+        guid: ae79c0062c7c4149be98dafb790c1dd3
+      - ElementName: H_12101_Die
+        ObjectType: 3
+        guid: f965c0cf439cd14c810e474d97d9b186
+      Path: Events/Default Work Unit/12000/H/12101/H_12101_Die
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: H_12101_Idle
+      guid: d2c6671a933532429a9e2d710ecdb716
+      id: 1800604814
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: H
+        ObjectType: 4
+        guid: 8870739d6956c146b2504c38d547a458
+      - ElementName: 12101
+        ObjectType: 4
+        guid: ae79c0062c7c4149be98dafb790c1dd3
+      - ElementName: H_12101_Idle
+        ObjectType: 3
+        guid: d2c6671a933532429a9e2d710ecdb716
+      Path: Events/Default Work Unit/12000/H/12101/H_12101_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: H_12101_Skill_1
+      guid: b2cfdb63b9c604418a0c090182588dc0
+      id: 1835182751
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: H
+        ObjectType: 4
+        guid: 8870739d6956c146b2504c38d547a458
+      - ElementName: 12101
+        ObjectType: 4
+        guid: ae79c0062c7c4149be98dafb790c1dd3
+      - ElementName: H_12101_Skill_1
+        ObjectType: 3
+        guid: b2cfdb63b9c604418a0c090182588dc0
+      Path: Events/Default Work Unit/12000/H/12101/H_12101_Skill_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: H_12101_Skill_2
+      guid: 656fdae6e5c8f248998f17893d9105a6
+      id: 1835182748
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: H
+        ObjectType: 4
+        guid: 8870739d6956c146b2504c38d547a458
+      - ElementName: 12101
+        ObjectType: 4
+        guid: ae79c0062c7c4149be98dafb790c1dd3
+      - ElementName: H_12101_Skill_2
+        ObjectType: 3
+        guid: 656fdae6e5c8f248998f17893d9105a6
+      Path: Events/Default Work Unit/12000/H/12101/H_12101_Skill_2
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: H_12101_Skill_3
+      guid: c3f3ea9f1313ad42bd53949b016b95ec
+      id: 1835182749
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: H
+        ObjectType: 4
+        guid: 8870739d6956c146b2504c38d547a458
+      - ElementName: 12101
+        ObjectType: 4
+        guid: ae79c0062c7c4149be98dafb790c1dd3
+      - ElementName: H_12101_Skill_3
+        ObjectType: 3
+        guid: c3f3ea9f1313ad42bd53949b016b95ec
+      Path: Events/Default Work Unit/12000/H/12101/H_12101_Skill_3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: H_23101_Att_1
+      guid: 3a5f9243e644e44da02a09f3b6a64cf0
+      id: 1556887237
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 23000
+        ObjectType: 4
+        guid: d8a8ef5fb088a043896a3e3700ff1ca9
+      - ElementName: H
+        ObjectType: 4
+        guid: 356d9275b3c94f4aac57b0d816099171
+      - ElementName: 23101
+        ObjectType: 4
+        guid: 0c9db323a2ca854294e218b931bd0123
+      - ElementName: H_23101_Att_1
+        ObjectType: 3
+        guid: 3a5f9243e644e44da02a09f3b6a64cf0
+      Path: Events/Default Work Unit/23000/H/23101/H_23101_Att_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: H_23101_Die
       guid: 49f8fd6d5a46904eb3f265878c467ea7
       id: 3025390842
@@ -472,13 +1691,19 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 23000
+        ObjectType: 4
+        guid: d8a8ef5fb088a043896a3e3700ff1ca9
       - ElementName: H
         ObjectType: 4
-        guid: 63decbc4cb05ab4eb77004aa514ac47c
+        guid: 356d9275b3c94f4aac57b0d816099171
+      - ElementName: 23101
+        ObjectType: 4
+        guid: 0c9db323a2ca854294e218b931bd0123
       - ElementName: H_23101_Die
         ObjectType: 3
         guid: 49f8fd6d5a46904eb3f265878c467ea7
-      Path: Events/Default Work Unit/H/H_23101_Die
+      Path: Events/Default Work Unit/23000/H/23101/H_23101_Die
       maxAttenuation: 0
       maxDuration: 4.552415
       minDuration: 3.940282
@@ -492,13 +1717,19 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 23000
+        ObjectType: 4
+        guid: d8a8ef5fb088a043896a3e3700ff1ca9
       - ElementName: H
         ObjectType: 4
-        guid: 63decbc4cb05ab4eb77004aa514ac47c
+        guid: 356d9275b3c94f4aac57b0d816099171
+      - ElementName: 23101
+        ObjectType: 4
+        guid: 0c9db323a2ca854294e218b931bd0123
       - ElementName: H_23101_Idle
         ObjectType: 3
         guid: 22a29d89e75a334f9441f90bc7a012a9
-      Path: Events/Default Work Unit/H/H_23101_Idle
+      Path: Events/Default Work Unit/23000/H/23101/H_23101_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -512,13 +1743,19 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 23000
+        ObjectType: 4
+        guid: d8a8ef5fb088a043896a3e3700ff1ca9
       - ElementName: H
         ObjectType: 4
-        guid: 63decbc4cb05ab4eb77004aa514ac47c
+        guid: 356d9275b3c94f4aac57b0d816099171
+      - ElementName: 23101
+        ObjectType: 4
+        guid: 0c9db323a2ca854294e218b931bd0123
       - ElementName: H_23101_Skill_1
         ObjectType: 3
         guid: b22a2ce51ceba54ca2ea52dc2e7b6b58
-      Path: Events/Default Work Unit/H/H_23101_Skill_1
+      Path: Events/Default Work Unit/23000/H/23101/H_23101_Skill_1
       maxAttenuation: 0
       maxDuration: 1.358379
       minDuration: 1.358379
@@ -532,16 +1769,48 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 23000
+        ObjectType: 4
+        guid: d8a8ef5fb088a043896a3e3700ff1ca9
       - ElementName: H
         ObjectType: 4
-        guid: 63decbc4cb05ab4eb77004aa514ac47c
+        guid: 356d9275b3c94f4aac57b0d816099171
+      - ElementName: 23101
+        ObjectType: 4
+        guid: 0c9db323a2ca854294e218b931bd0123
       - ElementName: H_23101_Skill_2
         ObjectType: 3
         guid: 7ee30739d4f86b468177fe039240d740
-      Path: Events/Default Work Unit/H/H_23101_Skill_2
+      Path: Events/Default Work Unit/23000/H/23101/H_23101_Skill_2
       maxAttenuation: 0
       maxDuration: 1.231566
       minDuration: 1.231566
+    - name: H_23101_Skill_3
+      guid: 6586117c70284645a30f788b01e9d0ac
+      id: 2377059573
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 23000
+        ObjectType: 4
+        guid: d8a8ef5fb088a043896a3e3700ff1ca9
+      - ElementName: H
+        ObjectType: 4
+        guid: 356d9275b3c94f4aac57b0d816099171
+      - ElementName: 23101
+        ObjectType: 4
+        guid: 0c9db323a2ca854294e218b931bd0123
+      - ElementName: H_23101_Skill_3
+        ObjectType: 3
+        guid: 6586117c70284645a30f788b01e9d0ac
+      Path: Events/Default Work Unit/23000/H/23101/H_23101_Skill_3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: N
       guid: a4752d9de154eb429add0059789cea6b
       id: 84696433
@@ -552,10 +1821,53 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
       - ElementName: N
         ObjectType: 4
         guid: a4752d9de154eb429add0059789cea6b
-      Path: Events/Default Work Unit/N
+      Path: Events/Default Work Unit/11000/N
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: N
+      guid: 240f125b2930ee48aae91ab2a5a95f98
+      id: 84696433
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 23000
+        ObjectType: 4
+        guid: d8a8ef5fb088a043896a3e3700ff1ca9
+      - ElementName: N
+        ObjectType: 4
+        guid: 240f125b2930ee48aae91ab2a5a95f98
+      Path: Events/Default Work Unit/23000/N
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: N
+      guid: 71c844d1446d1743a62e0e6a4d7a443d
+      id: 84696433
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: N
+        ObjectType: 4
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
+      Path: Events/Default Work Unit/12000/N
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -569,13 +1881,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
       - ElementName: N
         ObjectType: 4
         guid: a4752d9de154eb429add0059789cea6b
       - ElementName: N_11301
         ObjectType: 4
         guid: eabf1e5a5f70744884c558172a818acc
-      Path: Events/Default Work Unit/N/N_11301
+      Path: Events/Default Work Unit/11000/N/N_11301
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -589,6 +1904,9 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
       - ElementName: N
         ObjectType: 4
         guid: a4752d9de154eb429add0059789cea6b
@@ -598,7 +1916,7 @@ MonoBehaviour:
       - ElementName: N_11301_Att_1
         ObjectType: 3
         guid: 4fa7701ad06e6d46b4c0261a7dd70f5f
-      Path: Events/Default Work Unit/N/N_11301/N_11301_Att_1
+      Path: Events/Default Work Unit/11000/N/N_11301/N_11301_Att_1
       maxAttenuation: 0
       maxDuration: 2.194391
       minDuration: 2.144271
@@ -612,6 +1930,9 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
       - ElementName: N
         ObjectType: 4
         guid: a4752d9de154eb429add0059789cea6b
@@ -621,7 +1942,33 @@ MonoBehaviour:
       - ElementName: N_11301_Die
         ObjectType: 3
         guid: 4581588773393b42b17ade649cbe079a
-      Path: Events/Default Work Unit/N/N_11301/N_11301_Die
+      Path: Events/Default Work Unit/11000/N/N_11301/N_11301_Die
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: N_11301_Idle
+      guid: fd264d9c05ce274cac01f4a7de60a16c
+      id: 270505849
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: N
+        ObjectType: 4
+        guid: a4752d9de154eb429add0059789cea6b
+      - ElementName: N_11301
+        ObjectType: 4
+        guid: eabf1e5a5f70744884c558172a818acc
+      - ElementName: N_11301_Idle
+        ObjectType: 3
+        guid: fd264d9c05ce274cac01f4a7de60a16c
+      Path: Events/Default Work Unit/11000/N/N_11301/N_11301_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -635,6 +1982,9 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
       - ElementName: N
         ObjectType: 4
         guid: a4752d9de154eb429add0059789cea6b
@@ -644,10 +1994,111 @@ MonoBehaviour:
       - ElementName: N_11301_Skill_1
         ObjectType: 3
         guid: e1eb4eb55a871144b8432f2995c767f8
-      Path: Events/Default Work Unit/N/N_11301/N_11301_Skill_1
+      Path: Events/Default Work Unit/11000/N/N_11301/N_11301_Skill_1
       maxAttenuation: 0
       maxDuration: 2.644271
       minDuration: 2.644271
+    - name: N_11302
+      guid: 9357fe37b89fbd4d8ecdc713bf665727
+      id: 3614630019
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: N
+        ObjectType: 4
+        guid: a4752d9de154eb429add0059789cea6b
+      - ElementName: N_11302
+        ObjectType: 4
+        guid: 9357fe37b89fbd4d8ecdc713bf665727
+      Path: Events/Default Work Unit/11000/N/N_11302
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: N_11302_Att_1
+      guid: ff7abf442b49d6489b3de1b61c91b188
+      id: 106734739
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: N
+        ObjectType: 4
+        guid: a4752d9de154eb429add0059789cea6b
+      - ElementName: N_11302
+        ObjectType: 4
+        guid: 9357fe37b89fbd4d8ecdc713bf665727
+      - ElementName: N_11302_Att_1
+        ObjectType: 3
+        guid: ff7abf442b49d6489b3de1b61c91b188
+      Path: Events/Default Work Unit/11000/N/N_11302/N_11302_Att_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: N_11302_Die
+      guid: 7e46b329ab5b5c4b8c881c43e6b49084
+      id: 3941226196
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: N
+        ObjectType: 4
+        guid: a4752d9de154eb429add0059789cea6b
+      - ElementName: N_11302
+        ObjectType: 4
+        guid: 9357fe37b89fbd4d8ecdc713bf665727
+      - ElementName: N_11302_Die
+        ObjectType: 3
+        guid: 7e46b329ab5b5c4b8c881c43e6b49084
+      Path: Events/Default Work Unit/11000/N/N_11302/N_11302_Die
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: N_11302_Idle
+      guid: c23010c2afd6234090390270d20628ad
+      id: 3506090988
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: N
+        ObjectType: 4
+        guid: a4752d9de154eb429add0059789cea6b
+      - ElementName: N_11302
+        ObjectType: 4
+        guid: 9357fe37b89fbd4d8ecdc713bf665727
+      - ElementName: N_11302_Idle
+        ObjectType: 3
+        guid: c23010c2afd6234090390270d20628ad
+      Path: Events/Default Work Unit/11000/N/N_11302/N_11302_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: N_11303
       guid: cc6ca3bc6163d943bc29d806b27dbe85
       id: 3614630018
@@ -658,13 +2109,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
       - ElementName: N
         ObjectType: 4
         guid: a4752d9de154eb429add0059789cea6b
       - ElementName: N_11303
         ObjectType: 4
         guid: cc6ca3bc6163d943bc29d806b27dbe85
-      Path: Events/Default Work Unit/N/N_11303
+      Path: Events/Default Work Unit/11000/N/N_11303
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -678,6 +2132,9 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
       - ElementName: N
         ObjectType: 4
         guid: a4752d9de154eb429add0059789cea6b
@@ -687,7 +2144,7 @@ MonoBehaviour:
       - ElementName: N_11303_Att_1
         ObjectType: 3
         guid: 09c309c5897e30419545d61bb533108b
-      Path: Events/Default Work Unit/N/N_11303/N_11303_Att_1
+      Path: Events/Default Work Unit/11000/N/N_11303/N_11303_Att_1
       maxAttenuation: 0
       maxDuration: 2.022438
       minDuration: 2.022438
@@ -701,6 +2158,9 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
       - ElementName: N
         ObjectType: 4
         guid: a4752d9de154eb429add0059789cea6b
@@ -710,7 +2170,7 @@ MonoBehaviour:
       - ElementName: N_11303_Die
         ObjectType: 3
         guid: ee7b850519d2ee4b98bc65be05a6883d
-      Path: Events/Default Work Unit/N/N_11303/N_11303_Die
+      Path: Events/Default Work Unit/11000/N/N_11303/N_11303_Die
       maxAttenuation: 0
       maxDuration: 2.022438
       minDuration: 2.022438
@@ -724,6 +2184,9 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
       - ElementName: N
         ObjectType: 4
         guid: a4752d9de154eb429add0059789cea6b
@@ -733,7 +2196,7 @@ MonoBehaviour:
       - ElementName: N_11303_Idle
         ObjectType: 3
         guid: 70c12388882c8746af4e9b1f7fd542db
-      Path: Events/Default Work Unit/N/N_11303/N_11303_Idle
+      Path: Events/Default Work Unit/11000/N/N_11303/N_11303_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -747,6 +2210,9 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
       - ElementName: N
         ObjectType: 4
         guid: a4752d9de154eb429add0059789cea6b
@@ -756,7 +2222,7 @@ MonoBehaviour:
       - ElementName: N_11303_Skill_1
         ObjectType: 3
         guid: 0b775e048ef7f64c90636fc185995c1d
-      Path: Events/Default Work Unit/N/N_11303/N_11303_Skill_1
+      Path: Events/Default Work Unit/11000/N/N_11303/N_11303_Skill_1
       maxAttenuation: 0
       maxDuration: 2.022438
       minDuration: 2.022438
@@ -770,13 +2236,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
       - ElementName: N
         ObjectType: 4
         guid: a4752d9de154eb429add0059789cea6b
       - ElementName: N_11304
         ObjectType: 4
         guid: 8b7ac201dcb2d54d8f93ba1c2c479bc4
-      Path: Events/Default Work Unit/N/N_11304
+      Path: Events/Default Work Unit/11000/N/N_11304
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -790,6 +2259,9 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
       - ElementName: N
         ObjectType: 4
         guid: a4752d9de154eb429add0059789cea6b
@@ -799,10 +2271,264 @@ MonoBehaviour:
       - ElementName: N_11304_Att_1
         ObjectType: 3
         guid: c1fdeb40e6ae65439a7aaa2a2b6e7009
-      Path: Events/Default Work Unit/N/N_11304/N_11304_Att_1
+      Path: Events/Default Work Unit/11000/N/N_11304/N_11304_Att_1
       maxAttenuation: 0
       maxDuration: 1.59375
       minDuration: 1.59375
+    - name: N_11304_Die
+      guid: bb980af81de2da45b4b509c795d64f3f
+      id: 3575138746
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: N
+        ObjectType: 4
+        guid: a4752d9de154eb429add0059789cea6b
+      - ElementName: N_11304
+        ObjectType: 4
+        guid: 8b7ac201dcb2d54d8f93ba1c2c479bc4
+      - ElementName: N_11304_Die
+        ObjectType: 3
+        guid: bb980af81de2da45b4b509c795d64f3f
+      Path: Events/Default Work Unit/11000/N/N_11304/N_11304_Die
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: N_11304_Idle
+      guid: a96b9eb1711a9b4db8171118fc27d0b1
+      id: 1165425958
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: N
+        ObjectType: 4
+        guid: a4752d9de154eb429add0059789cea6b
+      - ElementName: N_11304
+        ObjectType: 4
+        guid: 8b7ac201dcb2d54d8f93ba1c2c479bc4
+      - ElementName: N_11304_Idle
+        ObjectType: 3
+        guid: a96b9eb1711a9b4db8171118fc27d0b1
+      Path: Events/Default Work Unit/11000/N/N_11304/N_11304_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: N_11305
+      guid: c0d36b5810e3f44696dbf8e235d25c5e
+      id: 3614630020
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: N
+        ObjectType: 4
+        guid: a4752d9de154eb429add0059789cea6b
+      - ElementName: N_11305
+        ObjectType: 4
+        guid: c0d36b5810e3f44696dbf8e235d25c5e
+      Path: Events/Default Work Unit/11000/N/N_11305
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: N_11305_Die
+      guid: 693b349160ab0b469f904fdba17d1320
+      id: 1733226335
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: N
+        ObjectType: 4
+        guid: a4752d9de154eb429add0059789cea6b
+      - ElementName: N_11305
+        ObjectType: 4
+        guid: c0d36b5810e3f44696dbf8e235d25c5e
+      - ElementName: N_11305_Die
+        ObjectType: 3
+        guid: 693b349160ab0b469f904fdba17d1320
+      Path: Events/Default Work Unit/11000/N/N_11305/N_11305_Die
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: N_11305_Idle
+      guid: 930ea12d1162844e9e0fda97a033bda9
+      id: 1298084709
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: N
+        ObjectType: 4
+        guid: a4752d9de154eb429add0059789cea6b
+      - ElementName: N_11305
+        ObjectType: 4
+        guid: c0d36b5810e3f44696dbf8e235d25c5e
+      - ElementName: N_11305_Idle
+        ObjectType: 3
+        guid: 930ea12d1162844e9e0fda97a033bda9
+      Path: Events/Default Work Unit/11000/N/N_11305/N_11305_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: N_11305_Skill_1
+      guid: 0edd85eaf5d64246b9c6a0e9644df789
+      id: 42045094
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 11000
+        ObjectType: 4
+        guid: 539fe0567ddced449574d055d9f970dc
+      - ElementName: N
+        ObjectType: 4
+        guid: a4752d9de154eb429add0059789cea6b
+      - ElementName: N_11305
+        ObjectType: 4
+        guid: c0d36b5810e3f44696dbf8e235d25c5e
+      - ElementName: N_11305_Skill_1
+        ObjectType: 3
+        guid: 0edd85eaf5d64246b9c6a0e9644df789
+      Path: Events/Default Work Unit/11000/N/N_11305/N_11305_Skill_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: N_12301
+      guid: 2a768db85e99214dacba793bd17dec0c
+      id: 3973469029
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: N
+        ObjectType: 4
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
+      - ElementName: N_12301
+        ObjectType: 4
+        guid: 2a768db85e99214dacba793bd17dec0c
+      Path: Events/Default Work Unit/12000/N/N_12301
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: N_12301_Att_1
+      guid: 1c8180d35eea034da7618997974209f7
+      id: 3491230309
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: N
+        ObjectType: 4
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
+      - ElementName: N_12301
+        ObjectType: 4
+        guid: 2a768db85e99214dacba793bd17dec0c
+      - ElementName: N_12301_Att_1
+        ObjectType: 3
+        guid: 1c8180d35eea034da7618997974209f7
+      Path: Events/Default Work Unit/12000/N/N_12301/N_12301_Att_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: N_12301_Die
+      guid: b2bb2a56bdd3f245abe4082f4eb091da
+      id: 916234458
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: N
+        ObjectType: 4
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
+      - ElementName: N_12301
+        ObjectType: 4
+        guid: 2a768db85e99214dacba793bd17dec0c
+      - ElementName: N_12301_Die
+        ObjectType: 3
+        guid: b2bb2a56bdd3f245abe4082f4eb091da
+      Path: Events/Default Work Unit/12000/N/N_12301/N_12301_Die
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: N_12301_Idle
+      guid: fb22b863d17a9f4ba9e3a0689518cd47
+      id: 3905692870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: N
+        ObjectType: 4
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
+      - ElementName: N_12301
+        ObjectType: 4
+        guid: 2a768db85e99214dacba793bd17dec0c
+      - ElementName: N_12301_Idle
+        ObjectType: 3
+        guid: fb22b863d17a9f4ba9e3a0689518cd47
+      Path: Events/Default Work Unit/12000/N/N_12301/N_12301_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: N_12302
       guid: 12ab72f773fada4cb74c761f2797aff7
       id: 3973469030
@@ -813,13 +2539,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
       - ElementName: N
         ObjectType: 4
-        guid: a4752d9de154eb429add0059789cea6b
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
       - ElementName: N_12302
         ObjectType: 4
         guid: 12ab72f773fada4cb74c761f2797aff7
-      Path: Events/Default Work Unit/N/N_12302
+      Path: Events/Default Work Unit/12000/N/N_12302
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -833,16 +2562,19 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
       - ElementName: N
         ObjectType: 4
-        guid: a4752d9de154eb429add0059789cea6b
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
       - ElementName: N_12302
         ObjectType: 4
         guid: 12ab72f773fada4cb74c761f2797aff7
       - ElementName: N_12302_Att_1
         ObjectType: 3
         guid: 6fdcc9d214c4f54a9578456acf5d9ddf
-      Path: Events/Default Work Unit/N/N_12302/N_12302_Att_1
+      Path: Events/Default Work Unit/12000/N/N_12302/N_12302_Att_1
       maxAttenuation: 0
       maxDuration: 1.644438
       minDuration: 1.644438
@@ -856,19 +2588,48 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
       - ElementName: N
         ObjectType: 4
-        guid: a4752d9de154eb429add0059789cea6b
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
       - ElementName: N_12302
         ObjectType: 4
         guid: 12ab72f773fada4cb74c761f2797aff7
       - ElementName: N_12302_Die
         ObjectType: 3
         guid: e0fdd7f08b2fe24690ea68ab0db5ba1e
-      Path: Events/Default Work Unit/N/N_12302/N_12302_Die
+      Path: Events/Default Work Unit/12000/N/N_12302/N_12302_Die
       maxAttenuation: 0
       maxDuration: 1.644438
       minDuration: 1.644438
+    - name: N_12302_Idle
+      guid: 1ae39c45e29d9b4eae912a26e8873699
+      id: 2791364615
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: N
+        ObjectType: 4
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
+      - ElementName: N_12302
+        ObjectType: 4
+        guid: 12ab72f773fada4cb74c761f2797aff7
+      - ElementName: N_12302_Idle
+        ObjectType: 3
+        guid: 1ae39c45e29d9b4eae912a26e8873699
+      Path: Events/Default Work Unit/12000/N/N_12302/N_12302_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: N_12303
       guid: fffa1e8aa270aa4881aa9165d3293f81
       id: 3973469031
@@ -879,13 +2640,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
       - ElementName: N
         ObjectType: 4
-        guid: a4752d9de154eb429add0059789cea6b
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
       - ElementName: N_12303
         ObjectType: 4
         guid: fffa1e8aa270aa4881aa9165d3293f81
-      Path: Events/Default Work Unit/N/N_12303
+      Path: Events/Default Work Unit/12000/N/N_12303
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -899,16 +2663,19 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
       - ElementName: N
         ObjectType: 4
-        guid: a4752d9de154eb429add0059789cea6b
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
       - ElementName: N_12303
         ObjectType: 4
         guid: fffa1e8aa270aa4881aa9165d3293f81
       - ElementName: N_12303_Att_1
         ObjectType: 3
         guid: 78b8a058535f7549885ab3e5a137e834
-      Path: Events/Default Work Unit/N/N_12303/N_12303_Att_1
+      Path: Events/Default Work Unit/12000/N/N_12303/N_12303_Att_1
       maxAttenuation: 0
       maxDuration: 1.381229
       minDuration: 1.381229
@@ -922,19 +2689,250 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
       - ElementName: N
         ObjectType: 4
-        guid: a4752d9de154eb429add0059789cea6b
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
       - ElementName: N_12303
         ObjectType: 4
         guid: fffa1e8aa270aa4881aa9165d3293f81
       - ElementName: N_12303_Die
         ObjectType: 3
         guid: f4b58e42793da64aaff3665677035235
-      Path: Events/Default Work Unit/N/N_12303/N_12303_Die
+      Path: Events/Default Work Unit/12000/N/N_12303/N_12303_Die
       maxAttenuation: 0
       maxDuration: 1.381229
       minDuration: 1.381229
+    - name: N_12303_Idle
+      guid: aff7fc34c1885e40b56b4dc0658a60e6
+      id: 4223574600
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: N
+        ObjectType: 4
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
+      - ElementName: N_12303
+        ObjectType: 4
+        guid: fffa1e8aa270aa4881aa9165d3293f81
+      - ElementName: N_12303_Idle
+        ObjectType: 3
+        guid: aff7fc34c1885e40b56b4dc0658a60e6
+      Path: Events/Default Work Unit/12000/N/N_12303/N_12303_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: N_12304
+      guid: cd95fb7894cb634daeb23f39a6e3002a
+      id: 3973469024
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: N
+        ObjectType: 4
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
+      - ElementName: N_12304
+        ObjectType: 4
+        guid: cd95fb7894cb634daeb23f39a6e3002a
+      Path: Events/Default Work Unit/12000/N/N_12304
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: N_12304_Att_1
+      guid: 7246bf443572ec4dbae93c311969456a
+      id: 3365379992
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: N
+        ObjectType: 4
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
+      - ElementName: N_12304
+        ObjectType: 4
+        guid: cd95fb7894cb634daeb23f39a6e3002a
+      - ElementName: N_12304_Att_1
+        ObjectType: 3
+        guid: 7246bf443572ec4dbae93c311969456a
+      Path: Events/Default Work Unit/12000/N/N_12304/N_12304_Att_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: N_12304_Die
+      guid: abb9eb1e5841d44b891456425a4118b9
+      id: 1659176195
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: N
+        ObjectType: 4
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
+      - ElementName: N_12304
+        ObjectType: 4
+        guid: cd95fb7894cb634daeb23f39a6e3002a
+      - ElementName: N_12304_Die
+        ObjectType: 3
+        guid: abb9eb1e5841d44b891456425a4118b9
+      Path: Events/Default Work Unit/12000/N/N_12304/N_12304_Die
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: N_12304_Idle
+      guid: 001fbf8dd8d7b141992f7f6575de428b
+      id: 3010669337
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: N
+        ObjectType: 4
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
+      - ElementName: N_12304
+        ObjectType: 4
+        guid: cd95fb7894cb634daeb23f39a6e3002a
+      - ElementName: N_12304_Idle
+        ObjectType: 3
+        guid: 001fbf8dd8d7b141992f7f6575de428b
+      Path: Events/Default Work Unit/12000/N/N_12304/N_12304_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: N_12305
+      guid: 5951f1b5f7ee57478ba8ae495777f51f
+      id: 3973469025
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: N
+        ObjectType: 4
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
+      - ElementName: N_12305
+        ObjectType: 4
+        guid: 5951f1b5f7ee57478ba8ae495777f51f
+      Path: Events/Default Work Unit/12000/N/N_12305
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: N_12305_Die
+      guid: 0768346e7f57c044ab627d74144f8a45
+      id: 4037972494
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: N
+        ObjectType: 4
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
+      - ElementName: N_12305
+        ObjectType: 4
+        guid: 5951f1b5f7ee57478ba8ae495777f51f
+      - ElementName: N_12305_Die
+        ObjectType: 3
+        guid: 0768346e7f57c044ab627d74144f8a45
+      Path: Events/Default Work Unit/12000/N/N_12305/N_12305_Die
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: N_12305_Idle
+      guid: da423ee11bf5e14d8c5cc8c8c45f82eb
+      id: 1845922970
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: N
+        ObjectType: 4
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
+      - ElementName: N_12305
+        ObjectType: 4
+        guid: 5951f1b5f7ee57478ba8ae495777f51f
+      - ElementName: N_12305_Idle
+        ObjectType: 3
+        guid: da423ee11bf5e14d8c5cc8c8c45f82eb
+      Path: Events/Default Work Unit/12000/N/N_12305/N_12305_Idle
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: N_12305_Skill_1
+      guid: f96ab8c50bb23047918904913b8d2c58
+      id: 3425291315
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9afb6cf7ad351747ac19859bb342359b
+      - ElementName: 12000
+        ObjectType: 4
+        guid: 1311855352fa37439f40ab88ceab36db
+      - ElementName: N
+        ObjectType: 4
+        guid: 71c844d1446d1743a62e0e6a4d7a443d
+      - ElementName: N_12305
+        ObjectType: 4
+        guid: 5951f1b5f7ee57478ba8ae495777f51f
+      - ElementName: N_12305_Skill_1
+        ObjectType: 3
+        guid: f96ab8c50bb23047918904913b8d2c58
+      Path: Events/Default Work Unit/12000/N/N_12305/N_12305_Skill_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   - PhysicalPath: Events/Music.wwu
     PathAndIcons:
     - ElementName: Events

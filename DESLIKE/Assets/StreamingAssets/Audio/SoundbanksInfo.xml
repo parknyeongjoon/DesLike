@@ -26,16 +26,49 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1205173300">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1120217908">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
 			<IncludedEvents>
 				<Event Id="461545889" Name="Battle_End" ObjectPath="\Events\Default Work Unit\Battle_End" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2706291346" Name="Battle_Start" ObjectPath="\Events\Default Work Unit\Battle_Start" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1002629054" Name="E_11201_Att_1" ObjectPath="\Events\Default Work Unit\11000\E\11201\E_11201_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="4070038893" Name="E_11201_Die" ObjectPath="\Events\Default Work Unit\11000\E\11201\E_11201_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="736760783" Name="E_11201_Idle" ObjectPath="\Events\Default Work Unit\11000\E\11201\E_11201_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1934062128" Name="E_11201_Skill_1" ObjectPath="\Events\Default Work Unit\11000\E\11201\E_11201_Skill_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3172557730" Name="E_11202_Die" ObjectPath="\Events\Default Work Unit\11000\E\11202\E_11202_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2797876430" Name="E_11202_Idle" ObjectPath="\Events\Default Work Unit\11000\E\11202\E_11202_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="985093471" Name="E_11202_Skill_1" ObjectPath="\Events\Default Work Unit\11000\E\11202\E_11202_Skill_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="365726612" Name="E_11203_Att_1" ObjectPath="\Events\Default Work Unit\11000\E\11203\E_11203_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="824892519" Name="E_11203_Die" ObjectPath="\Events\Default Work Unit\11000\E\11203\E_11203_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="948573677" Name="E_11203_Idle" ObjectPath="\Events\Default Work Unit\11000\E\11203\E_11203_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3155306831" Name="E_12201_Att_1" ObjectPath="\Events\Default Work Unit\12000\E\12201\E_12201_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3972125528" Name="E_12201_Die" ObjectPath="\Events\Default Work Unit\12000\E\12201\E_12201_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2413454704" Name="E_12201_Idle" ObjectPath="\Events\Default Work Unit\12000\E\12201\E_12201_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="4273930737" Name="E_12201_Skill_1" ObjectPath="\Events\Default Work Unit\12000\E\12201\E_12201_Skill_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1939316212" Name="E_12202_Att_1" ObjectPath="\Events\Default Work Unit\12000\E\E_12202\E_12202_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="593456263" Name="E_12202_Die" ObjectPath="\Events\Default Work Unit\12000\E\E_12202\E_12202_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2664440205" Name="E_12202_Idle" ObjectPath="\Events\Default Work Unit\12000\E\E_12202\E_12202_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3297995789" Name="E_12203_Att_1" ObjectPath="\Events\Default Work Unit\12000\E\12203\E_12203_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2941018562" Name="E_12203_Die" ObjectPath="\Events\Default Work Unit\12000\E\12203\E_12203_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="260352622" Name="E_12203_Idle" ObjectPath="\Events\Default Work Unit\12000\E\12203\E_12203_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="1027347108" Name="Game_Speed_Pause" ObjectPath="\Events\Default Work Unit\Game_Speed_Pause" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2372597559" Name="Game_Speed_Resume" ObjectPath="\Events\Default Work Unit\Game_Speed_Resume" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="3025390842" Name="H_23101_Die" ObjectPath="\Events\Default Work Unit\H\H_23101_Die" DurationType="OneShot" DurationMin="3.940282" DurationMax="4.552415">
+				<Event Id="740967588" Name="H_11101_Att_1" ObjectPath="\Events\Default Work Unit\11000\H\11101\H_11101_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="173632119" Name="H_11101_Die" ObjectPath="\Events\Default Work Unit\11000\H\11101\H_11101_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3931695773" Name="H_11101_Idle" ObjectPath="\Events\Default Work Unit\11000\H\11101\H_11101_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2322589246" Name="H_11101_Skill_1" ObjectPath="\Events\Default Work Unit\11000\H\11101\H_11101_Skill_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2322589245" Name="H_11101_Skill_2" ObjectPath="\Events\Default Work Unit\11000\H\11101\H_11101_Skill_2" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2322589244" Name="H_11101_Skill_3" ObjectPath="\Events\Default Work Unit\11000\H\11101\H_11101_Skill_3" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2860009837" Name="H_12101_Att_1" ObjectPath="\Events\Default Work Unit\12000\H\12101\H_12101_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3087384418" Name="H_12101_Die" ObjectPath="\Events\Default Work Unit\12000\H\12101\H_12101_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1800604814" Name="H_12101_Idle" ObjectPath="\Events\Default Work Unit\12000\H\12101\H_12101_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1835182751" Name="H_12101_Skill_1" ObjectPath="\Events\Default Work Unit\12000\H\12101\H_12101_Skill_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1835182748" Name="H_12101_Skill_2" ObjectPath="\Events\Default Work Unit\12000\H\12101\H_12101_Skill_2" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1835182749" Name="H_12101_Skill_3" ObjectPath="\Events\Default Work Unit\12000\H\12101\H_12101_Skill_3" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1556887237" Name="H_23101_Att_1" ObjectPath="\Events\Default Work Unit\23000\H\23101\H_23101_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3025390842" Name="H_23101_Die" ObjectPath="\Events\Default Work Unit\23000\H\23101\H_23101_Die" DurationType="OneShot" DurationMin="3.940282" DurationMax="4.552415">
 					<IncludedMemoryFiles>
 						<File Id="234665702" Language="SFX">
 							<ShortName>23101_Die_Print_01.wav</ShortName>
@@ -43,8 +76,8 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4029061990" Name="H_23101_Idle" ObjectPath="\Events\Default Work Unit\H\H_23101_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="2377059575" Name="H_23101_Skill_1" ObjectPath="\Events\Default Work Unit\H\H_23101_Skill_1" DurationType="OneShot" DurationMin="1.358379" DurationMax="1.358379">
+				<Event Id="4029061990" Name="H_23101_Idle" ObjectPath="\Events\Default Work Unit\23000\H\23101\H_23101_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2377059575" Name="H_23101_Skill_1" ObjectPath="\Events\Default Work Unit\23000\H\23101\H_23101_Skill_1" DurationType="OneShot" DurationMin="1.358379" DurationMax="1.358379">
 					<IncludedMemoryFiles>
 						<File Id="108942149" Language="SFX">
 							<ShortName>23101_idle_Print_3_01.wav</ShortName>
@@ -56,7 +89,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2377059572" Name="H_23101_Skill_2" ObjectPath="\Events\Default Work Unit\H\H_23101_Skill_2" DurationType="OneShot" DurationMin="1.231566" DurationMax="1.231566">
+				<Event Id="2377059572" Name="H_23101_Skill_2" ObjectPath="\Events\Default Work Unit\23000\H\23101\H_23101_Skill_2" DurationType="OneShot" DurationMin="1.231566" DurationMax="1.231566">
 					<IncludedMemoryFiles>
 						<File Id="290311062" Language="SFX">
 							<ShortName>23101_Skill_2_Print_01.wav</ShortName>
@@ -64,6 +97,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2377059573" Name="H_23101_Skill_3" ObjectPath="\Events\Default Work Unit\23000\H\23101\H_23101_Skill_3" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3017247325" Name="Music_Map" ObjectPath="\Events\Music\Music_Map" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetState>
 						<ActionSetStateEntry Id="3017247325" Name="Music_Map" ObjectPath="\States\Music\Music_State\Music_Map"/>
@@ -855,7 +889,7 @@
 						<ActionSetStateEntry Id="1615767906" Name="Music_Main" ObjectPath="\States\Music\Music_State\Music_Main"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="809365176" Name="N_11301_Att_1" ObjectPath="\Events\Default Work Unit\N\N_11301\N_11301_Att_1" DurationType="OneShot" DurationMin="2.144271" DurationMax="2.194391">
+				<Event Id="809365176" Name="N_11301_Att_1" ObjectPath="\Events\Default Work Unit\11000\N\N_11301\N_11301_Att_1" DurationType="OneShot" DurationMin="2.144271" DurationMax="2.194391">
 					<IncludedMemoryFiles>
 						<File Id="397602418" Language="SFX">
 							<ShortName>11301_Att_Light_Print_01.wav</ShortName>
@@ -867,8 +901,9 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="23113443" Name="N_11301_Die" ObjectPath="\Events\Default Work Unit\N\N_11301\N_11301_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="3164085490" Name="N_11301_Skill_1" ObjectPath="\Events\Default Work Unit\N\N_11301\N_11301_Skill_1" DurationType="OneShot" DurationMin="2.644271" DurationMax="2.644271">
+				<Event Id="23113443" Name="N_11301_Die" ObjectPath="\Events\Default Work Unit\11000\N\N_11301\N_11301_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="270505849" Name="N_11301_Idle" ObjectPath="\Events\Default Work Unit\11000\N\N_11301\N_11301_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3164085490" Name="N_11301_Skill_1" ObjectPath="\Events\Default Work Unit\11000\N\N_11301\N_11301_Skill_1" DurationType="OneShot" DurationMin="2.644271" DurationMax="2.644271">
 					<IncludedMemoryFiles>
 						<File Id="514384517" Language="SFX">
 							<ShortName>11301_Die_Print_01.wav</ShortName>
@@ -880,7 +915,10 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="377015314" Name="N_11303_Att_1" ObjectPath="\Events\Default Work Unit\N\N_11303\N_11303_Att_1" DurationType="OneShot" DurationMin="2.022438" DurationMax="2.022438">
+				<Event Id="106734739" Name="N_11302_Att_1" ObjectPath="\Events\Default Work Unit\11000\N\N_11302\N_11302_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3941226196" Name="N_11302_Die" ObjectPath="\Events\Default Work Unit\11000\N\N_11302\N_11302_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3506090988" Name="N_11302_Idle" ObjectPath="\Events\Default Work Unit\11000\N\N_11302\N_11302_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="377015314" Name="N_11303_Att_1" ObjectPath="\Events\Default Work Unit\11000\N\N_11303\N_11303_Att_1" DurationType="OneShot" DurationMin="2.022438" DurationMax="2.022438">
 					<IncludedMemoryFiles>
 						<File Id="174369190" Language="SFX">
 							<ShortName>11303_Att_Hit_1_Print_01.wav</ShortName>
@@ -900,7 +938,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1562429897" Name="N_11303_Die" ObjectPath="\Events\Default Work Unit\N\N_11303\N_11303_Die" DurationType="OneShot" DurationMin="2.022438" DurationMax="2.022438">
+				<Event Id="1562429897" Name="N_11303_Die" ObjectPath="\Events\Default Work Unit\11000\N\N_11303\N_11303_Die" DurationType="OneShot" DurationMin="2.022438" DurationMax="2.022438">
 					<IncludedMemoryFiles>
 						<File Id="140826495" Language="SFX">
 							<ShortName>11303_Die_Print_01.wav</ShortName>
@@ -908,8 +946,8 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4143119307" Name="N_11303_Idle" ObjectPath="\Events\Default Work Unit\N\N_11303\N_11303_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="2196727988" Name="N_11303_Skill_1" ObjectPath="\Events\Default Work Unit\N\N_11303\N_11303_Skill_1" DurationType="OneShot" DurationMin="2.022438" DurationMax="2.022438">
+				<Event Id="4143119307" Name="N_11303_Idle" ObjectPath="\Events\Default Work Unit\11000\N\N_11303\N_11303_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2196727988" Name="N_11303_Skill_1" ObjectPath="\Events\Default Work Unit\11000\N\N_11303\N_11303_Skill_1" DurationType="OneShot" DurationMin="2.022438" DurationMax="2.022438">
 					<IncludedMemoryFiles>
 						<File Id="350264250" Language="SFX">
 							<ShortName>11303_Skill_1_Voice_Print_01.wav</ShortName>
@@ -917,7 +955,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1359672837" Name="N_11304_Att_1" ObjectPath="\Events\Default Work Unit\N\N_11304\N_11304_Att_1" DurationType="OneShot" DurationMin="1.59375" DurationMax="1.59375">
+				<Event Id="1359672837" Name="N_11304_Att_1" ObjectPath="\Events\Default Work Unit\11000\N\N_11304\N_11304_Att_1" DurationType="OneShot" DurationMin="1.59375" DurationMax="1.59375">
 					<IncludedMemoryFiles>
 						<File Id="449749844" Language="SFX">
 							<ShortName>Print_11304_Att_1_01.wav</ShortName>
@@ -925,7 +963,15 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="616111670" Name="N_12302_Att_1" ObjectPath="\Events\Default Work Unit\N\N_12302\N_12302_Att_1" DurationType="OneShot" DurationMin="1.644438" DurationMax="1.644438">
+				<Event Id="3575138746" Name="N_11304_Die" ObjectPath="\Events\Default Work Unit\11000\N\N_11304\N_11304_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1165425958" Name="N_11304_Idle" ObjectPath="\Events\Default Work Unit\11000\N\N_11304\N_11304_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1733226335" Name="N_11305_Die" ObjectPath="\Events\Default Work Unit\11000\N\N_11305\N_11305_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1298084709" Name="N_11305_Idle" ObjectPath="\Events\Default Work Unit\11000\N\N_11305\N_11305_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="42045094" Name="N_11305_Skill_1" ObjectPath="\Events\Default Work Unit\11000\N\N_11305\N_11305_Skill_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3491230309" Name="N_12301_Att_1" ObjectPath="\Events\Default Work Unit\12000\N\N_12301\N_12301_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="916234458" Name="N_12301_Die" ObjectPath="\Events\Default Work Unit\12000\N\N_12301\N_12301_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3905692870" Name="N_12301_Idle" ObjectPath="\Events\Default Work Unit\12000\N\N_12301\N_12301_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="616111670" Name="N_12302_Att_1" ObjectPath="\Events\Default Work Unit\12000\N\N_12302\N_12302_Att_1" DurationType="OneShot" DurationMin="1.644438" DurationMax="1.644438">
 					<IncludedMemoryFiles>
 						<File Id="226311714" Language="SFX">
 							<ShortName>Print_12302_Att_1_01.wav</ShortName>
@@ -933,7 +979,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1824161189" Name="N_12302_Die" ObjectPath="\Events\Default Work Unit\N\N_12302\N_12302_Die" DurationType="OneShot" DurationMin="1.644438" DurationMax="1.644438">
+				<Event Id="1824161189" Name="N_12302_Die" ObjectPath="\Events\Default Work Unit\12000\N\N_12302\N_12302_Die" DurationType="OneShot" DurationMin="1.644438" DurationMax="1.644438">
 					<IncludedMemoryFiles>
 						<File Id="897182115" Language="SFX">
 							<ShortName>Print_12302_Die_01.wav</ShortName>
@@ -941,7 +987,8 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2172972263" Name="N_12303_Att_1" ObjectPath="\Events\Default Work Unit\N\N_12303\N_12303_Att_1" DurationType="OneShot" DurationMin="1.381229" DurationMax="1.381229">
+				<Event Id="2791364615" Name="N_12302_Idle" ObjectPath="\Events\Default Work Unit\12000\N\N_12302\N_12302_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2172972263" Name="N_12303_Att_1" ObjectPath="\Events\Default Work Unit\12000\N\N_12303\N_12303_Att_1" DurationType="OneShot" DurationMin="1.381229" DurationMax="1.381229">
 					<IncludedMemoryFiles>
 						<File Id="595114047" Language="SFX">
 							<ShortName>Print_12303_Att_1_01.wav</ShortName>
@@ -949,7 +996,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1660103536" Name="N_12303_Die" ObjectPath="\Events\Default Work Unit\N\N_12303\N_12303_Die" DurationType="OneShot" DurationMin="1.381229" DurationMax="1.381229">
+				<Event Id="1660103536" Name="N_12303_Die" ObjectPath="\Events\Default Work Unit\12000\N\N_12303\N_12303_Die" DurationType="OneShot" DurationMin="1.381229" DurationMax="1.381229">
 					<IncludedMemoryFiles>
 						<File Id="420026847" Language="SFX">
 							<ShortName>Print_12303_Die_01.wav</ShortName>
@@ -957,6 +1004,13 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="4223574600" Name="N_12303_Idle" ObjectPath="\Events\Default Work Unit\12000\N\N_12303\N_12303_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3365379992" Name="N_12304_Att_1" ObjectPath="\Events\Default Work Unit\12000\N\N_12304\N_12304_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1659176195" Name="N_12304_Die" ObjectPath="\Events\Default Work Unit\12000\N\N_12304\N_12304_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3010669337" Name="N_12304_Idle" ObjectPath="\Events\Default Work Unit\12000\N\N_12304\N_12304_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="4037972494" Name="N_12305_Die" ObjectPath="\Events\Default Work Unit\12000\N\N_12305\N_12305_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1845922970" Name="N_12305_Idle" ObjectPath="\Events\Default Work Unit\12000\N\N_12305\N_12305_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3425291315" Name="N_12305_Skill_1" ObjectPath="\Events\Default Work Unit\12000\N\N_12305\N_12305_Skill_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<StateGroups>
 				<StateGroup Id="91695603" Name="Music_S2_Boss_Battle" ObjectPath="\States\Music\Music_State\Music_S2_Boss_Battle" GUID="{729323AF-59F8-4C4C-AA17-5B880341A81C}">

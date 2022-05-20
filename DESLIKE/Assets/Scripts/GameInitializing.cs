@@ -48,6 +48,7 @@ public class GameInitializing : MonoBehaviour
         }
         for(int i = 0; i < relicObjects.Length; i++)
         {
+            Debug.Log(i);
             Relic tempRelic = relicObjects[i].GetComponent<Relic>();
             SaveManager.Instance.dataSheet.relicObjectSheet.Add(tempRelic.relicData.code, relicObjects[i]);
             SaveManager.Instance.dataSheet.relicDataSheet.Add(tempRelic.relicData.code, tempRelic.relicData);

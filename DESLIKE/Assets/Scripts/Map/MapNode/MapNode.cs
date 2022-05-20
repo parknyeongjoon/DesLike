@@ -10,9 +10,9 @@ public class MapNode : ScriptableObject
     public Map map;
     public bool isNode = false;
     public List<SoldierData> ableSoldierRewards = new List<SoldierData>();    // 위 3개를 조합해서 나오는 리워드 리스트
-    // public Dictionary<string, Relic> ableRelicRewards = new Dictionary<string, Relic>();
     public Reward reward;
     public int[] relicLevelCount = new int[3];
+    RelicManager relicManager;
 
     public void SetAbleReward() // 병사만 설정
     {
@@ -56,6 +56,7 @@ public class MapNode : ScriptableObject
 
     public string SetNorRel()  // 일반 유물 랜덤 생성 후 코드 전달
     {
+        relicManager = RelicManager.instance;
         int norRelCount;
         kingdom = map.kingdom;
 
@@ -67,8 +68,8 @@ public class MapNode : ScriptableObject
             rand = Random.Range(0, norRelCount-1);  // 국가 유물 vs 공통 유물 중 어떤 걸로 할지
             if(rand < map.physicNorRel.Count)   // 국가 유물이라면
             {
-                rand = Random.Range(0, map.physicNorRel.Count); // 국가 유물 내 랜덤값
-                if (reward.relicReward.ContainsKey("Relic_Physic_N_" + rand))   // 가지고 있는 유물인지
+                rand = Random.Range(0, map.physicNorRel.Count) + 1; // 국가 유물 내 랜덤값
+                if (relicManager.relicList.ContainsKey("Relic_Physic_N_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
@@ -77,8 +78,8 @@ public class MapNode : ScriptableObject
             }
             else // 일반 유물
             {
-                rand = Random.Range(0, map.commonNorRel.Count);
-                if (reward.relicReward.ContainsKey("Relic_Common_N_" + rand))   // 가지고 있는 유물인지
+                rand = Random.Range(0, map.commonNorRel.Count) + 1;
+                if (relicManager.relicList.ContainsKey("Relic_Common_N_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
@@ -94,8 +95,8 @@ public class MapNode : ScriptableObject
             rand = Random.Range(0, norRelCount - 1);  // 국가 유물 vs 공통 유물 중 어떤 걸로 할지
             if (rand < map.spellNorRel.Count)   // 국가 유물이라면
             {
-                rand = Random.Range(0, map.spellNorRel.Count);  // 국가 유물 내 랜덤값
-                if (reward.relicReward.ContainsKey("Relic_Spell_N_" + rand))   // 가지고 있는 유물인지
+                rand = Random.Range(0, map.spellNorRel.Count) + 1;  // 국가 유물 내 랜덤값
+                if (relicManager.relicList.ContainsKey("Relic_Spell_N_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
@@ -104,8 +105,8 @@ public class MapNode : ScriptableObject
             }
             else // 일반 유물
             {
-                rand = Random.Range(0, map.commonNorRel.Count);
-                if (reward.relicReward.ContainsKey("Relic_Common_N_" + rand))   // 가지고 있는 유물인지
+                rand = Random.Range(0, map.commonNorRel.Count) + 1;
+                if (relicManager.relicList.ContainsKey("Relic_Common_N_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
@@ -117,6 +118,7 @@ public class MapNode : ScriptableObject
 
     public string SetEpicRel()  // 일반 유물 랜덤 생성 후 코드 전달
     {
+        relicManager = RelicManager.Instance;
         int epicRelCount;
         kingdom = map.kingdom;
 
@@ -128,8 +130,9 @@ public class MapNode : ScriptableObject
             rand = Random.Range(0, epicRelCount - 1);  // 국가 유물 vs 공통 유물 중 어떤 걸로 할지
             if (rand < map.physicNorRel.Count)   // 국가 유물이라면
             {
-                rand = Random.Range(0, map.physicEpicRel.Count); // 국가 유물 내 랜덤값
-                if (reward.relicReward.ContainsKey("Relic_Physic_E_" + rand))   // 가지고 있는 유물인지
+           
+                rand = Random.Range(0, map.physicEpicRel.Count) + 1; // 국가 유물 내 랜덤값
+                if (relicManager.relicList.ContainsKey("Relic_Physic_E_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
@@ -138,8 +141,8 @@ public class MapNode : ScriptableObject
             }
             else // 일반 유물
             {
-                rand = Random.Range(0, map.commonEpicRel.Count);
-                if (reward.relicReward.ContainsKey("Relic_Common_E_" + rand))   // 가지고 있는 유물인지
+                rand = Random.Range(0, map.commonEpicRel.Count) + 1;
+                if (relicManager.relicList.ContainsKey("Relic_Common_E_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
@@ -155,8 +158,8 @@ public class MapNode : ScriptableObject
             rand = Random.Range(0, epicRelCount - 1);  // 국가 유물 vs 공통 유물 중 어떤 걸로 할지
             if (rand < map.spellNorRel.Count)   // 국가 유물이라면
             {
-                rand = Random.Range(0, map.spellEpicRel.Count);  // 국가 유물 내 랜덤값
-                if (reward.relicReward.ContainsKey("Relic_Spell_E_" + rand))   // 가지고 있는 유물인지
+                rand = Random.Range(0, map.spellEpicRel.Count) + 1;  // 국가 유물 내 랜덤값
+                if (relicManager.relicList.ContainsKey("Relic_Spell_E_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
@@ -165,8 +168,8 @@ public class MapNode : ScriptableObject
             }
             else // 일반 유물
             {
-                rand = Random.Range(0, map.commonEpicRel.Count);
-                if (reward.relicReward.ContainsKey("Relic_Common_E_" + rand))   // 가지고 있는 유물인지
+                rand = Random.Range(0, map.commonEpicRel.Count) + 1;
+                if (relicManager.relicList.ContainsKey("Relic_Common_E_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
@@ -178,6 +181,7 @@ public class MapNode : ScriptableObject
 
     public string SetLegRel()  // 일반 유물 랜덤 생성 후 코드 전달
     {
+        relicManager = RelicManager.Instance;
         int legRelCount;
         kingdom = map.kingdom;
 
@@ -189,23 +193,23 @@ public class MapNode : ScriptableObject
             rand = Random.Range(0, legRelCount - 1);  // 국가 유물 vs 공통 유물 중 어떤 걸로 할지
             if (rand < map.physicNorRel.Count)   // 국가 유물이라면
             {
-                rand = Random.Range(0, map.physicLegendRel.Count); // 국가 유물 내 랜덤값
-                if (reward.relicReward.ContainsKey("Relic_Physic_L_" + rand))   // 가지고 있는 유물인지
+                rand = Random.Range(0, map.physicLegendRel.Count) + 1; // 국가 유물 내 랜덤값
+                if (relicManager.relicList.ContainsKey("Relic_Physic_H_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
                 }
-                return ("Relic_Physic_L_" + rand);
+                return ("Relic_Physic_H_" + rand);
             }
             else // 일반 유물
             {
-                rand = Random.Range(0, map.commonEpicRel.Count);
-                if (reward.relicReward.ContainsKey("Relic_Common_L_" + rand))   // 가지고 있는 유물인지
+                rand = Random.Range(0, map.commonEpicRel.Count) + 1;
+                if (relicManager.relicList.ContainsKey("Relic_Common_H_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
                 }
-                return ("Relic_Common_L_" + rand);
+                return ("Relic_Common_H_" + rand);
             }
         }
         else
@@ -216,23 +220,25 @@ public class MapNode : ScriptableObject
             rand = Random.Range(0, legRelCount - 1);  // 국가 유물 vs 공통 유물 중 어떤 걸로 할지
             if (rand < map.spellNorRel.Count)   // 국가 유물이라면
             {
-                rand = Random.Range(0, map.spellEpicRel.Count);  // 국가 유물 내 랜덤값
-                if (reward.relicReward.ContainsKey("Relic_Spell_L_" + rand))   // 가지고 있는 유물인지
+                rand = Random.Range(0, map.spellEpicRel.Count) + 1;  // 국가 유물 내 랜덤값
+                Debug.Log("relicManager : " + relicManager);
+                Debug.Log("relicManager.relicList : " + relicManager.relicList);
+                if (relicManager.relicList.ContainsKey("Relic_Spell_H_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
                 }
-                return ("Relic_Spell_L_" + rand);
+                return ("Relic_Spell_H_" + rand);
             }
             else // 일반 유물
             {
-                rand = Random.Range(0, map.commonLegendRel.Count);
-                if (reward.relicReward.ContainsKey("Relic_Common_L_" + rand))   // 가지고 있는 유물인지
+                rand = Random.Range(0, map.commonLegendRel.Count) + 1;
+                if (relicManager.relicList.ContainsKey("Relic_Common_H_" + rand))   // 가지고 있는 유물인지
                 {
                     InfiniteLoopDetector.Run();
                     goto reroll;
                 }
-                return ("Relic_Common_L_" + rand);
+                return ("Relic_Common_H_" + rand);
             }
         }
     }

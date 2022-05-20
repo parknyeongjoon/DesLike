@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f49b43fb30a90f0429c33d60afa315ad, type: 3}
+  m_Name: temp_Physic_E_2
+  m_EditorClassIdentifier: 
+  relicImg: {fileID: 0}
+  code: Relic_Physic_E_2
+  relicName: Relic_Physic_E_2
+  toopTip: "\uD68C\uD53C \uC2DC 2\uCD08\uAC04 \uACF5\uACA9\uC18D\uB3C4 30\uD504\uB85C
+    \uC99D\uAC00"
+  kingdom: 1
+  rarity: 2
+  continueReuse: 1
+  dodge: {fileID: 11400000, guid: a10fd137a8b20f040a484212f49cb907, type: 2}
+  extraSkill: {fileID: 11400000, guid: eabef5a82fce6bb4d8229e36ec061183, type: 2}

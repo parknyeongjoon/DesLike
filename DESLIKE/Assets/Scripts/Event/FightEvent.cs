@@ -97,29 +97,7 @@ public class FightEvent : EventBasic
     void RewardSet()    // 희귀 유물 보상만 
     {
         battleNode.SetAbleReward();
-
-        int norTotal, epicTotal;
-        if (battleNode.kingdom == Kingdom.Physic)
-        {
-            norTotal = phyNorRelC + comNorRelC;
-            epicTotal = phyEpicRelC + comEpicRelC;
-        }
-        else
-        {
-            norTotal = speNorRelC + comNorRelC;
-            epicTotal = speEpicRelC + comEpicRelC;
-        }
-    reroll:
-        int rand = Random.Range(0, epicTotal) + norTotal;
-        if (RelicManager.instance.relicList != null)
-        {
-            for (int i = 0; i < RelicManager.instance.relicList.Count; i++)
-            {
-                if (RelicManager.instance.relicList.ContainsKey(battleNode.ableRelicRewards[rand].relicData.code))
-                    goto reroll;
-            }   // 기존 가지고 있는 유물이면 리롤
-        }
-        battleNode.reward.relicReward.Add(battleNode.ableRelicRewards[rand]);
+        battleNode.SetEpicRel();
     }
 
     void Set_PortsOption(PortsOption portsOption, PortDatas portDatas)

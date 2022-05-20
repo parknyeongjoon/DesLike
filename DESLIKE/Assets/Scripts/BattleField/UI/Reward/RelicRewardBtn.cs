@@ -11,11 +11,12 @@ public class RelicRewardBtn : MonoBehaviour
 
     RelicData relicData;
     Relic relicScript;
+    SaveManager saveManager;
 
     void Start()
     {
-        relicScript = SaveManager.Instance.map.curMapNode.reward.relicReward(0).GetComponent<Relic>();
-        relicData = relicScript.relicData;
+        saveManager = SaveManager.Instance;
+        relicData = saveManager.dataSheet.relicDataSheet[saveManager.map.curMapNode.SetNorRel()];
         //toolTipPanel.SetActive(false);
         transform.GetChild(0).GetComponent<TMP_Text>().text = relicData.relicName;
         transform.GetChild(1).GetComponent<Image>().sprite = relicData.relicImg;

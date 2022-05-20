@@ -87,7 +87,7 @@ public class SaveManager : MonoBehaviour
     public Map map;//맵 스크립터블 오브젝트
     public GameObject heroPrefab;//현재 사용 중인 영웅 프리팹
 
-    public void SavePortDatas()
+    public void SavePortDatas()//포트 데이터들을 저장하는 함수
     {
         //각 포트의 값들 저장
         for (int i = 0; i < allyPortDatas.portDatas.Length; i++)
@@ -102,7 +102,7 @@ public class SaveManager : MonoBehaviour
         gameData.portSaveDatas.curBarrierStrength = allyPortDatas.curBarrierStrength;
     }
 
-    public void LoadPortsDatas()//Continue버튼에서만 사용할 지
+    public void LoadPortsDatas()//포트 데이터 불러오기(Continue버튼에서만 사용할 지)
     {
         for (int i = 0; i < gameData.portSaveDatas.portSaveList.Length; i++)
         {
@@ -131,29 +131,22 @@ public class SaveManager : MonoBehaviour
         gameData.heroSaveData.resurrection = heroInfo.resurrection;
     }
 
-
-    public RelicManager relicManager;
     public void SaveRelicData()
     {
-
         gameData.relicSaveData.Clear();
-        if (!(relicManager.relicList == null))
+        foreach (var relic in RelicManager.instance.relicList.Values)
         {
-            for (int i = 0; i < relicManager.relicList.Count; i++)
-            {
-                InfiniteLoopDetector.Run();
-                gameData.relicSaveData.Add(relicManager.relicList[i].relicData.code);
-            }
+            gameData.relicSaveData.Add(relic.relicData.code);
         }
     }
 
     public void LoadRelicData()
     {
         RelicManager.Instance.relicList.Clear();
+        if(gameData.relicSaveData == null) { gameData.relicSaveData = new List<string>(); }
         for(int i = 0; i < gameData.relicSaveData.Count; i++)
         {
-            InfiniteLoopDetector.Run();
-            RelicManager.Instance.relicList.Add(dataSheet.relicObjectSheet[gameData.relicSaveData[i]].GetComponent<RelicData>());
+            RelicManager.instance.LoadRelic(gameData.relicSaveData[i]);
         }
     }
 

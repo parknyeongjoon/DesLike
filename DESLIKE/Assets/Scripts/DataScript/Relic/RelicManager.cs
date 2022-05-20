@@ -7,7 +7,7 @@ public class RelicManager : MonoBehaviour
 {
     public static RelicManager instance;
 
-    public Dictionary<string, Relic> relicList;
+    public Dictionary<string, Relic> relicList = new Dictionary<string, Relic>();
 
     public Canvas relicCanvas;
 
@@ -25,8 +25,6 @@ public class RelicManager : MonoBehaviour
         }
     }
 
-    // relic instantiate 해야함
-
     void Awake()
     {
         //싱글톤 패턴
@@ -34,9 +32,36 @@ public class RelicManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public void AddRelicInCanvas()
+    public void GetRelic(string relicKey)//relicKey에 해당하는 유물을 흭득하는 함수
     {
-        // relicList.ContainsKey()
-        // Instantiate(relicList[relicList.Count - 1], relicCanvas.transform.GetChild(0).transform);
+        if (SaveManager.Instance.dataSheet.relicDataSheet[relicKey])//데이터 시트에 있는 유물인지 검사
+        {
+            GameObject relicObject = SaveManager.Instance.dataSheet.relicObjectSheet[relicKey];
+            relicList.Add(relicKey, relicObject.GetComponent<Relic>());
+            Instantiate(relicObject, relicCanvas.transform.GetChild(0).transform);
+            relicList[relicKey].DoEffect();
+        }
+        else
+        {
+            Debug.Log("유물 키 없음");
+        }
+    }
+
+    public void LoadRelic(string relicKey)
+    {
+        if (SaveManager.Instance.dataSheet.relicDataSheet[relicKey])//데이터 시트에 있는 유물인지 검사
+        {
+            GameObject relicObject = SaveManager.Instance.dataSheet.relicObjectSheet[relicKey];
+            relicList.Add(relicKey, relicObject.GetComponent<Relic>());
+            Instantiate(relicObject, relicCanvas.transform.GetChild(0).transform);
+            if (relicList[relicKey].relicData.continueReuse)//로드하면 다시 사용해야하는 유물이라면 재사용
+            {
+                relicList[relicKey].DoEffect();
+            }
+        }
+        else
+        {
+            Debug.Log("유물 키 없음");
+        }
     }
 }

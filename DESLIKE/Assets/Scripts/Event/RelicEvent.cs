@@ -10,10 +10,8 @@ public class RelicEvent : EventBasic
     int curGold;
     int[] optionNum = new int[3];
     float cur_HP, max_HP;
-    // string[] relicsCode = new string[3];
     bool isEventSet, isAlreadySelect;
 
-    Kingdom kingdom;
     RelicManager relicManager;
  
     [SerializeField] Button[] Buttons = new Button[3];
@@ -58,7 +56,6 @@ public class RelicEvent : EventBasic
 
     void LoadRelEData()
     {
-        kingdom = saveManager.gameData.mapData.kingdom;
         cur_HP = saveManager.gameData.heroSaveData.cur_Hp;
         max_HP = saveManager.dataSheet.heroDataSheet[saveManager.gameData.heroSaveData.heroCode].hp;
         curGold = saveManager.gameData.goodsSaveData.gold;
@@ -167,10 +164,11 @@ public class RelicEvent : EventBasic
     void ActiveEvent2() //"2일 소모, 일반 유물 획득"
     {
         curDay += 2;
-        // relicManager.GetRelic(eventNode.SetNorRel(kingdom));
+        relicManager.relicList.Add(eventNode.reward.relic[0]);
         // RelicPanel에다가 instantiate
 
-       
+        RelicManager.instance.GetRelic();
+
         // 일반 유물 획득 함수 (변경 필요)
         ButtonsOff();
     }
@@ -179,7 +177,9 @@ public class RelicEvent : EventBasic
     {
         curDay += 2;
         curGold -= 50; // 골드 손실 함수
-        // relicManager.GetRelic(eventNode.SetEpicRel(kingdom));
+        relicManager.relicList.Add(eventNode.reward.relic[1]);
+        // 희귀 유물 획득 함수(변경 필요)
+        RelicManager.instance.GetRelic();
 
         ButtonsOff();
     }
@@ -191,7 +191,9 @@ public class RelicEvent : EventBasic
         cur_HP -= max_HP / 10; // 10% 임의 설정
         if (cur_HP < 1) cur_HP = 1;
         // 최대체력의 n% 잃는 함수, 만약 현재 체력이 n%보다 작다면 현재 체력을 1로 만듦
-        // relicManager.GetRelic(eventNode.SetEpicRel(kingdom));
+        relicManager.relicList.Add(eventNode.reward.relic[1]);
+        // 희귀 유물 획득 함수
+        RelicManager.instance.GetRelic();
 
         ButtonsOff();
     }
@@ -203,7 +205,10 @@ public class RelicEvent : EventBasic
         if (cur_HP < 1) cur_HP = 1;
         // 최대체력의 n% 잃는 함수, 만약 현재 체력이 n%보다 작다면 현재 체력을 1로 만듦
         curGold -= 50; // 골드 손실 함수
-        // relicManager.GetRelic(eventNode.SetLegRel(kingdom));
+        relicManager.relicList.Add(eventNode.reward.relic[2]);
+        // 전설 유물 획득 함수
+
+        RelicManager.instance.GetRelic();
 
         ButtonsOff();
     }
@@ -212,8 +217,10 @@ public class RelicEvent : EventBasic
     {
         curDay += 1;
         curGold = 0; // 골드 손실 함수
-        // relicManager.GetRelic(eventNode.SetEpicRel(kingdom));
+        relicManager.relicList.Add(eventNode.reward.relic[1]);
+        // 희귀 유물 획득 함수
 
+        RelicManager.instance.GetRelic();
 
         ButtonsOff();
     }

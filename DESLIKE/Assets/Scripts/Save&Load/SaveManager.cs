@@ -135,6 +135,7 @@ public class SaveManager : MonoBehaviour
     public RelicManager relicManager;
     public void SaveRelicData()
     {
+
         gameData.relicSaveData.Clear();
         if (!(relicManager.relicList == null))
         {

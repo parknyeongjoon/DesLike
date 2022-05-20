@@ -91,9 +91,10 @@ public class EventData
 [System.Serializable]
 public class VillageData
 {
-    public int[] randRelic = new int[6];   // 목록별 랜덤넘버
+    // public int[] randRelic = new int[6];   // 목록별 랜덤넘버
     public int[] relicPrice = new int[6];  // 목록별 가격
     public bool[] isSoldOut = new bool[6];
+    public string[] relicsInShop = new string[6];
     public bool isNewSet;
     public int healCount;
 }

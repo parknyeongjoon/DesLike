@@ -18,7 +18,6 @@ public class BattleNodeScript : NodeScript
     bool[] isRewardSet = new bool[THREE];
     Reward reward;
     List<SoldierData> ableSoldierRewards;
-    Dictionary<string, RelicData> ableRelicRewards;
     List<PortsOption> enemyPortsOptions;
     PortsOption enemyPortOption;
     PortDatas enemyPortDatas;
@@ -44,7 +43,6 @@ public class BattleNodeScript : NodeScript
         }
         reward = battleNode.reward;
         ableSoldierRewards = battleNode.ableSoldierRewards;
-        ableRelicRewards = battleNode.ableRelicRewards;
         enemyPortOption = battleNode.enemyPortOption;
         enemyPortDatas = battleNode.enemyPortDatas;
         enemyPortsOptions = battleNode.enemyPortsOptions;
@@ -135,9 +133,7 @@ public class BattleNodeScript : NodeScript
             // EpicSolSet(0,0);
             NorSolSet(1, 0);
             // EpicSolSet(1,0)
-            NorRelSet(0, 0);
-            // EpicRelSet(0);
-            // LegendRelSet(0);
+            battleNode.SetNorRel();
         }
         saveManager.gameData.mapData.isRewardSet[0] = true;
     }
@@ -152,9 +148,7 @@ public class BattleNodeScript : NodeScript
             // EpicSolSet(0,1);
             NorSolSet(1, 1);
             // EpicSolSet(1,1)
-            NorRelSet(0, 1);
-            // EpicRelSet(1);
-            // LegendRelSet(1);
+            battleNode.SetNorRel();
         }
         saveManager.gameData.mapData.isRewardSet[1] = true;
     }
@@ -169,9 +163,7 @@ public class BattleNodeScript : NodeScript
             // EpicSolSet(0,2);
             NorSolSet(1, 2);
             // EpicSolSet(1,2)
-            NorRelSet(0, 2);
-            // EpicRelSet(0, 2);
-            // LegendRelSet(0, 2);
+            battleNode.SetNorRel();
         }
         saveManager.gameData.mapData.isRewardSet[2] = true;
     }
@@ -225,92 +217,6 @@ public class BattleNodeScript : NodeScript
         battleNode.reward.soldierReward.Add(soldierReward);   // 선택지에 병사 추가
 
         saveManager.gameData.curBattleNodeData.solRewardIndex[button, num] = battleNode.ableSoldierRewards[rand].code;  // 병사 코드 저장
-    }
-
-    public void NorRelSet(int num, int button)   // 일반 유물 설정
-    {
-        int norTotal;
-        if (battleNode.kingdom == Kingdom.Physic)
-            norTotal = phyNorRelC + comNorRelC; // 무투국 + 공통
-        else norTotal = speNorRelC + comNorRelC;  // 주술국 + 공통
-
-        reroll:
-        InfiniteLoopDetector.Run();
-        int rand = Random.Range(0, norTotal);   // 일반 범위 내 랜덤값
-        for (int i = 0; i < RelicManager.instance.relicList.Count; i++)
-        {
-            if (battleNode.ableRelicRewards[rand].relicData.code == RelicManager.instance.relicList[i].relicData.code)
-                goto reroll;
-        }   // 기존 가지고 있는 유물이면
-
-        if (num == 1 && (battleNode.ableSoldierRewards[rand].code == saveManager.gameData.curBattleNodeData.solRewardIndex[button, 0]))
-            goto reroll;  // 다른 선택지와 중복이면 다시 뽑기
-
-        if (num == 0) reward.relicReward.Clear();
-
-        battleNode.reward.relicReward.Add(battleNode.ableRelicRewards[rand]);  // 해당 유물을 노드에 저장
-        // saveManager.gameData.curBattleNodeData.relRewardIndex[button, 0] = rand;    // 유물 번호 게임데이터에 저장
-    }
-
-    public void EpicRelSet(int num, int button)  // 희귀 유물 설정, 주석은 NorRelSet 참고
-    {
-        int norTotal, epicTotal;
-        if (battleNode.kingdom == Kingdom.Physic)
-        {
-            norTotal = phyNorRelC + comNorRelC;
-            epicTotal = phyEpicRelC + comEpicRelC;
-        }
-        else
-        {
-            norTotal = speNorRelC + comNorRelC;
-            epicTotal = speEpicRelC + comEpicRelC;
-        }
-        reroll:
-        InfiniteLoopDetector.Run();
-        int rand = Random.Range(0, epicTotal) + norTotal;
-        for(int i = 0; i<RelicManager.instance.relicList.Count; i++)
-        {
-            if (battleNode.ableRelicRewards[rand].relicData.code == RelicManager.instance.relicList[i].relicData.code)
-                goto reroll;
-        }   // 기존 가지고 있는 유물이면 리롤
-
-        if (num == 1 && (battleNode.ableSoldierRewards[rand].code == saveManager.gameData.curBattleNodeData.solRewardIndex[button, 0]))
-            goto reroll;  // 다른 선택지와 중복이면 다시 뽑기
-
-        if (num == 0) reward.relicReward.Clear();
-
-
-        battleNode.reward.relicReward.Add(battleNode.ableRelicRewards[rand]);
-        // saveManager.gameData.rewardData.relicRewardIndex[button] = rand;
-    }
-
-    public void LegendRelSet(int num, int button)  // 전설 유물 설정, 주석은 NorRelSet 참고
-    {
-        int neTotal, legendTotal;
-        if (battleNode.kingdom == Kingdom.Physic)
-        {
-            neTotal = phyNorRelC + comNorRelC + phyEpicRelC + comEpicRelC;
-            legendTotal = phyLegendRelC + comLegendRelC;
-        }
-        else
-        {
-            neTotal = speNorRelC + comNorRelC + speEpicRelC + comEpicRelC;
-            legendTotal = speLegendRelC + comLegendRelC;
-        }
-        reroll:
-        InfiniteLoopDetector.Run();
-        int rand = Random.Range(0, legendTotal) + neTotal;
-        for (int i = 0; i < RelicManager.instance.relicList.Count; i++)
-        {
-            if (battleNode.ableRelicRewards[rand].relicData.code == RelicManager.instance.relicList[i].relicData.code)
-                goto reroll;
-        }   // 기존 가지고 있는 유물이면 리롤
-        if (num == 1 && (battleNode.ableSoldierRewards[rand].code == saveManager.gameData.curBattleNodeData.solRewardIndex[button, 0]))
-            goto reroll;  // 다른 선택지와 중복이면 다시 뽑기
-
-        if (num == 0) reward.relicReward.Clear();
-
-        battleNode.reward.relicReward.Add(battleNode.ableRelicRewards[rand]);
     }
 
     public void SetEnemyPortOption(int i)

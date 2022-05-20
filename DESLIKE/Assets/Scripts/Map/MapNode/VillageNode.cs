@@ -6,11 +6,6 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu(fileName = "VillageNode", menuName = "ScriptableObject/MapNodeT/VillageNode")]
 public class VillageNode : MapNode
 {
-    void OnEnable()
-    {
-        SetAbleReward();
-    }
-
     public void Play_VillageNode()
     {
         map.curMapNode = this;

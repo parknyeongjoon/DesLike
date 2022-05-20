@@ -11,7 +11,7 @@ public class RewardPanel : MonoBehaviour
     public void SetRewardPanel()
     {
         // relicBtn
-        if(SaveManager.Instance.map.curMapNode.reward.relic[0] != null)
+        if(SaveManager.Instance.map.curMapNode.reward.relicReward != null)
         {
             Instantiate(rewardRelicBtnPrefab, transform);
         }

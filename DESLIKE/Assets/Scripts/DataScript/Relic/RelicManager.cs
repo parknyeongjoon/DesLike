@@ -7,7 +7,7 @@ public class RelicManager : MonoBehaviour
 {
     public static RelicManager instance;
 
-    public Dictionary<string, RelicData> relicList;
+    public Dictionary<string, Relic> relicList;
 
     public Canvas relicCanvas;
 

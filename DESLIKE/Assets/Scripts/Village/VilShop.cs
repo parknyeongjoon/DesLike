@@ -7,14 +7,12 @@ using TMPro;
 public class VilShop : MonoBehaviour
 {
     int curGold, curRelicCount;
-    int[] relicLevelCount = new int[3];
-    int[] randRelic = new int[6];   // 목록별 랜덤넘버
     int[] relicPrice = new int[6];  // 목록별 가격
     bool isNewSet, isEventSet;
     bool[] isSoldOut = new bool[6];
+    string[] relicsInShop = new string[6];
 
-    Dictionary<string, RelicData> curRelicList;
-    Dictionary<string, RelicData> relicList;
+    Dictionary<string, Relic> relicList;
     SaveManager saveManager;
 
     [SerializeField] Map map;
@@ -32,7 +30,6 @@ public class VilShop : MonoBehaviour
         saveManager = SaveManager.Instance;
 
         LoadData();
-        DataUpdate();
         ShopSetting();
         SoldOutPanelUpdate();
         isNewSet = false;
@@ -44,9 +41,9 @@ public class VilShop : MonoBehaviour
         saveManager.gameData.goodsSaveData.gold = curGold;
         saveManager.gameData.eventData.isEventSet = isEventSet;
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 6; i++)
         {
-            saveManager.gameData.villageData.randRelic[i] = randRelic[i];
+            saveManager.gameData.villageData.relicsInShop[i] = relicsInShop[i];
             saveManager.gameData.villageData.relicPrice[i] = relicPrice[i];
             saveManager.gameData.villageData.isSoldOut[i] = isSoldOut[i];
         }
@@ -60,26 +57,14 @@ public class VilShop : MonoBehaviour
         isEventSet = saveManager.gameData.eventData.isEventSet;
         villageNode = (VillageNode)map.curMapNode;
         
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 6; i++)
         {
-            randRelic[i] = saveManager.gameData.villageData.randRelic[i];
+            relicsInShop[i] = saveManager.gameData.villageData.relicsInShop[i];
             relicPrice[i] = saveManager.gameData.villageData.relicPrice[i];
             isSoldOut[i] = saveManager.gameData.villageData.isSoldOut[i];
         }
-        curRelicList = new Dictionary<string, RelicData>();
-        for (int i = 0; i < curRelicCount; i++)
-            curRelicList.Add(RelicManager.instance.relicList[i]);
     }
     
-    void DataUpdate()
-    {
-
-        relicLevelCount[0] = villageNode.relicLevelCount[0];
-        relicLevelCount[1] = villageNode.relicLevelCount[1];
-        relicLevelCount[2] = villageNode.relicLevelCount[2];
-        relicList = RelicManager.instance.relicList;
-    }
-
     void SoldOutPanelUpdate()
     {
         for (int i = 0; i < 6; i++)
@@ -93,14 +78,11 @@ public class VilShop : MonoBehaviour
 
     void ShopSetting()
     {
-        // randRelic[i] = Random.Range(0, relicLevelCount[0]); 일반용
-        // randRelic[i] = relicLevelCount[0] + Random.Range(0, relicLevelCount[1]); 희귀용
-        // randRelic[i] = relicLevelCount[0] + relicLevelCount[1] + Random.Range(0, relicLevelCount[2]); 전설용
-        
+        relicList = new Dictionary<string, Relic>();
+
         if (isEventSet == false)
         {
-            relicList = new Dictionary<string, RelicData>();
-
+           
             for (int i = 0; i < 6; i++)
             {
             RelicReroll:
@@ -108,41 +90,37 @@ public class VilShop : MonoBehaviour
                 if (i < 4)  // 일반 유물
                 {
                     relicPrice[i] = 90 + Random.Range(0, 21);   // 90~110G
-                    randRelic[i] = Random.Range(0, relicLevelCount[0]); // 일반
+                    relicsInShop[i] = villageNode.SetNorRel();
                 }
                 else // 희귀 유물
                 {
                     relicPrice[i] = 160 + Random.Range(0, 21); // 160~180G
-                    randRelic[i] = relicLevelCount[0] + Random.Range(0, relicLevelCount[1]); // 희귀
+                    relicsInShop[i] = villageNode.SetEpicRel();
                 }
-                
-                for (int j = 0; j < i; j++) // 이전 랜덤값과 같다면 재시도
-                {
-                    InfiniteLoopDetector.Run();
-                    if (randRelic[i] == randRelic[j])
-                        goto RelicReroll;
 
-                }
-                /*
-                for (int j = 0; j < curRelicCount; j++)
+                for (int j = 0; j < i - 1; j++) // 이전 랜덤값과 같다면 재시도
                 {
-                    InfiniteLoopDetector.Run();
-                    if (curRelicList[j].relicData.code == villageNode.ableRelicRewards[randRelic[i]].relicData.code)
+                    if (relicList.ContainsKey(relicsInShop[i]))
                         goto RelicReroll;
                 }
-                */
-                relicList.Add(villageNode.ableRelicRewards[randRelic[i]]);
+
+                if (saveManager.dataSheet.relicDataSheet[relicsInShop[i]])
+                {
+                    GameObject relicObject = saveManager.dataSheet.relicObjectSheet[relicsInShop[i]];
+                    relicList.Add(relicsInShop[i], relicObject.GetComponent<Relic>());
+                    Instantiate(relicObject, RelicCanvas.transform.GetChild(i).transform);
+                }
                 Prices[i].text = relicPrice[i] + "골드";
-                Instantiate(villageNode.ableRelicRewards[randRelic[i]], RelicCanvas.transform.GetChild(i).transform);
             }
         }
         else
         {
             for (int i = 0; i < 6; i++)
             {
-                relicList.Add(villageNode.ableRelicRewards[randRelic[i]]);
+                GameObject relicObject = saveManager.dataSheet.relicObjectSheet[relicsInShop[i]];
+                relicList.Add(relicsInShop[i], relicObject.GetComponent<Relic>());
+                Instantiate(relicObject, RelicCanvas.transform.GetChild(i).transform);
                 Prices[i].text = relicPrice[i] + "골드";
-                Instantiate(villageNode.ableRelicRewards[randRelic[i]], RelicCanvas.transform.GetChild(i).transform);
             }
         }
     }
@@ -172,59 +150,53 @@ public class VilShop : MonoBehaviour
         }
     }
 
+    void CheckPanelSet()
+    {
+        CheckPanel.SetActive(true);
+        GameObject relicObject = saveManager.dataSheet.relicObjectSheet[relicsInShop[vilShopNode.curNumber]];
+        Instantiate(relicObject, CheckPanel.transform.GetChild(0).transform);
+    }
+
     public void OpenCheck1()
     {
-        vilShopNode.curRelic = relicList[0];
         vilShopNode.curNumber = 0;
-        CheckPanel.SetActive(true);
-        Instantiate(relicList[0], CheckPanel.transform.GetChild(0).transform);
+        CheckPanelSet();
     }
 
     public void OpenCheck2()
     {
-        vilShopNode.curRelic = relicList[1];
         vilShopNode.curNumber = 1;
-        Instantiate(relicList[1], CheckPanel.transform.GetChild(0).transform);
-        CheckPanel.SetActive(true);
+        CheckPanelSet();
     }
 
     public void OpenCheck3()
     {
-        vilShopNode.curRelic = relicList[2];
         vilShopNode.curNumber = 2;
-        Instantiate(relicList[2], CheckPanel.transform.GetChild(0).transform);
-
-        CheckPanel.SetActive(true);
+        CheckPanelSet();
     }
 
     public void OpenCheck4()
     {
-        vilShopNode.curRelic = relicList[3];
         vilShopNode.curNumber = 3;
-        Instantiate(relicList[3], CheckPanel.transform.GetChild(0).transform);
-        CheckPanel.SetActive(true);
+        CheckPanelSet();
     }
 
     public void OpenCheck5()
     {
-        vilShopNode.curRelic = relicList[4];
         vilShopNode.curNumber = 4;
-        Instantiate(relicList[4], CheckPanel.transform.GetChild(0).transform);
-        CheckPanel.SetActive(true);
+        CheckPanelSet();
     }
 
     public void OpenCheck6()
     {
-        vilShopNode.curRelic = relicList[5];
         vilShopNode.curNumber = 5;
-        Instantiate(relicList[5], CheckPanel.transform.GetChild(0).transform);
-
-        CheckPanel.SetActive(true);
+        CheckPanelSet();
     }
 
     public void CloseCheckPanel()
     {
-        Transform cloneTransform = CheckPanel.transform.GetChild(0).transform.Find(vilShopNode.curRelic.relicData.relicName + "(Clone)");
+        Transform cloneTransform = CheckPanel.transform.GetChild(0).transform.Find
+            (saveManager.dataSheet.relicDataSheet[relicsInShop[vilShopNode.curNumber]].relicName + "(Clone)");
         if (cloneTransform != null)
             Destroy(cloneTransform.gameObject);
         else Debug.Log("파괴할 오브젝트가 없습니다.");
@@ -239,7 +211,7 @@ public class VilShop : MonoBehaviour
         }
         else
         {
-            vilShopNode.GetRelic();
+            // RelicManager.Instance.GetRelic(relicsInShop[vilShopNode.curNumber]);
             curGold -= relicPrice[vilShopNode.curNumber];
             isSoldOut[vilShopNode.curNumber] = true;
             SoldOutPanel[vilShopNode.curNumber].SetActive(true);    // 매진 표시

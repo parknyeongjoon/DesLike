@@ -8,6 +8,7 @@ public class Map : ScriptableObject
 {
     public MapNode curMapNode;
     const int THREE = 3;
+    public Kingdom kingdom;
     public List<MapNode> selectNode = new List<MapNode>(new MapNode[THREE]);    // 선택지 3개 저장
 
     public List<SoldierData> physicNorSol;
@@ -19,16 +20,17 @@ public class Map : ScriptableObject
     public List<SoldierData> commonNorSol;
     public List<SoldierData> commonEpicSol;
 
-    public Dictionary<string, RelicData> physicNorRel;
-    public Dictionary<string, RelicData> physicEpicRel;
-    public Dictionary<string, RelicData> physicLegendRel;
+    public Dictionary<string, Relic> physicNorRel;
+    public Dictionary<string, Relic> physicEpicRel;
+    public Dictionary<string, Relic> physicLegendRel;
 
-    public Dictionary<string, RelicData> spellNorRel;
-    public Dictionary<string, RelicData> spellEpicRel;
-    public Dictionary<string, RelicData> spellLegendRel;
-    public Dictionary<string, RelicData> commonNorRel;
-    public Dictionary<string, RelicData> commonEpicRel;
-    public Dictionary<string, RelicData> commonLegendRel;
+    public Dictionary<string, Relic> spellNorRel;
+    public Dictionary<string, Relic> spellEpicRel;
+    public Dictionary<string, Relic> spellLegendRel;
+
+    public Dictionary<string, Relic> commonNorRel;
+    public Dictionary<string, Relic> commonEpicRel;
+    public Dictionary<string, Relic> commonLegendRel;
     
     public bool isMap = false;//지우기
     public int playerX= -1, playerY;//지우기

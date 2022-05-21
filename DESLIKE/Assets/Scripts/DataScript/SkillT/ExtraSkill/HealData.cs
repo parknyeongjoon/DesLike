@@ -17,9 +17,9 @@ public class HealData : SkillData
 
     IEnumerator Healing(HeroInfo targetInfo)
     {
-        GameObject createBlood;
-        createBlood = Instantiate(healEffect, targetInfo.transform);
+        GameObject createEffect;
+        createEffect = Instantiate(healEffect, targetInfo.transform);
         yield return new WaitForSeconds(0.4f);
-        Destroy(createBlood);
+        Destroy(createEffect);
     }
 }

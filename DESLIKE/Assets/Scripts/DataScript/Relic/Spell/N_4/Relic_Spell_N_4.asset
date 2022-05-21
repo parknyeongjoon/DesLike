@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02863bc257bd616478cb4d61feebed99, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ec68b78d381d4c41b6a69b46a34aab7, type: 3}
   m_Name: Relic_Spell_N_4
   m_EditorClassIdentifier: 
   relicImg: {fileID: 0}
   code: Relic_Spell_N_4
   relicName: Relic_Spell_N_4
-  toopTip: 
+  toopTip: "\uC5ED\uBCD1\uC5D0 \uAC78\uB9B0 \uC801\uC774 \uC2A4\uD0DD\uB2F9 n% \uB514\uBC84\uD504"
   kingdom: 2
   rarity: 1
   continueReuse: 1
-  plague: {fileID: 11400000, guid: e58bf58c79a45e24ebf8df62cddeb15b, type: 2}
+  originSkill: {fileID: 11400000, guid: e58bf58c79a45e24ebf8df62cddeb15b, type: 2}
   extraSkill: {fileID: 11400000, guid: ee72d910f1ba5ad47b5b25f4cc358f66, type: 2}

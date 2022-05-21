@@ -18,7 +18,7 @@ public enum Kingdom { Common = 0, Physic = 1, Spell = 2 }
 public enum Tribe { Bear = 1, Kangaroo = 2, Rat = 3, Frog = 4 }
 public enum Rarity { Normal = 1, Epic = 2, Hero = 3 }
 
-public enum SkillType { TargetSkill, GrenadeSkill, InstanceSkill, Installation, PassiveSkill, Aura, Buff, Debuff, Etc}
+public enum SkillType { TargetSkill, GrenadeSkill, InstanceSkill, Installation, PassiveSkill, Aura, Heal, Buff, Debuff, Etc}
 public enum BuffType { None, Plague }
 
 public enum CurWindow { Map, Event, Battle, Village, Organ, StageSel }
@@ -88,7 +88,7 @@ public class Buff_Stat
 public class Reward
 {
     public List<SoldierReward> soldierReward;
-    public List<Relic> relic;
+    public Dictionary<string, RelicData> relicReward;
     public int gold;//골드
     public int magicalStone;//진영화폐
 }

@@ -62,7 +62,7 @@ public class BasicAttack : MonoBehaviour
         for (int i = 0; i < atkCount + basicAttackData.atkCount; i++)//공격횟수만큼 반복
         {
             heroInfo.skeletonAnimation.state.SetAnimation(0, heroInfo.castleData.code + "_Att_1", false);
-            AkSoundEngine.PostEvent(heroInfo.castleData.code + "_Att_1", gameObject);
+            AkSoundEngine.PostEvent(heroInfo.castleData.code + "_Att_1", gameObject);//활성화
 
             yield return new WaitForSeconds(basicAttackData.start_Delay);
             if (targetInfo && targetInfo.gameObject.layer != 7)
@@ -78,5 +78,10 @@ public class BasicAttack : MonoBehaviour
             }
         }
         heroInfo.action = Soldier_Action.Idle;
+    }
+
+    void State_Event(Spine.TrackEntry trackEntry, Spine.Event e)
+    {
+
     }
 }

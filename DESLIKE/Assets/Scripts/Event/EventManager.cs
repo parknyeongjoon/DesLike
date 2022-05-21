@@ -5,29 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class EventManager : MonoBehaviour
 {
-    Map map;
+    public Map map;
     [SerializeField] Canvas EventCanvas;
-    [SerializeField] GameObject Rullet, CampFire, Infection;
     [SerializeField] GameObject RelicEvent, HealEvent, AreaEvent, PenaltyEvent, ShopEvent, GambleEvent, FightEvent;
 
     public EventNode eventNode;
-    int curBtn, EvntList;
+    int curBtn, evntList;
     SaveManager saveManager;
 
     void OnEnable()
     {
         saveManager = SaveManager.Instance;
-        map = saveManager.map;
-        eventNode = (EventNode)map.curMapNode;
-        EventCanvas.transform.Find(eventNode.eventName).gameObject.SetActive(true);
-        curBtn = saveManager.gameData.mapData.curBtn;
-        EvntList = saveManager.gameData.mapData.evntList[curBtn];
         saveManager.gameData.mapData.curWindow = CurWindow.Event;
+        eventNode = (EventNode)map.curMapNode; 
+        curBtn = saveManager.gameData.mapData.curBtn;
+        evntList = saveManager.gameData.mapData.evntList[curBtn];
+        EventsInactive();
         EventActive();
         saveManager.SaveGameData();
     }
 
-    void EventActive()
+    void EventsInactive()
     {
         RelicEvent.SetActive(false);
         HealEvent.SetActive(false);
@@ -36,8 +34,11 @@ public class EventManager : MonoBehaviour
         ShopEvent.SetActive(false);
         GambleEvent.SetActive(false);
         FightEvent.SetActive(false);
-        
-        switch (EvntList)
+    }
+
+    void EventActive()
+    {
+        switch (evntList)
         {
             case 0:
                 RelicEvent.SetActive(true);
@@ -60,10 +61,12 @@ public class EventManager : MonoBehaviour
             case 6:
                 FightEvent.SetActive(true);
                 break;
-            default: break;
+            default:
+                Debug.Log("¿À·ù");
+                break;
         }
     }
-
+    
     public void AddCurDay1()
     {
         saveManager.gameData.mapData.curDay += 1;

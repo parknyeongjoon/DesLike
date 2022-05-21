@@ -83,11 +83,11 @@ public class SaveManager : MonoBehaviour
         Application.Quit();
     }
 
-    public PortDatas allyPortDatas;//아군이 사용할 PortDatas
     public Map map;//맵 스크립터블 오브젝트
+    public PortDatas allyPortDatas;//아군이 사용할 PortDatas
     public GameObject heroPrefab;//현재 사용 중인 영웅 프리팹
 
-    public void SavePortDatas()
+    public void SavePortDatas()//포트 데이터들을 저장하는 함수
     {
         //각 포트의 값들 저장
         for (int i = 0; i < allyPortDatas.portDatas.Length; i++)
@@ -102,7 +102,7 @@ public class SaveManager : MonoBehaviour
         gameData.portSaveDatas.curBarrierStrength = allyPortDatas.curBarrierStrength;
     }
 
-    public void LoadPortsDatas()//Continue버튼에서만 사용할 지
+    public void LoadPortsDatas()//포트 데이터 불러오기(Continue버튼에서만 사용할 지)
     {
         for (int i = 0; i < gameData.portSaveDatas.portSaveList.Length; i++)
         {
@@ -134,21 +134,19 @@ public class SaveManager : MonoBehaviour
     public void SaveRelicData()
     {
         gameData.relicSaveData.Clear();
-        if (RelicManager.Instance.relicList != null)
+        foreach (var relic in RelicManager.instance.relicList.Values)
         {
-            for (int i = 0; i < RelicManager.Instance.relicList.Count; i++)
-            {
-                gameData.relicSaveData.Add(RelicManager.Instance.relicList[i].relicData.code);
-            }
+            gameData.relicSaveData.Add(relic.relicData.code);
         }
     }
 
     public void LoadRelicData()
     {
         RelicManager.Instance.relicList.Clear();
+        if(gameData.relicSaveData == null) { gameData.relicSaveData = new List<string>(); }
         for(int i = 0; i < gameData.relicSaveData.Count; i++)
         {
-            RelicManager.Instance.relicList.Add(dataSheet.relicObjectSheet[gameData.relicSaveData[i]].GetComponent<Relic>());
+            RelicManager.instance.LoadRelic(gameData.relicSaveData[i]);
         }
     }
 
@@ -161,17 +159,21 @@ public class SaveManager : MonoBehaviour
         for (int btn = 0; btn < 3; btn++)    // 버튼 1,2,3
         {
             selEvent[btn] = gameData.mapData.selEvent[btn];
-            if ((map.selectNode[btn] != null) && (selEvent[btn] == 0))  // 맵에 저장되어있고, 전투 노드일 경우
+            if (!(map.selectNode[btn] == null) && (selEvent[btn] == 0))  // 맵에 저장되어있고, 전투 노드일 경우
             {
                 if (gameData.mapData.curWindow == CurWindow.Battle)
                 {
                     battleNode = (BattleNode)map.selectNode[btn];
                     for (int i = 0; i < battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 저장
+                    {
+                        InfiniteLoopDetector.Run();
                         gameData.curBattleNodeData.ableSoldierIndex[btn, i] = battleNode.ableSoldierRewards[i].code;
+                    }
                     gameData.mapData.kingdom = battleNode.kingdom;
 
                     for (int i = 0; i < battleNode.reward.soldierReward.Count; i++)
                     {
+                        InfiniteLoopDetector.Run();
                         gameData.curBattleNodeData.solRewardIndex[btn, i] = battleNode.reward.soldierReward[i].soldier.code;
                         // mutant 추가 필요
                     }
@@ -202,19 +204,20 @@ public class SaveManager : MonoBehaviour
                     SoldierData soldierData = new SoldierData();
 
                     for (int i = 0; i < battleNode.ableSoldierRewards.Count; i++)  // ableSoldier 불러오기
+                    {
+                        InfiniteLoopDetector.Run();
                         battleNode.ableSoldierRewards.Add(dataSheet.soldierDataSheet[gameData.curBattleNodeData.ableSoldierIndex[btn, i]]);
-
+                    }
 
                     for (int i = 0; i < battleNode.reward.soldierReward.Count; i++)
                     {
+                        InfiniteLoopDetector.Run();
                         soldierReward.soldier = dataSheet.soldierDataSheet[gameData.curBattleNodeData.solRewardIndex[btn, i]];
                         // mutant 추가 필요
-
                         battleNode.reward.soldierReward.Add(soldierReward);
                     }
                 }
             }
         }
     }
-   
 }

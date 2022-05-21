@@ -16,7 +16,7 @@ MonoBehaviour:
   code: N_12302
   hp: 30
   def: 0
-  size: 0.6
+  size: 0.7
   blood: {fileID: 0}
   soldier_name: N_12302
   mp: 5
@@ -24,7 +24,6 @@ MonoBehaviour:
   hp_Re: 0
   kingdom: 0
   tribe: 2
-  extraSkill: []
   rarity: 1
   needBarrier: 0
   unitAmount: 2

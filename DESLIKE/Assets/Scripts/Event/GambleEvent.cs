@@ -1,19 +1,69 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class GambleEvent : EventBasic
 {
-    int temp_Max_HP = 500;
-    public TMP_Text InformText;
-    
+    int curGold, rewardNum, comBox;  // 보상으로 줘야하는 골드/체력의 액수
+    int[] choiNum = new int[3];  // 0 : 1번째 선택지(골드, 체력, X), 1 : 2번째 선택지(액수), 2 : 도박 선택
+    float cur_HP, max_HP;
+    bool[] stepCheck = new bool[5];
+
+    [SerializeField] TMP_Text InformText;
+    [SerializeField] Button[] Buttons = new Button[3];
+    [SerializeField] TMP_Text[] OptionText = new TMP_Text[3];
+
     void OnEnable()
     {
+        LoadData();
         SetOption();
-        isEventSet = true;
         eventEnd = false;
         SaveData();
+    }
+
+    void SaveData()
+    {
+        SaveGambEData();
+        SaveComData();
+        saveManager.SaveGameData();
+    }
+
+    void SaveGambEData()
+    {
+        saveManager.gameData.goodsSaveData.gold = curGold;
+        saveManager.gameData.eventData.rewardNum = rewardNum;
+        saveManager.gameData.eventData.comBox = comBox;
+        saveManager.gameData.heroSaveData.cur_Hp = cur_HP;
+        saveManager.dataSheet.heroDataSheet[saveManager.gameData.heroSaveData.heroCode].hp = max_HP;
+
+        for (int i = 0; i < 5; i++)
+        {
+            if (i < 3) saveManager.gameData.eventData.choiNum[i] = choiNum[i];
+            saveManager.gameData.eventData.stepCheck[i] = stepCheck[i];
+        }
+    }
+
+    void LoadData()
+    {
+        LoadGambEData();
+        LoadComData();
+    }
+
+    void LoadGambEData()
+    {
+        curGold = saveManager.gameData.goodsSaveData.gold;
+        rewardNum = saveManager.gameData.eventData.rewardNum;
+        comBox = saveManager.gameData.eventData.comBox;
+        cur_HP = saveManager.gameData.heroSaveData.cur_Hp;
+        max_HP = saveManager.dataSheet.heroDataSheet[saveManager.gameData.heroSaveData.heroCode].hp;
+        
+        for (int i = 0; i < 5; i++)
+        {
+            if (i < 3) choiNum[i] = saveManager.gameData.eventData.choiNum[i];
+            stepCheck[i] = saveManager.gameData.eventData.stepCheck[i];
+        }
     }
 
     void SetOption()
@@ -90,7 +140,6 @@ public class GambleEvent : EventBasic
             }
         }
         stepCheck[0] = true;
-        SaveStepCheck(0);
     }
 
     void SecondSelect(int button)   // 골드 : 30 50 100 / 체력 : 30 50 100
@@ -154,7 +203,6 @@ public class GambleEvent : EventBasic
         OptionText[1].text = "두 번째 상자";
         OptionText[2].text = "세 번째 상자";
         stepCheck[1] = true;
-        SaveStepCheck(1);
     }
 
     void ThirdSelect(int button)    // 3개 중 1개 맞추면 건 것에 따라 보상 지급, 골드 : 골드; 체력 : 유물 혹은 체력회복
@@ -171,7 +219,6 @@ public class GambleEvent : EventBasic
         InformText.text = (button + 1) + "번째 상자를 고르셨군요. 이제 결과를 공개합니다!";
         OptionText[2].text = "과연..?";
         stepCheck[2] = true;
-        SaveStepCheck(2);
     }
 
     public void Continue()
@@ -183,7 +230,11 @@ public class GambleEvent : EventBasic
             {
                 if (choiNum[0] == 0)
                     curGold += rewardNum * 3;
-                else cur_HP += rewardNum * 3;
+                else
+                {
+                    cur_HP += rewardNum * 3;
+                    if (cur_HP > max_HP) cur_HP = max_HP;
+                }
             }
         }
         else InformText.text = "정답은 " + (comBox+1) + "번째 상자입니다! 아쉽게도 틀리셨군요. 보상은 없습니다.";
@@ -192,7 +243,6 @@ public class GambleEvent : EventBasic
             Buttons[i].gameObject.SetActive(false);
         EndButton.gameObject.SetActive(true);
         stepCheck[3] = true;
-        SaveStepCheck(3);
     }
 
     void ToOneButton()

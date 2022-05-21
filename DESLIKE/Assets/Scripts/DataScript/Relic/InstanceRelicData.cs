@@ -9,6 +9,11 @@ public class InstanceRelicData : RelicData
 
     }
 
+    public virtual void RemoveEffect()
+    {
+
+    }
+
     public virtual bool ConditionCheck()
     {
         return true;

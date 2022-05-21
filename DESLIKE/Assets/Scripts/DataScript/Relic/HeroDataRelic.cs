@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class HeroDataRelic : Relic
 {
-    void OnEnable()
+    public override void DoEffect()
     {
-        foreach(var heroData in SaveManager.Instance.allyPortDatas.activeSoldierList.Values)
+        foreach (var heroData in SaveManager.Instance.allyPortDatas.activeSoldierList.Values)
         {
             Effect(heroData);
         }

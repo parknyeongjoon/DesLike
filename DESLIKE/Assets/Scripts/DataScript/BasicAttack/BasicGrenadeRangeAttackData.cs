@@ -37,6 +37,7 @@ public class BasicGrenadeRangeAttackData : BasicGrenadeAttackData
                 extraSkillData?.Effect(heroInfo, targetInfo);
             }
         }
+        Debug.Log("ÆÄ±«");
         Destroy(createArrow);
     }
 }

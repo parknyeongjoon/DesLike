@@ -22,5 +22,5 @@ MonoBehaviour:
   atkArea: 256
   max_Target: 5
   extent: 10
-  arrow: {fileID: 0}
+  arrow: {fileID: 8187436323030601997, guid: 296da8d7f20ffa74abe93f1a2979152d, type: 3}
   arrowSpeed: 3

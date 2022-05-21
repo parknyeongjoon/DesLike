@@ -18,6 +18,11 @@ public class SynergiedRelic : InstanceRelicData
         }
     }
 
+    public override void RemoveEffect()
+    {
+        originSkill.extraSkillDatas.Remove(extraSkill);
+    }
+
     public override bool ConditionCheck()
     {
         return true;

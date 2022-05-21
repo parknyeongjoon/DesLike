@@ -9,7 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1b5db24feca32740a5dc0bd9ba3ee79, type: 3}
-  m_Name: New Test SO
+  m_Script: {fileID: 11500000, guid: 882985b38ed838f4ab2317b4db502ef8, type: 3}
+  m_Name: Relic_Spell_N_1_ExtraSkill
   m_EditorClassIdentifier: 
-  a: {fileID: 0}
+  code: Relic_Spell_N_1_ExtraSkill
+  skill_name: Relic_Spell_N_1_ExtraSkill
+  toolTip: 
+  skillType: 0
+  skill_Icon: {fileID: 0}
+  extraSkillDatas: []
+  damage: 5

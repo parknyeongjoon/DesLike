@@ -15,7 +15,7 @@ MonoBehaviour:
   code: Relic_Spell_E_2_Extra
   skill_name: Relic_Spell_E_2_Extra
   toolTip: 
-  skillType: 6
+  skillType: 7
   skill_Icon: {fileID: 0}
   extraSkillDatas: []
   buff_Stat:

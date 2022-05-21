@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   code: Mucus
   skill_name: Mucus
+  toolTip: 
   skillType: 0
   skill_Icon: {fileID: 0}
-  extraSkillData: {fileID: 0}
+  extraSkillDatas: []
   mucusAmount: 1

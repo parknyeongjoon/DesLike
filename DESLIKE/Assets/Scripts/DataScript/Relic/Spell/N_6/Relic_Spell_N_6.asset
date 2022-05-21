@@ -21,4 +21,5 @@ MonoBehaviour:
   rarity: 1
   continueReuse: 1
   originSkill: {fileID: 11400000, guid: 271baaba43950214997458282c1bc85d, type: 2}
-  extraSkill: {fileID: 11400000, guid: 530814e43b3afbc48be17f73dc9f4b71, type: 2}
+  extraSkill:
+  - {fileID: 11400000, guid: 530814e43b3afbc48be17f73dc9f4b71, type: 2}

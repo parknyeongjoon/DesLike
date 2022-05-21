@@ -143,7 +143,7 @@ PrefabInstance:
         type: 3}
       propertyPath: skeletonDataAsset
       value: 
-      objectReference: {fileID: 11400000, guid: e4c44a553a2a11246866bed35e3dea06,
+      objectReference: {fileID: 11400000, guid: 8d3dd8402430f9f4daf9be7b7648319c,
         type: 2}
     - target: {fileID: 6782014734319213554, guid: a389e075072991a45bce11914791a9ec,
         type: 3}
@@ -164,7 +164,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0727f8aaf5fd38c44bff4ce1b86cee16, type: 2}
+      objectReference: {fileID: 2100000, guid: d7e85f2deca622745936366df3bf5cf9, type: 2}
     - target: {fileID: 8994948994211772865, guid: a389e075072991a45bce11914791a9ec,
         type: 3}
       propertyPath: m_IsActive

@@ -11,8 +11,13 @@ PrefabInstance:
         type: 3}
       propertyPath: castleData
       value: 
-      objectReference: {fileID: 11400000, guid: f3c56ada24ff03448b96284ceda84395,
+      objectReference: {fileID: 11400000, guid: 5b16985380b63dc488c0ad2949ea75ed,
         type: 2}
+    - target: {fileID: -6878065226668501377, guid: a389e075072991a45bce11914791a9ec,
+        type: 3}
+      propertyPath: soldierCode
+      value: E_11203
+      objectReference: {fileID: 0}
     - target: {fileID: -6169959335075015726, guid: a389e075072991a45bce11914791a9ec,
         type: 3}
       propertyPath: basicAttackData

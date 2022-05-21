@@ -44,6 +44,7 @@ public class RelicManager : MonoBehaviour
         {
             Debug.Log("유물 키 없음");
         }
+        SaveManager.Instance.SaveGameData();
     }
 
     public void LoadRelic(string relicKey)
@@ -63,12 +64,14 @@ public class RelicManager : MonoBehaviour
         }
     }
 
-    public void DestroyRelic(string relicKey)
+    public void RemoveRelic(string relicKey)
     {
         if (relicList.ContainsKey(relicKey))
         {
+            relicList[relicKey].RemoveEffect();
             Destroy(relicList[relicKey].gameObject);
             relicList.Remove(relicKey);
         }
+        SaveManager.Instance.SaveGameData();
     }
 }

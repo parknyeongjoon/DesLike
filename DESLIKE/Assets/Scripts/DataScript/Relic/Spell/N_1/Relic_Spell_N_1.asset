@@ -19,6 +19,6 @@ MonoBehaviour:
   kingdom: 2
   rarity: 1
   continueReuse: 1
-  synergyRelic: {fileID: 0}
+  synergyRelic: {fileID: 11400000, guid: 8e6b8fc382f173646887dda437b2dff8, type: 2}
   originSkill: {fileID: 11400000, guid: a10fd137a8b20f040a484212f49cb907, type: 2}
-  extraSkill: {fileID: 0}
+  extraSkill: {fileID: 11400000, guid: 4411a1a74743ff541bcc2a80f6d4d6ad, type: 2}

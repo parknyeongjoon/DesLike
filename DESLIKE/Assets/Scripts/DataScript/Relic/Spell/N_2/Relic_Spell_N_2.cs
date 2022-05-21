@@ -12,4 +12,9 @@ public class Relic_Spell_N_2 : InstanceRelicData
     {
         dodge.dodgeP += addP;
     }
+
+    public override void RemoveEffect()
+    {
+        dodge.dodgeP -= addP;
+    }
 }

@@ -16,6 +16,11 @@ public class Relic : MonoBehaviour
 
     }
 
+    public virtual void RemoveEffect()
+    {
+
+    }
+
     public void SetToolTip()
     {
         toolTipPanel.SetActive(true);

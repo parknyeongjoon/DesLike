@@ -13,6 +13,15 @@ public class HeroDataRelic : Relic
         RelicManager.instance.soldierConditionCheck += Effect;
     }
 
+    public override void RemoveEffect()
+    {
+        foreach (var heroData in SaveManager.Instance.allyPortDatas.activeSoldierList.Values)
+        {
+            ((HeroDataRelicData)relicData).RemoveEffect(heroData);
+        }
+        RelicManager.instance.soldierConditionCheck -= Effect;
+    }
+
     public void Effect(HeroData heroData)
     {
         if (((HeroDataRelicData)relicData).ConditionCheck(heroData))

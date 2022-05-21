@@ -19,6 +19,7 @@ public class Dodge : SkillData
         {
             Debug.Log("È¸ÇÇ");
             damage = 0;
+            excuteExtraSkill(heroInfo, targetInfo);
         }
     }
 }

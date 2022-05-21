@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8418453533901736872
+--- !u!1001 &731131176038719312
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -11,12 +11,12 @@ PrefabInstance:
         type: 3}
       propertyPath: relicData
       value: 
-      objectReference: {fileID: 11400000, guid: 0c7aaffa3a1dafe4face7f00aea306a3,
+      objectReference: {fileID: 11400000, guid: b3f4efe1d48432e4a8175602a9907a35,
         type: 2}
     - target: {fileID: 4835315866048107822, guid: 11e3c9d49659d304483ba9a178f8582f,
         type: 3}
       propertyPath: m_Name
-      value: Relic_Spell_E_2
+      value: Relic_Spell_N_1
       objectReference: {fileID: 0}
     - target: {fileID: 4950314987519934621, guid: 11e3c9d49659d304483ba9a178f8582f,
         type: 3}

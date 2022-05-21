@@ -9,15 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ec68b78d381d4c41b6a69b46a34aab7, type: 3}
-  m_Name: Relic_Spell_E_2
+  m_Script: {fileID: 11500000, guid: d32fab21853dc124a9ff2b0abb8341f2, type: 3}
+  m_Name: Relic_Spell_N_1
   m_EditorClassIdentifier: 
   relicImg: {fileID: 0}
-  code: Relic_Spell_E_2
-  relicName: Relic_Spell_E_2
-  toopTip: "\uD68C\uD53C \uC2DC \uACF5\uACA9\uC18D\uB3C4 30% \uC99D\uAC00"
+  code: Relic_Spell_N_1
+  relicName: Relic_Spell_N_1
+  toopTip: "\uC8FC\uBCC0\uC774 \uC880..\uC2B5\uD569\uB2C8\uB2E4"
   kingdom: 2
-  rarity: 2
+  rarity: 1
   continueReuse: 1
+  synergyRelic: {fileID: 0}
   originSkill: {fileID: 11400000, guid: a10fd137a8b20f040a484212f49cb907, type: 2}
-  extraSkill: {fileID: 11400000, guid: eabef5a82fce6bb4d8229e36ec061183, type: 2}
+  extraSkill: {fileID: 0}

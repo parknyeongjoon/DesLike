@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InstanceRelic : Relic
 {
-    void OnEnable()
+    public override void DoEffect()
     {
         Effect();
     }

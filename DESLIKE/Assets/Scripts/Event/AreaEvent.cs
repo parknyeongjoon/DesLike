@@ -7,14 +7,53 @@ using TMPro;
 
 public class AreaEvent : EventBasic
 {
+    int areaGold;
+    int[] areaGolds = new int[3];
+    bool isEventSet, isAlreadySelect;
+
+    [SerializeField] Button[] Buttons = new Button[3];
+    [SerializeField] TMP_Text[] OptionText = new TMP_Text[3];
+   
+
     void OnEnable()
     {
+        LoadData();
         SetOption();
         isEventSet = true;
         eventEnd = false;
         SaveData();
     }
-  
+
+    void SaveData()
+    {
+        SaveAreaEData();
+        SaveComData();
+        saveManager.SaveGameData();
+    }
+
+    void SaveAreaEData()
+    {
+        saveManager.gameData.eventData.isEventSet = isEventSet;
+        saveManager.gameData.eventData.isAlreadySelect = isAlreadySelect;
+        for (int i = 0; i < 3; i++)
+            saveManager.gameData.eventData.areaGold[i] = areaGolds[i];
+    }
+
+    void LoadData()
+    {
+        LoadAreaEData();
+        LoadComData();
+    }
+
+    void LoadAreaEData()
+    {
+        isEventSet = saveManager.gameData.eventData.isEventSet;
+        isAlreadySelect = saveManager.gameData.eventData.isAlreadySelect;
+
+        for (int i = 0; i < 3; i++)
+            areaGolds[i] = saveManager.gameData.eventData.areaGold[i];
+    }
+
     void SetOption()
     {
         if (isAlreadySelect == false)   // ÀÌ¹Ì ¼±ÅÃµÇÁö ¾Ê¾ÒÀ» ¶§¸¸ ¼¼ÆÃ
@@ -38,41 +77,29 @@ public class AreaEvent : EventBasic
     void EventOption1()    // 1¹ø º¸±â
     {
         if (isEventSet == false)
-        {
             areaGolds[0] = 40 + Random.Range(0, 20);
-            OptionText[0].text = "1ÀÏ ¼Ò¸ð, Áø¿µÈ­Æó" + areaGold + "È¹µæ";
-        }
-        else
-        {
-            // ±âÁ¸ µ¥ÀÌÅÍ ¾²±â
-            OptionText[0].text = "1ÀÏ ¼Ò¸ð, Áø¿µÈ­Æó" + areaGold + "È¹µæ";
-        }
+
+        areaGold = areaGolds[0];
+        OptionText[0].text = "1ÀÏ ¼Ò¸ð, Áø¿µÈ­Æó" + areaGold + "È¹µæ";
+
     }
 
     void EventOption2()    // 2¹ø º¸±â
     {
         if (isEventSet == false)
-        {
             areaGolds[1] = 70 + Random.Range(0, 30);
-            OptionText[1].text = "2ÀÏ ¼Ò¸ð, Áø¿µÈ­Æó" + areaGold + "È¹µæ";
-        }
-        else
-        {
-            OptionText[1].text = "2ÀÏ ¼Ò¸ð, Áø¿µÈ­Æó" + areaGold + "È¹µæ";
-        }
+       
+        areaGold = areaGolds[1];
+        OptionText[1].text = "2ÀÏ ¼Ò¸ð, Áø¿µÈ­Æó" + areaGold + "È¹µæ";
     }
 
     void EventOption3()    // 3¹ø º¸±â
     {
         if (isEventSet == false)
-        {
             areaGolds[2] = 100 + Random.Range(0, 40);
-            OptionText[2].text = "3ÀÏ ¼Ò¸ð, Áø¿µÈ­Æó" + areaGold + "È¹µæ";
-        }
-        else
-        {
-            OptionText[2].text = "3ÀÏ ¼Ò¸ð, Áø¿µÈ­Æó" + areaGold + "È¹µæ";
-        }
+      
+        areaGold = areaGolds[2];
+        OptionText[2].text = "3ÀÏ ¼Ò¸ð, Áø¿µÈ­Æó" + areaGold + "È¹µæ";
     }
 
     void ButtonsOff()

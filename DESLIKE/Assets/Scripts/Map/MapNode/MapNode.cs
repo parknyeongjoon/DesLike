@@ -5,134 +5,240 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "MapNode", menuName = "ScriptableObject/MapNode")]
 public class MapNode : ScriptableObject
 {
+    int rand;
+    public Kingdom kingdom;
     public Map map;
     public bool isNode = false;
     public List<SoldierData> ableSoldierRewards = new List<SoldierData>();    // 위 3개를 조합해서 나오는 리워드 리스트
-    public List<Relic> ableRelicRewards = new List<Relic>();
-    public Kingdom kingdom;
     public Reward reward;
     public int[] relicLevelCount = new int[3];
-    
-    public void SetAbleReward()
+    RelicManager relicManager;
+
+    public void SetAbleReward() // 병사만 설정
     {
-        kingdom = Kingdom.Physic;   // 수정 필요
-        int comNorSolC, comEpicSolC;
-
-        if (map.commonNorSol != null) comNorSolC = 0;
-        else comNorSolC = map.commonNorSol.Count;
-        if (map.commonEpicSol == null) comEpicSolC = 0;
-        else comEpicSolC = map.commonEpicSol.Count;
-
-        int comNorRelC = map.commonNorRel.Count;
-        int comEpicRelC = map.commonEpicRel.Count;
-        int comLegendRelC = map.commonLegendRel.Count;
-
-        int kingdomNorSolC, kingdomEpicSolC, kingdomNorRelC, kingdomEpicRelC, kingdomLegendRelC;
-        int sum1, sum2, sum3, sum4, sum5;
+        kingdom = map.kingdom;
+        int kingdomNorSolC, kingdomEpicSolC;
+        int sum;
 
         if (kingdom == Kingdom.Physic)  // ableSoldierReward 세팅
         {
             kingdomNorSolC = map.physicNorSol.Count;
             kingdomEpicSolC = map.physicEpicSol.Count;
-            sum1 = kingdomNorSolC + comNorSolC;
-            sum2 = sum1 + kingdomEpicSolC;
-            sum3 = sum2 + comEpicSolC;
-            if (ableSoldierRewards.Count < sum3)
+            sum = kingdomNorSolC + kingdomEpicSolC;
+            if (ableSoldierRewards.Count < sum)
             {
                 for (int i = 0; i < kingdomNorSolC; i++)
                     ableSoldierRewards.Add(map.physicNorSol[i]);    // 국가별 일반 유닛 추가
-                for (int i = kingdomNorSolC; i < sum1; i++)
-                    ableSoldierRewards.Add(map.commonNorSol[i - kingdomNorSolC]); // 공통 일반 유닛 추가
-                for (int i = sum1; i < sum2; i++)
-                    ableSoldierRewards.Add(map.physicEpicSol[i - sum1]);    // 국가별 희귀 유닛 추가
-                for (int i = sum2; i < sum3; i++)
-                    ableSoldierRewards.Add(map.commonEpicSol[i - sum2]);    // 공통 희귀 유닛 추가
+                for (int i = kingdomNorSolC; i < sum; i++)
+                    ableSoldierRewards.Add(map.physicEpicSol[i - kingdomNorSolC]);    // 국가별 희귀 유닛 추가
             }
         }
         else if (kingdom == Kingdom.Spell)
         {
             kingdomNorSolC = map.spellNorSol.Count;
             kingdomEpicSolC = map.spellEpicSol.Count;
-            sum1 = kingdomNorSolC + comNorSolC;
-            sum2 = sum1 + kingdomEpicSolC;
-            sum3 = sum2 + comEpicSolC;
-            if (ableSoldierRewards.Count < sum3)
+            sum = kingdomNorSolC + kingdomEpicSolC;
+            if (ableSoldierRewards.Count < sum)
             {
                 for (int i = 0; i < kingdomNorSolC; i++)
                     ableSoldierRewards.Add(map.spellNorSol[i]);    // 국가별 일반 유닛 추가
-                for (int i = kingdomNorSolC; i < sum1; i++)
-                    ableSoldierRewards.Add(map.commonNorSol[i - kingdomNorSolC]); // 공통 일반 유닛 추가
-                for (int i = sum1; i < sum2; i++)
-                    ableSoldierRewards.Add(map.spellEpicSol[i - sum1]);    // 국가별 희귀 유닛 추가
-                for (int i = sum2; i < sum3; i++)
-                    ableSoldierRewards.Add(map.commonEpicSol[i - sum2]);    // 공통 희귀 유닛 추가
+                for (int i = kingdomNorSolC; i < sum; i++)
+                    ableSoldierRewards.Add(map.spellEpicSol[i - kingdomNorSolC]);    // 국가별 희귀 유닛 추가
             }
         }
+    }
 
-        ableRelicRewards = new List<Relic>();
-        if (kingdom == Kingdom.Physic)  // ableRelicReward 세팅
+    public void ClearReward()
+    {
+        reward.soldierReward.Clear();
+        reward.relicReward.Clear();
+    }
+
+    public string SetNorRel()  // 일반 유물 랜덤 생성 후 코드 전달
+    {
+        relicManager = RelicManager.instance;
+        int norRelCount;
+        kingdom = map.kingdom;
+
+        if (kingdom == Kingdom.Physic)   // 무투국 일반 유물 세팅
         {
-            kingdomNorRelC = map.physicNorRel.Count;
-            kingdomEpicRelC = map.physicEpicRel.Count;
-            kingdomLegendRelC = map.physicLegendRel.Count;
+            norRelCount = map.physicNorRel.Count + map.commonNorRel.Count;  // 총 일반 유물의 갯수
 
-            sum1 = kingdomNorRelC + comNorRelC;
-            sum2 = sum1 + kingdomEpicRelC;
-            sum3 = sum2 + comEpicRelC;
-            sum4 = sum3 + kingdomLegendRelC;
-            sum5 = sum4 + comLegendRelC;
-
-            relicLevelCount[0] = kingdomNorRelC + comNorRelC;
-            relicLevelCount[1] = kingdomEpicRelC + comEpicRelC;
-            relicLevelCount[2] = kingdomLegendRelC + comLegendRelC;
-            
-            if (ableRelicRewards.Count < sum3)
+        reroll:
+            rand = Random.Range(0, norRelCount-1);  // 국가 유물 vs 공통 유물 중 어떤 걸로 할지
+            if(rand < map.physicNorRel.Count)   // 국가 유물이라면
             {
-                for (int i = 0; i < kingdomNorRelC; i++)
-                    ableRelicRewards.Add(map.physicNorRel[i]);    // 국가별 일반 유물 추가
-                for (int i = kingdomNorRelC; i < sum1; i++)
-                    ableRelicRewards.Add(map.commonNorRel[i - kingdomNorRelC]); // 공통 일반 유물 추가
-                for (int i = sum1; i < sum2; i++)
-                    ableRelicRewards.Add(map.physicEpicRel[i - sum1]);    // 국가별 희귀 유물 추가
-                for (int i = sum2; i < sum3; i++)
-                    ableRelicRewards.Add(map.commonEpicRel[i - sum2]);    // 공통 희귀 유물 추가
-                for (int i = sum3; i < sum4; i++)
-                    ableRelicRewards.Add(map.physicLegendRel[i - sum3]);    // 공통 전설 유물 추가
-                for (int i = sum4; i < sum5; i++)
-                    ableRelicRewards.Add(map.commonLegendRel[i - sum4]);    // 공통 전설 유물 추가
+                rand = Random.Range(0, map.physicNorRel.Count) + 1; // 국가 유물 내 랜덤값
+                if (relicManager.relicList.ContainsKey("Relic_Physic_N_" + rand))   // 가지고 있는 유물인지
+                {
+                    InfiniteLoopDetector.Run();
+                    goto reroll;
+                }
+                return ("Relic_Physic_N_" + rand);
+            }
+            else // 일반 유물
+            {
+                rand = Random.Range(0, map.commonNorRel.Count) + 1;
+                if (relicManager.relicList.ContainsKey("Relic_Common_N_" + rand))   // 가지고 있는 유물인지
+                {
+                    InfiniteLoopDetector.Run();
+                    goto reroll;
+                }
+                return ("Relic_Common_N_" + rand);
             }
         }
-        else if (kingdom == Kingdom.Spell)
+        else
         {
-            kingdomNorRelC = map.spellNorRel.Count;
-            kingdomEpicRelC = map.spellEpicRel.Count;
-            kingdomLegendRelC = map.spellLegendRel.Count;
+            norRelCount = map.spellNorRel.Count + map.commonNorRel.Count;  // 총 일반 유물의 갯수
 
-            sum1 = kingdomNorRelC + comNorRelC;
-            sum2 = sum1 + kingdomEpicRelC;
-            sum3 = sum2 + comEpicRelC;
-            sum4 = sum3 + kingdomLegendRelC;
-            sum5 = sum4 + comLegendRelC;
-
-            relicLevelCount[0] = kingdomNorRelC + comNorRelC;
-            relicLevelCount[1] = kingdomEpicRelC + comEpicRelC;
-            relicLevelCount[2] = kingdomLegendRelC + comLegendRelC;
-
-            if (ableRelicRewards.Count < sum3)
+        reroll:
+            rand = Random.Range(0, norRelCount - 1);  // 국가 유물 vs 공통 유물 중 어떤 걸로 할지
+            if (rand < map.spellNorRel.Count)   // 국가 유물이라면
             {
+                rand = Random.Range(0, map.spellNorRel.Count) + 1;  // 국가 유물 내 랜덤값
+                if (relicManager.relicList.ContainsKey("Relic_Spell_N_" + rand))   // 가지고 있는 유물인지
+                {
+                    InfiniteLoopDetector.Run();
+                    goto reroll;
+                }
+                return ("Relic_Spell_N_" + rand);
+            }
+            else // 일반 유물
+            {
+                rand = Random.Range(0, map.commonNorRel.Count) + 1;
+                if (relicManager.relicList.ContainsKey("Relic_Common_N_" + rand))   // 가지고 있는 유물인지
+                {
+                    InfiniteLoopDetector.Run();
+                    goto reroll;
+                }
+                return ("Relic_Common_N_" + rand);
+            }
+        }
+    }
 
-                for (int i = 0; i < kingdomNorRelC; i++)
-                    ableRelicRewards.Add(map.spellNorRel[i]);    // 국가별 일반 유물 추가
-                for (int i = kingdomNorRelC; i < sum1; i++)
-                    ableRelicRewards.Add(map.commonNorRel[i - kingdomNorRelC]); // 공통 일반 유물 추가
-                for (int i = sum1; i < sum2; i++)
-                    ableRelicRewards.Add(map.spellEpicRel[i - sum1]);    // 국가별 희귀 유물 추가
-                for (int i = sum2; i < sum3; i++)
-                    ableRelicRewards.Add(map.commonEpicRel[i - sum2]);    // 공통 희귀 유물 추가
-                for (int i = sum3; i < sum4; i++)
-                    ableRelicRewards.Add(map.spellLegendRel[i - sum3]);    // 공통 희귀 유물 추가
-                for (int i = sum4; i < sum5; i++)
-                    ableRelicRewards.Add(map.commonLegendRel[i - sum4]);    // 공통 희귀 유물 추가
+    public string SetEpicRel()  // 일반 유물 랜덤 생성 후 코드 전달
+    {
+        relicManager = RelicManager.Instance;
+        int epicRelCount;
+        kingdom = map.kingdom;
+
+        if (kingdom == Kingdom.Physic)   // 무투국 일반 유물 세팅
+        {
+            epicRelCount = map.physicEpicRel.Count + map.commonEpicRel.Count;  // 총 일반 유물의 갯수
+
+        reroll:
+            rand = Random.Range(0, epicRelCount - 1);  // 국가 유물 vs 공통 유물 중 어떤 걸로 할지
+            if (rand < map.physicNorRel.Count)   // 국가 유물이라면
+            {
+           
+                rand = Random.Range(0, map.physicEpicRel.Count) + 1; // 국가 유물 내 랜덤값
+                if (relicManager.relicList.ContainsKey("Relic_Physic_E_" + rand))   // 가지고 있는 유물인지
+                {
+                    InfiniteLoopDetector.Run();
+                    goto reroll;
+                }
+                return ("Relic_Physic_E_" + rand);
+            }
+            else // 일반 유물
+            {
+                rand = Random.Range(0, map.commonEpicRel.Count) + 1;
+                if (relicManager.relicList.ContainsKey("Relic_Common_E_" + rand))   // 가지고 있는 유물인지
+                {
+                    InfiniteLoopDetector.Run();
+                    goto reroll;
+                }
+                return ("Relic_Common_E_" + rand);
+            }
+        }
+        else
+        {
+            epicRelCount = map.spellNorRel.Count + map.commonNorRel.Count;  // 총 일반 유물의 갯수
+
+        reroll:
+            rand = Random.Range(0, epicRelCount - 1);  // 국가 유물 vs 공통 유물 중 어떤 걸로 할지
+            if (rand < map.spellNorRel.Count)   // 국가 유물이라면
+            {
+                rand = Random.Range(0, map.spellEpicRel.Count) + 1;  // 국가 유물 내 랜덤값
+                if (relicManager.relicList.ContainsKey("Relic_Spell_E_" + rand))   // 가지고 있는 유물인지
+                {
+                    InfiniteLoopDetector.Run();
+                    goto reroll;
+                }
+                return ("Relic_Spell_E_" + rand);
+            }
+            else // 일반 유물
+            {
+                rand = Random.Range(0, map.commonEpicRel.Count) + 1;
+                if (relicManager.relicList.ContainsKey("Relic_Common_E_" + rand))   // 가지고 있는 유물인지
+                {
+                    InfiniteLoopDetector.Run();
+                    goto reroll;
+                }
+                return ("Relic_Common_E_" + rand);
+            }
+        }
+    }
+
+    public string SetLegRel()  // 일반 유물 랜덤 생성 후 코드 전달
+    {
+        relicManager = RelicManager.Instance;
+        int legRelCount;
+        kingdom = map.kingdom;
+
+        if (kingdom == Kingdom.Physic)   // 무투국 일반 유물 세팅
+        {
+            legRelCount = map.physicLegendRel.Count + map.commonLegendRel.Count;  // 총 일반 유물의 갯수
+
+        reroll:
+            rand = Random.Range(0, legRelCount - 1);  // 국가 유물 vs 공통 유물 중 어떤 걸로 할지
+            if (rand < map.physicNorRel.Count)   // 국가 유물이라면
+            {
+                rand = Random.Range(0, map.physicLegendRel.Count) + 1; // 국가 유물 내 랜덤값
+                if (relicManager.relicList.ContainsKey("Relic_Physic_H_" + rand))   // 가지고 있는 유물인지
+                {
+                    InfiniteLoopDetector.Run();
+                    goto reroll;
+                }
+                return ("Relic_Physic_H_" + rand);
+            }
+            else // 일반 유물
+            {
+                rand = Random.Range(0, map.commonEpicRel.Count) + 1;
+                if (relicManager.relicList.ContainsKey("Relic_Common_H_" + rand))   // 가지고 있는 유물인지
+                {
+                    InfiniteLoopDetector.Run();
+                    goto reroll;
+                }
+                return ("Relic_Common_H_" + rand);
+            }
+        }
+        else
+        {
+            legRelCount = map.spellNorRel.Count + map.commonNorRel.Count;  // 총 일반 유물의 갯수
+
+        reroll:
+            rand = Random.Range(0, legRelCount - 1);  // 국가 유물 vs 공통 유물 중 어떤 걸로 할지
+            if (rand < map.spellNorRel.Count)   // 국가 유물이라면
+            {
+                rand = Random.Range(0, map.spellEpicRel.Count) + 1;  // 국가 유물 내 랜덤값
+                Debug.Log("relicManager : " + relicManager);
+                Debug.Log("relicManager.relicList : " + relicManager.relicList);
+                if (relicManager.relicList.ContainsKey("Relic_Spell_H_" + rand))   // 가지고 있는 유물인지
+                {
+                    InfiniteLoopDetector.Run();
+                    goto reroll;
+                }
+                return ("Relic_Spell_H_" + rand);
+            }
+            else // 일반 유물
+            {
+                rand = Random.Range(0, map.commonLegendRel.Count) + 1;
+                if (relicManager.relicList.ContainsKey("Relic_Common_H_" + rand))   // 가지고 있는 유물인지
+                {
+                    InfiniteLoopDetector.Run();
+                    goto reroll;
+                }
+                return ("Relic_Common_H_" + rand);
             }
         }
     }

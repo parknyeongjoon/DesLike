@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6c479d2a70ce7a489dbd8fa79bdab3b, type: 3}
   m_Name: Map
   m_EditorClassIdentifier: 
-  curMapNode: {fileID: 11400000, guid: aa2481306b7ef304e9d74bb980916d7c, type: 2}
+  curMapNode: {fileID: 11400000, guid: c788c6a689bbe6848892052dc252066a, type: 2}
   selectNode:
-  - {fileID: 11400000, guid: 7444f7a6f48adb949af04b63b47ec137, type: 2}
-  - {fileID: 11400000, guid: 7444f7a6f48adb949af04b63b47ec137, type: 2}
-  - {fileID: 11400000, guid: 7444f7a6f48adb949af04b63b47ec137, type: 2}
+  - {fileID: 11400000, guid: c788c6a689bbe6848892052dc252066a, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   physicNorSol:
   - {fileID: 11400000, guid: 63e33c6e044a1e34da48031263c41fac, type: 2}
   - {fileID: 11400000, guid: cf43bab0e7c1b0647b13055f91296289, type: 2}
@@ -32,32 +32,32 @@ MonoBehaviour:
   commonNorSol: []
   commonEpicSol: []
   physicNorRel:
-  - {fileID: -512087590680084207, guid: 826616231cc31534c801e5c282e62386, type: 3}
-  - {fileID: -512087590680084207, guid: e15febb05d554834ba4867deb98fa867, type: 3}
+  - {fileID: -512087590680084207, guid: 2dcb9373afa425a449930e9cd7292d57, type: 3}
+  - {fileID: -512087590680084207, guid: 4fe6f00c185c154498e218094e923aa4, type: 3}
   physicEpicRel:
-  - {fileID: -512087590680084207, guid: ed7d96131367e544c85604c24726c6e9, type: 3}
-  - {fileID: -512087590680084207, guid: d1d54443a5a065041894b66ee9159621, type: 3}
+  - {fileID: -512087590680084207, guid: 8a2d8faf3fa7af34e8e2d6f1739efebf, type: 3}
+  - {fileID: -512087590680084207, guid: 1f2bba58191bb8d4cbc218d5edda8203, type: 3}
   physicLegendRel:
-  - {fileID: -512087590680084207, guid: 4259b3543732b374da3a29bafe50fe65, type: 3}
-  - {fileID: -512087590680084207, guid: b1afaae7e4b8365488f2dc77169ffbd8, type: 3}
+  - {fileID: -512087590680084207, guid: e71e82a80a77229408a0403aff5ccf3a, type: 3}
+  - {fileID: -512087590680084207, guid: 78b815b176a854740b45c27a1e797ec7, type: 3}
   spellNorRel:
-  - {fileID: -512087590680084207, guid: a8b94c95e58f9c141a594da0a182c92e, type: 3}
-  - {fileID: -512087590680084207, guid: 6634085920921f849bc6ded847a49248, type: 3}
+  - {fileID: -512087590680084207, guid: 00385deff83333e4d80b3ca5e99bfbbd, type: 3}
+  - {fileID: -512087590680084207, guid: ea6753557504ef74f93969bb73882d2e, type: 3}
   spellEpicRel:
-  - {fileID: -512087590680084207, guid: dadfdae9bc4df97459542e38b014b072, type: 3}
-  - {fileID: -512087590680084207, guid: 36e0217e3710d0c4488df83be9cb1a6f, type: 3}
+  - {fileID: -512087590680084207, guid: 55ff1ee2df4103c4c8d7f3535b5896bd, type: 3}
+  - {fileID: -512087590680084207, guid: 30039c84e10848c4eb4bfedbaa282c49, type: 3}
   spellLegendRel:
-  - {fileID: -512087590680084207, guid: 545b627ed3eec734a827f235f1fff896, type: 3}
-  - {fileID: -512087590680084207, guid: a136eec0dc24d434ab0a03c52abb44ee, type: 3}
+  - {fileID: -512087590680084207, guid: 01cf1c10cf4ad384ca05636823257e42, type: 3}
+  - {fileID: -512087590680084207, guid: 19c028029688ef9478571147efb50250, type: 3}
   commonNorRel:
-  - {fileID: -512087590680084207, guid: d3293a91bfe3625468b45b2a57a15849, type: 3}
-  - {fileID: -512087590680084207, guid: 7ba5e7edc5a619e45b89825f185c73dc, type: 3}
+  - {fileID: -512087590680084207, guid: 0c1cb839eacdf6c4aa07b181769a7f07, type: 3}
+  - {fileID: -512087590680084207, guid: 25d5df5aebad6454f8d50533e4e6506b, type: 3}
   commonEpicRel:
-  - {fileID: -512087590680084207, guid: 426a584971c2d3342b36a5316a741b1f, type: 3}
-  - {fileID: -512087590680084207, guid: 0a18ab768ccd6074ba47caca9915f98d, type: 3}
+  - {fileID: -512087590680084207, guid: dce7fda8f46429c4490cd407c5138b35, type: 3}
+  - {fileID: -512087590680084207, guid: 2eafa64f8cf060344917ead369448929, type: 3}
   commonLegendRel:
-  - {fileID: -512087590680084207, guid: 4a85ade60bce7d244b0fbca4b8d843a8, type: 3}
-  - {fileID: -512087590680084207, guid: 435b71361fcce3747b3d0658cfb48729, type: 3}
+  - {fileID: -512087590680084207, guid: 0093fb5d891cefc48ab3d58b8bedbffd, type: 3}
+  - {fileID: -512087590680084207, guid: 0cc24f697b30b0f4b883b045b79e0746, type: 3}
   isMap: 0
   playerX: 0
   playerY: 0

@@ -59,21 +59,22 @@ public class GameOption
 public class MapData
 {
     public Kingdom kingdom;
-    public CurWindow curWindow;
-    public CurBattle curBattle;
-    public int curStage;
-    public int curTrack;
-    public int curDay;  // 현재 날짜
+    public CurWindow curWindow = CurWindow.Map;
+    public CurBattle curBattle = CurBattle.Normal;
+    public int curStage = 0;
+    public int curTrack = 0;
+    public int curDay = 0;  // 현재 날짜
     public int[] selEvent = new int[3];
     public int[] nextEvent = new int[3];   // 현재 이벤트(전투) 저장용. 0 : 1트랙, 1 : 2트랙, 2 : 3트랙
     public int[] evntList = new int[3];    // 이벤트가 어떤 이벤트인지 저장, 0 : 1트랙, 1 : 2트랙, 2 : 3트랙
-    public int curBtn;  // 현재 어떤 버튼을 눌러서 이 곳으로 왔는지
+    public int curBtn = 0;  // 현재 어떤 버튼을 눌러서 이 곳으로 왔는지
     public bool[] isEventSet = new bool[3];
     public bool[] isRewardSet = new bool[3];
     public bool[] isAbleSet = new bool[3];
     public bool[] isChallenge = new bool[3];
     public int challengeCount = 0;
-    public bool midBossCheck1, midBossCheck2, villageCheck, organCheck, newSet, eventEnd; // 중간 보스, 마을, 정비, 이미 세팅했는지 여부
+    public bool midBossCheck1 = false, midBossCheck2 = false, villageCheck = false, organCheck = false, 
+        newSet = false, eventEnd = false; // 중간 보스, 마을, 정비, 이미 세팅했는지 여부
 }
 
 [System.Serializable]
@@ -90,9 +91,10 @@ public class EventData
 [System.Serializable]
 public class VillageData
 {
-    public int[] randRelic = new int[6];   // 목록별 랜덤넘버
+    // public int[] randRelic = new int[6];   // 목록별 랜덤넘버
     public int[] relicPrice = new int[6];  // 목록별 가격
     public bool[] isSoldOut = new bool[6];
+    public string[] relicsInShop = new string[6];
     public bool isNewSet;
     public int healCount;
 }

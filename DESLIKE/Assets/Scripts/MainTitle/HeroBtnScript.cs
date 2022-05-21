@@ -89,8 +89,7 @@ public class HeroBtnScript : MonoBehaviour
             relicManager = RelicManager.Instance;
             Relic relicScript;
             relicScript = campRelic.GetComponent<Relic>();
-            relicManager.relicList.Add(relicScript);
-            Instantiate(campRelic, relicManager.relicCanvas.transform.GetChild(0).transform);
+            relicManager.GetRelic(relicScript.relicData.code);
         }
     }
 

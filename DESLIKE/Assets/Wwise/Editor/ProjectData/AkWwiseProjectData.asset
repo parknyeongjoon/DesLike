@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
-  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Virtual Acoustics
       ObjectType: 5
@@ -21,13 +21,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 3a3054e085388a409cee132f734b55bb
-    ParentPath: Virtual Acoustics/Default Work Unit
+    ParentPath: Virtual Acoustics\Default Work Unit
     guid: 3a3054e085388a409cee132f734b55bb
     GuidInternal: 
-    m_lastTime: -8585508202614775808
+    m_lastTime: -8585526336068083122
     List: []
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Master-Mixer Hierarchy
       ObjectType: 5
@@ -35,10 +35,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: c86f71637841d14eb3f4825e4affab97
-    ParentPath: Master-Mixer Hierarchy/Default Work Unit
+    ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: c86f71637841d14eb3f4825e4affab97
     GuidInternal: 
-    m_lastTime: -8585486486884775808
+    m_lastTime: -8585484680391291226
     List:
     - name: Character Bus
       guid: b0c26739266b5e47bc1b4c04ed87872c
@@ -56,7 +56,7 @@ MonoBehaviour:
       - ElementName: Character Bus
         ObjectType: 2
         guid: b0c26739266b5e47bc1b4c04ed87872c
-      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Character Bus
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Character Bus
     - name: H_Bus
       guid: 021ec37a7360c941bd0e98351ccaba8a
       id: 1962540672
@@ -76,7 +76,7 @@ MonoBehaviour:
       - ElementName: H_Bus
         ObjectType: 2
         guid: 021ec37a7360c941bd0e98351ccaba8a
-      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Character Bus/H_Bus
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Character Bus\H_Bus
     - name: h_die_Bus
       guid: 3f73c0405397d9408afcf0f5d63c8b88
       id: 843762955
@@ -99,7 +99,7 @@ MonoBehaviour:
       - ElementName: h_die_Bus
         ObjectType: 2
         guid: 3f73c0405397d9408afcf0f5d63c8b88
-      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Character Bus/H_Bus/h_die_Bus
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Character Bus\H_Bus\h_die_Bus
     - name: H_idle_bus
       guid: cb38e0529c707d4ca03bcb904df3855c
       id: 1194134643
@@ -122,7 +122,7 @@ MonoBehaviour:
       - ElementName: H_idle_bus
         ObjectType: 2
         guid: cb38e0529c707d4ca03bcb904df3855c
-      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Character Bus/H_Bus/H_idle_bus
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Character Bus\H_Bus\H_idle_bus
     - name: H_Skill_1
       guid: 92a04e52e965db4aa0c8138967b2ed39
       id: 3269956185
@@ -145,7 +145,7 @@ MonoBehaviour:
       - ElementName: H_Skill_1
         ObjectType: 2
         guid: 92a04e52e965db4aa0c8138967b2ed39
-      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Character Bus/H_Bus/H_Skill_1
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Character Bus\H_Bus\H_Skill_1
     - name: H_Skill_2
       guid: 757ad6c51cdf8e40bc697b72b63fb315
       id: 3269956186
@@ -168,7 +168,7 @@ MonoBehaviour:
       - ElementName: H_Skill_2
         ObjectType: 2
         guid: 757ad6c51cdf8e40bc697b72b63fb315
-      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Character Bus/H_Bus/H_Skill_2
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Character Bus\H_Bus\H_Skill_2
     - name: H_Skill_3
       guid: 2b1d6c5b43c2c846b5553a51b3312d69
       id: 3269956187
@@ -191,7 +191,7 @@ MonoBehaviour:
       - ElementName: H_Skill_3
         ObjectType: 2
         guid: 2b1d6c5b43c2c846b5553a51b3312d69
-      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Character Bus/H_Bus/H_Skill_3
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Character Bus\H_Bus\H_Skill_3
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -205,7 +205,7 @@ MonoBehaviour:
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
-      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
     - name: Music
       guid: b0e073f6fdbc9948872f8aa1ef6e7d27
       id: 3991942870
@@ -222,7 +222,7 @@ MonoBehaviour:
       - ElementName: Music
         ObjectType: 2
         guid: b0e073f6fdbc9948872f8aa1ef6e7d27
-      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Music
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Music
     - name: N_Att
       guid: 8769ce6738391246af51c0ad83a2a74d
       id: 2083319893
@@ -245,7 +245,7 @@ MonoBehaviour:
       - ElementName: N_Att
         ObjectType: 2
         guid: 8769ce6738391246af51c0ad83a2a74d
-      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Character Bus/N_Bus/N_Att
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Character Bus\N_Bus\N_Att
     - name: N_Bus
       guid: e6cfbeaeed74f244af0a6735ed7678ce
       id: 1798247302
@@ -265,7 +265,7 @@ MonoBehaviour:
       - ElementName: N_Bus
         ObjectType: 2
         guid: e6cfbeaeed74f244af0a6735ed7678ce
-      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Character Bus/N_Bus
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Character Bus\N_Bus
     - name: N_Die
       guid: 38ccdb2b647758449491c886f52832f1
       id: 2065703678
@@ -288,7 +288,7 @@ MonoBehaviour:
       - ElementName: N_Die
         ObjectType: 2
         guid: 38ccdb2b647758449491c886f52832f1
-      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Character Bus/N_Bus/N_Die
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Character Bus\N_Bus\N_Die
     - name: N_idle
       guid: 804cc7280854aa4e9bc59430d07f7742
       id: 1311555690
@@ -311,7 +311,7 @@ MonoBehaviour:
       - ElementName: N_idle
         ObjectType: 2
         guid: 804cc7280854aa4e9bc59430d07f7742
-      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Character Bus/N_Bus/N_idle
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Character Bus\N_Bus\N_idle
     - name: N_Skill_1
       guid: 9833eefe02600e4cb1a5d7605f5f253d
       id: 2870636867
@@ -334,9 +334,9 @@ MonoBehaviour:
       - ElementName: N_Skill_1
         ObjectType: 2
         guid: 9833eefe02600e4cb1a5d7605f5f253d
-      Path: Master-Mixer Hierarchy/Default Work Unit/Master Audio Bus/Character Bus/N_Bus/N_Skill_1
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Character Bus\N_Bus\N_Skill_1
   BankWwu:
-  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: SoundBanks
       ObjectType: 5
@@ -344,10 +344,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 111a7fbee2e9c647a25420f19d3c634f
-    ParentPath: SoundBanks/Default Work Unit
+    ParentPath: SoundBanks\Default Work Unit
     guid: 111a7fbee2e9c647a25420f19d3c634f
     GuidInternal: 
-    m_lastTime: -8585484686324775808
+    m_lastTime: -8585484680334749697
     List:
     - name: main
       guid: 619856fbba3b8a4e81efc0e9b7c68d55
@@ -362,9 +362,9 @@ MonoBehaviour:
       - ElementName: main
         ObjectType: 7
         guid: 619856fbba3b8a4e81efc0e9b7c68d55
-      Path: SoundBanks/Default Work Unit/main
+      Path: SoundBanks\Default Work Unit\main
   EventWwu:
-  - PhysicalPath: Events/Default Work Unit.wwu
+  - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
@@ -372,10 +372,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 9afb6cf7ad351747ac19859bb342359b
-    ParentPath: Events/Default Work Unit
+    ParentPath: Events\Default Work Unit
     guid: 9afb6cf7ad351747ac19859bb342359b
     GuidInternal: 
-    m_lastTime: -8585484875464775808
+    m_lastTime: -8585484680391371300
     List:
     - name: 11000
       guid: 539fe0567ddced449574d055d9f970dc
@@ -390,7 +390,7 @@ MonoBehaviour:
       - ElementName: 11000
         ObjectType: 4
         guid: 539fe0567ddced449574d055d9f970dc
-      Path: Events/Default Work Unit/11000
+      Path: Events\Default Work Unit\11000
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -413,7 +413,7 @@ MonoBehaviour:
       - ElementName: 11101
         ObjectType: 4
         guid: e5e0f5e5519eca46ba64ec1034895c0d
-      Path: Events/Default Work Unit/11000/H/11101
+      Path: Events\Default Work Unit\11000\H\11101
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -436,7 +436,7 @@ MonoBehaviour:
       - ElementName: 11201
         ObjectType: 4
         guid: 5457a9a4aeac944c8b2ac931918157ad
-      Path: Events/Default Work Unit/11000/E/11201
+      Path: Events\Default Work Unit\11000\E\11201
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -459,7 +459,7 @@ MonoBehaviour:
       - ElementName: 11202
         ObjectType: 4
         guid: 46fcba1078fcf64a90bebbe491f2cc81
-      Path: Events/Default Work Unit/11000/E/11202
+      Path: Events\Default Work Unit\11000\E\11202
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -482,7 +482,7 @@ MonoBehaviour:
       - ElementName: 11203
         ObjectType: 4
         guid: 093e6d175846dd468a5300a353445375
-      Path: Events/Default Work Unit/11000/E/11203
+      Path: Events\Default Work Unit\11000\E\11203
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -499,7 +499,7 @@ MonoBehaviour:
       - ElementName: 12000
         ObjectType: 4
         guid: 1311855352fa37439f40ab88ceab36db
-      Path: Events/Default Work Unit/12000
+      Path: Events\Default Work Unit\12000
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -522,7 +522,7 @@ MonoBehaviour:
       - ElementName: 12101
         ObjectType: 4
         guid: ae79c0062c7c4149be98dafb790c1dd3
-      Path: Events/Default Work Unit/12000/H/12101
+      Path: Events\Default Work Unit\12000\H\12101
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -545,7 +545,7 @@ MonoBehaviour:
       - ElementName: 12201
         ObjectType: 4
         guid: b9aa25e364e77a4283692227bb49d9c6
-      Path: Events/Default Work Unit/12000/E/12201
+      Path: Events\Default Work Unit\12000\E\12201
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -568,7 +568,7 @@ MonoBehaviour:
       - ElementName: 12203
         ObjectType: 4
         guid: 6f53014ec8297347884f1ad4eb296c0a
-      Path: Events/Default Work Unit/12000/E/12203
+      Path: Events\Default Work Unit\12000\E\12203
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -585,7 +585,7 @@ MonoBehaviour:
       - ElementName: 23000
         ObjectType: 4
         guid: d8a8ef5fb088a043896a3e3700ff1ca9
-      Path: Events/Default Work Unit/23000
+      Path: Events\Default Work Unit\23000
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -608,7 +608,7 @@ MonoBehaviour:
       - ElementName: 23101
         ObjectType: 4
         guid: 0c9db323a2ca854294e218b931bd0123
-      Path: Events/Default Work Unit/23000/H/23101
+      Path: Events\Default Work Unit\23000\H\23101
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -631,7 +631,7 @@ MonoBehaviour:
       - ElementName: 23201
         ObjectType: 4
         guid: 562349d8773939489b990f243e3f1995
-      Path: Events/Default Work Unit/23000/E/23201
+      Path: Events\Default Work Unit\23000\E\23201
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -654,7 +654,7 @@ MonoBehaviour:
       - ElementName: 23202
         ObjectType: 4
         guid: 5b05569a4829f441988eed35a8946743
-      Path: Events/Default Work Unit/23000/E/23202
+      Path: Events\Default Work Unit\23000\E\23202
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -677,7 +677,7 @@ MonoBehaviour:
       - ElementName: 23203
         ObjectType: 4
         guid: f1c358cff0e3bf488b929cfd0c0fd137
-      Path: Events/Default Work Unit/23000/E/23203
+      Path: Events\Default Work Unit\23000\E\23203
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -700,7 +700,7 @@ MonoBehaviour:
       - ElementName: 23301
         ObjectType: 4
         guid: 90ff095b1ac4f248a17a1b698cb3f400
-      Path: Events/Default Work Unit/23000/N/23301
+      Path: Events\Default Work Unit\23000\N\23301
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -723,7 +723,7 @@ MonoBehaviour:
       - ElementName: 23302
         ObjectType: 4
         guid: 28db799b197bc243bb6b9e5dc2efc593
-      Path: Events/Default Work Unit/23000/N/23302
+      Path: Events\Default Work Unit\23000\N\23302
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -746,7 +746,7 @@ MonoBehaviour:
       - ElementName: 23303
         ObjectType: 4
         guid: d02e619c373120409ef1a7884a1be118
-      Path: Events/Default Work Unit/23000/N/23303
+      Path: Events\Default Work Unit\23000\N\23303
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -769,7 +769,7 @@ MonoBehaviour:
       - ElementName: 23304
         ObjectType: 4
         guid: 5e32e407aaf2bf4289f17687b8d8c54e
-      Path: Events/Default Work Unit/23000/N/23304
+      Path: Events\Default Work Unit\23000\N\23304
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -792,7 +792,7 @@ MonoBehaviour:
       - ElementName: 23305
         ObjectType: 4
         guid: 909926bcc1df494592fbeb45e5a28b51
-      Path: Events/Default Work Unit/23000/N/23305
+      Path: Events\Default Work Unit\23000\N\23305
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -809,7 +809,7 @@ MonoBehaviour:
       - ElementName: 24000
         ObjectType: 4
         guid: 475518535c61fc40bba0f75299db06ae
-      Path: Events/Default Work Unit/24000
+      Path: Events\Default Work Unit\24000
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -832,7 +832,7 @@ MonoBehaviour:
       - ElementName: 24201
         ObjectType: 4
         guid: 8c94fb17e2d1b947868b78a5f4af1572
-      Path: Events/Default Work Unit/24000/E/24201
+      Path: Events\Default Work Unit\24000\E\24201
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -855,7 +855,7 @@ MonoBehaviour:
       - ElementName: 24202
         ObjectType: 4
         guid: 1d766c475b0b684f9738100cacf54be8
-      Path: Events/Default Work Unit/24000/E/24202
+      Path: Events\Default Work Unit\24000\E\24202
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -878,7 +878,7 @@ MonoBehaviour:
       - ElementName: 24203
         ObjectType: 4
         guid: e8f1de627c49404eae639f52495e7196
-      Path: Events/Default Work Unit/24000/E/24203
+      Path: Events\Default Work Unit\24000\E\24203
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -901,7 +901,7 @@ MonoBehaviour:
       - ElementName: 24301
         ObjectType: 4
         guid: 0a63cd00ea2408489213584b20d7e2db
-      Path: Events/Default Work Unit/24000/N/24301
+      Path: Events\Default Work Unit\24000\N\24301
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -924,7 +924,7 @@ MonoBehaviour:
       - ElementName: 24302
         ObjectType: 4
         guid: c883aa810acc8f4a995c071ee10bd680
-      Path: Events/Default Work Unit/24000/N/24302
+      Path: Events\Default Work Unit\24000\N\24302
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -947,7 +947,7 @@ MonoBehaviour:
       - ElementName: 24303
         ObjectType: 4
         guid: 0b66a7e643c0404a85a1a491bb32ce60
-      Path: Events/Default Work Unit/24000/N/24303
+      Path: Events\Default Work Unit\24000\N\24303
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -970,7 +970,7 @@ MonoBehaviour:
       - ElementName: 24304
         ObjectType: 4
         guid: 407dde8b25252645919843d6d2a49136
-      Path: Events/Default Work Unit/24000/N/24304
+      Path: Events\Default Work Unit\24000\N\24304
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -993,7 +993,7 @@ MonoBehaviour:
       - ElementName: 24305
         ObjectType: 4
         guid: 5dcc5dbbe6c09240abd5cf855a16edf5
-      Path: Events/Default Work Unit/24000/N/24305
+      Path: Events\Default Work Unit\24000\N\24305
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1010,7 +1010,7 @@ MonoBehaviour:
       - ElementName: Battle_End
         ObjectType: 3
         guid: 784d787ac9d02e45850a672afaef9650
-      Path: Events/Default Work Unit/Battle_End
+      Path: Events\Default Work Unit\Battle_End
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1027,7 +1027,7 @@ MonoBehaviour:
       - ElementName: Battle_Start
         ObjectType: 3
         guid: 4434e4e096bdf64fbdd767a9a0547301
-      Path: Events/Default Work Unit/Battle_Start
+      Path: Events\Default Work Unit\Battle_Start
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1047,7 +1047,7 @@ MonoBehaviour:
       - ElementName: E
         ObjectType: 4
         guid: 236317de603438498ff99d162269d99e
-      Path: Events/Default Work Unit/12000/E
+      Path: Events\Default Work Unit\12000\E
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1067,7 +1067,7 @@ MonoBehaviour:
       - ElementName: E
         ObjectType: 4
         guid: c62f6b77aa188a4e8af3497e6264adf6
-      Path: Events/Default Work Unit/24000/E
+      Path: Events\Default Work Unit\24000\E
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1087,7 +1087,7 @@ MonoBehaviour:
       - ElementName: E
         ObjectType: 4
         guid: aa34b07f46800b4bb49cb27842324601
-      Path: Events/Default Work Unit/11000/E
+      Path: Events\Default Work Unit\11000\E
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1107,7 +1107,7 @@ MonoBehaviour:
       - ElementName: E
         ObjectType: 4
         guid: 7c4a9f63fe78d14a9da9ab4dba4586b5
-      Path: Events/Default Work Unit/23000/E
+      Path: Events\Default Work Unit\23000\E
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1133,7 +1133,7 @@ MonoBehaviour:
       - ElementName: E_11201_Att_1
         ObjectType: 3
         guid: e2bca836ae48a74ea8234055c0cf7cc3
-      Path: Events/Default Work Unit/11000/E/11201/E_11201_Att_1
+      Path: Events\Default Work Unit\11000\E\11201\E_11201_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1159,7 +1159,7 @@ MonoBehaviour:
       - ElementName: E_11201_Die
         ObjectType: 3
         guid: 28f48ad40544d54683af87ba7845448e
-      Path: Events/Default Work Unit/11000/E/11201/E_11201_Die
+      Path: Events\Default Work Unit\11000\E\11201\E_11201_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1185,7 +1185,7 @@ MonoBehaviour:
       - ElementName: E_11201_Idle
         ObjectType: 3
         guid: 80e9eb672e7a59439171b6dea636b3a4
-      Path: Events/Default Work Unit/11000/E/11201/E_11201_Idle
+      Path: Events\Default Work Unit\11000\E\11201\E_11201_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1211,7 +1211,7 @@ MonoBehaviour:
       - ElementName: E_11201_Skill_1
         ObjectType: 3
         guid: 9aec96c765642149bfdc71ceb3e4ae75
-      Path: Events/Default Work Unit/11000/E/11201/E_11201_Skill_1
+      Path: Events\Default Work Unit\11000\E\11201\E_11201_Skill_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1237,7 +1237,7 @@ MonoBehaviour:
       - ElementName: E_11202_Die
         ObjectType: 3
         guid: c9d60491a3d83445826ebaab52181c9a
-      Path: Events/Default Work Unit/11000/E/11202/E_11202_Die
+      Path: Events\Default Work Unit\11000\E\11202\E_11202_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1263,7 +1263,7 @@ MonoBehaviour:
       - ElementName: E_11202_Idle
         ObjectType: 3
         guid: 4e51ea2556ec34448bc2ec62eaa2ba0c
-      Path: Events/Default Work Unit/11000/E/11202/E_11202_Idle
+      Path: Events\Default Work Unit\11000\E\11202\E_11202_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1289,7 +1289,7 @@ MonoBehaviour:
       - ElementName: E_11202_Skill_1
         ObjectType: 3
         guid: c9d6c566a3cb8d44aa6550cc23166f86
-      Path: Events/Default Work Unit/11000/E/11202/E_11202_Skill_1
+      Path: Events\Default Work Unit\11000\E\11202\E_11202_Skill_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1315,7 +1315,7 @@ MonoBehaviour:
       - ElementName: E_11203_Att_1
         ObjectType: 3
         guid: eedbd85295369c4eaeaf9965e32a66c0
-      Path: Events/Default Work Unit/11000/E/11203/E_11203_Att_1
+      Path: Events\Default Work Unit\11000\E\11203\E_11203_Att_1
       maxAttenuation: 0
       maxDuration: 2.046017
       minDuration: 1.987771
@@ -1341,7 +1341,7 @@ MonoBehaviour:
       - ElementName: E_11203_Die
         ObjectType: 3
         guid: d055104a5af04e45a14e3d97cdd496fc
-      Path: Events/Default Work Unit/11000/E/11203/E_11203_Die
+      Path: Events\Default Work Unit\11000\E\11203\E_11203_Die
       maxAttenuation: 0
       maxDuration: 1.088493
       minDuration: 1.057506
@@ -1367,7 +1367,7 @@ MonoBehaviour:
       - ElementName: E_11203_Idle
         ObjectType: 3
         guid: 9f1d3941880cac488e9d334db416efb0
-      Path: Events/Default Work Unit/11000/E/11203/E_11203_Idle
+      Path: Events\Default Work Unit\11000\E\11203\E_11203_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1393,7 +1393,7 @@ MonoBehaviour:
       - ElementName: E_12201_Att_1
         ObjectType: 3
         guid: 49914b61d65efd4082e403aff8a11fab
-      Path: Events/Default Work Unit/12000/E/12201/E_12201_Att_1
+      Path: Events\Default Work Unit\12000\E\12201\E_12201_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1419,7 +1419,7 @@ MonoBehaviour:
       - ElementName: E_12201_Die
         ObjectType: 3
         guid: efd0aef0cf158d47a20a8c1d38bbf931
-      Path: Events/Default Work Unit/12000/E/12201/E_12201_Die
+      Path: Events\Default Work Unit\12000\E\12201\E_12201_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1445,7 +1445,7 @@ MonoBehaviour:
       - ElementName: E_12201_Idle
         ObjectType: 3
         guid: 6b1f8a2c63e14842b1c4f15d0be0d83f
-      Path: Events/Default Work Unit/12000/E/12201/E_12201_Idle
+      Path: Events\Default Work Unit\12000\E\12201\E_12201_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1471,7 +1471,7 @@ MonoBehaviour:
       - ElementName: E_12201_Skill_1
         ObjectType: 3
         guid: cfbcf6d860264a42a2825d54e7dc28ba
-      Path: Events/Default Work Unit/12000/E/12201/E_12201_Skill_1
+      Path: Events\Default Work Unit\12000\E\12201\E_12201_Skill_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1494,7 +1494,7 @@ MonoBehaviour:
       - ElementName: E_12202
         ObjectType: 4
         guid: 33890c07986a974ba5a07d17c8b1b97b
-      Path: Events/Default Work Unit/12000/E/E_12202
+      Path: Events\Default Work Unit\12000\E\E_12202
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1520,7 +1520,7 @@ MonoBehaviour:
       - ElementName: E_12202_Att_1
         ObjectType: 3
         guid: 2fe358e9ba0e3f4481efae7eb2cf4bf0
-      Path: Events/Default Work Unit/12000/E/E_12202/E_12202_Att_1
+      Path: Events\Default Work Unit\12000\E\E_12202\E_12202_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1546,7 +1546,7 @@ MonoBehaviour:
       - ElementName: E_12202_Die
         ObjectType: 3
         guid: d7fad8890861074cb9ee5b29becbc7d0
-      Path: Events/Default Work Unit/12000/E/E_12202/E_12202_Die
+      Path: Events\Default Work Unit\12000\E\E_12202\E_12202_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1572,7 +1572,7 @@ MonoBehaviour:
       - ElementName: E_12202_Idle
         ObjectType: 3
         guid: b0fe69a28ad67b4a983cfbd303bcd89a
-      Path: Events/Default Work Unit/12000/E/E_12202/E_12202_Idle
+      Path: Events\Default Work Unit\12000\E\E_12202\E_12202_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1598,7 +1598,7 @@ MonoBehaviour:
       - ElementName: E_12203_Att_1
         ObjectType: 3
         guid: b94ff7d949698d4a9ee2e10786805d11
-      Path: Events/Default Work Unit/12000/E/12203/E_12203_Att_1
+      Path: Events\Default Work Unit\12000\E\12203\E_12203_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1624,7 +1624,7 @@ MonoBehaviour:
       - ElementName: E_12203_Die
         ObjectType: 3
         guid: e77566ff8d753e41819a07f96653318b
-      Path: Events/Default Work Unit/12000/E/12203/E_12203_Die
+      Path: Events\Default Work Unit\12000\E\12203\E_12203_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1650,7 +1650,7 @@ MonoBehaviour:
       - ElementName: E_12203_Idle
         ObjectType: 3
         guid: 785819d78783b842a0b9a390628fc079
-      Path: Events/Default Work Unit/12000/E/12203/E_12203_Idle
+      Path: Events\Default Work Unit\12000\E\12203\E_12203_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1676,7 +1676,7 @@ MonoBehaviour:
       - ElementName: E_23201_Att_1
         ObjectType: 3
         guid: c3b316ebbb550c4683f93b2e8254ff3f
-      Path: Events/Default Work Unit/23000/E/23201/E_23201_Att_1
+      Path: Events\Default Work Unit\23000\E\23201\E_23201_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1702,7 +1702,7 @@ MonoBehaviour:
       - ElementName: E_23201_Die
         ObjectType: 3
         guid: 0a1ac4673a5cc145ba7b89ac16d3fe5e
-      Path: Events/Default Work Unit/23000/E/23201/E_23201_Die
+      Path: Events\Default Work Unit\23000\E\23201\E_23201_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1728,7 +1728,7 @@ MonoBehaviour:
       - ElementName: E_23201_Idle
         ObjectType: 3
         guid: 046a7d836310fa4999eab0cb94916a46
-      Path: Events/Default Work Unit/23000/E/23201/E_23201_Idle
+      Path: Events\Default Work Unit\23000\E\23201\E_23201_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1754,7 +1754,7 @@ MonoBehaviour:
       - ElementName: E_23201_Skill_1
         ObjectType: 3
         guid: d67e8304a49be84b8804c479962fa442
-      Path: Events/Default Work Unit/23000/E/23201/E_23201_Skill_1
+      Path: Events\Default Work Unit\23000\E\23201\E_23201_Skill_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1780,7 +1780,7 @@ MonoBehaviour:
       - ElementName: E_23202_Att_1
         ObjectType: 3
         guid: 5edd49681367ca4897ec9a7ec453eb0e
-      Path: Events/Default Work Unit/23000/E/23202/E_23202_Att_1
+      Path: Events\Default Work Unit\23000\E\23202\E_23202_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1806,7 +1806,7 @@ MonoBehaviour:
       - ElementName: E_23202_Die
         ObjectType: 3
         guid: 61264c1dad315f49b758e4f5779358c2
-      Path: Events/Default Work Unit/23000/E/23202/E_23202_Die
+      Path: Events\Default Work Unit\23000\E\23202\E_23202_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1832,7 +1832,7 @@ MonoBehaviour:
       - ElementName: E_23202_Idle
         ObjectType: 3
         guid: e2ccbc050575da4da2fd725a95a411a7
-      Path: Events/Default Work Unit/23000/E/23202/E_23202_Idle
+      Path: Events\Default Work Unit\23000\E\23202\E_23202_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1858,7 +1858,7 @@ MonoBehaviour:
       - ElementName: E_23203_Att_1
         ObjectType: 3
         guid: bc3b7c9c116dd54eb7d4fd2c17519a1b
-      Path: Events/Default Work Unit/23000/E/23203/E_23203_Att_1
+      Path: Events\Default Work Unit\23000\E\23203\E_23203_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1884,7 +1884,7 @@ MonoBehaviour:
       - ElementName: E_23203_Die
         ObjectType: 3
         guid: a8c33c4efd66c14ebbee358b74205e18
-      Path: Events/Default Work Unit/23000/E/23203/E_23203_Die
+      Path: Events\Default Work Unit\23000\E\23203\E_23203_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1910,7 +1910,7 @@ MonoBehaviour:
       - ElementName: E_23203_Idle
         ObjectType: 3
         guid: b75a80f88d146f49945f39860568a731
-      Path: Events/Default Work Unit/23000/E/23203/E_23203_Idle
+      Path: Events\Default Work Unit\23000\E\23203\E_23203_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1936,7 +1936,7 @@ MonoBehaviour:
       - ElementName: E_24201_Att_1
         ObjectType: 3
         guid: 2d6a1ba6c215ac459d10076157868943
-      Path: Events/Default Work Unit/24000/E/24201/E_24201_Att_1
+      Path: Events\Default Work Unit\24000\E\24201\E_24201_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1962,7 +1962,7 @@ MonoBehaviour:
       - ElementName: E_24201_Die
         ObjectType: 3
         guid: 8ea9c56b7857064e9ef6bde2822277c6
-      Path: Events/Default Work Unit/24000/E/24201/E_24201_Die
+      Path: Events\Default Work Unit\24000\E\24201\E_24201_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1988,7 +1988,7 @@ MonoBehaviour:
       - ElementName: E_24201_Idle
         ObjectType: 3
         guid: 2aed4a1c2fd31647916dfec243d0d92e
-      Path: Events/Default Work Unit/24000/E/24201/E_24201_Idle
+      Path: Events\Default Work Unit\24000\E\24201\E_24201_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2014,7 +2014,7 @@ MonoBehaviour:
       - ElementName: E_24201_Skill_1
         ObjectType: 3
         guid: 1fa209e1ba3da946bf67476f45839000
-      Path: Events/Default Work Unit/24000/E/24201/E_24201_Skill_1
+      Path: Events\Default Work Unit\24000\E\24201\E_24201_Skill_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2040,7 +2040,7 @@ MonoBehaviour:
       - ElementName: E_24202_Die
         ObjectType: 3
         guid: b0fb44e1a1998149b08fb79c87ca3d2a
-      Path: Events/Default Work Unit/24000/E/24202/E_24202_Die
+      Path: Events\Default Work Unit\24000\E\24202\E_24202_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2066,7 +2066,7 @@ MonoBehaviour:
       - ElementName: E_24202_Idle
         ObjectType: 3
         guid: 25f469a4a20dc34ca71e823a3a0bbf6b
-      Path: Events/Default Work Unit/24000/E/24202/E_24202_Idle
+      Path: Events\Default Work Unit\24000\E\24202\E_24202_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2092,7 +2092,7 @@ MonoBehaviour:
       - ElementName: E_24202_Skill_1
         ObjectType: 3
         guid: 8cbe5331cd53ec46abd53e1a7d803b9f
-      Path: Events/Default Work Unit/24000/E/24202/E_24202_Skill_1
+      Path: Events\Default Work Unit\24000\E\24202\E_24202_Skill_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2118,7 +2118,7 @@ MonoBehaviour:
       - ElementName: E_24203_Att_1
         ObjectType: 3
         guid: 138243d1032eaf4ab9ab3744aabd23c7
-      Path: Events/Default Work Unit/24000/E/24203/E_24203_Att_1
+      Path: Events\Default Work Unit\24000\E\24203\E_24203_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2144,7 +2144,7 @@ MonoBehaviour:
       - ElementName: E_24203_Die
         ObjectType: 3
         guid: cad01de0ba46b24587037e39077d329b
-      Path: Events/Default Work Unit/24000/E/24203/E_24203_Die
+      Path: Events\Default Work Unit\24000\E\24203\E_24203_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2170,7 +2170,7 @@ MonoBehaviour:
       - ElementName: E_24203_Idle
         ObjectType: 3
         guid: 4a44172f46f2e24299dce77f3dbcfdbb
-      Path: Events/Default Work Unit/24000/E/24203/E_24203_Idle
+      Path: Events\Default Work Unit\24000\E\24203\E_24203_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2187,7 +2187,7 @@ MonoBehaviour:
       - ElementName: Game_Speed_Pause
         ObjectType: 3
         guid: 4023f9d03d3c0342b32c007ab838b295
-      Path: Events/Default Work Unit/Game_Speed_Pause
+      Path: Events\Default Work Unit\Game_Speed_Pause
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2204,7 +2204,7 @@ MonoBehaviour:
       - ElementName: Game_Speed_Resume
         ObjectType: 3
         guid: 2754b3ebbfa7b645b86c8aecad48252d
-      Path: Events/Default Work Unit/Game_Speed_Resume
+      Path: Events\Default Work Unit\Game_Speed_Resume
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2224,7 +2224,7 @@ MonoBehaviour:
       - ElementName: H
         ObjectType: 4
         guid: 8870739d6956c146b2504c38d547a458
-      Path: Events/Default Work Unit/12000/H
+      Path: Events\Default Work Unit\12000\H
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2244,7 +2244,7 @@ MonoBehaviour:
       - ElementName: H
         ObjectType: 4
         guid: 63decbc4cb05ab4eb77004aa514ac47c
-      Path: Events/Default Work Unit/11000/H
+      Path: Events\Default Work Unit\11000\H
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2264,7 +2264,7 @@ MonoBehaviour:
       - ElementName: H
         ObjectType: 4
         guid: 356d9275b3c94f4aac57b0d816099171
-      Path: Events/Default Work Unit/23000/H
+      Path: Events\Default Work Unit\23000\H
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2290,7 +2290,7 @@ MonoBehaviour:
       - ElementName: H_11101_Att_1
         ObjectType: 3
         guid: cdf519fc221c3e48b9799110ebefc449
-      Path: Events/Default Work Unit/11000/H/11101/H_11101_Att_1
+      Path: Events\Default Work Unit\11000\H\11101\H_11101_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2316,7 +2316,7 @@ MonoBehaviour:
       - ElementName: H_11101_Die
         ObjectType: 3
         guid: 0688896509a3a145a24b8da6d61a7b31
-      Path: Events/Default Work Unit/11000/H/11101/H_11101_Die
+      Path: Events\Default Work Unit\11000\H\11101\H_11101_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2342,7 +2342,7 @@ MonoBehaviour:
       - ElementName: H_11101_Idle
         ObjectType: 3
         guid: 905d9ec475c4464c90132c8b7e777acc
-      Path: Events/Default Work Unit/11000/H/11101/H_11101_Idle
+      Path: Events\Default Work Unit\11000\H\11101\H_11101_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2368,7 +2368,7 @@ MonoBehaviour:
       - ElementName: H_11101_Skill_1
         ObjectType: 3
         guid: 800f74463e093b4e89145fbaa46cb8b1
-      Path: Events/Default Work Unit/11000/H/11101/H_11101_Skill_1
+      Path: Events\Default Work Unit\11000\H\11101\H_11101_Skill_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2394,7 +2394,7 @@ MonoBehaviour:
       - ElementName: H_11101_Skill_2
         ObjectType: 3
         guid: f50bb92f2e3ead4a951d235e750acf77
-      Path: Events/Default Work Unit/11000/H/11101/H_11101_Skill_2
+      Path: Events\Default Work Unit\11000\H\11101\H_11101_Skill_2
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2420,7 +2420,7 @@ MonoBehaviour:
       - ElementName: H_11101_Skill_3
         ObjectType: 3
         guid: 41e2f26c01d6d8428db7925a1fd6dd1c
-      Path: Events/Default Work Unit/11000/H/11101/H_11101_Skill_3
+      Path: Events\Default Work Unit\11000\H\11101\H_11101_Skill_3
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2446,7 +2446,7 @@ MonoBehaviour:
       - ElementName: H_12101_Att_1
         ObjectType: 3
         guid: a03e49e6bdc90547a19bcf00d1dd45ef
-      Path: Events/Default Work Unit/12000/H/12101/H_12101_Att_1
+      Path: Events\Default Work Unit\12000\H\12101\H_12101_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2472,7 +2472,7 @@ MonoBehaviour:
       - ElementName: H_12101_Die
         ObjectType: 3
         guid: f965c0cf439cd14c810e474d97d9b186
-      Path: Events/Default Work Unit/12000/H/12101/H_12101_Die
+      Path: Events\Default Work Unit\12000\H\12101\H_12101_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2498,7 +2498,7 @@ MonoBehaviour:
       - ElementName: H_12101_Idle
         ObjectType: 3
         guid: d2c6671a933532429a9e2d710ecdb716
-      Path: Events/Default Work Unit/12000/H/12101/H_12101_Idle
+      Path: Events\Default Work Unit\12000\H\12101\H_12101_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2524,7 +2524,7 @@ MonoBehaviour:
       - ElementName: H_12101_Skill_1
         ObjectType: 3
         guid: b2cfdb63b9c604418a0c090182588dc0
-      Path: Events/Default Work Unit/12000/H/12101/H_12101_Skill_1
+      Path: Events\Default Work Unit\12000\H\12101\H_12101_Skill_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2550,7 +2550,7 @@ MonoBehaviour:
       - ElementName: H_12101_Skill_2
         ObjectType: 3
         guid: 656fdae6e5c8f248998f17893d9105a6
-      Path: Events/Default Work Unit/12000/H/12101/H_12101_Skill_2
+      Path: Events\Default Work Unit\12000\H\12101\H_12101_Skill_2
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2576,7 +2576,7 @@ MonoBehaviour:
       - ElementName: H_12101_Skill_3
         ObjectType: 3
         guid: c3f3ea9f1313ad42bd53949b016b95ec
-      Path: Events/Default Work Unit/12000/H/12101/H_12101_Skill_3
+      Path: Events\Default Work Unit\12000\H\12101\H_12101_Skill_3
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2602,7 +2602,7 @@ MonoBehaviour:
       - ElementName: H_23101_Att_1
         ObjectType: 3
         guid: 3a5f9243e644e44da02a09f3b6a64cf0
-      Path: Events/Default Work Unit/23000/H/23101/H_23101_Att_1
+      Path: Events\Default Work Unit\23000\H\23101\H_23101_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2628,7 +2628,7 @@ MonoBehaviour:
       - ElementName: H_23101_Die
         ObjectType: 3
         guid: 49f8fd6d5a46904eb3f265878c467ea7
-      Path: Events/Default Work Unit/23000/H/23101/H_23101_Die
+      Path: Events\Default Work Unit\23000\H\23101\H_23101_Die
       maxAttenuation: 0
       maxDuration: 4.552415
       minDuration: 3.940282
@@ -2654,7 +2654,7 @@ MonoBehaviour:
       - ElementName: H_23101_Idle
         ObjectType: 3
         guid: 22a29d89e75a334f9441f90bc7a012a9
-      Path: Events/Default Work Unit/23000/H/23101/H_23101_Idle
+      Path: Events\Default Work Unit\23000\H\23101\H_23101_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2680,7 +2680,7 @@ MonoBehaviour:
       - ElementName: H_23101_Skill_1
         ObjectType: 3
         guid: b22a2ce51ceba54ca2ea52dc2e7b6b58
-      Path: Events/Default Work Unit/23000/H/23101/H_23101_Skill_1
+      Path: Events\Default Work Unit\23000\H\23101\H_23101_Skill_1
       maxAttenuation: 0
       maxDuration: 1.358379
       minDuration: 1.358379
@@ -2706,7 +2706,7 @@ MonoBehaviour:
       - ElementName: H_23101_Skill_2
         ObjectType: 3
         guid: 7ee30739d4f86b468177fe039240d740
-      Path: Events/Default Work Unit/23000/H/23101/H_23101_Skill_2
+      Path: Events\Default Work Unit\23000\H\23101\H_23101_Skill_2
       maxAttenuation: 0
       maxDuration: 1.231566
       minDuration: 1.231566
@@ -2732,7 +2732,7 @@ MonoBehaviour:
       - ElementName: H_23101_Skill_3
         ObjectType: 3
         guid: 6586117c70284645a30f788b01e9d0ac
-      Path: Events/Default Work Unit/23000/H/23101/H_23101_Skill_3
+      Path: Events\Default Work Unit\23000\H\23101\H_23101_Skill_3
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2752,7 +2752,7 @@ MonoBehaviour:
       - ElementName: N
         ObjectType: 4
         guid: 68ee7e3cd9cbfa4c855a1b7a2c17ddb9
-      Path: Events/Default Work Unit/24000/N
+      Path: Events\Default Work Unit\24000\N
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2772,7 +2772,7 @@ MonoBehaviour:
       - ElementName: N
         ObjectType: 4
         guid: 71c844d1446d1743a62e0e6a4d7a443d
-      Path: Events/Default Work Unit/12000/N
+      Path: Events\Default Work Unit\12000\N
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2792,7 +2792,7 @@ MonoBehaviour:
       - ElementName: N
         ObjectType: 4
         guid: a4752d9de154eb429add0059789cea6b
-      Path: Events/Default Work Unit/11000/N
+      Path: Events\Default Work Unit\11000\N
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2812,7 +2812,7 @@ MonoBehaviour:
       - ElementName: N
         ObjectType: 4
         guid: 240f125b2930ee48aae91ab2a5a95f98
-      Path: Events/Default Work Unit/23000/N
+      Path: Events\Default Work Unit\23000\N
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2835,7 +2835,7 @@ MonoBehaviour:
       - ElementName: N_11301
         ObjectType: 4
         guid: eabf1e5a5f70744884c558172a818acc
-      Path: Events/Default Work Unit/11000/N/N_11301
+      Path: Events\Default Work Unit\11000\N\N_11301
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2861,7 +2861,7 @@ MonoBehaviour:
       - ElementName: N_11301_Att_1
         ObjectType: 3
         guid: 4fa7701ad06e6d46b4c0261a7dd70f5f
-      Path: Events/Default Work Unit/11000/N/N_11301/N_11301_Att_1
+      Path: Events\Default Work Unit\11000\N\N_11301\N_11301_Att_1
       maxAttenuation: 0
       maxDuration: 2.194391
       minDuration: 2.144271
@@ -2887,7 +2887,7 @@ MonoBehaviour:
       - ElementName: N_11301_Die
         ObjectType: 3
         guid: 4581588773393b42b17ade649cbe079a
-      Path: Events/Default Work Unit/11000/N/N_11301/N_11301_Die
+      Path: Events\Default Work Unit\11000\N\N_11301\N_11301_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2913,7 +2913,7 @@ MonoBehaviour:
       - ElementName: N_11301_Idle
         ObjectType: 3
         guid: fd264d9c05ce274cac01f4a7de60a16c
-      Path: Events/Default Work Unit/11000/N/N_11301/N_11301_Idle
+      Path: Events\Default Work Unit\11000\N\N_11301\N_11301_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2939,7 +2939,7 @@ MonoBehaviour:
       - ElementName: N_11301_Skill_1
         ObjectType: 3
         guid: e1eb4eb55a871144b8432f2995c767f8
-      Path: Events/Default Work Unit/11000/N/N_11301/N_11301_Skill_1
+      Path: Events\Default Work Unit\11000\N\N_11301\N_11301_Skill_1
       maxAttenuation: 0
       maxDuration: 2.644271
       minDuration: 2.644271
@@ -2962,7 +2962,7 @@ MonoBehaviour:
       - ElementName: N_11302
         ObjectType: 4
         guid: 9357fe37b89fbd4d8ecdc713bf665727
-      Path: Events/Default Work Unit/11000/N/N_11302
+      Path: Events\Default Work Unit\11000\N\N_11302
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2988,7 +2988,7 @@ MonoBehaviour:
       - ElementName: N_11302_Att_1
         ObjectType: 3
         guid: ff7abf442b49d6489b3de1b61c91b188
-      Path: Events/Default Work Unit/11000/N/N_11302/N_11302_Att_1
+      Path: Events\Default Work Unit\11000\N\N_11302\N_11302_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3014,7 +3014,7 @@ MonoBehaviour:
       - ElementName: N_11302_Die
         ObjectType: 3
         guid: 7e46b329ab5b5c4b8c881c43e6b49084
-      Path: Events/Default Work Unit/11000/N/N_11302/N_11302_Die
+      Path: Events\Default Work Unit\11000\N\N_11302\N_11302_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3040,7 +3040,7 @@ MonoBehaviour:
       - ElementName: N_11302_Idle
         ObjectType: 3
         guid: c23010c2afd6234090390270d20628ad
-      Path: Events/Default Work Unit/11000/N/N_11302/N_11302_Idle
+      Path: Events\Default Work Unit\11000\N\N_11302\N_11302_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3063,7 +3063,7 @@ MonoBehaviour:
       - ElementName: N_11303
         ObjectType: 4
         guid: cc6ca3bc6163d943bc29d806b27dbe85
-      Path: Events/Default Work Unit/11000/N/N_11303
+      Path: Events\Default Work Unit\11000\N\N_11303
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -3089,7 +3089,7 @@ MonoBehaviour:
       - ElementName: N_11303_Att_1
         ObjectType: 3
         guid: 09c309c5897e30419545d61bb533108b
-      Path: Events/Default Work Unit/11000/N/N_11303/N_11303_Att_1
+      Path: Events\Default Work Unit\11000\N\N_11303\N_11303_Att_1
       maxAttenuation: 0
       maxDuration: 2.022438
       minDuration: 2.022438
@@ -3115,7 +3115,7 @@ MonoBehaviour:
       - ElementName: N_11303_Die
         ObjectType: 3
         guid: ee7b850519d2ee4b98bc65be05a6883d
-      Path: Events/Default Work Unit/11000/N/N_11303/N_11303_Die
+      Path: Events\Default Work Unit\11000\N\N_11303\N_11303_Die
       maxAttenuation: 0
       maxDuration: 2.022438
       minDuration: 2.022438
@@ -3141,7 +3141,7 @@ MonoBehaviour:
       - ElementName: N_11303_Idle
         ObjectType: 3
         guid: 70c12388882c8746af4e9b1f7fd542db
-      Path: Events/Default Work Unit/11000/N/N_11303/N_11303_Idle
+      Path: Events\Default Work Unit\11000\N\N_11303\N_11303_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3167,7 +3167,7 @@ MonoBehaviour:
       - ElementName: N_11303_Skill_1
         ObjectType: 3
         guid: 0b775e048ef7f64c90636fc185995c1d
-      Path: Events/Default Work Unit/11000/N/N_11303/N_11303_Skill_1
+      Path: Events\Default Work Unit\11000\N\N_11303\N_11303_Skill_1
       maxAttenuation: 0
       maxDuration: 2.022438
       minDuration: 2.022438
@@ -3190,7 +3190,7 @@ MonoBehaviour:
       - ElementName: N_11304
         ObjectType: 4
         guid: 8b7ac201dcb2d54d8f93ba1c2c479bc4
-      Path: Events/Default Work Unit/11000/N/N_11304
+      Path: Events\Default Work Unit\11000\N\N_11304
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -3216,7 +3216,7 @@ MonoBehaviour:
       - ElementName: N_11304_Att_1
         ObjectType: 3
         guid: c1fdeb40e6ae65439a7aaa2a2b6e7009
-      Path: Events/Default Work Unit/11000/N/N_11304/N_11304_Att_1
+      Path: Events\Default Work Unit\11000\N\N_11304\N_11304_Att_1
       maxAttenuation: 0
       maxDuration: 1.59375
       minDuration: 1.59375
@@ -3242,7 +3242,7 @@ MonoBehaviour:
       - ElementName: N_11304_Die
         ObjectType: 3
         guid: bb980af81de2da45b4b509c795d64f3f
-      Path: Events/Default Work Unit/11000/N/N_11304/N_11304_Die
+      Path: Events\Default Work Unit\11000\N\N_11304\N_11304_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3268,7 +3268,7 @@ MonoBehaviour:
       - ElementName: N_11304_Idle
         ObjectType: 3
         guid: a96b9eb1711a9b4db8171118fc27d0b1
-      Path: Events/Default Work Unit/11000/N/N_11304/N_11304_Idle
+      Path: Events\Default Work Unit\11000\N\N_11304\N_11304_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3291,7 +3291,7 @@ MonoBehaviour:
       - ElementName: N_11305
         ObjectType: 4
         guid: c0d36b5810e3f44696dbf8e235d25c5e
-      Path: Events/Default Work Unit/11000/N/N_11305
+      Path: Events\Default Work Unit\11000\N\N_11305
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -3317,7 +3317,7 @@ MonoBehaviour:
       - ElementName: N_11305_Die
         ObjectType: 3
         guid: 693b349160ab0b469f904fdba17d1320
-      Path: Events/Default Work Unit/11000/N/N_11305/N_11305_Die
+      Path: Events\Default Work Unit\11000\N\N_11305\N_11305_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3343,7 +3343,7 @@ MonoBehaviour:
       - ElementName: N_11305_Idle
         ObjectType: 3
         guid: 930ea12d1162844e9e0fda97a033bda9
-      Path: Events/Default Work Unit/11000/N/N_11305/N_11305_Idle
+      Path: Events\Default Work Unit\11000\N\N_11305\N_11305_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3369,7 +3369,7 @@ MonoBehaviour:
       - ElementName: N_11305_Skill_1
         ObjectType: 3
         guid: 0edd85eaf5d64246b9c6a0e9644df789
-      Path: Events/Default Work Unit/11000/N/N_11305/N_11305_Skill_1
+      Path: Events\Default Work Unit\11000\N\N_11305\N_11305_Skill_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3392,7 +3392,7 @@ MonoBehaviour:
       - ElementName: N_12301
         ObjectType: 4
         guid: 2a768db85e99214dacba793bd17dec0c
-      Path: Events/Default Work Unit/12000/N/N_12301
+      Path: Events\Default Work Unit\12000\N\N_12301
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -3418,7 +3418,7 @@ MonoBehaviour:
       - ElementName: N_12301_Att_1
         ObjectType: 3
         guid: 1c8180d35eea034da7618997974209f7
-      Path: Events/Default Work Unit/12000/N/N_12301/N_12301_Att_1
+      Path: Events\Default Work Unit\12000\N\N_12301\N_12301_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3444,7 +3444,7 @@ MonoBehaviour:
       - ElementName: N_12301_Die
         ObjectType: 3
         guid: b2bb2a56bdd3f245abe4082f4eb091da
-      Path: Events/Default Work Unit/12000/N/N_12301/N_12301_Die
+      Path: Events\Default Work Unit\12000\N\N_12301\N_12301_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3470,7 +3470,7 @@ MonoBehaviour:
       - ElementName: N_12301_Idle
         ObjectType: 3
         guid: fb22b863d17a9f4ba9e3a0689518cd47
-      Path: Events/Default Work Unit/12000/N/N_12301/N_12301_Idle
+      Path: Events\Default Work Unit\12000\N\N_12301\N_12301_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3493,7 +3493,7 @@ MonoBehaviour:
       - ElementName: N_12302
         ObjectType: 4
         guid: 12ab72f773fada4cb74c761f2797aff7
-      Path: Events/Default Work Unit/12000/N/N_12302
+      Path: Events\Default Work Unit\12000\N\N_12302
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -3519,7 +3519,7 @@ MonoBehaviour:
       - ElementName: N_12302_Att_1
         ObjectType: 3
         guid: 6fdcc9d214c4f54a9578456acf5d9ddf
-      Path: Events/Default Work Unit/12000/N/N_12302/N_12302_Att_1
+      Path: Events\Default Work Unit\12000\N\N_12302\N_12302_Att_1
       maxAttenuation: 0
       maxDuration: 1.644438
       minDuration: 1.644438
@@ -3545,7 +3545,7 @@ MonoBehaviour:
       - ElementName: N_12302_Die
         ObjectType: 3
         guid: e0fdd7f08b2fe24690ea68ab0db5ba1e
-      Path: Events/Default Work Unit/12000/N/N_12302/N_12302_Die
+      Path: Events\Default Work Unit\12000\N\N_12302\N_12302_Die
       maxAttenuation: 0
       maxDuration: 1.644438
       minDuration: 1.644438
@@ -3571,7 +3571,7 @@ MonoBehaviour:
       - ElementName: N_12302_Idle
         ObjectType: 3
         guid: 1ae39c45e29d9b4eae912a26e8873699
-      Path: Events/Default Work Unit/12000/N/N_12302/N_12302_Idle
+      Path: Events\Default Work Unit\12000\N\N_12302\N_12302_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3594,7 +3594,7 @@ MonoBehaviour:
       - ElementName: N_12303
         ObjectType: 4
         guid: fffa1e8aa270aa4881aa9165d3293f81
-      Path: Events/Default Work Unit/12000/N/N_12303
+      Path: Events\Default Work Unit\12000\N\N_12303
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -3620,7 +3620,7 @@ MonoBehaviour:
       - ElementName: N_12303_Att_1
         ObjectType: 3
         guid: 78b8a058535f7549885ab3e5a137e834
-      Path: Events/Default Work Unit/12000/N/N_12303/N_12303_Att_1
+      Path: Events\Default Work Unit\12000\N\N_12303\N_12303_Att_1
       maxAttenuation: 0
       maxDuration: 1.381229
       minDuration: 1.381229
@@ -3646,7 +3646,7 @@ MonoBehaviour:
       - ElementName: N_12303_Die
         ObjectType: 3
         guid: f4b58e42793da64aaff3665677035235
-      Path: Events/Default Work Unit/12000/N/N_12303/N_12303_Die
+      Path: Events\Default Work Unit\12000\N\N_12303\N_12303_Die
       maxAttenuation: 0
       maxDuration: 1.381229
       minDuration: 1.381229
@@ -3672,7 +3672,7 @@ MonoBehaviour:
       - ElementName: N_12303_Idle
         ObjectType: 3
         guid: aff7fc34c1885e40b56b4dc0658a60e6
-      Path: Events/Default Work Unit/12000/N/N_12303/N_12303_Idle
+      Path: Events\Default Work Unit\12000\N\N_12303\N_12303_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3695,7 +3695,7 @@ MonoBehaviour:
       - ElementName: N_12304
         ObjectType: 4
         guid: cd95fb7894cb634daeb23f39a6e3002a
-      Path: Events/Default Work Unit/12000/N/N_12304
+      Path: Events\Default Work Unit\12000\N\N_12304
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -3721,7 +3721,7 @@ MonoBehaviour:
       - ElementName: N_12304_Att_1
         ObjectType: 3
         guid: 7246bf443572ec4dbae93c311969456a
-      Path: Events/Default Work Unit/12000/N/N_12304/N_12304_Att_1
+      Path: Events\Default Work Unit\12000\N\N_12304\N_12304_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3747,7 +3747,7 @@ MonoBehaviour:
       - ElementName: N_12304_Die
         ObjectType: 3
         guid: abb9eb1e5841d44b891456425a4118b9
-      Path: Events/Default Work Unit/12000/N/N_12304/N_12304_Die
+      Path: Events\Default Work Unit\12000\N\N_12304\N_12304_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3773,7 +3773,7 @@ MonoBehaviour:
       - ElementName: N_12304_Idle
         ObjectType: 3
         guid: 001fbf8dd8d7b141992f7f6575de428b
-      Path: Events/Default Work Unit/12000/N/N_12304/N_12304_Idle
+      Path: Events\Default Work Unit\12000\N\N_12304\N_12304_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3796,7 +3796,7 @@ MonoBehaviour:
       - ElementName: N_12305
         ObjectType: 4
         guid: 5951f1b5f7ee57478ba8ae495777f51f
-      Path: Events/Default Work Unit/12000/N/N_12305
+      Path: Events\Default Work Unit\12000\N\N_12305
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -3822,7 +3822,7 @@ MonoBehaviour:
       - ElementName: N_12305_Die
         ObjectType: 3
         guid: 0768346e7f57c044ab627d74144f8a45
-      Path: Events/Default Work Unit/12000/N/N_12305/N_12305_Die
+      Path: Events\Default Work Unit\12000\N\N_12305\N_12305_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3848,7 +3848,7 @@ MonoBehaviour:
       - ElementName: N_12305_Idle
         ObjectType: 3
         guid: da423ee11bf5e14d8c5cc8c8c45f82eb
-      Path: Events/Default Work Unit/12000/N/N_12305/N_12305_Idle
+      Path: Events\Default Work Unit\12000\N\N_12305\N_12305_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3874,7 +3874,7 @@ MonoBehaviour:
       - ElementName: N_12305_Skill_1
         ObjectType: 3
         guid: f96ab8c50bb23047918904913b8d2c58
-      Path: Events/Default Work Unit/12000/N/N_12305/N_12305_Skill_1
+      Path: Events\Default Work Unit\12000\N\N_12305\N_12305_Skill_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3900,7 +3900,7 @@ MonoBehaviour:
       - ElementName: N_23301_Att_1
         ObjectType: 3
         guid: 0b0c115872b7cb479a3bada3240d62a7
-      Path: Events/Default Work Unit/23000/N/23301/N_23301_Att_1
+      Path: Events\Default Work Unit\23000\N\23301\N_23301_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3926,7 +3926,7 @@ MonoBehaviour:
       - ElementName: N_23301_Die
         ObjectType: 3
         guid: 4490653fcc9a134686c6b0c690abfa2a
-      Path: Events/Default Work Unit/23000/N/23301/N_23301_Die
+      Path: Events\Default Work Unit\23000\N\23301\N_23301_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3952,7 +3952,7 @@ MonoBehaviour:
       - ElementName: N_23301_Idle
         ObjectType: 3
         guid: 34d35a75cf5e9f41b045056e2c3e9a92
-      Path: Events/Default Work Unit/23000/N/23301/N_23301_Idle
+      Path: Events\Default Work Unit\23000\N\23301\N_23301_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -3978,7 +3978,7 @@ MonoBehaviour:
       - ElementName: N_23302_Att_1
         ObjectType: 3
         guid: eaef0234e707554ca3ce848c96563984
-      Path: Events/Default Work Unit/23000/N/23302/N_23302_Att_1
+      Path: Events\Default Work Unit\23000\N\23302\N_23302_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4004,7 +4004,7 @@ MonoBehaviour:
       - ElementName: N_23302_Die
         ObjectType: 3
         guid: ea4889b47092354b8ed64c374670b65f
-      Path: Events/Default Work Unit/23000/N/23302/N_23302_Die
+      Path: Events\Default Work Unit\23000\N\23302\N_23302_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4030,7 +4030,7 @@ MonoBehaviour:
       - ElementName: N_23302_Idle
         ObjectType: 3
         guid: f99978582949414da502acbfa7bc9887
-      Path: Events/Default Work Unit/23000/N/23302/N_23302_Idle
+      Path: Events\Default Work Unit\23000\N\23302\N_23302_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4056,7 +4056,7 @@ MonoBehaviour:
       - ElementName: N_23303_Att_1
         ObjectType: 3
         guid: 049e6e7831a519499f3135fb870bcd6d
-      Path: Events/Default Work Unit/23000/N/23303/N_23303_Att_1
+      Path: Events\Default Work Unit\23000\N\23303\N_23303_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4082,7 +4082,7 @@ MonoBehaviour:
       - ElementName: N_23303_Die
         ObjectType: 3
         guid: a457e9b7a66dd7409e21873c6d19e930
-      Path: Events/Default Work Unit/23000/N/23303/N_23303_Die
+      Path: Events\Default Work Unit\23000\N\23303\N_23303_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4108,7 +4108,7 @@ MonoBehaviour:
       - ElementName: N_23303_Idle
         ObjectType: 3
         guid: ee39082a53b6634293c4f0127b124d86
-      Path: Events/Default Work Unit/23000/N/23303/N_23303_Idle
+      Path: Events\Default Work Unit\23000\N\23303\N_23303_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4134,7 +4134,7 @@ MonoBehaviour:
       - ElementName: N_23304_Att_1
         ObjectType: 3
         guid: 7f03b91f59075d4b999ae44551d876ae
-      Path: Events/Default Work Unit/23000/N/23304/N_23304_Att_1
+      Path: Events\Default Work Unit\23000\N\23304\N_23304_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4160,7 +4160,7 @@ MonoBehaviour:
       - ElementName: N_23304_Die
         ObjectType: 3
         guid: 85358f9204e05944a3b82c99025e0726
-      Path: Events/Default Work Unit/23000/N/23304/N_23304_Die
+      Path: Events\Default Work Unit\23000\N\23304\N_23304_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4186,7 +4186,7 @@ MonoBehaviour:
       - ElementName: N_23304_Idle
         ObjectType: 3
         guid: 51f68a1dd2b7f648bfcbc005e4993524
-      Path: Events/Default Work Unit/23000/N/23304/N_23304_Idle
+      Path: Events\Default Work Unit\23000\N\23304\N_23304_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4212,7 +4212,7 @@ MonoBehaviour:
       - ElementName: N_23305_Att_1
         ObjectType: 3
         guid: 623d2eb718dea74ba4ca402e42ef64b3
-      Path: Events/Default Work Unit/23000/N/23305/N_23305_Att_1
+      Path: Events\Default Work Unit\23000\N\23305\N_23305_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4238,7 +4238,7 @@ MonoBehaviour:
       - ElementName: N_23305_Die
         ObjectType: 3
         guid: 6d64b30b15d0514fad731dff6ad31447
-      Path: Events/Default Work Unit/23000/N/23305/N_23305_Die
+      Path: Events\Default Work Unit\23000\N\23305\N_23305_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4264,7 +4264,7 @@ MonoBehaviour:
       - ElementName: N_23305_Idle
         ObjectType: 3
         guid: ac42bc80aebf7e4692dc1e93e382caec
-      Path: Events/Default Work Unit/23000/N/23305/N_23305_Idle
+      Path: Events\Default Work Unit\23000\N\23305\N_23305_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4290,7 +4290,7 @@ MonoBehaviour:
       - ElementName: N_24301_Att_1
         ObjectType: 3
         guid: 396a9bce88764142a97279254725d652
-      Path: Events/Default Work Unit/24000/N/24301/N_24301_Att_1
+      Path: Events\Default Work Unit\24000\N\24301\N_24301_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4316,7 +4316,7 @@ MonoBehaviour:
       - ElementName: N_24301_Die
         ObjectType: 3
         guid: 902395d3451f464f8c4c81667679edd9
-      Path: Events/Default Work Unit/24000/N/24301/N_24301_Die
+      Path: Events\Default Work Unit\24000\N\24301\N_24301_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4342,7 +4342,7 @@ MonoBehaviour:
       - ElementName: N_24301_Idle
         ObjectType: 3
         guid: 95e820cf6dddab46b7ea91a38830c82e
-      Path: Events/Default Work Unit/24000/N/24301/N_24301_Idle
+      Path: Events\Default Work Unit\24000\N\24301\N_24301_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4368,7 +4368,7 @@ MonoBehaviour:
       - ElementName: N_24302_Att_1
         ObjectType: 3
         guid: 05fbe9a4ae3da1409bac8fcf4d922c29
-      Path: Events/Default Work Unit/24000/N/24302/N_24302_Att_1
+      Path: Events\Default Work Unit\24000\N\24302\N_24302_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4394,7 +4394,7 @@ MonoBehaviour:
       - ElementName: N_24302_Die
         ObjectType: 3
         guid: 12599b8462af9d4882eed009e30cc5f3
-      Path: Events/Default Work Unit/24000/N/24302/N_24302_Die
+      Path: Events\Default Work Unit\24000\N\24302\N_24302_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4420,7 +4420,7 @@ MonoBehaviour:
       - ElementName: N_24302_Idle
         ObjectType: 3
         guid: 585e46e9d4df3d4d89b74a59c2c2f18c
-      Path: Events/Default Work Unit/24000/N/24302/N_24302_Idle
+      Path: Events\Default Work Unit\24000\N\24302\N_24302_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4446,7 +4446,7 @@ MonoBehaviour:
       - ElementName: N_24303_Att_1
         ObjectType: 3
         guid: 0a559bdc6e268d4a8f3798ee83722afd
-      Path: Events/Default Work Unit/24000/N/24303/N_24303_Att_1
+      Path: Events\Default Work Unit\24000\N\24303\N_24303_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4472,7 +4472,7 @@ MonoBehaviour:
       - ElementName: N_24303_Die
         ObjectType: 3
         guid: 9422830998e25f42930604678feac2b3
-      Path: Events/Default Work Unit/24000/N/24303/N_24303_Die
+      Path: Events\Default Work Unit\24000\N\24303\N_24303_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4498,7 +4498,7 @@ MonoBehaviour:
       - ElementName: N_24303_Idle
         ObjectType: 3
         guid: 925214731ab621438eb165857c7f47e4
-      Path: Events/Default Work Unit/24000/N/24303/N_24303_Idle
+      Path: Events\Default Work Unit\24000\N\24303\N_24303_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4524,7 +4524,7 @@ MonoBehaviour:
       - ElementName: N_24304_Att_1
         ObjectType: 3
         guid: 108bae294a590a4d9861176a2b6ed57b
-      Path: Events/Default Work Unit/24000/N/24304/N_24304_Att_1
+      Path: Events\Default Work Unit\24000\N\24304\N_24304_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4550,7 +4550,7 @@ MonoBehaviour:
       - ElementName: N_24304_Die
         ObjectType: 3
         guid: 153be01b3c882445b0ed73a16579dc9d
-      Path: Events/Default Work Unit/24000/N/24304/N_24304_Die
+      Path: Events\Default Work Unit\24000\N\24304\N_24304_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4576,7 +4576,7 @@ MonoBehaviour:
       - ElementName: N_24304_Idle
         ObjectType: 3
         guid: 05bf7205565c7944acd994259504d894
-      Path: Events/Default Work Unit/24000/N/24304/N_24304_Idle
+      Path: Events\Default Work Unit\24000\N\24304\N_24304_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4602,7 +4602,7 @@ MonoBehaviour:
       - ElementName: N_24304_Skill_1
         ObjectType: 3
         guid: 15102b7c7d4a3b4cb5b557ed1d4c95be
-      Path: Events/Default Work Unit/24000/N/24304/N_24304_Skill_1
+      Path: Events\Default Work Unit\24000\N\24304\N_24304_Skill_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4628,7 +4628,7 @@ MonoBehaviour:
       - ElementName: N_24305_Att_1
         ObjectType: 3
         guid: 7c40a53b25a31240ae7ea301dea42dbf
-      Path: Events/Default Work Unit/24000/N/24305/N_24305_Att_1
+      Path: Events\Default Work Unit\24000\N\24305\N_24305_Att_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4654,7 +4654,7 @@ MonoBehaviour:
       - ElementName: N_24305_Die
         ObjectType: 3
         guid: d0422d09ca16334fa30de5e92fb34ded
-      Path: Events/Default Work Unit/24000/N/24305/N_24305_Die
+      Path: Events\Default Work Unit\24000\N\24305\N_24305_Die
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4680,7 +4680,7 @@ MonoBehaviour:
       - ElementName: N_24305_Idle
         ObjectType: 3
         guid: 8fd2a4371529844494bf419d33800bc2
-      Path: Events/Default Work Unit/24000/N/24305/N_24305_Idle
+      Path: Events\Default Work Unit\24000\N\24305\N_24305_Idle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4706,11 +4706,11 @@ MonoBehaviour:
       - ElementName: N_24305_Skill_1
         ObjectType: 3
         guid: f3e8f8ef31755849987781f4a74afacd
-      Path: Events/Default Work Unit/24000/N/24305/N_24305_Skill_1
+      Path: Events\Default Work Unit\24000\N\24305\N_24305_Skill_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-  - PhysicalPath: Events/Music.wwu
+  - PhysicalPath: Events\Music.wwu
     PathAndIcons:
     - ElementName: Events
       ObjectType: 5
@@ -4718,10 +4718,10 @@ MonoBehaviour:
     - ElementName: Music
       ObjectType: 12
       guid: f10c747f87cbae4f840683aedb57b957
-    ParentPath: Events/Music
+    ParentPath: Events\Music
     guid: f10c747f87cbae4f840683aedb57b957
     GuidInternal: 
-    m_lastTime: -8585486486884775808
+    m_lastTime: -8585484680391351282
     List:
     - name: Music_Map
       guid: 31fc14dd92a97e408a3c1bca3cbb907a
@@ -4736,7 +4736,7 @@ MonoBehaviour:
       - ElementName: Music_Map
         ObjectType: 3
         guid: 31fc14dd92a97e408a3c1bca3cbb907a
-      Path: Events/Music/Music_Map
+      Path: Events\Music\Music_Map
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4753,7 +4753,7 @@ MonoBehaviour:
       - ElementName: Music_S1_Boss_Battle
         ObjectType: 3
         guid: c05f9877b9b2044b8a4b85fa6f0f4e71
-      Path: Events/Music/Music_S1_Boss_Battle
+      Path: Events\Music\Music_S1_Boss_Battle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4770,7 +4770,7 @@ MonoBehaviour:
       - ElementName: Music_S1_Normal_Battle
         ObjectType: 3
         guid: 8123fcab5efeb44b942a6d0183b1f327
-      Path: Events/Music/Music_S1_Normal_Battle
+      Path: Events\Music\Music_S1_Normal_Battle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4787,7 +4787,7 @@ MonoBehaviour:
       - ElementName: Music_S2_Boss_Battle
         ObjectType: 3
         guid: f2d6bc18940f6d46b68361cbae91d663
-      Path: Events/Music/Music_S2_Boss_Battle
+      Path: Events\Music\Music_S2_Boss_Battle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4804,7 +4804,7 @@ MonoBehaviour:
       - ElementName: Music_S2_Normal_Battle
         ObjectType: 3
         guid: 82dac88f8d585d45b2c1b291dd534940
-      Path: Events/Music/Music_S2_Normal_Battle
+      Path: Events\Music\Music_S2_Normal_Battle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4821,7 +4821,7 @@ MonoBehaviour:
       - ElementName: Music_S3_Boss_Battle
         ObjectType: 3
         guid: 5e383d30e5f1854da6846b055ae5cf0c
-      Path: Events/Music/Music_S3_Boss_Battle
+      Path: Events\Music\Music_S3_Boss_Battle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4838,7 +4838,7 @@ MonoBehaviour:
       - ElementName: Music_S3_Normal_Battle
         ObjectType: 3
         guid: 843d6dca429fb64281f9e618187f7a19
-      Path: Events/Music/Music_S3_Normal_Battle
+      Path: Events\Music\Music_S3_Normal_Battle
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4855,12 +4855,12 @@ MonoBehaviour:
       - ElementName: Music_Start
         ObjectType: 3
         guid: ca3045177e7c2e4c978a7f178a1ec9a4
-      Path: Events/Music/Music_Start
+      Path: Events\Music\Music_Start
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
   RtpcWwu:
-  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Game Parameters
       ObjectType: 5
@@ -4868,13 +4868,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 66256ddd69eb61449ffee9adf1459c2a
-    ParentPath: Game Parameters/Default Work Unit
+    ParentPath: Game Parameters\Default Work Unit
     guid: 66256ddd69eb61449ffee9adf1459c2a
     GuidInternal: 
-    m_lastTime: -8585508202644775808
+    m_lastTime: -8585526336069814695
     List: []
   StateWwu:
-  - PhysicalPath: States/Default Work Unit.wwu
+  - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: States
       ObjectType: 5
@@ -4882,10 +4882,10 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 447c063f9a794e4384dee4b16a1ebf61
-    ParentPath: States/Default Work Unit
+    ParentPath: States\Default Work Unit
     guid: 447c063f9a794e4384dee4b16a1ebf61
     GuidInternal: 
-    m_lastTime: -8585508202614775808
+    m_lastTime: -8585520305363744248
     List:
     - name: Game_Speed
       guid: f0821c538962c04d9facfba1dea54b9e
@@ -4900,7 +4900,7 @@ MonoBehaviour:
       - ElementName: Game_Speed
         ObjectType: 9
         guid: f0821c538962c04d9facfba1dea54b9e
-      Path: States/Default Work Unit/Game_Speed
+      Path: States\Default Work Unit\Game_Speed
       values:
       - name: None
         guid: f4a1ffb9447ca842b90e8cad8e38cfa7
@@ -4969,7 +4969,7 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
-  - PhysicalPath: States/Music.wwu
+  - PhysicalPath: States\Music.wwu
     PathAndIcons:
     - ElementName: States
       ObjectType: 5
@@ -4977,10 +4977,10 @@ MonoBehaviour:
     - ElementName: Music
       ObjectType: 12
       guid: 436fb289ff8ca8498364e5725e8bb1d0
-    ParentPath: States/Music
+    ParentPath: States\Music
     guid: 436fb289ff8ca8498364e5725e8bb1d0
     GuidInternal: 
-    m_lastTime: -8585486486764775808
+    m_lastTime: -8585484680334709666
     List:
     - name: Music_State
       guid: 49c1ed1a9a823444b71468d5b2e68a3b
@@ -4995,7 +4995,7 @@ MonoBehaviour:
       - ElementName: Music_State
         ObjectType: 9
         guid: 49c1ed1a9a823444b71468d5b2e68a3b
-      Path: States/Music/Music_State
+      Path: States\Music\Music_State
       values:
       - name: Music_Main
         guid: 2ef22eafe3ff8548a2c75130defcd514
@@ -5145,7 +5145,7 @@ MonoBehaviour:
       ValueIcons: []
       valuesInternal: []
   SwitchWwu:
-  - PhysicalPath: Switches/Default Work Unit.wwu
+  - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Switches
       ObjectType: 5
@@ -5153,13 +5153,13 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 3577efce741fb946b3097ffdf71f2fa2
-    ParentPath: Switches/Default Work Unit
+    ParentPath: Switches\Default Work Unit
     guid: 3577efce741fb946b3097ffdf71f2fa2
     GuidInternal: 
-    m_lastTime: -8585508202614775808
+    m_lastTime: -8585526336068123165
     List: []
   TriggerWwu:
-  - PhysicalPath: Triggers/Default Work Unit.wwu
+  - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
     - ElementName: Triggers
       ObjectType: 5
@@ -5167,12 +5167,12 @@ MonoBehaviour:
     - ElementName: Default Work Unit
       ObjectType: 12
       guid: 0a7647b42d6f7e4688f5c47f0ff78d4a
-    ParentPath: Triggers/Default Work Unit
+    ParentPath: Triggers\Default Work Unit
     guid: 0a7647b42d6f7e4688f5c47f0ff78d4a
     GuidInternal: 
-    m_lastTime: -8585508202614775808
+    m_lastTime: -8585526336068103154
     List: []
-  - PhysicalPath: Triggers/Music.wwu
+  - PhysicalPath: Triggers\Music.wwu
     PathAndIcons:
     - ElementName: Triggers
       ObjectType: 5
@@ -5180,10 +5180,10 @@ MonoBehaviour:
     - ElementName: Music
       ObjectType: 12
       guid: 662f58bd8846314d9ce1e3456243be97
-    ParentPath: Triggers/Music
+    ParentPath: Triggers\Music
     guid: 662f58bd8846314d9ce1e3456243be97
     GuidInternal: 
-    m_lastTime: -8585508202614775808
+    m_lastTime: -8585484708550547674
     List:
     - name: Base_Camp
       guid: 4cc6c762af2d704f9f682f9483699ae3
@@ -5198,7 +5198,7 @@ MonoBehaviour:
       - ElementName: Base_Camp
         ObjectType: 14
         guid: 4cc6c762af2d704f9f682f9483699ae3
-      Path: Triggers/Music/Base_Camp
+      Path: Triggers\Music\Base_Camp
     - name: Boss_P2
       guid: d597c79924cd9a49a3f9f6f2ab03f623
       id: 1393967555
@@ -5212,7 +5212,7 @@ MonoBehaviour:
       - ElementName: Boss_P2
         ObjectType: 14
         guid: d597c79924cd9a49a3f9f6f2ab03f623
-      Path: Triggers/Music/Boss_P2
+      Path: Triggers\Music\Boss_P2
     - name: Main
       guid: 9e9013b998e77d459819014694b823b2
       id: 3161908922
@@ -5226,7 +5226,7 @@ MonoBehaviour:
       - ElementName: Main
         ObjectType: 14
         guid: 9e9013b998e77d459819014694b823b2
-      Path: Triggers/Music/Main
+      Path: Triggers\Music\Main
     - name: Map
       guid: 55a8c50c4d0632479bdfbe45d940033b
       id: 1048449605
@@ -5240,7 +5240,7 @@ MonoBehaviour:
       - ElementName: Map
         ObjectType: 14
         guid: 55a8c50c4d0632479bdfbe45d940033b
-      Path: Triggers/Music/Map
+      Path: Triggers\Music\Map
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0

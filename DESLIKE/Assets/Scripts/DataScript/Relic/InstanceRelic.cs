@@ -9,6 +9,11 @@ public class InstanceRelic : Relic
         Effect();
     }
 
+    public override void RemoveEffect()
+    {
+        ((InstanceRelicData)relicData).RemoveEffect();
+    }
+
     public void Effect()
     {
         if (((InstanceRelicData)relicData).ConditionCheck())

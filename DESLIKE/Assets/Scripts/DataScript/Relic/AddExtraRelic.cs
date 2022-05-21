@@ -6,10 +6,21 @@ using UnityEngine;
 public class AddExtraRelic : InstanceRelicData
 {
     [SerializeField] SkillData originSkill;
-    [SerializeField] SkillData extraSkill;
+    [SerializeField] SkillData[] extraSkill;
 
     public override void Effect()
     {
-        originSkill.extraSkillDatas.Add(extraSkill);
+        for(int i = 0; i < extraSkill.Length; i++)
+        {
+            originSkill.extraSkillDatas.Add(extraSkill[i]);
+        }
+    }
+
+    public override void RemoveEffect()
+    {
+        for(int i = 0; i < extraSkill.Length; i++)
+        {
+            originSkill.extraSkillDatas.Remove(extraSkill[i]);
+        }
     }
 }

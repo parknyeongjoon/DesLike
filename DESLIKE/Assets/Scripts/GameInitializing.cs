@@ -49,13 +49,11 @@ public class GameInitializing : MonoBehaviour
         }
         for(int i = 0; i < relicObjects.Length; i++)
         {
-            Debug.Log(i);
             Relic tempRelic = relicObjects[i].GetComponent<Relic>();
             SaveManager.Instance.dataSheet.relicObjectSheet.Add(tempRelic.relicData.code, relicObjects[i]);
             SaveManager.Instance.dataSheet.relicDataSheet.Add(tempRelic.relicData.code, tempRelic.relicData);
         }
         Debug.Log("세팅완료");
-        Debug.Log(SaveManager.Instance.dataSheet.soldierDataSheet.Count);
         yield return null;
     }
 

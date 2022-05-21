@@ -9,6 +9,11 @@ public class HeroDataRelicData : RelicData
         heroData.extraSkills += relicEffect;
     }
 
+    public virtual void RemoveEffect(HeroData heroData)
+    {
+        heroData.extraSkills -= relicEffect;
+    }
+
     public virtual void relicEffect(HeroInfo heroInfo)//heroInfo의 어디에 추가할 건지 작성
     {
 

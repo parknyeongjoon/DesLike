@@ -252,7 +252,12 @@ MonoBehaviour:
   map: {fileID: 11400000, guid: 41715a52f1b0dfb49a2dccda708a1014, type: 2}
   soldierDatas:
   - {fileID: 11400000, guid: 8061f0b131955b945b79c315c40239c5, type: 2}
+  - {fileID: 11400000, guid: e69c53ec3011fb24889e16a1732a97ea, type: 2}
+  - {fileID: 11400000, guid: acde378e9c3464849980dcd38ffa9cc8, type: 2}
+  - {fileID: 11400000, guid: 5b16985380b63dc488c0ad2949ea75ed, type: 2}
   - {fileID: 11400000, guid: 28db2665da4d7d94eaf8f993e2914190, type: 2}
+  - {fileID: 11400000, guid: 570f7ad51bb2e8247aa6d7bb2dc662fe, type: 2}
+  - {fileID: 11400000, guid: 3d2ddff0653a5a8489b20f7e8d278450, type: 2}
   - {fileID: 11400000, guid: c4a10c989f270e444aca7390aa61ebdc, type: 2}
   heroDatas:
   - {fileID: 11400000, guid: 7f528eb015e3d0e40b0f2abb902a89a8, type: 2}
@@ -264,37 +269,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 20faa7cf16f947e44ae2c22b3b31454c, type: 2}
   mutantObjects: []
   relicObjects:
-  - {fileID: 4021191973779267206, guid: aee779434b9bdc94d861f63520cefefd, type: 3}
-  - {fileID: 4021191973779267206, guid: 4c140e9ea1618184bac43b127e397e23, type: 3}
-  - {fileID: 3085665646497418710, guid: 48dca7ea8ba19fe4ea6ed7c26b17c256, type: 3}
-  - {fileID: 2151022113915362719, guid: 48a2e13a04a16ce4cbe09b1ba6209f77, type: 3}
-  - {fileID: 4021191973779267206, guid: 113e96454ea5f234cbbfb9b82ef4bbc6, type: 3}
-  - {fileID: 424232721891972222, guid: f802df021b294144faf54e3f300f8818, type: 3}
+  - {fileID: 821967446440426585, guid: ca8b01da92f76384db3ab4d5fb271720, type: 3}
   - {fileID: 7865698748486953535, guid: d4d1fc15207e65a45987f4339ac9d138, type: 3}
   - {fileID: 6829095041781781597, guid: 9783e8e87bf0333439a5ba35028f2a5e, type: 3}
   - {fileID: 7702096694434751665, guid: 6c1e1085387ddeb4194f3a2244796db8, type: 3}
+  - {fileID: 4021191973779267206, guid: 4c140e9ea1618184bac43b127e397e23, type: 3}
+  - {fileID: 3085665646497418710, guid: 48dca7ea8ba19fe4ea6ed7c26b17c256, type: 3}
+  - {fileID: 2151022113915362719, guid: 48a2e13a04a16ce4cbe09b1ba6209f77, type: 3}
+  - {fileID: 424232721891972222, guid: f802df021b294144faf54e3f300f8818, type: 3}
   - {fileID: 5277939242723166846, guid: 21fc39a36dfe943439161aadc907a1e2, type: 3}
   - {fileID: 2866984045625736624, guid: 3ccb1591a9c1d2c43823d5856e9b4c80, type: 3}
   - {fileID: 9146121012796247243, guid: b5aaa21ba06333c40bbdc9645f594fe2, type: 3}
   - {fileID: 3705127180938462794, guid: acb78498fb61c4840b75485a6989f438, type: 3}
   - {fileID: 6011665848445119905, guid: c19c965960b5bec4b9482cda4295b9ec, type: 3}
   - {fileID: 5396015203588653268, guid: bfb1e1435d693194e8cb406be1724b80, type: 3}
-  - {fileID: 4021191973779267206, guid: 21b149c7449892447a8ddab3643c41e2, type: 3}
-  - {fileID: 4021191973779267206, guid: 2ece1f0f272d87640b096ce96282db17, type: 3}
-  - {fileID: 4021191973779267206, guid: ff97e06edbf82bf418dfab4be52eda9e, type: 3}
-  - {fileID: 4021191973779267206, guid: 561f319ee2837c749a8dcb9b2a22f53a, type: 3}
-  - {fileID: 4021191973779267206, guid: 4d4a3554131580a47a1b8e11f06c7551, type: 3}
-  - {fileID: 4021191973779267206, guid: 07997063b5acaab40b7e16ff310930aa, type: 3}
-  - {fileID: 4021191973779267206, guid: 51658f6177d8c934797bde6898d4a6b6, type: 3}
-  - {fileID: 4021191973779267206, guid: 881d37332e309da4a8bc3dd7f47b7e84, type: 3}
-  - {fileID: 4021191973779267206, guid: 626f7aae887af114eaf96de4bb28f9b1, type: 3}
-  - {fileID: 4021191973779267206, guid: 631fa09162b4d3346b04ec76584ed7da, type: 3}
-  - {fileID: 4021191973779267206, guid: a5c4b525d78df694aaa6f84aa7ce0f48, type: 3}
-  - {fileID: 4021191973779267206, guid: eab0d9a4d8354114db7b68dfbbf20386, type: 3}
-  - {fileID: 4021191973779267206, guid: 10956baadee6a4a41855de9b0de3988f, type: 3}
-  - {fileID: 4021191973779267206, guid: 8db8f75f62d3165419c7def1a9c9b1ab, type: 3}
-  - {fileID: 4021191973779267206, guid: e997637ff1b0efe479c312a29e42b2a3, type: 3}
-  - {fileID: 4021191973779267206, guid: 3141017ffca0f5947be7ae1473caa7c0, type: 3}
   BattleNodeScript: {fileID: 3963912957987146594, guid: 466e855f347fc934895e18daf1643165,
     type: 3}
 --- !u!114 &2130432439 stripped

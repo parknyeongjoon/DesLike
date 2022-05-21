@@ -10,15 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ec68b78d381d4c41b6a69b46a34aab7, type: 3}
-  m_Name: Relic_Spell_E_2
+  m_Name: Relic_Spell_H_1_Synergy
   m_EditorClassIdentifier: 
   relicImg: {fileID: 0}
-  code: Relic_Spell_E_2
-  relicName: Relic_Spell_E_2
-  toopTip: "\uD68C\uD53C \uC2DC \uACF5\uACA9\uC18D\uB3C4 30% \uC99D\uAC00"
+  code: Relic_Spell_H_1_Synergy
+  relicName: Relic_Spell_H_1_Synergy
+  toopTip: "\uD68C\uD53C \uC2DC \uCCB4\uB825 10 \uD68C\uBCF5 \uBC0F \uACF5\uACA9
+    \uB300\uC0C1\uC5D0\uAC8C \uB370\uBBF8\uC9C0"
   kingdom: 2
-  rarity: 2
+  rarity: 3
   continueReuse: 1
   originSkill: {fileID: 11400000, guid: a10fd137a8b20f040a484212f49cb907, type: 2}
   extraSkill:
-  - {fileID: 11400000, guid: eabef5a82fce6bb4d8229e36ec061183, type: 2}
+  - {fileID: 11400000, guid: 9905430addc093c44998a61fb5751046, type: 2}
+  - {fileID: 11400000, guid: 4411a1a74743ff541bcc2a80f6d4d6ad, type: 2}

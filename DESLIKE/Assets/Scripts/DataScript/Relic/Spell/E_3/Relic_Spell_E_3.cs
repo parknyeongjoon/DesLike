@@ -12,4 +12,9 @@ public class Relic_Spell_E_3 : InstanceRelicData//역병의 최대 스택 수 증가.
     {
         plague.max_Stack += addAmount;
     }
+
+    public override void RemoveEffect()
+    {
+        plague.max_Stack -= addAmount;
+    }
 }

@@ -12,4 +12,9 @@ public class Relic_Spell_N_5 : InstanceRelicData//Á¡¾×Áú ÇÇºÎÀÇ ³»±¸µµ°¡ n Áõ°¡Ç
     {
         mucusData.mucusAmount += addAmount;
     }
+
+    public override void RemoveEffect()
+    {
+        mucusData.mucusAmount -= addAmount;
+    }
 }

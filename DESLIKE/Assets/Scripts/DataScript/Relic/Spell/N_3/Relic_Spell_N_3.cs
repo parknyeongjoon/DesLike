@@ -13,4 +13,10 @@ public class Relic_Spell_N_3 : InstanceRelicData//역병의 지속시간과 딜 간격 감소
         plagueData.debuff_Time *= debuffTimeP;
         plagueData.dotTime *= dotTimeP;
     }
+
+    public override void RemoveEffect()
+    {
+        plagueData.debuff_Time /= debuffTimeP;
+        plagueData.dotTime /= dotTimeP;
+    }
 }

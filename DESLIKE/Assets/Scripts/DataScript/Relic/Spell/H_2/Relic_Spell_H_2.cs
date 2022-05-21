@@ -12,4 +12,9 @@ public class Relic_Spell_H_2 : InstanceRelicData
     {
         plague.stackOverflowEffect = extraSkill;
     }
+
+    public override void RemoveEffect()
+    {
+        plague.stackOverflowEffect = null;
+    }
 }

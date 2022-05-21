@@ -95,7 +95,6 @@ public class SaveManager : MonoBehaviour
             gameData.portSaveDatas.portSaveList[i].isUnlock = allyPortDatas.portDatas[i].unlock;
             gameData.portSaveDatas.portSaveList[i].soldierCode = allyPortDatas.portDatas[i].soldierCode;
             gameData.portSaveDatas.portSaveList[i].mutantCode = allyPortDatas.portDatas[i].mutantCode;
-            Debug.Log("Save : " + gameData.portSaveDatas.portSaveList[i].soldierCode);
         }
         //포트 에너지 저장
         gameData.portSaveDatas.maxBarrierStrength = allyPortDatas.maxBarrierStrength;
@@ -117,7 +116,6 @@ public class SaveManager : MonoBehaviour
             allyPortDatas.portDatas[i].unlock = tempData.isUnlock;
             allyPortDatas.portDatas[i].soldierCode = tempData.soldierCode;
             allyPortDatas.portDatas[i].mutantCode = tempData.mutantCode;
-            Debug.Log("Load" + allyPortDatas.portDatas[i].soldierCode);
         }
         //포트 에너지 저장
         allyPortDatas.maxBarrierStrength = gameData.portSaveDatas.maxBarrierStrength;

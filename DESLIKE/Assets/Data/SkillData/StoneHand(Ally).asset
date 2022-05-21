@@ -14,14 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   code: StoneHand
   skill_name: StoneHand
+  toolTip: 
   skillType: 0
   skill_Icon: {fileID: 0}
-  extraSkillData: {fileID: 0}
-  cooltime: 0
-  mp: 0
-  range: 0
-  start_Delay: 0
-  end_Delay: 0
-  atkArea: 0
-  atk_Dmg: 0
-  stun_Time: 10
+  extraSkillDatas: []
+  stun_Time: 0.5

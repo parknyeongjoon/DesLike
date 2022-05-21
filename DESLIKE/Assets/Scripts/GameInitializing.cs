@@ -12,6 +12,7 @@ public class GameInitializing : MonoBehaviour
 
     IEnumerator Start()
     {
+        Debug.Log(Application.persistentDataPath);
         yield return SetDataSheet();
         yield return divideMapRel();
         SaveManager.Instance.gameData = SaveManager.Instance.GameData;

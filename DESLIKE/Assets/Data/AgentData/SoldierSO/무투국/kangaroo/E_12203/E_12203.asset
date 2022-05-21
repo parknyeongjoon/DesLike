@@ -16,7 +16,7 @@ MonoBehaviour:
   code: E_12203
   hp: 30
   def: 0
-  size: 0.6
+  size: 2
   blood: {fileID: 0}
   soldier_name: E_12203
   mp: 5
@@ -24,7 +24,6 @@ MonoBehaviour:
   hp_Re: 0
   kingdom: 0
   tribe: 2
-  extraSkill: []
   rarity: 2
   needBarrier: 0
   unitAmount: 2

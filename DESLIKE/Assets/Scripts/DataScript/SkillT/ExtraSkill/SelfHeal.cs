@@ -1,18 +1,18 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "HealData",menuName ="ScriptableObject/ExtraSkill/HealData")]
-public class HealData : SkillData
+[CreateAssetMenu(fileName = "SelfHeal", menuName = "ScriptableObject/ExtraSkill/SelfHeal")]
+public class SelfHeal : SkillData
 {
     public GameObject healEffect;
     public float heal_Amount;
 
     public override void Effect(HeroInfo heroInfo, HeroInfo targetInfo)
     {
-        targetInfo.OnHealed(heal_Amount);
+        heroInfo.OnHealed(heal_Amount);
         excuteExtraSkill(heroInfo, targetInfo);
-        targetInfo.StartCoroutine(Healing(targetInfo));
+        heroInfo.StartCoroutine(Healing(heroInfo));
     }
 
     IEnumerator Healing(HeroInfo targetInfo)

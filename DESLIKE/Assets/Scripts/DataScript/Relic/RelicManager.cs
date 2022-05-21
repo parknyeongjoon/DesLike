@@ -64,7 +64,7 @@ public class RelicManager : MonoBehaviour
         }
     }
 
-    public void DestroyRelic(string relicKey)
+    public void RemoveRelic(string relicKey)
     {
         if (relicList.ContainsKey(relicKey))
         {

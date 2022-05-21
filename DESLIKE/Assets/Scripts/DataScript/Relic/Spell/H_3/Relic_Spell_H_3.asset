@@ -15,9 +15,11 @@ MonoBehaviour:
   relicImg: {fileID: 0}
   code: Relic_Spell_H_3
   relicName: Relic_Spell_H_3
-  toopTip: 
+  toopTip: "\uC810\uC561\uC9C8 \uD53C\uBD80\uAC00 \uD30C\uAD34\uB420 \uB54C \uC8FC\uBCC0\uC5D0
+    \uAD11\uC5ED \uD53C\uD574"
   kingdom: 2
   rarity: 3
   continueReuse: 1
-  extraSkill: {fileID: 11400000, guid: 9fad6bf506bc5f14780f4b930744187d, type: 2}
-  mucus: {fileID: 11400000, guid: 271baaba43950214997458282c1bc85d, type: 2}
+  originSkill: {fileID: 11400000, guid: 271baaba43950214997458282c1bc85d, type: 2}
+  extraSkill:
+  - {fileID: 11400000, guid: 9fad6bf506bc5f14780f4b930744187d, type: 2}

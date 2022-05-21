@@ -17,5 +17,9 @@ MonoBehaviour:
   toolTip: "\uC77C\uC815 \uD655\uB960\uB85C \uC801\uC758 \uACF5\uACA9\uC744 \uD68C\uD53C\uD569\uB2C8\uB2E4"
   skillType: 4
   skill_Icon: {fileID: 0}
-  extraSkillDatas: []
+  extraSkillDatas:
+  - {fileID: 11400000, guid: 9905430addc093c44998a61fb5751046, type: 2}
+  - {fileID: 11400000, guid: 4411a1a74743ff541bcc2a80f6d4d6ad, type: 2}
+  - {fileID: 11400000, guid: 9905430addc093c44998a61fb5751046, type: 2}
+  - {fileID: 11400000, guid: 4411a1a74743ff541bcc2a80f6d4d6ad, type: 2}
   dodgeP: 1

@@ -10,8 +10,8 @@ public class SynergyRelic : InstanceRelicData
 
     public override void Effect()
     {
-        RelicManager.instance.DestroyRelic(synergyRelic.code);//시너지 유물 파괴하고
-        RelicManager.instance.DestroyRelic(code);//이 유물 파괴하고
+        RelicManager.instance.RemoveRelic(synergyRelic.code);//시너지 유물 파괴하고
+        RelicManager.instance.RemoveRelic(code);//이 유물 파괴하고
         RelicManager.instance.GetRelic(synergyRelic.code + "_Synergy");//시너지 유물 생성해주고
     }
 

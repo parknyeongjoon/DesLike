@@ -10,4 +10,9 @@ public class testRelicBtnScript : MonoBehaviour
     {
         RelicManager.instance.GetRelic(testRelic.code);
     }
+
+    public void testRemoveRelic()
+    {
+        RelicManager.instance.RemoveRelic(testRelic.code);
+    }
 }

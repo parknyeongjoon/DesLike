@@ -26,7 +26,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1120217908">
+		<SoundBank Id="3161908922" Language="SFX" Hash="152938097">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -53,6 +53,26 @@
 				<Event Id="3297995789" Name="E_12203_Att_1" ObjectPath="\Events\Default Work Unit\12000\E\12203\E_12203_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2941018562" Name="E_12203_Die" ObjectPath="\Events\Default Work Unit\12000\E\12203\E_12203_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="260352622" Name="E_12203_Idle" ObjectPath="\Events\Default Work Unit\12000\E\12203\E_12203_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="4189270403" Name="E_23201_Att_1" ObjectPath="\Events\Default Work Unit\23000\E\23201\E_23201_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="4245439684" Name="E_23201_Die" ObjectPath="\Events\Default Work Unit\23000\E\23201\E_23201_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1240062780" Name="E_23201_Idle" ObjectPath="\Events\Default Work Unit\23000\E\23201\E_23201_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="998107461" Name="E_23201_Skill_1" ObjectPath="\Events\Default Work Unit\23000\E\23201\E_23201_Skill_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3260355880" Name="E_23202_Att_1" ObjectPath="\Events\Default Work Unit\23000\E\23202\E_23202_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1284560019" Name="E_23202_Die" ObjectPath="\Events\Default Work Unit\23000\E\23202\E_23202_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3706460425" Name="E_23202_Idle" ObjectPath="\Events\Default Work Unit\23000\E\23202\E_23202_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1955510049" Name="E_23203_Att_1" ObjectPath="\Events\Default Work Unit\23000\E\23203\E_23203_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2674889054" Name="E_23203_Die" ObjectPath="\Events\Default Work Unit\23000\E\23203\E_23203_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3610842186" Name="E_23203_Idle" ObjectPath="\Events\Default Work Unit\23000\E\23203\E_23203_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2813244014" Name="E_24201_Att_1" ObjectPath="\Events\Default Work Unit\24000\E\24201\E_24201_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3884201885" Name="E_24201_Die" ObjectPath="\Events\Default Work Unit\24000\E\24201\E_24201_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3959164255" Name="E_24201_Idle" ObjectPath="\Events\Default Work Unit\24000\E\24201\E_24201_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2632079296" Name="E_24201_Skill_1" ObjectPath="\Events\Default Work Unit\24000\E\24201\E_24201_Skill_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1605030226" Name="E_24202_Die" ObjectPath="\Events\Default Work Unit\24000\E\24202\E_24202_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1112753182" Name="E_24202_Idle" ObjectPath="\Events\Default Work Unit\24000\E\24202\E_24202_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2213233327" Name="E_24202_Skill_1" ObjectPath="\Events\Default Work Unit\24000\E\24202\E_24202_Skill_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2464246276" Name="E_24203_Att_1" ObjectPath="\Events\Default Work Unit\24000\E\24203\E_24203_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2574310423" Name="E_24203_Die" ObjectPath="\Events\Default Work Unit\24000\E\24203\E_24203_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3468477885" Name="E_24203_Idle" ObjectPath="\Events\Default Work Unit\24000\E\24203\E_24203_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="1027347108" Name="Game_Speed_Pause" ObjectPath="\Events\Default Work Unit\Game_Speed_Pause" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2372597559" Name="Game_Speed_Resume" ObjectPath="\Events\Default Work Unit\Game_Speed_Resume" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="740967588" Name="H_11101_Att_1" ObjectPath="\Events\Default Work Unit\11000\H\11101\H_11101_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
@@ -1011,6 +1031,38 @@
 				<Event Id="4037972494" Name="N_12305_Die" ObjectPath="\Events\Default Work Unit\12000\N\N_12305\N_12305_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="1845922970" Name="N_12305_Idle" ObjectPath="\Events\Default Work Unit\12000\N\N_12305\N_12305_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3425291315" Name="N_12305_Skill_1" ObjectPath="\Events\Default Work Unit\12000\N\N_12305\N_12305_Skill_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1327357809" Name="N_23301_Att_1" ObjectPath="\Events\Default Work Unit\23000\N\23301\N_23301_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3984209966" Name="N_23301_Die" ObjectPath="\Events\Default Work Unit\23000\N\23301\N_23301_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2149651770" Name="N_23301_Idle" ObjectPath="\Events\Default Work Unit\23000\N\23301\N_23301_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="922162898" Name="N_23302_Att_1" ObjectPath="\Events\Default Work Unit\23000\N\23302\N_23302_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3227883529" Name="N_23302_Die" ObjectPath="\Events\Default Work Unit\23000\N\23302\N_23302_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2084809227" Name="N_23302_Idle" ObjectPath="\Events\Default Work Unit\23000\N\23302\N_23302_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="334009171" Name="N_23303_Att_1" ObjectPath="\Events\Default Work Unit\23000\N\23303\N_23303_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1270135828" Name="N_23303_Die" ObjectPath="\Events\Default Work Unit\23000\N\23303\N_23303_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1830661676" Name="N_23303_Idle" ObjectPath="\Events\Default Work Unit\23000\N\23303\N_23303_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="260262124" Name="N_23304_Att_1" ObjectPath="\Events\Default Work Unit\23000\N\23304\N_23304_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2974222495" Name="N_23304_Die" ObjectPath="\Events\Default Work Unit\23000\N\23304\N_23304_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="4235599013" Name="N_23304_Idle" ObjectPath="\Events\Default Work Unit\23000\N\23304\N_23304_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="98374853" Name="N_23305_Att_1" ObjectPath="\Events\Default Work Unit\23000\N\23305\N_23305_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="479591162" Name="N_23305_Die" ObjectPath="\Events\Default Work Unit\23000\N\23305\N_23305_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="274007398" Name="N_23305_Idle" ObjectPath="\Events\Default Work Unit\23000\N\23305\N_23305_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="731295776" Name="N_24301_Att_1" ObjectPath="\Events\Default Work Unit\24000\N\24301\N_24301_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2475050411" Name="N_24301_Die" ObjectPath="\Events\Default Work Unit\24000\N\24301\N_24301_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2295123873" Name="N_24301_Idle" ObjectPath="\Events\Default Work Unit\24000\N\24301\N_24301_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="4063445499" Name="N_24302_Att_1" ObjectPath="\Events\Default Work Unit\24000\N\24302\N_24302_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="572947900" Name="N_24302_Die" ObjectPath="\Events\Default Work Unit\24000\N\24302\N_24302_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2905243572" Name="N_24302_Idle" ObjectPath="\Events\Default Work Unit\24000\N\24302\N_24302_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1327734490" Name="N_24303_Att_1" ObjectPath="\Events\Default Work Unit\24000\N\24303\N_24303_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2120688657" Name="N_24303_Die" ObjectPath="\Events\Default Work Unit\24000\N\24303\N_24303_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1614031187" Name="N_24303_Idle" ObjectPath="\Events\Default Work Unit\24000\N\24303\N_24303_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="1053410701" Name="N_24304_Att_1" ObjectPath="\Events\Default Work Unit\24000\N\24304\N_24304_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="329629506" Name="N_24304_Die" ObjectPath="\Events\Default Work Unit\24000\N\24304\N_24304_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2285034222" Name="N_24304_Idle" ObjectPath="\Events\Default Work Unit\24000\N\24304\N_24304_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2779366591" Name="N_24304_Skill_1" ObjectPath="\Events\Default Work Unit\24000\N\24304\N_24304_Skill_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3989698420" Name="N_24305_Att_1" ObjectPath="\Events\Default Work Unit\24000\N\24305\N_24305_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2277034503" Name="N_24305_Die" ObjectPath="\Events\Default Work Unit\24000\N\24305\N_24305_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="394154509" Name="N_24305_Idle" ObjectPath="\Events\Default Work Unit\24000\N\24305\N_24305_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="2421113582" Name="N_24305_Skill_1" ObjectPath="\Events\Default Work Unit\24000\N\24305\N_24305_Skill_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 			</IncludedEvents>
 			<StateGroups>
 				<StateGroup Id="91695603" Name="Music_S2_Boss_Battle" ObjectPath="\States\Music\Music_State\Music_S2_Boss_Battle" GUID="{729323AF-59F8-4C4C-AA17-5B880341A81C}">

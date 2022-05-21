@@ -337,7 +337,32 @@
 				</Folder>
 				<Folder Name="23000" ID="{5FEFA8D8-88B0-43A0-896A-3E3700FF1CA9}" ShortID="365496358">
 					<ChildrenList>
-						<Folder Name="E" ID="{639F4A7C-78FE-4AD1-9DA9-AB4DBA4586B5}" ShortID="786351872"/>
+						<Folder Name="E" ID="{639F4A7C-78FE-4AD1-9DA9-AB4DBA4586B5}" ShortID="786351872">
+							<ChildrenList>
+								<Folder Name="23201" ID="{D8492356-3977-4839-9B99-0F243E3F1995}" ShortID="548144454">
+									<ChildrenList>
+										<Event Name="E_23201_Idle" ID="{837D6A04-1063-49FA-99EA-B0CB94916A46}"/>
+										<Event Name="E_23201_Att_1" ID="{EB16B3C3-55BB-460C-83F9-3B2E8254FF3F}"/>
+										<Event Name="E_23201_Skill_1" ID="{04837ED6-9BA4-4BE8-8804-C479962FA442}"/>
+										<Event Name="E_23201_Die" ID="{67C41A0A-5C3A-45C1-BA7B-89AC16D3FE5E}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="23202" ID="{9A56055B-2948-41F4-988E-ED35A8946743}" ShortID="879561828">
+									<ChildrenList>
+										<Event Name="E_23202_Idle" ID="{05BCCCE2-7505-4DDA-A2FD-725A95A411A7}"/>
+										<Event Name="E_23202_Att_1" ID="{6849DD5E-6713-48CA-97EC-9A7EC453EB0E}"/>
+										<Event Name="E_23202_Die" ID="{1D4C2661-31AD-495F-B758-E4F5779358C2}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="23203" ID="{CF58C3F1-E3F0-48BF-8B92-9CFD0C0FD137}" ShortID="518535322">
+									<ChildrenList>
+										<Event Name="E_23203_Idle" ID="{F8805AB7-148D-496F-945F-39860568A731}"/>
+										<Event Name="E_23203_Att_1" ID="{9C7C3BBC-6D11-4ED5-B7D4-FD2C17519A1B}"/>
+										<Event Name="E_23203_Die" ID="{4E3CC3A8-66FD-4EC1-BBEE-358B74205E18}"/>
+									</ChildrenList>
+								</Folder>
+							</ChildrenList>
+						</Folder>
 						<Folder Name="H" ID="{75926D35-C9B3-4A4F-AC57-B0D816099171}" ShortID="801017218">
 							<ChildrenList>
 								<Folder Name="23101" ID="{23B39D0C-CAA2-4285-94E2-18B931BD0123}" ShortID="252813982">
@@ -416,7 +441,116 @@
 								</Folder>
 							</ChildrenList>
 						</Folder>
-						<Folder Name="N" ID="{5B120F24-3029-48EE-AAE9-1AB2A5A95F98}" ShortID="1044899431"/>
+						<Folder Name="N" ID="{5B120F24-3029-48EE-AAE9-1AB2A5A95F98}" ShortID="1044899431">
+							<ChildrenList>
+								<Folder Name="23301" ID="{5B09FF90-C41A-48F2-A17A-1B698CB3F400}" ShortID="630506672">
+									<ChildrenList>
+										<Event Name="N_23301_Idle" ID="{755AD334-5ECF-419F-B045-056E2C3E9A92}"/>
+										<Event Name="N_23301_Att_1" ID="{58110C0B-B772-47CB-9A3B-ADA3240D62A7}"/>
+										<Event Name="N_23301_Die" ID="{3F659044-9ACC-4613-86C6-B0C690ABFA2A}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="23302" ID="{9B79DB28-7B19-43C2-BB6B-9E5DC2EFC593}" ShortID="729313291">
+									<ChildrenList>
+										<Event Name="N_23302_Idle" ID="{587899F9-4929-4D41-A502-ACBFA7BC9887}"/>
+										<Event Name="N_23302_Att_1" ID="{3402EFEA-07E7-4C55-A3CE-848C96563984}"/>
+										<Event Name="N_23302_Die" ID="{B48948EA-9270-4B35-8ED6-4C374670B65F}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="23303" ID="{9C612ED0-3137-4020-9EF1-A7884A1BE118}" ShortID="118973700">
+									<ChildrenList>
+										<Event Name="N_23303_Idle" ID="{2A0839EE-B653-4263-93C4-F0127B124D86}"/>
+										<Event Name="N_23303_Att_1" ID="{786E9E04-A531-4919-9F31-35FB870BCD6D}"/>
+										<Event Name="N_23303_Die" ID="{B7E957A4-6DA6-40D7-9E21-873C6D19E930}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="23304" ID="{07E4325E-F2AA-42BF-89F1-7687B8D8C54E}" ShortID="454233885">
+									<ChildrenList>
+										<Event Name="N_23304_Idle" ID="{1D8AF651-B7D2-48F6-BFCB-C005E4993524}"/>
+										<Event Name="N_23304_Att_1" ID="{1FB9037F-0759-4B5D-999A-E44551D876AE}"/>
+										<Event Name="N_23304_Die" ID="{928F3585-E004-4459-A3B8-2C99025E0726}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="23305" ID="{BC269990-DFC1-4549-92FB-EB45E5A28B51}" ShortID="286219793">
+									<ChildrenList>
+										<Event Name="N_23305_Idle" ID="{80BC42AC-BFAE-467E-92DC-1E93E382CAEC}"/>
+										<Event Name="N_23305_Att_1" ID="{B72E3D62-DE18-4BA7-A4CA-402E42EF64B3}"/>
+										<Event Name="N_23305_Die" ID="{0BB3646D-D015-4F51-AD73-1DFF6AD31447}"/>
+									</ChildrenList>
+								</Folder>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="24000" ID="{53185547-615C-40FC-BBA0-F75299DB06AE}" ShortID="883464726">
+					<ChildrenList>
+						<Folder Name="E" ID="{776B2FC6-18AA-4E8A-8AF3-497E6264ADF6}" ShortID="619614534">
+							<ChildrenList>
+								<Folder Name="24201" ID="{17FB948C-D1E2-47B9-868B-78A5F4AF1572}" ShortID="313153198">
+									<ChildrenList>
+										<Event Name="E_24201_Idle" ID="{1C4AED2A-D32F-4716-916D-FEC243D0D92E}"/>
+										<Event Name="E_24201_Att_1" ID="{A61B6A2D-15C2-45AC-9D10-076157868943}"/>
+										<Event Name="E_24201_Skill_1" ID="{E109A21F-3DBA-46A9-BF67-476F45839000}"/>
+										<Event Name="E_24201_Die" ID="{6BC5A98E-5778-4E06-9EF6-BDE2822277C6}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="24202" ID="{476C761D-0B5B-4F68-9738-100CACF54BE8}" ShortID="373768594">
+									<ChildrenList>
+										<Event Name="E_24202_Idle" ID="{A469F425-0DA2-4CC3-A71E-823A3A0BBF6B}"/>
+										<Event Name="E_24202_Skill_1" ID="{3153BE8C-53CD-46EC-ABD5-3E1A7D803B9F}"/>
+										<Event Name="E_24202_Die" ID="{E144FBB0-99A1-4981-B08F-B79C87CA3D2A}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="24203" ID="{62DEF1E8-497C-4E40-AE63-9F52495E7196}" ShortID="594542708">
+									<ChildrenList>
+										<Event Name="E_24203_Idle" ID="{2F17444A-F246-42E2-99DC-E77F3DBCFDBB}"/>
+										<Event Name="E_24203_Die" ID="{E01DD0CA-46BA-45B2-8703-7E39077D329B}"/>
+										<Event Name="E_24203_Att_1" ID="{D1438213-2E03-4AAF-B9AB-3744AABD23C7}"/>
+									</ChildrenList>
+								</Folder>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="N" ID="{3C7EEE68-CBD9-4CFA-855A-1B7A2C17DDB9}" ShortID="102386890">
+							<ChildrenList>
+								<Folder Name="24301" ID="{00CD630A-24EA-4808-9213-584B20D7E2DB}" ShortID="800637836">
+									<ChildrenList>
+										<Event Name="N_24301_Idle" ID="{CF20E895-DD6D-46AB-B7EA-91A38830C82E}"/>
+										<Event Name="N_24301_Att_1" ID="{CE9B6A39-7688-4241-A972-79254725D652}"/>
+										<Event Name="N_24301_Die" ID="{D3952390-1F45-4F46-8C4C-81667679EDD9}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="24302" ID="{81AA83C8-CC0A-4A8F-995C-071EE10BD680}" ShortID="693332143">
+									<ChildrenList>
+										<Event Name="N_24302_Idle" ID="{E9465E58-DFD4-4D3D-89B7-4A59C2C2F18C}"/>
+										<Event Name="N_24302_Att_1" ID="{A4E9FB05-3DAE-40A1-9BAC-8FCF4D922C29}"/>
+										<Event Name="N_24302_Die" ID="{849B5912-AF62-489D-82EE-D009E30CC5F3}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="24303" ID="{E6A7660B-C043-4A40-85A1-A491BB32CE60}" ShortID="104693273">
+									<ChildrenList>
+										<Event Name="N_24303_Idle" ID="{73145292-B61A-4321-8EB1-65857C7F47E4}"/>
+										<Event Name="N_24303_Att_1" ID="{DC9B550A-266E-4A8D-8F37-98EE83722AFD}"/>
+										<Event Name="N_24303_Die" ID="{09832294-E298-425F-9306-04678FEAC2B3}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="24304" ID="{8BDE7D40-2525-4526-9198-43D6D2A49136}" ShortID="231364678">
+									<ChildrenList>
+										<Event Name="N_24304_Idle" ID="{0572BF05-5C56-4479-ACD9-94259504D894}"/>
+										<Event Name="N_24304_Att_1" ID="{29AE8B10-594A-4D0A-9861-176A2B6ED57B}"/>
+										<Event Name="N_24304_Skill_1" ID="{7C2B1015-4A7D-4C3B-B5B5-57ED1D4C95BE}"/>
+										<Event Name="N_24304_Die" ID="{1BE03B15-883C-4524-B0ED-73A16579DC9D}"/>
+									</ChildrenList>
+								</Folder>
+								<Folder Name="24305" ID="{BB5DCC5D-C0E6-4092-ABD5-CF855A16EDF5}" ShortID="939770222">
+									<ChildrenList>
+										<Event Name="N_24305_Idle" ID="{37A4D28F-2915-4484-94BF-419D33800BC2}"/>
+										<Event Name="N_24305_Att_1" ID="{3BA5407C-A325-4012-AE7E-A301DEA42DBF}"/>
+										<Event Name="N_24305_Skill_1" ID="{EFF8E8F3-7531-4958-9877-81F4A74AFACD}"/>
+										<Event Name="N_24305_Die" ID="{092D42D0-16CA-4F33-A30D-E5E92FB34DED}"/>
+									</ChildrenList>
+								</Folder>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

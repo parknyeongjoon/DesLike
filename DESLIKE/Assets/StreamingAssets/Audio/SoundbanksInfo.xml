@@ -26,7 +26,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="152938097">
+		<SoundBank Id="3161908922" Language="SFX" Hash="2277999415">
 			<ObjectPath>\SoundBanks\Default Work Unit\main</ObjectPath>
 			<ShortName>main</ShortName>
 			<Path>main.bnk</Path>
@@ -40,8 +40,26 @@
 				<Event Id="3172557730" Name="E_11202_Die" ObjectPath="\Events\Default Work Unit\11000\E\11202\E_11202_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="2797876430" Name="E_11202_Idle" ObjectPath="\Events\Default Work Unit\11000\E\11202\E_11202_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="985093471" Name="E_11202_Skill_1" ObjectPath="\Events\Default Work Unit\11000\E\11202\E_11202_Skill_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="365726612" Name="E_11203_Att_1" ObjectPath="\Events\Default Work Unit\11000\E\11203\E_11203_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
-				<Event Id="824892519" Name="E_11203_Die" ObjectPath="\Events\Default Work Unit\11000\E\11203\E_11203_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="365726612" Name="E_11203_Att_1" ObjectPath="\Events\Default Work Unit\11000\E\11203\E_11203_Att_1" DurationType="OneShot" DurationMin="1.987771" DurationMax="2.046017">
+					<IncludedMemoryFiles>
+						<File Id="196209748" Language="SFX">
+							<ShortName>N_11203_Att_1_2_PRINT_01.wav</ShortName>
+							<Path>SFX/N_11203_Att_1_2_PRINT_01_10C4C929.wem</Path>
+						</File>
+						<File Id="434375202" Language="SFX">
+							<ShortName>N_11203_Att_1_1_Print_01.wav</ShortName>
+							<Path>SFX/N_11203_Att_1_1_Print_01_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="824892519" Name="E_11203_Die" ObjectPath="\Events\Default Work Unit\11000\E\11203\E_11203_Die" DurationType="OneShot" DurationMin="1.057506" DurationMax="1.088493">
+					<IncludedMemoryFiles>
+						<File Id="843547348" Language="SFX">
+							<ShortName>N_11203_Die_Print_01.wav</ShortName>
+							<Path>SFX/N_11203_Die_Print_01_5AD56718.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="948573677" Name="E_11203_Idle" ObjectPath="\Events\Default Work Unit\11000\E\11203\E_11203_Idle" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3155306831" Name="E_12201_Att_1" ObjectPath="\Events\Default Work Unit\12000\E\12201\E_12201_Att_1" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="3972125528" Name="E_12201_Die" ObjectPath="\Events\Default Work Unit\12000\E\12201\E_12201_Die" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>

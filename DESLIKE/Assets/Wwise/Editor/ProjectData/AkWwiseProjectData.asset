@@ -375,7 +375,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 9afb6cf7ad351747ac19859bb342359b
     GuidInternal: 
-    m_lastTime: -8585484902994775808
+    m_lastTime: -8585484875464775808
     List:
     - name: 11000
       guid: 539fe0567ddced449574d055d9f970dc
@@ -1317,8 +1317,8 @@ MonoBehaviour:
         guid: eedbd85295369c4eaeaf9965e32a66c0
       Path: Events/Default Work Unit/11000/E/11203/E_11203_Att_1
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 2.046017
+      minDuration: 1.987771
     - name: E_11203_Die
       guid: d055104a5af04e45a14e3d97cdd496fc
       id: 824892519
@@ -1343,8 +1343,8 @@ MonoBehaviour:
         guid: d055104a5af04e45a14e3d97cdd496fc
       Path: Events/Default Work Unit/11000/E/11203/E_11203_Die
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 1.088493
+      minDuration: 1.057506
     - name: E_11203_Idle
       guid: 9f1d3941880cac488e9d334db416efb0
       id: 948573677

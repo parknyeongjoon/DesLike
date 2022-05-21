@@ -190,8 +190,28 @@
 								<Folder Name="11203" ID="{176D3E09-4658-46DD-8A53-00A353445375}" ShortID="431639557">
 									<ChildrenList>
 										<Event Name="E_11203_Idle" ID="{41391D9F-0C88-48AC-8E9D-334DB416EFB0}"/>
-										<Event Name="E_11203_Att_1" ID="{52D8DBEE-3695-4E9C-AEAF-9965E32A66C0}"/>
-										<Event Name="E_11203_Die" ID="{4A1055D0-F05A-454E-A14E-3D97CDD496FC}"/>
+										<Event Name="E_11203_Att_1" ID="{52D8DBEE-3695-4E9C-AEAF-9965E32A66C0}">
+											<ChildrenList>
+												<Action Name="" ID="{8736F3F7-C3C9-4C94-A017-E1CFB27789E5}" ShortID="528464803">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="E_11203_Att_1_Random" ID="{0E553DB9-C324-489C-B7AF-A9C35D55C4AC}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
+										<Event Name="E_11203_Die" ID="{4A1055D0-F05A-454E-A14E-3D97CDD496FC}">
+											<ChildrenList>
+												<Action Name="" ID="{7F9DF979-3334-480F-AA5B-9F7AA3327794}" ShortID="290958010">
+													<ReferenceList>
+														<Reference Name="Target">
+															<ObjectRef Name="E_11203_Die_Print_01" ID="{62A8DF6F-DD29-4477-B999-E1F874896609}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
+														</Reference>
+													</ReferenceList>
+												</Action>
+											</ChildrenList>
+										</Event>
 									</ChildrenList>
 								</Folder>
 							</ChildrenList>
@@ -373,17 +393,6 @@
 													<ReferenceList>
 														<Reference Name="Target">
 															<ObjectRef Name="23101_Die_Print_01" ID="{A7775F42-4D82-4C91-8C7C-4BB3A4F25390}" WorkUnitID="{C90FA0E9-D489-4705-8B45-758E1EF07A7C}"/>
-														</Reference>
-													</ReferenceList>
-												</Action>
-												<Action Name="" ID="{EF312915-A462-4E39-88BA-D9BF4B42F1D5}" ShortID="595932760">
-													<PropertyList>
-														<Property Name="ActionType" Type="int16" Value="2"/>
-														<Property Name="FadeTime" Type="Real64" Value="2"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Target">
-															<ObjectRef Name="H_Bus" ID="{7AC31E02-6073-41C9-BD0E-98351CCABA8A}" WorkUnitID="{63716FC8-4178-4ED1-B3F4-825E4AFFAB97}"/>
 														</Reference>
 													</ReferenceList>
 												</Action>

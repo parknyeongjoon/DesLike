@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class VilPortCenter : MonoBehaviour
 {
-    public GameObject PortCenterPanel;
+    int curGold;
+    [SerializeField] GameObject PortCenterPanel, ErrorPanel, SelectPanel;
+
+    private void OnEnable()
+    {
+        curGold = SaveManager.Instance.gameData.goodsSaveData.gold;
+    }
 
     public void OpenPortCenter()
     {
@@ -16,4 +22,25 @@ public class VilPortCenter : MonoBehaviour
         PortCenterPanel.SetActive(false);
     }
 
+    public void BuyMutant()
+    {
+        if (curGold < 25) ErrorPanel.SetActive(true);
+        else SelectPanel.SetActive(true);
+    }
+
+    public void RerollMutant()
+    {
+        if (curGold < 15) ErrorPanel.SetActive(true);
+        else SelectPanel.SetActive(true);
+    }
+
+    public void CloseSelectPanel()
+    {
+        SelectPanel.SetActive(false);
+    }
+
+    public void CloseErrorPanel()
+    {
+        ErrorPanel.SetActive(false);
+    }
 }

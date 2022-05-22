@@ -17,7 +17,6 @@ public class RelicRewardBtn : MonoBehaviour
     {
         saveManager = SaveManager.Instance;
         relicData = saveManager.dataSheet.relicDataSheet[saveManager.map.curMapNode.SetNorRel()];
-        //toolTipPanel.SetActive(false);
         transform.GetChild(0).GetComponent<TMP_Text>().text = relicData.relicName;
         transform.GetChild(1).GetComponent<Image>().sprite = relicData.relicImg;
     }

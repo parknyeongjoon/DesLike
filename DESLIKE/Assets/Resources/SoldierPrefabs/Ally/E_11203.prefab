@@ -24,6 +24,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 6a031cbee3872134296fbf59291cb9de,
         type: 2}
+    - target: {fileID: 656011340784530830, guid: a389e075072991a45bce11914791a9ec,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 852807739320361642, guid: a389e075072991a45bce11914791a9ec,
         type: 3}
       propertyPath: m_Radius
@@ -68,6 +73,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4618823270637902937, guid: a389e075072991a45bce11914791a9ec,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772187669398599596, guid: a389e075072991a45bce11914791a9ec,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772187669398599596, guid: a389e075072991a45bce11914791a9ec,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5346442293094215222, guid: a389e075072991a45bce11914791a9ec,
         type: 3}
@@ -164,6 +184,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Offset.y
       value: 2.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341851713505146119, guid: a389e075072991a45bce11914791a9ec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7727279058274550342, guid: a389e075072991a45bce11914791a9ec,
         type: 3}

@@ -20,7 +20,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 66509000012849947, guid: 98c43156be998d34d833a7bf183e4fd5,
         type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 66509000012849947, guid: 98c43156be998d34d833a7bf183e4fd5,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 459770065638563844, guid: 98c43156be998d34d833a7bf183e4fd5,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 737334623645301845, guid: 98c43156be998d34d833a7bf183e4fd5,

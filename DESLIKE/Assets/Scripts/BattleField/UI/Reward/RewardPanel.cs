@@ -11,7 +11,7 @@ public class RewardPanel : MonoBehaviour
     public void SetRewardPanel()
     {
         // relicBtn
-        if(SaveManager.Instance.map.curMapNode.reward.relicReward != null)
+        if(SaveManager.Instance.gameData.mapData.curBattle != CurBattle.Normal)//노말 아니라면 유물 증정
         {
             Instantiate(rewardRelicBtnPrefab, transform);
         }

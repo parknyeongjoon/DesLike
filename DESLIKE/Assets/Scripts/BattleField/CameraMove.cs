@@ -8,9 +8,14 @@ public class CameraMove : MonoBehaviour
     Transform mainCameraTransform;
     GameObject hero;
 
-    float zoomSpeed = 20.0f;
-    float cameraMaxSize = 25.0f;
-    float cameraMinSize = 5.0f;
+    Vector3 cameraPos = new Vector3(0,0,-10);
+
+    float zoomSpeed = 20.0f;//마우스 휠에 따라 줌 되는 정도
+    float cameraMaxSize = 25.0f;//카메라의 최대 크기
+    float cameraMinSize = 5.0f;//카메라의 최소 크기
+
+    float cameraXSize, cameraYSize;//현재 카메라의 가로 세로 크기
+    [SerializeField] float mapXSize, mapYSize;//현재 맵의 크기
 
     bool isFollowHero;
 
@@ -19,6 +24,8 @@ public class CameraMove : MonoBehaviour
         mainCamera = GetComponent<Camera>();
         mainCameraTransform = GetComponent<Transform>();
         hero = GameObject.Find(SaveManager.Instance.heroPrefab.name + "(Clone)");
+        cameraYSize = mainCamera.orthographicSize;
+        cameraXSize = cameraYSize * Screen.width / Screen.height;
     }
 
     void Update()
@@ -33,19 +40,31 @@ public class CameraMove : MonoBehaviour
         float zoomValue = Input.GetAxis("Mouse ScrollWheel") * -1 * zoomSpeed;
         if(zoomValue != 0)
         {
-            if (zoomValue < 0 && mainCamera.orthographicSize > cameraMinSize)
+            if (zoomValue < 0 && mainCamera.orthographicSize > cameraMinSize)//카메라가 최소 크기보다 크고 마우스 휠을 위로 올렸다면
             {
-                mainCamera.orthographicSize += zoomValue;
+                mainCamera.orthographicSize += zoomValue;//카메라 사이즈 변경
+                cameraYSize = mainCamera.orthographicSize;//카메라 사이즈 갱신
+                cameraXSize = cameraYSize * Screen.width / Screen.height;//카메라 사이즈 갱신
             }
             else if(zoomValue > 0 && mainCamera.orthographicSize < cameraMaxSize)
             {
-                mainCamera.orthographicSize += zoomValue;
+                mainCamera.orthographicSize += zoomValue;//카메라 사이즈 변경
+                cameraYSize = mainCamera.orthographicSize;//카메라 사이즈 갱신
+                cameraXSize = cameraYSize * Screen.width / Screen.height;//카메라 사이즈 갱신
             }
         }
     }
 
     void CameraMoving()
     {
+        float xConstraint, yConstraint;
+        xConstraint = mapXSize - cameraXSize;
+        yConstraint = mapYSize - cameraYSize;
+
+        if (isFollowHero == true)//히어로에 카메라가 고정이라면
+        {
+            mainCamera.transform.position = hero.transform.position + cameraPos;
+        }
         if(isFollowHero == false)//히어로에 카메라 고정이 아니라면
         {
             //방향키로 카메라 이동
@@ -54,6 +73,7 @@ public class CameraMove : MonoBehaviour
             else if (Input.GetKey(KeyCode.LeftArrow)) CameraLeft();
             else if (Input.GetKey(KeyCode.RightArrow)) CameraRight();
         }
+        //mainCamera.transform.position = new Vector3(Mathf.Clamp(mainCamera.transform.position.x, -(mapXSize - cameraXSize), (mapXSize - cameraXSize)), Mathf.Clamp(mainCamera.transform.position.y, -(mapYSize - cameraYSize), (mapYSize - cameraYSize)), -10);
     }
     //카메라 위치 이동 함수
     void CameraUp()
@@ -80,13 +100,10 @@ public class CameraMove : MonoBehaviour
             if (isFollowHero == false)
             {
                 isFollowHero = true;
-                mainCamera.transform.SetParent(hero.transform);
-                mainCamera.transform.position = new Vector3(hero.transform.position.x, hero.transform.position.y, -10);
             }
             else if (isFollowHero == true)
             {
                 isFollowHero = false;
-                mainCamera.transform.SetParent(null);
             }
         }
     }

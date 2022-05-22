@@ -143,5 +143,6 @@ public class SoldierBasic : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
         heroInfo.action = Soldier_Action.Idle;
+        heroInfo.skeletonAnimation.state.SetAnimation(0, heroInfo.castleData.code + "_Idle", true);
     }
 }

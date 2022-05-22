@@ -18,6 +18,31 @@ PrefabInstance:
       propertyPath: soldierCode
       value: N_11301
       objectReference: {fileID: 0}
+    - target: {fileID: 66509000012849947, guid: 98c43156be998d34d833a7bf183e4fd5,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 66509000012849947, guid: 98c43156be998d34d833a7bf183e4fd5,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 498290218020815704, guid: 98c43156be998d34d833a7bf183e4fd5,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 498290218020815704, guid: 98c43156be998d34d833a7bf183e4fd5,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 498290218020815704, guid: 98c43156be998d34d833a7bf183e4fd5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 737334623645301845, guid: 98c43156be998d34d833a7bf183e4fd5,
         type: 3}
       propertyPath: basicAttackData
@@ -98,6 +123,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609925943104429868, guid: 98c43156be998d34d833a7bf183e4fd5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.4
       objectReference: {fileID: 0}
     - target: {fileID: 6994756467532799153, guid: 98c43156be998d34d833a7bf183e4fd5,
         type: 3}

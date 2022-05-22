@@ -18,6 +18,21 @@ PrefabInstance:
       propertyPath: soldierCode
       value: E_11203
       objectReference: {fileID: 0}
+    - target: {fileID: 66509000012849947, guid: 98c43156be998d34d833a7bf183e4fd5,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 66509000012849947, guid: 98c43156be998d34d833a7bf183e4fd5,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 459770065638563844, guid: 98c43156be998d34d833a7bf183e4fd5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 737334623645301845, guid: 98c43156be998d34d833a7bf183e4fd5,
         type: 3}
       propertyPath: basicAttackData
@@ -59,6 +74,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c9baccf51965962489d72098304ec1cf, type: 2}
+    - target: {fileID: 5609925943104429868, guid: 98c43156be998d34d833a7bf183e4fd5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6994756467532799153, guid: 98c43156be998d34d833a7bf183e4fd5,
         type: 3}
       propertyPath: skeletonDataAsset

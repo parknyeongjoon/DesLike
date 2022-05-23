@@ -28,7 +28,6 @@ public class HeroInfo : CastleInfo
     public float healWeight = 0;
     public int mucus = 0;
 
-    public bool grit;
     public bool resurrection;
 
     public Buff_Stat buff_Stat;

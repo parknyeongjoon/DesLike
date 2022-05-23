@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32fab21853dc124a9ff2b0abb8341f2, type: 3}
+  m_Name: Relic_Physic_N_2
+  m_EditorClassIdentifier: 
+  relicImg: {fileID: 0}
+  code: Relic_Physic_N_2
+  relicName: Relic_Physic_N_2
+  toopTip: "\uACE0\uC18C\uD569\uB2C8\uB2E4."
+  kingdom: 1
+  rarity: 1
+  continueReuse: 1
+  synergyRelic: {fileID: 11400000, guid: 83c04c58533fd1a4db03b1e8daf0cce2, type: 2}

@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   code: Grit
   skill_name: Grit
+  toolTip: 
   skillType: 3
   skill_Icon: {fileID: 0}
-  extraSkillData: {fileID: 0}
+  extraSkillDatas: []
   activeHealthP: 0.5
-  plusAtk: 1
-  plusAtkSpeed: 2
+  plusAtk: 0.15
+  plusAtkSpeed: 0.15

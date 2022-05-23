@@ -101,7 +101,7 @@ public class BattleUIManager : MonoBehaviour
             if (allyPortDatas.portDatas[i].soldierCode != "") { AkSoundEngine.PostEvent("T_" + allyPortDatas.portDatas[i].soldierCode + "_Idle", gameObject); }
             if (enemyPortDatas.portDatas[i].soldierCode != "") { AkSoundEngine.PostEvent("T_" + enemyPortDatas.portDatas[i].soldierCode + "_Idle", gameObject); }
         }*///모든 유닛들이 idle 소리 나게 해주는 이벤트, 소리 간격은 wise에서 조절함
-        AkSoundEngine.PostEvent("Music_S1_Normal_Battle",gameObject);
+        AkSoundEngine.PostEvent("Music_S2_Normal_Battle",gameObject);
         AkSoundEngine.PostEvent("Battle_Start", gameObject);
         GameManager.Instance.GamePause(false);
     }

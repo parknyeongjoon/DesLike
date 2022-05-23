@@ -14,6 +14,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="Character Bus" ID="{3967C2B0-6B26-475E-BC1B-4C04ED87872C}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-96</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ChildrenList>
 								<Bus Name="H_Bus" ID="{7AC31E02-6073-41C9-BD0E-98351CCABA8A}">
 									<ChildrenList>

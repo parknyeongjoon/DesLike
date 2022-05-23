@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 882985b38ed838f4ab2317b4db502ef8, type: 3}
-  m_Name: Relic_Spell_N_1_ExtraSkill
+  m_Name: Relic_Spell_H_1_Synergy_ExtraSkill
   m_EditorClassIdentifier: 
   code: Relic_Spell_N_1_ExtraSkill
   skill_name: Relic_Spell_N_1_ExtraSkill

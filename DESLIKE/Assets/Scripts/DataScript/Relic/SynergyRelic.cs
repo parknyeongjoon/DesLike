@@ -6,7 +6,6 @@ using UnityEngine;
 public class SynergyRelic : InstanceRelicData
 {
     [SerializeField] RelicData synergyRelic;
-    [SerializeField] SkillData originSkill;
 
     public override void Effect()
     {

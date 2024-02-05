@@ -27,7 +27,7 @@ PrefabInstance:
     - target: {fileID: 852807739320361642, guid: a389e075072991a45bce11914791a9ec,
         type: 3}
       propertyPath: m_Radius
-      value: 1.3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 852807739320361642, guid: a389e075072991a45bce11914791a9ec,
         type: 3}
@@ -183,12 +183,12 @@ PrefabInstance:
     - target: {fileID: 6782014734319213554, guid: a389e075072991a45bce11914791a9ec,
         type: 3}
       propertyPath: m_Size.x
-      value: 2.8
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6782014734319213554, guid: a389e075072991a45bce11914791a9ec,
         type: 3}
       propertyPath: m_Size.y
-      value: 4
+      value: 4.6
       objectReference: {fileID: 0}
     - target: {fileID: 6782014734319213554, guid: a389e075072991a45bce11914791a9ec,
         type: 3}

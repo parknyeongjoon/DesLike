@@ -16,7 +16,7 @@ MonoBehaviour:
   skill_name: N_11301_Skill_1
   toolTip: 
   skillType: 1
-  skill_Icon: {fileID: 0}
+  skill_Icon: {fileID: 21300000, guid: 15aeed476f8082143b8e7c03125b914b, type: 3}
   extraSkillDatas:
   - {fileID: 11400000, guid: 287e45d47eabed443b7f641a3ee44e07, type: 2}
   cooltime: 2

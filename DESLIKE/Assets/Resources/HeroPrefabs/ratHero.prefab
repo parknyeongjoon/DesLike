@@ -1044,19 +1044,3 @@ MonoBehaviour:
   cur_cooltime: 0
   atkArea: 0
   atkLayer: 0
---- !u!114 &9168663360964156561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5825042575518469430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f26b66f7d1b2384c8d4ec388b7e71f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  basicAttackData: {fileID: 11400000, guid: e9dcfee9b154fc148a06e620d99def13, type: 2}
-  atkArea: 0
-  atkLayer: 0
-  atkCount: 0

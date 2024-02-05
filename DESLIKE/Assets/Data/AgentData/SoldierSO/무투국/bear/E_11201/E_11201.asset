@@ -21,12 +21,10 @@ MonoBehaviour:
   soldier_name: E_11201
   mp: 0
   speed: 2
-  mp_Re: 0
   hp_Re: 0
   kingdom: 1
   tribe: 1
-  extraSkill: []
   rarity: 2
   needBarrier: 0
-  unitAmount: 0
+  unitAmount: 1
   soldier_Type: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec170fb41403794194fcac022439d2a, type: 3}
   m_Name: N_12302
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: bb5cf33cea42b1047a7ec3b6c05bdb36, type: 3}
   code: N_12302
   hp: 30
   def: 0
